@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#20351;&#29992;&#21487;&#35270;&#21270;&#20998;&#26512;&#22120; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#20351;&#29992;&#21487;&#35270;&#21270;&#20998;&#26512;&#22120; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="使用可视化分析器">使用可视化分析器</h1>
+
+<p>可视化分析器（Visual Profiler）为混合现实应用程序的性能提供了易于使用的
+应用程序内部的视图。所有混合现实工具包平台均支持分析器，包括：</p>
+<ul>
+<li>Microsoft HoloLens（第一代）</li>
+<li>Microsoft HoloLens 2</li>
+<li>Windows Mixed Reality沉浸式头显</li>
+<li>OpenVR</li>
+</ul>
+<p>在开发应用程序时，当可视化分析器显示与当前视图相关的数据时，要关注场景的多个部分。</p>
+<blockquote>
+<p>[!重要]
+将注意力集中在场景中具有复杂对象，粒子效果或活动的部分。这些因素和其他因素通常会导致应用程序性能下降和不理想的用户体验。</p>
+</blockquote>
+<h2 id="可视化分析器接口">可视化分析器接口</h2>
+<p><img src="../Images/Diagnostics/VisualProfiler.png" alt="可视化分析器界面包括以下组件："></p>
+<p>The Visual Profiler interface includes the following components:</p>
+<ul>
+<li><a href="#%E5%B8%A7%E7%8E%87">帧率</a></li>
+<li><a href="#%E6%AF%8F%E5%B8%A7%E6%97%B6%E9%97%B4">每帧时间</a></li>
+<li><a href="#%E5%B8%A7%E7%8E%87%E5%9B%BE">帧率图</a></li>
+<li><a href="#%E5%86%85%E5%AD%98%E5%88%A9%E7%94%A8%E7%8E%87">内存利用率</a></li>
+</ul>
+<h3 id="帧率">帧率</h3>
+<p>界面的左上角是帧率，以每秒帧数为单位。为了获得最佳的用户体验和舒适度，该值应尽可能高。</p>
+<p>特定的平台和硬件配置将在最大可达到的帧率中扮演重要角色。一些常见的目标值包括：</p>
+<ul>
+<li>微软HoloLens：60</li>
+<li>Windows Mixed Reality Ultra: 90</li>
+</ul>
+<h3 id="每帧时间">每帧时间</h3>
+<p>帧率的右侧是在CPU上花费的每帧时间（以毫秒为单位）。为了达到前面提到的目标帧率，应用程序可以每帧花费以下时间：</p>
+<ul>
+<li>60 fps：16.6毫秒</li>
+<li>90 fps：11.1毫秒</li>
+</ul>
+<p>计划在将来的版本中增加GPU时间。</p>
+<h3 id="帧率图">帧率图</h3>
+<p>帧图提供了应用程序帧率历史的图形显示。</p>
+<p><img src="../Images/Diagnostics/VisualProfilerMissedFrames.png" alt="Visual Profiler Frame Graph"></p>
+<p>使用该应用程序时，寻找丢失的帧（missed frames），这些帧表示该应用程序未达到其目标帧率，可能需要优化工作。</p>
+<h3 id="内存利用率">内存利用率</h3>
+<p>显示内存利用率可以轻松了解当前视图如何影响应用程序的内存消耗。</p>
+<p><img src="../Images/Diagnostics/VisualProfilerMemory.png" alt="Visual Profiler Frame Graph"></p>
+<p>使用该应用程序时，请查找总内存使用量。关键指标包括接近内存限制和使用率的快速变化。</p>
+<h2 id="自定义可视化分析器">自定义可视化分析器</h2>
+<p>可通过诊断系统配置文件自定义可视化分析器的外观和行为。请参见<a href="ConfiguringDiagnostics.html">配置诊断系统</a>获取更多的信息。</p>
+<h2 id="建议浏览">建议浏览</h2>
+<ul>
+<li><a href="DiagnosticsSystemGettingStarted.html">诊断系统</a></li>
+<li><a href="ConfiguringDiagnostics.html">配置诊断系统</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Diagnostics/UsingVisualProfiler.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

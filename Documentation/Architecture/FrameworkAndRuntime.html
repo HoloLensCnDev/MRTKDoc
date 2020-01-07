@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#26694;&#26550;&#21644;&#36816;&#34892;&#26102; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#26694;&#26550;&#21644;&#36816;&#34892;&#26102; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="框架和运行时">框架和运行时</h1>
+
+<h2 id="场景改动">场景改动</h2>
+<p>要使用该工具包，必须在您的场景中包含MixedRealityToolkit脚本的实例。要添加一个，请使用菜单选项：Mixed Reality Toolkit -&gt; Add to Scene and Configure。该实例负责注册，更新和关闭服务。这也是您选择配置文件的地方。</p>
+<p>除了将MRTK GameObject添加到场景外，菜单选项还将：</p>
+<ul>
+<li>添加MixedRealityPlayspace，许多其他MRTK组件使用它来推理世界和本地空间转换。</li>
+<li>将主Camera移至MixedRealityPlayspace的子级（并向主Camera添加一些与输入和注视相关的脚本，这有助于增强UnityUI和与凝视相关的输入功能）。</li>
+</ul>
+<h2 id="mixedrealitytoolkit对象和运行时">MixedRealityToolkit对象和运行时</h2>
+<p>MRTK有几个核心服务。有些彼此协调；其他是独立的。所有都有相同的生命周期-启动，注册，更新和关闭-该生命周期与Unity的MonoBehavior生命周期不同。这个<a href="https://medium.com/@stephen_hodgson/the-mixed-reality-framework-6fdb5c11feb2">medium post</a> 解释了此方法背后的一些背景和动机。MRTK具有一个对象来管理其服务寿命和运行时间。</p>
+<p>该实体确保：</p>
+<ul>
+<li>游戏开始时，服务的发现和初始化按预先定义的顺序进行。</li>
+<li>它提供了一种机制，让服务注册自己(比如“我支持这个服务!”)，并让其他调用者获得这些服务。</li>
+<li>它提供Update（）/ LateUpdate（）调用并将它们转发到各种服务上（即通过UpdateAllServices / LateUpdateAllServices）。</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Architecture/FrameworkAndRuntime.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

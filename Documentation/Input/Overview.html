@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#36755;&#20837;&#24635;&#35272; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#36755;&#20837;&#24635;&#35272; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="输入总览">输入总览</h1>
+
+<p>MRTK中的输入系统使您能够：</p>
+<ul>
+<li>通过输入事件来处理来自各种输入源的输入，例如6个DOF控制器，铰接的手或语音。</li>
+<li>定义抽象操作，例如<em>Select</em>或<em>Menu</em>，并将它们关联到不同的输入。</li>
+<li>设置指针附加到控制器，以通过焦点和指针事件驱动UI组件。</li>
+</ul>
+<img src="../Images/Input/MRTK_InputSystem.png" style="display:block;margin-left:auto;margin-right:auto;">
+<sup>Overview of MRTK Input System</sup>
+<p>输入是由<a href="InputProviders.html"><strong>输入数据提供者（设备管理器）</strong></a>产生.每个提供者都对应于特定的输入源：Open VR，Windows 混合现实（WMR），Unity游戏杆，Windows 语音等。通过<em>Mixed Reality Toolkit</em>组件中的<em>Registered Service Providers Profile</em>将提供者添加到您的项目中，并将产生<a href="InputEvents.html"><strong>输入事件</strong></a> 当相应的输入源可用时（例如，当检测到WMR控制器或连接了游戏手柄时），将自动运行。</p>
+<p><a href="InputActions.html"><strong>输入动作</strong></a> 是对原始输入的抽象，旨在帮助将应用程序逻辑与产生输入的特定输入源隔离开。例如，定义一个<em>Select</em>动作并将其映射到鼠标左键，游戏手柄中的一个按钮和一个6自由度控制器中的一个触发器，可能会很有用。然后，您可以让您的应用程序逻辑侦听<em>Select</em>输入操作事件，而不必知道可能产生此事件的所有不同输入。输入动作在<strong>Input Actions Profile</strong>中定义，该配置文件位于<em>Mixed Reality Toolkit</em>组件的<em>Input System Profile</em>中。</p>
+<p><a href="Controllers.html"><strong>控制器</strong></a> 由检测到输入设备的<em>输入提供者</em>创建，并在丢失或断开连接时将其删除。例如，WMR输入提供者将为6个DOF设备创建<em>WMR控制器</em>，为全连接手创建<em>WMR全连接手控制器</em>。控制器输入可以通过<em>Input System Profile</em>中的<strong>Controller Mapping Profile</strong>映射到输入动作。控制器引发的输入事件将包括关联的输入操作（如果有）。</p>
+<p>控制器可以附加<a href="Pointers.html"><strong>指针</strong></a> 来查询场景以确定焦点游戏对象并在其上引发 <a href="Pointers.html#pointer-event-interfaces"><strong>指针事件</strong></a> 。举例来说，我们的<strong>线指针(line pointer)<strong>使用控制器的姿势对场景执行光线投射，以计算光线的起点和方向。在</strong>Input System Profile</strong>文件下的<strong>Pointer Profile</strong>中设置为每个控制器创建的指针。</p>
+<img src="../Images/Input/MRTK_Input_EventFlow.png" width="200px" style="display:block;margin-left:auto;margin-right:auto;">
+<sup>Event flow(事件流).</sup>
+<p>虽然你可以处理 <a href="InputEvents.html">UI组件中的直接输入事件</a> ，建议使用<a href="Pointers.html#pointer-event-interfaces">指针事件</a>保持实现与设备无关.</p>
+<p>MRTK还提供了几种方便的方法来使用与设备无关的方式直接查询输入状态。查看<a href="InputState.html">在MRTK中获取输入状态</a> 获取更多细节.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Input/Overview.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

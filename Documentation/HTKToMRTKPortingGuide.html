@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#31227;&#26893;&#25351;&#21335; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#31227;&#26893;&#25351;&#21335; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="移植指南">移植指南</h1>
+
+<h2 id="控制器和手动输入">控制器和手动输入</h2>
+<h3 id="设置和配置">设置和配置</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>类型</td>
+<td>按钮的特定事件，相关时带有输入类型信息。</td>
+<td>基于动作/手势的输入，通过事件传递。</td>
+</tr>
+<tr>
+<td>设定</td>
+<td>将InputManager放置在场景中</td>
+<td>在<a href="MixedRealityConfigurationGuide.html">配置文件</a> 中启用输入系统并指定具体的输入系统类型。</td>
+</tr>
+<tr>
+<td>配置</td>
+<td>在Inspector中针对场景中的每个脚本进行配置。</td>
+<td>通过混合现实输入系统配置文件及其相关配置文件进行配置，如下所示。</td>
+</tr>
+</tbody>
+</table>
+<p>相关配置文件：</p>
+<ul>
+<li>混合现实控制器映射配置文件</li>
+<li>混合现实控制器可视化配置文件</li>
+<li>混合现实手势配置文件</li>
+<li>混合现实输入操作配置文件</li>
+<li>混合现实输入操作规则配置文件</li>
+<li>混合现实指针配置文件</li>
+</ul>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.GazeProvider.html">Gaze Provider</a> 在场景中的“Main Camera”对象上修改设置。</p>
+<p>平台支持组件（例如Windows Mixed Reality设备管理器）必须添加到其相应服务的数据提供者中。</p>
+<h3 id="接口和事件映射">接口和事件映射</h3>
+<p>某些事件不再具有唯一事件，现在包含一个<a href="Input/InputActions.html">混合现实输入操作</a>. 这些操作在“Input Actions”配置文件中指定，并映射到“Controller Mapping”配置文件中的特定控制器和平台。现在，像OnInputDown这样的事件应检查MixedRealityInputAction类型。</p>
+<p>相关输入系统：</p>
+<ul>
+<li><a href="Input/Overview.html">输入总览</a></li>
+<li><a href="Input/InputEvents.html">输入事件</a></li>
+<li><a href="Input/Pointers.html">输入指针</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+<th>动作映射</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IControllerInputHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler-1.html"><code>IMixedRealityInputHandler&lt;Vector2&gt;</code></a></td>
+<td>映射到触摸板或指尖</td>
+</tr>
+<tr>
+<td><code>IControllerTouchpadHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler.html"><code>IMixedRealityInputHandler</code></a></td>
+<td>映射到触摸板</td>
+</tr>
+<tr>
+<td><code>IFocusable</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusHandler.html"><code>IMixedRealityFocusHandler</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><code>IGamePadHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourceStateHandler.html"><code>IMixedRealitySourceStateHandler</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><code>IHoldHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityGestureHandler.html"><code>IMixedRealityGestureHandler</code></a></td>
+<td>映射为“Gestures”配置文件中的hold</td>
+</tr>
+<tr>
+<td><code>IInputClickHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html"><code>IMixedRealityPointerHandler</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><code>IInputHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler.html"><code>IMixedRealityInputHandler</code></a></td>
+<td>映射到控制器的按钮或手动点击</td>
+</tr>
+<tr>
+<td><code>IManipulationHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityGestureHandler-1.html"><code>IMixedRealityGestureHandler&lt;Vector3&gt;</code></a></td>
+<td>映射到“Gestures ”配置文件中的manipulation</td>
+</tr>
+<tr>
+<td><code>INavigationHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityGestureHandler-1.html"><code>IMixedRealityGestureHandler&lt;Vector3&gt;</code></a></td>
+<td>映射到Gestures 配置文件中的 navigation</td>
+</tr>
+<tr>
+<td><code>IPointerSpecificFocusable</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusChangedHandler.html"><code>IMixedRealityFocusChangedHandler</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ISelectHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler-1.html"><code>IMixedRealityInputHandler&lt;float&gt;</code></a></td>
+<td>映射到触发位置</td>
+</tr>
+<tr>
+<td><code>ISourcePositionHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler-1.html"><code>IMixedRealityInputHandler&lt;Vector3&gt;</code></a> or <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler-1.html"><code>IMixedRealityInputHandler&lt;MixedRealityPose&gt;</code></a></td>
+<td>映射到指针位置或握持位置</td>
+</tr>
+<tr>
+<td><code>ISourceRotationHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler-1.html"><code>IMixedRealityInputHandler&lt;Quaternion&gt;</code></a> or <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler-1.html"><code>IMixedRealityInputHandler&lt;MixedRealityPose&gt;</code></a></td>
+<td>映射到指针位置或握持位置</td>
+</tr>
+<tr>
+<td><code>ISourceStateHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourceStateHandler.html"><code>IMixedRealitySourceStateHandler</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><code>IXboxControllerHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler.html"><code>IMixedRealityInputHandler</code></a> 和 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler-1.html"><code>IMixedRealityInputHandler&lt;Vector2&gt;</code></a></td>
+<td>映射到各种控制器按钮和指尖</td>
+</tr>
+</tbody>
+</table>
+<h2 id="相机">相机</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>启用</td>
+<td>删除MainCamera，将MixedRealityCameraParent / MixedRealityCamera / HoloLensCamera预制体添加到场景中，<strong>或</strong>使用“Mixed Reality Toolkit &gt; Configure &gt; Apply Mixed Reality Scene Settings”菜单项。</td>
+<td>MainCamera是MixedRealityPlayspace的子物体，通过 Mixed Reality Toolkit &gt; Add to Scene and Configure..导入</td>
+</tr>
+<tr>
+<td>配置</td>
+<td>在预制体上执行相机设置配置。</td>
+<td>相机设置在 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.MixedRealityCameraProfile.html">混合现实相机配置文件</a>中进行配置.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="语音">语音</h2>
+<h3 id="关键字识别">关键字识别</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设定</td>
+<td>将SpeechInputSource添加到您的场景。</td>
+<td>关键字服务（例如Windows语音输入管理器）必须添加到输入系统的数据提供者中。</td>
+</tr>
+<tr>
+<td>配置</td>
+<td>可识别的关键字在SpeechInputSource的Inspector中配置。</td>
+<td>关键字在<a href="Input/Speech.html">混合现实语音命令配置文件</a>中进行配置.</td>
+</tr>
+<tr>
+<td>事件处理者</td>
+<td><code>ISpeechHandler</code></td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler.html"><code>IMixedRealitySpeechHandler</code></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="语音转文字">语音转文字</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设定</td>
+<td>将DictationInputManager添加到场景中。</td>
+<td>语音转文字需要将服务（例如Windows Dictation Input Manager）添加到输入系统的数据提供程序中。</td>
+</tr>
+<tr>
+<td>事件处理者</td>
+<td><code>IDictationHandler</code></td>
+<td><code>IMixedRealityDictationHandler</code><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler.html"><code>IMixedRealitySpeechHandler</code></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="空间感知映射">空间感知/映射</h2>
+<h3 id="mesh">Mesh</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设定</td>
+<td>将SpatialMapping预制体添加到场景中。</td>
+<td>在配置文件中启用空间感知系统( Spatial Awareness System)，并将空间观察器（例如Windows Mixed RealitySpatial Mesh Observer）添加到空间感知系统的数据提供者。</td>
+</tr>
+<tr>
+<td>配置</td>
+<td>在Inspector中配置场景实例。</td>
+<td>在每个spatial observer的配置文件上配置设置。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="平面">平面</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设定</td>
+<td>使用<code>SurfaceMeshesToPlanes</code> 脚本</td>
+<td>尚未实现。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="空间理解">空间理解</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设定</td>
+<td>将SpatialUnderstanding预制体添加到场景中。</td>
+<td>尚未实现。</td>
+</tr>
+<tr>
+<td>配置</td>
+<td>在Inspector中配置场景实例。</td>
+<td>尚未实现。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="边界">边界</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设定</td>
+<td>将<code>BoundaryManager</code>脚本添加到场景中。</td>
+<td>在配置文件中启用边界系统（Boundary System）。</td>
+</tr>
+<tr>
+<td>配置</td>
+<td>在Inspector中配置场景实例。</td>
+<td>在“Boundary Visualization”配置文件中配置设置。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="共享">共享</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设定</td>
+<td>共享服务：将共享预制体（Sharing prefab）添加到场景中。UNet：使用SharingWithUNET示例。</td>
+<td>进行中</td>
+</tr>
+<tr>
+<td>配置</td>
+<td>在Inspector中配置场景实例。</td>
+<td>进行中</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ux">UX</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Button</td>
+<td><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_InteractableObjectExample.md">Interactable Objects</a></td>
+<td><a href="README_Button.html">Button</a></td>
+</tr>
+<tr>
+<td>Interactable</td>
+<td><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_InteractableObjectExample.md">Interactable Objects</a></td>
+<td><a href="README_Interactable.html">Interactable</a></td>
+</tr>
+<tr>
+<td>Bounding Box</td>
+<td><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_BoundingBoxGizmoExample.md">Bounding Box</a></td>
+<td><a href="README_BoundingBox.html">Bounding Box</a></td>
+</tr>
+<tr>
+<td>App Bar</td>
+<td><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_BoundingBoxGizmoExample.md">App Bar</a></td>
+<td><a href="README_AppBar.html">App Bar</a></td>
+</tr>
+<tr>
+<td>One Hand Manipulation (Grb and Move)</td>
+<td><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Utilities/Interactions/HandDraggable.cs">HandDraggable</a></td>
+<td><a href="README_ManipulationHandler.html">Manipulation Handler</a></td>
+</tr>
+<tr>
+<td>Two Hand Manipulation (Grab/Move/Rotate/Scale)</td>
+<td><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Utilities/Interactions/TwoHandManipulatable.cs">TwoHandManipulatable</a></td>
+<td><a href="README_ManipulationHandler.html">Manipulation Handler</a></td>
+</tr>
+<tr>
+<td>Keyboard</td>
+<td><a href="">Keyboard prefab</a></td>
+<td><a href="README_SystemKeyboard.html">System Keyboard</a></td>
+</tr>
+<tr>
+<td>Tooltip</td>
+<td><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_TooltipExample.md">Tooltip</a></td>
+<td><a href="README_Tooltip.html">Tooltip</a></td>
+</tr>
+<tr>
+<td>Object Collection</td>
+<td><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_ObjectCollection.md">Object Collection</a></td>
+<td><a href="README_ObjectCollection.html">Object Collection</a></td>
+</tr>
+<tr>
+<td>Solver</td>
+<td><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Utilities/Readme/README_SolverSystem.md">Solver</a></td>
+<td><a href="README_Solver.html">Solver</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="实用工具">实用工具</h2>
+<p>一些实用程序已与Solver系统的副本进行协调。如果您需要的任何脚本丢失，请提出问题。</p>
+<table>
+<thead>
+<tr>
+<th>HTK 2017</th>
+<th>MRTK v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Billboard</td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.UI.Billboard.html"><code>Billboard</code></a></td>
+</tr>
+<tr>
+<td>Tagalong</td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.html"><code>RadialView</code></a> 或者 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.Orbital.html"><code>Orbital</code></a> <a href="README_Solver.html">Solver</a></td>
+</tr>
+<tr>
+<td>FixedAngularSize</td>
+<td><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.ConstantViewSize.html"><code>ConstantViewSize</code></a> <a href="README_Solver.html">Solver</a></td>
+</tr>
+<tr>
+<td>FpsDisplay</td>
+<td><a href="Diagnostics/DiagnosticsSystemGettingStarted.html">Diagnostics System</a> （在配置文件中）</td>
+</tr>
+<tr>
+<td>NearFade</td>
+<td>内置于 <a href="README_MRTKStandardShader.html">Mixed Reality Toolkit Standard shader</a></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/HTKToMRTKPortingGuide.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

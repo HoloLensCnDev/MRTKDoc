@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#36755;&#20837;&#31995;&#32479; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#36755;&#20837;&#31995;&#32479; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="输入系统">输入系统</h1>
+
+<p>在MRTK提供的所​​有功能中，输入系统是最大的系统之一。工具包中的许多内容都建立在它之上（指针pointers，焦点focus，预制体prefabs）。输入系统中的代码允许自然交互，例如跨平台抓取和旋转。</p>
+<p>输入系统具有一些自己的术语，值得定义：</p>
+<ul>
+<li><p><strong>Data providers(数据提供者)</strong></p>
+<p>输入配置文件中的输入设置引用了称为数据提供者（data
+providers）的实体-另一个描述这些实体的词是设备管理器。这些组件的工作是通过与特定的底层系统接入来扩展MRTK输入系统。provider的一个示例是Windows Mixed Reality provider，它的工作是与基础Windows Mixed Reality API进行对话，然后将这些API中的数据转换为下面的MRTK特定的输入概念。另一个示例是OpenVR provider（其工作是与Unity抽象的OpenVR API版本进行通信，然后将数据转换为MRTK输入概念）。</p>
+</li>
+<li><p><strong>Controller(控制器)</strong></p>
+<p>物理控制器的表示形式（无论是6自由度控制器，带手势支持的HoloLens 1型手，全关节手，跳跃运动控制器等）。控制器由设备管理器（device manager）生成（例如，WMR设备管理器会在看到全关节手出现时，生成一个控制器并管理其寿命）。</p>
+</li>
+<li><p><strong>Pointer(指针)</strong></p>
+<p>控制器使用指针与游戏对象进行交互。例如，近距离交互指针负责检测手（它是控制器）何时靠近那些支持“近距离交互”的对象。指示器的其他示例是远距传递或远距指针（即手部射线指针），它们使用远射线投射来与长出用户的手臂的内容进行交互。</p>
+<p>指针由设备管理器创建，然后附加到输入源。要获取控制器的所有指针，请执行:<code>controller.InputSource.Pointers</code></p>
+<p>请注意，控制器可以同时与许多不同的指针相关联–为了确保不会陷入混乱，有一个指针调解器（pointer mediator）可以控制允许激活哪些指针（例如，调解器将当检测到近距离交互时，禁用远距离交互指针）。</p>
+</li>
+<li><p><strong>Focus(焦点)</strong></p>
+<p>指针事件发送到焦点对象。焦点的选择因指示器类型而异-手部射线指示器将使用射线，而食指的戳动指示器将使用球形投射。对象必须实现IMixedRealityFocusHandler才能获得焦点。可以全局注册一个对象以接收未过滤的指针事件，但是不建议使用此方法。</p>
+<p>更新焦点对象的组件是<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.Services/InputSystem/FocusProvider.cs">焦点提供者</a></p>
+</li>
+<li><p><strong>Cursor(光标)</strong></p>
+<p>与指针关联的实体，在指针交互时提供额外的视觉提示。例如，FingerCursor会在您的手指周围呈现一个圆环，并且当您的手指靠近“近处可交互”的对象时可以旋转该环。一个指针可以同时与一个光标关联。</p>
+</li>
+<li><p><strong>Interaction and Manipulation(交互与操作)</strong></p>
+<p>可以使用交互或操作脚本标记对象。这可以通过<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.UI.Interactable.html"><code>Interactable</code></a>, 或类似于
+<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html"><code>NearInteractionGrabbable</code></a>/<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.UI.ManipulationHandler.html"><code>ManipulationHandler</code></a>.</p>
+<p>例如，NearInteractionGrabbable和NearInteractionTouchable允许某些指针（尤其是近处交互的指针）知道哪些对象可以成为焦点。</p>
+<p>Interactable和ManipulationHandler是侦听指针事件以修改UI视觉效果或移动/缩放/旋转游戏对象的组件的示例。</p>
+</li>
+</ul>
+<p>下图捕获了MRTK输入栈的高级构建（从下至上）：</p>
+<p><img src="../../Images/Input/MRTK_InputSystem.png" alt="Input System Diagram"></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Architecture/InputSystem/Terminology.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

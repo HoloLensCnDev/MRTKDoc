@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Unity AR camera settings provider (Unity AR&#30456;&#26426;&#35774;&#32622;&#25552;&#20379;&#32773;) | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Unity AR camera settings provider (Unity AR&#30456;&#26426;&#35774;&#32622;&#25552;&#20379;&#32773;) | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="unity-ar-camera-settings-provider-unity-ar相机设置提供者">Unity AR camera settings provider (Unity AR相机设置提供者)</h1>
+
+<p>Unity AR相机设置提供者是一个实验性MRTK组件，它使混合现实应用程序可以在Android和iOS设备上运行。</p>
+<h2 id="unity-ar相机设置提供者选项">Unity AR相机设置提供者选项</h2>
+<p><img src="../Images/CameraSystem/UnityArSettingsConfiguration.png" alt="Unity AR camera settings configuration"></p>
+<p>如何添加提供者到你的场景的指南: <a href="../CrossPlatform/UsingARFoundation.html">如何为 iOS 和 Android配置MRTK</a></p>
+<h3 id="跟踪设定">跟踪设定</h3>
+<p>Unity AR相机设置提供者允许使用配置选项来设置跟踪。这些设置特定于Unity AR相机设置提供者实现。</p>
+<p><strong>Pose Source (姿势源 )</strong></p>
+<p>姿势源定义了增强现实跟踪姿势的可用类型。通常，这些值映射到正在运行应用程序的设备的一个组件。</p>
+<p>下表描述了可用的选项。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Center</td>
+<td>头戴式设备的中心眼。</td>
+</tr>
+<tr>
+<td>Color Camera</td>
+<td>移动设备的彩色相机。</td>
+</tr>
+<tr>
+<td>Head</td>
+<td>头戴式设备的头眼（head eye），通常略高于中心眼。</td>
+</tr>
+<tr>
+<td>Left Eye</td>
+<td>头戴式设备的左眼。</td>
+</tr>
+<tr>
+<td>Left Pose</td>
+<td>左手控制器姿势。</td>
+</tr>
+<tr>
+<td>Right Eye</td>
+<td>头戴式设备的右眼。</td>
+</tr>
+<tr>
+<td>Right Pose</td>
+<td>右手控制器姿势。</td>
+</tr>
+</tbody>
+</table>
+<p>姿势源的默认值是<strong>Color Camera</strong>，以在手机或平板电脑等移动设备上启用透明显示。</p>
+<p><strong>Tracking Type (跟踪类型 )</strong></p>
+<p>跟踪类型定义姿势中将用于跟踪的部分。</p>
+<p>下表描述了可用的选项。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position</td>
+<td>设备的位置。</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>设备的旋转。</td>
+</tr>
+<tr>
+<td>Rotation And Position</td>
+<td>设备的位置和旋转。</td>
+</tr>
+</tbody>
+</table>
+<p>跟踪类型的默认值为<strong>Rotation And Position</strong>，以启用最丰富的跟踪体验。</p>
+<p><strong>Update Type (更新类型 )</strong></p>
+<p>更新类型定义了在帧处理过程中采样姿态数据的阶段顺序。</p>
+<p>下表描述了可用的选项。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Before Render</td>
+<td>就在渲染之前。</td>
+</tr>
+<tr>
+<td>Update</td>
+<td>在框架的更新阶段。</td>
+</tr>
+<tr>
+<td>Update And Before Render</td>
+<td>在更新阶段并且在渲染之前。</td>
+</tr>
+</tbody>
+</table>
+<p>跟踪类型的默认值为<strong>Update And Before Render</strong>，以启用最低的跟踪延迟。</p>
+<h2 id="建议浏览">建议浏览</h2>
+<ul>
+<li><a href="CameraSystemOverview.html">相机系统概述</a></li>
+<li><a href="CreateSettingsProvider.html">创建相机设置提供者</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/CameraSystem/UnityArCameraSettings.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#24615;&#33021; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#24615;&#33021; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="性能">性能</h1>
+
+<h2 id="入门">入门</h2>
+<p>使性能合理化的最简单方法是通过帧速率或应用程序每秒可以渲染图像的次数。如目标平台所概述的那样，达到目标帧速率很重要（即<a href="https://docs.microsoft.com/windows/mixed-reality/understanding-performance-for-mixed-reality">Windows混合现实</a>, <a href="https://developer.oculus.com/documentation/pcsdk/latest/concepts/dg-performance-guidelines/">Oculus</a>, 等).例如，在HoloLens上，目标帧速率为60 FPS。低帧率应用程序可能会导致用户体验恶化，例如恶化<a href="../hologram-stabilization.html">全息图稳定</a>，世界跟踪，手部跟踪等。为了帮助开发人员跟踪并获得高质量的帧速率，混合现实工具包提供了各种工具和脚本。</p>
+<h3 id="可视分析器">可视分析器</h3>
+<p>为了在开发的整个生命周期中不断跟踪性能，强烈建议在运行和调试应用程序时始终显示可视分析器。混合现实工具包提供了<a href="../Diagnostics/UsingVisualProfiler.html">可视分析器</a> 诊断工具，可在应用程序视图中提供有关当前FPS和内存使用情况的实时信息。可以通过在<a href="../Diagnostics/DiagnosticsSystemGettingStarted.html">MRTK配置文件检查器</a> 下方的<a href="../MixedRealityConfigurationGuide.html">诊断系统设置</a>.</p>
+<p>此外，与在Unity编辑器或仿真器中运行相比，在设备上运行时利用Visual Profiler跟踪帧速率尤为重要。在设备上运行时，将描述最准确的性能结果<a href="https://docs.microsoft.com/visualstudio/debugger/how-to-set-debug-and-release-configurations?view=vs-2019">发布配置版本</a>.</p>
+<blockquote>
+<p>[!注意]
+如果针对Windows Mixed Reality构建，请使用<a href="https://docs.microsoft.com/windows/mixed-reality/exporting-and-building-a-unity-visual-studio-solution#building_and_deploying_a_unity_visual_studio_solution">主配置版本</a></p>
+</blockquote>
+<p><img src="../Images/Diagnostics/VisualProfiler.png" alt="Visual Profiler Interface"></p>
+<h3 id="optimize-window">Optimize Window</h3>
+<p><a href="../Tools/OptimizeWindow.html">MRTK Optimize Window</a> 提供信息和自动化工具，以帮助混合现实开发人员设置环境以获得最佳性能，并确定场景和资源中的潜在瓶颈。Unity中的某些关键配置可以帮助为混合现实项目提供实质上更优化的结果。</p>
+<p>通常，这些设置涉及适合混合现实的渲染配置。与传统的3D图形开发相比，混合现实应用程序是独特的，因为有两个屏幕（即两只眼睛）可以渲染整个场景。</p>
+<p>通过使用MRTK优化窗口，可以在Unity项目中自动配置以下参考的建议设置。</p>
+<p><img src="../Images/Performance/OptimizeWindow_Settings.png" alt="MRTK Optimize Window Settings"></p>
+<h2 id="建议的unity设置">建议的Unity设置</h2>
+<h3 id="单遍实例渲染">单遍实例渲染</h3>
+<p>Unity中XR的默认渲染配置为<a href="https://docs.unity3d.com/ScriptReference/StereoRenderingPath.MultiPass.html">多遍</a>. 此设置指示Unity执行两次整个渲染管道，每只眼睛执行一次。可以通过选择来优化<a href="https://docs.unity3d.com/Manual/SinglePassInstancing.html">单遍实例渲染</a> 代替。此配置利用<a href="https://en.wikipedia.org/wiki/Multiple_Render_Targets">渲染目标数组</a> 能够执行将实例插入适当的单个绘制调用<a href="https://en.wikipedia.org/wiki/Render_Target">渲染目标</a> 为每只眼睛。此外，此模式允许所有渲染都在渲染管道的一次执行中完成。因此，选择Single Pass Instanced渲染作为混合现实应用程序的渲染路径可以<a href="https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/">在CPU和GPU上节省大量时间</a>并且是推荐的渲染配置。
+但是，为了对每只眼睛的每个网格发出单个绘制调用，<a href="https://docs.unity3d.com/Manual/GPUInstancing.html">GPU实例化</a> 必须由所有着色器支持。实例化使GPU可以在两只眼睛之间多路复用绘图调用。Unity内置着色器以及<a href="../README_MRTKStandardShader.html">MRTK标准着色器</a> 默认情况下，在着色器代码中包含必要的实例化指令。如果为Unity编写自定义着色器，则可能需要更新这些着色器以支持Single Pass Instanced渲染。</p>
+<h4 id="自定义着色器的示例代码"><a href="https://docs.unity3d.com/Manual/SinglePassInstancing.html">自定义着色器的示例代码</a></h4>
+<pre><code>struct appdata
+{
+    float4 vertex : POSITION;
+    float2 uv : TEXCOORD0;
+
+    UNITY_VERTEX_INPUT_INSTANCE_ID //Insert
+};
+
+struct v2f
+{
+    float2 uv : TEXCOORD0;
+    float4 vertex : SV_POSITION;
+
+    UNITY_VERTEX_OUTPUT_STEREO //Insert
+};
+
+v2f vert (appdata v)
+{
+    v2f o;
+
+    UNITY_SETUP_INSTANCE_ID(v); //Insert
+    UNITY_INITIALIZE_OUTPUT(v2f, o); //Insert
+    UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); //Insert
+
+    o.vertex = UnityObjectToClipPos(v.vertex);
+
+    o.uv = v.uv;
+
+    return o;
+}
+</code></pre>
+<h3 id="质量设置">质量设置</h3>
+<p>Unity提供<a href="https://docs.unity3d.com/Manual/class-QualitySettings.html">预设以控制质量</a>每个平台端点的渲染次数。这些预设控制可以启用图形功能，例如阴影，抗锯齿，全局照明等。建议降低这些设置并优化渲染期间执行的计算数量。</p>
+<p><em>Step 1:</em> 更新混合现实Unity项目以使用<strong>低质量</strong>级别设置 <br>
+<strong>Edit</strong> &gt; <strong>Project Settings</strong>, 然后选择 <strong>Quality</strong> category &gt;  Select <em>Low Quality</em> for the UWP Platform</p>
+<p><em>Step 2:</em> 对于每个Unity场景文件，禁用<a href="https://docs.unity3d.com/Manual/LightMode-Realtime.html">实时全局照明</a> <br>
+<strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong> &gt; <a href="https://docs.unity3d.com/Manual/GlobalIllumination.html">Uncheck <em>Real-time Global Illumination</em></a></p>
+<h3 id="depth-buffer-sharing-hololens">Depth buffer sharing (HoloLens)</h3>
+<p>如果针对Windows Mixed Reality平台（尤其是HoloLens）进行开发，则在<strong>XR设置</strong>下启用<strong>深度缓冲区共享</strong>可以帮助您<a href="../hologram-stabilization.html">全息图稳定</a>. 但是，深度缓冲区的处理可能会导致性能损失，特别是如果使用<a href="https://docs.unity3d.com/ScriptReference/PlayerSettings.VRWindowsMixedReality-depthBufferFormat.html">24位深度格式</a>. 因此，<strong>强烈建议</strong>将深度缓冲区配置为16位精度。</p>
+<p>如果 <a href="https://en.wikipedia.org/wiki/Z-fighting">z-fighting</a> 由于低位格式而发生，请确认 <a href="https://docs.unity3d.com/Manual/class-Camera.html">far clip plane</a>将所有相机中的设置为该应用程序可能的最低值。默认情况下，Unity设置far clip plane为1000m。在HoloLens上，对于大多数应用场景，通常50m的far clip plane绰绰有余。</p>
+<blockquote>
+<p>[!注意]
+如果使用<strong>16位深度格式</strong>，则模板缓冲区所需的效果将不起作用，因为<a href="https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html">Unity不创建模板缓冲区</a> 在这种情况下。相反，如果适用于端点图形平台，则选择<strong>24位深度格式</strong>通常会创建8位模板缓冲区。</p>
+<p>如果使用<a href="https://docs.unity3d.com/Manual/script-Mask.html">Mask组件</a> 需要模板缓冲区，请考虑使用<a href="https://docs.unity3d.com/Manual/script-RectMask2D.html">RectMask2D</a> 它不需要模板缓冲区，因此可以与<strong>16位深度格式</strong>一起使用。</p>
+</blockquote>
+<blockquote>
+<p>[!注意]
+为了快速确定场景中哪些对象没有可视地写入深度缓冲区，可以使用<a href="../MixedRealityConfigurationGuide.html#editor-utilities">Render Depth Buffer utility</a> 在“MRTK Configuration profile”配置文件中的<strong>Editor Settings</strong>下。</p>
+</blockquote>
+<h2 id="一般建议">一般建议</h2>
+<p>对于混合现实开发人员而言，性能可能是一个模棱两可且不断变化的挑战，并且优化性能的知识范围非常广泛。但有一些一般性建议，以帮助您了解如何提高应用程序的性能。</p>
+<p>将应用程序的执行简化为运行在CPU或GPU上的各个部分，从而确定应用程序是否受任一组件的约束，这很有用。可能存在跨越两个处理单元的瓶颈以及一些必须仔细研究的独特方案。但是，对于入门而言，最好掌握应用程序在最多时间执行的位置。</p>
+<h3 id="gpu限制">GPU限制</h3>
+<p>由于大多数混合现实应用程序平台都在利用<a href="https://en.wikipedia.org/wiki/Stereoscopy">立体渲染</a>，由于呈现“双倍宽”屏幕的性质，被GPU限制非常常见。此外，移动混合现实平台（如HoloLens或Oculus Quest）将受到移动级CPU和GPU处理能力的限制。</p>
+<p>当专注于GPU时，应用程序通常必须在两个重要阶段完成每一帧。</p>
+<ol>
+<li>执行<a href="https://en.wikipedia.org/wiki/Shader#Vertex_shaders">顶点着色器</a></li>
+<li>执行<a href="https://en.wikipedia.org/wiki/Shader#Pixel_shaders">像素着色器</a>（也称为片段着色器）</li>
+</ol>
+<p>无需深入研究计算机图形学的复杂领域和<a href="https://en.wikipedia.org/wiki/Graphics_pipeline">渲染管线</a>，每个着色器阶段都是一个在GPU上运行以产生以下内容的程序。</p>
+<ol>
+<li>顶点着色器将网格顶点转换为屏幕空间中的坐标（即，每个顶点执行的代码）</li>
+<li>像素着色器计算要为给定像素和网格片段绘制的颜色（即，每个像素执行代码）</li>
+</ol>
+<p>关于性能调整，通常专注于优化像素着色器中的操作通常会更有成果。应用程序可能只需要绘制一个只有8个顶点的立方体。但是，立方体占用的屏幕空间可能约为数百万个像素。因此，如果减少像素着色器上的着色器代码数量少于顶点着色器，则减少10个操作可以节省大量工作。</p>
+<p>这是利用这一优势的主要原因之一<a href="../README_MRTKStandardShader.html">MRTK标准着色器</a> 因为此着色器通常在像素和顶点上执行的指令要比Unity Standard着色器少得多，同时实现了可比的美学效果。</p>
+<table>
+<thead>
+<tr>
+<th>CPU 优化</th>
+<th>GPU 优化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>应用仿真逻辑</td>
+<td>渲染操作</td>
+</tr>
+<tr>
+<td>简化物理</td>
+<td>减少照明计算</td>
+</tr>
+<tr>
+<td>简化动画</td>
+<td>减少多边形数量和可绘制对象的数量</td>
+</tr>
+<tr>
+<td>管理垃圾收集</td>
+<td>减少透明物体的数量</td>
+</tr>
+<tr>
+<td>缓存引用</td>
+<td>避免后期处理/全屏效果</td>
+</tr>
+</tbody>
+</table>
+<h3 id="draw-call实例化">Draw call实例化</h3>
+<p>Unity中降低性能的最常见错误之一是在运行时克隆材质。如果GameObjects共享相同的材质和/或相同的网格，则可以通过以下技术将其优化为单次绘制调用：<a href="https://docs.unity3d.com/Manual/DrawCallBatching.html">静态批处理</a>, <a href="https://docs.unity3d.com/Manual/DrawCallBatching.html">动态批处理</a>和<a href="https://docs.unity3d.com/Manual/GPUInstancing.html">GPU实例化</a>.但是，如果开发人员修改了<a href="https://docs.unity3d.com/ScriptReference/Renderer-material.html">渲染器的材质</a>在运行时，Unity将创建分配材质的克隆副本。</p>
+<p>例如，如果一个场景中有100个cube，则开发人员可能希望在运行时为其分配唯一的颜色。访问<a href="https://docs.unity3d.com/ScriptReference/Material-color.html">renderer.material.color</a>在C＃中，它将使Unity在此特定渲染器/ GameObject的内存中创建新材质。100个立方体中的每个立方体都有其自己的材质，因此无法将它们合并到一个绘制调用中，而是将成为从CPU到GPU的100个绘制调用请求。</p>
+<p>为了克服这一障碍并仍然为每个立方体分配唯一的颜色，开发人员应利用<a href="https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html">MaterialPropertyBlock
+</a>.</p>
+<pre><code class="lang-c#">private PropertyBlock m_PropertyBlock ;
+private Renderer myRenderer;
+
+private void Start()
+{
+     myRenderer = GetComponent&lt;Renderer&gt;();
+     m_PropertyBlock = new MaterialPropertyBlock();
+}
+
+private void ChangeColor()
+{
+    // 为此渲染器创建一个材质的副本
+    myRenderer.material.color = Color.red;
+
+    // vs.
+
+    // 保留渲染器的实例化功能
+    m_PropertyBlock.SetColor(&quot;_Color&quot;, Color.red);
+    myRenderer.SetPropertyBlock(m_PropertyBlock);
+}
+</code></pre>
+<h2 id="unity性能工具">Unity性能工具</h2>
+<p>Unity提供了内置于编辑器中的出色性能工具。</p>
+<ul>
+<li><a href="https://docs.unity3d.com/Manual//Profiler.html">Unity Profiler</a></li>
+<li><a href="https://docs.unity3d.com/Manual/FrameDebugger.html">Unity Frame Debugger</a></li>
+</ul>
+<p>如果估计一个着色器与另一个着色器之间的大致性能折衷，则编译每个着色器并查看每个着色器阶段的操作数很有用。可以通过选择一个<a href="https://docs.unity3d.com/Manual/class-Shader.html">着色器资源</a>然后点击<em>Compile and show code</em>按钮。这将编译所有着色器变体，并使用结果打开Visual Studio。注意：根据使用给定着色器的材质启用的功能，所产生的统计结果可能会有所不同。Unity将仅编译当前项目中直接使用的着色器变体。</p>
+<p>Unity 标准着色器统计信息示例</p>
+<p><img src="../Images/Performance/UnityStandardShader-Stats.PNG" alt="Unity Standard Shader Statistics"></p>
+<p>MRTK Standard shader statistics example</p>
+<p><img src="../Images/Performance/MRTKStandardShader-Stats.PNG" alt="MRTK Standard Shader Statistics"></p>
+<h2 id="建议浏览">建议浏览</h2>
+<h3 id="unity">Unity</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=1e5WY2qf600">适用于初学者的Unity性能优化</a></li>
+<li><a href="https://unity3d.com/learn/tutorials/topics/performance-optimization">Unity性能优化教程</a></li>
+<li><a href="https://docs.unity3d.com/2019.1/Documentation/Manual/BestPracticeUnderstandingPerformanceInUnity.html">Unity优化最佳实践</a></li>
+<li><a href="https://docs.unity3d.com/Manual/OptimizingGraphicsPerformance.html">优化图形性能</a></li>
+<li><a href="https://docs.unity3d.com/Manual/MobileOptimizationPracticalGuide.html">移动优化实用指南</a></li>
+</ul>
+<h3 id="windows混合现实">Windows混合现实</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/recommended-settings-for-unity">建议的Unity设置</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/understanding-performance-for-mixed-reality">了解混合现实的性能</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/performance-recommendations-for-unity">Unity的性能建议</a></li>
+<li><a href="https://docs.unity3d.com/uploads/ExpertGuides/Analyzing_your_game_performance_using_Event_Tracing_for_Windows.pdf">Windows Unity的事件跟踪指南</a></li>
+</ul>
+<h3 id="oculus">Oculus</h3>
+<ul>
+<li><a href="https://developer.oculus.com/documentation/pcsdk/latest/concepts/dg-performance-guidelines/">性能准则</a></li>
+<li><a href="https://developer.oculus.com/documentation/pcsdk/latest/concepts/dg-performance-tools/">性能工具</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Performance/PerfGettingStarted.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

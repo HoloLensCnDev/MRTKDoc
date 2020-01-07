@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#25511;&#21046;&#22120;&#65292;&#25351;&#38024;&#21644;&#28966;&#28857; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#25511;&#21046;&#22120;&#65292;&#25351;&#38024;&#21644;&#28966;&#28857; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="控制器指针和焦点">控制器，指针和焦点</h1>
+
+<p>控制器，指针和焦点(Controllers, pointers, and focus)是更高级的概念，它们建立在核心输入系统所建立的基础之上。它们一起提供了场景中与对象交互的大部分机制。</p>
+<h2 id="controllers-控制器">Controllers (控制器)</h2>
+<p>控制器表示物理控制器（6个自由度，全关节手等）。它们是由设备管理器创建的，负责与相应的底层系统进行通信，并将该数据转换为MRTK形数据和事件。</p>
+<p>例如，在Windows Mixed Reality平台上，<a href="xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHan"><code>WindowsMixedRealityArticulatedHand</code></a>是一个控制器，负责与底层Windows<a href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate">手部追踪API</a>交互，获取有关手的关节，姿势和其他属性的信息。它负责将这些数据转换为相关的MRTK事件（例如，通过调用RaisePoseInputChanged或RaiseHandJointsUpdated）并更新其内部状态，以便对<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.HandJointUtils.html#Microsoft_MixedReality_Toolkit_Input_HandJointUtils_TryGetJointPose_TrackedHandJoint_Handedness_MixedRealityPose__"><code>TryGetJointPose</code></a>的查询将返回正确的数据。</p>
+<p>通常，控制器的生命周期将涉及：</p>
+<ol>
+<li>在检测到新来源（例如，检测并开始跟踪一只手）时，设备管理器就会创建一个控制器。</li>
+<li>在控制器的Update（）循环中，它调用其底层API系统。</li>
+<li>在同一更新循环中，它通过直接调用核心输入系统本身来引发输入事件更改（例如，引发HandMeshUpdated或HandJointsUpdated）。</li>
+</ol>
+<h2 id="pointers-and-focus-指针和焦点">Pointers and focus (指针和焦点)</h2>
+<p>指针用于与游戏对象进行交互。本节介绍如何创建指针，如何更新指针以及如何确定被聚焦的对象。它还将介绍存在的不同类型的指针以及它们处于活动状态的场景。</p>
+<h3 id="指针类别">指针类别</h3>
+<p>指针通常属于以下类别之一：</p>
+<ul>
+<li><p><strong>Far pointers(远指针)</strong></p>
+<p>这些类型的指针用于与距离用户较远的对象进行交互（“远距离”仅定义为“不靠近”）。这些类型的指针通常会投射出可以深入世界的线，并允许用户与不紧邻它们的对象进行交互并对其进行操作。</p>
+</li>
+<li><p><strong>Near pointers(近指针)</strong></p>
+<p>这些类型的指针用于与距离用户足够近的对象进行交互以进行抓取，触摸和操纵。通常，这些类型的指针通过查找附近的对象来与对象进行交互。（通过在较小范围内进行射线投射，进行球面投射来查找附近的对象，或者枚举被认为是可抓取/可触摸的对象列表）。</p>
+</li>
+<li><p><strong>Teleport pointers(传送指针)</strong></p>
+<p>这些类型的指针插入到传送系统(teleportation system)中，以处理将用户移动到指针指向的位置。</p>
+</li>
+</ul>
+<h2 id="pointer-mediation指针调解器">Pointer Mediation(指针调解器)</h2>
+<p>因为单个控制器可以具有多个指针（例如，全关节手可以具有近距交互指针和远距交互指针），所以存在一个组件，负责调解哪个指针应处于活动状态。</p>
+<p>例如，当用户的手接近可按下的按钮时，<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer.html"><code>ShellHandRayPointer</code></a>应该停止显示，并且<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html"><code>PokePointer</code></a> 应该被启用。</p>
+<p>这是由<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator.html"><code>DefaultPointerMediator</code></a>处理的，它负责根据所有指针的状态确定哪些指针处于活动状态。它做的一个关键事情是<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Pointers/DefaultPointerMediator.cs#L127">当一个近指针靠近对象时，禁用远指针</a>.</p>
+<p>可以通过更改指针配置文件上的 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerProfile.html#Microsoft_MixedReality_Toolkit_Input_MixedRealityPointerProfile_PointerMediator"><code>PointerMediator</code></a>属性来提供指针调解器的替代实现。</p>
+<h3 id="如何禁用指针">如何禁用指针</h3>
+<p>由于指针调解器每帧运行，所以它最终控制所有指针的活动/非活动状态。因此，如果在代码中设置了指针的IsInteractionEnabled属性，则指针调解器将在每帧覆盖它。相反，您可以指定 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html"><code>PointerBehavior</code></a> 控制指针是打开还是关闭自己。请注意，这仅在使用MRTK中的 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.FocusProvider.html"><code>FocusProvider</code></a> 和 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator.html"><code>DefaultPointerMediator</code></a> 默认设置时有效。</p>
+<h4 id="示例在mrtk中禁用手部射线">示例：在MRTK中禁用手部射线</h4>
+<p>以下代码将关闭MRTK中的手部射线：</p>
+<pre><code class="lang-c#">// 关闭所有手部射线
+PointerUtils.SetHandRayPointerBehavior(PointerBehavior.AlwaysOff);
+
+// 仅关闭右手的射线
+PointerUtils.SetHandRayPointerBehavior(PointerBehavior.AlwaysOff, Handedness.Right);
+</code></pre>
+<p>以下代码将使手部射线返回其在MRTK中的默认行为：</p>
+<pre><code class="lang-c#">PointerUtils.SetHandRayPointerBehavior(PointerBehavior.Default);
+</code></pre>
+<p>以下代码将强制打开手射线，无论是否靠近可抓取的物体：</p>
+<pre><code class="lang-c#">// 打开所有手部射线
+PointerUtils.SetHandRayPointerBehavior(PointerBehavior.AlwaysOn);
+</code></pre>
+<p>查看 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.PointerUtils.html"><code>PointerUtils</code></a> 和 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Examples.Demos.DisablePointersExample.html"><code>TurnPointersOnOff</code></a> 有关更多示例。</p>
+<h3 id="focusprovider">FocusProvider</h3>
+<p><a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.FocusProvider.html"><code>FocusProvider</code></a> 是负责遍历所有指针列表并弄清楚每个指针的焦点对象是什么的主力部分。</p>
+<p>在每个<code>Update()</code>调用中，这将：</p>
+<ol>
+<li><p>通过射线投射并执行指针本身配置的命中检测来更新所有指针（例如，球体指针可以指定SphereOverlap raycastMode，因此FocusProvider将进行基于球体的碰撞）</p>
+</li>
+<li><p>在每个指针的基础上更新聚焦对象（即，如果一个对象获得焦点，它也会触发那些对象的事件，如果一个对象失去焦点，它将触发焦点丢失，等等）。</p>
+</li>
+</ol>
+<h3 id="指针配置和生命周期">指针配置和生命周期</h3>
+<p><a href="../../Input/Pointers.html">指针可以配置</a> 在输入系统配置文件的<em>Pointers</em>部分中。</p>
+<p>The lifetime of a pointer is generally the following:</p>
+<ol>
+<li><p>设备管理器将检测到控制器的存在。然后，该设备管理器将通过调用 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html"><code>RequestPointers</code></a>来创建与控制器关联的一组指针.</p>
+</li>
+<li><p>FocusProvider在其Update()循环中，将遍历所有有效指针并执行关联的射线或命中检测逻辑。所以也有可能同时有多个焦点对象。</p>
+<ul>
+<li>因为有可能同时有多个输入源处于活动状态（例如，两只手处于激活状态），所以也可以有多个对象同时聚焦。</li>
+</ul>
+</li>
+<li><p>当发现控制器源丢失时，设备管理器将销毁与丢失的控制器关联的指针。</p>
+</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Architecture/InputSystem/ControllersPointersAndFocus.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

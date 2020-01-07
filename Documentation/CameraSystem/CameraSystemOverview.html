@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#30456;&#26426;&#31995;&#32479; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#30456;&#26426;&#31995;&#32479; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="相机系统">相机系统</h1>
+
+<p>相机系统使Microsoft Mixed Reality Toolkit能够配置和优化该应用程序的相机，以用于混合现实应用程序。使用相机系统，可以编写应用程序以支持不透明（例如虚拟现实）和透明（例如Microsoft HoloLens）设备，而无需编写代码来区分和适应每种类型的显示。</p>
+<h2 id="启用相机系统">启用相机系统</h2>
+<p>相机系统由MixedRealityToolkit对象（或另一个服务注册者组件）管理。</p>
+<p>以下步骤假定使用MixedRealityToolkit对象。其他服务注册者所需的步骤可能有所不同。</p>
+<ol>
+<li><p>在场景层次中选择MixedRealityToolkit对象。</p>
+<p><img src="../Images/MRTK_ConfiguredHierarchy.png" alt="MRTK Configured Scene Hierarchy"></p>
+</li>
+<li><p>将“Inspector”面板导航到“camera
+system”部分，并确保已选中<strong>Enable
+Camera System</strong>。</p>
+<p><img src="../Images/CameraSystem/EnableCameraSystem.png" alt="Enabling the camera system"></p>
+</li>
+<li><p>选择相机系统实现。MRTK提供的默认类实现是<code>MixedRealityCameraSystem</code>。</p>
+<p><img src="../Images/CameraSystem/SelectCameraSystemType.png" alt="Select camera system implementation"></p>
+</li>
+<li><p>选择所需的配置文件</p>
+<p><img src="../Images/CameraSystem/SelectCameraProfile.png" alt="Select camera system profile"></p>
+</li>
+</ol>
+<h2 id="配置相机系统">配置相机系统</h2>
+<h3 id="settings-providers-设置提供者-">Settings providers (设置提供者 )</h3>
+<p><img src="../Images/CameraSystem/CameraSettingsProviders.png" alt="Camera Settings Providers"></p>
+<p>相机设置提供者支持相机的平台特定配置。这些设置可能包括自定义配置步骤和/或组件。</p>
+<p>可以通过单击<strong>Add Camera Settings Provider</strong>按钮来添加提供者。可以通过单击提供者名称右侧的<strong>-</strong>按钮将其删除。</p>
+<blockquote>
+<p>[!注意]
+并非所有平台都需要相机设置提供者。如果没有与运行该应用程序的平台兼容的提供者，则Microsoft Mixed Reality Toolkit将应用基本默认值。</p>
+</blockquote>
+<h3 id="display-settings-显示设置-">Display settings (显示设置 )</h3>
+<p><img src="../Images/CameraSystem/CameraDisplaySettings.png" alt="Camera Display Settings"></p>
+<p>为不透明（例如：虚拟现实）和透明（例如：Microsoft HoloLens）显示指定了显示设置。使用这些设置在运行时配置相机。</p>
+<p><strong>Near Clip</strong></p>
+<p>near clip plane是相机可以渲染的最接近的虚拟对象的距离（以米为单位）。为了最大程度地提高用户的舒适度，建议将该值设置为大于零。上一张图片包含的值在各种设备上都很合适。</p>
+<p><strong>Far Clip</strong></p>
+<p>far clip plane是相机可以渲染的最远的虚拟对象的距离（以米为单位）。对于透明设备，建议这个值相对近，以免过度超出真实世界的空间，破坏应用程序的沉浸性</p>
+<p><strong>Clear Flags (清除标志)</strong></p>
+<p>清除标志值指示绘制时如何清除显示。对于虚拟现实体验，此值通常设置为Skybox。对于透明显示器，建议将其设置为“Color”。</p>
+<p><strong>Background Color (背景颜色)</strong></p>
+<p>如果清除标志未设置为“ Skybox”，则将显示背景颜色属性。</p>
+<p><strong>Quality Settings (质量设置 )</strong></p>
+<p>质量设置值指示Unity渲染场景时应使用的图形质量。质量级别是项目级别的设置，并不特定于任何一台相机。有关更多信息，请参见Unity文档中的<a href="https://docs.unity3d.com/Manual/class-QualitySettings.html">质量</a>文章。</p>
+<h2 id="建议浏览">建议浏览</h2>
+<ul>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.CameraSystem.html">相机系统API文档</a></li>
+<li><a href="CreateSettingsProvider.html">创建相机设置提供者</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/CameraSystem/CameraSystemOverview.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

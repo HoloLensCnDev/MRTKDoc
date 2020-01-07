@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Input Actions &#65288;&#36755;&#20837;&#21160;&#20316;&#65289; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Input Actions &#65288;&#36755;&#20837;&#21160;&#20316;&#65289; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="input-actions-输入动作">Input Actions （输入动作）</h1>
+
+<p><a href="InputActions.html"><strong>输入动作</strong></a> 是对原始输入的抽象，旨在帮助将应用程序逻辑与产生输入的特定输入源隔离开。例如，定义一个<em>Select</em>动作并将其映射到鼠标左键，游戏手柄中的一个按钮和一个6自由度控制器中的一个触发器，可能会很有用。然后，您可以让您的应用程序逻辑侦听<em>Select</em>输入动作事件，而不必知道可能产生此事件的所有不同输入。</p>
+<h2 id="创建输入动作">创建输入动作</h2>
+<p>在MRTK组件的<em>Input System Profile</em>内的<strong>Input Actions Profile</strong>中配置输入动作，指定动作名称和可以映射到的输入类型
+（<em>轴约束(Axis Constraint))</em>）</p>
+<img src="../Images/Input/InputActions.png" style="max-width:100%;">
+<p>这些是<strong>轴约束</strong> 最常用的值：</p>
+<table>
+<thead>
+<tr>
+<th>轴约束</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digital</td>
+<td>开/关输入，例如游戏手柄或鼠标中的二进制按钮。.</td>
+</tr>
+<tr>
+<td>Single Axis</td>
+<td>单轴模拟输入，如游戏手柄中的模拟触发器。</td>
+</tr>
+<tr>
+<td>Dual Axis</td>
+<td>双轴模拟输入，如摇杆。</td>
+</tr>
+<tr>
+<td>Six Dof</td>
+<td>具有6个自由度控制器产生的平移和旋转的3D姿势。</td>
+</tr>
+</tbody>
+</table>
+<p>您可以在<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Utilities.AxisType.html"><code>轴类型</code></a>中找到完整列表.</p>
+<h2 id="mapping-inputs-to-actions-将输入映射到动作">Mapping Inputs To Actions (将输入映射到动作)</h2>
+<p>将输入映射到动作的方式取决于输入源的类型：</p>
+<h3 id="controller-inputs-控制器输入">Controller Inputs (控制器输入)</h3>
+<p>转到 <em>Input System
+Profile</em>下的<strong>Controller Input
+Mapping Profile</strong>。在这里，您会找到所有支持的控制器的列表：</p>
+<img src="../Images/Input/ControllerInputMappingProfile.PNG" style="max-width:100%;">
+<p>选择要你想配置的一个，随即出现一个对话框窗口，其中包含所有控制器输入，可让您为每个输入设置一个动作：</p>
+<img src="../Images/Input/InputActionAssignment.PNG" style="max-width:100%;">
+<h3 id="speech-inputs-语音输入">Speech Inputs (语音输入)</h3>
+<p>在<em>Input System Profile</em>下的<strong>Speech Command Profile</strong>中，您将找到当前定义的语音命令列表。要将其中之一映射到某个动作，只需在<em>Action</em>下拉列表中选择它即可。</p>
+<img src="../Images/Input/SpeechCommandsProfile.png" style="max-width:100%;">
+<h3 id="gesture-inputs-手势输入">Gesture Inputs (手势输入)</h3>
+<p><em>Input System Profile</em>下的<strong>Gestures Profile</strong>包含所有已定义的手势。您可以在<em>Action</em>下拉列表中选择手势并且将它们映射到一个动作。</p>
+<img src="../Images/Input/GestureProfile.png" style="max-width:100%;">
+<h2 id="handling-input-actions-处理输入动作">Handling Input Actions (处理输入动作)</h2>
+<blockquote>
+<p>[!警告]
+当前，只能使用本节中描述的方法来处理*数字(Digital)*类型的输入动作。对于其他动作类型，您必须直接处理相应输入的事件。例如，要处理映射到控制器输入的6自由度动作，您必须使用<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityGestureHandler-1.html"><code>IMixedRealityGestureHandler&lt;T&gt;</code></a> with T = <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.html"><code>MixedRealityPose</code></a>.</p>
+</blockquote>
+<p>处理输入动作的最简单方法是利用 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.InputActionHandler.html"><code>InputActionHandler</code></a> 脚本。这使您可以使用Unity Events定义要监听的动作并对动作的开始和结束事件做出反应。</p>
+<img src="../Images/Input/InputActionHandler.PNG" style="max-width:100%;">
+<p>如果您想要更多控制权，可以直接在您的脚本中实现<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputActionHandler.html"><code>IMixedRealityInputActionHandler</code></a> 接口。查看 <a href="InputEvents.html"><strong>输入事件</strong></a> 部分，以了解有关通过handler接口进行事件处理的更多详细信息。</p>
+<h2 id="例子">例子</h2>
+<p>有关示例场景，请参见<code>MixedRealityToolkit.Examples\Demos\Input\Scenes\InputActions</code> 其中显示了如何创建动作，如何将其映射到控制器，语音和手势输入以及如何根据命令旋转对象。</p>
+<img src="../Images/Input/InputActionsExample.PNG" style="max-width:100%;">
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Input/InputActions.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

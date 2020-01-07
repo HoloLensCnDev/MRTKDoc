@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Scene Transition Service (&#22330;&#26223;&#36807;&#28193;&#26381;&#21153;) | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Scene Transition Service (&#22330;&#26223;&#36807;&#28193;&#26381;&#21153;) | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="scene-transition-service-场景过渡服务">Scene Transition Service (场景过渡服务)</h1>
+
+<p>该扩展简化了淡出场景，显示进度指示器，加载场景然后淡入的业务。</p>
+<p>场景操作由SceneSystem服务驱动，但是任何基于任务的操作都可以用来驱动过渡操作。</p>
+<h2 id="enabling-the-extension-启用扩展">Enabling the extension (启用扩展)</h2>
+<p>要启用扩展，请打开您的RegisteredServiceProvider配置文件。单击注册新服务提供者（Register a new Service Provider）以添加新配置。在“Component Type”字段中，选择“ SceneTransitionService”。在“Configuration Profile”字段中，选择default scene transition profile included with the extension。</p>
+<h2 id="配置文件选项">配置文件选项</h2>
+<h3 id="use-default-progress-indicator-使用默认进度指示器">Use Default Progress Indicator (使用默认进度指示器)</h3>
+<p>如果选中，则在调用<code>DoSceneTransition</code>时未提供任何进度指示器对象时，将使用默认进度指示器预制体。如果提供了进度指示器对象，则默认设置将被忽略。</p>
+<h3 id="use-fade-color-使用淡入淡出">Use Fade Color (使用淡入淡出)</h3>
+<p>如果选中，过渡服务将在过渡期间应用淡入淡出。可以在运行时通过服务的<code>UseFadeColor</code> 属性更改此设置。</p>
+<h3 id="fade-color-淡入淡出颜色-">Fade Color (淡入淡出颜色 )</h3>
+<p>控制淡入淡出效果的颜色。Alpha被忽略。可以在在运行时且过渡之前通过服务的<code>FadeColor</code>属性更改此设置。</p>
+<h3 id="fade-targets-淡入淡出目标">Fade Targets (淡入淡出目标)</h3>
+<p>控制将对它们应用淡入淡出效果的摄像机。可以在运行时通过服务的<code>FadeTargets</code> 属性更改此设置。</p>
+<table>
+<thead>
+<tr>
+<th>设置</th>
+<th>目标相机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main</td>
+<td>对主相机应用淡入淡出效果。</td>
+</tr>
+<tr>
+<td>UI</td>
+<td>将淡入淡出效果应用于UI层上的相机。（不影响覆盖UI）</td>
+</tr>
+<tr>
+<td>All</td>
+<td>适用于主摄像机和UI摄像机。</td>
+</tr>
+<tr>
+<td>Custom</td>
+<td>适用于通过<code>SetCustomFadeTargetCameras</code>提供的一组自定义摄像机</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fade-out-time--fade-in-time-淡出时间淡入时间-">Fade Out Time / Fade In Time (淡出时间/淡入时间 )</h3>
+<p>进入/退出过渡时淡入淡出持续时间的默认设置。可以在运行时通过服务的<code>FadeOutTime</code> 和<code>FadeInTime</code> 属性更改这些设置</p>
+<h3 id="camera-fader-type-相机淡入淡出类型">Camera Fader Type (相机淡入淡出类型)</h3>
+<p>使用哪个<code>ICameraFader</code>类用于向相机应用淡入淡出效果。默认的<code>CameraFaderQuad</code> 类实例化一个quad，该quad在目标摄影机前面靠近剪切平面的位置使用透明材质。另一种方法可能是使用post effects系统。</p>
+<h2 id="using-the-extension-使用扩展">Using the Extension (使用扩展)</h2>
+<p>您可以通过传递相机淡出时运行的任务来使用转换服务。</p>
+<h3 id="using-scene-system-tasks-使用场景系统任务">Using Scene System Tasks (使用场景系统任务)</h3>
+<p>在大多数情况下，您将使用SceneSystem服务提供的任务：</p>
+<pre><code class="lang-c#">private async void TransitionToScene()
+{
+    IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService&lt;IMixedRealitySceneSystem&gt;();
+    ISceneTransitionService transition = MixedRealityToolkit.Instance.GetService&lt;ISceneTransitionService&gt;();
+
+    //淡出
+    //运行LoadContent任务
+    //淡入
+    await transition.DoSceneTransition(
+            () =&gt; sceneSystem.LoadContent(&quot;TestScene1&quot;)
+        );
+}
+</code></pre>
+<h3 id="使用自定义任务">使用自定义任务</h3>
+<p>在其他情况下，您可能想要执行淡入淡出而没有实际加载场景：</p>
+<pre><code class="lang-c#">private async void TransitionToScene()
+{
+    ISceneTransitionService transition = MixedRealityToolkit.Instance.GetService&lt;ISceneTransitionService&gt;();
+
+    //淡出
+    //重置场景
+    //淡入
+    await transition.DoSceneTransition(
+            () =&gt; ResetScene()
+        );
+}
+
+private async Task ResetScene()
+{
+      //遍历当前场景中的所有敌人并将它们移回起始位置
+}
+</code></pre>
+<p>或者，您可能想加载场景而不使用SceneSystem服务：</p>
+<pre><code class="lang-c#">private async void TransitionToScene()
+{
+    ISceneTransitionService transition = MixedRealityToolkit.Instance.GetService&lt;ISceneTransitionService&gt;();
+
+   //淡出
+    //使用Unity的场景管理器加载场景
+    //淡入
+    await transition.DoSceneTransition(
+            () =&gt; LoadScene(&quot;TestScene1&quot;)
+        );
+}
+
+private async Task LoadScene(string sceneName)
+{
+    AsyncOperation asyncOp = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+    while (!asyncOp.isDone)
+    {
+        await Task.Yield();
+    }
+}
+</code></pre>
+<h3 id="使用多个任务">使用多个任务</h3>
+<p>You can also supply multiple tasks, which will be executed in order:</p>
+<pre><code class="lang-c#">private async void TransitionToScene()
+{
+    IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService&lt;IMixedRealitySceneSystem&gt;();
+    ISceneTransitionService transition = MixedRealityToolkit.Instance.GetService&lt;ISceneTransitionService&gt;();
+
+
+    //淡出
+    //将时间刻度设置为0
+    //将音频淡入0
+    //加载TestScene1
+    //音频衰减为1
+    //将时间刻度设置为1
+    //淡入
+
+    await transition.DoSceneTransition(
+            () =&gt; SetTimescale(0f),
+            () =&gt; FadeAudio(0f, 1f),
+            () =&gt; sceneSystem.LoadContent(&quot;TestScene1&quot;),
+            () =&gt; FadeAudio(1f, 1f),
+            () =&gt; SetTimescale(1f)
+        );
+}
+
+private async Task SetTimescale(float targetTime)
+{
+    Time.timeScale = targetTime;
+    await Task.Yield();
+}
+
+private async Task FadeAudio(float targetVolume, float duration)
+{
+    float startTime = Time.realtimeSinceStartup;
+    float startVolume = AudioListener.volume;
+    while (Time.realtimeSinceStartup &lt; startTime + duration)
+    {
+        AudioListener.volume = Mathf.Lerp(startVolume, targetVolume, Time.realtimeSinceStartup - startTime / duration);
+        await Task.Yield();
+       }
+       AudioListener.volume = targetVolume;
+}
+</code></pre>
+<h2 id="using-the-progress-indicator-使用进度指示器">Using the Progress Indicator (使用进度指示器)</h2>
+<p>如果在SceneTransitionService配置文件中选中<code>UseDefaultProgressIndicator</code> ，则过渡开始时将实例化进度指示器。在过渡期间，可以通过该服务的<code>SetProgressValue</code> 和<code>SetProgressMessage</code> 方法访问该指标的<code>Progress</code> 和<code>Message</code> 属性。</p>
+<pre><code class="lang-c#">private async void TransitionToScene()
+{
+    IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService&lt;IMixedRealitySceneSystem&gt;();
+    ISceneTransitionService transition = MixedRealityToolkit.Instance.GetService&lt;ISceneTransitionService&gt;();
+
+    ListenToSceneTransition(sceneSystem, transition);
+
+    await transition.DoSceneTransition(
+            () =&gt; sceneSystem.LoadContent(&quot;TestScene1&quot;)
+        );
+}
+
+private async void ListenToSceneTransition(IMixedRealitySceneSystem sceneSystem, ISceneTransitionService transition)
+{
+    transition.SetProgressMessage(&quot;Starting transition...&quot;);
+
+    while (transition.TransitionInProgress)
+    {
+        if (sceneSystem.SceneOperationInProgress)
+        {
+            transition.SetProgressMessage(&quot;Loading scene...&quot;);
+            transition.SetProgressValue(sceneSystem.SceneOperationProgress);
+        }
+        else
+        {
+            transition.SetProgressMessage(&quot;Finished loading scene...&quot;);
+            transition.SetProgressValue(1);
+        }
+
+        await Task.Yield();
+    }
+}
+</code></pre>
+<p>或者，在调用<code>DoSceneTransition</code> 时，您可以通过可选的<code>progressIndicator</code> 参数提供自己的进度指示器。这将覆盖默认进度指示器。</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Extensions/SceneTransitionService/SceneTransitionServiceOverview.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

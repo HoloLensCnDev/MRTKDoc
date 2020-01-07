@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#20840;&#24687;&#22270;&#31283;&#23450; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#20840;&#24687;&#22270;&#31283;&#23450; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="全息图稳定">全息图稳定</h1>
+
+<h2 id="性能">性能</h2>
+<p>为了使基础的混合现实平台和设备产生最佳结果，实现执行帧率很重要。目标帧率（例如：60 FPS或90 FPS）将因平台和设备而异。但是，足够帧率的混合现实应用程序将具有稳定的全息图以及有效的头部跟踪，手部跟踪等功能。</p>
+<h2 id="环境追踪">环境追踪</h2>
+<p>稳定的全息渲染在很大程度上取决于平台和设备的头部姿势跟踪。在每一帧中，Unity根据基础平台估计并提供的摄像机姿势来渲染场景。如果此跟踪未正确跟随实际的头部运动，则全息图将在视觉上显得不准确。对于像HoloLens这样的AR设备，用户可以将虚拟全息图与现实世界联系起来，这一点尤其明显和重要。性能对于可靠的头部跟踪很重要，但是也存在<a href="https://docs.microsoft.com/en-us/windows/mixed-reality/environment-considerations-for-hololens">其他重要的环境注意事项</a>。影响用户体验的环境元素的类型将取决于目标平台的具体情况。</p>
+<h2 id="windows混合现实">Windows混合现实</h2>
+<p>Windows Mixed Reality平台提供了一些<a href="https://docs.microsoft.com/en-us/windows/mixed-reality/hologram-stability">参考资料</a>用于平台上的全息图稳定。尽管开发人员可以使用一些关键工具来改善用户的全息图视觉体验。</p>
+<h3 id="深度缓冲区共享">深度缓冲区共享</h3>
+<p>Unity开发人员可以选择与平台共享应用程序的深度缓冲区。这提供了当前帧存在全息图的信息，平台可以通过称为Late-Stage Reprojection的硬件辅助过程利用该信息来使全息图稳定。</p>
+<h4 id="late-stage-reprojection">Late-Stage Reprojection</h4>
+<p>在渲染帧结束时，Windows Mixed Reality平台将获取应用程序生成的颜色和深度渲染目标，并转换最终的屏幕输出，以解决自上一次头部姿势预测以来任何轻微的头部运动。应用程序的游戏循环需要时间才能执行。例如，在60 FPS时，这意味着应用程序花费了约16.667ms来渲染一帧。即使这似乎是微不足道的时间，用户的头部位置和方向也将发生变化，从而为渲染中的相机产生新的投影矩阵。Late-Stage Reprojection会转换最终图像中的像素，以解决这一新问题。</p>
+<h4 id="per-pixel-vs-stabilization-plane-lsr">Per-pixel vs stabilization plane LSR</h4>
+<p>根据Windows混合现实设备上运行的设备端点和操作系统版本，Late-Stage Reprojection算法将按像素执行或通过<a href="https://docs.microsoft.com/en-us/windows/mixed-reality/hologram-stability#stabilization-plane">稳定平面</a>.</p>
+<h5 id="基于每个像素的深度">基于每个像素的深度</h5>
+<p>基于每个像素深度的重新投影涉及利用深度缓冲区来修改每个像素的图像输出，从而使全息图稳定在各种距离处。例如，距离1m的球体可能在距离10m的柱子前面。如果用户将头部稍微倾斜，则表示球体的像素将与表示柱子的较远像素具有不同的变换。每像素重投影将考虑每个像素的距离差异，以实现更准确的重投影。</p>
+<h5 id="稳定面">稳定面</h5>
+<p>如果不可能创建一个精确的深度缓冲区与平台共享，则另一种形式的LSR使用稳定平面。场景中的所有全息图都将获得一定的稳定性，但是位于所需平面中的全息图将获得最大的硬件稳定性。可以通过HolographicSettings.SetFocusPointForFrame将平面的点和法线提供给平台。<a href="https://docs.microsoft.com/en-us/windows/mixed-reality/focus-point-in-unity">Unity提供的API</a>.</p>
+<h4 id="深度缓冲区格式">深度缓冲区格式</h4>
+<p>如果以HoloLens为开发目标，则强烈建议使用16位深度缓冲格式而不是24位深度缓冲格式。尽管深度值的精度较低，但这可以极大地节省性能。弥补较低的精度并避免<a href="https://en.wikipedia.org/wiki/Z-fighting">z-fighting</a>，建议减少<a href="https://docs.unity3d.com/Manual/class-Camera.html">far clip plane</a>从Unity设置的1000m默认值开始。</p>
+<blockquote>
+<p>[!注意]
+如果使用<strong>16位深度格式</strong>，则模板缓冲区所需的效果将不起作用，因为在这种情况下<a href="https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html">Unity不创建模板缓冲区</a>。相反，选择<strong>24位深度格式</strong>通常会创建一个<a href="https://docs.unity3d.com/Manual/SL-Stencil.html">8位模板缓冲器</a>（如果适用于端点图形平台。</p>
+</blockquote>
+<h4 id="unity中的深度缓冲区共享">Unity中的深度缓冲区共享</h4>
+<p>为了利用基于深度的LSR，开发人员需要采取两个重要步骤。</p>
+<ol>
+<li>在 <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong> &gt; <strong>XR Settings</strong> &gt; <strong>Virtual Reality SDKs</strong> &gt;下启用 <strong>Depth Buffer Sharing</strong>
+<ol>
+<li>如果以HoloLens为目标，建议也选择<strong>16位深度格式</strong></li>
+</ol>
+</li>
+<li>在屏幕上渲染颜色时，也要渲染深度</li>
+</ol>
+<p><a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterRenderingMode.html">不透明的游戏对象</a>在Unity中，通常会自动写入深度。但是，默认情况下，透明和文本对象通常不会写入深度。如果使用MRTK标准着色器或Text Mesh Pro，则可以很容易地对其进行补救。</p>
+<blockquote>
+<p>[!注意]
+为了快速确定场景中哪些对象没有可视地写入深度缓冲区，可以使用<a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#editor-utilities"><em>Render Depth Buffer</em> utility</a>在“MRTK Configuration profile”配置文件中的Editor Settings下。</p>
+</blockquote>
+<h5 id="透明mrtk标准着色器">透明MRTK标准着色器</h5>
+<p>对于透明材料，使用<a href="README_MRTKStandardShader.html">MRTK标准着色器r</a>, 选择要在<em>Inspector</em>窗口中查看的材料。然后单击<em>Fix Now</em> 按钮以将材质转换为写入深度（即Z-Write On）。</p>
+<p>之前</p>
+<p><img src="Images/Performance/DepthBufferFixNow_Before.PNG" alt="Depth Buffer Before Fix MRTK Standard Shader"></p>
+<p>后</p>
+<p><img src="Images/Performance/DepthBufferFixNow_After.PNG" alt="Depth Buffer Fixed MRTK Standard Shader"></p>
+<h5 id="text-mesh-pro">Text Mesh Pro</h5>
+<p>对于Text Mesh Pro对象，选择TMP GameObject以在检查器中查看它。在材质组件下，切换指定材质的着色器以使用MRTK TextMeshPro着色器。</p>
+<p><img src="Images/Performance/TextMeshPro-DepthBuffer-Fix.PNG" alt="Text Mesh Pro Depth Buffer Fix"></p>
+<h5 id="自定义着色器">自定义着色器</h5>
+<p>如果要编写自定义着色器，请添加<a href="https://docs.unity3d.com/Manual/SL-CullAndDepth.html">ZWrite flag</a>到<em>Pass</em>块定义的顶部以配置着色器以写入深度缓冲区。</p>
+<pre><code>Shader &quot;Custom/MyShader&quot;
+{
+    SubShader
+    {
+        Pass
+        {
+            ...
+            ZWrite On
+            ...
+        }
+    }
+}
+</code></pre>
+<h5 id="不透明的支持">不透明的支持</h5>
+<p>如果上述方法不适用于给定场景（即使用Unity UI），则可能有另一个对象写入深度缓冲区。一个常见的示例是在场景的浮动面板上使用Unity UI文本。通过使面板不透明或至少写到一定深度，文本和面板都将被平台稳定，因为它们的z值非常接近。</p>
+<h3 id="worldanchors-hololens">WorldAnchors (HoloLens)</h3>
+<p>除了确保满足正确的配置以确保视觉稳定性外，重要的是要确保全息图在其正确的物理位置保持稳定。为了在物理空间中的重要位置通知平台，开发人员可以利用<a href="https://docs.unity3d.com/ScriptReference/XR.WSA.WorldAnchor.html">WorldAnchors</a> 在需要留在一个地方的GameObjects上.=<a href="https://docs.unity3d.com/ScriptReference/XR.WSA.WorldAnchor.html">WorldAnchor</a>是添加到GameObject的一种组件，该组件可以完全控制该对象的变换。</p>
+<p>诸如HoloLens之类的设备正在不断扫描并了解环境。因此，随着HoloLens跟踪空间中的运动和位置，其估计值将被更新并且<a href="https://docs.microsoft.com/en-us/windows/mixed-reality/coordinate-systems-in-unity">调整Unity坐标系</a>.例如，如果在开始时将GameObject放置在距离摄像机1m的位置，则当HoloLens跟踪环境时，它可能会意识到GameObject所在的物理点实际上位于1.1m处。这将导致全息图漂移。将WorldAnchor应用于GameObject将使锚能够控制对象的变换，从而使对象保持在正确的物理位置（即，在运行时更新为1.1m而不是1m）。在整个应用会话中留存<a href="https://docs.unity3d.com/ScriptReference/XR.WSA.WorldAnchor.html">WorldAnchors</a>，开发人员可以使用<a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Persistence.WorldAnchorStore.html">WorldAnchorStore</a>来<a href="https://docs.microsoft.com/en-us/windows/mixed-reality/persistence-in-unity">保存并加载WorldAnchors</a>.</p>
+<blockquote>
+<p>[!注意]
+一旦将WorldAnchor组件添加到GameObject，就无法修改该GameObject的变换（即transform.position = x）。开发人员必须删除WorldAnchor才能编辑变换。</p>
+</blockquote>
+<pre><code class="lang-c#">WorldAnchor m_anchor;
+
+public void AddAnchor()
+{
+    this.m_anchor = this.gameObject.AddComponent&lt;WorldAnchor&gt;();
+}
+
+public void RemoveAnchor()
+{
+    DestroyImmediate(m_anchor);
+}
+</code></pre>
+<p>建议查看</p>
+<ul>
+<li><a href="Performance/PerfGettingStarted.html">性能</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/environment-considerations-for-hololens">HoloLens的环境注意事项</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/hologram-stability">Windows混合现实的全息图稳定性</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/focus-point-in-unity">Focus point in Unity</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/coordinate-systems-in-unity">Unity中的坐标系</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/persistence-in-unity">Persistence in Unity</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/understanding-performance-for-mixed-reality">了解混合现实的性能</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/performance-recommendations-for-unity">Unity的性能建议</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/hologram-stabilization.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#26550;&#26500;&#27010;&#36848; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#26550;&#26500;&#27010;&#36848; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="架构概述">架构概述</h1>
+
+<p>要全面了解MRTK的内容，本文档中包含的架构信息将帮助您了解以下内容：</p>
+<ul>
+<li>MRTK的大型部分及其连接方式</li>
+<li>MRTK引入的概念在vanilla Unity中可能不存在</li>
+<li>一些较大的系统（例如Input）如何工作</li>
+</ul>
+<p>本部分并不是要教您如何执行任务，而是要教这些任务的结构以及原因。</p>
+<h2 id="众多受众一个工具包">众多受众，一个工具包</h2>
+<p>MRTK没有统一的受众。它被编写来支持用例，从第一次黑客马拉松到个人为企业构建复杂的，共享的经验。可能已经编写了一些代码和API，它们彼此之间的优化程度更高（即MRTK的某些部分似乎针对“一键配置(one click configure)”进行了优化），但需要注意的是，其中一些是出于历史和资源原因。随着MRTK的发展，应将构建的功能设计为可扩展以支持用例范围。</p>
+<p>MRTK还具有在VR和AR体验中进行扩展的要求。构建部署在HoloLens 2或HoloLens 1上的可适当回退的应用程序应该很容易，并且构建针对OpenVR和WMR（和其他平台）的应用程序应该很简单。尽管团队有时可能会将特定的迭代重点放在特定的系统或平台上，但长期目标是为人们在何处构建混合现实体验提供广泛的支持。</p>
+<h2 id="高层级分解">高层级分解</h2>
+<p>MRTK既是用于快速获取混合现实（MR）体验的工具的集合，同时也是一个应用程序框架，它对自己的运行时、如何扩展和如何配置有自己的方式。</p>
+<p>在较高层级，可以通过以下方式分解MRTK：</p>
+<p><img src="../Images/Architecture/MRTK_Architecture.png" alt="Architecture Overview Diagram"></p>
+<p>MRTK还包含另一套实用程序，它们与其余MRTK几乎没有依赖（仅举几例: build tools, solvers, audio influencers,smoothing utilities和line renderers）</p>
+<p>架构文档的其余部分将从框架和运行时开始，从下至上，逐步发展到更有趣，更复杂的系统，例如输入。请查看目录以继续进行架构概述。</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Architecture/Overview.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

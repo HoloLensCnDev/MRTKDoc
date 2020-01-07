@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Extension Service Creation Wizard &#65288;&#25193;&#23637;&#26381;&#21153;&#21019;&#24314;&#21521;&#23548;&#65289; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Extension Service Creation Wizard &#65288;&#25193;&#23637;&#26381;&#21153;&#21019;&#24314;&#21521;&#23548;&#65289; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="extension-service-creation-wizard-扩展服务创建向导">Extension Service Creation Wizard （扩展服务创建向导）</h1>
+
+<p>从单例过渡到服务可能很困难。通过使开发人员能够（几乎）与创建新的MonoBehaviour脚本一样容易地创建新服务，此向导可以补充我们的其他文档和示例代码。要了解从头开始创建服务的信息，请参阅我们的<a href="../MixedRealityConfigurationGuide.html">建立注册服务指南</a> (即将发布).</p>
+<h3 id="启动向导">启动向导</h3>
+<p>从主菜单启动向导: <strong>MixedRealityToolkit/Utilities/Create Extension Service</strong> - 该向导将带您完成生成服务脚本，界面和配置文件类的过程。</p>
+<h3 id="编辑服务脚本">编辑服务脚本</h3>
+<p>默认情况下，新脚本资源将在MixedRealityToolkit.Extensions文件夹中生成。完成向导后，请导航至此处并打开新的服务脚本。</p>
+<p>生成的服务脚本包括一些类似于新MonoBehaviour脚本的提示。他们将让您知道在哪里初始化和更新您的服务。</p>
+<pre><code>namespace Microsoft.MixedReality.Toolkit.Extensions
+{
+    [MixedRealityExtensionService(SupportedPlatforms.WindowsStandalone|SupportedPlatforms.MacStandalone|SupportedPlatforms.LinuxStandalone|SupportedPlatforms.WindowsUniversal)]
+    public class NewService : BaseExtensionService, INewService, IMixedRealityExtensionService
+    {
+        private NewServiceProfile newServiceProfile;
+
+        public NewService(IMixedRealityServiceRegistrar registrar,  string name,  uint priority,  BaseMixedRealityProfile profile) : base(registrar, name, priority, profile) 
+        {
+            newServiceProfile = (NewServiceProfile)profile;
+        }
+
+        public override void Initialize()
+        {
+            // 在这里进行服务初始化。
+        }
+
+        public override void Update()
+        {
+            // 在这里进行服务更新。
+        }
+    }
+}
+</code></pre>
+<p>如果选择在向导中注册服务，则只需编辑此脚本，您的服务就会自动更新。否则，您可以阅读 <a href="../MixedRealityConfigurationGuide.html">在这里注册您的新服务</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Tools/ExtensionServiceCreationWizard.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

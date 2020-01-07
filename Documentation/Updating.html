@@ -1,0 +1,613 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#26356;&#26032;Microsoft&#28151;&#21512;&#29616;&#23454;&#24037;&#20855;&#21253; | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#26356;&#26032;Microsoft&#28151;&#21512;&#29616;&#23454;&#24037;&#20855;&#21253; | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="更新microsoft混合现实工具包">更新Microsoft混合现实工具包</h1>
+
+<ul>
+<li><a href="#%E5%B0%862.1.0%E6%9B%B4%E6%96%B0%E4%B8%BA2.2.0">2.1.0 至 2.2.0</a></li>
+<li><a href="#%E5%B0%862.0.0%E6%9B%B4%E6%96%B0%E5%88%B02.1.0">2.0.0 至2.1.0</a></li>
+<li><a href="#%E5%B0%86RC2%E6%9B%B4%E6%96%B0%E5%88%B02.0.0">RC2 至2.0.0</a></li>
+</ul>
+<h2 id="将210更新为220">将2.1.0更新为2.2.0</h2>
+<ul>
+<li><a href="#api-changes-in-220">API 更改</a></li>
+</ul>
+<h3 id="220中的api更改">2.2.0中的API更改</h3>
+<h4 id="imixedrealityboundarysystemcontains">IMixedRealityBoundarySystem.Contains</h4>
+<p>该方法以前采用了特定的，Unity定义的实验枚举。现在，它接受一个与Unity枚举相同的MRTK定义的枚举。此更改有助于为Unity的未来边界API准备MRTK。</p>
+<h4 id="mixedrealityserviceprofileattribute">MixedRealityServiceProfileAttribute</h4>
+<p>为了更好地描述支持概要文件的需求，MixedRealityServiceProfileAttribute已被更新，以添加一个排除类型的可选集合。作为此更改的一部分，ServiceType属性已从Type更改为Type[]并重命名为RequiredTypes。</p>
+<p>第二个属性，也添加了ExcludedTypes。</p>
+<h2 id="将200更新到210">将2.0.0更新到2.1.0</h2>
+<ul>
+<li><a href="#api-changes-in-210">API 更改</a></li>
+<li><a href="#profile-changes-in-210">配置文件更改</a></li>
+</ul>
+<h3 id="210中的api更改">2.1.0中的API更改</h3>
+<p><strong>BaseNearInteractionTouchable</strong></p>
+<p>已对<code>BaseNearInteractionTouchable</code>进行了修改，以将<code>OnValidate</code>方法标记为虚拟方法。扩展<code>BaseNearInteractionTouchable</code>的类（例如：<code>NearInteractionTouchableUnityUI</code>）已更新，以适应此更改。</p>
+<p><strong>ColliderNearInteractionTouchable</strong></p>
+<p><code>ColliderNearInteractionTouchable</code>类已被弃用。请更新代码引用以使用<code>BaseNearInteractionTouchable</code>。</p>
+<p><strong>IMixedRealityMouseDeviceManager</strong></p>
+<p><strong><em>添加</em></strong></p>
+<p>ImixedRealityMouseDeviceManager<code>已添加</code>CursorSpeed<code>和</code>WheelSpeed` 属性。这些属性允许应用程序指定乘数值，通过该乘数值将分别缩放光标和滚轮的速度。</p>
+<p>这是一项重大更改，需要修改现有的鼠标设备管理器(mouse device manager)实现。</p>
+<blockquote>
+<p>[!注意]
+此更改与2.0.0版本不向后兼容。</p>
+</blockquote>
+<p><strong><em>弃用</em></strong></p>
+<p><code>MouseInputProfile</code> 属性已被标记为过时，并且将从Microsoft混合现实工具包的将来版本中删除。建议应用程序代码不再使用此属性。</p>
+<p><strong>Interactable</strong></p>
+<p>以下方法和属性已被弃用，并且将从Microsoft混合现实工具包的将来版本中删除。建议按照包含在“过时”属性中并显示在控制台中的指南更新应用程序代码。</p>
+<ul>
+<li><code>public bool Enabled</code></li>
+<li><code>public bool FocusEnabled</code></li>
+<li><code>public void ForceUpdateThemes()</code></li>
+<li><code>public bool IsDisabled</code></li>
+<li><code>public bool IsToggleButton</code></li>
+<li><code>public int GetDimensionIndex()</code></li>
+<li><code>public State[] GetStates()</code></li>
+<li><code>public bool RequiresFocus</code></li>
+<li><code>public void ResetBaseStates()</code></li>
+<li><code>public virtual void SetCollision(bool collision)</code></li>
+<li><code>public virtual void SetCustom(bool custom)</code></li>
+<li><code>public void SetDimensionIndex(int index)</code></li>
+<li><code>public virtual void SetDisabled(bool disabled)</code></li>
+<li><code>public virtual void SetFocus(bool focus)</code></li>
+<li><code>public virtual void SetGesture(bool gesture)</code></li>
+<li><code>public virtual void SetGestureMax(bool gesture)</code></li>
+<li><code>public virtual void SetGrab(bool grab)</code></li>
+<li><code>public virtual void SetInteractive(bool interactive)</code></li>
+<li><code>public virtual void SetObservation(bool observation)</code></li>
+<li><code>public virtual void SetObservationTargeted(bool targeted)</code></li>
+<li><code>public virtual void SetPhysicalTouch(bool touch)</code></li>
+<li><code>public virtual void SetPress(bool press)</code></li>
+<li><code>public virtual void SetTargeted(bool targeted)</code></li>
+<li><code>public virtual void SetToggled(bool toggled)</code></li>
+<li><code>public virtual void SetVisited(bool visited)</code></li>
+<li><code>public virtual void SetVoiceCommand(bool voice)</code></li>
+</ul>
+<p><strong>NearInteractionTouchableSurface</strong></p>
+<p>添加了<code>NearInteractionTouchableSurface</code>类，现在用作<code>NearInteractionTouchable</code>和<code>NearInteractionTouchableUnityUI</code>的基类。</p>
+<h3 id="210中的配置文件更改">2.1.0中的配置文件更改</h3>
+<p><strong>手动跟踪配置文件</strong></p>
+<p>现在，手部网格和关节可视化具有单独的编辑器和播放器设置。手动跟踪配置文件已更新，可以将这些可视化(visualizations)设置为；Nothing, Everything, Editor or Player.</p>
+<p><img src="Images/ReleaseNotes/HandTrackingVisualizationModes.png" alt="Hand visualization modes"></p>
+<p>自定义手部跟踪配置文件可能需要更新才能与版本2.1.0一起正常使用。</p>
+<blockquote>
+<p>[!注意]
+此更改与2.0.0版本不向后兼容。</p>
+</blockquote>
+<p><strong>输入模拟配置文件</strong></p>
+<p>输入模拟系统已升级，可以更改输入模拟配置文件中的一些设置。某些更改无法自动迁移，用户可能会发现配置文件正在使用默认值。</p>
+<ol>
+<li><p>配置文件中的所有KeyCode和鼠标按钮绑定都已替换为通用的KeyBinding 结构，该结构存储绑定的类型（键或鼠标）以及实际的绑定代码（分别为KeyCode或鼠标按钮编号）。该结构具有自己的检查器，该检查器可以统一显示，并提供<code>auto-bind</code>工具，可通过按相应的键而不是从庞大的下拉列表中进行选择来快速设置键绑定。</p>
+<ul>
+<li>FastControlKey</li>
+<li>ToggleLeftHandKey</li>
+<li>ToggleRightHandKey</li>
+<li>LeftHandManipulationKey</li>
+<li>RightHandManipulationKey</li>
+</ul>
+</li>
+<li><p><code>MouseLookToggle</code>以前作为<code>InputSimulationMouseButton.Focuse</code>d包含在<code>MouseLookButton</code>枚举中。现在，它是一个单独的选项。启用后，相机将在释放按钮后保持鼠标旋转，直到按下退出键。</p>
+</li>
+<li><p><code>HandDepthMultiplier</code> 的默认值已从0.1降低到0.03，以适应输入模拟的某些更改。如果滚动时相机移动太快，请尝试降低此值。</p>
+</li>
+<li><p>旋转手的键已删除，手的旋转现在也由鼠标控制。同时按住<code>HandRotateButton</code> （Ctrl）和左/右手操作键（LShift / Space）即可启用手旋转。</p>
+</li>
+<li><p>新轴“ UpDown”已引入到输入轴列表中。这可控制摄像机在垂直方向上的移动，默认为Q / E键以及控制器触发按钮。</p>
+</li>
+</ol>
+<p>有关这些更改的更多信息，请参见<a href="InputSimulation/InputSimulationService.html">输入模拟服务</a>文章。</p>
+<p><strong>Mouse data provider 配置文件</strong></p>
+<p>鼠标数据提供者配置文件已更新，以显示新的<code>CursorSpeed</code> 和<code>WheelSpeed</code> 属性。现有的自定义配置文件将自动提供默认值。保存配置文件后，这些新值将被保留。</p>
+<p><strong>Controller mapping 配置文件</strong></p>
+<p>2.1.0中已更新了某些轴和输入类型，尤其是在OpenVR平台周围。升级时，请确保选择 <strong>MixedRealityToolkit -&gt;Utilities -&gt; Update -&gt; Controller Mapping Profiles</strong>这将使用更新的轴和数据来更新所有自定义控制器映射配置文件，同时使自定义分配的输入操作保持不变。</p>
+<h2 id="将rc2更新到200">将RC2更新到2.0.0</h2>
+<p>在Microsoft Mixed Reality Toolkit的RC2和2.0.0版本之间，进行了可能影响现有项目的更改。本文档介绍了这些更改以及如何将项目更新到2.0.0版本。</p>
+<ul>
+<li><a href="#api-changes-in-200">API 更改</a></li>
+<li><a href="#assembly-name-changes-in-200">Assembly name changes</a></li>
+</ul>
+<h3 id="api-changes-in-200">API changes in 2.0.0</h3>
+<p>自RC2发行以来，已经进行了许多API更改，其中一些更改可能会破坏现有项目。以下各节描述了RC2和2.0.0版本之间发生的更改。</p>
+<p><strong>MixedRealityToolkit</strong></p>
+<p>MixedRealityToolkit对象上的以下公共属性已被弃用。</p>
+<ul>
+<li><code>RegisteredMixedRealityServices</code> 不再包含注册的扩展服务和数据提供程序的集合。</li>
+</ul>
+<p>要访问扩展服务，请使用<code>MixedRealityServiceRegistry.TryGetService&lt;T&gt;</code>。要访问数据提供者，请将服务实例强制转换为<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProviderAccess.html"><code>IMixedRealityDataProviderAccess</code></a> 并使用 <code>GetDataProvider&lt;T&gt;</code>.</p>
+<p>使用 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.html"><code>MixedRealityServiceRegistry</code></a>或 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.CoreServices.html"><code>CoreServices</code></a> 代替以下不推荐使用的属性</p>
+<ul>
+<li><code>ActiveSystems</code></li>
+<li><code>InputSystem</code></li>
+<li><code>BoundarySystem</code></li>
+<li><code>CameraSystem</code></li>
+<li><code>SpatialAwarenessSystem</code></li>
+<li><code>TeleportSystem</code></li>
+<li><code>DiagnosticsSystem</code></li>
+<li><code>SceneSystem</code></li>
+</ul>
+<p><strong>CoreServices</strong></p>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.CoreServices.html"><code>CoreServices</code></a>类是在<code>MixedRealityToolkit</code>对象中找到的静态系统访问器（例如BoundarySystem）的替换。</p>
+<blockquote>
+<p>[!重要]
+<code>MixedRealityToolkit</code>系统访问器已在2.0.0版中弃用，并将在以后的MRTK版本中删除。</p>
+</blockquote>
+<p>以下代码示例说明了旧模式和新模式。</p>
+<pre><code class="lang-c#">// 旧
+GameObject playAreaVisualization = MixedRealityToolkit.BoundarySystem?.GetPlayAreaVisualization();
+
+// 新
+GameObject playAreaVisualization = CoreServices.BoundarySystem?.GetPlayAreaVisualization();
+</code></pre>
+<p>如果将应用程序更改为使用其他服务注册商（例如：实验性服务管理器之一），则使用新的CoreSystem类将确保您的应用程序代码无需更新。</p>
+<p><strong>IMixedRealityRaycastProvider</strong></p>
+<p>通过添加IMixedRealityRaycastProvider，更改了输入系统配置配置文件。如果您具有自定义配置文件，则在运行应用程序时，您可能会在下图中收到错误。</p>
+<p><img src="Images/ReleaseNotes/UnableToRegisterRaycastProvider.png" alt="Selecting the Raycast provider"></p>
+<p>要解决这些问题，请在输入系统配置文件中添加IMixedRealityRaycastProvider实例。</p>
+<p><img src="Images/ReleaseNotes/SelectRaycastProvider.png" alt="Selecting the Raycast provider"></p>
+<p><strong>Event System</strong></p>
+<ul>
+<li><code>ImixedRealityEventSystem</code> 旧的API方法<code>Register</code>和<code>Unregister</code>已被标记为过时。保留它们是为了向后兼容。</li>
+<li><code>InputSystemGlobalListener</code>已被标记为过时。它的功能没有改变。</li>
+<li><code>BaseInputHandler</code>基类已从<code>InputSystemGlobalListener</code>更改为<code>InputSystemGlobalHandlerListener</code>。对于<code>BaseInputHandler</code>的任何继承来说，这是一个重大变化。</li>
+</ul>
+<p><strong><em>更改原因</em></strong></p>
+<p>旧的事件系统<code>API Register</code> 和<code>Unregister</code>可能会在运行时导致多个问题，主要是：</p>
+<ul>
+<li>如果组件注册了全局事件，它将接收所有类型的全局输入事件。</li>
+<li>如果对象上的组件之一注册了全局输入事件，则该对象上的所有组件将接收所有类型的全局输入事件。</li>
+<li>如果同一对象上的两个组件注册到全局事件，然后在运行时禁用一个组件，则第二个组件将停止接收全局事件。</li>
+</ul>
+<p>新的API <code>RegisterHandler</code>和<code>UnregisterHandler</code>：</p>
+<ul>
+<li>提供一个明确的粒度控制，以控制哪些输入事件应在全局范围内侦听，哪些应基于焦点。</li>
+<li>允许同一对象上的多个组件相互独立地侦听全局事件。</li>
+</ul>
+<p><strong><em>如何迁移</em></strong></p>
+<ul>
+<li><p>如果您之前直接调用过<code>Register</code>/<code>Unregister API</code>，请用对 <code>RegisterHandler</code>/<code>UnregisterHandler</code>的调用替换这些调用。使用您实现为通用参数的处理程序接口。如果实现多个接口，并且其中几个监听全局输入事件，请多次调用<code>RegisterHandler</code> 。</p>
+</li>
+<li><p>如果您一直从<code>InputSystemGlobalListener</code>继承，请将继承更改为 <code>InputSystemGlobalHandlerListener</code>。实现<code>RegisterHandlers</code> 和<code>UnregisterHandlers</code> 抽象方法。在实现中，调用<code>inputSystem.RegisterHandler</code>（<code>inputSystem.UnregisterHandler</code>）在要侦听全局事件的所有处理程序接口上注册。</p>
+</li>
+<li><p>如果您一直从<code>BaseInputHandler</code>继承，请实现<code>RegisterHandlers</code>和<code>UnregisterHandlers</code>抽象方法（与<code>InputSystemGlobalListener</code>相同）</p>
+</li>
+</ul>
+<p><strong><em>迁移实例</em></strong></p>
+<pre><code class="lang-c#">// 旧
+class SampleHandler : MonoBehaviour, IMixedRealitySourceStateHandler, IMixedRealityHandJointHandler
+{
+    private void OnEnable()
+    {
+        InputSystem?.Register(gameObject);
+    }
+
+    private void OnDisable()
+    {
+        InputSystem?.Unregister(gameObject);
+    }
+}
+
+// 迁移
+class SampleHandler : MonoBehaviour, IMixedRealitySourceStateHandler, IMixedRealityHandJointHandler
+{
+    private void OnEnable()
+    {
+        InputSystem?.RegisterHandler&lt;IMixedRealitySourceStateHandler&gt;(this);
+        InputSystem?.RegisterHandler&lt;IMixedRealityHandJointHandler&gt;(this);
+    }
+
+    private void OnDisable()
+    {
+        InputSystem?.UnregisterHandler&lt;IMixedRealitySourceStateHandler&gt;(this);
+        InputSystem?.UnregisterHandler&lt;IMixedRealityHandJointHandler&gt;(this);
+    }
+}
+</code></pre>
+<pre><code class="lang-c#">// 旧
+class SampleHandler2 : InputSystemGlobalListener, IMixedRealitySpeechHandler
+{
+}
+
+// 迁移
+class SampleHandler2 : InputSystemGlobalHandlerListener, IMixedRealitySpeechHandler
+{
+    private void RegisterHandlers()
+    {
+        InputSystem?.RegisterHandler&lt;IMixedRealitySpeechHandler&gt;(this);
+    }
+
+    private void UnregisterHandlers()
+    {
+        InputSystem?.UnregisterHandler&lt;IMixedRealitySpeechHandler&gt;(this);
+    }
+}
+
+// 可选迁移
+class SampleHandler2 : MonoBehaviour, IMixedRealitySpeechHandler
+{
+    private void OnEnable()
+    {
+        IMixedRealityInputSystem inputSystem;
+        if (MixedRealityServiceRegistry.TryGetService&lt;IMixedRealityInputSystem&gt;(out inputSystem))
+        {
+            inputSystem?.RegisterHandler&lt;IMixedRealitySpeechHandler&gt;(this);
+        }
+    }
+
+    private void OnDisable()
+    {
+        IMixedRealityInputSystem inputSystem;
+        if (MixedRealityServiceRegistry.TryGetService&lt;IMixedRealityInputSystem&gt;(out inputSystem))
+        {
+            inputSystem?.UnregisterHandler&lt;IMixedRealitySpeechHandler&gt;(this);
+        }
+    }
+}
+</code></pre>
+<p><strong>Spatial Awareness</strong></p>
+<p>IMixedRealitySpatialAwarenessSystem和IMixedRealitySpatialAwarenessObserver接口已进行了多个重大更改，如下所述。</p>
+<p><strong><em>更改</em></strong></p>
+<p>以下方法已重命名以更好地描述其用法。</p>
+<ul>
+<li><code>IMixedRealitySpatialAwarenessSystem.CreateSpatialObjectParent</code>已重命名为<code>IMixedRealitySpatialAwarenessSystem.CreateSpatialAwarenessObservationParent</code>，以阐明其用法。</li>
+</ul>
+<p><strong><em>附加</em></strong></p>
+<p>根据客户的反馈，已添加了轻松删除以前观察到的空间感知数据的支持。</p>
+<ul>
+<li><code>IMixedRealitySpatialAwarenessSystem.ClearObservations()</code></li>
+<li><code>IMixedRealitySpatialAwarenessSystem.ClearObservations&lt;T&gt;(string name)</code></li>
+<li><code>IMixedRealitySpatialAwarenessObserver.ClearObservations()</code></li>
+</ul>
+<p><strong>Solvers</strong></p>
+<p>某些solver组件和SolverHandler管理器类已更改，以修复各种错误并实现更直观的用法。</p>
+<p><strong><em>SolverHandler</em></strong></p>
+<ul>
+<li>类不再从<code>ControllerFinder</code>扩展</li>
+<li>不推荐使用<code>TrackedObjectToReference</code> 公共属性，并将其重命名为<code>TrackedTargetType</code></li>
+<li><code>TrackedObjectType</code> 弃用左右控制器值。而是使用<code>MotionController</code> 或<code>HandJoint</code>值并更新新的<code>TrackedHandedness</code> 属性以将跟踪限制为向左或向右控制器</li>
+</ul>
+<p><strong><em>InBetween</em></strong></p>
+<ul>
+<li>不推荐使用<code>TrackedObjectForSecondTransform</code>公共属性，并将其重命名为<code>SecondTrackedObjectType</code></li>
+<li><code>AttachSecondTransformToNewTrackedObject()</code>已被删除。要更新求解器，请修改公共属性（即<code>SecondTrackedObjectType</code>）</li>
+</ul>
+<p><strong><em>SurfaceMagnetism</em></strong></p>
+<ul>
+<li><code>MaxDistance</code> 公共属性已弃用，并已重命名为<code>MaxRaycastDistance</code></li>
+<li>不推荐使用<code>CloseDistance</code> 公共属性，并将其重命名为<code>ClosestDistance</code></li>
+<li>现在，<code>RaycastDirectionMode</code> 的默认值为<code>TrackedTargetForward</code>，它沿被跟踪目标向前的方向进行射线广播。</li>
+<li><code>OrientationMode</code>枚举值<code>Vertical</code>和<code>Full</code>已分别重命名为<code>TrackedTarget</code>和<code>SurfaceNormal</code></li>
+<li>添加了<code>KeepOrientationVertical</code>公共属性，以控制关联的<code>GameObject</code>的方向是否保持垂直</li>
+</ul>
+<p><strong>Buttons</strong></p>
+<ul>
+<li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.UI.PressableButton.html"><code>PressableButton</code></a> 现在默认情况下将<code>DistanceSpaceMode</code> 属性设置为<code>Local</code> 。这允许在仍可按下的同时缩放按钮</li>
+</ul>
+<p><strong>Clipping Sphere</strong></p>
+<p>ClippingSphere接口已更改，以反映在ClippingBox和ClippingPlane中找到的API。</p>
+<p>现在，ClippingSphere的Radius属性是根据变换比例隐式计算的。在此之前，开发人员必须在检查器中指定ClippingSphere的半径。如果要更改半径，只需照常更新变换的变换比例即可。</p>
+<p><strong>NearInteractionTouchable and PokePointer</strong></p>
+<ul>
+<li>NearInteractionTouchable不再处理Unity
+UI画布触摸。现在必须将NearInteractionTouchableUnityUI类用于Unity UI可触摸对象。</li>
+<li>ColliderNearInteractionTouchable是基于碰撞器的可触摸对象的新基类，即除NearInteractionTouchableUnityUI之外的所有可触摸对象。</li>
+<li>BaseNearInteractionTouchable.DistFront已被移动并重命名为PokePointer.TouchableDistance这是PokePointer可以与可触摸对象进行交互的距离。以前，每个可触摸对象都有其自己的最大交互距离，但是现在在PokePointer中定义了它，可以实现更好的优化。</li>
+<li>BaseNearInteractionTouchable.DistBack已重命名为PokeThreshold。这清楚表明PokeThreshold是DebounceThreshold的副本。当超过PokeThreshold时激活可触摸，而当超过DebounceThreshold时释放可触摸。</li>
+</ul>
+<p><strong>ReadOnlyAttribute</strong></p>
+<p><code>Microsoft.MixedReality.Toolkit</code> 命名空间已添加到<code>ReadOnlyAttribute</code>，<code>BeginReadOnlyGroupAttribute</code>和<code>EndReadOnlyGroupAttribute</code>。</p>
+<p><strong>PointerClickHandler</strong></p>
+<p>不推荐使用<code>PointerClickHandler</code>类。应该改用<code>PointerHandler</code>，它提供相同的功能。</p>
+<p><strong>HoloLens clicker support</strong></p>
+<p>HoloLens clicker的控制器映射已从未经使用的<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityController.html"><code>WindowsMixedRealityController</code></a>更改为未使用的<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand.html"><code>WindowsMixedRealityGGVHand</code></a>.为此，您第一次打开ControllerMapping配置文件时将运行自动更新程序。升级到2.0.0后，请至少打开一次任何自定义配置文件，以触发此一次性迁移步骤。</p>
+<p><strong>InteractableHighlight</strong></p>
+<p>不推荐使用<code>InteractableHighlight</code>类。应该改用<code>InteractableOnFocus</code>类和<code>FocusInteractableStates</code>资源。要为<code>InteractableOnFocus</code>创建新的主题资源，请在项目窗口中右键单击，然后选择<strong>Create &gt; Mixed Reality Toolkit &gt; Interactable &gt; Theme</strong>.</p>
+<p><strong>HandInteractionPanZoom</strong></p>
+<p><code>HandInteractionPanZoom</code> 已移动到UI命名空间，因为它不是输入组件。<code>HandPanEventData</code> 也已移入该名称空间，并经过简化以与其他UI事件数据相对应。</p>
+<h3 id="程序集名称在200中更改">程序集名称在2.0.0中更改</h3>
+<p>在2.0.0版中，所有正式的Mixed Reality Toolkit程序集名称及其关联的程序集定义（.asmdef）文件均已更新，以适应以下模式。</p>
+<pre><code class="lang-c#">Microsoft.MixedReality.Toolkit[.&lt;name&gt;]
+</code></pre>
+<p>在某些情况下，多个程序集已合并以创建其内容更好的统一性。如果您的项目使用自定义.asmdef文件，则可能需要更新。</p>
+<p>下表描述了RC2 .asmdef文件名如何映射到2.0.0版本。所有程序集名称均与.asmdef文件名匹配。</p>
+<p><strong>MixedRealityToolkit</strong></p>
+<table>
+<thead>
+<tr>
+<th>RC2</th>
+<th>2.0.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MixedRealityToolkit.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Core.BuildAndDeploy.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Editor.BuildAndDeploy.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Core.Definitions.Utilities.Editor.asmdef</td>
+<td>Removed, use Microsoft.MixedReality.Toolkit.Editor.Utilities.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Core.Extensions.EditorClassExtensions.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Editor.ClassExtensions.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Core.Inspectors.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Editor.Inspectors.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Core.Inspectors.ServiceInspectors.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Editor.ServiceInspectors.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Core.UtilitiesAsync.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Async.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Core.Utilities.Editor.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Editor.Utilities.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Utilities.Gltf.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Gltf.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Utilities.Gltf.Importers.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Gltf.Importers.asmdef</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MixedRealityToolkit.Providers</strong></p>
+<table>
+<thead>
+<tr>
+<th>RC2</th>
+<th>2.0.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MixedRealityToolkit.Providers.OpenVR.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Providers.OpenVR.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Providers.WindowsMixedReality.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Providers.WindowsVoiceInput.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Providers.WindowsVoiceInput.asmdef</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MixedRealityToolkit.Services</strong></p>
+<table>
+<thead>
+<tr>
+<th>RC2</th>
+<th>2.0.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MixedRealityToolkit.Services.BoundarySystem.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Services.BoundarySystem.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Services.CameraSystem.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Services.CameraSystem.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Services.DiagnosticsSystem.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Services.DiagnosticsSystem.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Services.InputSimulation.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Services.InputSimulation.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Services.InputSimulation.Editor.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Services.InputSimulation.Editor.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Services.InputSystem.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Services.InputSystem.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Services.Inspectors.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Services.InputSystem.Editor.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Services.SceneSystem.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Services.SceneSystem.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Services.SpatialAwarenessSystem.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Services.SpatialAwarenessSystem.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Services.TeleportSystem.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Services.TeleportSystem.asmdef</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MixedRealityToolkit.SDK</strong></p>
+<table>
+<thead>
+<tr>
+<th>RC2</th>
+<th>2.0.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MixedRealityToolkit.SDK.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.SDK.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.SDK.Inspectors.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.SDK.Inspectors.asmdef</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MixedRealityToolkit.Examples</strong></p>
+<table>
+<thead>
+<tr>
+<th>RC2</th>
+<th>2.0.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MixedRealityToolkit.Examples.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Examples.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Examples.Demos.Gltf.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Demos.Gltf.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Examples.Demos.StandardShader.Inspectors.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Examples.Demos.Utilities.InspectorFields.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Demos.InspectorFields.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Examples.Demos.Utilities.InspectorFields.Inspectors.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Demos.InspectorFields.Inspectors.asmdef</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Examples.Demos.UX.Interactables.asmdef</td>
+<td>Microsoft.MixedReality.Toolkit.Demos.UX.Interactables.asmdef</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/Updating.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
