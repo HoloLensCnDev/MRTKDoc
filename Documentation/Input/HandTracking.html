@@ -83,40 +83,41 @@
 <h1 id="hand-tracking">Hand Tracking</h1>
 
 <h2 id="hand-tracking-profile">Hand Tracking Profile</h2>
-<p>The <em>Hand Tracking profile</em> is found under the <em>Input System profile</em>. It contains settings for customizing hand representation.</p>
-<img src="../Images/Input/HandTrackingProfile.png" width="650px" style="display:block;">
-<h2 id="joint-prefabs">Joint Prefabs</h2>
-<p>Joint prefabs are visualized using simple prefabs. The <em>Palm</em> and <em>Index Finger</em> joints are of special importance and have their own prefab, while all other joints share the same prefab.</p>
-<p>By default the hand joint prefabs are simple geometric primitives. These can be replaced if desired. If no prefab is specified at all, empty <a href="href:https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</a> are created instead.</p>
+<p><em>Hand Tracking profile</em> 位于 <em>Input System profile</em> 下。它包含用于自定义手势的设置。
+<img src="../Images/Input/HandTrackingProfile.png" width="650px" style="display:block;"></p>
+<h2 id="关节预制体">关节预制体</h2>
+<p>关节预制体(Joint prefabs)由简单的预制体组成。 <em>Palm</em> 和 <em>Index Finger</em> 关节特别重要，并且具有自己的预制体，而所有其他关节共享相同的预制体。</p>
+<p>默认情况下，手部关节预制体是简单的几何基元。如果需要，可以更换它们。如果没有指定预制体，则会创建空的<a href="href:https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</a>代替。</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Avoid using complex scripts or expensive rendering in joint prefabs, since joint objects are transformed on every frame and can have significant performance cost!</p>
+<p>避免在关节预制体中使用复杂的脚本或耗费较大的渲染，因为关节对象在每帧上都会变化，并且可能会产生巨大的性能成本！</p>
 </div>
 <img src="../Images/InputSimulation/MRTK_Core_Input_Hands_JointVisualizerPrefabs.png" width="350px" style="display:block;">
-<h2 id="hand-mesh-prefab">Hand Mesh Prefab</h2>
-<p>The hand mesh is used if fully defined mesh data is provided by the hand tracking device. The mesh renderable in the prefab is replaced by data from the device, so a dummy mesh such as a cube is sufficient. The material of the prefab is used for the hand mesh.</p>
-<img src="../Images/InputSimulation/MRTK_Core_Input_Hands_ArticulatedHandMesh.png" width="350px" style="display:block;">
-<p>Hand mesh display can have a noticeable performance impact, for this reason it can be disabled entirely by unchecking <strong>Enable Hand Mesh Visualization</strong> option.</p>
-<h2 id="hand-visualization-settings">Hand visualization settings</h2>
-<p>The hand mesh and hand joint visualizations can be turned off or on via the <em>Hand Mesh Visualization Modes</em>
-setting and <em>Hand Joint Visualization Modes</em> respectively. These settings are application-mode specific,
-meaning it is possible to turn on some features while in editor (to see joints with in-editor simulation, for
-example) while having the same features turned off when deployed to device (in player builds).</p>
-<p>Note that it's generally recommended to have hand joint visualization turned on in editor (so that in-editor
-simulation will show where the hand joints are), and to have both hand joint visualization and hand mesh
-visualization turned off in player (because they incur a performance hit).</p>
-<h2 id="scripting">Scripting</h2>
-<p>Position and rotation can be requested from the input system for each individual hand joint as a <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.html"><code>MixedRealityPose</code></a>.</p>
-<p>Alternatively the system allows access to <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</a> that follow the joints. This can be useful if another GameObject should track a joint continuously.</p>
-<p>Available joints are listed in the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedHandJoint.html"><code>TrackedHandJoint</code></a> enum.</p>
+<h2 id="hand-mesh-预制体">Hand Mesh 预制体</h2>
+<p>如果手部跟踪设备提供了完全定义的mesh数据，则使用 hand mesh。预制体中可渲染的网格(mesh)被来自设备的数据替换，因此，诸如立方体之类的仿真网格就足够了。预制体的material会用于hand mesh。
+<img src="../Images/InputSimulation/MRTK_Core_Input_Hands_ArticulatedHandMesh.png" width="350px" style="display:block;"></p>
+<p>Hand mesh 显示可能会对性能产生明显影响，因此，可以通过取消选中<strong>Enable Hand Mesh Visualization</strong>选项来完全禁用其显示。</p>
+<h2 id="手部可视化设置">手部可视化设置</h2>
+<p>可以通过 <em>Hand Mesh Visualization Modes</em> 和 <em>Hand Joint Visualization Modes</em> 设置来分别关闭或打开hand mesh和手关节可视化
+。这些设置是特定于应用程序模式的，
+意味着可以在编辑器中打开某些功能(例如，以查看编辑器内模拟的关节)，但在部署到设备(in player builds)时相同的功能会关闭。</p>
+<p>请注意，通常建议在编辑器中启用手部关节可视化（所以编辑内模拟将显示手关节的位置
+），并具有手关节可视化和hand mesh，
+player 中的可视化功能已关闭（因为它们会导致性能下降）。</p>
+<h2 id="脚本">脚本</h2>
+<p>可以从input system中获取每个单独手部关节的位置和旋转，形式为
+<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.html"><code>MixedRealityPose</code></a>.</p>
+<p>或者，系统允许访问跟随关节的 <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</a>。 这将很有用如果另一个GameObject会持续跟踪一个关节。。</p>
+<p>可用关节列在 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedHandJoint.html"><code>TrackedHandJoint</code></a> 枚举中.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Joint object are destroyed when hand tracking is lost! Make sure that any scripts using the joint object handle the <code>null</code> case gracefully to avoid errors!</p>
+<p>失去手部跟踪时，关节物体会被销毁！确保使用关节对象的所有脚本都可以正常处理 <code>null</code> 情况，以避免出错！</p>
 </div>
-<h3 id="accessing-a-given-hand-controller">Accessing a given Hand Controller</h3>
-<p>A specific hand controller is often available, e.g. when handling input events. In this case the joint data can be requested directly from the device, using the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html"><code>IMixedRealityHand</code></a> interface.</p>
+<h3 id="访问给定的-hand-controller">访问给定的 Hand Controller</h3>
+<p>特定的hand controller通常可用，例如在处理输入事件时。在这种情况下，可以使用
+<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html"><code>IMixedRealityHand</code></a>  接口直接获取来自设备的关节数据.</p>
 <h4 id="polling-joint-pose-from-controller">Polling Joint Pose from Controller</h4>
-<p>The <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html#Microsoft_MixedReality_Toolkit_Input_IMixedRealityHand_TryGetJoint_"><code>TryGetJoint</code></a> function returns <code>false</code> if the requested joint is not available for some reason. In that case the resulting pose will be <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.html#Microsoft_MixedReality_Toolkit_Utilities_MixedRealityPose_ZeroIdentity"><code>MixedRealityPose.ZeroIdentity</code></a>.</p>
+<p>如果所请求的关节由于某种原因不可用，则 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html#Microsoft_MixedReality_Toolkit_Input_IMixedRealityHand_TryGetJoint_"><code>TryGetJoint</code></a> 函数将返回 <code>false</code> 。在这种情况下，生成的姿势将为 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.html#Microsoft_MixedReality_Toolkit_Utilities_MixedRealityPose_ZeroIdentity"><code>MixedRealityPose.ZeroIdentity</code></a>。</p>
 <pre><code class="lang-c#">public void OnSourceDetected(SourceStateEventData eventData)
 {
   var hand = eventData.Controller as IMixedRealityHand;
@@ -130,7 +131,7 @@ visualization turned off in player (because they incur a performance hit).</p>
 }
 </code></pre>
 <h4 id="joint-transform-from-hand-visualizer">Joint Transform from Hand Visualizer</h4>
-<p>Joint objects can be requested from the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityController.html#Microsoft_MixedReality_Toolkit_Input_IMixedRealityController_Visualizer">controller visualizer</a>.</p>
+<p>可以从 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityController.html#Microsoft_MixedReality_Toolkit_Input_IMixedRealityController_Visualizer">controller visualizer</a> 获取关节对象。</p>
 <pre><code class="lang-c#">public void OnSourceDetected(SourceStateEventData eventData)
 {
   var handVisualizer = eventData.Controller.Visualizer as IMixedRealityHandVisualizer;
@@ -143,17 +144,17 @@ visualization turned off in player (because they incur a performance hit).</p>
   }
 }
 </code></pre>
-<h3 id="simplified-joint-data-access">Simplified joint data access</h3>
-<p>If no specific controller is given then utility classes are provided for convenient access to hand joint data. These functions request joint data from the first available hand device currently tracked.</p>
+<h3 id="简化的-joint-data-访问">简化的 joint data 访问</h3>
+<p>如果未提供特定的controller，则将提供 utility classes，以方便访问手部关节数据。这些功能从当前跟踪的第一个可用手部设备请求关节数据。</p>
 <h4 id="polling-joint-pose-from-handjointutils">Polling Joint Pose from HandJointUtils</h4>
-<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.HandJointUtils.html"><code>HandJointUtils</code></a> is a static class that queries the first active hand device.</p>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.HandJointUtils.html"><code>HandJointUtils</code></a> 是一个静态类，它查询第一个活动的手部设备.</p>
 <pre><code class="lang-c#">if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out MixedRealityPose pose))
 {
     // ...
 }
 </code></pre>
 <h4 id="joint-transform-from-hand-joint-service">Joint Transform from Hand Joint Service</h4>
-<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandJointService.html"><code>IMixedRealityHandJointService</code></a> keeps a persistent set of <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</a> for tracking joints.</p>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandJointService.html"><code>IMixedRealityHandJointService</code></a> 保留了一组永久的 <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</a> 来跟踪关节.</p>
 <pre><code class="lang-c#">IMixedRealityHandJointService handJointService = null;
 if (CoreServices.InputSystem != null)
 {
@@ -171,9 +172,9 @@ if (handJointService != null)
 }
 </code></pre>
 <h3 id="hand-tracking-events">Hand Tracking Events</h3>
-<p>The input system provides events as well, if polling data from controllers directly is not desirable.</p>
+<p>如果不希望直接从controllers获取数据，input system 也提供事件。</p>
 <h4 id="joint-events">Joint Events</h4>
-<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandJointHandler.html"><code>IMixedRealityHandJointHandler</code></a> handles updates of joint positions.</p>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandJointHandler.html"><code>IMixedRealityHandJointHandler</code></a> 处理关节位置的更新.</p>
 <pre><code class="lang-c#">public class MyHandJointEventHandler : IMixedRealityHandJointHandler
 {
     public Handedness myHandedness;
@@ -191,8 +192,8 @@ if (handJointService != null)
 }
 </code></pre>
 <h4 id="mesh-events">Mesh Events</h4>
-<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandMeshHandler.html"><code>IMixedRealityHandMeshHandler</code></a> handles changes of the articulated hand mesh.</p>
-<p>Note that hand meshes are not enabled by default.</p>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandMeshHandler.html"><code>IMixedRealityHandMeshHandler</code></a> 处理全关节hand mesh的更改.</p>
+<p>请注意，默认情况下不启用hand mesh.</p>
 <pre><code class="lang-c#">public class MyHandMeshEventHandler : IMixedRealityHandMeshHandler
 {
     public Handedness myHandedness;
@@ -216,17 +217,17 @@ if (handJointService != null)
     }
 }
 </code></pre>
-<h2 id="known-issues">Known Issues</h2>
+<h2 id="已知的问题">已知的问题</h2>
 <h3 id="net-native">.NET Native</h3>
-<p>There is currently a known issue with Master builds using the .NET backend. In .NET Native, <code>IInspectable</code> pointers cannot be marshaled from native to managed code using <code>Marshal.GetObjectForIUnknown</code>. The MRTK uses this to obtain the <code>SpatialCoordinateSystem</code> in order to receive hand and eye data from the platform.</p>
-<p>We've provided DLL source as a workaround for this issue, in <a href="https://github.com/microsoft/MixedRealityToolkit/tree/master/DotNetNativeWorkaround">the native Mixed Reality Toolkit repo</a>. Please follow the instructions in the README there and copy the resulting binaries into a Plugins folder in your Unity assets. After that, the WindowsMixedRealityUtilities script provided in the MRTK will resolve the workaround for you.</p>
-<p>If you want to create your own DLL or include this workaround in an existing one, the core of the workaround is:</p>
+<p>当前，使用.NET后端的Master版本存在一个已知问题。在.NET本机中，无法使用 <code>Marshal.GetObjectForIUnknown</code>将<code>IInspectable</code>指针从native 编列为 managed code 。MRTK使用它来获取<code>SpatialCoordinateSystem</code>，以便从平台接收手部和眼数据。</p>
+<p>我们在<a href="https://github.com/microsoft/MixedRealityToolkit/tree/master/DotNetNativeWorkaround">the native Mixed Reality Toolkit repo</a>中提供了DLL源作为解决此问题的替代方法。请按照README文件中的说明进行操作，并将生成的二进制文件复制到Unity assets中的Plugins文件夹中。之后，MRTK中提供的WindowsMixedRealityUtilities脚本将为您处理该替代方法。</p>
+<p>如果您要创建自己的DLL或在现有的DLL中包含此替代方法，该替代方法的核心是：</p>
 <pre><code class="lang-c++">extern &quot;C&quot; __declspec(dllexport) void __stdcall MarshalIInspectable(IUnknown* nativePtr, IUnknown** inspectable)
 {
     *inspectable = nativePtr;
 }
 </code></pre>
-<p>And its use in your C# Unity code:</p>
+<p>及其在您的 C# Unity代码中的用法:</p>
 <pre><code class="lang-c#">[DllImport(&quot;DotNetNativeWorkaround.dll&quot;, EntryPoint = &quot;MarshalIInspectable&quot;)]
 private static extern void GetSpatialCoordinateSystem(IntPtr nativePtr, out SpatialCoordinateSystem coordinateSystem);
 
