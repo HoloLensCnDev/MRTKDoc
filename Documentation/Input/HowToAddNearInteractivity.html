@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to add near interaction in MRTK | Mixed Reality Toolkit Documentation </title>
+    <title>&#22914;&#20309;&#22312;MRTK&#20013;&#28155;&#21152; near interaction | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to add near interaction in MRTK | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#22914;&#20309;&#22312;MRTK&#20013;&#28155;&#21152; near interaction | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,29 +80,32 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="how-to-add-near-interaction-in-mrtk">How to add near interaction in MRTK</h1>
+<h1 id="如何在mrtk中添加-near-interaction">如何在MRTK中添加 near interaction</h1>
 
-<p>Near interactions come in the form of touches and grabs. Touch and grab events are raised as pointer events by the <a href="Pointers.html#pokepointer">PokePointer</a> and <a href="Pointers.html#spherepointer">SpherePointer</a>, respectively.</p>
-<p>Three key steps are required to listen for touch and/or grab input events on a particular GameObject.</p>
+<p>Near interactions以触摸和抓握的形式出现。 <a href="Pointers.html#pokepointer">PokePointer</a> 和 <a href="Pointers.html#spherepointer">SpherePointer</a>分别将触摸(touch)和抓握(grab)事件作为pointer事件引发。</p>
+<p>需要三个关键步骤来侦听特定GameObject上的触摸 和/或 抓握输入事件。</p>
 <ol>
-<li>Ensure the relevant pointer is registered in the main <a href="../MixedRealityConfigurationGuide.html">MRTK Configuration Profile</a>.</li>
-<li>Ensure the desired GameObject has the appropriate <a href="#add-grab-interactions">grab</a> or <a href="#add-touch-interactions">touch</a> script component and <a href="https://docs.unity3d.com/ScriptReference/Collider.html"><code>Unity Collider</code></a>.</li>
-<li>Implement an input handler interface on an attached script to the desired GameObject to listen for the <a href="#grab-code-example">grab</a> or <a href="#touch-code-example">touch</a> events.</li>
+<li>确保相关的 pointer 已注册在主 <a href="../MixedRealityConfigurationGuide.html">MRTK Configuration Profile</a>.</li>
+<li>确保所需的 GameObject 具有适当的<a href="#add-grab-interactions">grab</a> 或 <a href="#add-touch-interactions">touch</a> 脚本组件和 <a href="https://docs.unity3d.com/ScriptReference/Collider.html"><code>Unity Collider</code></a>.</li>
+<li>在附加在所需 GameObject 的脚本上实现 input handler 接口，以侦听<a href="#grab-code-example">grab</a> 或 <a href="#touch-code-example">touch</a> 事件.</li>
 </ol>
-<h2 id="add-grab-interactions">Add grab interactions</h2>
+<h2 id="添加抓握grab交互">添加抓握(grab)交互</h2>
 <ol>
-<li><p>Ensure a <a href="Pointers.html#spherepointer">SpherePointer</a> is registered in the <em>MRTK Pointer profile</em>.</p>
-<p>The default MRTK profile and the default HoloLens 2 profile already contain a <em>SpherePointer</em>. One can confirm a SpherePointer will be created by selecting the MRTK Configuration Profile and navigating to <strong>Input</strong> &gt; <strong>Pointers</strong> &gt; <strong>Pointer Options</strong>. The default <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers/GrabPointer.prefab">GrabPointer</a> prefab, under <em>MRTK.SDK/Features/UX/Prefabs/Pointers/</em>, should be listed with a <em>Controller Type</em> of <em>Articulated Hand</em>. A custom prefab can be utilized as long as it implements the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.SpherePointer.html"><code>SpherePointer</code></a> class.</p>
+<li><p>确保 <a href="Pointers.html#spherepointer">SpherePointer</a> 已在 <em>MRTK Pointer profile</em> 中注册.</p>
+<p>默认的MRTKprofile和默认的HoloLens 2 profile已经包含 <em>SpherePointer</em>.
+通过选择MRTK Configuration profile并导航至 <strong>Input</strong> &gt; <strong>Pointers</strong> &gt; <strong>Pointer Options</strong> 可以确认将创建一个 SpherePointer. 默认<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers/GrabPointer.prefab">GrabPointer</a> 预制体, 在 <em>MRTK.SDK/Features/UX/Prefabs/Pointers/</em> 下,
+应以 <em>Articulated Hand</em> 的 <em>Controller Type</em> 列出 . A custom prefab can be utilized as long as it implements the
+只要实现<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.SpherePointer.html"><code>SpherePointer</code></a> 类，就可以使用自定义的预制体.</p>
 <p><img src="../Images/Input/Pointers/GrabPointer_MRTKProfile.png" alt="Grab Pointer Profile Example"></p>
 </li>
-<li><p>On the GameObject that should be grabbable, add a <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html"><code>NearInteractionGrabbable</code></a>, as well as a collider.</p>
-<p>Make sure the layer of the GameObject is on a grabbable layer. By default, all layers except <em>Spatial Awareness</em> and <em>Ignore Raycasts</em> are grabbable. See which layers are grabbable by inspecting the <em>Grab Layer Masks</em> in your <em>GrabPointer</em> prefab.</p>
+<li><p>在允许抓握的GameObject上, 添加一个 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html"><code>NearInteractionGrabbable</code></a>, 以及一个 collider.</p>
+<p>确保GameObject的层在可抓握的层之上。默认情况下，除<em>Spatial Awareness</em>和<em>Ignore Raycasts</em>外的所有层都是可抓握的。通过检查<em>GrabPointer</em>预制体中的<em>Grab Layer Masks</em>，查看可抓握的层。</p>
 </li>
-<li><p>On the GameObject or one of its ancestors, add a script component that implements the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html"><code>IMixedRealityPointerHandler</code></a> interface. Any ancestor of the object with the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html"><code>NearInteractionGrabbable</code></a> will be able to receive pointer events, as well.</p>
+<li><p>在GameObject或其祖先之一上，添加实现 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html"><code>IMixedRealityPointerHandler</code></a> 接口的脚本组件. 具有 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html"><code>NearInteractionGrabbable</code></a> 的对象的任何祖先也将能够接收指针事件.</p>
 </li>
 </ol>
-<h3 id="grab-code-example">Grab code example</h3>
-<p>Below is a script that will print if an event is a touch or grab. In the relevant <em>IMixedRealityPointerHandler</em> interface function, one can look at the type of pointer that triggers that event via the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData.html"><code>MixedRealityPointerEventData</code></a>. If the pointer is a <em>SpherePointer</em>, the interaction is a grab.</p>
+<h3 id="抓握代码示例">抓握代码示例</h3>
+<p>下面是一个脚本，如果事件是触摸或抓握，将进行print. 在相关的<em>IMixedRealityPointerHandler</em> 接口函数中,可以通过 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData.html"><code>MixedRealityPointerEventData</code></a>查看触发该事件的指针的类型. 如果指针是 <em>SpherePointer</em>, 则交互是抓握.</p>
 <pre><code class="lang-c#">public class PrintPointerEvents : MonoBehaviour, IMixedRealityPointerHandler
 {
     public void OnPointerDown(MixedRealityPointerEventData eventData)
@@ -122,48 +125,52 @@
     public void OnPointerUp(MixedRealityPointerEventData eventData) {}
 }
 </code></pre>
-<h2 id="add-touch-interactions">Add touch interactions</h2>
-<p>The process for adding touch interactions on UnityUI elements is different than for vanilla 3D GameObjects. You can skip to the following section, <em>Unity UI</em>, for enabling Unity UI components.</p>
-<p>For <strong>both</strong> types of UX elements though, ensure a <a href="Pointers.html#pokepointer">PokePointer</a> is registered in the <em>MRTK Pointer profile</em>.</p>
-<p>The default MRTK profile and the default HoloLens 2 profile already contain a <em>PokePointer</em>. One can confirm a PokePointer will be created by selecting the MRTK Configuration Profile and navigate to <strong>Input</strong> &gt; <strong>Pointers</strong> &gt; <strong>Pointer Options</strong>. The default <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers/PokePointer.prefab">PokePointer</a> prefab, under <em>MRTK.SDK/Features/UX/Prefabs/Pointers/</em>, should be listed with a <em>Controller Type</em> of <em>Articulated Hand</em>. A custom prefab can be utilized as long as it implements the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html"><code>PokePointer</code></a> class.</p>
+<h2 id="添加触摸touch交互">添加触摸(touch)交互</h2>
+<p>在UnityUI元素上添加触摸交互的过程与普通3D GameObjects的过程不同。您可以跳到本节下面的 <em>Unity UI</em> 部分，以启用Unity UI组件。</p>
+<p>但是，对于<strong>两种</strong>类型的UX元素，请确保在<em>MRTK Pointer profile</em> 中<strong>都</strong>注册了 <a href="Pointers.html#pokepointer">PokePointer</a>。</p>
+<p>默认的 MRTK profile 和默认的 HoloLens 2 profile already 已经包含 <em>PokePointer</em>. 您可以通过选择MRTK Configuration Profile
+并导航到 <strong>Input</strong> &gt; <strong>Pointers</strong> &gt; <strong>Pointer Options</strong> 来确认将创建一个PokePointer. 默认 <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers/PokePointer.prefab">PokePointer</a> 预制体, 预制体在 <em>MRTK.SDK/Features/UX/Prefabs/Pointers/</em> 文件夹下, 应以<em>Articulated Hand</em>的<em>Controller Type</em>列出。只要实现<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html"><code>PokePointer</code></a>类
+，就可以使用自定义的预制体。</p>
 <p><img src="../Images/Input/Pointers/PokePointer_MRTKProfile.png" alt="Poke Pointer Profile Example"></p>
 <h3 id="3d-gameobjects">3D GameObjects</h3>
 <ol>
-<li><p>On the GameObject that should be touchable, add a collider and a <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a> component.</p>
+<li><p>在允许被触摸的 GameObject上，添加collider和<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a>组件.</p>
+<p>1.如果在下面的组件脚本中使用 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a> 接口，则将 <strong>Events to Receive</strong>设置为 <em>Touch</em>.</p>
 <ol>
-<li><p>Set <strong>Events to Receive</strong> to <em>Touch</em> if using the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a> interface in your component script below.</p>
-</li>
-<li><p>Click <strong>Fix bounds</strong> and <strong>Fix center</strong></p>
-</li>
+<li>点击 <strong>Fix bounds</strong> 和 <strong>Fix center</strong></li>
 </ol>
 <p><img src="../Images/Input/Pointers/NearInteractionTouchableSetup.gif" alt="NearInteractionTouchable Gizmos Example"></p>
 </li>
-<li><p>On that object or one of its ancestors, add a script component that implements the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a> interface. Any ancestor of the object with the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a> will be able to receive pointer events, as well.</p>
+<li><p>在该对象或其祖先之一上，添加实现<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a> 接口的脚本组件.具有<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a>
+的对象的任何祖先也将能够接收指针事件.</p>
 </li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
-<p>In the editor scene view with the <em>NearInteractionTouchable</em> GameObject selected, notice a white outline square and arrow. The arrow points to the &quot;front&quot; of the touchable. The collidable will only be touchable from that direction. To make a collider touchable from all directions, add a <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableVolume.html"><code>NearInteractionTouchableVolume</code></a> instead.
-<img src="../Images/Input/Pointers/NearInteractionTouchableGizmos.png" alt="NearInteractionTouchable Gizmos Example"></p>
+<p>在选择了具有<em>NearInteractionTouchable</em> GameObject的编辑器场景视图中，请注意白色轮廓正方形和箭头。箭头指向可触摸的“前端”。可碰撞对象只能从该方向触摸。要使collider可以从各个方向进行触摸，请改为添加<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableVolume.html"><code>NearInteractionTouchableVolume</code></a>。</p>
 </div>
+<blockquote>
+<p><img src="../Images/Input/Pointers/NearInteractionTouchableGizmos.png" alt="NearInteractionTouchable Gizmos Example"></p>
+</blockquote>
 <h3 id="unity-ui">Unity UI</h3>
 <ol>
-<li><p>Add/ensure there is a <a href="https://docs.unity3d.com/Manual/UICanvas.html">UnityUI canvas</a> in the scene.</p>
+<li><p>添加/确保 场景中存在一个 <a href="https://docs.unity3d.com/Manual/UICanvas.html">UnityUI canvas</a>.</p>
 </li>
-<li><p>On the GameObject that should be touchable, add a <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableUnityUI.html"><code>NearInteractionTouchableUnityUI</code></a> component.</p>
+<li><p>在可被触摸的GameObject上，添加<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableUnityUI.html"><code>NearInteractionTouchableUnityUI</code></a> 组件.</p>
 <ol>
-<li>Set <strong>Events to Receive</strong> to <em>Touch</em> if using the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a> interface in your component script below.</li>
+<li>如果在下面的组件脚本中使用
+<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a> 接口，则将<strong>Events to Receive</strong>设置为<em>Touch</em>.</li>
 </ol>
 </li>
-<li><p>On that object or one of its ancestors, add a script component that implements the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a> interface. Any ancestor of the object with the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableUnityUI.html"><code>NearInteractionTouchableUnityUI</code></a> will be able to receive pointer events as well.</p>
+<li><p>在该对象或其祖先之一上，添加实现 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a> 接口的脚本组件. 具有 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableUnityUI.html"><code>NearInteractionTouchableUnityUI</code></a> 对象的任何祖先也将能够接收指针事件.</p>
 </li>
 </ol>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>On the <code>NearInteractionTouchable</code> script component, for the property <em>Events to Receive</em> there are two options: <em>Pointer</em> and <em>Touch</em>. Set <em>Events to Receive</em> to <em>Pointer</em> if using the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html"><code>IMixedRealityPointerHandler</code></a> interface and set to <em>Touch</em> if using the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a> interface in your component script that responds/handles the input events.</p>
+<p>在<code>NearInteractionTouchable</code>脚本组件上，对于属性 <em>Events to Receive</em>，有两个选项：<em>Pointer</em>和<em>Touch</em>。如果在你的组件脚本中使用<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html"><code>IMixedRealityPointerHandler</code></a> 接口，则将 <em>Events to Receive</em> 设置为 <em>Pointer</em>；如果使用<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a> ，则将<em>Events to Receive</em>设置为<em>Touch</em>，用于响应/处理输入事件。</p>
 </div>
-<h4 id="touch-code-example">Touch code example</h4>
-<p>The code below demonstrates a MonoBehaviour that can be attached to a GameObject with a <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a> variant component and respond to touch input events.</p>
+<h4 id="触摸代码示例">触摸代码示例</h4>
+<p>下面的代码演示了一个MonoBehaviour可以通过<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a>变体组件将其附加到GameObject上并响应触摸输入事件。</p>
 <pre><code class="lang-c#">public class TouchEventsExample : MonoBehaviour, IMixedRealityTouchHandler
 {
     public void OnTouchStarted(HandTrackingInputEventData eventData)
@@ -175,27 +182,27 @@
     public void OnTouchUpdated(HandTrackingInputEventData eventData) { }
 }
 </code></pre>
-<h2 id="near-interaction-script-examples">Near interaction script examples</h2>
-<h3 id="touch-events">Touch events</h3>
-<p>This example creates a cube, makes it touchable, and changes color on touch.</p>
+<h2 id="near-interaction-脚本示例">Near interaction 脚本示例</h2>
+<h3 id="触摸事件">触摸事件</h3>
+<p>本示例创建一个立方体，使其可触摸，并在触摸时更改颜色。</p>
 <pre><code class="lang-c#">public static void MakeChangeColorOnTouch(GameObject target)
 {
-    // Add and configure the touchable
+    // 添加并配置可触摸
     var touchable = target.AddComponent&lt;NearInteractionTouchableVolume&gt;();
     touchable.EventsToReceive = TouchableEventType.Pointer;
 
     var material = target.GetComponent&lt;Renderer&gt;().material;
-    // Change color on pointer down and up
+    // 指针down and up时更改颜色
     var pointerHandler = target.AddComponent&lt;PointerHandler&gt;();
     pointerHandler.OnPointerDown.AddListener((e) =&gt; material.color = Color.green);
     pointerHandler.OnPointerUp.AddListener((e) =&gt; material.color = Color.magenta);
 }
 </code></pre>
-<h3 id="grab-events">Grab events</h3>
-<p>The below example shows how to make a GameObject draggable. Assumes that the game object has a collider on it.</p>
+<h3 id="抓握事件">抓握事件</h3>
+<p>下面的示例演示如何使GameObject可拖拽。假设游戏对象上有一个collider。</p>
 <pre><code class="lang-c#">public static void MakeNearDraggable(GameObject target)
 {
-    // Instantiate and add grabbable
+    // 实例化并添加可抓握
     target.AddComponent&lt;NearInteractionGrabbable&gt;();
 
     // Add ability to drag by re-parenting to pointer object on pointer down
@@ -216,7 +223,7 @@
     });
 }
 </code></pre>
-<h2 id="useful-apis">Useful APIs</h2>
+<h2 id="有用的-apis">有用的 APIs</h2>
 <ul>
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html"><code>NearInteractionGrabbable</code></a></li>
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a></li>
@@ -225,7 +232,7 @@
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a></li>
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html"><code>IMixedRealityPointerHandler</code></a></li>
 </ul>
-<h2 id="see-also">See also</h2>
+<h2 id="建议浏览">建议浏览</h2>
 <ul>
 <li><a href="Overview.html">Input Overview</a></li>
 <li><a href="Pointers.html">Pointers</a></li>
