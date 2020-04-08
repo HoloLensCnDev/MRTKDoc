@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Input Simulation Service | Mixed Reality Toolkit Documentation </title>
+    <title>&#36755;&#20837;&#27169;&#25311;&#26381;&#21153; (Input Simulation Service) | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Input Simulation Service | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#36755;&#20837;&#27169;&#25311;&#26381;&#21153; (Input Simulation Service) | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,73 +80,78 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="input-simulation-service">Input Simulation Service</h1>
+<h1 id="输入模拟服务-input-simulation-service">输入模拟服务 (Input Simulation Service)</h1>
 
-<p>The Input Simulation Service emulates the behaviour of devices and platforms that may not be available in the Unity editor. Examples include:</p>
+<p>输入模拟服务模拟在Unity编辑器中可能不可用的设备和平台的行为。示例包括：</p>
 <ul>
-<li>HoloLens or VR device head tracking</li>
-<li>HoloLens hand gestures</li>
-<li>HoloLens 2 articulated hand tracking</li>
-<li>HoloLens 2 eye tracking</li>
+<li>HoloLens or VR 设备头部跟踪</li>
+<li>HoloLens 手势</li>
+<li>HoloLens 2 全关节手势跟踪</li>
+<li>HoloLens 2 眼动跟踪</li>
 </ul>
-<p>Users can use a conventional keyboard and mouse combination to control simulated devices at runtime. This approach allows testing of interactions in the Unity editor without first deploying to a device.</p>
+<p>用户可以使用常规的键盘和鼠标组合在运行时控制模拟设备。这种方法无需先部署到设备即可在Unity编辑器中测试交互。</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>This does not work when using Unity's XR Holographic Emulation &gt; Emulation Mode = &quot;Simulate in Editor&quot;. Unity's in-editor simulation will take control away from MRTK's input simulation. In order to use the MRTK input simulation service, you will need to set XR Holographic Emulation to Emulation Mode = <em>&quot;None&quot;</em></p>
+<p>使用Unity的XR Holographic Emulation &gt; Emulation Mode = &quot;Simulate in Editor&quot;时，此功能不起作用。Unity的in-editor simulation将使控制权脱离MRTK的输入模拟。为了使用MRTK输入模拟服务，您需要将XR Holographic Emulation设置为Emulation Mode = <em>&quot;None&quot;</em></p>
 </div>
-<h2 id="enabling-the-input-simulation-service">Enabling the Input Simulation Service</h2>
-<p>Input simulation is enabled by default in MRTK.</p>
-<p>Input simulation is an optional <a href="../MixedRealityServices.html">Mixed Reality service</a>. It can be added as a data provider in the <a href="../Input/InputProviders.html">Input System profile</a>.</p>
+<h2 id="启用输入模拟服务">启用输入模拟服务</h2>
+<p>默认情况下，MRTK启用输入模拟。</p>
+<p>输入模拟是一个可选的<a href="../MixedRealityServices.html">混合现实服务</a>.可以将其作为data provider添加到<a href="../Input/InputProviders.html">Input System profile</a>.</p>
 <ul>
-<li><strong>Type</strong> must be <em>Microsoft.MixedReality.Toolkit.Input &gt; InputSimulationService</em>.</li>
-<li><strong>Platform(s)</strong> by default includes all <em>Editor</em> platforms, since the service uses keyboard and mouse input.</li>
+<li><strong>Type</strong> 必须是 <em>Microsoft.MixedReality.Toolkit.Input &gt; InputSimulationService</em>.</li>
+<li>默认情况下， <strong>Platform(s)</strong> 包括所有的 <em>Editor</em> 平台，因为该服务使用键盘和鼠标输入。</li>
 </ul>
 <h2 id="input-simulation-tools-window">Input simulation tools window</h2>
-<p>Enable the input simulation tools window from the  <em>Mixed Reality Toolkit &gt; Utilities &gt; Input Simulation</em> menu. This window provides access to the state of input simulation during play mode.</p>
+<p>从 <em>Mixed Reality Toolkit &gt; Utilities &gt; Input Simulation</em> 菜单启用输入模拟工具窗口（Input simulation tools window）。通过此窗口可以访问play模式期间的输入模拟状态。</p>
 <h2 id="viewport-buttons">Viewport Buttons</h2>
-<p>A prefab for in-editor buttons to control basic hand placement can be specified in the input simulation profile under <strong>Indicators Prefab</strong>. This is an optional utility, the same features can be accessed in the <a href="#input-simulation-tools-window">input simulation tools window</a>.</p>
+<p>可以在 <strong>Indicators Prefab</strong> 的input simulation profile 中指定用于控制基本手部布局的编辑器内按钮的预制体。这是一个可选实用程序，可以在<a href="#input-simulation-tools-window">input simulation tools window</a>.中访问相同的功能。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The viewport indicators are disabled by default, as they currently can sometimes interfere with Unity UI interactions. See issue <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/issues/6106">#6106</a>. To enable, add the InputSimulationIndicators prefab to <strong>Indicators Prefab</strong>.</p>
+<p>默认情况下，viewport 指示器是禁用的，因为它们有时有时会干扰Unity UI的交互。参见问题<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/issues/6106">#6106</a>。要启用，请将InputSimulationIndicators预制添加到 <strong>Indicators Prefab</strong> 。</p>
 </div>
-<p>Hand icons show the state of the simulated hands:</p>
+<p>手部图标(Hand icons)显示模拟手部的状态:</p>
 <ul>
-<li><img src="../Images/InputSimulation/MRTK_InputSimulation_HandIndicator_Untracked.png" alt="Untracked hand icon" title="Untracked hand icon"> The hand is not tracking. Click to enable the hand.</li>
-<li><img src="../Images/InputSimulation/MRTK_InputSimulation_HandIndicator_Tracked.png" alt="Tracked hand icon" title="Tracked hand icon"> The hand is tracked, but not controlled by the user. Click to hide the hand.</li>
-<li><img src="../Images/InputSimulation/MRTK_InputSimulation_HandIndicator_Controlled.png" alt="Controlled hand icon" title="Controlled hand icon"> The hand is tracked and controlled by the user. Click to hide the hand.</li>
-<li><img src="../Images/InputSimulation/MRTK_InputSimulation_HandIndicator_Reset.png" alt="Reset hand icon" title="Reset hand icon"> Click to reset the hand to default position.</li>
+<li><img src="../Images/InputSimulation/MRTK_InputSimulation_HandIndicator_Untracked.png" alt="Untracked hand icon" title="Untracked hand icon"> 手没有追踪。单击以启用该手.</li>
+<li><img src="../Images/InputSimulation/MRTK_InputSimulation_HandIndicator_Tracked.png" alt="Tracked hand icon" title="Tracked hand icon"> 已追踪到手，但不受用户控制。单击以隐藏手.</li>
+<li><img src="../Images/InputSimulation/MRTK_InputSimulation_HandIndicator_Controlled.png" alt="Controlled hand icon" title="Controlled hand icon"> 用户可以跟踪和控制手部。单击以隐藏手.</li>
+<li><img src="../Images/InputSimulation/MRTK_InputSimulation_HandIndicator_Reset.png" alt="Reset hand icon" title="Reset hand icon">单击以将手重置到默认位置.</li>
 </ul>
 <h2 id="camera-control">Camera Control</h2>
-<p>Head movement can be emulated by the Input Simulation Service.</p>
-<h3 id="rotating-the-camera">Rotating the camera</h3>
+<p>头部运动可以由输入模拟服务模拟。</p>
+<h3 id="旋转相机">旋转相机</h3>
 <ol>
-<li>Hover over the viewport editor window.
-<em>You may need to click the window to give it input focus if button presses don't work.</em></li>
-<li>Press and hold the <strong>Mouse Look Button</strong> (default: Right mouse button).</li>
-<li>Move the mouse in the viewport window to rotate the camera.</li>
-<li>Use the scroll wheel to roll the camera around the view direction.</li>
-</ol>
-<p>Camera rotation speed can be configured by changing the <strong>Mouse Look Speed</strong> setting in the input simulation profile.</p>
-<p>Alternatively, use the <strong>Look Horizontal</strong>/<strong>Look Vertical</strong> axes to rotate the camera (default: game controller right thumbstick).</p>
-<h3 id="moving-the-camera">Moving the camera</h3>
-<p>Use the <strong>Move Horizontal</strong>/<strong>Move Vertical</strong> axes to move the camera (default: WASD keys or game controller left thumbstick).</p>
-<p>Camera position and rotation angles can be set explicitly in the tools window, as well. The camera can be reset to its default using the <strong>Reset</strong> button.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z7L4I1ET7GU" class="center" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<h2 id="hand-simulation">Hand Simulation</h2>
-<p>The input simulation supports emulated hand devices. These virtual hands can interact with any object that supports regular hand devices, such as buttons or grabbable objects.</p>
-<h3 id="hand-simulation-mode">Hand Simulation Mode</h3>
-<p>In the <a href="#input-simulation-tools-window">input simulation tools window</a> the <strong>Hand Simulation Mode</strong> setting switches between two distinct input models. The default mode can also be set in the input simulation profile.</p>
-<ul>
-<li><p><em>Articulated Hands</em>: Simulates a fully articulated hand device with joint position data.</p>
-<p>Emulates HoloLens 2 interaction model.</p>
-<p>Interactions that are based on the precise positioning of the hand or use touching can be simulated in this mode.</p>
+<li><p>将鼠标悬停在编辑器视口窗口上.</p>
+<p><em>如果摁按钮无效，则可能需要单击窗口以为其提供输入焦点</em></p>
 </li>
-<li><p><em>Gestures</em>: Simulates a simplified hand model with air tap and basic gestures.</p>
-<p>Emulates <a href="https://docs.microsoft.com/windows/mixed-reality/gestures">HoloLens interaction model</a>.</p>
-<p>Focus is controlled using the Gaze pointer. The <em>Air Tap</em> gesture is used to interact with buttons.</p>
+<li><p>按住 <strong>Mouse Look Button</strong> (默认：鼠标右键).</p>
+</li>
+<li><p>在视口窗口中移动鼠标以旋转相机.</p>
+</li>
+<li><p>使用鼠标滚轮使相机沿观看方向滚动.</p>
+</li>
+</ol>
+<p>可以通过在input simulation profile中更改 <strong>Mouse Look Speed</strong> 设置来配置相机旋转速度。</p>
+<p>或者，使用 <strong>Look Horizontal</strong>/<strong>Look Vertical</strong> 轴旋转相机（默认：游戏控制器的右摇杆）。</p>
+<h3 id="移动相机">移动相机</h3>
+<p>使用 <strong>Move Horizontal</strong> /  <strong>Move Vertical</strong> 轴移动相机（默认值：WASD键或游戏控制器的左摇杆）。</p>
+<p>相机的位置和旋转角度也可以在工具窗口中明确设置。可以使用 <strong>Reset</strong>
+按钮将相机重置为其默认设置。</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z7L4I1ET7GU" class="center" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<h2 id="手部模拟">手部模拟</h2>
+<p>输入模拟支持模拟的手部设备。这些虚拟手可以与支持常规手设部备的任何对象进行交互，例如按钮或可抓握的对象。</p>
+<h3 id="手部模拟模式">手部模拟模式</h3>
+<p>在 <a href="#input-simulation-tools-window">input simulation tools window</a> 中，<strong>Hand Simulation Mode</strong> 设置在两个不同的输入模型之间切换。还可以在input simulation profile 中设置默认模式。</p>
+<ul>
+<li><p><em>Articulated Hands</em>: 模拟具有关节位置数据的全关节手部设备</p>
+<p>模拟HoloLens 2交互模型。</p>
+<p>在此模式下，可以模拟基于手的精确定位或使用触摸进行的交互。</p>
+</li>
+<li><p><em>Gestures</em>: 模拟带有air tap和基本手势的简化手模型.</p>
+<p>模拟 <a href="https://docs.microsoft.com/windows/mixed-reality/gestures">HoloLens 交互模型</a>.</p>
+<p>使用凝视中心控制聚焦。<em>Air Tap</em> 手势用于与按钮交互。</p>
 </li>
 </ul>
-<h3 id="controlling-hand-movement">Controlling hand movement</h3>
+<h3 id="控制手部运动">控制手部运动</h3>
 <p>Press and hold the <strong>Left/Right Hand Control Key</strong> (default: <em>Left Shift</em> for left hand and <em>Space</em> for right hand) to gain control of either hand. While the manipulation key is pressed, the hand will appear in the viewport. Once the manipulation key is released, the hands will disappear after a short <strong>Hand Hide Timeout</strong>.</p>
 <p>Hands can be toggled on permanently in the <a href="#input-simulation-tools-window">input simulation tools window</a> or by pressing the <strong>Toggle Left/Right Hand Key</strong> (default: <em>T</em> for left and <em>Y</em> for right). Press the toggle key again to hide the hands again.</p>
 <p>Mouse movement will move the hand in the view plane. Hands can be moved further or closer to the camera using the <strong>mouse wheel</strong>.</p>
