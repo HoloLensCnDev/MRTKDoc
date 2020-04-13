@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Pointers | Mixed Reality Toolkit Documentation </title>
+    <title>Pointers (&#25351;&#38024;) | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Pointers | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="Pointers (&#25351;&#38024;) | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,101 +80,105 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="pointers">Pointers</h1>
+<h1 id="pointers-指针">Pointers (指针)</h1>
 
 <p><img src="../Images/Pointers/MRTK_Pointer_Main.png" alt="Pointer"></p>
 <p>This article discusses how to configure and respond to Pointer input in practice, compared to <a href="../Architecture/InputSystem/ControllersPointersAndFocus.html">Pointer Architecture</a></p>
-<p>Pointers are instanced automatically at runtime when a new controller is detected. More than one pointer can be attached to a controller. For example, with the default pointer profile, Windows Mixed Reality controllers get both a line and a parabolic pointer for normal selection and teleportation respectively.</p>
-<h2 id="pointer-configuration">Pointer configuration</h2>
-<p>Pointers are configured as part of the Input System in MRTK via a <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerProfile.html"><code>MixedRealityPointerProfile</code></a>. This type of profile is assigned to a <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.html"><code>MixedRealityInputSystemProfile</code></a> in the MRTK Configuration inspector. The Pointer profile determines the cursor, types of Pointers available at runtime, and how those pointers communicate with each other to decide which one is active.</p>
+<p>与 <a href="../Architecture/InputSystem/ControllersPointersAndFocus.html">Pointer Architecture</a>相比，本文讨论了在实践中如何配置和响应Pointer 输入。</p>
+<p>当检测到新控制器(controller)时，将在运行时自动实例化pointers。一个控制器可以连接多个pointer。例如，使用默认的pointer profile，Windows Mixed Reality控制器分别获得一条线和一个抛物线形的pointer，分别用于常规选择和传送。</p>
+<h2 id="pointer-配置">Pointer 配置</h2>
+<p>Pointers通过<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerProfile.html"><code>MixedRealityPointerProfile</code></a> 配置为MRTK中的输入系统的一部分。此类profile在 MRTK Configuration inspector中分配给<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.html"><code>MixedRealityInputSystemProfile</code></a>
+。pointer profile确定光标，运行时可用的Pointers类型以及这些pointers如何相互通信来确定哪个pointer处于活动状态。</p>
 <ul>
-<li><p><em>Pointing Extent</em> - Defines the max distance for which a Pointer can interact with a GameObject.</p>
+<li><p><em>Pointing Extent</em> - 定义pointer可以与GameObject交互的最大距离。</p>
 </li>
-<li><p><em>Pointing Raycast Layer Masks</em> - This is a prioritized array of LayerMasks to determine what possible GameObjects any given Pointer can interact and the order of interaction to attempt. This is may be useful to ensure Pointers interact with UI elements first before other scene objects.
+<li><p><em>Pointing Raycast Layer Masks</em> - 这是LayerMasks的优先数组，用于确定任何给定Pointer可以交互的GameObjects以及尝试交互的顺序。这对于确保pointer最先与场景对象中UI元素交互可能很有用。
 <img src="../Images/Input/Pointers/PointerProfile.PNG" alt="Pointer Profile Example"></p>
 </li>
 </ul>
-<h3 id="pointer-options-configuration">Pointer options configuration</h3>
-<p>The default MRTK Pointer Profile configuration includes the following pointer classes and associated prefabs out-of-box. The list of pointers available to the system at runtime is defined under <em>Pointer Options</em> in the Pointer profile. Developers can utilize this list to reconfigure existing Pointers, add new Pointers, or delete one.</p>
+<h3 id="pointer-选项配置">Pointer 选项配置</h3>
+<p>默认的MRTK Pointer Profile配置包括以下pointer类和现成的关联预制体。在运行时可用于系统的pointer列表在Pointer profile的<em>Pointer Options</em>下定义。开发人员可以利用此列表重新配置现有的Pointers，添加新的Pointers或删除其中一个。</p>
 <p><img src="../Images/Input/Pointers/PointerOptionsProfile.PNG" alt="Pointer Options Profile Example"></p>
-<p>Each Pointer entry is defined by the following set of data:</p>
+<p>每个Pointer条目由以下数据定义：</p>
 <ul>
-<li><p><em>Controller Type</em> - The set of controllers that a pointer is valid for.</p>
+<li><p><em>Controller Type</em> - pointer对其有效的一组控制器</p>
 <ul>
-<li>For example, the <em>PokePointer</em> is responsible for &quot;poking&quot; objects with a finger, and is, by default marked as only supporting the articulated hand controller type. Pointers are only instantiated when a controller becomes available and in particular the <em>Controller Type</em> defines what controllers this pointer prefab can be created with.</li>
+<li>例如，<em>PokePointer</em> 负责用手指“戳”对象，并且默认情况下标记为仅支持全关节手控制器类型。仅当控制器可用时才实例化Pointers，特别是<em>Controller Type</em> 定义了可以使用此pointer预制体可以与哪些控制器进行创建。</li>
 </ul>
 </li>
-<li><p><em>Handedness</em> - allows for a pointer to only being instantiated for a specific hand (left/right)</p>
+<li><p><em>Handedness</em> - 允许仅针对特定手（左/右）实例化pointer</p>
 </li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Setting the <em>Handedness</em> property of a Pointer entry to <em>None</em> will effectively disable it from the system as an alternative to removing that Pointer from the list.</p>
+<p>将Pointer条目的 <em>Handedness</em> 属性设置为<em>None</em> ，可以有效地将其从系统中禁用，这是从列表中删除该Pointer的替代方法。</p>
 </div>
 <ul>
-<li><em>Pointer Prefab</em> - This prefab asset will be instantiated when a controller matching the specified controller type and handedness starts being tracked.</li>
+<li><em>Pointer Prefab</em> - 当控制器匹配指定的控制器类型且handedness开始被追踪时，将实例化此预制体。</li>
 </ul>
-<p>It is possible to have multiple pointers associated with a controller. For example, in the <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Profiles/HoloLens2/DefaultHoloLens2InputSystemProfile.asset">default HoloLens 2 profile</a>
-the articulated hand controller is associated with the <em>PokePointer</em>, <em>GrabPointer</em>, and the <em>DefaultControllerPointer</em> (i.e hand rays).</p>
+<p>可能有多个pointers与一个控制器关联。例如，在<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Profiles/HoloLens2/DefaultHoloLens2InputSystemProfile.asset">默认 HoloLens 2 profile</a>
+中，全连接手控制器与<em>PokePointer</em>, <em>GrabPointer</em>
+和<em>DefaultControllerPointer</em>（即手部射线）相关联。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>MRTK provides a set of pointer prefabs in <em>Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers</em>. A new custom prefab can be built as long as it contains one of the pointer scripts in <em>Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Pointers</em> or any other script implementing <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html"><code>IMixedRealityPointer</code></a>.</p>
+<p>MRTK在<em>Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers</em>中提供了一组pointer预制体。如果包含<em>Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Pointers</em> 中的pointer脚本之一或任何其他实现<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html"><code>IMixedRealityPointer</code></a>的脚本，就可以构建新的自定义预制体。</p>
 </div>
-<h3 id="default-pointer-classes">Default pointer classes</h3>
-<p>The following classes are the out-of-box MRTK pointers available and defined in the default <em>MRTK Pointer Profile</em> outlined above. Each pointer prefab provided under <em>Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers</em> contains one of these pointer components attached.</p>
+<h3 id="默认-pointer-类">默认 pointer 类</h3>
+<p>下列类是现成可用的 MRTK pointers，这些类已在上面概述的默认 <em>MRTK Pointer Profile</em> 中定义。在<em>Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers</em> 下提供的每个pointer预制体都包含这些pointer组件之一。</p>
 <p><img src="../Images/Input/Pointers/MRTK_Pointers.png" alt="MRTK Default Pointers"></p>
 <h4 id="far-pointers">Far pointers</h4>
 <h5 id="linepointer"><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.LinePointer.html"><code>LinePointer</code></a></h5>
-<p><em>LinePointer</em>, a base pointer class, draws lines from the source of the input (i.e. the controller) in the pointer direction. Generally, children classes such as the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer.html"><code>ShellHandRayPointer</code></a> and the teleport pointers are instantiated and utilized (which also draw lines to indicate where teleportation will end up at) instead of this class which primarily provides common functionality.</p>
-<p>For motion controllers like in Oculus, Vive, and Windows Mixed Reality, the rotation will match the rotation of the controller. For other controllers like HoloLens 2 articulated hands, the rotation matches the system-provided pointing pose of the hand.</p>
+<p><em>LinePointer</em> 是基本的pointer类，它从输入源（即控制器）沿pointer方向绘制线条。通常，诸如<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer.html"><code>ShellHandRayPointer</code></a>的子类和teleport pointers会被实例化并利用（它也画线来指示传送将在哪里结束），而不是这个主要提供公共功能的类。</p>
+<p>对于Oculus，Vive和Windows Mixed Reality等运动控制器，其旋转将与控制器的旋转相匹配。对于如 HoloLens 2全关节手之类的其他控制器，其旋转与系统提供的手部pointing pose 相匹配。</p>
 <img src="../Images/Pointers/MRTK_Pointers_Line.png" width="400">
 <h5 id="shellhandraypointer"><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer.html"><code>ShellHandRayPointer</code></a></h5>
-<p>The implementation of <em>ShellHandRayPointer</em>, which extends from <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MousePointer.html"><code>LinePointer</code></a>, is used as the default for the <em>MRTK Pointer Profile</em>. The <em>DefaultControllerPointer</em> prefab implements the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer.html"><code>ShellHandRayPointer</code></a> class.</p>
+<p><em>ShellHandRayPointer</em> 的实现从<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MousePointer.html"><code>LinePointer</code></a>扩展而来，被用作<em>MRTK Pointer Profile</em> 的默认设置。 <em>DefaultControllerPointer</em> 预制体实现了<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer.html"><code>ShellHandRayPointer</code></a> 类。</p>
 <h5 id="ggvpointer"><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.GGVPointer.html"><code>GGVPointer</code></a></h5>
-<p>Also known as the <em>Gaze/Gesture/Voice (GGV)</em> pointer, the GGVPointer powers HoloLens 1-style look and tap interactions, primarily via Gaze and Air Tap or Gaze and voice Select interaction. The GGV pointer's position and direction is driven by the head's position and rotation.</p>
+<p>GGVPointer也称为<em>Gaze/Gesture/Voice (GGV)</em> pointer，主要通过凝视和Air Tap或注视和语音选择交互来为HoloLens 1型样式和点击交互赋能。GGVpointer的位置和方向由头部的位置和旋转来驱动。</p>
 <h5 id="touchpointer"><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.TouchPointer.html"><code>TouchPointer</code></a></h5>
-<p>The <em>TouchPointer</em> is responsible for working with Unity Touch input (i.e. touchscreen). These are 'far interactions' because the act of touching the screen will cast a ray from the camera to a potentially far location in the scene.</p>
+<p><em>TouchPointer</em> 负责处理Unity Touch输入(即触摸屏)。这些是'far interactions'，因为触摸屏幕的动作会将射线从相机投射到场景中可能较远的位置。</p>
 <h5 id="mousepointer"><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MousePointer.html"><code>MousePointer</code></a></h5>
-<p>The <em>MousePointer</em> powers a screen to world raycast for far interactions, but for mouse instead of touch.</p>
+<p><em>MousePointer</em>为远距离互动提供了一个屏幕，可以使用世界射线，但适用于鼠标而不是触摸。</p>
 <img src="../Images/Pointers/MRTK_MousePointer.png" width="400">
 <br>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Mouse support is not available by default in MRTK but can be enabled by adding a new <em>Input Data Provider</em> of type <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseDeviceManager.html"><code>MouseDeviceManager</code></a> to the MRTK input profile and assigning the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityMouseInputProfile.html"><code>MixedRealityMouseInputProfile</code></a> to the data provider.</p>
+<p>默认情况下，MRTK中不提供鼠标支持，但可以通过向MRTK输入配置文件添加类型为<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseDeviceManager.html"><code>MouseDeviceManager</code></a>的新<em>Input Data Provider</em>来启用鼠标支持并将 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityMouseInputProfile.html"><code>MixedRealityMouseInputProfile</code></a>分配给data provider。</p>
 </div>
 <h4 id="near-pointers">Near pointers</h4>
 <h5 id="pokepointer"><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html"><code>PokePointer</code></a></h5>
-<p>The <em><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html">PokePointer</a></em> is used to interact with game objects that support “near interaction touchable.” which are GameObjects that have an attached <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a> script. In the case of UnityUI, this pointer looks for NearInteractionTouchableUnityUIs.  The PokePointer uses a SphereCast to determine the closest touchable element and is used to power things like the pressable buttons.</p>
+<p><em><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html">PokePointer</a></em> 用于与支持 “near interaction touchable”的游戏对象进行交互。这些游戏对象具有附加的<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a>脚本。对于UnityUI，此pointer将查找NearInteractionTouchableUnityUI。PokePointer使用SphereCast确定最接近的可触摸元素，并用于为可按下的按钮等事物赋能。</p>
 <p>When configuring the GameObject with the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a> component, make sure to configure the <em>localForward</em> parameter to point out of the front of the button or other object that should be made touchable. Also make sure that the touchable's <em>bounds</em> matches the bounds of the touchable object.</p>
-<p>Useful Poke Pointer properties:</p>
+<p>当使用<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a>组件配置GameObject时，请确保将<em>localForward</em> 参数配置为指向按钮或其他可触摸的对象的前面。还要确保可触摸对象的 <em>bounds</em> 匹配可触摸对象的边界。</p>
+<p>有用的 Poke Pointer 属性:</p>
 <ul>
-<li><em>TouchableDistance</em>: Maximum distance a which a touchable surface can be interacted with</li>
-<li><em>Visuals</em>: Game object used to render finger tip visual (the ring on finger, by default).</li>
-<li><em>Line</em>: Optional line to draw from fingertip to the active input surface.</li>
-<li><em>Poke Layer Masks</em> - A prioritized array of LayerMasks to determine which possible GameObjects the pointer can interact with and the order of interaction to attempt. Note that a GameObject must also have a <code>NearInteractionTouchable</code> component in order to interact with a poke pointer.</li>
+<li><em>TouchableDistance</em>: 可触摸表面可以被互动的最大距离</li>
+<li><em>Visuals</em>: 用于渲染指尖视觉效果(finger tip visual)的游戏对象（默认情况下，环在手指上）。</li>
+<li><em>Line</em>: 从指尖到活动输入表面绘制的可选线。</li>
+<li><em>Poke Layer Masks</em> - 优先排列的LayerMask数组，用于确定pointer可以与哪些游戏对象进行交互以及尝试进行交互的顺序。请注意，GameObject还必须具有<code>NearInteractionTouchable</code> 组件才能与 poke pointer进行交互。</li>
 </ul>
 <img src="../Images/Pointers/MRTK_PokePointer.png" width="400">
 <h5 id="spherepointer"><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.SpherePointer.html"><code>SpherePointer</code></a></h5>
-<p>The <em><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.SpherePointer.html">SpherePointer</a></em> uses <a href="https://docs.unity3d.com/ScriptReference/Physics.OverlapSphere.html">UnityEngine.Physics.OverlapSphere</a> in order to identify the closest <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html"><code>NearInteractionGrabbable</code></a> object for interaction which is useful for &quot;grabbable&quot; input like the <code>ManipulationHandler</code>. Similar to the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html"><code>PokePointer</code></a>/<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a> functional pair, in order to be interactable with the Sphere Pointer, the game object must contain a component that is the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html"><code>NearInteractionGrabbable</code></a> script.</p>
-<p>Useful Sphere Pointer properties:</p>
+<p>*<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.SpherePointer.html">SpherePointer</a>*使用 <a href="https://docs.unity3d.com/ScriptReference/Physics.OverlapSphere.html">UnityEngine.Physics.OverlapSphere</a> 进行标识最近的<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html"><code>NearInteractionGrabbable</code></a>对象进行交互，这对于“可抓取的”输入（如<code>ManipulationHandler</code>）很有用。类似于 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html"><code>PokePointer</code></a>/<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html"><code>NearInteractionTouchable</code></a> 的功能对，如果要与Sphere Pointer交互，游戏对象必须包含<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html"><code>NearInteractionGrabbable</code></a> 脚本组件。</p>
+<p>有用的Sphere Pointer属性：</p>
 <ul>
-<li><em>Sphere Cast Radius</em>: The radius for the sphere used to query for grabbable objects.</li>
-<li><em>Grab Layer Masks</em> - A prioritized array of LayerMasks to determine which possible GameObjects the pointer can interact with and the order of interaction to attempt. Note that a GameObject must also have a <code>NearInteractionGrabbable</code> to interact with a SpherePointer.</li>
+<li><em>Sphere Cast Radius</em>: 用于查询可抓取对象的球体的半径.</li>
+<li><em>Grab Layer Masks</em> - 优先排列的LayerMask数组，用于确定pointer可以与哪些游戏对象进行交互以及尝试进行交互的顺序。注意，GameObject还必须具有一个NearInteractionGrabbable`才能与SpherePointer交互。</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The Spatial Awareness layer is disabled in the default GrabPointer prefab provided by MRTK. This is done to reduce performance impact of doing a sphere overlap query with the spatial mesh. You can enable this by modifying the GrabPointer prefab.</p>
+<p>在MRTK提供的默认GrabPointer预制体中，禁用了Spatial Awareness 层。这样做是为了减少球体与空间网格重叠查询的性能影响。您可以通过修改GrabPointer预制体来启用它。</p>
 </div>
 <img src="../Images/Pointers/MRTK_GrabPointer.jpg" width="400">
 <h4 id="teleport-pointers">Teleport pointers</h4>
 <ul>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Teleport.TeleportPointer.html"><code>TeleportPointer</code></a> will raise a teleport request when action is taken (i.e the teleport button is pressed) in order to move the user.</li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Teleport.ParabolicTeleportPointer.html"><code>ParabolicTeleportPointer</code></a> will raise a teleport request when action is taken (i.e the teleport button is pressed) with a parabolic line raycast in order to move the user.</li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Teleport.TeleportPointer.html"><code>TeleportPointer</code></a> 将在采取行动（即，按下传送按钮）时引发传送请求，以移动用户。</li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Teleport.ParabolicTeleportPointer.html"><code>ParabolicTeleportPointer</code></a> 将在采取行动（即，按下传送按钮）时引发传送请求，用使用抛物线射线来移动用户。</li>
 </ul>
 <img src="../Images/Pointers/MRTK_Pointers_Parabolic.png" width="400">
-<h2 id="pointer-support-for-mixed-reality-platforms">Pointer support for Mixed Reality Platforms</h2>
-<p>The following table details the pointer types that are typically used for the common platforms in MRTK. NOTE:
-it's possible to add different pointer types to these platforms. For example, you could add a Poke pointer or Sphere pointer to VR. Additionally, VR devices with a gamepad could use the GGV pointer.</p>
+<h2 id="对混合现实平台的pointer支持">对混合现实平台的Pointer支持</h2>
+<p>下表详细介绍了MRTK中常见平台常用的pointer类型。注意：
+可以向这些平台添加不同的pointer类型。例如，您可以向VR添加Pokepointer或Spherepointer。此外，带有游戏手柄的VR设备可以使用GGVpointer。</p>
 <table>
 <thead>
 <tr>
@@ -188,15 +192,15 @@ it's possible to add different pointer types to these platforms. For example, yo
 <tbody>
 <tr>
 <td>ShellHandRayPointer</td>
-<td>Valid</td>
-<td>Valid</td>
+<td>有效</td>
+<td>有效</td>
 <td></td>
-<td>Valid</td>
+<td>有效</td>
 </tr>
 <tr>
 <td>TeleportPointer</td>
-<td>Valid</td>
-<td>Valid</td>
+<td>有效</td>
+<td>有效</td>
 <td></td>
 <td></td>
 </tr>
@@ -204,7 +208,7 @@ it's possible to add different pointer types to these platforms. For example, yo
 <td>GGVPointer</td>
 <td></td>
 <td></td>
-<td>Valid</td>
+<td>有效</td>
 <td></td>
 </tr>
 <tr>
@@ -212,75 +216,78 @@ it's possible to add different pointer types to these platforms. For example, yo
 <td></td>
 <td></td>
 <td></td>
-<td>Valid</td>
+<td>有效</td>
 </tr>
 <tr>
 <td>PokePointer</td>
 <td></td>
 <td></td>
 <td></td>
-<td>Valid</td>
+<td>有效</td>
 </tr>
 </tbody>
 </table>
-<h2 id="pointer-interactions-via-code">Pointer interactions via code</h2>
-<h3 id="pointer-event-interfaces">Pointer event interfaces</h3>
+<h2 id="通过代码进行的pointer交互">通过代码进行的Pointer交互</h2>
+<h3 id="pointer-事件接口">Pointer 事件接口</h3>
 <p>MonoBehaviours that implement one or more of the following interfaces and are assigned to a GameObject with a <code>Collider</code> will receive Pointer interactions events as defined by the associated interface.</p>
+<p>实现以下一个或多个接口并分配给具有<code>Collider</code>的GameObject的MonoBehaviours 将会接收关联接口定义的pointer交互事件。</p>
 <table>
 <thead>
 <tr>
-<th>Event</th>
-<th>Description</th>
+<th>事件</th>
+<th>描述</th>
 <th>Handler</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Before Focus Changed / Focus Changed</td>
-<td>Raised on both the game object losing focus and the one gaining it every time a pointer changes focus.</td>
+<td>Focus 改变前 / Focus 改变</td>
+<td>在每次pointer改变焦点(focus)时，同时引起游戏对象失去焦点和另一个对象获得焦点。</td>
 <td><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusChangedHandler.html"><code>IMixedRealityFocusChangedHandler</code></a></td>
 </tr>
 <tr>
 <td>Focus Enter / Exit</td>
-<td>Raised on the game object gaining focus when the first pointer enters it and on the one losing focus when the last pointer leaves it.</td>
+<td>当第一个pointer进入游戏对象时，该对象获得焦点;当最后一个pointer离开时，该对象失去焦点。</td>
 <td><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusHandler.html"><code>IMixedRealityFocusHandler</code></a></td>
 </tr>
 <tr>
 <td>Pointer Down / Dragged / Up / Clicked</td>
-<td>Raised to report pointer press, drag and release.</td>
+<td>报告pointer按下、拖动和释放。</td>
 <td><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html"><code>IMixedRealityPointerHandler</code></a></td>
 </tr>
 <tr>
-<td>Touch Started / Updated / Completed</td>
-<td>Raised by touch-aware pointers like <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html"><code>PokePointer</code></a> to report touch activity.</td>
+<td>Touch 开始 / 更新 / 完成</td>
+<td>由类似<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html"><code>PokePointer</code></a>的 感知触摸 pointers 引发来报告触摸活动</td>
 <td><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler.html"><code>IMixedRealityTouchHandler</code></a></td>
 </tr>
 </tbody>
 </table>
 <div class="NOTE">
 <h5>Note</h5>
-<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusChangedHandler.html"><code>IMixedRealityFocusChangedHandler</code></a> and <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusHandler.html"><code>IMixedRealityFocusHandler</code></a> should be handled in the objects they are raised on. It is possible to receive focus events globally but, unlike other input events, global event handler won't block receiving events based on focus (the event will be received by both global handler and a corresponding object in focus).</p>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusChangedHandler.html"><code>IMixedRealityFocusChangedHandler</code></a> 和<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusHandler.html"><code>IMixedRealityFocusHandler</code></a> 应该在引发它们的对象中进行处理。可以全局接收焦点事件（focus events），但是与其他输入事件不同，全局 event handler
+不会基于焦点阻止接收事件（该事件将同时被全局handler和焦点中的相应对象接收）</p>
 </div>
 <h4 id="pointer-input-events-in-action">Pointer input events in action</h4>
 <p>Pointer input events are recognized and handled by the MRTK input system in a similar way as <a href="InputEvents.html#input-events-in-action">regular input events</a>. The difference being that pointer input events are handled only by the GameObject in focus by the pointer that fired the input event - as well as any global input handlers. Regular input events are handled by GameObjects in focus for all active pointers.</p>
+<p>pointer输入事件由MRTK输入系统以与 <a href="InputEvents.html#input-events-in-action">常规输入事件</a>相似的方式进行识别和处理。区别在于pointer输入事件仅由触发输入事件的pointer的焦点GameObject以及任何全局input handlers来处理。所有活动指针的常规输入事件由焦点GameObjects 处理。</p>
 <ol>
-<li>The MRTK input system recognizes an input event has occurred</li>
-<li>The MRTK input system fires the relevant interface function for the input event to all registered global input handlers</li>
-<li>The input system determines which GameObject is in focus for the pointer that fired the event
+<li>MRTK输入系统识别出发生输入事件</li>
+<li>MRTK输入系统将输入事件的相关接口功能触发到所有已注册的全局input handlers</li>
+<li>输入系统确定触发事件的pointer的焦点GameObject
 <ol>
-<li>The input system utilizes the <a href="https://docs.unity3d.com/Manual/EventSystem.html">Unity's Event System</a> to fire the relevant interface function for all matching components on the focused GameObject</li>
-<li>If at any point an input event has been <a href="InputEvents.html#how-to-stop-input-events">marked as used</a>, the process will end and no further GameObjects will receive callbacks.
+<li>输入系统利用<a href="https://docs.unity3d.com/Manual/EventSystem.html">Unity's Event System</a> 触发焦点GameObject上所有匹配组件的相关接口功能</li>
+<li>如果在任何时候输入事件已被<a href="InputEvents.html#how-to-stop-input-events">marked as used</a>, 则该过程将结束，并且不再有GameObjects接收回调。
 <ul>
-<li>Example: Components implementing the interface <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler.html"><code>IMixedRealityFocusHandler</code></a> will be searched for a GameObject gains or loses focus</li>
-<li>Note: The Unity Event System will bubble up to search the parent GameObject if no components matching the desired interface are found on the current GameObject..</li>
+<li>示例：实现接口<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler.html"><code>IMixedRealityFocusHandler</code></a> 的组件将在GameObject中获得或失去焦点。</li>
+<li>注意：如果在当前GameObject上找不到与所需接口匹配的组件，则Unity事件系统将逐级向上搜索父辈GameObject。</li>
 </ul>
 </li>
 </ol>
 </li>
-<li>If no global input handlers are registered and no GameObject is found with a matching component/interface, then the input system will call each fallback registered input handlers</li>
+<li>如果未注册任何全局 input handlers ，并且找不到具有匹配组件/接口的GameObject，则输入系统将调用每个后备注册的 input handlers</li>
 </ol>
-<h4 id="example">Example</h4>
-<p>Below is an example script that changes the color of the attached renderer when a pointer takes or leaves focus or when a pointer selects the object.</p>
+<h4 id="示例">示例</h4>
+<p>以下是一个示例脚本，当pointer获得或离开焦点时或当pointer选择对象时，该脚本将更改附加渲染器的颜色。</p>
 <pre><code class="lang-c#">public class ColorTap : MonoBehaviour, IMixedRealityFocusHandler, IMixedRealityPointerHandler
 {
     private Color color_IdleState = Color.cyan;
@@ -315,11 +322,11 @@ it's possible to add different pointer types to these platforms. For example, yo
     }
 }
 </code></pre>
-<h3 id="query-pointers">Query Pointers</h3>
-<p>It is possible to gather all pointers currently active by looping through the available input sources (i.e controllers and inputs available) to discover which pointers are attached to them.</p>
+<h3 id="查询-pointers">查询 Pointers</h3>
+<p>通过遍历可用的输入源（即可用的控制器和输入）以发现哪些pointer附加到它们，可以收集当前活动的所有pointers。</p>
 <pre><code class="lang-c#">var pointers = new HashSet&lt;IMixedRealityPointer&gt;();
 
-// Find all valid pointers
+// 找到所有有效pointers
 foreach (var inputSource in CoreServices.InputSystem.DetectedInputSources)
 {
     foreach (var pointer in inputSource.Pointers)
@@ -332,7 +339,7 @@ foreach (var inputSource in CoreServices.InputSystem.DetectedInputSources)
 }
 </code></pre>
 <h4 id="primary-pointer">Primary Pointer</h4>
-<p>Developers can subscribe to the FocusProviders PrimaryPointerChanged event to be notified when the primary pointer in focus has changed. This can be extremely useful to identify if the user is currently interacting with a scene via gaze or a hand ray or other input source.</p>
+<p>开发人员可以订阅FocusProviders PrimaryPointerChanged事件，以使焦点中的primary pointer发生更改时得到通知。这对于识别用户当前是否正在通过注视或手部射线或其他输入源与场景进行交互非常有用。</p>
 <pre><code class="lang-c#">private void OnEnable()
 {
     var focusProvider = CoreServices.InputSystem?.FocusProvider;
@@ -349,14 +356,15 @@ private void OnDisable()
     var focusProvider = CoreServices.InputSystem?.FocusProvider;
     focusProvider?.UnsubscribeFromPrimaryPointerChanged(OnPrimaryPointerChanged);
 
-    // This flushes out the current primary pointer
+    // 这将清除当前primary pointer
     OnPrimaryPointerChanged(null, null);
 }
 </code></pre>
-<p>The <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.Examples/Demos/Input/Scenes/PrimaryPointer/PrimaryPointerExample.unity">PrimaryPointerExample scene</a> shows how to use the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PrimaryPointerChangedHandler.html"><code>PrimaryPointerChangedHandler</code></a> for events to respond to a new primary pointer.</p>
+<p>The <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.Examples/Demos/Input/Scenes/PrimaryPointer/PrimaryPointerExample.unity">PrimaryPointerExample 场景</a> 显示了如何使用<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PrimaryPointerChangedHandler.html"><code>PrimaryPointerChangedHandler</code></a> 以使事件响应新的primary pointer.</p>
 <img src="../Images/Pointers/PrimaryPointerExample.png" style="max-width:100%;">
 <h3 id="pointer-result">Pointer Result</h3>
-<p>The pointer <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html#Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointer_Result"><code>Result</code></a> property contains the current result for the scene query used to determine the object with focus. For a raycast pointer, like the ones created by default for motion controllers, gaze input and hand rays, it will contain the location and normal of the raycast hit.</p>
+<p>pointer <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html#Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointer_Result"><code>Result</code></a>
+属性包含用于确定具有焦点的对象的场景查询的当前结果.对于raycast pointer，如默认为运动控制器创建的pointer，凝视输入和手部射线，它将包含射线投射命中的位置和法线。</p>
 <pre><code class="lang-c#">private void IMixedRealityPointerHandler.OnPointerClicked(MixedRealityPointerEventData eventData)
 {
     var result = eventData.Pointer.Result;
@@ -365,21 +373,21 @@ private void OnDisable()
     Instantiate(MyPrefab, spawnPosition, spawnRotation);
 }
 </code></pre>
-<p>The <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.Examples/Demos/Input/Scenes/PointerResult/PointerResultExample.unity">PointerResultExample scene</a> shows how to use the pointer <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html#Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointer_Result"><code>Result</code></a> to spawn an object at the hit location.</p>
+<p><a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.Examples/Demos/Input/Scenes/PointerResult/PointerResultExample.unity">PointerResultExample 场景</a> 显示了如何使用pointer<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html#Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointer_Result"><code>Result</code></a> 以在命中位置生成对象.</p>
 <img src="../Images/Input/PointerResultExample.png" style="max-width:100%;">
-<h3 id="disable-pointers">Disable Pointers</h3>
-<p>To turn enable and disable pointers (for example, to disable the hand ray), set the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html"><code>PointerBehavior</code></a> for a given pointer type via <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PointerUtils.html"><code>PointerUtils</code></a>.</p>
-<pre><code class="lang-c#">// Disable the hand rays
+<h3 id="禁用-pointers">禁用 Pointers</h3>
+<p>要启用和禁用pointer（例如，禁用手部射线）, 请通过<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PointerUtils.html"><code>PointerUtils</code></a>为给定的pointer类型设置<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html"><code>PointerBehavior</code></a>。</p>
+<pre><code class="lang-c#">// 禁用手部射线
 PointerUtils.SetHandRayPointerBehavior(PointerBehavior.AlwaysOff);
 
-// Disable hand rays for the right hand only
+// 仅禁用右手的射线
 PointerUtils.SetHandRayPointerBehavior(PointerBehavior.AlwaysOff, Handedness.Right);
 
-// Disable the gaze pointer
+// 禁用gaze pointer
 PointerUtils.SetGazePointerBehavior(PointerBehavior.AlwaysOff);
 
-// Set the behavior to match HoloLens 1
-// Note, if on HoloLens 2, you must configure your pointer profile to make the GGV pointer show up for articulated hands.
+// 设置行为以匹配HoloLens 1
+// 注意，如果在HoloLens 2上，则必须配置pointer profile，以使GGVpointer为全关节手显示。
 public void SetHoloLens1()
 {
     PointerUtils.SetPokePointerBehavior(PointerBehavior.AlwaysOff, Handedness.Any);
@@ -388,21 +396,20 @@ public void SetHoloLens1()
     PointerUtils.SetGGVBehavior(PointerBehavior.Default);
 }
 </code></pre>
-<p>See <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PointerUtils.html"><code>PointerUtils</code></a> and <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Examples.Demos.DisablePointersExample.html"><code>TurnPointersOnOff</code></a> for more examples.</p>
-<h2 id="pointer-interactions-via-editor">Pointer interactions via editor</h2>
+<p>有关更多示例，请参见
+<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PointerUtils.html"><code>PointerUtils</code></a> 和<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Examples.Demos.DisablePointersExample.html"><code>TurnPointersOnOff</code></a> 。</p>
+<h2 id="通过编辑器进行的pointer交互">通过编辑器进行的Pointer交互</h2>
 <p>For pointer events handled by <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html"><code>IMixedRealityPointerHandler</code></a>, MRTK provides further convenience in the form of the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PointerHandler.html"><code>PointerHandler</code></a> component which allows pointer events to be handled directly via Unity Events.</p>
+<p>对于由<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html"><code>IMixedRealityPointerHandler</code></a>处理的pointer事件，MRTK以<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.PointerHandler.html"><code>PointerHandler</code></a>组件的形式提供了更多便利。该组件允许通过Unity Events直接处理pointer事件。</p>
 <img src="../Images/Pointers/PointerHandler.png" style="max-width:100%;">
-<h2 id="pointer-extent">Pointer Extent</h2>
-<p>Far pointers have settings which limit how far they will raycast and interact with other objects in the scene.
-By default, this value is set to 10 meters. This value was chosen to remain consistent with the behavior
-of the HoloLens shell.</p>
-<p>This can be changed by updating the <code>DefaultControllerPointer</code> prefab's
-<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer.html"><code>ShellHandRayPointer</code></a> component's
-fields:</p>
-<p><em>Pointer Extent</em> - This controls the maximum distance that pointers will interact with.</p>
-<p><em>Default Pointer Extent</em> - This controls the length of the pointer ray/line that will
-render when the pointer is not interacting with anything.</p>
-<h2 id="see-also">See Also</h2>
+<h2 id="pointer-范围">Pointer 范围</h2>
+<p>Far pointersr的设置限制了它们将进行射线投射并与场景中的其他对象进行交互的距离。
+默认情况下，此值设置为10米。选择该值是为了与HoloLens shell的行为保持一致</p>
+<p>可以通过更新<code>DefaultControllerPointer</code>预制体的<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer.html"><code>ShellHandRayPointer</code></a> 组件的字段来更改:</p>
+<p><em>Pointer Extent</em> - 控制pointer将与之交互的最大距离</p>
+<p><em>Default Pointer Extent</em> - 控制pointer射线/线条的长度
+当pointer不与任何东西交互时呈现。</p>
+<h2 id="建议浏览">建议浏览</h2>
 <ul>
 <li><a href="../Architecture/InputSystem/ControllersPointersAndFocus.html">Pointer Architecture</a></li>
 <li><a href="InputEvents.html">Input Events</a></li>
