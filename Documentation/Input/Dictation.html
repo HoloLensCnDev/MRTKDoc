@@ -82,27 +82,31 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="dictation">Dictation</h1>
 
-<p>Dictation allows users to record audio clips and obtain a transcription. To use it make sure that a dictation system is registered in the <em>Input System Profile</em>. <strong>Windows Dictation Input Provider</strong> is the dictation system provided out of the box but alternative dictation systems can be created implementing <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.html"><code>IMixedRealityDictationSystem</code></a>.</p>
-<h2 id="requirements">Requirements</h2>
-<p>The dictation system uses Unity's <a href="https://docs.unity3d.com/ScriptReference/Windows.Speech.DictationRecognizer.html">DictationRecognizer</a>
-which itself uses the underlying Windows speech APIs for handling dictation. Note that this
-implies that this feature is only present on Windows-based platforms.</p>
-<p>Usage of the Dictation system requires both the &quot;Internet Client&quot; and &quot;Microphone&quot; application
-capabilities in the <a href="https://docs.unity3d.com/Manual/class-PlayerSettingsWSA.html#Capabilities">PlayerSettings - Capabilities section</a>.
-See <a href="https://docs.microsoft.com/windows/mixed-reality/voice-input-in-unity#dictation">Windows Mixed Reality Documentation</a>
-for more details on voice input in Unity.</p>
-<h2 id="configuration">Configuration</h2>
+<p>Dictation允许用户录制音频剪辑并获得转录。要使用它，请确保在<em>Input System Profile</em>中注册了 dictation系统。<strong>Windows Dictation Input Provider</strong> 是现成提供的 dictation系统，但可以创建实现 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.html"><code>IMixedRealityDictationSystem</code></a>的 dictation系统。</p>
+<h2 id="要求">要求</h2>
+<p>dictation系统使用Unity的<a href="https://docs.unity3d.com/ScriptReference/Windows.Speech.DictationRecognizer.html">DictationRecognizer</a>
+它本身使用基础Windows语音API来处理 dictation。注意这个表示此功能仅在基于Windows的平台上存在。</p>
+<p>使用 dictation系统需要“ Internet客户端”和“麦克风”应用程序
+<a href="https://docs.unity3d.com/Manual/class-PlayerSettingsWSA.html#Capabilities">PlayerSettings - Capabilities section</a>
+中的功能。
+请参阅 <a href="https://docs.microsoft.com/windows/mixed-reality/voice-input-in-unity#dictation">Windows Mixed Reality Documentation</a>
+有关Unity中语音输入的更多详细信息。</p>
+<h2 id="配置">配置</h2>
 <img src="../Images/Input/DictationDataProvider.png" width="80%" class="center">
-<p>Once you have a dictation service set up, you can use the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.DictationHandler.html"><code>DictationHandler</code></a> script to start and stop recording sessions and obtain the transcription results via UnityEvents.</p>
+<p>一旦设置了 dictation服务，就可以使用<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.DictationHandler.html"><code>DictationHandler</code></a> 脚本来启动和停止记录会话，并通过UnityEvents获得转录结果。</p>
 <img src="../Images/Input/DictationHandler.png" width="80%" class="center">
 <ul>
-<li><strong>Dictation Hypothesis</strong> is raised as the user speaks with early, rough transcriptions of the audio captured so far.</li>
-<li><strong>Dictation Result</strong> is raised at the end of each sentence (i.e. when the user pauses) with the final transcription of the audio captured so far.</li>
-<li><strong>Dictation Complete</strong> is raised at the end of the recording session with the full, final transcription of the audio.</li>
-<li><strong>Dictation Error</strong> is raised to inform of errors in the dictation service. The transcription in this case contains a description of the error.</li>
+<li><p><strong>Dictation Hypothesis</strong>  当音频捕捉到用户用早期的、粗略的话语时，就会启动。</p>
+</li>
+<li><p><strong>Dictation Result</strong> 在每句话的结尾(即用户停顿的时候)启动，得到目前为止捕获音频的最终转录。</p>
+</li>
+<li><p><strong>Dictation Complete</strong> 是在录音环节的最后提出的完整的，最终的音频转录。</p>
+</li>
+<li><p><strong>Dictation Error</strong> 用于通知dictation服务中的错误。本例中的转录包含了对错误的描述。</p>
+</li>
 </ul>
-<h2 id="example-scene">Example Scene</h2>
-<p><strong>Dictation</strong> scene in <code>MixedRealityToolkit.Examples\Demos\Input\Scenes\Dictation</code> shows the <code>DictationHandler</code> script in use. If you need more control, you can either extend this script or create your own implementing <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationHandler.html"><code>IMixedRealityDictationHandler</code></a> to receive dictation events directly.</p>
+<h2 id="示例场景">示例场景</h2>
+<p>MixedRealityToolkit中的<strong>Dictation</strong>场景 <code>MixedRealityToolkit.Examples\Demos\Input\Scenes\Dictation</code> 显示了正在使用的 <code>DictationHandler</code> 脚本。如果需要更多控制，则可以扩展此脚本或者创建自己的实现了<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationHandler.html"><code>IMixedRealityDictationHandler</code></a>的脚本以直接接收dictation事件。</p>
 <img src="../Images/Input/DictationDemo.png" width="80%" class="center">
 </article>
           </div>
