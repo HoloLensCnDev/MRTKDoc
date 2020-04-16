@@ -92,22 +92,20 @@
 <p>它是具有所需的MixedRealityToolkit实例的单个场景。该场景将在启动时首先加载，并在应用程序的生命周期内保持加载状态。Manager场景还可以托管其他不应破坏的对象。这是DontDestroyOnLoad的首选替代方法。</p>
 <p>要启用此功能，请在配置文件中选中<code>Use Manager Scene</code>，然后将场景对象拖到<code>Manager Scene</code>字段中。</p>
 <hr>
-<h2 id="光照场景-lighting-scenes">光照场景 Lighting Scenes</h2>
-<p>A set of scenes which store lighting information and lighting objects. Only one can be loaded at a time, and their settings can be blended during loads for smooth lighting transitions.</p>
-<p>Unity's lighting settings - ambient light, skyboxes, etc - can be tricky to manage when using additive loading because they're tied to individual scenes and override behavior is not straightforward. In practice this can cause confusion when assets are authored in lighting conditions that don't obtain at runtime.</p>
+<h2 id="照明场景-lighting-scenes">照明场景 Lighting Scenes</h2>
 <p>一组场景，用于存储照明信息和照明对象。一次只能加载一个，并且可以在加载过程中混合它们的设置以实现平滑的灯光过渡。</p>
 <p>使用相加性加载时，Unity的照明设置(lighting settings)-环境光，天空盒等-可能很难管理，因为它们绑定到单个场景，并且覆盖行为并不简单。在实践中，当资源是在运行时无法获得的光照条件下创建时，这可能会造成混乱。</p>
 <p><img src="../Images/SceneSystem/MRTK_SceneSystemLightingSettings.PNG" alt="Scene system lighting settings"></p>
 <p>Scene System使用光照场景来确保这些设置在编辑模式和播放模式下均保持一致，无论加载或激活了哪些场景。</p>
 <p>要启用此功能，请在配置文件中选中<code>Use Lighting Scene</code>，然后填充<code>Lighting Scenes</code> 数组。</p>
-<h3 id="cached-lighting-settings">Cached Lighting Settings</h3>
-<p>Your profile stores cached copies of the lighting settings kept in your lighting scenes. If those settings change in your lighting scenes, you will need to update your cache to ensure lighting appears as expected in play mode. Your profile will display a warning when it suspects your cached settings are out of date. Clicking <code>Update Cached Lighting Settings</code> will load each of your lighting scenes, extract their settings, then store them in your profile.</p>
+<h3 id="缓存照明设置-cached-lighting-settings">缓存照明设置 Cached Lighting Settings</h3>
+<p>您的配置文件存储照明场景中保留的照明设置的缓存副本。如果这些设置在您的照明场景中发生更改，则您将需要更新缓存以确保在播放模式下照明按预期显示。当您的配置文件怀疑您的缓存设置已过期时，将显示警告。单击<code>Update Cached Lighting Settings</code> 将加载每个照明场景，提取其设置，然后将其存储在您的配置文件中。</p>
 <p><img src="../Images/SceneSystem/MRTK_SceneSystemCachedLightingSettings.PNG" alt="Scene system lighting settings"></p>
 <h3 id="editor-behavior">Editor Behavior</h3>
-<p>One benefit of using lighting scenes is knowing your content is lit correctly while editing. To this end, the Scene Service will keep a lighting scene loaded at all times, and will copy that scene's lighting settings to the current active scene.*</p>
-<p>You can change which lighting scene is loaded by opening the Scene System's <a href="../MixedRealityConfigurationGuide.html#editor-utilities">service inspector.</a> In edit mode you can instantaneously transition between lighting scenes. In play mode, you can preview transitions.</p>
+<p>使用照明场景的一个好处是知道您的内容在编辑时已正确照明。为此，Scene Service将始终保持加载照明场景，并将该场景的照明设置复制到当前活动场景。*</p>
+<p>您可以通过打开场景系统的<a href="../MixedRealityConfigurationGuide.html#editor-utilities">service inspector.</a>来更改加载哪个照明场景。在编辑模式下，您可以在照明场景之间即时转换。在播放模式下，您可以预览转场。</p>
 <p><img src="../Images/SceneSystem/MRTK_SceneSystemServiceInspector.PNG" alt="Scene system inspector"></p>
-<p>*<em>Note: Typically the active scene determines your lighting settings in editor. However we choose not to use this feature to enforce lighting settings, because the active scene is also where newly created objects are placed by default, and lighting scenes are only permitted to contain lighting components. Instead, the current lighting scene's settings are automatically copied to the active scene's settings instead. Keep in mind that this will result in your content scene's lighting settings being over-written.</em></p>
+<p>*<em>注意：通常，活动场景会在编辑器中确定您的照明设置。但是，我们选择不使用此功能来强制照明设置，因为默认情况下，活动场景也是新创建的对象所在的位置，并且照明场景仅允许包含照明组件。相反，当前照明场景的设置会自动复制到活动场景的设置中。请记住，这将导致内容场景的照明设置被覆盖。</em></p>
 </article>
           </div>
           
