@@ -83,28 +83,30 @@
 <h1 id="mixed-reality-toolkit-packages">Mixed Reality Toolkit Packages</h1>
 
 <p>The Mixed Reality Toolkit (MRTK) is a collection of packages that enable cross platform Mixed Reality application development by providing support for Mixed Reality hardware and platforms.</p>
-<p>The MRTK ships via the following Unity packages:</p>
+<p>Mixed Reality Toolkit (MRTK)是包的一个集合，它是为混合现实硬件和平台提供跨平台支持的混合现实应用程序的开发。</p>
+<p>MRTK通过下列的Unity包发布:</p>
 <ul>
 <li><a href="#foundation-package">Foundation</a></li>
 <li><a href="#extensions-package">Extensions</a></li>
 <li><a href="#examples-package">Examples</a></li>
 <li><a href="#tools-package">Tools</a></li>
 </ul>
-<p>These packages are released and supported by Microsoft from source code in the <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/mrtk_release">mrtk_release</a> branch on GitHub.</p>
+<p>这些包由微软发布和支持，源码在GitHub上的
+<a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/mrtk_release">mrtk_release</a> 分支.</p>
 <h2 id="foundation-package">Foundation Package</h2>
-<p>The Mixed Reality Toolkit Foundation is the set of code that enables your application to leverage common functionality across Mixed Reality Platforms.</p>
+<p>Mixed Reality Toolkit Foundation是代码的集合，它使您的应用程序能够利用跨混合现实平台的公共功能。</p>
 <p><img src="../Images/Input/MRTK_Package_Foundation.png" width="350px" style="display:block;"><br>
 <sup>MRTK Foundation Package</sup></p>
-<p>The MRTK Foundation is comprised of:</p>
+<p>MRTK Foundation 的构成包括:</p>
 <ul>
 <li><strong>Core Package</strong></li>
 </ul>
-<p>The Core Package contains the definitions for all of the common interfaces, classes and data types that are used by all other components. It is highly recommended that applications access MRTK components exclusively through the defined interfaces to enable the highest level of compatibility across platforms.</p>
+<p>Core Package 包含所有其他组件使用的所有公共接口、类和数据类型的定义。强烈建议应用程序仅通过定义的接口访问MRTK组件，以实现跨平台的最高兼容性。</p>
 <ul>
 <li><strong>Platform Providers</strong></li>
 </ul>
-<p>The MRTK Platform Provider packages are the components that enable the Mixed Reality Toolkit to target Mixed Reality hardware and platform functionality.</p>
-<p>Supported platforms include:</p>
+<p>MRTK Platform Provider 是使MRTK能够针对混合现实硬件和平台功能的组件。</p>
+<p>支持的平台包括:</p>
 <ul>
 <li>Windows Mixed Reality</li>
 <li>OpenVR</li>
@@ -113,44 +115,43 @@
 <ul>
 <li><strong>System Services</strong></li>
 </ul>
-<p>Core services provide the default implementations for the system service interfaces, defined in the core package.</p>
-<p>The MRTK foundation includes the following system services:</p>
+<p>Core services 为在Core Package中定义的系统服务接口提供默认实现。</p>
+<p>MRTK foundation 包括以下系统服务:</p>
 <ul>
-<li><a href="../Boundary/BoundarySystemGettingStarted.html">Boundary System</a></li>
-<li><a href="../Diagnostics/DiagnosticsSystemGettingStarted.html">Diagnostic System</a></li>
-<li><a href="../Input/Overview.html">Input System</a></li>
-<li><a href="../SpatialAwareness/SpatialAwarenessGettingStarted.html">Spatial Awareness System</a></li>
+<li><a href="../Boundary/BoundarySystemGettingStarted.html">边界系统 Boundary System</a></li>
+<li><a href="../Diagnostics/DiagnosticsSystemGettingStarted.html">诊断系统 Diagnostic System</a></li>
+<li><a href="../Input/Overview.html">输入系统 Input System</a></li>
+<li><a href="../SpatialAwareness/SpatialAwarenessGettingStarted.html">空间感知系统 Spatial Awareness System</a></li>
 <li><a href="../TeleportSystem/Overview.html">Teleport System</a></li>
 </ul>
 <ul>
 <li><strong>Feature Assets</strong></li>
 </ul>
-<p>Feature Assets are collections of related functionality delivered as Unity assets and scripts including user interface controls, Standard assets, and more.</p>
+<p>Feature Assets 是Unity资源和脚本递送的相关功能的集合，包括用户界面控件、标准资源等等。</p>
+<p>是作为Unity资源和脚本交付的相关功能的集合，包括用户界面控件、标准资源等等。</p>
 <h2 id="extensions-package">Extensions Package</h2>
-<p>The extensions package contains additional services and components that extend the functionality of the foundation package.</p>
+<p>extensions package 包含扩展foundation包的功能的其他服务和组件。</p>
 <ul>
 <li><a href="../Extensions/SceneTransitionService/SceneTransitionServiceOverview.html">Scene Transition Service</a></li>
 </ul>
 <h2 id="examples-package">Examples Package</h2>
-<p>The examples package contains demos, sample scripts, and sample scenes that exercise functionality in the foundation package. This package contains the <a href="../README_HandInteractionExamples.html">HandInteractionExample scene</a> (pictured below) which contains sample objects
-that respond to various types of hand input (articulated and non-articulated).</p>
+<p>examples package包含演示、示例脚本和示例场景，它们在foundation package中执行功能。这个包包含<a href="../README_HandInteractionExamples.html">手动交互示例场景</a>(如下图所示)，它包含示例对象
+响应各种类型的手动输入(全关节手和非全关节手)。</p>
 <p><img src="../Images/MRTK_Examples.png" alt="HandInteractionExample scene"></p>
-<p>This package also contains eye tracking demos, which are <a href="../EyeTracking/EyeTracking_ExamplesOverview.html">documented here</a></p>
-<p>More generally, any new feature in the MRTK should contain a corresponding example in the examples package, roughly following
-the same folder structure and location.</p>
+<p>这个包还包含眼动跟踪演示<a href="../EyeTracking/EyeTracking_ExamplesOverview.html">文档在此</a></p>
+<p>更一般地说，MRTK中的任何新特性都应该在examples package中包含一个相应的示例，大致相符相同的文件夹结构和位置。</p>
 <h2 id="tools-package">Tools Package</h2>
-<p>The tools package contains tools that are useful for creating mixed reality experiences whose code will ultimately not
-ship as part of an application.</p>
+<p>tools package 包含对创建混合现实体验非常有用的工具，而这些代码最终不会作为应用程序的一部分提交。</p>
 <ul>
 <li><a href="../Tools/DependencyWindow.html">Dependency Window</a></li>
 <li><a href="../Tools/ExtensionServiceCreationWizard.html">Extension Service Creation Wizard</a></li>
 <li><a href="../Tools/OptimizeWindow.html">Optimize Window</a></li>
 <li><a href="../Tools/ScreenshotUtility.html">Screenshot Utility</a></li>
 </ul>
-<h2 id="see-also">See Also</h2>
+<h2 id="建议浏览">建议浏览</h2>
 <ul>
-<li><a href="../Architecture/Overview.html">Architecture Overview</a></li>
-<li><a href="../Architecture/SystemsExtensionsProviders.html">Systems, Extension Services and Data Providers</a></li>
+<li><a href="../Architecture/Overview.html">架构概述 Architecture Overview</a></li>
+<li><a href="../Architecture/SystemsExtensionsProviders.html">系统扩展服务和DataProviders Systems, Extension Services and Data Providers</a></li>
 </ul>
 </article>
           </div>

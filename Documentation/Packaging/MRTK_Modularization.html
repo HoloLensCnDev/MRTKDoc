@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Mixed Reality Toolkit Componentization | Mixed Reality Toolkit Documentation </title>
+    <title>Mixed Reality Toolkit &#32452;&#20214;&#21270; | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Mixed Reality Toolkit Componentization | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="Mixed Reality Toolkit &#32452;&#20214;&#21270; | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,23 +80,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="mixed-reality-toolkit-componentization">Mixed Reality Toolkit Componentization</h1>
+<h1 id="mixed-reality-toolkit-组件化">Mixed Reality Toolkit 组件化</h1>
 
-<p>One of the great new features of Mixed Reality Toolkit v2 is improved componentization. Wherever possible, individual components are isolated from all but the core layer of the foundation.</p>
-<h2 id="minimized-dependencies">Minimized Dependencies</h2>
-<p>MRTK v2 was intentionally developed to be modular and to minimize dependencies between system services
-(ex: spatial awareness).</p>
-<p>Due to the nature of some system services (ex: input and teleportation), a small number of dependencies exist.</p>
-<p>While it is expected that services will need one or more data provider components, there are no direct links
-between them. The same is true for SDK features (ex: User Interface components).</p>
-<h2 id="component-communication">Component Communication</h2>
-<p>To ensure that there are no direct links between components, MRTK v2 utilizes interfaces to communicate between
-services, data providers and application code. These interfaces are defined in and all communication is routed
-through the Mixed Reality Toolkit core component.</p>
+<p>Mixed Reality Toolkit v2的一个极大的新特征是改进的组件化。在任何可能的情况下，单独的组件都是与除基础的核心层之外的所有组件隔离的。</p>
+<h2 id="最小化依赖-minimized-dependencies">最小化依赖 Minimized Dependencies</h2>
+<p>MRTK v2有意被开发成模块化的，以最小化系统服务之间的依赖关系
+(例:空间感知)。</p>
+<p>由于某些系统服务的性质(例如:input和teleportation)，存在少量依赖关系。</p>
+<p>虽然显而易见的是服务将需要一个或多个data provider组件，但他们之间没有直接链接。对于SDK特性(例如:用户界面组件)也是如此。</p>
+<h2 id="组件通信-component-communication">组件通信 Component Communication</h2>
+<p>为了确保组件之间没有直接链接，MRTK v2利用接口在服务、data providers和应用程序代码之间进行通信。这些接口被定义在并且所有通信通过混合现实工具包核心组件路由。</p>
 <p><img src="../Images/Packaging/AccessingViaInterfaces.png" alt="Using the spatial awareness system via interfaces"></p>
-<h2 id="minimizing-mrtk-import-footprint">Minimizing MRTK import footprint</h2>
-<p>At this moment, the MRTK is imported as a single foundation package (ignoring for a moment the existence of the examples package, which is a completely optional package). It is possible to make this footprint smaller by manually cutting down on the files imported, though this is a highly manual process which doesn't have a well-defined guide.</p>
-<p>It is possible to uncheck arbitrary items during the import of the Foundation package. However, it's not recommended to do this at an early stage in development as it might break functionality. After having figured out the final feature set of an app, pruning unneeded providers and services can be done on the following folders:</p>
+<h2 id="最小化mrtk导入占用空间--minimizing-mrtk-import-footprint">最小化MRTK导入占用空间  Minimizing MRTK import footprint</h2>
+<p>此时，MRTK作为单个基础包导入(暂时忽略examples包的存在，它是一个完全可选的包)。可以通过手动减少导入的文件来减少这个内存占用，尽管这是一个高度手动的过程，没有定义良好的指南。</p>
+<p>在Foundation包的导入过程中，可以取消选中任意项。但是，不建议在开发的早期阶段这样做，因为这样做可能会破坏功能。在确定了应用程序的最终特性集之后，可以在以下文件夹中删除不需要的providers和服务:</p>
 <ul>
 <li>MixedRealityToolkit.Services</li>
 <li>MixedRealityToolkit.Providers</li>
@@ -104,35 +101,32 @@ through the Mixed Reality Toolkit core component.</p>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>MRTK v2 <strong><em>requires</em></strong> the contents of the Assets\MixedRealityToolkit folder.</p>
+<p>MRTK v2 <strong><em>需要</em></strong> Assets\MixedRealityToolkit 文件夹的内容.</p>
 </div>
-<h2 id="upcoming-features">Upcoming features</h2>
-<h3 id="application-architecture">Application Architecture</h3>
-<p>The MRTK will have support to enable applications to be built with a variety of architectures, including:</p>
+<h2 id="即将到来的新特性--upcoming-features">即将到来的新特性  Upcoming features</h2>
+<h3 id="应用程序架构-application-architecture">应用程序架构 Application Architecture</h3>
+<p>MRTK将支持各种架构的应用程序，包括::</p>
 <ul>
 <li><a href="#mixedrealitytoolkit-service-locator">MixedRealityToolkit service locator</a></li>
 <li><a href="#individual-service-components">Individual services</a></li>
 <li><a href="#custom-service-locator">Custom service locator</a></li>
 <li><a href="#hybrid-architecture">Hybrid architecture</a></li>
 </ul>
-<p>When selecting an application architecture, it is important to consider design flexibility and application performance. The architectures described here are not expected to be suitable for every application.</p>
+<p>在选择应用程序架构时，考虑设计灵活性和应用程序性能非常重要。这里描述的架构并不适用于所有应用程序。</p>
 <h4 id="mixedrealitytoolkit-service-locator">MixedRealityToolkit Service Locator</h4>
-<p>The MRTK enables (and automatically configures) application scenes to use the default <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityToolkit.html"><code>MixedRealityToolkit</code></a> service locator component. This component includes support for configuring MRTK systems and data providers via configuration inspectors and manages component lifespans and core behaviors (ex: when to update).</p>
-<p>All systems are represented in the core configuration inspector, regardless of whether or not they are present or enabled in the project. Please see the <a href="../MixedRealityConfigurationGuide.html">Mixed Reality Configuration Guide</a> for more
-information.</p>
-<h4 id="individual-service-components">Individual Service Components</h4>
-<p>Some developers have expressed a desire to include individual service components into the application scene hierarchy. To enable this usage, services will either need to be encapsulated in a custom registrar or be self-registering / self-managing.</p>
-<p>A self-registering service would implement the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html"><code>IMixedRealityServiceRegistrar</code></a> and register itself so that application code could discover the service instance via a registry.</p>
-<p>A self-managing service could be implemented as a singleton object in the scene hierarchy. This object would provide
-and instance property which application code could use to directly access service functionality.</p>
-<h4 id="custom-service-locator">Custom Service Locator</h4>
-<p>Some developers have requested the ability to create a custom service locator component. Custom service locators would implement the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html"><code>IMixedRealityServiceRegistrar</code></a> interface and manage the life cycle and core behaviors of active services.</p>
-<h4 id="hybrid-architecture">Hybrid Architecture</h4>
-<p>The MRTK will support a hybrid architecture in which developers can combine the previous approaches as needed or desired. For example, a developer could start with the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityToolkit.html"><code>MixedRealityToolkit</code></a> service locator and add a self-registering
-service.</p>
+<p>MRTK启用(并自动配置)应用程序场景，以使用默认<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityToolkit.html"><code>MixedRealityToolkit</code></a>service locator 组件。该组件支持通过configuration inspectors配置MRTK系统和 data providers，并管理组件生命周期和核心行为(例如:何时更新)。</p>
+<p>所有系统都表示在 core configuration inspector中，无论它们是否在项目中出现或启用。请参阅<a href="../MixedRealityConfigurationGuide.html">混合现实配置指南</a>获取更多信息。</p>
+<h4 id="个人服务组件-individual-service-components">个人服务组件 Individual Service Components</h4>
+<p>一些开发人员表示希望将个人服务组件包含到应用程序场景层次结构中。要启用这种用法，服务要么需要封装在自定义注册商中，要么需要进行自注册/自管理。</p>
+<p>一个自注册的服务将实现 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html"><code>IMixedRealityServiceRegistrar</code></a>并注册自己，以便应用程序代码可以通过注册中心发现服务实例。</p>
+<p>自管理服务可以在场景层次结构中作为单例对象实现。这个对象将提供和实例化属性，应用程序代码可以使用实例属性直接访问服务功能。</p>
+<h4 id="自定义service-locator-custom-service-locator">自定义Service Locator Custom Service Locator</h4>
+<p>一些开发人员要求能够创建自定义service locator组件。自定义service locator将实现<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html"><code>IMixedRealityServiceRegistrar</code></a>接口，并管理活动服务的生命周期和核心行为。</p>
+<h4 id="混合架构-hybrid-architecture">混合架构 Hybrid Architecture</h4>
+<p>MRTK将支持一种混合的架构，在这种架构中，开发人员可以根据需要或需求组合以前的方法。例如，开发人员可以从<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityToolkit.html"><code>MixedRealityToolkit</code></a>service locator开始，并添加一个自注册服务。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>When opting for a hybrid architecture, it is important to be mindful of any duplication of work (ex: acquiring controller data from multiple components).</p>
+<p>当选择混合架构时，注意任何工作的重复是很重要的(例如:从多个组件获取控制器数据)。</p>
 </div>
 </article>
           </div>

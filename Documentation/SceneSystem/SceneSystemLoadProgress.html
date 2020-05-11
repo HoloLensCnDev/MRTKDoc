@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Monitoring Content Loading | Mixed Reality Toolkit Documentation </title>
+    <title>&#30417;&#27979;&#20869;&#23481;&#21152;&#36733; Monitoring Content Loading | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Monitoring Content Loading | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#30417;&#27979;&#20869;&#23481;&#21152;&#36733; Monitoring Content Loading | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,29 +80,31 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="monitoring-content-loading">Monitoring Content Loading</h1>
+<h1 id="监测内容加载-monitoring-content-loading">监测内容加载 Monitoring Content Loading</h1>
 
-<h2 id="scene-operation-progress">Scene Operation Progress</h2>
-<p>When content is being loaded or unloaded, the <code>SceneOperationInProgress</code> property will return true. You can monitor the progress of this operation via the <code>SceneOperationProgress</code> property.</p>
-<p>The <code>SceneOperationProgress</code> value is the average of all current async scene operations. At the start of a content load, <code>SceneOperationProgress</code> will be zero. Once fully completed, <code>SceneOperationProgress</code> will be set to 1 and will remain at 1 until the next operation takes place. Note that only content scene operations affect these properties.</p>
-<p>These properties reflect the state of an <em>entire operation</em> from start to finish, even if that operation includes multiple steps:</p>
+<h2 id="场景操作进展-scene-operation-progress">场景操作进展 Scene Operation Progress</h2>
+<p>当内容被加载或卸载时<code>SceneOperationInProgress</code> 属性将返回true。您可以通过<code>SceneOperationInProgress</code> 属性监视此操作的进度。</p>
+<p><code>SceneOperationProgress</code>值是当前所有异步场景操作的平均值。在内容加载开始时， <code>SceneOperationProgress</code>将为零。一旦完全完成， <code>SceneOperationProgress</code>将被设置为1，并将保持为1，直到下一次操作发生。请注意，只有内容场景的操作才会影响这些属性。</p>
+<p>这些属性反映了一个<em>整个操作</em>从开始到结束的状态，即使该操作包含多个步骤:</p>
 <pre><code class="lang-c#">IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService&lt;IMixedRealitySceneSystem&gt;();
 
-// First do an additive scene load
-// SceneOperationInProgress will be true for the duration of this operation
-// SceneOperationProgress will show 0-1 as it completes
+
+//首先做一个附加的场景加载
+// SceneOperationInProgress在整个操作过程中都是 true
+// SceneOperationProgress将显示0-1，作为完成。
 await sceneSystem.LoadContent(&quot;ContentScene1&quot;);
 
-// Now do a single scene load
-// This will result in two actions back-to-back
-// First &quot;ContentScene1&quot; will be unloaded
-// Then &quot;ContentScene2&quot; will be loaded
-// SceneOperationInProgress will be true for the duration of this operation
-// SceneOperationProgress will show 0-1 as it completes
+//现在加载一个场景
+//这将导致两个连续的动作
+//首先“ContentScene1”将被卸载
+//然后“ContentScene2”将被加载
+// SceneOperationInProgress在整个操作过程中都是true
+// SceneOperationProgress将显示0-1，作为完成。
+
 sceneSystem.LoadContent(&quot;ContentScene2&quot;, LoadSceneMode.Single)
 </code></pre>
-<h3 id="progress-examples">Progress Examples</h3>
-<p><code>SceneOperationInProgress</code> can be useful if activity should be suspended while content is being loaded:</p>
+<h3 id="进程示例-progress-examples">进程示例 Progress Examples</h3>
+<p><code>SceneOperationInProgress</code> 是非常有用的，如果活动在加载内容时应该暂停:</p>
 <pre><code class="lang-c#">public class FooManager : MonoBehaviour
 {
     private void Update()
@@ -121,7 +123,7 @@ sceneSystem.LoadContent(&quot;ContentScene2&quot;, LoadSceneMode.Single)
     ...
 }
 </code></pre>
-<p><code>SceneOperationProgress</code> can be used to display progress dialogs:</p>
+<p><code>SceneOperationProgress</code>可用于显示进度对话框:</p>
 <pre><code class="lang-c#">public class ProgressDialog : MonoBehaviour
 {
     private void Update()
@@ -141,109 +143,110 @@ sceneSystem.LoadContent(&quot;ContentScene2&quot;, LoadSceneMode.Single)
 }
 </code></pre>
 <hr>
-<h2 id="monitoring-with-actions">Monitoring With Actions</h2>
+<h2 id="监测动作-monitoring-with-actions">监测动作 Monitoring With Actions</h2>
 <p>The Scene System provides several actions to let you know when scenes are being loaded or unloaded. Each action relays the name of the affected scene.</p>
-<p>If a load or unload operation involves multiple scenes, the relevant actions will be invoked once per affected scene. They are also invoked all at once when the load or unload operation is <em>fully completed.</em> For this reason it's recommended that you use <em>OnWillUnload</em> actions to detect content that <em>will</em> be destroyed, as opposed to using <em>OnUnloaded</em> actions to detect destroyed content after the fact.</p>
-<p>On the flip side, because <em>OnLoaded</em> actions are only invoked when all scenes are activated and fully loaded, using <em>OnLoaded</em> actions to detect and use new content is guaranteed to be safe.</p>
+<p>场景系统提供了几个动作(actions)，让您知道何时加载或卸载场景。每个动作都会转述受影响场景的名称。</p>
+<p>如果加载或卸载操作涉及多个场景，则每个受影响的场景将调用一次相关操作。当加载或卸载操作<em>完全完成时</em>，也会同时调用它们。由于这个原因，建议您使用<em>OnWillUnload</em>操作来检测将要被销毁的内容，而不是使用<em>OnUnloaded</em>操作来检测销毁后的内容。</p>
+<p>另一方面，由于<em>OnLoaded</em>操作只在所有场景激活并完全加载时调用，因此使用<em>OnLoaded</em>操作来检测和使用新内容是肯定安全的。</p>
 <table>
 <thead>
 <tr>
-<th>Action</th>
-<th>When it's invoked</th>
-<th>Content Scenes</th>
-<th>Lighting Scenes</th>
-<th>Manager Scenes</th>
+<th>动作</th>
+<th>何时调用</th>
+<th>内容场景</th>
+<th>光照场景</th>
+<th>Manager 场景</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>OnWillLoadContent</code></td>
-<td>Just prior to a content scene load</td>
+<td>在一个内容场景加载之前</td>
 <td>•</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td><code>OnContentLoaded</code></td>
-<td>After all content scenes in a load operation have been fully loaded and activated</td>
+<td>加载操作中的所有内容场景都已完全加载并激活之后</td>
 <td>•</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td><code>OnWillUnloadContent</code></td>
-<td>Just prior to a content scene unload operation</td>
+<td>在内容场景卸载操作之前</td>
 <td>•</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td><code>OnContentUnloaded</code></td>
-<td>After all content scenes in an unload operation have been fully unloaded</td>
+<td>卸载操作中的所有内容场景完全卸载之后</td>
 <td>•</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td><code>OnWillLoadLighting</code></td>
-<td>Just prior to a lighting scene load</td>
+<td>在一个光照场景加载之前</td>
 <td></td>
 <td>•</td>
 <td></td>
 </tr>
 <tr>
 <td><code>OnLightingLoaded</code></td>
-<td>After a lighting scene has been fully loaded and activated</td>
+<td>在一个光照场景已经完全加载和激活后</td>
 <td></td>
 <td>•</td>
 <td></td>
 </tr>
 <tr>
 <td><code>OnWillUnloadLighting</code></td>
-<td>Just prior to a lighting scene unload</td>
+<td>在一个光照场景卸载之前</td>
 <td></td>
 <td>•</td>
 <td></td>
 </tr>
 <tr>
 <td><code>OnLightingUnloaded</code></td>
-<td>After a lighting scene has been fully unloaded</td>
+<td>在一个照明场景已经完全卸载后</td>
 <td></td>
 <td>•</td>
 <td></td>
 </tr>
 <tr>
 <td><code>OnWillLoadScene</code></td>
-<td>Just prior to a scene load</td>
+<td>在一个场景加载之前</td>
 <td>•</td>
 <td>•</td>
 <td>•</td>
 </tr>
 <tr>
 <td><code>OnSceneLoaded</code></td>
-<td>After all scenes in an operation are fully loaded and activated</td>
+<td>在操作中的所有场景都被完全加载并激活之后</td>
 <td>•</td>
 <td>•</td>
 <td>•</td>
 </tr>
 <tr>
 <td><code>OnWillUnloadScene</code></td>
-<td>Just prior to a scene unload</td>
+<td>在一个场景卸载之前</td>
 <td>•</td>
 <td>•</td>
 <td>•</td>
 </tr>
 <tr>
 <td><code>OnSceneUnloaded</code></td>
-<td>After a scene is fully unloaded</td>
+<td>在一个场景完全卸载后</td>
 <td>•</td>
 <td>•</td>
 <td>•</td>
 </tr>
 </tbody>
 </table>
-<h3 id="action-examples">Action Examples</h3>
-<p>Another progress dialog example using actions and a coroutine instead of Update:</p>
+<h3 id="动作示例-action-examples">动作示例 Action Examples</h3>
+<p>另一个使用动作和协程代替Update的进度对话框示例:</p>
 <pre><code class="lang-c#">public class ProgressDialog : MonoBehaviour
 {
     private bool displayingProgress = false;
@@ -257,8 +260,8 @@ sceneSystem.LoadContent(&quot;ContentScene2&quot;, LoadSceneMode.Single)
 
     private void HandleSceneOperation (string sceneName)
     {
-        // This may be invoked multiple times per frame - once per scene being loaded or unloaded.
-        // So filter the events appropriately.
+        // 每个帧可以调用多次——每个场景加载或卸载一次.
+        // 因此，适当地过滤事件.
         if (displayingProgress)
         {
             return;
@@ -286,25 +289,25 @@ sceneSystem.LoadContent(&quot;ContentScene2&quot;, LoadSceneMode.Single)
 }
 </code></pre>
 <hr>
-<h2 id="controlling-scene-activation">Controlling Scene Activation</h2>
-<p>By default content scenes are set to activate when loaded. If you want to control scene activation manually, you can pass a <code>SceneActivationToken</code> to any content load method. If multiple content scenes are being loaded by a single operation, this activation token will apply to all scenes.</p>
+<h2 id="控制场景激活-controlling-scene-activation">控制场景激活 Controlling Scene Activation</h2>
+<p>默认情况下，内容场景在加载时被设置为激活。如果你想手动控制场景激活，你可以向任何内容加载方法传递一个 <code>SceneActivationToken</code>。如果单个操作加载多个内容场景，则此激活token将应用于所有场景。</p>
 <pre><code class="lang-c#">IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService&lt;IMixedRealitySceneSystem&gt;();
 
 SceneActivationToken activationToken = new SceneActivationToken();
 
-// Load the content and pass the activation token
+// 加载内容并传递 activation token
 sceneSystem.LoadContent(new string[] { &quot;ContentScene1&quot;, &quot;ContentScene2&quot;, &quot;ContentScene3&quot; }, LoadSceneMode.Additive, activationToken);
 
-// Wait until all users have joined the experience
+// 等待所有用户都加入 experience
 while (!AllUsersHaveJoinedExperience())
 {
     await Task.Yield();
 }
 
-// Let scene system know we're ready to activate all scenes
+// 让 scene system 知道我们已经准备好激活所有场景
 activationToken.AllowSceneActivation = true;
 
-// Wait for all scenes to be fully loaded and activated
+// 等待所有场景全部加载并激活
 while (sceneSystem.SceneOperationInProgress)
 {
     await Task.Yield();
@@ -313,8 +316,8 @@ while (sceneSystem.SceneOperationInProgress)
 // Proceed with experience
 </code></pre>
 <hr>
-<h2 id="checking-which-content-is-loaded">Checking which content is loaded</h2>
-<p>The <code>ContentSceneNames</code> property provides an array of available content scenes in order of build index. You can check whether these scenes are loaded via <code>IsContentLoaded(string contentName)</code>.</p>
+<h2 id="检查加载了哪些内容-checking-which-content-is-loaded">检查加载了哪些内容 Checking which content is loaded</h2>
+<p><code>ContentSceneNames</code> 属性提供了一个按构建索引顺序排列的可用内容场景数组。你可以检查这些场景是否通过<code>IsContentLoaded(string contentName)</code>.加载。</p>
 <pre><code class="lang-c#">IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService&lt;IMixedRealitySceneSystem&gt;();
 
 string[] contentSceneNames = sceneSystem.ContentSceneNames;
