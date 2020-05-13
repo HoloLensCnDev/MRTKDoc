@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>MRTK Standard Shader | Mixed Reality Toolkit Documentation </title>
+    <title>MRTK &#26631;&#20934;&#30528;&#33394;&#22120; | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="MRTK Standard Shader | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="MRTK &#26631;&#20934;&#30528;&#33394;&#22120; | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
@@ -80,26 +80,25 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="mrtk-standard-shader">MRTK Standard Shader</h1>
+<h1 id="mrtk-标准着色器">MRTK 标准着色器</h1>
 
 <p><img src="Images/MRTKStandardShader/MRTK_StandardShader.jpg" alt="Standard shader examples"></p>
-<p>MRTK Standard shading system utilizes a single, flexible shader that can achieve visuals similar to Unity's Standard Shader, implement <a href="https://www.microsoft.com/design/fluent/">Fluent Design System</a> principles, and remain performant on mixed reality devices.</p>
-<h2 id="example-scenes">Example Scenes</h2>
-<p>You can find the shader material examples in the <strong>MaterialGallery</strong> scene under:
-<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/StandardShader/Scenes">MixedRealityToolkit.Examples/Demos/StandardShader/Scenes/</a> All materials in this scene are using the MRTK/Standard shader.</p>
+<p>MRTK标准着色系统(Standard shading system)利用一个单一的，灵活的着色器，可以实现类似于Unity的标准着色器的视觉效果，实现<a href="https://www.microsoft.com/design/fluent/">流畅设计系统</a>原则，并保持性能在混合现实设备上。</p>
+<h2 id="示例场景">示例场景</h2>
+<p>你可以在<code>MRTK/Examples/Demos/StandardShader/Scenes/</code>下面的<strong>MaterialGallery</strong> 场景中找到材质的例子。这个场景中的所有材质都使用了MRTK/标准材质。</p>
 <p><img src="Images/MRTKStandardShader/MRTK_MaterialGallery.jpg" alt="Material Gallery"></p>
-<p>You can find a comparison scene to compare and test the MRTK/Standard shader against the Unity/Standard shader example in the <strong>StandardMaterialComparison</strong> scene under: <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/StandardShader/Scenes">MixedRealityToolkit.Examples/Demos/StandardShader/Scenes/</a></p>
-<p><img src="Images/MRTKStandardShader/MRTK_StandardMaterialComparison.gif" alt="Material Comparison"></p>
-<h2 id="architecture">Architecture</h2>
-<p>The MRTK/Standard shading system is an &quot;uber shader&quot; that uses <a href="https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html">Unity's shader program variant feature</a> to auto-generate optimal shader code based on material properties. When a user selects material properties in the material inspector they only incur performance cost for features they have enabled.</p>
-<h2 id="material-inspector">Material Inspector</h2>
-<p>A custom material inspector exists for the MRTK/Standard shader called <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Editor.MixedRealityStandardShaderGUI.html"><code>MixedRealityStandardShaderGUI.cs</code></a>. The inspector automatically enables/disables shader features based on user selection and aides in setting up render state. For more information about each feature <strong>please hover over each property in the Unity Editor for a tooltip.</strong></p>
+<p>你可以在 <code>MRTK/Examples/Demos/StandardShader/Scenes/</code>下的<strong>StandardMaterialComparison</strong> 比较场景来比较和测试MRTK/标准着色器和Unity/标准着色器的例子。
+<img src="Images/MRTKStandardShader/MRTK_StandardMaterialComparison.gif" alt="Material Comparison"></p>
+<h2 id="架构">架构</h2>
+<p>MRTK/标准着色系统是一个&quot;uber shader&quot; 它使用<a href="https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html">[Unity's 的着色器程序变体特性]</a> 根据材质属性自动生成最佳着色器代码。当用户在material inspector中选择材质属性时，他们只需要为启用的特性付出性能代价。</p>
+<h2 id="material-inspector">Material inspector</h2>
+<p>MRTK/标准材质有一个自定义的material inspector，叫做<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Editor.MixedRealityStandardShaderGUI.html"><code>MixedRealityStandardShaderGUI.cs</code></a>. inspector自动启用/禁用着色器功能，基于用户选择和辅助设置渲染状态。有关每个特性的更多信息，请在<strong>Unity编辑器的tooltip中悬停每个属性</strong>查看/</p>
 <p><img src="Images/MRTKStandardShader/MRTK_MaterialInspector.jpg" alt="Material Inspector"></p>
-<p>The first portion of the inspector controls the material's render state. <em>Rendering Mode</em> determines when and how a material will be rendered. The aim of the MRTK/Standard shader is to mirror the <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterRenderingMode.html">rendering modes found in the Unity/Standard shader</a>. The MRTK/Standard shader also includes an <em>Additive</em> rendering mode and <em>Custom</em> rendering mode for complete user control.</p>
+<p>inspector的第一部分控制材质的渲染状态。<em>Rendering Mode</em>决定了材质什么时候以及如何渲染。MRTK/Standard着色器的目标是镜像 <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterRenderingMode.html">Unity/Standard着色器中的渲染模式</a>。MRTK/标准着色器还包括一个<em>Additive(附加)<em>渲染模式和</em>Custom(自定义)</em> 渲染模式，用于完整的用户控制。</p>
 <table>
 <thead>
 <tr>
-<th>Rendering Mode</th>
+<th>渲染模式 Rendering Mode</th>
 <th></th>
 <th></th>
 </tr>
@@ -107,32 +106,32 @@
 <tbody>
 <tr>
 <td>Opaque</td>
-<td>(Default) Suitable for normal solid objects with no transparent areas.</td>
+<td>(默认)，适用于没有透明区域的普通实体</td>
 <td></td>
 </tr>
 <tr>
 <td>Cutout</td>
-<td>Allows creation of transparent effects that have hard edges between the opaque and transparent areas. In this mode, there are no semi-transparent areas, the texture is either 100% opaque, or invisible. This is useful when using transparency to create the shape of materials such as vegetation.</td>
+<td>允许创建透明效果，在不透明和透明区域之间有硬边。在这种模式下，没有半透明区域，纹理要么是100%不透明的，要么是不可见的。这在使用透明创建材质的形状(如植被)时非常有用。</td>
 <td></td>
 </tr>
 <tr>
 <td>Fade</td>
-<td>Allows the transparency values to entirely fade an object out, including any specular highlights or reflections it may have. This mode is useful if you want to animate an object fading in or out. It is not suitable for rendering realistic transparent materials such as clear plastic or glass because the reflections and highlights will also be faded out.</td>
+<td>允许透明度值完全淡出对象，包括它可能有的任何高光或反射。如果您想使淡入或淡出的对象具有动画效果，此模式非常有用。它不适合渲染逼真的透明材质，如透明塑料或玻璃，因为反射和高光也会淡出。</td>
 <td></td>
 </tr>
 <tr>
 <td>Transparent</td>
-<td>Suitable for rendering realistic transparent materials such as clear plastic or glass. In this mode, the material itself will take on transparency values (based on the texture’s alpha channel and the alpha of the tint colour), however reflections and lighting highlights will remain visible at full clarity as is the case with real transparent materials.</td>
+<td>适用于渲染逼真的透明材质，如透明塑料或玻璃。在这种模式下，材质本身会有透明度值(基于纹理的alpha通道和颜色的alpha值)。然而，反射和照明高光将保持在完全清晰的情况下，因为是真正的透明材质。</td>
 <td></td>
 </tr>
 <tr>
 <td>Additive</td>
-<td>Enables an additive blending mode which sums the previous pixel color with the current pixel color. This is the preferred transparency mode to avoid transparency sorting issues.</td>
+<td>启用了添加的混合模式，该模式将以前的像素颜色与当前像素颜色相加。这是首选的透明模式，以避免透明排序问题。</td>
 <td></td>
 </tr>
 <tr>
 <td>Custom</td>
-<td>Allows for every aspect of the rendering mode to be controlled manually. For advanced usage only.</td>
+<td>允许手动控制呈现模式的每个方面。仅供高级使用。</td>
 <td></td>
 </tr>
 </tbody>
@@ -141,61 +140,66 @@
 <table>
 <thead>
 <tr>
-<th>Cull Mode</th>
+<th>剔除模式 Cull Mode</th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Off</td>
-<td>Disables face culling. Culling should only be set to Off when a two sided mesh is required.</td>
+<td>禁用面剔除。只有当需要双面网格时，才应该将剔除设置为Off。</td>
 </tr>
 <tr>
 <td>Front</td>
-<td>Enables front face culling.</td>
+<td>支持正面剔除</td>
 </tr>
 <tr>
 <td>Back</td>
-<td>(Default) Enables <a href="https://en.wikipedia.org/wiki/Back-face_culling">back face culling</a>. Back face culling should be enabled as often as possible to improve rendering performance.</td>
+<td>(默认)启用<a href="https://en.wikipedia.org/wiki/backface_culling">背面剔除</a>。为了提高渲染性能，应该尽可能多地启用背面剔除</td>
 </tr>
 </tbody>
 </table>
-<h2 id="performance">Performance</h2>
-<p>One of the primary advantages to using the MRTK Standard shader over the Unity standard shader is performance. The MRTK Standard Shader is extensible to only utilize the features enabled. However, the MRTK Standard shader has also been written to deliver comparable aesthetic results as the Unity Standard shader but at a much lower cost. One simple way to compare shader performance is via the number of operations that needs to be performed on the GPU. Of course, the magnitude of calculations may fluctuate by features enabled and other rendering configurations. But, in general, the MRTK Standard shader performs significantly less computation than the Unity Standard shader.</p>
-<p>Unity Standard shader statistics example</p>
+<h2 id="性能">性能</h2>
+<p>与Unity标准着色器相比，使用MRTK标准着色器的一个主要优点是性能。MRTK标准着色器是可扩展的，只利用启用的特性。然而，MRTK标准着色器也被编写为提供可与Unity标准着色器相媲美的美学效果，但成本要低得多。比较着色器性能的一个简单方法是通过需要在GPU上执行的操作数。当然，计算的大小可能会随着启用的特性和其他呈现配置的不同而变化。但是，一般来说，MRTK标准着色器执行的计算要比Unity标准着色器少得多。</p>
+<p>Unity 标准着色器统计示例</p>
 <p><img src="Images/Performance/UnityStandardShader-Stats.PNG" alt="Unity Standard Shader Statistics"></p>
-<p>MRTK Standard shader statistics example</p>
+<p>MRTK 标准着色器统计示例</p>
 <p><img src="Images/Performance/MRTKStandardShader-Stats.PNG" alt="MRTK Standard Shader Statistics"></p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>These results can be generated by selecting and viewing a <a href="https://docs.unity3d.com/Manual/class-Shader.html">shader asset</a> in the Unity inspector then clicking the <em>Compile and show code</em> button.</p>
+<p>这些结果可以通过在Unity inspector中选择并查看<a href="https://docs.unity3d.com/manual/shader.html">shader asset</a>生成，然后点击<em>Compile and show code</em>按钮。</p>
 </div>
-<h2 id="lighting">Lighting</h2>
-<p>The MRTK/Standard uses a simple approximation for lighting. Because this shader does not calculate for physical correctness and energy conservation, it renders quickly and efficient. Blinn-Phong is the primary lighting technique which is blended with Fresnel and image based lighting to approximate physically based lighting. The shader supports the following lighting techniques:</p>
-<h3 id="directional-light">Directional Light</h3>
-<p>The shader will respect the direction, color, and intensity of the first Unity Directional Light in the scene (if enabled). Dynamic point lights, spot lights, or any other Unity light will not be considered in real time lighting.</p>
-<h3 id="spherical-harmonics">Spherical Harmonics</h3>
-<p>The shader will use Light Probes to approximate lights in the scene using <a href="https://docs.unity3d.com/Manual/LightProbes-TechnicalInformation.html">Spherical Harmonics</a> if enabled. Spherical harmonics calculations are performed per vertex to reduce calculation cost.</p>
+<h2 id="光照">光照</h2>
+<p>MRTK/标准使用了一个简单的近似照明。因为这个着色器没有计算物理正确性和能量守恒，它渲染得又快又有效率。Blinn-Phong是一种主要的照明技术，它混合了Fresnel和基于图像的照明，以近似物理照明。着色器支持以下照明技术:</p>
+<h3 id="directional-light">Directional light</h3>
+<p>着色器将尊重场景中第一个Unity Directional Light的方向，颜色，和强度(如果启用)。 Dynamic point lights, spot lights，或任何其他Unity light将不考虑在实时照明。</p>
+<h3 id="spherical-harmonics">Spherical harmonics</h3>
+<p>如果启用，着色器将使用Light Probes来近似场景中的光，使用<a href="https://docs.unity3d.com/Manual/LightProbes-TechnicalInformation.html">Spherical Harmonics</a>。为了降低计算成本，对每个顶点进行Spherical harmonics计算。</p>
 <h3 id="lightmapping">Lightmapping</h3>
-<p>For static lighting the shader will respect lightmaps built by Unity's <a href="https://docs.unity3d.com/Manual/Lightmapping.html">Lightmapping system</a> simply mark the renderer as static (or lightmap static) to use lightmaps.</p>
-<h3 id="hover-light">Hover Light</h3>
-<p>A Hover Light is a Fluent Design System paradigm that mimics a &quot;point light&quot; hovering near the surface of an object. Often used for far away cursor lighting the application can control the properties of a Hover Light via the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.HoverLight.html"><code>HoverLight.cs</code></a>. Up to 3 Hover Lights are supported at a time.</p>
-<h3 id="proximity-light">Proximity Light</h3>
-<p>A Proximity Light is a Fluent Design System paradigm that mimics a &quot;gradient inverse point light&quot; hovering near the surface of an object. Often used for near cursor lighting the application can control the properties of a Proximity Light via the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.ProximityLight.html"><code>ProximityLight.cs</code></a>. Up to 2 Proximity Lights are supported at a time.</p>
-<h2 id="lightweight-scriptable-render-pipeline-support">Lightweight Scriptable Render Pipeline Support</h2>
-<p>The MRTK contains an upgrade path to allow developers to utilize Unity's Lightweight Scriptable Render Pipeline (LWRP) with MRTK shaders. Tested in Unity 2019.1.1f1 and Lightweight RP 5.7.2 package. or instructions on getting started with the LWRP please see <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.lightweight@5.10/manual/getting-started-with-lwrp.html">this page</a>.</p>
-<p>To perform the MRTK upgrade select: <strong>Mixed Reality Toolkit -&gt; Utilities -&gt; Upgrade MRTK Standard Shader for Lightweight Render Pipeline</strong></p>
+<p>对于静态照明，着色器将尊重Unity的<a href="https://docs.unity3d.com/Manual/Lightmapping.html">Lightmapping system</a>创建的lightmaps。只需将渲染器器标记为static(或lightmap static)就可以使用lightmaps。</p>
+<h3 id="hover-light">Hover light</h3>
+<ul>
+<li>参见 <a href="/Rendering/HoverLight.md">Hover Light</a></li>
+</ul>
+<h3 id="proximity-light">Proximity light</h3>
+<ul>
+<li>参见 <a href="/Rendering/ProximityLight.md">Proximity Light</a></li>
+</ul>
+<h2 id="lightweight-scriptable-render-pipeline-support">Lightweight Scriptable Render Pipeline support</h2>
+<p>轻量级脚本渲染管线支持</p>
+<p>MRTK包含一个升级路径，允许开发人员在MRTK着色器中使用Unity的轻量级可脚本渲染管线(LWRP)。在Unity 2019.1.1f1和Lightweight RP 5.7.2包中测试。或关于如何开始使用LWRP的说明，请参见<a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.lightweight@5.10/manual/getting-started-with-lwrp.html">此页</a>。</p>
+<p>要执行MRTK升级，选择: <strong>Mixed Reality Toolkit -&gt; Utilities -&gt; Upgrade MRTK Standard Shader for Lightweight Render Pipeline</strong></p>
 <p><img src="Images/MRTKStandardShader/MRTK_LWRPUpgrade.jpg" alt="lwrp upgrade"></p>
-<p>After the upgrade occurs the MRTK/Standard shader will be altered and any magenta (shader error) materials should be fixed. To verify the upgrade successfully occurred please check the console for: <strong>Upgraded Assets/MixedRealityToolkit/StandardAssets/Shaders/MixedRealityStandard.shader for use with the Lightweight Render Pipeline.</strong></p>
-<h2 id="ugui-support">UGUI Support</h2>
-<p>The MRTK Standard shading system works with Unity's built in <a href="https://docs.unity3d.com/Manual/UISystem.html">UI system</a>. On Unity UI components the unity_ObjectToWorld matrix is not the transformation matrix of the local transform the Graphic component lives on but that of its parent Canvas. Many MRTK/Standard shader effects require object scale to be known. To solve this issue the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect.html"><code>ScaleMeshEffect.cs</code></a> will store scaling information into UV channel attributes during UI mesh construction.</p>
-<p>Note, when using a Unity Image component it is recommended to specify &quot;None (Sprite)&quot; for the Source Image to prevent Unity UI from generating extra vertices.</p>
-<p>A Canvas within the MRTK will prompt for the addition of a <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect.html"><code>ScaleMeshEffect.cs</code></a> when one is required:</p>
+<p>升级发生后，MRTK/标准着色器将被改变，任何品红(着色器错误)材质应该被修复。要验证升级成功，请检查控制台:<strong>Upgraded Assets/MixedRealityToolkit/StandardAssets/Shaders/MixedRealityStandard.shader for use with the Lightweight Render Pipeline.</strong></p>
+<h2 id="ugui-支持">UGUI 支持</h2>
+<p>MRTK标准的着色系统与Unity的内置[UI系统]一起工作(<a href="https://docs.unity3d.com/Manual/UISystem.html">https://docs.unity3d.com/Manual/UISystem.html</a>)。在Unity UI组件上，unity_ObjectToWorld矩阵不是图形(Graphic)组件所在的本地转换的转换矩阵，而是它的父画布(Canvas)的转换矩阵。许多MRTK/标准的着色效果需要对象缩放才能知道。为了解决这个问题， <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect.html"><code>ScaleMeshEffect.cs</code></a>将在UI网格构建过程中将缩放信息存储到UV通道属性中。</p>
+<p>注意，当使用Unity图像(Image)组件时，建议为源图像指定 &quot;None (Sprite)&quot;，以防止Unity UI生成额外的顶点。</p>
+<p>MRTK中的画布将提示添加 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect.html"><code>ScaleMeshEffect.cs</code></a> ，当需要时:</p>
 <p><img src="Images/MRTKStandardShader/MRTK_ScaleMeshEffect.jpg" alt="scale mesh effect"></p>
-<h2 id="texture-combiner">Texture Combiner</h2>
-<p>To improve parity with the Unity Standard shader per pixel metallic, smoothness, emissive, and occlusion values can all be controlled via <a href="http://wiki.polycount.com/wiki/ChannelPacking">channel packing</a>. For example:</p>
+<h2 id="texture-combiner">Texture combiner</h2>
+<p>为了提高与Unity标准着色器的相等，每个像素的金属，平滑，放射和遮挡值都可以通过<a href="http://wiki.polycount.com/wiki/ChannelPacking">通道包装(channel packing)</a>来控制。例如:</p>
 <p><img src="Images/MRTKStandardShader/MRTK_ChannelMap.gif" alt="channel map example"></p>
-<p>When you use channel packing, you only have to sample and load one texture into memory instead of four separate ones. When you write your texture maps in a program like Substance or Photoshop, you can hand pack them like so:</p>
+<p>当你使用channel packing，你只需要采样和加载一个纹理到内存，而不是四个单独的。当你在Substance或Photoshop这样的程序中编写纹理贴图时，你可以像下面这样手工包装它们:</p>
 <table>
 <thead>
 <tr>
@@ -222,54 +226,57 @@
 </tr>
 </tbody>
 </table>
-<p>Or, you can use the MRTK Texture Combiner Tool. To open the tool select: <strong>Mixed Reality Toolkit -&gt; Utilities -&gt; Texture Combiner</strong> which will open the below window:</p>
+<p>或者，你可以使用MRTK纹理合并工具。要打开工具，选择: <strong>Mixed Reality Toolkit -&gt; Utilities -&gt; Texture Combiner</strong>，它将打开下面的窗口:</p>
 <p><img src="Images/MRTKStandardShader/MRTK_TextureCombiner.jpg" alt="texture combiner example"></p>
-<p>This windows can be automatically filled out by selecting a Unity Standard shader and clicking &quot;Autopopulate from Standard Material.&quot; Or, you can manually specify a texture (or constant value) per red, green, blue, or alpha channel. The texture combination is GPU accelerated and does not require the input texture to be CPU accessible.</p>
-<h2 id="additional-feature-documentation">Additional Feature Documentation</h2>
-<p>Below are extra details on a handful of features details available with the MRTK/Standard shader.</p>
-<h3 id="primitive-clipping">Primitive Clipping</h3>
-<p>Performant plane, sphere, and box shape clipping with the ability to specify which side of the primitive to clip against (inside or outside). You can find a scene that demonstrates advanced usage of clipping primitives in the  <strong>ClippingExamples</strong> scene under: <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/StandardShader/Scenes">MixedRealityToolkit.Examples/Demos/StandardShader/Scenes/</a></p>
+<p>这个窗口可以通过选择Unity标准着色器并点击&quot;Autopopulate from Standard Material.&quot;来自动填充。或者，您可以手动指定每个红色、绿色、蓝色或alpha通道的纹理(或常数值)。纹理组合是GPU加速的，不需要输入的纹理是CPU可访问的。</p>
+<h2 id="附加特性文档">附加特性文档</h2>
+<p>下面是MRTK/标准着色器提供的一些特性细节的额外细节。</p>
+<h3 id="primitive-clipping">Primitive clipping</h3>
 <p><img src="Images/MRTKStandardShader/MRTK_PrimitiveClipping.gif" alt="primitive clipping"></p>
-<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.ClippingPlane.html"><code>ClippingPlane.cs</code></a>, <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.ClippingSphere.html"><code>ClippingSphere.cs</code></a>, and <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.ClippingBox.html"><code>ClippingBox.cs</code></a> can be used to easily control clipping primitive properties.</p>
-<p><img src="Images/MRTKStandardShader/MRTK_PrimitiveClippingGizmos.gif" alt="primitive clipping gizmos"></p>
-<h3 id="mesh-outlines">Mesh Outlines</h3>
-<p>Many mesh outline techniques are done using a <a href="https://docs.unity3d.com/Manual/PostProcessingOverview.html">post processing</a> technique. Post processing provides great quality outlines, but can be prohibitively expensive on many Mixed Reality devices. You can find a scene that demonstrates usage of mesh outlines in the  <strong>OutlineExamples</strong> scene under: <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/StandardShader/Scenes">MixedRealityToolkit.Examples/Demos/StandardShader/Scenes/</a></p>
+<ul>
+<li>查看 <a href="/Rendering/ClippingPrimitive.md">Clipping Primitive</a></li>
+</ul>
+<h3 id="mesh-outlines">Mesh outlines</h3>
+<p>许多mesh outline技术是使用<a href="https://docs.unity3d.com/Manual/PostProcessingOverview.html">post processing</a>技术完成的。后期处理提供了高质量的轮廓，但在许多混合现实设备上可能非常昂贵。你可以在 <code>MRTK/Examples/Demos/StandardShader/Scenes/</code>下的<strong>OutlineExamples</strong>场景中找到一个演示mesh outline用法的场景。</p>
 <img src="Images/MRTKStandardShader/MRTK_MeshOutline.jpg" width="900">
-<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.MeshOutline.html"><code>MeshOutline.cs</code></a> and <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.MeshOutlineHierarchy.html"><code>MeshOutlineHierarchy.cs</code></a> can be used render an outline around a mesh renderer. Enabling this component introduces an additional render pass of the object being outlined, but is designed to run performantly on mobile Mixed Reality devices and does not utilize any post processes. Limitations of this effect include it not working well on objects which are not watertight (or required to be two sided) and depth sorting issues can occur on overlapping objects.</p>
-<p>The outline behaviors are designed to be used in conjunction with the MRTK/Standard shader. Outline materials are usually a solid unlit color, but can be configured to achieve a wide array of effects. The default configuration of a outline material is as follows:</p>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.MeshOutline.html"><code>MeshOutline.cs</code></a>和 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.MeshOutlineHierarchy.html"><code>MeshOutlineHierarchy.cs</code></a> 可以用来渲染一个网格渲染器(mesh renderer)周围的轮廓。启用此组件将引入一个正在概述的对象的附加渲染通道，但设计用于在移动混合现实设备上高效运行，并且不使用任何post进程。这种效果的局限性包括它不能很好地工作在非watertight的对象(或要求是双面的)和深度排序问题可能发生在重叠的对象上。</p>
+<p>outline behaviors被设计用来与MRTK/标准着色器一起使用。轮廓材质通常是纯色的，但也可以配置成各种各样的效果。轮廓材质的默认配置如下:</p>
 <img src="Images/MRTKStandardShader/MRTK_OutlineMaterial.jpg" width="450">
 <ol>
-<li>Depth Write - should be disabled for outline materials to make sure the outline does not prevent other objects from rendering.</li>
-<li>Vertex Extrusion - needs to be enabled to render the outline.</li>
-<li>Use Smooth Normals - this setting is optional for some meshes. Extrusion occurs by moving a vertex along a vertex normal, on some meshes extruding along the default normals will cause discontinuities in the outline. To fix these discontinuities you can check this box to use another set of smoothed normals which get generated by <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.html"><code>MeshSmoother.cs</code></a></li>
+<li>Depth Write - 应禁用outline材质，以确保outline不会阻止其他对象的绘制</li>
+<li>Vertex Extrusion - 需要启用render the outline</li>
+<li>Use Smooth Normals - 这个设置对于某些网格是可选的。Extrusion是通过沿着顶点法线移动一个顶点而发生的，在一些网格上沿着默认法线挤压会导致轮廓的不连续。要修复这些不连续性，可以选中此框以使用另一组由<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.html"><code>MeshSmoother.cs</code></a>生成的平滑法线(smoothed normals)</li>
 </ol>
-<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.html"><code>MeshSmoother.cs</code></a> is a component which can be used to automatically generate smoothed normals on a mesh. This method groups vertices in a mesh that share the same location in space then averages the normals of those vertices. This process creates a copy of the underlying mesh and should be used only when required.</p>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.html"><code>MeshSmoother.cs</code></a> 是一个组件，可以用来自动生成一个网格上的平滑法线。此方法将网格中共享空间中相同位置的顶点分组，然后对这些顶点的法线求平均值。此过程创建基础网格的副本，仅在需要时使用。</p>
 <img src="Images/MRTKStandardShader/MRTK_SmoothNormals.jpg" width="450">
 <ol>
-<li>Smooth normals generated via <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.html"><code>MeshSmoother.cs</code></a>.</li>
-<li>Default normals used, notice the artifacts around the cube corners.</li>
+<li>通过<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.html"><code>MeshSmoother.cs</code></a>生成的平滑法线。.</li>
+<li>使用默认法线时，请注意立方体角周围的部分.</li>
 </ol>
-<h3 id="stencil-testing">Stencil Testing</h3>
-<p>Built in configurable stencil test support to achieve a wide array of effects. Such as portals:</p>
+<h3 id="模版测试-stencil-testing">模版测试 Stencil testing</h3>
+<p>内建在可配置的模版测试支持，以实现广泛的影响数组。如入口:</p>
 <p><img src="Images/MRTKStandardShader/MRTK_StencilTest.gif" alt="stencil test"></p>
-<h3 id="instanced-color-support">Instanced Color Support</h3>
-<p>Instanced color support to give thousands of GPU instanced meshes unique material properties:</p>
+<h3 id="实例颜色支持-instanced-color-support">实例颜色支持 Instanced color support</h3>
+<p>实例颜色支持给数以千计的GPU实例网格独特的材质属性:</p>
 <p><img src="Images/MRTKStandardShader/MRTK_InstancedProperties.gif" alt="instanced properties"></p>
-<h3 id="triplanar-mapping">Triplanar Mapping</h3>
-<p>Triplanar mapping is a technique to programmatically texture a mesh. Often used in terrain, meshes without UVs, or difficult to unwrap shapes. This implementation supports world or local space projection, the specification of blending smoothness, and normal map support. Note, each texture used requires 3 texture samples, so please use sparingly in performance critical situations.</p>
+<h3 id="三平面映射-triplanar-mapping">三平面映射 Triplanar mapping</h3>
+<p>三平面映射(Triplanar mapping)是一种以编程方式对网格进行纹理处理的技术。常用于地形，网格无uv，或难以展开的形状。这个实现支持世界或局部空间投影，混合平滑的规范，和法线贴图支持。注意，每个使用的纹理需要3个纹理样本，所以在性能关键的情况下要谨慎使用。</p>
 <p><img src="Images/MRTKStandardShader/MRTK_TriplanarMapping.gif" alt="triplanar"></p>
-<h3 id="vertex-extrusion">Vertex Extrusion</h3>
-<p>Vertex extrusion in world space. Useful for visualizing extruded bounding volumes or transitions in/out meshes.</p>
+<h3 id="顶点挤压-vertex-extrusion">顶点挤压 Vertex extrusion</h3>
+<p>Vertex extrusion在世界空间。用于可视化挤压边界体积或网格内/外的过渡。</p>
 <p><img src="Images/MRTKStandardShader/MRTK_VertexExtrusion.gif" alt="normal map scale"></p>
-<h3 id="miscellaneous">Miscellaneous</h3>
-<p>A checkbox to control albedo optimizations. As an optimization albedo operations are disabled when no albedo texture is specified. This is useful for controlling <a href="http://dotnetbyexample.blogspot.com/2018/10/workaround-remote-texture-loading-does.html">remote texture loading</a>.</p>
-<p>Simply check this box:</p>
+<h3 id="杂项-miscellaneous">杂项 Miscellaneous</h3>
+<p>用于控制反照率(albedo)优化的复选框。当没有指定反照率纹理时，将禁用优化反照率操作。这对于控制<a href="http://dotnetbyexample.blogspot.com/2018/10/workaround-remote-texture-loading-does.html">远程纹理加载</a>非常有用。</p>
+<p>只需勾选此框:</p>
 <p><img src="Images/MRTKStandardShader/MRTK_AlbedoAssignment.jpg" alt="albedo assignment"></p>
-<p>Per pixel clipping textures, local edge based anti aliasing, and normal map scaling are supported.</p>
+<p>支持每个像素的裁剪纹理，基于局部边缘的抗锯齿和法线贴图缩放。</p>
 <p><img src="Images/MRTKStandardShader/MRTK_NormalMapScale.gif" alt="normal map scale"></p>
-<h2 id="see-also">See also</h2>
+<h2 id="建议浏览">建议浏览</h2>
 <ul>
 <li><a href="README_Interactable.html">Interactable</a></li>
+<li><a href="/Rendering/HoverLight.md">Hover Light</a></li>
+<li><a href="/Rendering/ProximityLight.md">Proximity Light</a></li>
+<li><a href="/Rendering/ClippingPrimitive.md">Clipping Primitive</a></li>
 </ul>
 </article>
           </div>

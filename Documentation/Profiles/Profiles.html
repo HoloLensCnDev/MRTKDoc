@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Profiles | Mixed Reality Toolkit Documentation </title>
+    <title>&#37197;&#32622;&#25991;&#20214; Profiles | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Profiles | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#37197;&#32622;&#25991;&#20214; Profiles | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,44 +80,44 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="profiles">Profiles</h1>
+<h1 id="配置文件-profiles">配置文件 Profiles</h1>
 
-<p>One of the main ways that the MRTK is configured is through the many profiles available in the foundation package. The main <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityToolkit.html"><code>MixedRealityToolkit</code></a> object in a scene will have the active profile, which is essentially a ScriptableObject. The top level MRTK Configuration Profile contains sub-profile data for each core of the primary core systems, each of which are designed to configure the behavior of their corresponding sub-systems. Furthermore, these sub-profiles are also Scriptable Objects and thus can contain references to other profile objects one level below them. There is essentially an entire tree of connected profiles that make up the configuration information for how to initialize the MRTK sub-systems and features.</p>
-<p>For example, the Input system's behavior is governed by an <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Profiles/DefaultMixedRealityInputSystemProfile.asset">input system profile object</a>. It's highly recommended to always modify the profile ScriptableObject assets via the in-editor inspector.</p>
+<p>配置MRTK的主要方法之一是通过foundation包中提供的许多配置文件。场景中的主要<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityToolkit.html"><code>MixedRealityToolkit</code></a>对象将具有活动配置文件(active profile)，该配置文件本质上是一个可编写脚本的对象。顶层的MRTK配置文件包含主要核心系统的每个核心的子配置文件数据，每个核心系统的设计目的是配置其相应子系统的行为。此外，这些子配置文件也是可编写脚本的对象，因此可以包含对位于它们之下一层的其他配置文件对象的引用。从本质上说，有一个完整的连接概要树，它组成了如何初始化MRTK子系统和特性的配置信息。</p>
+<p>For example, the Input system's behavior is governed by an input system profile, for example the <code>DefaultMixedRealityInputSystemProfile</code> (Assets/MRTK/SDK/Profiles). It's highly recommended to always modify the profile ScriptableObject assets via the in-editor inspector.</p>
+<p>例如，input system的行为由一个input system配置文件控制，例如' <code>DefaultMixedRealityInputSystemProfile</code> (Assets/MRTK/SDK/Profiles)。强烈建议始终通过in-editor inspector修改配置文件ScriptableObject资源。</p>
 <p><img src="../Images/Profiles/input_profile.png" width="650px" style="display:block;"><br>
-<sup>Profile Inspector</sup></p>
+<sup>配置文件 Inspector</sup></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>While it is intended that profiles can be swapped out at runtime, this <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/issues/4289">currently does not work</a></p>
 </div>
-<h2 id="default-profile">Default Profile</h2>
-<p>The MRTK provides a set of default profiles which cover most platforms and scenarios that the MRTK supports. For example, when you select the <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Profiles/DefaultMixedRealityToolkitConfigurationProfile.asset">DefaultMixedRealityToolkitConfigurationProfile</a> you will be able to try out scenarios on VR (OpenVR, WMR) and HoloLens (1 and 2).</p>
-<p>Note that because this is a general use profile, it's not optimized for any particular use case. If you want to have
-more performant/specific settings that are better on other platforms, see the other profiles below, which are slightly tweaked to be better on their respective platforms.</p>
-<h2 id="hololens-2-profile">HoloLens 2 Profile</h2>
-<p>The MRTK also provides a default profile that is optimized for deployment and testing on
-the HoloLens 2: <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Profiles/HoloLens2/DefaultHoloLens2ConfigurationProfile.asset">DefaultHoloLens2ConfigurationProfile</a>.</p>
-<p>When prompted to choose a profile for the MixedRealityToolkit object, use this profile instead
-of the default selected profile.</p>
-<p>The key differences between the HoloLens2 profile and the Default Profile are:</p>
-<p><strong>Disabled</strong> Features:</p>
+<h2 id="默认配置文件-default-profile">默认配置文件 Default profile</h2>
+<p>MRTK提供了一组默认配置文件，涵盖了MRTK支持的大多数平台和场景。例如，当你选择<code>DefaultMixedRealityToolkitConfigurationProfile</code> (Assets/MRTK/SDK/Profiles) 时，你将能够在VR (OpenVR, WMR)和HoloLens (1和2)上尝试场景。</p>
+<p>注意，因为这是一个通用的使用配置文件，所以它没有针对任何特定的用例进行优化。如果你想要在其他平台上更好的性能/特定设置，请看下面的其他配置文件，它们在各自的平台上做了一些微调。</p>
+<h2 id="hololens-2-配置文件">HoloLens 2 配置文件</h2>
+<p>MRTK还提供了一个为HoloLens2上部署和测试优化的默认配置文件
+: <code>DefaultHoloLens2ConfigurationProfile</code> (Assets/MRTK/SDK/Profiles/HoloLens2)。</p>
+<p>当提示为MixedRealityToolkit对象选择配置文件时，使用此配置文件而不是默认选择的配置文件。</p>
+<p>HoloLens2配置文件和默认配置文件之间的主要区别是:</p>
+<p><strong>禁用的</strong> 特性:</p>
 <ul>
 <li><a href="../Boundary/BoundarySystemGettingStarted.html">Boundary System</a></li>
 <li><a href="../TeleportSystem/Overview.html">Teleport System</a></li>
 <li><a href="../SpatialAwareness/SpatialAwarenessGettingStarted.html">Spatial Awareness System</a></li>
 <li><a href="../Input/HandTracking.html">Hand mesh visualization</a> (due to performance overhead)</li>
 </ul>
-<p><strong>Enabled</strong> Systems:</p>
+<p><strong>启用的</strong> 系统:</p>
 <ul>
 <li>The <a href="../EyeTracking/EyeTracking_Main.html">Eye Tracking provider</a></li>
 <li>Eye input simulation</li>
 </ul>
-<p>Camera profile settings are set to match so that the editor quality and player quality are the same. This is different from the default camera profile where Opaque displays are set to a higher quality. This change means that in-editor quality will be lower, which will more closely match what will be rendered on the device.</p>
+<p>相机配置文件设置(Camera profile settings)被设置为匹配，这样编辑器质量和播放器质量是相同的。这不同于默认的相机配置文件，默认配置文件中不透明的显示设置为更高的质量。</p>
+<p>这一变化意味着编辑器内的质量将会降低，这将更接近于在设备上呈现的内容。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The Spatial Awareness system is turned off by default based on client feedback - it is an interesting visualization to see
-initially but is typically turned off to avoid the visual distraction and the additional performance hit of
-having it on. The system can be re-enabled by following the <a href="../SpatialAwareness/SpatialAwarenessGettingStarted.html">instructions here</a>.</p>
+<p>根据客户的反馈，空间感知系统在默认情况下是关闭的——这是一个有趣的可视化界面
+但通常是关闭的，以避免启用后的视觉干扰和额外的性能打击
+. 系统可以通过以下方法重新启用 <a href="../SpatialAwareness/SpatialAwarenessGettingStarted.html">此处为指导</a>.</p>
 </div>
 </article>
           </div>
