@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Configuring Mesh Observers for Device | Mixed Reality Toolkit Documentation </title>
+    <title>&#20026;&#35774;&#22791;&#37197;&#32622; mesh observers | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Configuring Mesh Observers for Device | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#20026;&#35774;&#22791;&#37197;&#32622; mesh observers | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,98 +80,100 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="configuring-mesh-observers-for-device">Configuring Mesh Observers for Device</h1>
+<h1 id="为设备配置-mesh-observers">为设备配置 mesh observers</h1>
 
-<p>This guide will walk through configuring the out-of-box Spatial Mesh Observer in MRTK which supports the Windows Mixed Reality platform (i.e HoloLens). The default implementation provided by the Mixed Reality Toolkit is the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.WindowsMixedReality.SpatialAwareness.WindowsMixedRealitySpatialMeshObserver.html">WindowsMixedRealitySpatialMeshObserver</a> class. Many of the properties in this article though apply for other <a href="CreateDataProvider.html">custom Observer implementations</a>.</p>
-<h2 id="profile-settings">Profile Settings</h2>
-<p>The following two items must be defined first when configuring a Spatial Mesh Observer profile for the <a href="SpatialAwarenessGettingStarted.html">Spatial Awareness system</a>.</p>
+<p>本指南将介绍如何在MRTK中配置开箱即用的空间网格Observer，该Observer支持Windows混合现实平台(例如 HoloLens)。混合现实工具包供的默认实现是<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.WindowsMixedReality.SpatialAwareness.WindowsMixedRealitySpatialMeshObserver.html">WindowsMixedRealitySpatialMeshObserver</a>类。不过，本文中的许多属性也适用于其他<a href="CreateDataProvider.html">自定义Observer实现</a>。</p>
+<h2 id="配置文件设置">配置文件设置</h2>
+<p>在为<a href="SpatialAwarenessGettingStarted.html">空间感知系统</a>配置空间网格Observer配置文件时，必须首先定义以下两项。</p>
 <ol>
-<li>The concrete observer type implementation</li>
-<li>list of supported platform(s) to run this observer</li>
+<li>具体的Observer类型实现</li>
+<li>运行此Observer的受支持平台的列表</li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
-<p>All observers must extend the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObserver.html">IMixedRealitySpatialAwarenessObserver</a> interface.</p>
+<p>所有的Observer必须扩展<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObserver.html">IMixedRealitySpatialAwarenessObserver</a> 接口.</p>
 </div>
 <p><img src="../Images/SpatialAwareness/SpatialAwarenessMeshObserverProfile_TypesPlatforms.png" alt="Mesh Observer General Settings"></p>
-<h3 id="general-settings">General Settings</h3>
+<h3 id="通用设置">通用设置</h3>
 <p><img src="../Images/SpatialAwareness/MeshObserverGeneralSettings.png" alt="Mesh Observer General Settings"></p>
 <p><strong>Startup Behavior</strong></p>
-<p>The startup behavior specifies whether the observer will begin running when first instantiated. The two options are:</p>
+<p>启动行为(startup behavior)指定Observer是否会在第一次实例化时开始运行。两种选择是:</p>
 <ul>
-<li><em>Auto Start</em> - The default value whereby the observer will begin operation after initialization</li>
-<li><em>Manual Start</em> - The Observer will wait to be directed to start</li>
+<li><em>Auto Start</em> - 初始化后Observer开始执行的默认值</li>
+<li><em>Manual Start</em> - Observer将等待被指示启动</li>
 </ul>
-<p>If using <em>Manual Start</em>, one must <a href="UsageGuide.html#starting-and-stopping-mesh-observation">resume and suspend them at runtime via code</a>.</p>
+<p>如果使用 <em>Manual Start</em>, 则必须<a href="UsageGuide.html#starting-and-stopping-mesh-observation">通过代码在运行时恢复和挂起它们</a>.</p>
 <p><strong>Update Interval</strong></p>
-<p>The time, in seconds, between requests to the platform to update spatial mesh data. Typical values fall in the range of 0.1 and 5.0 seconds.</p>
+<p>请求平台更新空间网格数据之间的时间(以秒为单位)。典型值在0.1和5.0秒之间。</p>
 <p><strong>Is Stationary Observer</strong></p>
-<p>Indicates whether or not the observer is to remain stationary or to move and update with the user. If true, the <em>Observer Shape</em> with volume defined by <em>Observation Extents</em> will remain at the origin on startup. If false, the Observer space will follow the user's head as the shape's origin.</p>
-<p>There will be no mesh data calculated for any physical area outside of the Observer space as defined by these properties: <em>Is Stationary Observer</em>, <em>Observer Shape</em>*, and <em>Observation Extents</em>.</p>
+<p>指示Observer是保持静止还是随用户移动和更新。如果为true，则<em>Observation Extents**定义的</em>Observer Shape*在启动时将保持在原点。如果为false，Observer空间将跟随用户的头部作为形状的原点。</p>
+<p>根据以下属性定义的Observer空间外的任何物理区域，都不会有网格数据计算:<em>Is Stationary Observer</em>, <em>Observer Shape</em>，和 <em>Observation Extents</em>。</p>
 <p><strong>Observer Shape</strong></p>
-<p>The observer shape defines the type of volume that the mesh observer will use when observing meshes. The supported options are:</p>
+<p>observer shape 定义了mesh  Observer在观察网格时会使用的体积类型。支持的选项有:</p>
 <ul>
-<li><em>Axis Aligned Cube</em> - Rectangular shape that stays aligned with the axes of the world coordinate system, as determined at application startup.</li>
-<li><em>User Aligned Cube</em> - Rectangular shape that rotates to align with the users local coordinate system.</li>
+<li><em>Axis Aligned Cube</em> - 与世界坐标系的轴保持对齐的矩形，在应用程序启动时确定</li>
+<li><em>User Aligned Cube</em> - 旋转以与用户本地坐标系统对齐的矩形形状。</li>
 <li><em>Sphere</em> - A spherical volume with a center at the world space origin. The X value of the <em>Observation Extents</em> property will be used as the radius of the sphere.</li>
 </ul>
 <p><strong>Observation Extents</strong></p>
-<p>The observation extents define the distance from the observation point that meshes will be observed.</p>
-<h3 id="physics-settings">Physics Settings</h3>
+<p>观测范围(observation extents )定义了从观测点到可以被观测到网格的距离。</p>
+<h3 id="physics-settings">Physics settings</h3>
 <p><img src="../Images/SpatialAwareness/MeshObserverPhysicsSettings.png" alt="Mesh Observer Physics Settings"></p>
 <p><strong>Physics Layer</strong></p>
-<p>The physics layer on which spatial mesh objects will be placed in order to interact with the Unity Physics and RayCast systems.</p>
+<p>空间网格对象将被放置在物理层(physics layer)上，以便与Unity物理和RayCast系统进行交互。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The Mixed Reality Toolkit reserves <em>layer 31</em> by default for use by Spatial Awareness observers.</p>
+<p>混合现实工具包默认保留<em>layer 31</em>供空间感知observers使用</p>
 </div>
 <p><strong>Recalculate Normals</strong></p>
 <p>Specifies whether or not the mesh observer will recalculate the normals of the mesh following observation. This setting is available to ensure applications receive meshes that contain valid normals data on platforms that do not return them with meshes.</p>
-<h3 id="level-of-detail-settings">Level of Detail Settings</h3>
+<p>指定网格Observer在观察后是否重新计算网格的法线。此设置可用于确保应用程序接收平台上包含有效法线数据的网格，这些平台可能不返回具有法线的网格。</p>
+<h3 id="level-of-detail-settings">Level of detail settings</h3>
 <p><img src="../Images/SpatialAwareness/MeshObserverLevelOfDetailSettings.png" alt="Mesh Observer Level of Detail Settings"></p>
 <p><strong>Level of Detail</strong></p>
-<p>Specifies the level of detail (LOD) of the spatial mesh data. Currently defined values are Coarse, Fine and Custom.</p>
+<p>指定空间网格数据的多层次细节(LOD)。当前定义的值有粗、细和自定义。</p>
 <ul>
-<li><p><em>Coarse</em> - Places a smaller impact on application performance and is an excellent choice for navigation/plane finding.</p>
+<li><p><em>Coarse</em> - 对应用程序性能的影响较小，是导航/平面查找的最佳选择。</p>
 </li>
-<li><p><em>Medium</em> - Balanced setting often useful for experiences that continually scan the environment for both large features, floors and walls, as well as occlusion details.</p>
+<li><p><em>Medium</em> - 平衡设置，通常有用的体验，不断扫描环境的大特征，地板和墙壁，以及遮挡的细节。</p>
 </li>
-<li><p><em>Fine</em> - Generally exacts a higher impact on application performance and is a great option for occlusion meshes.</p>
+<li><p><em>Fine</em> - 通常对应用程序性能有更高的影响，对于遮挡的网格是一个很好的选择。</p>
 </li>
-<li><p><em>Custom</em> - Requires the application to specify the <em>Triangles / Cubic Meter</em> property and allows applications to tune the accuracy vs. performance impact of the spatial mesh observer.</p>
+<li><p><em>Custom</em> - 要求应用程序指定<em>Triangles / Cubic Meter</em>（每立方米三角形数）属性，并允许应用程序调整空间网格Observer的精度和性能影响。</p>
 </li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>It is not guaranteed that all <em>Triangles/Cubic Meter</em> values are honored by all platforms. Experimentation and profiling is highly recommended when using a custom LOD.</p>
+<p>不能保证所有的<em>Triangles/Cubic Meter</em>值都能被所有的平台使用。在使用自定义LOD时，强烈建议进行试验和分析。</p>
 </div>
 <p><strong>Triangles per Cubic Meter</strong></p>
-<p>Valid when using the <em>Custom</em> setting for the <strong>Level of Detail</strong> property and specifies the triangle density for the spatial mesh.</p>
-<h3 id="display-settings">Display Settings</h3>
+<p>在使用<strong>Level of Detail</strong> 属性的 <em>Custom</em> 设置时有效，并指定空间网格的三角形密度。</p>
+<h3 id="显示选项">显示选项</h3>
 <p><img src="../Images/SpatialAwareness/MeshObserverDisplaySettings.png" alt="Mesh Observer Display Settings"></p>
 <p><strong>Display Option</strong></p>
-<p>Specifies how spatial meshes are to be displayed by the observer. Supported values are:</p>
+<p>指定Observer将如何显示空间网格。支持的值是:</p>
 <ul>
-<li><em>None</em> - Observer will not render the mesh</li>
-<li><em>Visisble</em> - Mesh data will be visible using the <em>Visible Material</em></li>
-<li><em>Occlusion</em> - Mesh data will be occlude items in scene using teh <em>Occlusion Material</em></li>
+<li><em>None</em> - Observer不会渲染网格</li>
+<li><em>Visible</em> - 网格数据将使用 <em>Visible Material</em> 呈现</li>
+<li><em>Occlusion</em> - 网格数据将使用<em>Occlusion Material</em>在场景中进行遮挡</li>
 </ul>
-<p>Spatial Observers can be <a href="UsageGuide.html#starting-and-stopping-mesh-observation">resumed/suspended at runtime via code.</a></p>
+<p><img src="../Images/SpatialAwareness/MRTK_SpatialAwareness_DisplayOptions.jpg" alt="Select the Spatial Awareness System Implementation"></p>
+<p>空间Observer可以<a href="UsageGuide.html#starting-and-stopping-mesh-observation">通过代码在运行时恢复/挂起</a></p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Setting <em>Display Option</em> to <em>None</em> does <strong>NOT</strong> stop the observer from running. If you wish to stop all observers, applications will need to suspend all observers via <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessSystem.html#Microsoft_MixedReality_Toolkit_SpatialAwareness_IMixedRealitySpatialAwarenessSystem_SuspendObservers"><code>CoreServices.SpatialAwareness.SuspendObservers()</code></a></p>
+<p>设置<em>Display Option</em>为<em>None</em> <strong>不会</strong> 停止Observer的运行。如果你想要停止所有的Observer，应用程序需要通过 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessSystem.html#Microsoft_MixedReality_Toolkit_SpatialAwareness_IMixedRealitySpatialAwarenessSystem_SuspendObservers"><code>CoreServices.SpatialAwareness.SuspendObservers()</code></a>来挂起所有的Observer。</p>
 </div>
 <p><strong>Visible Material</strong></p>
-<p>Indicates the material to be used when visualizing the spatial mesh.</p>
+<p>表示在可视化空间网格时要使用的材质。</p>
 <p><strong>Occlusion Material</strong></p>
-<p>Indicates the material to be used to cause the spatial mesh to occlude holograms.</p>
-<h2 id="see-also">See Also</h2>
+<p>指示用于遮挡全息图的空间网格的材质。</p>
+<h2 id="建议浏览">建议浏览</h2>
 <ul>
-<li><a href="SpatialAwarenessGettingStarted.html">Spatial Awareness System</a></li>
-<li><a href="UsageGuide.html">Configuring Spatial Awareness system via Code</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObserver.html">IMixedRealitySpatialAwarenessObserver API documentation</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessMeshObserver.html">IMixedRealitySpatialAwarenessMeshObserver API documentation</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialObserver.html">BaseSpatialObserver API documentation</a></li>
+<li><a href="SpatialAwarenessGettingStarted.html">空间感知系统</a></li>
+<li><a href="UsageGuide.html">使用代码配置空间感知系统</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObserver.html">IMixedRealitySpatialAwarenessObserver API 文档</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessMeshObserver.html">IMixedRealitySpatialAwarenessMeshObserver API 文档</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialObserver.html">BaseSpatialObserver API 文档</a></li>
 </ul>
 </article>
           </div>

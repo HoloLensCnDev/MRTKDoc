@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>What are the MixedRealityServiceRegistry and IMixedRealityServiceRegistrar? | Mixed Reality Toolkit Documentation </title>
+    <title>&#20160;&#20040;&#26159; MixedRealityServiceRegistry &#21644; IMixedRealityServiceRegistrar? | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="What are the MixedRealityServiceRegistry and IMixedRealityServiceRegistrar? | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#20160;&#20040;&#26159; MixedRealityServiceRegistry &#21644; IMixedRealityServiceRegistrar? | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,38 +80,31 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="what-are-the-mixedrealityserviceregistry-and-imixedrealityserviceregistrar">What are the MixedRealityServiceRegistry and IMixedRealityServiceRegistrar?</h1>
+<h1 id="什么是-mixedrealityserviceregistry-和-imixedrealityserviceregistrar">什么是 MixedRealityServiceRegistry 和 IMixedRealityServiceRegistrar?</h1>
 
-<p>The Mixed Reality Toolkit has two very similarly named components that perform related tasks:
-MixedRealityServiceRegistry and IMixedRealityServiceRegistrar.</p>
+<p>混合现实工具包有两个名称非常相似的组件，它们执行相关的任务:</p>
 <h2 id="mixedrealityserviceregistry">MixedRealityServiceRegistry</h2>
-<p>The <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.html">MixedRealityServiceRegistry</a> is
-the component that contains instances of each registered service (core systems and extension services).</p>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.html">MixedRealityServiceRegistry</a>是包含每个已注册服务(核心系统和扩展服务)实例的组件。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The MixedRealityServiceRegistry contains instances of objects that
-implement <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a> interface, including <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityExtensionService.html">IMixedRealityExtensionService</a>.</p>
-<p>Objects implementing the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider.html">IMixedRealityDataProvider</a> (a subclass of IMixedRealityService) are explicitly not registered in the MixedRealityServiceRegistry. These objects are managed by the individual services (ex: Spatial Awareness).</p>
+<p>MixedRealityServiceRegistry包含对象的实例
+实现了<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a> 接口，包括<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityExtensionService.html">IMixedRealityExtensionService</a>。</p>
+<p>实现 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider.html">IMixedRealityDataProvider</a>(是IMixedRealityService的一个子类)的对象明确的地没有在MixedRealityServiceRegistry中注册。这些对象由各个服务管理(例如:空间感知)。</p>
 </div>
-<p>The MixedRealityServiceRegistry is implemented as a static C# class and is the recommended pattern to
-use to acquire service instances in application code.</p>
-<p>The following snippet demonstrates acquiring an IMixedRealityInputSystem instance.</p>
+<p>MixedRealityServiceRegistry是作为一个静态c#类实现的，它是推荐使用的模式用于在应用程序代码中获取服务实例(service instances)。</p>
+<p>下面的代码片段演示如何获取一个IMixedRealityInputSystem实例。</p>
 <pre><code class="lang-c#">IMixedRealityInputSystem inputSystem = null;
 
 if (!MixedRealityServiceRegistry.TryGetService&lt;IMixedRealityInputSystem&gt;(out inputSystem))
 {
-    // Failed to acquire the input system. It may not have been registered
+    //获取input system失败。它可能没有注册
 }
 </code></pre>
 <h2 id="imixedrealityserviceregistrar">IMixedRealityServiceRegistrar</h2>
-<p>The <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a>
-is the interface that defines the functionality implemented by components that manage the registration
-of one or more services. Components that implement IMixedRealityServiceRegistrar are responsible for
-adding and removing the data within the MixedRealityServiceRegistry. The <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityToolkit.html">MixedRealityToolkit</a>
-object is one such component.</p>
-<p>Other registrars can be found in the MixedRealityToolkit.SDK.Experimental.Features
-folder. These components can be used to add single service (ex: Spatial Awareness) support
-to an application. These single service managers are listed below.</p>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a>是定义由管理一个或多个服务的注册的组件实现的功能的接口。
+实现IMixedRealityServiceRegistrar的组件负责在MixedRealityServiceRegistry中添加和删除数据。<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityToolkit.html">MixedRealityToolkit</a>
+对象就是这样一个组件。</p>
+<p>其他registrars可以在MRTK/SDK/Experimental/Features文件夹中找到。这些组件可用于向应用程序添加单个服务(例如:空间感知)支持。下面列出了这些单个service manager。</p>
 <ul>
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Experimental.Boundary.BoundarySystemManager.html">BoundarySystemManager</a></li>
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Experimental.CameraSystem.CameraSystemManager.html">CameraSystemManager</a></li>
@@ -120,17 +113,13 @@ to an application. These single service managers are listed below.</p>
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Experimental.SpatialAwareness.SpatialAwarenessSystemManager.html">SpatialAwarenessSystemManager</a></li>
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Experimental.Teleport.TeleportSystemManager.html">TeleportSystemManager</a></li>
 </ul>
-<p>Each of the above components, with the exception of the InputSystemManager, are responsible for
-managing the registration and status of a single service type. The InputSystem requires some additional
-support services (ex: FocusProvider) that are also managed by the InputSystemManager.</p>
-<p>In general, the methods defined by IMixedRealityServiceRegistrar are called internally by service
-management components or called by services that require additional service components to function
-correctly. Application code should, generally, not call these methods as doing so may cause the application
-to behave unpredictably (ex: a cached service instance may become invalid).</p>
-<h2 id="see-also">See also</h2>
+<p>除了InputSystemManager之外，上面的每个组件都负责
+管理单一服务类型的注册和状态。InputSystem需要一些额外的支持服务(例如:FocusProvider)，这些服务也是由InputSystemManager管理的。</p>
+<p>通常，由IMixedRealityServiceRegistrar定义的方法由service management 组件在内部调用，或者由需要额外服务组件才能正确工作的服务调用。应用程序代码通常不应该调用这些方法，因为这样做可能会导致应用程序的行为不可预测(例如:缓存的服务实例可能无效)。</p>
+<h2 id="建议浏览">建议浏览</h2>
 <ul>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar API documentation</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.html">MixedRealityServiceRegistry API documentation</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar API 文档</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.html">MixedRealityServiceRegistry API 文档</a></li>
 </ul>
 </article>
           </div>

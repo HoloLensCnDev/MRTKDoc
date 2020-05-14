@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>What makes a mixed reality feature | Mixed Reality Toolkit Documentation </title>
+    <title>&#20160;&#20040;&#26159;&#28151;&#21512;&#29616;&#23454;&#29305;&#24615; | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="What makes a mixed reality feature | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#20160;&#20040;&#26159;&#28151;&#21512;&#29616;&#23454;&#29305;&#24615; | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
@@ -80,31 +80,35 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="what-makes-a-mixed-reality-feature">What makes a mixed reality feature</h1>
+<h1 id="什么是混合现实特性">什么是混合现实特性</h1>
 
-<p>To avoid the performance overheads of the <code>MonoBehaviour</code> class, all <em>services</em> (systems, features, or modules that require independent operation in a mixed reality solution, e.g. input, boundary, spatial awareness) are required to be discrete plain old c# classes which implement <code>IMixedRealityService</code> and to register with the <code>MixedRealityToolkit</code>.</p>
-<p>The <code>MixedRealityToolkit</code> then coordinates all referencing between services and ensures that they receive all appropriate events (E.g. Awake/Initialize, Update, Destroy) as well as facilitating the finding of other services when needed.</p>
-<p>Additionally, the <code>MixedRealityToolkit</code> also maintains the active VR/XR/AR SDK in use in the running project, to initialize the active device based on attached hardware and instigate proper operation.</p>
-<h2 id="a-service">A service</h2>
-<p>An individual service can be any functionality that needs to be implemented in the project. Traditionally some projects use <em>singletons</em> which need to be alive in the scene, but this pattern has its advantages and disadvantages. We've decided to break away from this pattern in favor of a hybrid approach that brings several benefits over the traditional singleton implementations with <code>MonoBehaviours</code>, namely:</p>
+<p>为了避免<code>MonoBehaviour</code>类的性能开销,所有<em>services</em>(系统、功能或模块,要求独立操作在混合现实的解决方案,例如输入、边界,空间感知)需要离散普通c#类,实现<code>IMixedRealityService</code>和使用<code>MixedRealityToolkit</code>注册。</p>
+<p>然后，<code>MixedRealityToolkit</code> 协调服务之间的所有引用，并确保它们接收所有适当的事件(例如，唤醒/初始化、更新、销毁)，以及在需要时方便地查找其他服务。</p>
+<p>此外，<code>MixedRealityToolkit</code> 还维护了在运行项目中使用的active VR/XR/AR SDK，用于根据所附加的硬件初始化活动设备并引导正确的操作。</p>
+<h2 id="一个服务">一个服务</h2>
+<p>单个服务可以是项目中需要实现的任何功能。传统上，一些项目使用需要在场景中活动的<em>singletons</em>，但是这种模式有其优点和缺点。我们决定打破这种模式，采用一种混合的方法，它比传统的单例<code>MonoBehaviours</code>实现带来了一些好处，即:</p>
 <ul>
-<li>Performance - without the overhead of a <code>MonoBehaviour</code>, <a href="https://blogs.unity3d.com/2015/12/23/1k-update-calls/">script updates are approximately 80% faster and don't require a <code>GameObject</code> to live in the scene</a>.</li>
-<li>Reference-ability - services can be discovered from the <code>MixedRealityToolkit</code> a lot faster and easier than searching <code>GameObjects</code> in a scene or using <code>FindObjectsOfType&lt;T&gt;</code>.</li>
-<li>No type dependency - though a method similar to dependency injection, services can be decoupled from their type, this means the concrete implementation can be swapped out at any time without adversely affecting code that consumes it (e.g. replacing the default InputSystem with your custom one, so long as you've fully implemented each interface).</li>
-<li>Multi-scene usage - if a service does need to know about a <code>transform</code> position in a scene, it can simply reference, or create, a <code>GameObject</code> <em>rather than be a component attached to it</em>. This makes it a lot easier to find and use the service when the project spans multiple scenes.</li>
+<li><p>性能 - 性能-没有<code>MonoBehaviour</code>的开销，<a href="https://blogs.unity3d.com/2015/12/23/1k-update-calls/">脚本更新大约快80%，并且不需要<code>GameObject</code>在场景中存在</a>.</p>
+</li>
+<li><p>可引用性 - 从<code>MixedRealityToolkit</code>中可以发现服务，比在场景中搜索<code>GameObjects</code>或使用<code>FindObjectsOfType&lt;T&gt;</code>要快得多，也容易得多.</p>
+</li>
+<li><p>任何类型的依赖 - 尽管方法类似于依赖注入,服务可以脱离他们的类型,这意味着可以随时换出具体实现代码使用它且没有不良影响(如替换默认InputSystem为你的自定义,只要你完全实现每个接口)。</p>
+</li>
+<li><p>多场景使用 - 如果一个服务确实需要知道场景中的一个<code>transform</code>的位置，它可以简单地引用或创建一个<code>GameObject</code><em>而不是一个附加到它的组件</em>。当项目跨越多个场景时，这使得查找和使用服务变得更加容易。</p>
+</li>
 </ul>
-<h2 id="service-interfaces">Service interfaces</h2>
-<p>The <em>service</em> container uses a predefined <em>interface</em> type for storage and retrieval of any service, this ensures there are no hard dependencies within the Mixed Reality Toolkit, so that each subsystem can easily be swapped out with another (so long as it conforms to the interface).</p>
-<p>Current system interfaces provided by the Mixed Reality Toolkit include:</p>
+<h2 id="服务接口-service-interfaces">服务接口 Service interfaces</h2>
+<p><em>service</em> container使用预定义的<em>interface</em> 类型来存储和检索任何服务，这确保了在混合现实工具包中没有硬依赖关系，因此每个子系统都可以轻松地与另一个子系统交换(只要它符合接口)。</p>
+<p>现在由混合现实工具包提供的系统接口包括:</p>
 <ul>
 <li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html"><code>IMixedRealityInputSystem</code></a></li>
 <li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Boundary.IMixedRealityBoundarySystem.html"><code>IMixedRealityBoundarySystem</code></a></li>
 <li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportSystem.html"><code>IMixedRealityTeleportSystem</code></a></li>
 </ul>
-<p>When creating your own implementations of these systems, you must ensure each complies with the interfaces provided by the Mixed Reality Toolkit (e.g. if you replace the InputSystem with another of your own design).</p>
+<p>在创建这些系统的自己的实现时，您必须确保每个系统都符合混合现实工具包提供的接口(例如，如果您用自己的设计替换InputSystem)。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>All services must also inherit from the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.BaseService.html"><code>BaseService</code></a> class or implement <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.IMixedRealityService.html"><code>IMixedRealityService</code></a>, to implement the functions required by the <code>MixedRealityToolkit</code> so their life-cycles are handled appropriately. (E.G. Initialize, Update, Destroy are called correctly.)</p>
+<p>所有服务还必须继承<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.BaseService.html"><code>BaseService</code></a>类或实现<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.IMixedRealityService.html"><code>IMixedRealityService</code></a>,实现<code>MixedRealityToolkit</code>所需的功能这样他们的生命周期可以被适当处理。(例如:初始化，更新，销毁被正确调用。)</p>
 </div>
 </article>
           </div>

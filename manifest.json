@@ -777,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Extensions/ExtensionServices.html",
-          "hash": "O40WOjrTlnQvQvquHuMqAQ=="
+          "hash": "XId0dChqIyi0XboExStzgg=="
         }
       },
       "is_incremental": false,
@@ -5637,6 +5637,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Documentation/Images/SpatialAwareness/MRTK_SpatialAwareness_DisplayOptions.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "Documentation/Images/SpatialAwareness/MRTK_SpatialAwareness_DisplayOptions.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Documentation/Images/SpatialAwareness/MRTK_SpatialAwareness_Main.png",
       "output": {
         "resource": {
@@ -6431,7 +6442,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/MixedRealityServices.html",
-          "hash": "egrjysE/XgZhIpdOLf1qsA=="
+          "hash": "hqPztp7wEMgyJioqybWg3Q=="
         }
       },
       "is_incremental": false,
@@ -6803,7 +6814,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/ServiceUtilities/MixedRealityServiceRegistryAndIMixedRealityServiceRegistrar.html",
-          "hash": "L7R7C223e5mOnPcbSwBR3w=="
+          "hash": "bR0WR5IjAqQcR1Mz3zge1Q=="
         }
       },
       "is_incremental": false,
@@ -6815,7 +6826,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/SpatialAwareness/ConfiguringSpatialAwarenessMeshObserver.html",
-          "hash": "oUicCcmUKtiLqDzQOGHvlA=="
+          "hash": "9C8JShBGaKKzyaEu82q3+Q=="
         }
       },
       "is_incremental": false,
@@ -6839,7 +6850,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html",
-          "hash": "i9JsfqLHPHssAw/hvi5x+A=="
+          "hash": "3ns4fLsiqzhn6t4ouj90WA=="
         }
       },
       "is_incremental": false,
@@ -6851,7 +6862,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/SpatialAwareness/SpatialObjectMeshObserver.html",
-          "hash": "QOVW4qn6olULM/Sgk58uwA=="
+          "hash": "zFPDaqXkwppURQQy5M6UqQ=="
         }
       },
       "is_incremental": false,
@@ -6995,7 +7006,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/toc.html",
-          "hash": "63FeQTLa57cNUIoU4jR3Xg=="
+          "hash": "6cMsnYq0uYyP/LbZ3DujRQ=="
         }
       },
       "is_incremental": false,
@@ -24458,17 +24469,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 142,
+          "skipped_file_count": 136
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 1446,
           "skipped_file_count": 1446
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 142,
-          "skipped_file_count": 140
         }
       }
     },

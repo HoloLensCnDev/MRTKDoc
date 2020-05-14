@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Spatial Awareness | Mixed Reality Toolkit Documentation </title>
+    <title>&#31354;&#38388;&#24863;&#30693; Spatial awareness | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Spatial Awareness | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#31354;&#38388;&#24863;&#30693; Spatial awareness | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,95 +80,104 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="spatial-awareness">Spatial Awareness</h1>
+<h1 id="空间感知-spatial-awareness">空间感知 Spatial awareness</h1>
 
 <p><img src="../Images/SpatialAwareness/MRTK_SpatialAwareness_Main.png" alt="Spatial Awareness"></p>
-<p>The Spatial Awareness system provides real-world environmental awareness in mixed reality applications. When introduced on Microsoft HoloLens, Spatial Awareness provided a collection of meshes, representing the geometry of the environment, which allowed for compelling interactions between holograms and the real-world.</p>
+<p>空间感知系统在混合现实应用中提供真实世界的环境感知。当在微软HoloLens上推出时，空间感知提供了一个网格集合，代表了环境的几何形状，允许全息图和真实世界之间引人注目的互动。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>At this time, the Mixed Reality Toolkit does not ship with Spatial Understanding algorithms as originally packaged in the HoloToolkit. Spatial Understanding generally involves transforming Spatial Mesh data to create simplified and/or grouped Mesh data such as planes, walls, floors, ceilings, etc.</p>
+<p>此时，混合现实工具包并没有像HoloToolkit中最初包装的那样，附带空间理解算法。空间理解通常包括转换空间网格数据以创建简化版本 和/或 分组网格数据，如平面、墙壁、地板、天花板等。</p>
 </div>
-<h2 id="getting-started">Getting Started</h2>
-<p>Adding support for Spatial Awareness requires two key components of the Mixed Reality Toolkit: the Spatial Awareness system and a supported platform provider.</p>
+<h2 id="入门指南">入门指南</h2>
+<p>添加对空间感知的支持需要混合现实工具包的两个关键组件:空间感知系统(Spatial Awareness system)和受支持的platform provider。</p>
 <ol>
-<li><a href="#enable-the-spatial-awareness-system">Enable</a> the Spatial Awareness system</li>
-<li><a href="#register-observers">Register</a> and <a href="ConfiguringSpatialAwarenessMeshObserver.html">configure</a> one or more spatial observers to provide mesh data</li>
-<li><a href="#build-and-deploy">Build and deploy</a> to a platform that supports Spatial Awareness</li>
+<li><a href="#enable-the-spatial-awareness-system">启用</a>空间感知系统</li>
+<li><a href="#register-observers">注册</a> 和 <a href="ConfiguringSpatialAwarenessMeshObserver.html">配置</a> 一个或多个 spatial observers 来提供网格数据</li>
+<li><a href="#build-and-deploy">构建和部署</a> 到支持空间感知的平台</li>
 </ol>
-<h3 id="enable-the-spatial-awareness-system">Enable the Spatial Awareness system</h3>
-<p>The Spatial Awareness system is managed by the MixedRealityToolkit object (or another <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">service registrar</a> component). Follow the steps below to enable or disable the <em>Spatial Awareness system</em> in the <em>MixedRealityToolkit</em> profile.</p>
-<p>The Mixed Reality Toolkit ships with a few default pre-configured profiles. Some of these have the Spatial Awareness system enabled OR disabled by default. The intent of this pre-configuration, particularly for when disabled, is to avoid the visual overhead of calculating and rendering the meshes.</p>
+<h3 id="启用空间感知系统">启用空间感知系统</h3>
+<p>空间感知系统由MixedRealityToolkit对象(或另一个<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">service registrar</a>组件管理)。按照以下步骤启用或禁用<em>MixedRealityToolkit</em>配置文件中的<em>Spatial Awareness system</em>。</p>
+<p>混合现实工具包附带了一些默认的预配置配置文件。其中一些在默认情况下启用或禁用了空间感知系统。此预配置的目的(特别是在禁用时)是为了避免计算和呈现网格的视觉开销。</p>
 <table>
 <thead>
 <tr>
-<th>Profile</th>
-<th>System Enabled by Default</th>
+<th>配置文件</th>
+<th>系统是否默认启用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Profiles/HoloLens1/DefaultHoloLens1ConfigurationProfile.asset">DefaultHoloLens1ConfigurationProfile</a></td>
-<td>False</td>
+<td><code>DefaultHoloLens1ConfigurationProfile</code> (Assets/MRTK/SDK/Profiles/HoloLens1)</td>
+<td>否</td>
 </tr>
 <tr>
-<td><a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Profiles/HoloLens2/DefaultHoloLens2ConfigurationProfile.asset">DefaultHoloLens2ConfigurationProfile</a></td>
-<td>False</td>
+<td><code>DefaultHoloLens2ConfigurationProfile</code> (Assets/MRTK/SDK/Profiles/HoloLens2)</td>
+<td>否</td>
 </tr>
 <tr>
-<td><a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Profiles/DefaultMixedRealityToolkitConfigurationProfile.asset">DefaultMixedRealityToolkitConfigurationProfile</a></td>
-<td>True</td>
+<td><code>DefaultMixedRealityToolkitConfigurationProfile</code> (Assets/MRTK/SDK/Profiles)</td>
+<td>是</td>
 </tr>
 </tbody>
 </table>
 <ol>
-<li><p>Select the MixedRealityToolkit object in the scene hierarchy to open in the Inspector Panel.</p>
+<li><p>在场景层次 hierarchy中选择 MixedRealityToolkit 对象来打开 Inspector面板.</p>
 <p><img src="../Images/MRTK_ConfiguredHierarchy.png" alt="MRTK Configured Scene Hierarchy"></p>
 </li>
-<li><p>Navigate to the <em>Spatial Awareness System</em> section and check <em>Enable Spatial Awareness System</em></p>
+<li><p>进入 <em>Spatial Awareness System</em>一栏，勾选 <em>Enable Spatial Awareness System</em></p>
 <p><img src="../Images/SpatialAwareness/MRTKConfig_SpatialAwareness.png" alt="Enable Spatial Awareness"></p>
 </li>
-<li><p>Select the desired Spatial Awareness system implementation type. The <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessSystem.html"><code>MixedRealitySpatialAwarenessSystem</code></a> is the default provided.</p>
+<li><p>选择所需的空间感知系统实现类型。<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessSystem.html"><code>MixedRealitySpatialAwarenessSystem</code></a>是默认提供的。</p>
 <p><img src="../Images/SpatialAwareness/SpatialAwarenessSelectSystemType.png" alt="Select the Spatial Awareness System Implementation"></p>
 </li>
 </ol>
-<h3 id="register-observers">Register observers</h3>
-<p>Services in the Mixed Reality Toolkit can have <a href="../Architecture/SystemsExtensionsProviders.html">Data Provider services</a> that supplement the main service with platform specific data and implementation controls. An example of this is the Mixed Reality Input System which has <a href="../Input/InputProviders.html">multiple data providers</a> to get controller and other related input information from various platform-specific APIs.</p>
-<p>The Spatial Awareness system is similar in that data providers supply the system with mesh data about the real-world. The Spatial Awareness profile must have at least one Spatial Observer registered. Spatial Observers are generally platform specific components that act as the provider for surfacing various types of mesh data from a platform specific endpoint (i.e HoloLens).</p>
+<h3 id="注册-observers">注册 observers</h3>
+<p>混合现实工具包中的服务可以有<a href="../Architecture/SystemsExtensionsProviders.html">Data Provider服务</a>，它们用特定于平台的数据和实现控制来补充主要服务。这方面的一个例子是混合现实Input System ，它有<a href="../Input/InputProviders.html">多个 data provider</a>来从各种平台特定的api获取控制器和其他相关输入信息。</p>
+<p>空间感知系统类似于 data providers ，向系统提供关于真实世界的网格数据。空间感知配置文件必须至少注册一个Spatial Observer 。Spatial Observer 通常是平台特定的组件，它们充当充当来自平台特定端点的各种类型网格数据的provider(例如 HoloLens)。</p>
 <ol>
-<li><p>Open or expand the <em>Spatial Awareness System profile</em></p>
+<li><p>打开或扩展 <em>Spatial Awareness System profile</em></p>
 <p><img src="../Images/SpatialAwareness/SpatialAwarenessProfile.png" alt="Spatial Awareness System Profile"></p>
 </li>
-<li><p>Click the <em>&quot;Add Spatial Observer&quot;</em> button</p>
+<li><p>点击 <em>&quot;Add Spatial Observer&quot;</em> 按钮</p>
 </li>
-<li><p>Select the desired <em>Spatial Observer implementation type</em></p>
+<li><p>选择所需的 <em>Spatial Observer implementation type</em></p>
 <p><img src="../Images/SpatialAwareness/SpatialAwarenessSelectObserver.png" alt="Select the Spatial Observer Implementation"></p>
 </li>
-<li><p><a href="ConfiguringSpatialAwarenessMeshObserver.html">Modify configuration properties on the observer</a> as necessary</p>
+<li><p>如果需要的话 <a href="ConfiguringSpatialAwarenessMeshObserver.html">修改observer上的配置属性</a></p>
 </li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Users of the <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Profiles/DefaultMixedRealityToolkitConfigurationProfile.asset">DefaultMixedRealityToolkitConfigurationProfile</a> will have the Spatial Awareness system pre-configured for the Windows Mixed Reality platform which uses
-the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.WindowsMixedReality.SpatialAwareness.WindowsMixedRealitySpatialMeshObserver.html"><code>WindowsMixedRealitySpatialMeshObserver</code></a> class.</p>
+<p><code>DefaultMixedRealityToolkitConfigurationProfile</code>(Assets/MRTK/SDK/Profiles)的用户将为使用的Windows混合现实平台预先配置使用了
+<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.WindowsMixedReality.SpatialAwareness.WindowsMixedRealitySpatialMeshObserver.html"><code>WindowsMixedRealitySpatialMeshObserver</code></a>类的空间感知系统。</p>
 </div>
-<h3 id="build-and-deploy">Build and Deploy</h3>
-<p>Once the Spatial Awareness system is configured with the desired observer(s), the project can be built and deployed to the target platform.</p>
+<h3 id="构建和部署">构建和部署</h3>
+<p>一旦空间感知系统配置了所需的observers，就可以构建项目并将其部署到目标平台上。</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>If targeting the Windows Mixed Reality platform (ex: HoloLens), it is important to ensure the <a href="https://docs.microsoft.com/windows/mixed-reality/spatial-mapping-in-unity">Spatial Perception capability</a> is enabled in order to use the Spatial Awareness system on device.</p>
+<p>如果目标是Windows混合现实平台(例如:HoloLens)，为了在设备上使用空间感知系统，确保<a href="https://docs.microsoft.com/windows/mixed-reality/spatial-mapping-in-unity">Spatial Perception capability</a>启用是很重要的。</p>
 </div>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Some platforms, including Microsoft HoloLens, provide support for remote execution from within Unity. This feature enables rapid development and testing without requiring the build and deploy step. Be sure to do final acceptance testing using a built and deployed version of the application, running on the target hardware and platform.</p>
+<p>一些平台，包括微软的HoloLens，提供了从Unity内部远程执行的支持。该特性支持快速开发和测试，而不需要构建和部署步骤。确保使用在目标硬件和平台上运行的 构建和部署的应用程序版本 进行最终验收测试。</p>
 </div>
-<h2 id="see-also">See Also</h2>
+<h2 id="下一步">下一步</h2>
+<p>按照以上步骤启动空间感知系统后，可以对系统进行更详细的配置和控制。</p>
+<p>关于在inspector中配置observers的信息:</p>
 <ul>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.html">Spatial Awareness API documentation</a></li>
-<li><a href="ConfiguringSpatialAwarenessMeshObserver.html">Configuring Observer for Device</a></li>
-<li><a href="SpatialObjectMeshObserver.html">Configuring Observer for Editor</a></li>
-<li><a href="CreateDataProvider.html">Creating a custom Observer</a></li>
-<li><a href="https://docs.microsoft.com/windows/mixed-reality/spatial-mapping">Spatial Mapping Overview WMR</a></li>
-<li><a href="https://docs.microsoft.com/windows/mixed-reality/spatial-mapping-in-unity">Spatial Mapping in Unity WMR</a></li>
+<li><a href="ConfiguringSpatialAwarenessMeshObserver.html">为设备使用配置 Observers </a></li>
+<li><a href="SpatialObjectMeshObserver.html">为在编辑器中使用配置 Observers</a></li>
+</ul>
+<p>用于通过代码控制和扩展observers的信息:</p>
+<ul>
+<li><a href="UsageGuide.html">通过代码配置 Observers</a></li>
+<li><a href="CreateDataProvider.html">创建自定义 Observer</a></li>
+</ul>
+<h2 id="建议浏览">建议浏览</h2>
+<ul>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.html">空间感知 API 文档</a></li>
+<li><a href="https://docs.microsoft.com/windows/mixed-reality/spatial-mapping">WMR 空间映射概述</a></li>
+<li><a href="https://docs.microsoft.com/windows/mixed-reality/spatial-mapping-in-unity">Unity WMR中的空间映射</a></li>
 </ul>
 </article>
           </div>
