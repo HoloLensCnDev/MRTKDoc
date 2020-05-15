@@ -98,6 +98,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IMixedRealityTouchHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -155,12 +156,15 @@
     <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.UI.PressableButton.html#Microsoft_MixedReality_Toolkit_UI_PressableButton_GetDistanceAlongPushDirection_Vector3_">PressableButton.GetDistanceAlongPushDirection(Vector3)</a>
     </div>
+    <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.UI.PressableButton.html#Microsoft_MixedReality_Toolkit_UI_PressableButton_LocalToWorldScale">PressableButton.LocalToWorldScale</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.UI.html">Microsoft.MixedReality.Toolkit.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PressableButtonHoloLens2 : PressableButton, IMixedRealityTouchHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class PressableButtonHoloLens2 : PressableButton, IMixedRealityTouchHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -186,6 +190,58 @@
     <tbody>
       <tr>
         <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_CompressableButtonVisuals_" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.CompressableButtonVisuals*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_CompressableButtonVisuals" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.CompressableButtonVisuals">CompressableButtonVisuals</h4>
+  <div class="markdown level1 summary"><p>The visuals which become compressed (scaled) along the z-axis when pressed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject CompressableButtonVisuals { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_MinCompressPercentage_" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.MinCompressPercentage*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_MinCompressPercentage" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.MinCompressPercentage">MinCompressPercentage</h4>
+  <div class="markdown level1 summary"><p>The minimum percentage of the original scale the compressableButtonVisuals can be compressed to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MinCompressPercentage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -243,6 +299,33 @@ This content part moves 1/2 distance of the front cage</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_MovingButtonIconText_" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.MovingButtonIconText*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_MovingButtonIconText" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.MovingButtonIconText">MovingButtonIconText</h4>
+  <div class="markdown level1 summary"><p>Public property to set the moving content part(icon and text) of the button.
+This content part moves 1/2 distance of the front cage</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject MovingButtonIconText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -255,6 +338,28 @@ This content part moves 1/2 distance of the front cage</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AnimateInHighlightPlate()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_AnimateInHighlightPlate_" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.AnimateInHighlightPlate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_AnimateInHighlightPlate" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.AnimateInHighlightPlate">AnimateInHighlightPlate()</h4>
+  <div class="markdown level1 summary"><p>Animates in the highlight plate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AnimateInHighlightPlate()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_AnimateOutHighlightPlate_" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.AnimateOutHighlightPlate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_AnimateOutHighlightPlate" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.AnimateOutHighlightPlate">AnimateOutHighlightPlate()</h4>
+  <div class="markdown level1 summary"><p>Animates out the highlight plate and disables it when animated out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AnimateOutHighlightPlate()</code></pre>
   </div>
   
   
@@ -281,6 +386,30 @@ This content part moves 1/2 distance of the front cage</p>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.PressableButton.html#Microsoft_MixedReality_Toolkit_UI_PressableButton_Start">PressableButton.Start()</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_Start_" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.Start*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_Start" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Start()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.PressableButton.html#Microsoft_MixedReality_Toolkit_UI_PressableButton_Start">PressableButton.Start()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_UpdateMovingVisualsPosition_" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.UpdateMovingVisualsPosition*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_UpdateMovingVisualsPosition" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.UpdateMovingVisualsPosition">UpdateMovingVisualsPosition()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UpdateMovingVisualsPosition()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.PressableButton.html#Microsoft_MixedReality_Toolkit_UI_PressableButton_UpdateMovingVisualsPosition">PressableButton.UpdateMovingVisualsPosition()</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_UpdateMovingVisualsPosition_" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.UpdateMovingVisualsPosition*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_PressableButtonHoloLens2_UpdateMovingVisualsPosition" data-uid="Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2.UpdateMovingVisualsPosition">UpdateMovingVisualsPosition()</h4>
   <div class="markdown level1 summary"></div>
@@ -294,6 +423,9 @@ This content part moves 1/2 distance of the front cage</p>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IMixedRealityTouchHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

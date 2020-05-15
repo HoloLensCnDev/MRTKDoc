@@ -169,6 +169,39 @@ when <code>OES_element_index_uint</code> extension is used; <code>type</code> mu
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_indices" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.indices">indices</h4>
+  <div class="markdown level1 summary"><p>The index of the accessor that contains mesh indices.
+When this is not defined, the primitives should be rendered without indices
+using <code>drawArrays()</code>. When defined, the accessor must contain indices:
+the <code>bufferView</code> referenced by the accessor must have a <code>target</code> equal
+to 34963 (ELEMENT_ARRAY_BUFFER); a <code>byteStride</code> that is tightly packed,
+i.e., 0 or the byte size of <code>componentType</code> in bytes;
+<code>componentType</code> must be 5121 (UNSIGNED_BYTE), 5123 (UNSIGNED_SHORT)
+or 5125 (UNSIGNED_INT), the latter is only allowed
+when <code>OES_element_index_uint</code> extension is used; <code>type</code> must be <code>\&amp;quot;SCALAR\&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int indices</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_material" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.material">material</h4>
   <div class="markdown level1 summary"><p>The index of the material to apply to this primitive when rendering.</p>
 </div>
@@ -188,6 +221,56 @@ when <code>OES_element_index_uint</code> extension is used; <code>type</code> mu
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_material" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.material">material</h4>
+  <div class="markdown level1 summary"><p>The index of the material to apply to this primitive when rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int material</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_mode" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.mode">mode</h4>
+  <div class="markdown level1 summary"><p>The type of primitives to render. All valid values correspond to WebGL enums.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GltfDrawMode mode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfDrawMode.html">GltfDrawMode</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -248,6 +331,33 @@ and each value is the index of the accessor containing attribute's data.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_Attributes_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.Attributes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_Attributes" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.Attributes">Attributes</h4>
+  <div class="markdown level1 summary"><p>A dictionary object, where each key corresponds to mesh attribute semantic
+and each value is the index of the accessor containing attribute's data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GltfMeshPrimitiveAttributes Attributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitiveAttributes.html">GltfMeshPrimitiveAttributes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_SubMesh_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.SubMesh*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_SubMesh" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.SubMesh">SubMesh</h4>
   <div class="markdown level1 summary"><p>Unity Mesh wrapper for the GltfMeshPrimitive SubMesh</p>
@@ -268,6 +378,61 @@ and each value is the index of the accessor containing attribute's data.</p>
     <tbody>
       <tr>
         <td><span class="xref">Mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_SubMesh_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.SubMesh*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_SubMesh" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.SubMesh">SubMesh</h4>
+  <div class="markdown level1 summary"><p>Unity Mesh wrapper for the GltfMeshPrimitive SubMesh</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mesh SubMesh { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_Targets_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.Targets*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfMeshPrimitive_Targets" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMeshPrimitive.Targets">Targets</h4>
+  <div class="markdown level1 summary"><p>An array of Morph Targets, each  Morph Target is a dictionary mapping
+attributes (only &quot;POSITION&quot; and &quot;NORMAL&quot; supported) to their deviations
+in the Morph Target (index of the accessor containing the attribute
+displacements' data).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Dictionary&lt;string, int&gt;&gt; Targets { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>

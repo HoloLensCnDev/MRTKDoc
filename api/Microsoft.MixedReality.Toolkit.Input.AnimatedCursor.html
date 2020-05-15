@@ -103,6 +103,7 @@ and animate accordingly</p>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourceStateHandler.html">IMixedRealitySourceStateHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html">IMixedRealityPointerHandler</a></div>
     <div><span class="xref">IEventSystemHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -255,10 +256,40 @@ and animate accordingly</p>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AnimatedCursor : BaseCursor, IMixedRealityCursor, IMixedRealityFocusChangedHandler, IMixedRealitySourceStateHandler, IMixedRealityPointerHandler, IEventSystemHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class AnimatedCursor : BaseCursor, IMixedRealityCursor, IMixedRealityFocusChangedHandler, IMixedRealitySourceStateHandler, IMixedRealityPointerHandler, IEventSystemHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnCursorContextChange_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnCursorContextChange*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnCursorContextChange_Microsoft_MixedReality_Toolkit_Input_CursorContextEnum_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnCursorContextChange(Microsoft.MixedReality.Toolkit.Input.CursorContextEnum)">OnCursorContextChange(CursorContextEnum)</h4>
+  <div class="markdown level1 summary"><p>Override OnCursorContext change to set the correct animation state for the cursor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnCursorContextChange(CursorContextEnum context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CursorContextEnum.html">CursorContextEnum</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnCursorContextChange_Microsoft_MixedReality_Toolkit_Input_CursorContextEnum_">BaseCursor.OnCursorContextChange(CursorContextEnum)</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnCursorContextChange_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnCursorContextChange*"></a>
@@ -321,6 +352,66 @@ and animate accordingly</p>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnCursorStateChange_Microsoft_MixedReality_Toolkit_Input_CursorStateEnum_">BaseCursor.OnCursorStateChange(CursorStateEnum)</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnCursorStateChange_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnCursorStateChange*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnCursorStateChange_Microsoft_MixedReality_Toolkit_Input_CursorStateEnum_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnCursorStateChange(Microsoft.MixedReality.Toolkit.Input.CursorStateEnum)">OnCursorStateChange(CursorStateEnum)</h4>
+  <div class="markdown level1 summary"><p>Override OnCursorState change to set the correct animation state for the cursor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnCursorStateChange(CursorStateEnum state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CursorStateEnum.html">CursorStateEnum</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnCursorStateChange_Microsoft_MixedReality_Toolkit_Input_CursorStateEnum_">BaseCursor.OnCursorStateChange(CursorStateEnum)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnFocusChanged_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnFocusChanged*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnFocusChanged_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnFocusChanged(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnFocusChanged(FocusEventData)</h4>
+  <div class="markdown level1 summary"><p>Override to set the cursor animation trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnFocusChanged(FocusEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.FocusEventData.html">FocusEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnFocusChanged_Microsoft_MixedReality_Toolkit_Input_FocusEventData_">BaseCursor.OnFocusChanged(FocusEventData)</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnFocusChanged_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnFocusChanged*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnFocusChanged_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnFocusChanged(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnFocusChanged(FocusEventData)</h4>
   <div class="markdown level1 summary"><p>Override to set the cursor animation trigger.</p>
@@ -364,6 +455,32 @@ and animate accordingly</p>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnInputDisabled">BaseCursor.OnInputDisabled()</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnInputDisabled_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnInputDisabled*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnInputDisabled" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnInputDisabled">OnInputDisabled()</h4>
+  <div class="markdown level1 summary"><p>Change animation state when disabling input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnInputDisabled()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnInputDisabled">BaseCursor.OnInputDisabled()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnInputEnabled_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnInputEnabled*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnInputEnabled" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnInputEnabled">OnInputEnabled()</h4>
+  <div class="markdown level1 summary"><p>Change animation state when enabling input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnInputEnabled()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnInputEnabled">BaseCursor.OnInputEnabled()</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnInputEnabled_" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnInputEnabled*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_AnimatedCursor_OnInputEnabled" data-uid="Microsoft.MixedReality.Toolkit.Input.AnimatedCursor.OnInputEnabled">OnInputEnabled()</h4>
   <div class="markdown level1 summary"><p>Change animation state when enabling input.</p>
@@ -390,6 +507,9 @@ and animate accordingly</p>
   </div>
   <div>
       <span class="xref">IEventSystemHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

@@ -102,6 +102,9 @@ This defines a modification to an Unity animation parameter, based on cursor sta
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.AnimatedCursorStateData.html">AnimatedCursorStateData</a></h4>
       <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ArticulatedHandDefinition.html">ArticulatedHandDefinition</a></h4>
+      <section><p>Defines the interactions and data that an articulated hand can provide.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html">BaseController</a></h4>
       <section><p>Base Controller class to inherit from for all controllers.</p>
 </section>
@@ -160,6 +163,9 @@ Use <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseNearInteracti
 with a <a href="https://docs.unity3d.com/ScriptReference/Collider.html">Collider</a> to
 modify the <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityCursor.html">IMixedRealityCursor</a> reacts when
 focused by a <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html">IMixedRealityPointer</a>.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CurvePointer.html">CurvePointer</a></h4>
+      <section><p>Extends line pointer to support curves. Useful for teleportation or other situations where multiple raysteps need to be tested along a spline</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator.html">DefaultPointerMediator</a></h4>
       <section><p>The default implementation for pointer mediation in MRTK which is responsible for
@@ -224,7 +230,8 @@ for focus with hand and gesture-based input and interaction across it.</p>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandJointUtils.html">HandJointUtils</a></h4>
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandMeshInfo.html">HandMeshInfo</a></h4>
-      <section></section>
+      <section><p>Stores pointers and transform information for Hand Mesh data provided by current platform. This is the data container for the IMixedRealityHandMeshHandler input system event interface.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandRay.html">HandRay</a></h4>
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandTrackingInputEventData.html">HandTrackingInputEventData</a></h4>
@@ -315,7 +322,8 @@ It also keeps track of the animation Transforms in order to properly animate acc
 the controller class.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizationProfile.html">MixedRealityControllerVisualizationProfile</a></h4>
-      <section></section>
+      <section><p>Profile that determines relevant overrides and properties for controller visualization</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.html">MixedRealityControllerVisualizer</a></h4>
       <section><p>The Mixed Reality Visualization component is primarily responsible for synchronizing the user's current input with controller models.</p>
 </section>
@@ -404,6 +412,8 @@ in order to get PointerDown and PointerUp events whenever a PokePointer touches 
       <section><p>Add a NearInteractionTouchableVolume to your scene and configure a touchable volume
 in order to get PointerDown and PointerUp events whenever a PokePointer collides with this volume.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableVolumeInspector.html">NearInteractionTouchableVolumeInspector</a></h4>
+      <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.html">ObjectCursor</a></h4>
       <section><p>The object cursor can switch between different game objects based on its state.
 It simply links the game object to set to active with its associated cursor state.</p>
@@ -428,9 +438,14 @@ i.e. a primary mouse button click, motion controller selection press, or hand ta
 It's movement is bound to screenspace.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer.html">ShellHandRayPointer</a></h4>
-      <section></section>
+      <section><p>Implementation for default hand ray pointers shipped with MRTK. Primariliy used with hands and motion controllers</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SimulatedArticulatedHand.html">SimulatedArticulatedHand</a></h4>
       <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SimulatedArticulatedHandPoses.html">SimulatedArticulatedHandPoses</a></h4>
+      <section><p>This stores the joint pose JSON data that defines various articulated hand gestures for input simulation.
+The JSON data that defines each joint position and orientation is stored in strings to avoid file loading/targeting during runtime</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SimulatedGestureHand.html">SimulatedGestureHand</a></h4>
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SimulatedHand.html">SimulatedHand</a></h4>
@@ -542,6 +557,10 @@ It's movement is bound to screenspace.</p>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ICursorModifier.html">ICursorModifier</a></h4>
       <section><p>Interface for cursor modifiers that can modify a <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a>'s properties.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IHandRay.html">IHandRay</a></h4>
+      <section><p>Interface defining a hand ray, which is used by far pointers to direct interactions.
+Implementations of this class are managed and updated by a BaseHand implementation.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IInputActionRule-1.html">IInputActionRule&lt;T&gt;</a></h4>
       <section><p>Interface for defining Input Action Rules</p>
 </section>
@@ -589,6 +608,9 @@ to send an event to all input handling interfaces.</p>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityGazeProvider.html">IMixedRealityGazeProvider</a></h4>
       <section><p>Implements the Gaze Provider for an Input Source.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityGazeProviderHeadOverride.html">IMixedRealityGazeProviderHeadOverride</a></h4>
+      <section><p>Adds ability to override head gaze on a gaze provider.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityGestureHandler.html">IMixedRealityGestureHandler</a></h4>
       <section><p>Interface to implement for generic gesture input.</p>
 </section>
@@ -635,6 +657,9 @@ An input source is the origin of user input and generally comes from a physical 
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a></h4>
       <section><p>Manager interface for a Input system in the Mixed Reality Toolkit
 All replacement systems for providing Input System functionality should derive from this interface</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityMouseDeviceManager.html">IMixedRealityMouseDeviceManager</a></h4>
+      <section><p>Interface defining a mouse input device manager.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityMousePointer.html">IMixedRealityMousePointer</a></h4>
       <section><p>Interface for handling mouse pointers.</p>
@@ -694,10 +719,22 @@ maintain consistent behavior.</p>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CursorContextEnum.html">CursorContextEnum</a></h4>
       <section><p>Enum for current cursor context</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CursorContextEnum.html">CursorContextEnum</a></h4>
+      <section><p>Enum for current cursor context</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CursorContextInfo.CursorAction.html">CursorContextInfo.CursorAction</a></h4>
+      <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CursorContextInfo.CursorAction.html">CursorContextInfo.CursorAction</a></h4>
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CursorStateEnum.html">CursorStateEnum</a></h4>
       <section><p>Enum for current cursor state</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CursorStateEnum.html">CursorStateEnum</a></h4>
+      <section><p>Enum for current cursor state</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DeviceInputType.html">DeviceInputType</a></h4>
+      <section><p>The InputType defines the types of input exposed by a controller.
+Denoting the available buttons / interactions that a controller supports.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DeviceInputType.html">DeviceInputType</a></h4>
       <section><p>The InputType defines the types of input exposed by a controller.
@@ -706,14 +743,29 @@ Denoting the available buttons / interactions that a controller supports.</p>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.GestureInputType.html">GestureInputType</a></h4>
       <section><p>The GestureInputType defines the types of gestures exposed by a controller.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.GestureInputType.html">GestureInputType</a></h4>
+      <section><p>The GestureInputType defines the types of gestures exposed by a controller.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandSimulationMode.html">HandSimulationMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandSimulationMode.html">HandSimulationMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSimulationControlMode.html">InputSimulationControlMode</a></h4>
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSimulationControlMode.html">InputSimulationControlMode</a></h4>
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSimulationWindow.ToolMode.html">InputSimulationWindow.ToolMode</a></h4>
       <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSimulationWindow.ToolMode.html">InputSimulationWindow.ToolMode</a></h4>
+      <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSourceType.html">InputSourceType</a></h4>
       <section><p>The InputSourceType defines the types of input sources.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSourceType.html">InputSourceType</a></h4>
+      <section><p>The InputSourceType defines the types of input sources.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.KeyType.html">KeyBinding.KeyType</a></h4>
+      <section><p>The type of value encoded in the <span class="xref">Microsoft.MixedReality.Toolkit.Input.KeyBinding.code</span> property.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.KeyType.html">KeyBinding.KeyType</a></h4>
       <section><p>The type of value encoded in the <span class="xref">Microsoft.MixedReality.Toolkit.Input.KeyBinding.code</span> property.</p>
@@ -721,17 +773,35 @@ Denoting the available buttons / interactions that a controller supports.</p>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.MouseButton.html">KeyBinding.MouseButton</a></h4>
       <section><p>Enum for interpreting the mouse button integer index.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.MouseButton.html">KeyBinding.MouseButton</a></h4>
+      <section><p>Enum for interpreting the mouse button integer index.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerConfigurationFlags.html">MixedRealityControllerConfigurationFlags</a></h4>
+      <section><p>Flags used by MixedRealityControllerAttribute.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerConfigurationFlags.html">MixedRealityControllerConfigurationFlags</a></h4>
       <section><p>Flags used by MixedRealityControllerAttribute.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerInfo.ControllerElementEnum.html">MixedRealityControllerInfo.ControllerElementEnum</a></h4>
       <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerInfo.ControllerElementEnum.html">MixedRealityControllerInfo.ControllerElementEnum</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html">PointerBehavior</a></h4>
+      <section><p>Specifies how a pointer in MRTK's default input system behaves.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html">PointerBehavior</a></h4>
       <section><p>Specifies how a pointer in MRTK's default input system behaves.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SupportedControllerType.html">SupportedControllerType</a></h4>
       <section><p>The SDKType lists the XR SDKs that are supported by the Mixed Reality Toolkit.
 Initially, this lists proposed SDKs, not all may be implemented at this time (please see ReleaseNotes for more details)</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SupportedControllerType.html">SupportedControllerType</a></h4>
+      <section><p>The SDKType lists the XR SDKs that are supported by the Mixed Reality Toolkit.
+Initially, this lists proposed SDKs, not all may be implemented at this time (please see ReleaseNotes for more details)</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.TouchableEventType.html">TouchableEventType</a></h4>
+      <section><p>Type of Events to receive from a PokePointer.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.TouchableEventType.html">TouchableEventType</a></h4>
       <section><p>Type of Events to receive from a PokePointer.</p>
@@ -742,6 +812,12 @@ Initially, this lists proposed SDKs, not all may be implemented at this time (pl
       <section><p>Delegate type used to handle primary pointer changes.
 Old and new pointer values can be null to indicate transition from or to no primary pointer, but they won't both be null simultaneously.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PrimaryPointerChangedHandler.html">PrimaryPointerChangedHandler</a></h4>
+      <section><p>Delegate type used to handle primary pointer changes.
+Old and new pointer values can be null to indicate transition from or to no primary pointer, but they won't both be null simultaneously.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SimulatedHandData.HandJointDataGenerator.html">SimulatedHandData.HandJointDataGenerator</a></h4>
+      <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SimulatedHandData.HandJointDataGenerator.html">SimulatedHandData.HandJointDataGenerator</a></h4>
       <section></section>
 </article>

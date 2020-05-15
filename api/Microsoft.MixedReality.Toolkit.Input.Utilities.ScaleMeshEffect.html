@@ -98,14 +98,29 @@ in one attribute but UGUI only supports two scalers per attribute (even in the t
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ScaleMeshEffect</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseMeshEffect</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.Utilities.html">Microsoft.MixedReality.Toolkit.Input.Utilities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_Utilities_ScaleMeshEffect_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ScaleMeshEffect : BaseMeshEffect</code></pre>
+    <pre><code class="lang-csharp hljs">public class ScaleMeshEffect : BaseMeshEffect, BaseMeshEffect</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_Utilities_ScaleMeshEffect_Awake_" data-uid="Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect.Awake*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_Utilities_ScaleMeshEffect_Awake" data-uid="Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect.Awake">Awake()</h4>
+  <div class="markdown level1 summary"><p>Enforces the parent canvas uses UV channel attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Awake()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_Utilities_ScaleMeshEffect_Awake_" data-uid="Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect.Awake*"></a>
@@ -146,6 +161,39 @@ in one attribute but UGUI only supports two scalers per attribute (even in the t
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_Utilities_ScaleMeshEffect_ModifyMesh_" data-uid="Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect.ModifyMesh*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_Utilities_ScaleMeshEffect_ModifyMesh_VertexHelper_" data-uid="Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect.ModifyMesh(VertexHelper)">ModifyMesh(VertexHelper)</h4>
+  <div class="markdown level1 summary"><p>Stores scaling information into UV channel attributes during UI mesh construction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ModifyMesh(VertexHelper vh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">VertexHelper</span></td>
+        <td><span class="parametername">vh</span></td>
+        <td><p>The vertex helper to populate with new vertex data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseMeshEffect</span>
+  </div>
 </article>
           </div>
           

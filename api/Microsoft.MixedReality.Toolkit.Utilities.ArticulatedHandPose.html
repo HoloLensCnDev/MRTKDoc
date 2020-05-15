@@ -139,6 +139,43 @@
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose__ctor" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.#ctor">ArticulatedHandPose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArticulatedHandPose()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose__ctor_Microsoft_MixedReality_Toolkit_Utilities_MixedRealityPose___" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.#ctor(Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose[])">ArticulatedHandPose(MixedRealityPose[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArticulatedHandPose(MixedRealityPose[] _localJointPoses)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.html">MixedRealityPose</a>[]</td>
+        <td><span class="parametername">_localJointPoses</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.#ctor*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose__ctor_Microsoft_MixedReality_Toolkit_Utilities_MixedRealityPose___" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.#ctor(Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose[])">ArticulatedHandPose(MixedRealityPose[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -165,6 +202,53 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_ComputeJointPoses_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.ComputeJointPoses*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_ComputeJointPoses_Microsoft_MixedReality_Toolkit_Utilities_Handedness_Quaternion_Vector3_Microsoft_MixedReality_Toolkit_Utilities_MixedRealityPose___" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.ComputeJointPoses(Microsoft.MixedReality.Toolkit.Utilities.Handedness,Quaternion,Vector3,Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose[])">ComputeJointPoses(Handedness, Quaternion, Vector3, MixedRealityPose[])</h4>
+  <div class="markdown level1 summary"><p>Compute world space poses from camera-space joint data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ComputeJointPoses(Handedness handedness, Quaternion rotation, Vector3 position, MixedRealityPose[] jointsOut)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Handedness.html">Handedness</a></td>
+        <td><span class="parametername">handedness</span></td>
+        <td><p>Handedness of the resulting pose</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotational offset of the resulting pose</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Translational offset of the resulting pose</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.html">MixedRealityPose</a>[]</td>
+        <td><span class="parametername">jointsOut</span></td>
+        <td><p>Output array of joint poses</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_ComputeJointPoses_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.ComputeJointPoses*"></a>
@@ -242,6 +326,34 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_Copy_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.Copy*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_Copy_Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.Copy(Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose)">Copy(ArticulatedHandPose)</h4>
+  <div class="markdown level1 summary"><p>Copy data from another articulated hand pose.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Copy(ArticulatedHandPose other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.html">ArticulatedHandPose</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_FromJson_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.FromJson*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_FromJson_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.FromJson(System.String)">FromJson(String)</h4>
   <div class="markdown level1 summary"><p>Deserialize pose data from JSON format.</p>
@@ -264,6 +376,77 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">json</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_FromJson_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.FromJson*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_FromJson_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.FromJson(System.String)">FromJson(String)</h4>
+  <div class="markdown level1 summary"><p>Deserialize pose data from JSON format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FromJson(string json)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">json</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_GetGesturePose_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.GetGesturePose*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_GetGesturePose_Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_GestureId_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.GetGesturePose(Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.GestureId)">GetGesturePose(ArticulatedHandPose.GestureId)</h4>
+  <div class="markdown level1 summary"><p>Get pose data for a supported gesture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ArticulatedHandPose GetGesturePose(ArticulatedHandPose.GestureId gesture)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.GestureId.html">ArticulatedHandPose.GestureId</a></td>
+        <td><span class="parametername">gesture</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.html">ArticulatedHandPose</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -360,6 +543,91 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_GetLocalJointPose_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.GetLocalJointPose*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_GetLocalJointPose_Microsoft_MixedReality_Toolkit_Utilities_TrackedHandJoint_Microsoft_MixedReality_Toolkit_Utilities_Handedness_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.GetLocalJointPose(Microsoft.MixedReality.Toolkit.Utilities.TrackedHandJoint,Microsoft.MixedReality.Toolkit.Utilities.Handedness)">GetLocalJointPose(TrackedHandJoint, Handedness)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityPose GetLocalJointPose(TrackedHandJoint joint, Handedness handedness)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TrackedHandJoint.html">TrackedHandJoint</a></td>
+        <td><span class="parametername">joint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Handedness.html">Handedness</a></td>
+        <td><span class="parametername">handedness</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.html">MixedRealityPose</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_InterpolateOffsets_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.InterpolateOffsets*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_InterpolateOffsets_Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.InterpolateOffsets(Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose,Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose,System.Single)">InterpolateOffsets(ArticulatedHandPose, ArticulatedHandPose, Single)</h4>
+  <div class="markdown level1 summary"><p>Blend between two hand poses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InterpolateOffsets(ArticulatedHandPose poseA, ArticulatedHandPose poseB, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.html">ArticulatedHandPose</a></td>
+        <td><span class="parametername">poseA</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.html">ArticulatedHandPose</a></td>
+        <td><span class="parametername">poseB</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_InterpolateOffsets_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.InterpolateOffsets*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_InterpolateOffsets_Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.InterpolateOffsets(Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose,Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose,System.Single)">InterpolateOffsets(ArticulatedHandPose, ArticulatedHandPose, Single)</h4>
   <div class="markdown level1 summary"><p>Blend between two hand poses.</p>
@@ -445,6 +713,53 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_ParseFromJointPoses_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.ParseFromJointPoses*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_ParseFromJointPoses_Microsoft_MixedReality_Toolkit_Utilities_MixedRealityPose___Microsoft_MixedReality_Toolkit_Utilities_Handedness_Quaternion_Vector3_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.ParseFromJointPoses(Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose[],Microsoft.MixedReality.Toolkit.Utilities.Handedness,Quaternion,Vector3)">ParseFromJointPoses(MixedRealityPose[], Handedness, Quaternion, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Take world space joint poses from any hand and convert into right-hand, camera-space poses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ParseFromJointPoses(MixedRealityPose[] joints, Handedness handedness, Quaternion rotation, Vector3 position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.html">MixedRealityPose</a>[]</td>
+        <td><span class="parametername">joints</span></td>
+        <td><p>Input joint poses</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Handedness.html">Handedness</a></td>
+        <td><span class="parametername">handedness</span></td>
+        <td><p>Handedness of the input data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotational offset of the input data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Translational offset of the input data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_SetZero_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.SetZero*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_SetZero" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.SetZero">SetZero()</h4>
   <div class="markdown level1 summary"><p>Set all poses to zero.</p>
@@ -454,6 +769,43 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SetZero()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_SetZero_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.SetZero*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_SetZero" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.SetZero">SetZero()</h4>
+  <div class="markdown level1 summary"><p>Set all poses to zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetZero()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_ToJson_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.ToJson*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_ToJson" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.ToJson">ToJson()</h4>
+  <div class="markdown level1 summary"><p>Serialize pose data to JSON format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToJson()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ArticulatedHandPose_ToJson_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.ToJson*"></a>

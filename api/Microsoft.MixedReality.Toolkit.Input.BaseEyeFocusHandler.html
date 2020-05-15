@@ -100,6 +100,7 @@
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusHandler.html">IMixedRealityFocusHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusChangedHandler.html">IMixedRealityFocusChangedHandler</a></div>
     <div><span class="xref">IEventSystemHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -126,7 +127,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseEyeFocusHandler : BaseFocusHandler, IMixedRealityFocusHandler, IMixedRealityFocusChangedHandler, IEventSystemHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseEyeFocusHandler : BaseFocusHandler, IMixedRealityFocusHandler, IMixedRealityFocusChangedHandler, IEventSystemHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -134,8 +135,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnBeforeFocusChange_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnBeforeFocusChange*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnBeforeFocusChange_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnBeforeFocusChange(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnBeforeFocusChange(FocusEventData)</h4>
-  <div class="markdown level1 summary"><p>Focus event that is raised before the focus is actually changed.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -160,9 +160,35 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.html#Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnBeforeFocusChange_Microsoft_MixedReality_Toolkit_Input_FocusEventData_">BaseFocusHandler.OnBeforeFocusChange(FocusEventData)</a></div>
-  <h5 id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnBeforeFocusChange_Microsoft_MixedReality_Toolkit_Input_FocusEventData__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Useful for logic that needs to take place before focus changes.</p>
-</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnBeforeFocusChange_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnBeforeFocusChange*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnBeforeFocusChange_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnBeforeFocusChange(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnBeforeFocusChange(FocusEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnBeforeFocusChange(FocusEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.FocusEventData.html">FocusEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.html#Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnBeforeFocusChange_Microsoft_MixedReality_Toolkit_Input_FocusEventData_">BaseFocusHandler.OnBeforeFocusChange(FocusEventData)</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusDwell_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusDwell*"></a>
@@ -173,6 +199,28 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnEyeFocusDwell()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusDwell_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusDwell*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusDwell" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusDwell">OnEyeFocusDwell()</h4>
+  <div class="markdown level1 summary"><p>Triggered once the eye gaze ray has intersected with this target's collider for a specified amount of time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEyeFocusDwell()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusStart_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusStart*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusStart" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusStart">OnEyeFocusStart()</h4>
+  <div class="markdown level1 summary"><p>Triggered once the eye gaze ray starts intersecting with this target's collider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEyeFocusStart()</code></pre>
   </div>
   
   
@@ -198,6 +246,17 @@
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusStay_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusStay*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusStay" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusStay">OnEyeFocusStay()</h4>
+  <div class="markdown level1 summary"><p>Triggered while the eye gaze ray is intersecting with this target's collider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEyeFocusStay()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusStop_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusStop*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusStop" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusStop">OnEyeFocusStop()</h4>
   <div class="markdown level1 summary"><p>Triggered once the eye gaze ray stops intersecting with this target's collider.</p>
@@ -206,6 +265,28 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnEyeFocusStop()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusStop_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusStop*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_OnEyeFocusStop" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.OnEyeFocusStop">OnEyeFocusStop()</h4>
+  <div class="markdown level1 summary"><p>Triggered once the eye gaze ray stops intersecting with this target's collider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEyeFocusStop()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_Update_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseEyeFocusHandler_Update" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler.Update">Update()</h4>
+  <div class="markdown level1 summary"><p>Handles highlighting targets when the cursor enters its hit box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Update()</code></pre>
   </div>
   
   
@@ -227,6 +308,9 @@
   </div>
   <div>
       <span class="xref">IEventSystemHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

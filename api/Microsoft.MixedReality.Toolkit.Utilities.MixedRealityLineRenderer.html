@@ -95,6 +95,10 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineRenderer.html">BaseMixedRealityLineRenderer</a></div>
     <div class="level2"><span class="xref">MixedRealityLineRenderer</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -141,7 +145,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealityLineRenderer : BaseMixedRealityLineRenderer</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealityLineRenderer : BaseMixedRealityLineRenderer, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -173,9 +177,61 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_FadeLineAnimationTime_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.FadeLineAnimationTime*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_FadeLineAnimationTime" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.FadeLineAnimationTime">FadeLineAnimationTime</h4>
+  <div class="markdown level1 summary"><p>The amount the pointer line will fade if fadeLineBrightnessOnEnable is true&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FadeLineAnimationTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_FadeLineBrightnessOnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.FadeLineBrightnessOnEnable*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_FadeLineBrightnessOnEnable" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.FadeLineBrightnessOnEnable">FadeLineBrightnessOnEnable</h4>
-  <div class="markdown level1 summary"><p>Sets whether the ray line will animate to a lower brightness level after a hand/controller is recognized</p>
+  <div class="markdown level1 summary"><p>Sets whether the ray line will animate to a lower brightness level on enable of this component</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FadeLineBrightnessOnEnable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_FadeLineBrightnessOnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.FadeLineBrightnessOnEnable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_FadeLineBrightnessOnEnable" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.FadeLineBrightnessOnEnable">FadeLineBrightnessOnEnable</h4>
+  <div class="markdown level1 summary"><p>Sets whether the ray line will animate to a lower brightness level on enable of this component</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -201,7 +257,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_FadeLinePercentage_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.FadeLinePercentage*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_FadeLinePercentage" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.FadeLinePercentage">FadeLinePercentage</h4>
-  <div class="markdown level1 summary"><p>The amount the pointer line will fade if fadeLineBrightnessOnEnable is true&quot;</p>
+  <div class="markdown level1 summary"><p>The amount the pointer line will fade if FadeLineBrightnessOnEnable is true&quot;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -219,6 +275,57 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_FadeLinePercentage_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.FadeLinePercentage*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_FadeLinePercentage" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.FadeLinePercentage">FadeLinePercentage</h4>
+  <div class="markdown level1 summary"><p>The amount the pointer line will fade if FadeLineBrightnessOnEnable is true&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FadeLinePercentage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_LineMaterial_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.LineMaterial*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_LineMaterial" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.LineMaterial">LineMaterial</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Material LineMaterial { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -275,6 +382,56 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_RoundedCaps_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.RoundedCaps*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_RoundedCaps" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.RoundedCaps">RoundedCaps</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RoundedCaps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_RoundedEdges_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.RoundedEdges*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_RoundedEdges" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.RoundedEdges">RoundedEdges</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RoundedEdges { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_RoundedEdges_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.RoundedEdges*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_RoundedEdges" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.RoundedEdges">RoundedEdges</h4>
   <div class="markdown level1 summary"></div>
@@ -312,6 +469,22 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineRenderer.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineRenderer_UpdateLine">BaseMixedRealityLineRenderer.UpdateLine()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_UpdateLine_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.UpdateLine*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MixedRealityLineRenderer_UpdateLine" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.UpdateLine">UpdateLine()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UpdateLine()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineRenderer.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineRenderer_UpdateLine">BaseMixedRealityLineRenderer.UpdateLine()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

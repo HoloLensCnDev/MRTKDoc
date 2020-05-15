@@ -162,6 +162,45 @@
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver__ctor_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver__ctor" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.#ctor">InteractableOnHoldReceiver()</h4>
+  <div class="markdown level1 summary"><p>Creates receiver that raises OnHold events</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractableOnHoldReceiver()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver__ctor_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver__ctor_UnityEvent_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.#ctor(UnityEvent)">InteractableOnHoldReceiver(UnityEvent)</h4>
+  <div class="markdown level1 summary"><p>Creates receiver that raises OnHold events</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractableOnHoldReceiver(UnityEvent ev)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td><span class="parametername">ev</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver__ctor_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.#ctor*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver__ctor_UnityEvent_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.#ctor(UnityEvent)">InteractableOnHoldReceiver(UnityEvent)</h4>
   <div class="markdown level1 summary"><p>Creates receiver that raises OnHold events</p>
 </div>
@@ -189,6 +228,31 @@
   </table>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver_HoldTime" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.HoldTime">HoldTime</h4>
+  <div class="markdown level1 summary"><p>The amount of time to press before triggering event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float HoldTime</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver_HoldTime" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.HoldTime">HoldTime</h4>
@@ -242,14 +306,73 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver_OnHold_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.OnHold*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver_OnHold" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.OnHold">OnHold</h4>
+  <div class="markdown level1 summary"><p>Invoked when interactable has been pressed for HoldTime</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnHold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver_OnUpdate_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.OnUpdate*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver_OnUpdate_Microsoft_MixedReality_Toolkit_UI_InteractableStates_Microsoft_MixedReality_Toolkit_UI_Interactable_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.OnUpdate(Microsoft.MixedReality.Toolkit.UI.InteractableStates,Microsoft.MixedReality.Toolkit.UI.Interactable)">OnUpdate(InteractableStates, Interactable)</h4>
-  <div class="markdown level1 summary"><p>The state has changed</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnUpdate(InteractableStates state, Interactable source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableStates.html">InteractableStates</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.Interactable.html">Interactable</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.html#Microsoft_MixedReality_Toolkit_UI_ReceiverBase_OnUpdate_Microsoft_MixedReality_Toolkit_UI_InteractableStates_Microsoft_MixedReality_Toolkit_UI_Interactable_">ReceiverBase.OnUpdate(InteractableStates, Interactable)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver_OnUpdate_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.OnUpdate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableOnHoldReceiver_OnUpdate_Microsoft_MixedReality_Toolkit_UI_InteractableStates_Microsoft_MixedReality_Toolkit_UI_Interactable_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableOnHoldReceiver.OnUpdate(Microsoft.MixedReality.Toolkit.UI.InteractableStates,Microsoft.MixedReality.Toolkit.UI.Interactable)">OnUpdate(InteractableStates, Interactable)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

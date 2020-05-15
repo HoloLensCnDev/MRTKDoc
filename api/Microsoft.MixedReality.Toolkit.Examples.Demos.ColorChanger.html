@@ -94,11 +94,15 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ColorChanger</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.html">Microsoft.MixedReality.Toolkit.Examples.Demos</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Examples_Demos_ColorChanger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ColorChanger : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class ColorChanger : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -122,6 +126,54 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_ColorChanger_cur" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.ColorChanger.cur">cur</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int cur</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_ColorChanger_mats" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.ColorChanger.mats">mats</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Material[] mats</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -174,8 +226,43 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_ColorChanger_rend" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.ColorChanger.rend">rend</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MeshRenderer rend</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MeshRenderer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_ColorChanger_Increment_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.ColorChanger.Increment*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_ColorChanger_Increment" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.ColorChanger.Increment">Increment()</h4>
+  <div class="markdown level1 summary"><p>Increments to the next material in the input list of materials and applies it to the renderer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Increment()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_ColorChanger_Increment_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.ColorChanger.Increment*"></a>
@@ -197,6 +284,21 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void RandomColor()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_ColorChanger_RandomColor_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.ColorChanger.RandomColor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_ColorChanger_RandomColor" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.ColorChanger.RandomColor">RandomColor()</h4>
+  <div class="markdown level1 summary"><p>Sets a random color on the renderer's material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RandomColor()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

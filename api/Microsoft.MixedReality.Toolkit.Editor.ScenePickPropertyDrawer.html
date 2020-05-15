@@ -94,13 +94,20 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ScenePickPropertyDrawer</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">PropertyDrawer</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.html">Microsoft.MixedReality.Toolkit.Editor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Editor_ScenePickPropertyDrawer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ScenePickPropertyDrawer : PropertyDrawer</code></pre>
+    <pre><code class="lang-csharp hljs">public class ScenePickPropertyDrawer : PropertyDrawer, PropertyDrawer</code></pre>
   </div>
   <h5 id="Microsoft_MixedReality_Toolkit_Editor_ScenePickPropertyDrawer_examples"><strong>Examples</strong></h5>
+  <pre><code>[ScenePick]
+public int SceneId;</code></pre>
+
   <pre><code>[ScenePick]
 public int SceneId;</code></pre>
 
@@ -148,6 +155,52 @@ We are replacing the int value of the backing field with a dropdown list of scen
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_ScenePickPropertyDrawer_OnGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.ScenePickPropertyDrawer.OnGUI*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_ScenePickPropertyDrawer_OnGUI_Rect_SerializedProperty_GUIContent_" data-uid="Microsoft.MixedReality.Toolkit.Editor.ScenePickPropertyDrawer.OnGUI(Rect,SerializedProperty,GUIContent)">OnGUI(Rect, SerializedProperty, GUIContent)</h4>
+  <div class="markdown level1 summary"><p>Function called by unity to draw the GUI for this property
+We are replacing the int value of the backing field with a dropdown list of scene names</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>See base class</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">SerializedProperty</span></td>
+        <td><span class="parametername">property</span></td>
+        <td><p>See base class</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GUIContent</span></td>
+        <td><span class="parametername">label</span></td>
+        <td><p>See base class</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">PropertyDrawer</span>
+  </div>
 </article>
           </div>
           

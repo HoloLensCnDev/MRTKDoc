@@ -169,6 +169,91 @@ point in the direction of palm forward.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_SimulatedHandUtils_CalculateJointRotations_" data-uid="Microsoft.MixedReality.Toolkit.Input.SimulatedHandUtils.CalculateJointRotations*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SimulatedHandUtils_CalculateJointRotations_Handedness_Vector3___Quaternion___" data-uid="Microsoft.MixedReality.Toolkit.Input.SimulatedHandUtils.CalculateJointRotations(Handedness,Vector3[],Quaternion[])">CalculateJointRotations(Handedness, Vector3[], Quaternion[])</h4>
+  <div class="markdown level1 summary"><p>Compute the rotation of each joint, with the forward vector of the rotation pointing along the joint bone,
+and the up vector pointing up.</p>
+<p>The rotation of the base joints (thumb base, pinky base, etc) as well as the wrist joint is set to
+point in the direction of palm forward.</p>
+<p>Assumption: the position of each joint has been copied from handData joint positions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CalculateJointRotations(Handedness handedness, Vector3[] jointPositions, Quaternion[] jointOrientationsOut)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">handedness</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">jointPositions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span>[]</td>
+        <td><span class="parametername">jointOrientationsOut</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SimulatedHandUtils_GetPalmForwardVector_" data-uid="Microsoft.MixedReality.Toolkit.Input.SimulatedHandUtils.GetPalmForwardVector*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SimulatedHandUtils_GetPalmForwardVector_Vector3___" data-uid="Microsoft.MixedReality.Toolkit.Input.SimulatedHandUtils.GetPalmForwardVector(Vector3[])">GetPalmForwardVector(Vector3[])</h4>
+  <div class="markdown level1 summary"><p>Gets vector corresponding to +z.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 GetPalmForwardVector(Vector3[] jointPositions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">jointPositions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_SimulatedHandUtils_GetPalmForwardVector_" data-uid="Microsoft.MixedReality.Toolkit.Input.SimulatedHandUtils.GetPalmForwardVector*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SimulatedHandUtils_GetPalmForwardVector_Vector3___" data-uid="Microsoft.MixedReality.Toolkit.Input.SimulatedHandUtils.GetPalmForwardVector(Vector3[])">GetPalmForwardVector(Vector3[])</h4>
   <div class="markdown level1 summary"><p>Gets vector corresponding to +z.</p>
@@ -219,6 +304,101 @@ point in the direction of palm forward.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Vector3 GetPalmRightVector(Handedness handedness, Vector3[] jointPositions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">handedness</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">jointPositions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SimulatedHandUtils_GetPalmRightVector_" data-uid="Microsoft.MixedReality.Toolkit.Input.SimulatedHandUtils.GetPalmRightVector*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SimulatedHandUtils_GetPalmRightVector_Handedness_Vector3___" data-uid="Microsoft.MixedReality.Toolkit.Input.SimulatedHandUtils.GetPalmRightVector(Handedness,Vector3[])">GetPalmRightVector(Handedness, Vector3[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 GetPalmRightVector(Handedness handedness, Vector3[] jointPositions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">handedness</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">jointPositions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SimulatedHandUtils_GetPalmUpVector_" data-uid="Microsoft.MixedReality.Toolkit.Input.SimulatedHandUtils.GetPalmUpVector*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SimulatedHandUtils_GetPalmUpVector_Handedness_Vector3___" data-uid="Microsoft.MixedReality.Toolkit.Input.SimulatedHandUtils.GetPalmUpVector(Handedness,Vector3[])">GetPalmUpVector(Handedness, Vector3[])</h4>
+  <div class="markdown level1 summary"><p>Gets the vector corresponding to +y.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 GetPalmUpVector(Handedness handedness, Vector3[] jointPositions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

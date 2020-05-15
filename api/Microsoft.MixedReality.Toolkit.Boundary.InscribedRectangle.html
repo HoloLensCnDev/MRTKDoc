@@ -174,8 +174,81 @@ and aspect ratios (1 to 15 in steps of 0.5).</p>
   <div class="markdown level1 remarks"><p>For the most reproducible results, use the same randomSeed value
 each time this method is called.</p>
 </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle__ctor_Microsoft_MixedReality_Toolkit_Boundary_Edge___System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.#ctor(Microsoft.MixedReality.Toolkit.Boundary.Edge[],System.Int32)">InscribedRectangle(Edge[], Int32)</h4>
+  <div class="markdown level1 summary"><p>Finds a large inscribed rectangle. Tries to be maximal but this is
+best effort. The algorithm used was inspired by the blog post
+<a href="https://d3plus.org/blog/behind-the-scenes/2014/07/08/largest-rect/">https://d3plus.org/blog/behind-the-scenes/2014/07/08/largest-rect/</a>
+Random points within the polygon are chosen, and then 2 lines are
+drawn through those points. The midpoints of those lines are
+used as the center of various rectangles, using a binary search to
+vary the size, until the largest fit-able rectangle is found.
+This is then repeated for predefined angles (0-180 in steps of 15)
+and aspect ratios (1 to 15 in steps of 0.5).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InscribedRectangle(Edge[] geometryEdges, int randomSeed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Boundary.Edge.html">Edge</a>[]</td>
+        <td><span class="parametername">geometryEdges</span></td>
+        <td><p>The boundary geometry.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">randomSeed</span></td>
+        <td><p>Random number generator seed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle__ctor_Microsoft_MixedReality_Toolkit_Boundary_Edge___System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For the most reproducible results, use the same randomSeed value
+each time this method is called.</p>
+</div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Angle_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Angle*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Angle" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Angle">Angle</h4>
+  <div class="markdown level1 summary"><p>The rotation angle, in degrees, of the inscribed rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Angle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Angle_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Angle*"></a>
@@ -224,6 +297,58 @@ each time this method is called.</p>
     <tbody>
       <tr>
         <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Center_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Center*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Center" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Center">Center</h4>
+  <div class="markdown level1 summary"><p>The center point of the inscribed rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Center { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Height_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Height*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Height" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Height">Height</h4>
+  <div class="markdown level1 summary"><p>The height of the inscribed rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Height { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -285,6 +410,61 @@ each time this method is called.</p>
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_IsValid_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.IsValid*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_IsValid" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.IsValid">IsValid</h4>
+  <div class="markdown level1 summary"><p>Is the described rectangle valid?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_IsValid_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A rectangle is considered valid if it's center point is valid.</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Width_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Width*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Width" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Width">Width</h4>
+  <div class="markdown level1 summary"><p>The width of the inscribed rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Width { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Width_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Width*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_Width" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.Width">Width</h4>
   <div class="markdown level1 summary"><p>The width of the inscribed rectangle.</p>
@@ -311,6 +491,67 @@ each time this method is called.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_IsInsideBoundary_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.IsInsideBoundary*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_IsInsideBoundary_Vector2_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.IsInsideBoundary(Vector2)">IsInsideBoundary(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Determine of the provided point lies within the defined rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInsideBoundary(Vector2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the point is within the rectangle's bounds, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The rectangle is not valid.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Boundary_InscribedRectangle_IsInsideBoundary_" data-uid="Microsoft.MixedReality.Toolkit.Boundary.InscribedRectangle.IsInsideBoundary*"></a>

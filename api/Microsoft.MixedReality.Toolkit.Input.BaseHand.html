@@ -163,6 +163,9 @@
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_GetControllerMappings">BaseController.GetControllerMappings()</a>
     </div>
     <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_SetupDefaultInteractions">BaseController.SetupDefaultInteractions()</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
     <div>
@@ -235,14 +238,83 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand__ctor_Microsoft_MixedReality_Toolkit_TrackingState_Handedness_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSource_Microsoft_MixedReality_Toolkit_Input_MixedRealityInteractionMapping___" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.#ctor(Microsoft.MixedReality.Toolkit.TrackingState,Handedness,Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource,Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping[])">BaseHand(TrackingState, Handedness, IMixedRealityInputSource, MixedRealityInteractionMapping[])</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseHand(TrackingState trackingState, Handedness controllerHandedness, IMixedRealityInputSource inputSource = null, MixedRealityInteractionMapping[] interactions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.TrackingState.html">TrackingState</a></td>
+        <td><span class="parametername">trackingState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">controllerHandedness</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource.html">IMixedRealityInputSource</a></td>
+        <td><span class="parametername">inputSource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping.html">MixedRealityInteractionMapping</a>[]</td>
+        <td><span class="parametername">interactions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_DefaultLeftHandedInteractions_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.DefaultLeftHandedInteractions*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand_DefaultLeftHandedInteractions" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.DefaultLeftHandedInteractions">DefaultLeftHandedInteractions</h4>
-  <div class="markdown level1 summary"><p>The Default Left Handed interactions for this controller.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MixedRealityInteractionMapping[] DefaultLeftHandedInteractions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping.html">MixedRealityInteractionMapping</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_DefaultLeftHandedInteractions">BaseController.DefaultLeftHandedInteractions</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_DefaultLeftHandedInteractions_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.DefaultLeftHandedInteractions*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand_DefaultLeftHandedInteractions" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.DefaultLeftHandedInteractions">DefaultLeftHandedInteractions</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -269,8 +341,34 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_DefaultRightHandedInteractions_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.DefaultRightHandedInteractions*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand_DefaultRightHandedInteractions" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.DefaultRightHandedInteractions">DefaultRightHandedInteractions</h4>
-  <div class="markdown level1 summary"><p>The Default Right Handed interactions for this controller.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MixedRealityInteractionMapping[] DefaultRightHandedInteractions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping.html">MixedRealityInteractionMapping</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_DefaultRightHandedInteractions">BaseController.DefaultRightHandedInteractions</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_DefaultRightHandedInteractions_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.DefaultRightHandedInteractions*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand_DefaultRightHandedInteractions" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.DefaultRightHandedInteractions">DefaultRightHandedInteractions</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -301,7 +399,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected HandRay HandRay { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual IHandRay HandRay { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,11 +411,63 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandRay.html">HandRay</a></td>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IHandRay.html">IHandRay</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_HandRay_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.HandRay*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand_HandRay" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.HandRay">HandRay</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IHandRay HandRay { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IHandRay.html">IHandRay</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_IsInPointingPose_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.IsInPointingPose*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand_IsInPointingPose" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.IsInPointingPose">IsInPointingPose</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsInPointingPose { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_IsInPointingPose">BaseController.IsInPointingPose</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_IsInPointingPose_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.IsInPointingPose*"></a>
@@ -374,10 +524,34 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_GetPalmNormal_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.GetPalmNormal*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand_GetPalmNormal" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.GetPalmNormal">GetPalmNormal()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 GetPalmNormal()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_SetupDefaultInteractions_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.SetupDefaultInteractions*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand_SetupDefaultInteractions_Handedness_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.SetupDefaultInteractions(Handedness)">SetupDefaultInteractions(Handedness)</h4>
-  <div class="markdown level1 summary"><p>Assign the default interactions based on controller handedness, if necessary.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -449,6 +623,63 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_TryGetJoint_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.TryGetJoint*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand_TryGetJoint_TrackedHandJoint_MixedRealityPose__" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.TryGetJoint(TrackedHandJoint,MixedRealityPose@)">TryGetJoint(TrackedHandJoint, out MixedRealityPose)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool TryGetJoint(TrackedHandJoint joint, out MixedRealityPose pose)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TrackedHandJoint</span></td>
+        <td><span class="parametername">joint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MixedRealityPose</span></td>
+        <td><span class="parametername">pose</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_UpdateVelocity_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.UpdateVelocity*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHand_UpdateVelocity" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.UpdateVelocity">UpdateVelocity()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdateVelocity()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseHand_UpdateVelocity_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHand.UpdateVelocity*"></a>

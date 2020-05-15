@@ -241,6 +241,71 @@ public DefaultRaycastProvider(IMixedRealityServiceRegistrar registrar, MixedReal
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider__ctor_Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar_Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.#ctor(Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar,Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile)">DefaultRaycastProvider(IMixedRealityServiceRegistrar, MixedRealityInputSystemProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This constructor is obsolete (registrar parameter is no longer required) and will be removed in a future version of the Microsoft Mixed Reality Toolkit.&quot;)]
+public DefaultRaycastProvider(IMixedRealityServiceRegistrar registrar, MixedRealityInputSystemProfile profile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></td>
+        <td><span class="parametername">registrar</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a> instance that loaded the service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.html">MixedRealityInputSystemProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The configuration profile for the service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider__ctor_Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.#ctor(Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile)">DefaultRaycastProvider(MixedRealityInputSystemProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DefaultRaycastProvider(MixedRealityInputSystemProfile profile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.html">MixedRealityInputSystemProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The configuration profile for the service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.#ctor*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider__ctor_Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.#ctor(Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile)">DefaultRaycastProvider(MixedRealityInputSystemProfile)</h4>
   <div class="markdown level1 summary"><p>Constructor.</p>
 </div>
@@ -273,8 +338,34 @@ public DefaultRaycastProvider(IMixedRealityServiceRegistrar registrar, MixedReal
   
   <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_Name_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.Name*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_Name" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Optional Priority attribute if multiple services of the same type are required, enables targeting a service for action.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string Name { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Name">BaseService.Name</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_Name_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.Name*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_Name" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -303,8 +394,7 @@ public DefaultRaycastProvider(IMixedRealityServiceRegistrar registrar, MixedReal
   
   <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_GraphicsRaycast_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.GraphicsRaycast*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_GraphicsRaycast_EventSystem_PointerEventData_LayerMask___" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.GraphicsRaycast(EventSystem,PointerEventData,LayerMask[])">GraphicsRaycast(EventSystem, PointerEventData, LayerMask[])</h4>
-  <div class="markdown level1 summary"><p>Performs a graphics raycast against the specified layerMasks.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -348,8 +438,59 @@ public DefaultRaycastProvider(IMixedRealityServiceRegistrar registrar, MixedReal
     <tbody>
       <tr>
         <td><span class="xref">RaycastResult</span></td>
-        <td><p>The RaycastResult of the raycast.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_GraphicsRaycast_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.GraphicsRaycast*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_GraphicsRaycast_EventSystem_PointerEventData_LayerMask___" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.GraphicsRaycast(EventSystem,PointerEventData,LayerMask[])">GraphicsRaycast(EventSystem, PointerEventData, LayerMask[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RaycastResult GraphicsRaycast(EventSystem eventSystem, PointerEventData pointerEventData, LayerMask[] layerMasks)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventSystem</span></td>
+        <td><span class="parametername">eventSystem</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointerEventData</span></td>
+        <td><span class="parametername">pointerEventData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">LayerMask</span>[]</td>
+        <td><span class="parametername">layerMasks</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RaycastResult</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -357,8 +498,7 @@ public DefaultRaycastProvider(IMixedRealityServiceRegistrar registrar, MixedReal
   
   <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_Raycast_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.Raycast*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_Raycast_RayStep_LayerMask___System_Boolean_Microsoft_MixedReality_Toolkit_Input_MixedRealityRaycastHit__" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.Raycast(RayStep,LayerMask[],System.Boolean,Microsoft.MixedReality.Toolkit.Input.MixedRealityRaycastHit@)">Raycast(RayStep, LayerMask[], Boolean, out MixedRealityRaycastHit)</h4>
-  <div class="markdown level1 summary"><p>Performs a raycast using the specified <a class="xref" href="Microsoft.MixedReality.Toolkit.Physics.RayStep.html">RayStep</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -407,8 +547,64 @@ public DefaultRaycastProvider(IMixedRealityServiceRegistrar registrar, MixedReal
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Whether or not the raycast hit something.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_Raycast_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.Raycast*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_Raycast_RayStep_LayerMask___System_Boolean_Microsoft_MixedReality_Toolkit_Input_MixedRealityRaycastHit__" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.Raycast(RayStep,LayerMask[],System.Boolean,Microsoft.MixedReality.Toolkit.Input.MixedRealityRaycastHit@)">Raycast(RayStep, LayerMask[], Boolean, out MixedRealityRaycastHit)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Raycast(RayStep step, LayerMask[] prioritizedLayerMasks, bool focusIndividualCompoundCollider, out MixedRealityRaycastHit hitInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RayStep</span></td>
+        <td><span class="parametername">step</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">LayerMask</span>[]</td>
+        <td><span class="parametername">prioritizedLayerMasks</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">focusIndividualCompoundCollider</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityRaycastHit.html">MixedRealityRaycastHit</a></td>
+        <td><span class="parametername">hitInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -416,8 +612,7 @@ public DefaultRaycastProvider(IMixedRealityServiceRegistrar registrar, MixedReal
   
   <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_SphereCast_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.SphereCast*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_SphereCast_RayStep_System_Single_LayerMask___System_Boolean_Microsoft_MixedReality_Toolkit_Input_MixedRealityRaycastHit__" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.SphereCast(RayStep,System.Single,LayerMask[],System.Boolean,Microsoft.MixedReality.Toolkit.Input.MixedRealityRaycastHit@)">SphereCast(RayStep, Single, LayerMask[], Boolean, out MixedRealityRaycastHit)</h4>
-  <div class="markdown level1 summary"><p>Performs a sphere cast with the specified <a class="xref" href="Microsoft.MixedReality.Toolkit.Physics.RayStep.html">RayStep</a> and radius.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -471,8 +666,69 @@ public DefaultRaycastProvider(IMixedRealityServiceRegistrar registrar, MixedReal
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Whether or not the SphereCast hit something.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_SphereCast_" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.SphereCast*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DefaultRaycastProvider_SphereCast_RayStep_System_Single_LayerMask___System_Boolean_Microsoft_MixedReality_Toolkit_Input_MixedRealityRaycastHit__" data-uid="Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider.SphereCast(RayStep,System.Single,LayerMask[],System.Boolean,Microsoft.MixedReality.Toolkit.Input.MixedRealityRaycastHit@)">SphereCast(RayStep, Single, LayerMask[], Boolean, out MixedRealityRaycastHit)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SphereCast(RayStep step, float radius, LayerMask[] prioritizedLayerMasks, bool focusIndividualCompoundCollider, out MixedRealityRaycastHit hitInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RayStep</span></td>
+        <td><span class="parametername">step</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">LayerMask</span>[]</td>
+        <td><span class="parametername">prioritizedLayerMasks</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">focusIndividualCompoundCollider</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityRaycastHit.html">MixedRealityRaycastHit</a></td>
+        <td><span class="parametername">hitInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

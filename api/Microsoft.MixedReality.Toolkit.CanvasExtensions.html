@@ -196,6 +196,74 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetChildRectTransformAtPoint_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetChildRectTransformAtPoint*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetChildRectTransformAtPoint_RectTransform_Vector3_System_Boolean_System_Boolean_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetChildRectTransformAtPoint(RectTransform,Vector3,System.Boolean,System.Boolean,System.Boolean)">GetChildRectTransformAtPoint(RectTransform, Vector3, Boolean, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a child rect transform for the given point and parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectTransform GetChildRectTransformAtPoint(this RectTransform rectTransformParent, Vector3 worldPoint, bool recursive, bool shouldReturnActive, bool shouldReturnRaycastable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RectTransform</span></td>
+        <td><span class="parametername">rectTransformParent</span></td>
+        <td><p>The rect transform to look for children that may contain the projected (orthogonal to the child's normal) world point</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">worldPoint</span></td>
+        <td><p>The world point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">recursive</span></td>
+        <td><p>Indicates if the check should be done recursively</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">shouldReturnActive</span></td>
+        <td><p>If true, will only check children that are active, otherwise it will check all children.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">shouldReturnRaycastable</span></td>
+        <td><p>If true, will only check children that if they have a graphic and have it's member raycastTarget set to true, otherwise will ignore the raycastTarget value. Will still allow children to be checked that do not have a graphic component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RectTransform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetLocalCorners_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetLocalCorners*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetLocalCorners_Canvas_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetLocalCorners(Canvas)">GetLocalCorners(Canvas)</h4>
   <div class="markdown level1 summary"><p>Convenience method for getting the corners of the canvas in local coordinates. Ordered clockwise from bottom-left.</p>
@@ -235,6 +303,96 @@
       <tr>
         <td><span class="xref">Vector3</span>[]</td>
         <td><p>An array of Vector3s that represent the corners of the canvas in local coordinates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetLocalCorners_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetLocalCorners*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetLocalCorners_Canvas_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetLocalCorners(Canvas)">GetLocalCorners(Canvas)</h4>
+  <div class="markdown level1 summary"><p>Convenience method for getting the corners of the canvas in local coordinates. Ordered clockwise from bottom-left.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3[] GetLocalCorners(this Canvas canvas)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Canvas</span></td>
+        <td><span class="parametername">canvas</span></td>
+        <td><p>The canvas to get the local corners from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><p>An array of Vector3s that represent the corners of the canvas in local coordinates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetPlane_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetPlane*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetPlane_Canvas_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetPlane(Canvas)">GetPlane(Canvas)</h4>
+  <div class="markdown level1 summary"><p>Convenience method for getting a plane for this canvas in world coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Plane GetPlane(this Canvas canvas)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Canvas</span></td>
+        <td><span class="parametername">canvas</span></td>
+        <td><p>The canvas to get the plane from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Plane</span></td>
+        <td><p>A Plane for this canvas.</p>
 </td>
       </tr>
     </tbody>
@@ -333,6 +491,53 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetScreenCorners_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetScreenCorners*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetScreenCorners_Canvas_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetScreenCorners(Canvas)">GetScreenCorners(Canvas)</h4>
+  <div class="markdown level1 summary"><p>Gets the position of the corners for a canvas in screen space.
+1 -- 2
+|    |
+0 -- 3</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3[] GetScreenCorners(this Canvas canvas)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Canvas</span></td>
+        <td><span class="parametername">canvas</span></td>
+        <td><p>The canvas to get the screen corners for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetScreenRect_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetScreenRect*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetScreenRect_Canvas_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetScreenRect(Canvas)">GetScreenRect(Canvas)</h4>
   <div class="markdown level1 summary"><p>Returns a rectangle in screen coordinates that encompasses the bounds of the target canvas.</p>
@@ -372,6 +577,96 @@
       <tr>
         <td><span class="xref">Rect</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetScreenRect_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetScreenRect*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetScreenRect_Canvas_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetScreenRect(Canvas)">GetScreenRect(Canvas)</h4>
+  <div class="markdown level1 summary"><p>Returns a rectangle in screen coordinates that encompasses the bounds of the target canvas.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Rect GetScreenRect(this Canvas canvas)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Canvas</span></td>
+        <td><span class="parametername">canvas</span></td>
+        <td><p>The canvas the get the screen rect for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetViewportCorners_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetViewportCorners*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetViewportCorners_Canvas_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetViewportCorners(Canvas)">GetViewportCorners(Canvas)</h4>
+  <div class="markdown level1 summary"><p>Convenience method for getting the corners of the canvas in viewport coordinates. Note
+that the points have the same ordering as the array returned in GetWorldCorners()</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3[] GetViewportCorners(this Canvas canvas)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Canvas</span></td>
+        <td><span class="parametername">canvas</span></td>
+        <td><p>The canvas to get the viewport corners from</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><p>An array of Vector3s that represent the corners of the canvas in viewport coordinates</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -463,6 +758,125 @@ that the points have the same ordering as the array returned in GetWorldCorners(
         <td><span class="xref">Vector3</span>[]</td>
         <td><p>An array of Vector3s that represent the corners of the canvas in world coordinates.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetWorldCorners_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetWorldCorners*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CanvasExtensions_GetWorldCorners_Canvas_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.GetWorldCorners(Canvas)">GetWorldCorners(Canvas)</h4>
+  <div class="markdown level1 summary"><p>Convenience method for getting the corners of the canvas in world coordinates. Ordered clockwise from bottom-left.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3[] GetWorldCorners(this Canvas canvas)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Canvas</span></td>
+        <td><span class="parametername">canvas</span></td>
+        <td><p>The canvas to get the world corners from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><p>An array of Vector3s that represent the corners of the canvas in world coordinates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CanvasExtensions_Raycast_" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.Raycast*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CanvasExtensions_Raycast_Canvas_Vector3_Vector3_System_Single__Vector3__GameObject__" data-uid="Microsoft.MixedReality.Toolkit.CanvasExtensions.Raycast(Canvas,Vector3,Vector3,System.Single@,Vector3@,GameObject@)">Raycast(Canvas, Vector3, Vector3, out Single, out Vector3, out GameObject)</h4>
+  <div class="markdown level1 summary"><p>Raycast against a canvas using a ray.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Raycast(this Canvas canvas, Vector3 rayOrigin, Vector3 rayDirection, out float distance, out Vector3 hitPoint, out GameObject hitChildObject)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Canvas</span></td>
+        <td><span class="parametername">canvas</span></td>
+        <td><p>The canvas to raycast against</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">rayOrigin</span></td>
+        <td><p>The origin of the ray</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">rayDirection</span></td>
+        <td><p>The direction of the ray</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">distance</span></td>
+        <td><p>The distance of the ray</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">hitPoint</span></td>
+        <td><p>The hitpoint of the ray</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">hitChildObject</span></td>
+        <td><p>The child object that was hit or the canvas itself if it has no active children that were within the hit range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

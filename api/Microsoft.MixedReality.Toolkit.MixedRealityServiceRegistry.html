@@ -140,6 +140,76 @@ runtime without requiring direct code reference to a singleton style component.<
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool AddService&lt;T&gt;(T serviceInstance, IMixedRealityServiceRegistrar registrar)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">serviceInstance</span></td>
+        <td><p>Instance of the service to add.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></td>
+        <td><span class="parametername">registrar</span></td>
+        <td><p>Instance of the registrar manages the service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the service was successfully added, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The interface type of the service being added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_AddService_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.AddService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_AddService__1___0_Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.AddService``1(``0,Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar)">AddService&lt;T&gt;(T, IMixedRealityServiceRegistrar)</h4>
+  <div class="markdown level1 summary"><p>Adds an <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a> instance to the registry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool AddService&lt;T&gt;(T serviceInstance, IMixedRealityServiceRegistrar registrar)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -209,6 +279,46 @@ runtime without requiring direct code reference to a singleton style component.<
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void ClearAllServices()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_ClearAllServices_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.ClearAllServices*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_ClearAllServices" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.ClearAllServices">ClearAllServices()</h4>
+  <div class="markdown level1 summary"><p>Clears the registry cache of all services</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ClearAllServices()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_GetAllServices_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.GetAllServices*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_GetAllServices" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.GetAllServices">GetAllServices()</h4>
+  <div class="markdown level1 summary"><p>Returns readonly list of all services registered</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;IMixedRealityService&gt; GetAllServices()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_GetAllServices_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The list is sorted in ascending priority order.</p>
+</div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_GetAllServices_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.GetAllServices*"></a>
@@ -289,6 +399,55 @@ If given a registrar that the registry is not aware of, returns null.</p>
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_GetAllServices_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.GetAllServices*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_GetAllServices_Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.GetAllServices(Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar)">GetAllServices(IMixedRealityServiceRegistrar)</h4>
+  <div class="markdown level1 summary"><p>Returns readonly list of all services registered for given registrar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyCollection&lt;IMixedRealityService&gt; GetAllServices(IMixedRealityServiceRegistrar registrar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></td>
+        <td><span class="parametername">registrar</span></td>
+        <td><p>Registrar object to filter services by</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a>&gt;</td>
+        <td><p>Readonly list of all services registered for given registrar, all services if parameter null.
+If given a registrar that the registry is not aware of, returns null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_GetAllServices_Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The list is sorted in ascending priority order.</p>
+</div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_RemoveService_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.RemoveService*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_RemoveService__1___0_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.RemoveService``1(``0)">RemoveService&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"><p>Removes an <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a> instance from the registry.</p>
@@ -297,6 +456,70 @@ If given a registrar that the registry is not aware of, returns null.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool RemoveService&lt;T&gt;(T serviceInstance)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">serviceInstance</span></td>
+        <td><p>Instance of the service to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the service was successfully removed, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The interface type of the service being removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_RemoveService_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.RemoveService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_RemoveService__1___0_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.RemoveService``1(``0)">RemoveService&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>Removes an <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a> instance from the registry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RemoveService&lt;T&gt;(T serviceInstance)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -359,6 +582,76 @@ If given a registrar that the registry is not aware of, returns null.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool RemoveService&lt;T&gt;(T serviceInstance, IMixedRealityServiceRegistrar registrar)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">serviceInstance</span></td>
+        <td><p>Instance of the service to remove.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></td>
+        <td><span class="parametername">registrar</span></td>
+        <td><p>Instance of the registrar manages the service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the service was successfully removed, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The interface type of the service being removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_RemoveService_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.RemoveService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_RemoveService__1___0_Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.RemoveService``1(``0,Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar)">RemoveService&lt;T&gt;(T, IMixedRealityServiceRegistrar)</h4>
+  <div class="markdown level1 summary"><p>Removes an <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a> instance from the registry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RemoveService&lt;T&gt;(T serviceInstance, IMixedRealityServiceRegistrar registrar)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -427,6 +720,70 @@ If given a registrar that the registry is not aware of, returns null.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool RemoveService&lt;T&gt;(string name)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The friendly name of the service to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the service was successfully removed, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The interface type of the service being removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_RemoveService_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.RemoveService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_RemoveService__1_System_String_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.RemoveService``1(System.String)">RemoveService&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"><p>Removes an <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a> instance from the registry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RemoveService&lt;T&gt;(string name)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -545,6 +902,69 @@ If given a registrar that the registry is not aware of, returns null.</p>
   
   
   <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_TryGetService_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.TryGetService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_TryGetService_Type_Microsoft_MixedReality_Toolkit_IMixedRealityService__Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar__System_String_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.TryGetService(Type,Microsoft.MixedReality.Toolkit.IMixedRealityService@,Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar@,System.String)">TryGetService(Type, out IMixedRealityService, out IMixedRealityServiceRegistrar, String)</h4>
+  <div class="markdown level1 summary"><p>Gets the first instance of the requested service from the registry that matches the given query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetService(Type interfaceType, out IMixedRealityService serviceInstance, out IMixedRealityServiceRegistrar registrar, string name = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">interfaceType</span></td>
+        <td><p>The interface type of the service being requested.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a></td>
+        <td><span class="parametername">serviceInstance</span></td>
+        <td><p>Output parameter to receive the requested service instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></td>
+        <td><span class="parametername">registrar</span></td>
+        <td><p>Output parameter to receive the registrar that loaded the service instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Optional name of the service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the requested service is being returned, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_TryGetService_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.TryGetService*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_TryGetService__1___0__Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar__System_String_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.TryGetService``1(``0@,Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar@,System.String)">TryGetService&lt;T&gt;(out T, out IMixedRealityServiceRegistrar, String)</h4>
   <div class="markdown level1 summary"><p>Gets the first instance of the requested service from the registry that matches the given query.</p>
 </div>
@@ -552,6 +972,82 @@ If given a registrar that the registry is not aware of, returns null.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool TryGetService&lt;T&gt;(out T serviceInstance, out IMixedRealityServiceRegistrar registrar, string name = null)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">serviceInstance</span></td>
+        <td><p>Output parameter to receive the requested service instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></td>
+        <td><span class="parametername">registrar</span></td>
+        <td><p>Output parameter to receive the registrar that loaded the service instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Optional name of the service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the requested service is being returned, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The interface type of the service being requested.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_TryGetService_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.TryGetService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_TryGetService__1___0__Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar__System_String_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.TryGetService``1(``0@,Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar@,System.String)">TryGetService&lt;T&gt;(out T, out IMixedRealityServiceRegistrar, String)</h4>
+  <div class="markdown level1 summary"><p>Gets the first instance of the requested service from the registry that matches the given query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetService&lt;T&gt;(out T serviceInstance, out IMixedRealityServiceRegistrar registrar, string name = null)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -626,6 +1122,76 @@ If given a registrar that the registry is not aware of, returns null.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool TryGetService&lt;T&gt;(out T serviceInstance, string name = null)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">serviceInstance</span></td>
+        <td><p>Output parameter to receive the requested service instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Optional name of the service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the requested service is being returned, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The interface type of the service being requested.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_TryGetService_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.TryGetService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceRegistry_TryGetService__1___0__System_String_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry.TryGetService``1(``0@,System.String)">TryGetService&lt;T&gt;(out T, String)</h4>
+  <div class="markdown level1 summary"><p>Gets the first instance of the requested service from the registry that matches the given query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetService&lt;T&gt;(out T serviceInstance, string name = null)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

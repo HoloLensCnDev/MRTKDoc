@@ -171,6 +171,40 @@ Call Update any time to update the move logic and get a new rotation for the obj
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Physics_TwoHandRotateLogic_Setup_" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandRotateLogic.Setup*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_TwoHandRotateLogic_Setup_Vector3___Transform_" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandRotateLogic.Setup(Vector3[],Transform)">Setup(Vector3[], Transform)</h4>
+  <div class="markdown level1 summary"><p>Setup the rotation logic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Setup(Vector3[] handsPressedArray, Transform t)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">handsPressedArray</span></td>
+        <td><p>Array with positions of down pointers</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">t</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Physics_TwoHandRotateLogic_Update_" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandRotateLogic.Update*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Physics_TwoHandRotateLogic_Update_Dictionary_System_UInt32_Vector3__Quaternion_RotationConstraintType_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandRotateLogic.Update(Dictionary{System.UInt32,Vector3},Quaternion,RotationConstraintType,System.Boolean)">Update(Dictionary&lt;UInt32, Vector3&gt;, Quaternion, RotationConstraintType, Boolean)</h4>
   <div class="markdown level1 summary"><p>Update the rotation based on input.</p>
@@ -208,6 +242,56 @@ Call Update any time to update the move logic and get a new rotation for the obj
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">useLocalSpaceForConstraint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><p>Desired rotation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Physics_TwoHandRotateLogic_Update_" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandRotateLogic.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_TwoHandRotateLogic_Update_Vector3___Quaternion_" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandRotateLogic.Update(Vector3[],Quaternion)">Update(Vector3[], Quaternion)</h4>
+  <div class="markdown level1 summary"><p>Update the rotation based on input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion Update(Vector3[] handsPressedArray, Quaternion currentRotation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">handsPressedArray</span></td>
+        <td><p>Array with positions of down pointers, order should be the same as handsPressedArray provided in Setup</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">currentRotation</span></td>
         <td></td>
       </tr>
     </tbody>

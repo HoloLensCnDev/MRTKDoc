@@ -98,6 +98,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputActionHandler.html">IMixedRealityInputActionHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityBaseInputHandler.html">IMixedRealityBaseInputHandler</a></div>
     <div><span class="xref">IEventSystemHandler</span></div>
@@ -127,10 +128,36 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InputActionHandler : BaseInputHandler, IMixedRealityInputActionHandler, IMixedRealityBaseInputHandler, IEventSystemHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class InputActionHandler : BaseInputHandler, MonoBehaviour, IMixedRealityInputActionHandler, IMixedRealityBaseInputHandler, IEventSystemHandler</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_OnInputActionEnded" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.OnInputActionEnded">OnInputActionEnded</h4>
+  <div class="markdown level1 summary"><p>Unity event raised on action end, e.g. button released or gesture completed.
+Includes the input event that triggered the action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputActionUnityEvent OnInputActionEnded</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputActionUnityEvent.html">InputActionUnityEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_OnInputActionEnded" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.OnInputActionEnded">OnInputActionEnded</h4>
@@ -183,15 +210,51 @@ Includes the input event that triggered the action.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_OnInputActionStarted" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.OnInputActionStarted">OnInputActionStarted</h4>
+  <div class="markdown level1 summary"><p>Unity event raised on action start, e.g. button pressed or gesture started.
+Includes the input event that triggered the action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputActionUnityEvent OnInputActionStarted</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputActionUnityEvent.html">InputActionUnityEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_RegisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.RegisterHandlers*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_RegisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.RegisterHandlers">RegisterHandlers()</h4>
-  <div class="markdown level1 summary"><p>Overload this method to specify, which global events component wants to listen to.
-Use RegisterHandler API of InputSystem</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RegisterHandlers()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_RegisterHandlers">InputSystemGlobalHandlerListener.RegisterHandlers()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_RegisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.RegisterHandlers*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_RegisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.RegisterHandlers">RegisterHandlers()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -203,9 +266,19 @@ Use RegisterHandler API of InputSystem</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_UnregisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.UnregisterHandlers*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_UnregisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.UnregisterHandlers">UnregisterHandlers()</h4>
-  <div class="markdown level1 summary"><p>Overload this method to specify, which global events component should stop listening to.
-Use UnregisterHandler API of InputSystem</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UnregisterHandlers()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_UnregisterHandlers">InputSystemGlobalHandlerListener.UnregisterHandlers()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_UnregisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.UnregisterHandlers*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_UnregisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.UnregisterHandlers">UnregisterHandlers()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -215,6 +288,33 @@ Use UnregisterHandler API of InputSystem</p>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_UnregisterHandlers">InputSystemGlobalHandlerListener.UnregisterHandlers()</a></div>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputActionHandler_OnActionEnded_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityInputActionHandler#OnActionEnded*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputActionHandler_OnActionEnded_Microsoft_MixedReality_Toolkit_Input_BaseInputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityInputActionHandler#OnActionEnded(Microsoft.MixedReality.Toolkit.Input.BaseInputEventData)">IMixedRealityInputActionHandler.OnActionEnded(BaseInputEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityInputActionHandler.OnActionEnded(BaseInputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputEventData.html">BaseInputEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputActionHandler_OnActionEnded_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityInputActionHandler#OnActionEnded*"></a>
@@ -269,7 +369,37 @@ Use UnregisterHandler API of InputSystem</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputActionHandler_OnActionStarted_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityInputActionHandler#OnActionStarted*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputActionHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputActionHandler_OnActionStarted_Microsoft_MixedReality_Toolkit_Input_BaseInputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputActionHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityInputActionHandler#OnActionStarted(Microsoft.MixedReality.Toolkit.Input.BaseInputEventData)">IMixedRealityInputActionHandler.OnActionStarted(BaseInputEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityInputActionHandler.OnActionStarted(BaseInputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputEventData.html">BaseInputEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
   <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputActionHandler.html">IMixedRealityInputActionHandler</a>
   </div>

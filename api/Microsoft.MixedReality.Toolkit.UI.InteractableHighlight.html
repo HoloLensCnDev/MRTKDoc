@@ -94,12 +94,17 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">InteractableHighlight</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseFocusHandler</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.UI.html">Microsoft.MixedReality.Toolkit.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;This component is no longer supported&quot;, true)]
-public class InteractableHighlight : BaseFocusHandler</code></pre>
+[Obsolete(&quot;This component is no longer supported&quot;, true)]
+public class InteractableHighlight : BaseFocusHandler, BaseFocusHandler</code></pre>
   </div>
   <h5 id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Useful with focusable <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a>s</p>
@@ -127,6 +132,56 @@ public class InteractableHighlight : BaseFocusHandler</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_Highlight_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.Highlight*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_Highlight" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.Highlight">Highlight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Highlight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_Style_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.Style*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_Style" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.Style">Style</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractableHighlight.HighlightedMaterialStyle Style { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.HighlightedMaterialStyle.html">InteractableHighlight.HighlightedMaterialStyle</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -182,8 +237,44 @@ public class InteractableHighlight : BaseFocusHandler</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_TargetRenderers_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.TargetRenderers*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_TargetRenderers" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.TargetRenderers">TargetRenderers</h4>
+  <div class="markdown level1 summary"><p>The target renderers that will get the styles applied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Renderer[] TargetRenderers { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Renderer</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_OnDisable_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.OnDisable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_OnDisable" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnDisable()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_OnDisable_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.OnDisable*"></a>
@@ -204,6 +295,43 @@ public class InteractableHighlight : BaseFocusHandler</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void OnEnable()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.OnEnable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_OnEnable" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnEnable()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_OnFocusEnter_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.OnFocusEnter*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_OnFocusEnter_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.OnFocusEnter(FocusEventData)">OnFocusEnter(FocusEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnFocusEnter(FocusEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FocusEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_OnFocusEnter_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.OnFocusEnter*"></a>
@@ -258,6 +386,37 @@ public class InteractableHighlight : BaseFocusHandler</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_OnFocusExit_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.OnFocusExit*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableHighlight_OnFocusExit_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableHighlight.OnFocusExit(FocusEventData)">OnFocusExit(FocusEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnFocusExit(FocusEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FocusEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseFocusHandler</span>
+  </div>
 </article>
           </div>
           

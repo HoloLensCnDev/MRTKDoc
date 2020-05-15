@@ -118,7 +118,7 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.Editor.html">Microsoft.MixedReality.Toolkit.Input.Editor</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.Editor.html">Editor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -129,6 +129,38 @@
 </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_CheckUnityInputManagerMappings_" data-uid="Microsoft.MixedReality.Toolkit.Input.Editor.InputMappingAxisUtility.CheckUnityInputManagerMappings*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_CheckUnityInputManagerMappings_InputManagerAxis___" data-uid="Microsoft.MixedReality.Toolkit.Input.Editor.InputMappingAxisUtility.CheckUnityInputManagerMappings(InputManagerAxis[])">CheckUnityInputManagerMappings(InputManagerAxis[])</h4>
+  <div class="markdown level1 summary"><p>Simple static function to check Unity InputManager Axis configuration, and apply if needed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CheckUnityInputManagerMappings(InputManagerAxis[] axisMappings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputManagerAxis</span>[]</td>
+        <td><span class="parametername">axisMappings</span></td>
+        <td><p>Optional array of Axis Mappings, to configure your own custom set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_CheckUnityInputManagerMappings_InputManagerAxis____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This only exists as the Unity input manager CANNOT map Axis to an id, it has to be through a mapping</p>
+</div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_CheckUnityInputManagerMappings_" data-uid="Microsoft.MixedReality.Toolkit.Input.Editor.InputMappingAxisUtility.CheckUnityInputManagerMappings*"></a>
@@ -204,6 +236,81 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_DoesAxisNameExist_" data-uid="Microsoft.MixedReality.Toolkit.Input.Editor.InputMappingAxisUtility.DoesAxisNameExist*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_DoesAxisNameExist_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Input.Editor.InputMappingAxisUtility.DoesAxisNameExist(System.String)">DoesAxisNameExist(String)</h4>
+  <div class="markdown level1 summary"><p>Checks our local cache of axis names to see if an axis exists. This cache is refreshed if it's empty or if InputManager.asset has been changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DoesAxisNameExist(string axisName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">axisName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_RemoveMappings_" data-uid="Microsoft.MixedReality.Toolkit.Input.Editor.InputMappingAxisUtility.RemoveMappings*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_RemoveMappings_InputManagerAxis___" data-uid="Microsoft.MixedReality.Toolkit.Input.Editor.InputMappingAxisUtility.RemoveMappings(InputManagerAxis[])">RemoveMappings(InputManagerAxis[])</h4>
+  <div class="markdown level1 summary"><p>Simple static function to apply Unity InputManager Axis configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveMappings(InputManagerAxis[] axisMappings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputManagerAxis</span>[]</td>
+        <td><span class="parametername">axisMappings</span></td>
+        <td><p>Optional array of Axis Mappings, to configure your own custom set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_RemoveMappings_InputManagerAxis____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This only exists as the Unity input manager CANNOT map Axis to an id, it has to be through a mapping</p>
+</div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_Editor_InputMappingAxisUtility_RemoveMappings_" data-uid="Microsoft.MixedReality.Toolkit.Input.Editor.InputMappingAxisUtility.RemoveMappings*"></a>

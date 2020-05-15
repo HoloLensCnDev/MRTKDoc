@@ -97,11 +97,15 @@
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableSurface.html">NearInteractionTouchableSurface</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableVolume.html">NearInteractionTouchableVolume</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.html">Microsoft.MixedReality.Toolkit.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseNearInteractionTouchable : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseNearInteractionTouchable : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Add this component to objects to raise touch events when in <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PokePointer.html">PokePointer</a> proximity.
@@ -129,6 +133,54 @@ The object layer must be included of the <a class="xref" href="Microsoft.MixedRe
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_debounceThreshold" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.debounceThreshold">debounceThreshold</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float debounceThreshold</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_eventsToReceive" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.eventsToReceive">eventsToReceive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TouchableEventType eventsToReceive</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.TouchableEventType.html">TouchableEventType</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -189,6 +241,62 @@ The object layer must be included of the <a class="xref" href="Microsoft.MixedRe
   <div class="markdown level1 remarks"><p>When the touchable is active and the pointer distance becomes greater than +DebounceThreshold (i.e. in front of the surface),
 then the Touch Completed event is raised and the touchable object is released by the pointer.</p>
 </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_DebounceThreshold_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.DebounceThreshold*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_DebounceThreshold" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.DebounceThreshold">DebounceThreshold</h4>
+  <div class="markdown level1 summary"><p>Distance in front of the surface at which you will receive a touch completed event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DebounceThreshold { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_DebounceThreshold_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When the touchable is active and the pointer distance becomes greater than +DebounceThreshold (i.e. in front of the surface),
+then the Touch Completed event is raised and the touchable object is released by the pointer.</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_EventsToReceive_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.EventsToReceive*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_EventsToReceive" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.EventsToReceive">EventsToReceive</h4>
+  <div class="markdown level1 summary"><p>The type of event to receive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TouchableEventType EventsToReceive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.TouchableEventType.html">TouchableEventType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_EventsToReceive_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.EventsToReceive*"></a>
@@ -266,6 +374,53 @@ then the Touch Completed event is raised and the touchable object is released by
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_DistanceToTouchable_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.DistanceToTouchable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_DistanceToTouchable_Vector3_Vector3__" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.DistanceToTouchable(Vector3,Vector3@)">DistanceToTouchable(Vector3, out Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract float DistanceToTouchable(Vector3 samplePoint, out Vector3 normal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">samplePoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_OnValidate_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.OnValidate*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_OnValidate" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.OnValidate">OnValidate()</h4>
   <div class="markdown level1 summary"></div>
@@ -273,6 +428,20 @@ then the Touch Completed event is raised and the touchable object is released by
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnValidate()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_OnValidate_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.OnValidate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseNearInteractionTouchable_OnValidate" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseNearInteractionTouchable.OnValidate">OnValidate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnValidate()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

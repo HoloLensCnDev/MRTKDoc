@@ -95,14 +95,44 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></div>
     <div class="level2"><span class="xref">MixedRealityGesturesProfile</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">ScriptableObject</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.html">Microsoft.MixedReality.Toolkit.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealityGesturesProfile : BaseMixedRealityProfile</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealityGesturesProfile : BaseMixedRealityProfile, ScriptableObject</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_Gestures_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.Gestures*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_Gestures" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.Gestures">Gestures</h4>
+  <div class="markdown level1 summary"><p>The currently configured gestures for the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityGestureMapping[] Gestures { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityGestureMapping.html">MixedRealityGestureMapping</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_Gestures_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.Gestures*"></a>
@@ -139,6 +169,58 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public WindowsGestureSettings ManipulationGestures { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">WindowsGestureSettings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_ManipulationGestures_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.ManipulationGestures*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_ManipulationGestures" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.ManipulationGestures">ManipulationGestures</h4>
+  <div class="markdown level1 summary"><p>The recognizable Manipulation Gestures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowsGestureSettings ManipulationGestures { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">WindowsGestureSettings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_NavigationGestures_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.NavigationGestures*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_NavigationGestures" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.NavigationGestures">NavigationGestures</h4>
+  <div class="markdown level1 summary"><p>The recognizable Navigation Gestures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowsGestureSettings NavigationGestures { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,6 +291,57 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_RailsNavigationGestures_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.RailsNavigationGestures*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_RailsNavigationGestures" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.RailsNavigationGestures">RailsNavigationGestures</h4>
+  <div class="markdown level1 summary"><p>The recognizable Navigation Gestures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowsGestureSettings RailsNavigationGestures { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">WindowsGestureSettings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_UseRailsNavigation_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.UseRailsNavigation*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_UseRailsNavigation" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.UseRailsNavigation">UseRailsNavigation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseRailsNavigation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_UseRailsNavigation_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.UseRailsNavigation*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_UseRailsNavigation" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.UseRailsNavigation">UseRailsNavigation</h4>
   <div class="markdown level1 summary"></div>
@@ -257,6 +390,35 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_WindowsGestureAutoStart_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.WindowsGestureAutoStart*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityGesturesProfile_WindowsGestureAutoStart" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.WindowsGestureAutoStart">WindowsGestureAutoStart</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AutoStartBehavior WindowsGestureAutoStart { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AutoStartBehavior</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">ScriptableObject</span>
+  </div>
 </article>
           </div>
           

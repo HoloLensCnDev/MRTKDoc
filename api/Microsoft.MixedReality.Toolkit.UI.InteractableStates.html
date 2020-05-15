@@ -176,6 +176,43 @@
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates__ctor_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates__ctor" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.#ctor">InteractableStates()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractableStates()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates__ctor_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates__ctor_Microsoft_MixedReality_Toolkit_UI_State_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.#ctor(Microsoft.MixedReality.Toolkit.UI.State)">InteractableStates(State)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractableStates(State defaultState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.State.html">State</a></td>
+        <td><span class="parametername">defaultState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates__ctor_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.#ctor*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates__ctor_Microsoft_MixedReality_Toolkit_UI_State_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.#ctor(Microsoft.MixedReality.Toolkit.UI.State)">InteractableStates(State)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -226,14 +263,37 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_allStates" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.allStates">allStates</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected State[] allStates</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.State.html">State</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_CompareStates_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.CompareStates*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_CompareStates" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.CompareStates">CompareStates()</h4>
-  <div class="markdown level1 summary"><p>Compare all state values, set appropriate current State and return that current State</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -250,13 +310,68 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.State.html">State</a></td>
-        <td><p>Current State after comparing State values</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.BaseStateModel.html#Microsoft_MixedReality_Toolkit_UI_BaseStateModel_CompareStates">BaseStateModel.CompareStates()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_CompareStates_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.CompareStates*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_CompareStates" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.CompareStates">CompareStates()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override State CompareStates()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.State.html">State</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.BaseStateModel.html#Microsoft_MixedReality_Toolkit_UI_BaseStateModel_CompareStates">BaseStateModel.CompareStates()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_GetDefaultStates_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.GetDefaultStates*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_GetDefaultStates" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.GetDefaultStates">GetDefaultStates()</h4>
+  <div class="markdown level1 summary"><p>Returns the default states for InteractableStates.
+Default states are set on an interactable when it is created and no other list of
+states is specified.
+Default States should match &quot;DefaultStates&quot; scriptable object in Interactable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual List&lt;State&gt; GetDefaultStates()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.UI.State.html">State</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_GetDefaultStates_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.GetDefaultStates*"></a>
@@ -330,10 +445,51 @@ Default States should match &quot;DefaultStates&quot; scriptable object in Inter
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_GetState_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.GetState*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_GetState_Microsoft_MixedReality_Toolkit_UI_InteractableStates_InteractableStateEnum_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.GetState(Microsoft.MixedReality.Toolkit.UI.InteractableStates.InteractableStateEnum)">GetState(InteractableStates.InteractableStateEnum)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public State GetState(InteractableStates.InteractableStateEnum state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableStates.InteractableStateEnum.html">InteractableStates.InteractableStateEnum</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.State.html">State</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_GetStates_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.GetStates*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_GetStates" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.GetStates">GetStates()</h4>
-  <div class="markdown level1 summary"><p>Get list of available States for this State Model</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -350,13 +506,66 @@ Default States should match &quot;DefaultStates&quot; scriptable object in Inter
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.State.html">State</a>[]</td>
-        <td><p>Array of available State objects</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.BaseStateModel.html#Microsoft_MixedReality_Toolkit_UI_BaseStateModel_GetStates">BaseStateModel.GetStates()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_GetStates_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.GetStates*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_GetStates" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.GetStates">GetStates()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override State[] GetStates()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.State.html">State</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.BaseStateModel.html#Microsoft_MixedReality_Toolkit_UI_BaseStateModel_GetStates">BaseStateModel.GetStates()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_SetStateOff_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.SetStateOff*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_SetStateOff_Microsoft_MixedReality_Toolkit_UI_InteractableStates_InteractableStateEnum_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.SetStateOff(Microsoft.MixedReality.Toolkit.UI.InteractableStates.InteractableStateEnum)">SetStateOff(InteractableStates.InteractableStateEnum)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetStateOff(InteractableStates.InteractableStateEnum state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableStates.InteractableStateEnum.html">InteractableStates.InteractableStateEnum</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_SetStateOff_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.SetStateOff*"></a>
@@ -407,6 +616,65 @@ Default States should match &quot;DefaultStates&quot; scriptable object in Inter
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableStates.InteractableStateEnum.html">InteractableStates.InteractableStateEnum</a></td>
         <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_SetStateOn_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.SetStateOn*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_SetStateOn_Microsoft_MixedReality_Toolkit_UI_InteractableStates_InteractableStateEnum_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.SetStateOn(Microsoft.MixedReality.Toolkit.UI.InteractableStates.InteractableStateEnum)">SetStateOn(InteractableStates.InteractableStateEnum)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetStateOn(InteractableStates.InteractableStateEnum state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableStates.InteractableStateEnum.html">InteractableStates.InteractableStateEnum</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_SetStateValue_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.SetStateValue*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableStates_SetStateValue_Microsoft_MixedReality_Toolkit_UI_InteractableStates_InteractableStateEnum_System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableStates.SetStateValue(Microsoft.MixedReality.Toolkit.UI.InteractableStates.InteractableStateEnum,System.Int32)">SetStateValue(InteractableStates.InteractableStateEnum, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetStateValue(InteractableStates.InteractableStateEnum state, int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableStates.InteractableStateEnum.html">InteractableStates.InteractableStateEnum</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -112,6 +112,7 @@
   <h5 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
+[Serializable]
 public struct KeyBinding</code></pre>
   </div>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_remarks"><strong>Remarks</strong></h5>
@@ -119,6 +120,32 @@ public struct KeyBinding</code></pre>
 </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_BindingType_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.BindingType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_BindingType" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.BindingType">BindingType</h4>
+  <div class="markdown level1 summary"><p>Type of input this binding maps to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyBinding.KeyType BindingType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.KeyType.html">KeyBinding.KeyType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_BindingType_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.BindingType*"></a>
@@ -171,6 +198,92 @@ public struct KeyBinding</code></pre>
       <tr>
         <td><span class="xref">KeyCode</span></td>
         <td><span class="parametername">keyCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.html">KeyBinding</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_FromKey_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.FromKey*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_FromKey_KeyCode_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.FromKey(KeyCode)">FromKey(KeyCode)</h4>
+  <div class="markdown level1 summary"><p>Create a binding for a keyboard key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyBinding FromKey(KeyCode keyCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">KeyCode</span></td>
+        <td><span class="parametername">keyCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.html">KeyBinding</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_FromMouseButton_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.FromMouseButton*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_FromMouseButton_Microsoft_MixedReality_Toolkit_Input_KeyBinding_MouseButton_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.FromMouseButton(Microsoft.MixedReality.Toolkit.Input.KeyBinding.MouseButton)">FromMouseButton(KeyBinding.MouseButton)</h4>
+  <div class="markdown level1 summary"><p>Create a binding for a mouse button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyBinding FromMouseButton(KeyBinding.MouseButton mouseButton)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.MouseButton.html">KeyBinding.MouseButton</a></td>
+        <td><span class="parametername">mouseButton</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -278,6 +391,49 @@ public struct KeyBinding</code></pre>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_FromMouseButton_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.FromMouseButton*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_FromMouseButton_System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.FromMouseButton(System.Int32)">FromMouseButton(Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a binding for a mouse button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyBinding FromMouseButton(int mouseButton)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">mouseButton</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.html">KeyBinding</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_ToString_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.ToString*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_ToString" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
@@ -303,6 +459,77 @@ public struct KeyBinding</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_ToString_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.ToString*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_ToString" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_TryGetKeyCode_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.TryGetKeyCode*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_TryGetKeyCode_KeyCode__" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.TryGetKeyCode(KeyCode@)">TryGetKeyCode(out KeyCode)</h4>
+  <div class="markdown level1 summary"><p>Try to convert the binding to a KeyCode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetKeyCode(out KeyCode keyCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">KeyCode</span></td>
+        <td><span class="parametername">keyCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the binding is a keyboard key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_TryGetKeyCode_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.TryGetKeyCode*"></a>
@@ -394,6 +621,50 @@ public struct KeyBinding</code></pre>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_TryGetMouseButton_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.TryGetMouseButton*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_TryGetMouseButton_Microsoft_MixedReality_Toolkit_Input_KeyBinding_MouseButton__" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.TryGetMouseButton(Microsoft.MixedReality.Toolkit.Input.KeyBinding.MouseButton@)">TryGetMouseButton(out KeyBinding.MouseButton)</h4>
+  <div class="markdown level1 summary"><p>Try to convert the binding to a mouse button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetMouseButton(out KeyBinding.MouseButton mouseButton)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.MouseButton.html">KeyBinding.MouseButton</a></td>
+        <td><span class="parametername">mouseButton</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the binding is a mouse button</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_TryGetMouseButton_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.TryGetMouseButton*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_TryGetMouseButton_System_Int32__" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.TryGetMouseButton(System.Int32@)">TryGetMouseButton(out Int32)</h4>
   <div class="markdown level1 summary"><p>Try to convert the binding to a mouse button.</p>
 </div>
@@ -432,6 +703,76 @@ public struct KeyBinding</code></pre>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p>True if the binding is a mouse button</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_TryGetMouseButton_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.TryGetMouseButton*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_TryGetMouseButton_System_Int32__" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.TryGetMouseButton(System.Int32@)">TryGetMouseButton(out Int32)</h4>
+  <div class="markdown level1 summary"><p>Try to convert the binding to a mouse button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetMouseButton(out int mouseButton)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">mouseButton</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the binding is a mouse button</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_Unbound_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.Unbound*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBinding_Unbound" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBinding.Unbound">Unbound()</h4>
+  <div class="markdown level1 summary"><p>Create a default empty binding.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyBinding Unbound()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.html">KeyBinding</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

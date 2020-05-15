@@ -152,6 +152,32 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_UseSSL_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.UseSSL*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_UseSSL" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.UseSSL">UseSSL</h4>
+  <div class="markdown level1 summary"><p>Use SSL Connections when making rest calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool UseSSL { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -191,6 +217,69 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">timeout</span></td>
         <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Response.html">Response</a>&gt;</td>
+        <td><p>The response data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_DeleteAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.DeleteAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_DeleteAsync_System_String_Dictionary_System_String_System_String__System_Int32_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.DeleteAsync(System.String,Dictionary{System.String,System.String},System.Int32,System.Boolean)">DeleteAsync(String, Dictionary&lt;String, String&gt;, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Rest DELETE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Response&gt; DeleteAsync(string query, Dictionary&lt;string, string&gt; headers = null, int timeout = -1, bool readResponseData = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Finalized Endpoint Query with parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>Optional header information for the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">readResponseData</span></td>
+        <td><p>Optional bool. If its true, response data will be read from web request download handler.</p>
 </td>
       </tr>
     </tbody>
@@ -270,6 +359,75 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_GetAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.GetAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_GetAsync_System_String_Dictionary_System_String_System_String__System_Int32_DownloadHandler_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.GetAsync(System.String,Dictionary{System.String,System.String},System.Int32,DownloadHandler,System.Boolean)">GetAsync(String, Dictionary&lt;String, String&gt;, Int32, DownloadHandler, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Rest GET.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Response&gt; GetAsync(string query, Dictionary&lt;string, string&gt; headers = null, int timeout = -1, DownloadHandler downloadHandler = null, bool readResponseData = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Finalized Endpoint Query with parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>Optional header information for the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DownloadHandler</span></td>
+        <td><span class="parametername">downloadHandler</span></td>
+        <td><p>Optional DownloadHandler for the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">readResponseData</span></td>
+        <td><p>Optional bool. If its true, response data will be read from web request download handler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Response.html">Response</a>&gt;</td>
+        <td><p>The response data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_GetBasicAuthentication_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.GetBasicAuthentication*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_GetBasicAuthentication_System_String_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.GetBasicAuthentication(System.String,System.String)">GetBasicAuthentication(String, String)</h4>
   <div class="markdown level1 summary"><p>Gets the Basic auth header.</p>
@@ -315,6 +473,102 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><p>The Basic authorization header encoded to base 64.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_GetBasicAuthentication_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.GetBasicAuthentication*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_GetBasicAuthentication_System_String_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.GetBasicAuthentication(System.String,System.String)">GetBasicAuthentication(String, String)</h4>
+  <div class="markdown level1 summary"><p>Gets the Basic auth header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetBasicAuthentication(string username, string password)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">username</span></td>
+        <td><p>The Username.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>The password.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The Basic authorization header encoded to base 64.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_GetBearerOAuthToken_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.GetBearerOAuthToken*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_GetBearerOAuthToken_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.GetBearerOAuthToken(System.String)">GetBearerOAuthToken(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the Bearer auth header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetBearerOAuthToken(string authToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">authToken</span></td>
+        <td><p>OAuth Token to be used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The Bearer authorization header.</p>
 </td>
       </tr>
     </tbody>
@@ -424,6 +678,69 @@
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_System_String_Dictionary_System_String_System_String__System_Int32_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync(System.String,Dictionary{System.String,System.String},System.Int32,System.Boolean)">PostAsync(String, Dictionary&lt;String, String&gt;, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Rest POST.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Response&gt; PostAsync(string query, Dictionary&lt;string, string&gt; headers = null, int timeout = -1, bool readResponseData = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Finalized Endpoint Query with parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>Optional header information for the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">readResponseData</span></td>
+        <td><p>Optional bool. If its true, response data will be read from web request download handler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Response.html">Response</a>&gt;</td>
+        <td><p>The response data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_System_String_System_Byte___Dictionary_System_String_System_String__System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync(System.String,System.Byte[],Dictionary{System.String,System.String},System.Int32)">PostAsync(String, Byte[], Dictionary&lt;String, String&gt;, Int32)</h4>
   <div class="markdown level1 summary"><p>Rest POST.</p>
 </div>
@@ -464,6 +781,75 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">timeout</span></td>
         <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Response.html">Response</a>&gt;</td>
+        <td><p>The response data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_System_String_System_Byte___Dictionary_System_String_System_String__System_Int32_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync(System.String,System.Byte[],Dictionary{System.String,System.String},System.Int32,System.Boolean)">PostAsync(String, Byte[], Dictionary&lt;String, String&gt;, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Rest POST.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Response&gt; PostAsync(string query, byte[] bodyData, Dictionary&lt;string, string&gt; headers = null, int timeout = -1, bool readResponseData = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Finalized Endpoint Query with parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">bodyData</span></td>
+        <td><p>The raw data to post.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>Optional header information for the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">readResponseData</span></td>
+        <td><p>Optional bool. If its true, response data will be read from web request download handler.</p>
 </td>
       </tr>
     </tbody>
@@ -550,6 +936,75 @@
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_System_String_System_String_Dictionary_System_String_System_String__System_Int32_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync(System.String,System.String,Dictionary{System.String,System.String},System.Int32,System.Boolean)">PostAsync(String, String, Dictionary&lt;String, String&gt;, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Rest POST.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Response&gt; PostAsync(string query, string jsonData, Dictionary&lt;string, string&gt; headers = null, int timeout = -1, bool readResponseData = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Finalized Endpoint Query with parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">jsonData</span></td>
+        <td><p>JSON data for the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>Optional header information for the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">readResponseData</span></td>
+        <td><p>Optional bool. If its true, response data will be read from web request download handler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Response.html">Response</a>&gt;</td>
+        <td><p>The response data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_System_String_WWWForm_Dictionary_System_String_System_String__System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync(System.String,WWWForm,Dictionary{System.String,System.String},System.Int32)">PostAsync(String, WWWForm, Dictionary&lt;String, String&gt;, Int32)</h4>
   <div class="markdown level1 summary"><p>Rest POST.</p>
 </div>
@@ -590,6 +1045,75 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">timeout</span></td>
         <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Response.html">Response</a>&gt;</td>
+        <td><p>The response data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PostAsync_System_String_WWWForm_Dictionary_System_String_System_String__System_Int32_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PostAsync(System.String,WWWForm,Dictionary{System.String,System.String},System.Int32,System.Boolean)">PostAsync(String, WWWForm, Dictionary&lt;String, String&gt;, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Rest POST.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Response&gt; PostAsync(string query, WWWForm formData, Dictionary&lt;string, string&gt; headers = null, int timeout = -1, bool readResponseData = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Finalized Endpoint Query with parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">WWWForm</span></td>
+        <td><span class="parametername">formData</span></td>
+        <td><p>Form Data.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>Optional header information for the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">readResponseData</span></td>
+        <td><p>Optional bool. If its true, response data will be read from web request download handler.</p>
 </td>
       </tr>
     </tbody>
@@ -676,6 +1200,75 @@
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PutAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PutAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PutAsync_System_String_System_Byte___Dictionary_System_String_System_String__System_Int32_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PutAsync(System.String,System.Byte[],Dictionary{System.String,System.String},System.Int32,System.Boolean)">PutAsync(String, Byte[], Dictionary&lt;String, String&gt;, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Rest PUT.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Response&gt; PutAsync(string query, byte[] bodyData, Dictionary&lt;string, string&gt; headers = null, int timeout = -1, bool readResponseData = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Finalized Endpoint Query with parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">bodyData</span></td>
+        <td><p>Data to be submitted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>Optional header information for the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">readResponseData</span></td>
+        <td><p>Optional bool. If its true, response data will be read from web request download handler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Response.html">Response</a>&gt;</td>
+        <td><p>The response data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PutAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PutAsync*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PutAsync_System_String_System_String_Dictionary_System_String_System_String__System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PutAsync(System.String,System.String,Dictionary{System.String,System.String},System.Int32)">PutAsync(String, String, Dictionary&lt;String, String&gt;, Int32)</h4>
   <div class="markdown level1 summary"><p>Rest PUT.</p>
 </div>
@@ -716,6 +1309,75 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">timeout</span></td>
         <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Response.html">Response</a>&gt;</td>
+        <td><p>The response data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PutAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PutAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Rest_PutAsync_System_String_System_String_Dictionary_System_String_System_String__System_Int32_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Rest.PutAsync(System.String,System.String,Dictionary{System.String,System.String},System.Int32,System.Boolean)">PutAsync(String, String, Dictionary&lt;String, String&gt;, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Rest PUT.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Response&gt; PutAsync(string query, string jsonData, Dictionary&lt;string, string&gt; headers = null, int timeout = -1, bool readResponseData = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Finalized Endpoint Query with parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">jsonData</span></td>
+        <td><p>Data to be submitted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>Optional header information for the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Optional time in seconds before request expires.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">readResponseData</span></td>
+        <td><p>Optional bool. If its true, response data will be read from web request download handler.</p>
 </td>
       </tr>
     </tbody>

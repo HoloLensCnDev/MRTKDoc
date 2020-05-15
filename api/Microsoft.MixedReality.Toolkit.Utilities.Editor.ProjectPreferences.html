@@ -94,14 +94,43 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ProjectPreferences</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">ScriptableObject</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Editor.html">Microsoft.MixedReality.Toolkit.Utilities.Editor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProjectPreferences : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProjectPreferences : ScriptableObject, ScriptableObject</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_FilePath_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.FilePath*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_FilePath" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.FilePath">FilePath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static string FilePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_FilePath_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.FilePath*"></a>
@@ -173,6 +202,102 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Get_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Get*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Get_System_String_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Get(System.String,System.Boolean)">Get(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Get bool from Project Preferences. If no entry found, then create new entry with provided defaultValue</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Get(string key, bool defaultValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Get_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Get*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Get_System_String_System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Get(System.String,System.Int32)">Get(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Get int from Project Preferences. If no entry found, then create new entry with provided defaultValue</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Get(string key, int defaultValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -276,6 +401,102 @@
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Get_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Get*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Get_System_String_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Get(System.String,System.Single)">Get(String, Single)</h4>
+  <div class="markdown level1 summary"><p>Get float from Project Preferences. If no entry found, then create new entry with provided defaultValue</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float Get(string key, float defaultValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Get_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Get*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Get_System_String_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Get(System.String,System.String)">Get(String, String)</h4>
+  <div class="markdown level1 summary"><p>Get string from Project Preferences. If no entry found, then create new entry with provided defaultValue</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Get(string key, string defaultValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Get_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Get*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Get_System_String_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Get(System.String,System.String)">Get(String, String)</h4>
   <div class="markdown level1 summary"><p>Get string from Project Preferences. If no entry found, then create new entry with provided defaultValue</p>
 </div>
@@ -351,6 +572,62 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_RemoveBool_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.RemoveBool*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_RemoveBool_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.RemoveBool(System.String)">RemoveBool(String)</h4>
+  <div class="markdown level1 summary"><p>Remove key item from preferences if applicable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveBool(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_RemoveFloat_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.RemoveFloat*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_RemoveFloat_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.RemoveFloat(System.String)">RemoveFloat(String)</h4>
+  <div class="markdown level1 summary"><p>Remove key item from preferences if applicable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveFloat(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_RemoveFloat_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.RemoveFloat*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_RemoveFloat_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.RemoveFloat(System.String)">RemoveFloat(String)</h4>
   <div class="markdown level1 summary"><p>Remove key item from preferences if applicable</p>
@@ -387,6 +664,62 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void RemoveInt(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_RemoveInt_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.RemoveInt*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_RemoveInt_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.RemoveInt(System.String)">RemoveInt(String)</h4>
+  <div class="markdown level1 summary"><p>Remove key item from preferences if applicable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveInt(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_RemoveString_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.RemoveString*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_RemoveString_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.RemoveString(System.String)">RemoveString(String)</h4>
+  <div class="markdown level1 summary"><p>Remove key item from preferences if applicable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveString(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -477,6 +810,47 @@
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Set*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_Boolean_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Set(System.String,System.Boolean,System.Boolean)">Set(String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Save bool to preferences and save to ScriptableObject with key given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Set(string key, bool value, bool forceSave = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">forceSave</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_Boolean_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If forceSave is true (default), then will call AssetDatabase.SaveAssets which saves all assets after execution</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Set*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_Int32_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Set(System.String,System.Int32,System.Boolean)">Set(String, Int32, Boolean)</h4>
   <div class="markdown level1 summary"><p>Save int to preferences and save to ScriptableObject with key given.</p>
 </div>
@@ -513,6 +887,88 @@
     </tbody>
   </table>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_Int32_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If forceSave is true (default), then will call AssetDatabase.SaveAssets which saves all assets after execution</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Set*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_Int32_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Set(System.String,System.Int32,System.Boolean)">Set(String, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Save int to preferences and save to ScriptableObject with key given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Set(string key, int value, bool forceSave = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">forceSave</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_Int32_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If forceSave is true (default), then will call AssetDatabase.SaveAssets which saves all assets after execution</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Set*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_Single_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Set(System.String,System.Single,System.Boolean)">Set(String, Single, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Save float to preferences and save to ScriptableObject with key given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Set(string key, float value, bool forceSave = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">forceSave</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_Single_System_Boolean__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>If forceSave is true (default), then will call AssetDatabase.SaveAssets which saves all assets after execution</p>
 </div>
   
@@ -597,6 +1053,51 @@
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_String_System_Boolean__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>If forceSave is true (default), then will call AssetDatabase.SaveAssets which saves all assets after execution</p>
 </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Set*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_String_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences.Set(System.String,System.String,System.Boolean)">Set(String, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Save string to preferences and save to ScriptableObject with key given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Set(string key, string value, bool forceSave = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">forceSave</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_ProjectPreferences_Set_System_String_System_String_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If forceSave is true (default), then will call AssetDatabase.SaveAssets which saves all assets after execution</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">ScriptableObject</span>
+  </div>
 </article>
           </div>
           

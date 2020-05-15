@@ -180,6 +180,85 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_RuntimeSceneUtils_FindScene_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.FindScene*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_RuntimeSceneUtils_FindScene_System_String_Scene__System_Int32__" data-uid="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.FindScene(System.String,Scene@,System.Int32@)">FindScene(String, out Scene, out Int32)</h4>
+  <div class="markdown level1 summary"><p>Finds a scene in our build settings by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool FindScene(string sceneName, out Scene scene, out int sceneIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">sceneName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Scene</span></td>
+        <td><span class="parametername">scene</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">sceneIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_RuntimeSceneUtils_GetRootGameObjectsInLoadedScenes_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.GetRootGameObjectsInLoadedScenes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_RuntimeSceneUtils_GetRootGameObjectsInLoadedScenes" data-uid="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.GetRootGameObjectsInLoadedScenes">GetRootGameObjectsInLoadedScenes()</h4>
+  <div class="markdown level1 summary"><p>Returns all root GameObjects in all loaded scenes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;GameObject&gt; GetRootGameObjectsInLoadedScenes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_RuntimeSceneUtils_GetRootGameObjectsInLoadedScenes_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.GetRootGameObjectsInLoadedScenes*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_RuntimeSceneUtils_GetRootGameObjectsInLoadedScenes" data-uid="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.GetRootGameObjectsInLoadedScenes">GetRootGameObjectsInLoadedScenes()</h4>
   <div class="markdown level1 summary"><p>Returns all root GameObjects in all loaded scenes.</p>
@@ -242,6 +321,91 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_RuntimeSceneUtils_GetSceneNameFromScenePath_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.GetSceneNameFromScenePath*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_RuntimeSceneUtils_GetSceneNameFromScenePath_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.GetSceneNameFromScenePath(System.String)">GetSceneNameFromScenePath(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetSceneNameFromScenePath(string scenePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">scenePath</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_RuntimeSceneUtils_SetActiveScene_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.SetActiveScene*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_RuntimeSceneUtils_SetActiveScene_Scene_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.SetActiveScene(Scene)">SetActiveScene(Scene)</h4>
+  <div class="markdown level1 summary"><p>Sets the active scene to the supplied scene. Returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SetActiveScene(Scene scene)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Scene</span></td>
+        <td><span class="parametername">scene</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>

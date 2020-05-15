@@ -171,6 +171,9 @@
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_GetControllerMappings">BaseController.GetControllerMappings()</a>
     </div>
     <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_SetupDefaultInteractions">BaseController.SetupDefaultInteractions()</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
     <div>
@@ -242,6 +245,48 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController__ctor_Microsoft_MixedReality_Toolkit_TrackingState_Handedness_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSource_Microsoft_MixedReality_Toolkit_Input_MixedRealityInteractionMapping___" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.#ctor(Microsoft.MixedReality.Toolkit.TrackingState,Handedness,Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource,Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping[])">GenericJoystickController(TrackingState, Handedness, IMixedRealityInputSource, MixedRealityInteractionMapping[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GenericJoystickController(TrackingState trackingState, Handedness controllerHandedness, IMixedRealityInputSource inputSource = null, MixedRealityInteractionMapping[] interactions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.TrackingState.html">TrackingState</a></td>
+        <td><span class="parametername">trackingState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">controllerHandedness</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource.html">IMixedRealityInputSource</a></td>
+        <td><span class="parametername">inputSource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping.html">MixedRealityInteractionMapping</a>[]</td>
+        <td><span class="parametername">interactions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
   
@@ -265,6 +310,56 @@
     <tbody>
       <tr>
         <td><span class="xref">MixedRealityPose</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_CurrentControllerPose" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.CurrentControllerPose">CurrentControllerPose</h4>
+  <div class="markdown level1 summary"><p>The current pose of this controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MixedRealityPose CurrentControllerPose</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MixedRealityPose</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_CurrentControllerPosition" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.CurrentControllerPosition">CurrentControllerPosition</h4>
+  <div class="markdown level1 summary"><p>The current position of this controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 CurrentControllerPosition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -321,6 +416,56 @@
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_CurrentControllerRotation" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.CurrentControllerRotation">CurrentControllerRotation</h4>
+  <div class="markdown level1 summary"><p>The current rotation of this controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Quaternion CurrentControllerRotation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_LastControllerPose" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.LastControllerPose">LastControllerPose</h4>
+  <div class="markdown level1 summary"><p>The previous pose of this controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MixedRealityPose LastControllerPose</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MixedRealityPose</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_LastControllerPose" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.LastControllerPose">LastControllerPose</h4>
   <div class="markdown level1 summary"><p>The previous pose of this controller.</p>
 </div>
@@ -355,7 +500,33 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float PointerOffsetAngle { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual float PointerOffsetAngle { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_PointerOffsetAngle_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.PointerOffsetAngle*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_PointerOffsetAngle" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.PointerOffsetAngle">PointerOffsetAngle</h4>
+  <div class="markdown level1 summary"><p>The pointer's offset angle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual float PointerOffsetAngle { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,8 +549,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_SetupDefaultInteractions_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.SetupDefaultInteractions*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_SetupDefaultInteractions_Handedness_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.SetupDefaultInteractions(Handedness)">SetupDefaultInteractions(Handedness)</h4>
-  <div class="markdown level1 summary"><p>Assign the default interactions based on controller handedness, if necessary.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -438,6 +608,38 @@ Also raises a &quot;Pressed&quot; event while pressed</p>
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateButtonData_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateButtonData*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateButtonData_Microsoft_MixedReality_Toolkit_Input_MixedRealityInteractionMapping_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateButtonData(Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping)">UpdateButtonData(MixedRealityInteractionMapping)</h4>
+  <div class="markdown level1 summary"><p>Update an Interaction Bool data type from a Bool input</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdateButtonData(MixedRealityInteractionMapping interactionMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping.html">MixedRealityInteractionMapping</a></td>
+        <td><span class="parametername">interactionMapping</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateButtonData_Microsoft_MixedReality_Toolkit_Input_MixedRealityInteractionMapping__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Raises an Input System &quot;Input Down&quot; event when the key is down, and raises an &quot;Input Up&quot; when it is released (e.g. a Button)
+Also raises a &quot;Pressed&quot; event while pressed</p>
+</div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateController_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateController*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateController" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateController">UpdateController()</h4>
   <div class="markdown level1 summary"><p>Update the controller data from Unity's Input Manager</p>
@@ -447,6 +649,45 @@ Also raises a &quot;Pressed&quot; event while pressed</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void UpdateController()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateController_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateController*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateController" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateController">UpdateController()</h4>
+  <div class="markdown level1 summary"><p>Update the controller data from Unity's Input Manager</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UpdateController()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateDualAxisData_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateDualAxisData*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateDualAxisData_Microsoft_MixedReality_Toolkit_Input_MixedRealityInteractionMapping_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateDualAxisData(Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping)">UpdateDualAxisData(MixedRealityInteractionMapping)</h4>
+  <div class="markdown level1 summary"><p>Update the Touchpad / Thumbstick input from the device (in OpenVR, touchpad and thumbstick are the same input control)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdateDualAxisData(MixedRealityInteractionMapping interactionMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping.html">MixedRealityInteractionMapping</a></td>
+        <td><span class="parametername">interactionMapping</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateDualAxisData_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateDualAxisData*"></a>
@@ -503,6 +744,65 @@ Also raises a &quot;Pressed&quot; event while pressed</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdatePoseData_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdatePoseData*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdatePoseData_Microsoft_MixedReality_Toolkit_Input_MixedRealityInteractionMapping_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdatePoseData(Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping)">UpdatePoseData(MixedRealityInteractionMapping)</h4>
+  <div class="markdown level1 summary"><p>Update Spatial Pointer Data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdatePoseData(MixedRealityInteractionMapping interactionMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping.html">MixedRealityInteractionMapping</a></td>
+        <td><span class="parametername">interactionMapping</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateSingleAxisData_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateSingleAxisData*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateSingleAxisData_Microsoft_MixedReality_Toolkit_Input_MixedRealityInteractionMapping_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateSingleAxisData(Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping)">UpdateSingleAxisData(MixedRealityInteractionMapping)</h4>
+  <div class="markdown level1 summary"><p>Update an Interaction Float data type from a SingleAxis (float) input</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdateSingleAxisData(MixedRealityInteractionMapping interactionMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping.html">MixedRealityInteractionMapping</a></td>
+        <td><span class="parametername">interactionMapping</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateSingleAxisData_Microsoft_MixedReality_Toolkit_Input_MixedRealityInteractionMapping__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Raises a Float Input Changed event when the float data changes</p>
+</div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_GenericJoystickController_UpdateSingleAxisData_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.GenericJoystickController.UpdateSingleAxisData*"></a>

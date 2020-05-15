@@ -94,14 +94,31 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">BlendOut</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.html">Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BlendOut : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class BlendOut : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_Disengage_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.Disengage*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_Disengage" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.Disengage">Disengage()</h4>
+  <div class="markdown level1 summary"><p>Once the user looks away from the hologram, determine whether the user has dwelled at it before.
+If yes, start blending it out and destroy it if that option was selected.
+If not, we can still blend it out a little, but keep it alive and visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Disengage()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_Disengage_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.Disengage*"></a>
@@ -127,6 +144,27 @@ If not, we can still blend it out a little, but keep it alive and visible.</p>
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_DwellSucceeded_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.DwellSucceeded*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_DwellSucceeded" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.DwellSucceeded">DwellSucceeded()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DwellSucceeded()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_Engage_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.Engage*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_Engage" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.Engage">Engage()</h4>
+  <div class="markdown level1 summary"><p>Once the target is looked at, set it to its full &quot;look at transparency&quot; and let's prevent its destruction when being looked at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Engage()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_Engage_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.Engage*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_Engage" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.Engage">Engage()</h4>
   <div class="markdown level1 summary"><p>Once the target is looked at, set it to its full &quot;look at transparency&quot; and let's prevent its destruction when being looked at.</p>
@@ -145,6 +183,20 @@ If not, we can still blend it out a little, but keep it alive and visible.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_Update_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_BlendOut_Update" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

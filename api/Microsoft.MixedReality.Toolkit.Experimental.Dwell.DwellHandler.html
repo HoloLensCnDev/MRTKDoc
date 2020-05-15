@@ -98,15 +98,41 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IMixedRealityFocusHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.html">Microsoft.MixedReality.Toolkit.Experimental.Dwell</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DwellHandler : MonoBehaviour, IMixedRealityFocusHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class DwellHandler : MonoBehaviour, IMixedRealityFocusHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_CurrentDwellState" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.CurrentDwellState">CurrentDwellState</h4>
+  <div class="markdown level1 summary"><p>Captures the dwell status</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DwellHandler.DwellStateType CurrentDwellState</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.DwellStateType.html">DwellHandler.DwellStateType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_CurrentDwellState" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.CurrentDwellState">CurrentDwellState</h4>
@@ -152,6 +178,56 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellProfile.html">DwellProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_dwellProfile" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.dwellProfile">dwellProfile</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DwellProfile dwellProfile</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellProfile.html">DwellProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_FillTimer" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.FillTimer">FillTimer</h4>
+  <div class="markdown level1 summary"><p>Abstracted value for the how long the dwelled object still needs to be focused to complete the dwell action
+Value ranges from 0 to &quot;TimeToCompleteDwell&quot; setting in the dwellprofile. This picks up the same unit as TimeToCompleteDwell</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float FillTimer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -212,6 +288,58 @@ Value ranges from 0 to &quot;TimeToCompleteDwell&quot; setting in the dwellprofi
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_DwellProgress_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.DwellProgress*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_DwellProgress" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.DwellProgress">DwellProgress</h4>
+  <div class="markdown level1 summary"><p>Property exposing the computation for what percentage of dwell has progressed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual float DwellProgress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_HasFocus_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.HasFocus*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_HasFocus" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.HasFocus">HasFocus</h4>
+  <div class="markdown level1 summary"><p>Exposes whether the target has focus from the pointer type defined in dwell profile settings</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool HasFocus { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_HasFocus_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.HasFocus*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_HasFocus" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.HasFocus">HasFocus</h4>
   <div class="markdown level1 summary"><p>Exposes whether the target has focus from the pointer type defined in dwell profile settings</p>
@@ -249,6 +377,44 @@ Value ranges from 0 to &quot;TimeToCompleteDwell&quot; setting in the dwellprofi
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void CancelDwell()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_CancelDwell_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.CancelDwell*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_CancelDwell" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.CancelDwell">CancelDwell()</h4>
+  <div class="markdown level1 summary"><p>Method that can be invoked if external factors (e.g. alternate input modality  preemptively invoked the target) force the dwell action to prematurely end</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void CancelDwell()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_OnFocusEnter_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.OnFocusEnter*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_OnFocusEnter_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.OnFocusEnter(FocusEventData)">OnFocusEnter(FocusEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnFocusEnter(FocusEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FocusEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_OnFocusEnter_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.OnFocusEnter*"></a>
@@ -305,6 +471,44 @@ Value ranges from 0 to &quot;TimeToCompleteDwell&quot; setting in the dwellprofi
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_OnFocusExit_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.OnFocusExit*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_OnFocusExit_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.OnFocusExit(FocusEventData)">OnFocusExit(FocusEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnFocusExit(FocusEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FocusEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_UpdateFillTimer_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.UpdateFillTimer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_UpdateFillTimer" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.UpdateFillTimer">UpdateFillTimer()</h4>
+  <div class="markdown level1 summary"><p>Default FillTimer computation based on profile settings</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateFillTimer()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_UpdateFillTimer_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.UpdateFillTimer*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_DwellHandler_UpdateFillTimer" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.UpdateFillTimer">UpdateFillTimer()</h4>
   <div class="markdown level1 summary"><p>Default FillTimer computation based on profile settings</p>
@@ -317,6 +521,9 @@ Value ranges from 0 to &quot;TimeToCompleteDwell&quot; setting in the dwellprofi
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IMixedRealityFocusHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

@@ -152,8 +152,75 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_Search_MixedRealitySearchUtility_Searching_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.Search.MixedRealitySearchUtility.Searching*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_Search_MixedRealitySearchUtility_Searching" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.Search.MixedRealitySearchUtility.Searching">Searching</h4>
+  <div class="markdown level1 summary"><p>True if a search is being executed. This must be false before calling StartProfileSearch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Searching { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_Search_MixedRealitySearchUtility_StartProfileSearch_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.Search.MixedRealitySearchUtility.StartProfileSearch*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_Search_MixedRealitySearchUtility_StartProfileSearch_UnityEngine_Object_Microsoft_MixedReality_Toolkit_Utilities_Editor_Search_SearchConfig_Action_System_Boolean_UnityEngine_Object_IReadOnlyCollection_Microsoft_MixedReality_Toolkit_Utilities_Editor_Search_ProfileSearchResult___" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.Search.MixedRealitySearchUtility.StartProfileSearch(UnityEngine.Object,Microsoft.MixedReality.Toolkit.Utilities.Editor.Search.SearchConfig,Action{System.Boolean,UnityEngine.Object,IReadOnlyCollection{Microsoft.MixedReality.Toolkit.Utilities.Editor.Search.ProfileSearchResult}})">StartProfileSearch(UnityEngine.Object, SearchConfig, Action&lt;Boolean, UnityEngine.Object, IReadOnlyCollection&lt;ProfileSearchResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Starts a profile search. 'Searching' must be false or an exception will be thrown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void StartProfileSearch(UnityEngine.Object profile, SearchConfig config, Action&lt;bool, UnityEngine.Object, IReadOnlyCollection&lt;ProfileSearchResult&gt;&gt; onSearchComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Object</span></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>Profile object to search.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Editor.Search.SearchConfig.html">SearchConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>Configuration for the search.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>, <span class="xref">UnityEngine.Object</span>, <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Editor.Search.ProfileSearchResult.html">ProfileSearchResult</a>&gt;&gt;</td>
+        <td><span class="parametername">onSearchComplete</span></td>
+        <td><p>Action to invoke once search is complete - delivers final results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_Search_MixedRealitySearchUtility_StartProfileSearch_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.Search.MixedRealitySearchUtility.StartProfileSearch*"></a>

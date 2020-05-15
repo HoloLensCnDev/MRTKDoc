@@ -94,11 +94,15 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">UnityARCameraSettingsProfile</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseCameraSettingsProfile</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.html">Microsoft.MixedReality.Toolkit.Experimental.UnityAR</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettingsProfile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UnityARCameraSettingsProfile : BaseCameraSettingsProfile</code></pre>
+    <pre><code class="lang-csharp hljs">public class UnityARCameraSettingsProfile : BaseCameraSettingsProfile, BaseCameraSettingsProfile</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -124,6 +128,58 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.ArTrackedPose.html">ArTrackedPose</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettingsProfile_PoseSource_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettingsProfile.PoseSource*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettingsProfile_PoseSource" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettingsProfile.PoseSource">PoseSource</h4>
+  <div class="markdown level1 summary"><p>The portion of the device (ex: color camera) from which to read the pose.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArTrackedPose PoseSource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.ArTrackedPose.html">ArTrackedPose</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettingsProfile_TrackingType_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettingsProfile.TrackingType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettingsProfile_TrackingType" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettingsProfile.TrackingType">TrackingType</h4>
+  <div class="markdown level1 summary"><p>The type of tracking (position and/or rotation) to apply.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArTrackingType TrackingType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.ArTrackingType.html">ArTrackingType</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -180,6 +236,36 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettingsProfile_UpdateType_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettingsProfile.UpdateType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettingsProfile_UpdateType" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettingsProfile.UpdateType">UpdateType</h4>
+  <div class="markdown level1 summary"><p>Specifies when (during Update and/or just before rendering) to update the tracking of the pose.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArUpdateType UpdateType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.ArUpdateType.html">ArUpdateType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseCameraSettingsProfile</span>
+  </div>
 </article>
           </div>
           

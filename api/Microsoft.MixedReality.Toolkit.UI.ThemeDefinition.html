@@ -119,10 +119,37 @@
   <h5 id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
+[Serializable]
 public struct ThemeDefinition : ISerializationCallbackReceiver</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_CustomProperties_" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.CustomProperties*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_CustomProperties" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.CustomProperties">CustomProperties</h4>
+  <div class="markdown level1 summary"><p>List of single-value properties defined for the entire Theme engine regardless of the current state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ThemeProperty&gt; CustomProperties { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ThemeProperty.html">ThemeProperty</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_CustomProperties_" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.CustomProperties*"></a>
@@ -177,6 +204,32 @@ public struct ThemeDefinition : ISerializationCallbackReceiver</code></pre>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_Easing_" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.Easing*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_Easing" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.Easing">Easing</h4>
+  <div class="markdown level1 summary"><p>Object to configure easing between values. Type of Theme Engine, as defined by the ThemeType property, must have IsEasingSupported set to true</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Easing Easing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Easing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_StateProperties_" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.StateProperties*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_StateProperties" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.StateProperties">StateProperties</h4>
   <div class="markdown level1 summary"><p>List of properties with values defined per state index (Example list of colors for different states)</p>
@@ -197,6 +250,58 @@ public struct ThemeDefinition : ISerializationCallbackReceiver</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ThemeStateProperty.html">ThemeStateProperty</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_StateProperties_" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.StateProperties*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_StateProperties" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.StateProperties">StateProperties</h4>
+  <div class="markdown level1 summary"><p>List of properties with values defined per state index (Example list of colors for different states)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ThemeStateProperty&gt; StateProperties { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ThemeStateProperty.html">ThemeStateProperty</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_ThemeType_" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.ThemeType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_ThemeType" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.ThemeType">ThemeType</h4>
+  <div class="markdown level1 summary"><p>Defines the type of Theme to associate with this definition. Type must be a class that extends InteractableThemeBase</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type ThemeType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -277,6 +382,51 @@ public struct ThemeDefinition : ISerializationCallbackReceiver</code></pre>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_GetDefaultThemeDefinition_" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.GetDefaultThemeDefinition*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_GetDefaultThemeDefinition_Type_" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.GetDefaultThemeDefinition(Type)">GetDefaultThemeDefinition(Type)</h4>
+  <div class="markdown level1 summary"><p>Utility function to generate the default ThemeDefinition configuration for the provided type of Theme engine</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ThemeDefinition? GetDefaultThemeDefinition(Type themeType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">themeType</span></td>
+        <td><p>type of Theme Engine to build default configuration for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.html">ThemeDefinition</a>&gt;</td>
+        <td><p>Default ThemeDefinition configuration for the provided them type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_GetDefaultThemeDefinition_" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.GetDefaultThemeDefinition*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_GetDefaultThemeDefinition__1" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.GetDefaultThemeDefinition``1">GetDefaultThemeDefinition&lt;T&gt;()</h4>
   <div class="markdown level1 summary"><p>Utility function to generate the default ThemeDefinition configuration for the provided type of Theme engine</p>
 </div>
@@ -284,6 +434,52 @@ public struct ThemeDefinition : ISerializationCallbackReceiver</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static ThemeDefinition? GetDefaultThemeDefinition&lt;T&gt;()
+
+    where T : InteractableThemeBase</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.html">ThemeDefinition</a>&gt;</td>
+        <td><p>Default ThemeDefinition configuration for the provided them type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>type of Theme Engine to build default configuration for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_GetDefaultThemeDefinition_" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.GetDefaultThemeDefinition*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ThemeDefinition_GetDefaultThemeDefinition__1" data-uid="Microsoft.MixedReality.Toolkit.UI.ThemeDefinition.GetDefaultThemeDefinition``1">GetDefaultThemeDefinition&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Utility function to generate the default ThemeDefinition configuration for the provided type of Theme engine</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ThemeDefinition? GetDefaultThemeDefinition&lt;T&gt;()
+
     where T : InteractableThemeBase</code></pre>
   </div>
   <h5 class="returns">Returns</h5>

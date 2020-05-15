@@ -98,6 +98,10 @@ control panels or sets of prefab/objects.</p>
     <div class="level2"><span class="xref">GridObjectCollection</span></div>
       <div class="level3"><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ScatterObjectCollection.html">ScatterObjectCollection</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -132,10 +136,34 @@ control panels or sets of prefab/objects.</p>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GridObjectCollection : BaseObjectCollection</code></pre>
+    <pre><code class="lang-csharp hljs">public class GridObjectCollection : BaseObjectCollection, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_HalfCell" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.HalfCell">HalfCell</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector2 HalfCell</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_HalfCell" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.HalfCell">HalfCell</h4>
@@ -166,7 +194,8 @@ control panels or sets of prefab/objects.</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Anchor_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Anchor*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Anchor" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Anchor">Anchor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Where the grid is anchored relative to local origin</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -183,6 +212,84 @@ control panels or sets of prefab/objects.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutAnchor.html">LayoutAnchor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Anchor_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Anchor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Anchor" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Anchor">Anchor</h4>
+  <div class="markdown level1 summary"><p>Where the grid is anchored relative to local origin</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LayoutAnchor Anchor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutAnchor.html">LayoutAnchor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_AnchorAlongAxis_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.AnchorAlongAxis*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_AnchorAlongAxis" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.AnchorAlongAxis">AnchorAlongAxis</h4>
+  <div class="markdown level1 summary"><p>Whether anchoring occurs along an objects axis or not</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AnchorAlongAxis { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_CellHeight_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.CellHeight*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_CellHeight" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.CellHeight">CellHeight</h4>
+  <div class="markdown level1 summary"><p>Height of the cell per object in the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float CellHeight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -235,6 +342,85 @@ control panels or sets of prefab/objects.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_CellWidth_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.CellWidth*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_CellWidth" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.CellWidth">CellWidth</h4>
+  <div class="markdown level1 summary"><p>Width of the cell per object in the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float CellWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_ColumnAlignment_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.ColumnAlignment*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_ColumnAlignment" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.ColumnAlignment">ColumnAlignment</h4>
+  <div class="markdown level1 summary"><p>How the columns are aligned in the grid</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LayoutHorizontalAlignment ColumnAlignment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutHorizontalAlignment.html">LayoutHorizontalAlignment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Columns_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Columns*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Columns" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Columns">Columns</h4>
+  <div class="markdown level1 summary"><p>Number of columns per row. Can only be assigned when layout type is
+ColumnsThenRows</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Columns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -294,6 +480,58 @@ ColumnsThenRows</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_CylinderMesh_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.CylinderMesh*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_CylinderMesh" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.CylinderMesh">CylinderMesh</h4>
+  <div class="markdown level1 summary"><p>Reference mesh to use for rendering the cylinder layout</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mesh CylinderMesh { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Distance_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Distance*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Distance" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Distance">Distance</h4>
+  <div class="markdown level1 summary"><p>This is the Distance for an offset for the Plane mapping and is ignored for the other mappings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Distance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Distance_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Distance*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Distance" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Distance">Distance</h4>
   <div class="markdown level1 summary"><p>This is the Distance for an offset for the Plane mapping and is ignored for the other mappings.</p>
@@ -346,9 +584,35 @@ ColumnsThenRows</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Height_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Height*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Height" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Height">Height</h4>
+  <div class="markdown level1 summary"><p>Total Height of collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Height { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Layout_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Layout*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Layout" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Layout">Layout</h4>
-  <div class="markdown level1 summary"><p>Specify direction in which children are laid out.</p>
+  <div class="markdown level1 summary"><p>Specify direction in which children are laid out</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -366,6 +630,58 @@ ColumnsThenRows</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutOrder.html">LayoutOrder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Layout_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Layout*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Layout" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Layout">Layout</h4>
+  <div class="markdown level1 summary"><p>Specify direction in which children are laid out</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LayoutOrder Layout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutOrder.html">LayoutOrder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_OrientType_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.OrientType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_OrientType" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.OrientType">OrientType</h4>
+  <div class="markdown level1 summary"><p>Should the objects in the collection face the origin of the collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrientationType OrientType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.OrientationType.html">OrientationType</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -424,6 +740,32 @@ ColumnsThenRows</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_RadialRange_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.RadialRange*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_RadialRange" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.RadialRange">RadialRange</h4>
+  <div class="markdown level1 summary"><p>This is the radial range for creating a radial fan layout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RadialRange { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Radius_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Radius*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Radius" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Radius">Radius</h4>
   <div class="markdown level1 summary"><p>This is the radius of either the Cylinder or Sphere mapping and is ignored when using the plane mapping.</p>
@@ -444,6 +786,85 @@ ColumnsThenRows</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Radius_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Radius*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Radius" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Radius">Radius</h4>
+  <div class="markdown level1 summary"><p>This is the radius of either the Cylinder or Sphere mapping and is ignored when using the plane mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Radius { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_RowAlignment_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.RowAlignment*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_RowAlignment" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.RowAlignment">RowAlignment</h4>
+  <div class="markdown level1 summary"><p>How the rows are aligned in the grid</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LayoutVerticalAlignment RowAlignment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutVerticalAlignment.html">LayoutVerticalAlignment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Rows_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Rows*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Rows" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Rows">Rows</h4>
+  <div class="markdown level1 summary"><p>Number of rows per column. Can only be assigned when layout type is
+RowsThenColumns</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Rows { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -503,6 +924,58 @@ RowsThenColumns</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_SphereMesh_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.SphereMesh*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_SphereMesh" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.SphereMesh">SphereMesh</h4>
+  <div class="markdown level1 summary"><p>Reference mesh to use for rendering the sphere layout</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mesh SphereMesh { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_SurfaceType_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.SurfaceType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_SurfaceType" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.SurfaceType">SurfaceType</h4>
+  <div class="markdown level1 summary"><p>Type of surface to map the collection to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObjectOrientationSurfaceType SurfaceType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ObjectOrientationSurfaceType.html">ObjectOrientationSurfaceType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_SurfaceType_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.SurfaceType*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_SurfaceType" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.SurfaceType">SurfaceType</h4>
   <div class="markdown level1 summary"><p>Type of surface to map the collection to.</p>
@@ -553,8 +1026,47 @@ RowsThenColumns</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Width_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Width*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_Width" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.Width">Width</h4>
+  <div class="markdown level1 summary"><p>Total Width of collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Width { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_LayoutChildren_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.LayoutChildren*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_LayoutChildren" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.LayoutChildren">LayoutChildren()</h4>
+  <div class="markdown level1 summary"><p>Overriding base function for laying out all the children when UpdateCollection is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void LayoutChildren()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.html#Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_LayoutChildren">BaseObjectCollection.LayoutChildren()</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_LayoutChildren_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.LayoutChildren*"></a>
@@ -578,6 +1090,48 @@ RowsThenColumns</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnDrawGizmosSelected()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_OnDrawGizmosSelected_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.OnDrawGizmosSelected*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_OnDrawGizmosSelected" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.OnDrawGizmosSelected">OnDrawGizmosSelected()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDrawGizmosSelected()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_ResolveGridLayout_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.ResolveGridLayout*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_ResolveGridLayout_Vector3___Microsoft_MixedReality_Toolkit_Utilities_LayoutOrder_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.ResolveGridLayout(Vector3[],Microsoft.MixedReality.Toolkit.Utilities.LayoutOrder)">ResolveGridLayout(Vector3[], LayoutOrder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ResolveGridLayout(Vector3[] grid, LayoutOrder order)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">grid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutOrder.html">LayoutOrder</a></td>
+        <td><span class="parametername">order</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_ResolveGridLayout_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.ResolveGridLayout*"></a>
@@ -638,6 +1192,38 @@ RowsThenColumns</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_UpdateNodeFacing_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.UpdateNodeFacing*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GridObjectCollection_UpdateNodeFacing_Microsoft_MixedReality_Toolkit_Utilities_ObjectCollectionNode_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.UpdateNodeFacing(Microsoft.MixedReality.Toolkit.Utilities.ObjectCollectionNode)">UpdateNodeFacing(ObjectCollectionNode)</h4>
+  <div class="markdown level1 summary"><p>Update the facing of a node given the nodes new position for facing origin with node and orientation type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdateNodeFacing(ObjectCollectionNode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ObjectCollectionNode.html">ObjectCollectionNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

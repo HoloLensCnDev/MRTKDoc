@@ -99,6 +99,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityControllerPoseSynchronizer.html">IMixedRealityControllerPoseSynchronizer</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourcePoseHandler.html">IMixedRealitySourcePoseHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourceStateHandler.html">IMixedRealitySourceStateHandler</a></div>
@@ -188,7 +189,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealityControllerVisualizer : ControllerPoseSynchronizer, IMixedRealityControllerPoseSynchronizer, IMixedRealitySourcePoseHandler, IMixedRealitySourceStateHandler, IMixedRealityInputHandler, IMixedRealityBaseInputHandler, IMixedRealityInputHandler&lt;float&gt;, IMixedRealityInputHandler&lt;Vector2&gt;, IMixedRealityInputHandler&lt;Vector3&gt;, IMixedRealityInputHandler&lt;Quaternion&gt;, IMixedRealityInputHandler&lt;MixedRealityPose&gt;, IEventSystemHandler, IMixedRealityControllerVisualizer</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealityControllerVisualizer : ControllerPoseSynchronizer, MonoBehaviour, IMixedRealityControllerPoseSynchronizer, IMixedRealitySourcePoseHandler, IMixedRealitySourceStateHandler, IMixedRealityInputHandler, IMixedRealityBaseInputHandler, IMixedRealityInputHandler&lt;float&gt;, IMixedRealityInputHandler&lt;Vector2&gt;, IMixedRealityInputHandler&lt;Vector3&gt;, IMixedRealityInputHandler&lt;Quaternion&gt;, IMixedRealityInputHandler&lt;MixedRealityPose&gt;, IEventSystemHandler, IMixedRealityControllerVisualizer</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -196,8 +197,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_GameObjectProxy_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.GameObjectProxy*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_GameObjectProxy" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.GameObjectProxy">GameObjectProxy</h4>
-  <div class="markdown level1 summary"><p>The <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a> reference for this controller.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -218,9 +218,31 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_GameObjectProxy_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This reference may not always be available when called.</p>
-</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_GameObjectProxy_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.GameObjectProxy*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_GameObjectProxy" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.GameObjectProxy">GameObjectProxy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject GameObjectProxy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -254,6 +276,72 @@
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ControllerPoseSynchronizer.html#Microsoft_MixedReality_Toolkit_Input_ControllerPoseSynchronizer_OnInputChanged_Microsoft_MixedReality_Toolkit_Input_InputEventData_System_Single__">ControllerPoseSynchronizer.OnInputChanged(InputEventData&lt;Single&gt;)</a></div>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputChanged_Microsoft_MixedReality_Toolkit_Input_InputEventData_System_Single___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Reserved for future implementation</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputChanged_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.OnInputChanged*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputChanged_Microsoft_MixedReality_Toolkit_Input_InputEventData_System_Single__" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.OnInputChanged(Microsoft.MixedReality.Toolkit.Input.InputEventData{System.Single})">OnInputChanged(InputEventData&lt;Single&gt;)</h4>
+  <div class="markdown level1 summary"><p>Visualize single axis controls on the controller model, if supported</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnInputChanged(InputEventData&lt;float&gt; eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputEventData-1.html">InputEventData</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ControllerPoseSynchronizer.html#Microsoft_MixedReality_Toolkit_Input_ControllerPoseSynchronizer_OnInputChanged_Microsoft_MixedReality_Toolkit_Input_InputEventData_System_Single__">ControllerPoseSynchronizer.OnInputChanged(InputEventData&lt;Single&gt;)</a></div>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputChanged_Microsoft_MixedReality_Toolkit_Input_InputEventData_System_Single___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Reserved for future implementation</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputChanged_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.OnInputChanged*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputChanged_Microsoft_MixedReality_Toolkit_Input_InputEventData_Vector2__" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.OnInputChanged(Microsoft.MixedReality.Toolkit.Input.InputEventData{Vector2})">OnInputChanged(InputEventData&lt;Vector2&gt;)</h4>
+  <div class="markdown level1 summary"><p>Visualize the movement of a dual axis input on the controller model, if supported</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnInputChanged(InputEventData&lt;Vector2&gt; eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputEventData-1.html">InputEventData</a>&lt;<span class="xref">Vector2</span>&gt;</td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ControllerPoseSynchronizer.html#Microsoft_MixedReality_Toolkit_Input_ControllerPoseSynchronizer_OnInputChanged_Microsoft_MixedReality_Toolkit_Input_InputEventData_Vector2__">ControllerPoseSynchronizer.OnInputChanged(InputEventData&lt;Vector2&gt;)</a></div>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputChanged_Microsoft_MixedReality_Toolkit_Input_InputEventData_Vector2___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Reserved for future implementation</p>
 </div>
   
@@ -324,6 +412,72 @@
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputDown_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.OnInputDown*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputDown_Microsoft_MixedReality_Toolkit_Input_InputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.OnInputDown(Microsoft.MixedReality.Toolkit.Input.InputEventData)">OnInputDown(InputEventData)</h4>
+  <div class="markdown level1 summary"><p>Visualize digital and single axis controls down state on the controller model, if supported</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnInputDown(InputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputEventData.html">InputEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ControllerPoseSynchronizer.html#Microsoft_MixedReality_Toolkit_Input_ControllerPoseSynchronizer_OnInputDown_Microsoft_MixedReality_Toolkit_Input_InputEventData_">ControllerPoseSynchronizer.OnInputDown(InputEventData)</a></div>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputDown_Microsoft_MixedReality_Toolkit_Input_InputEventData__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Reserved for future implementation</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputUp_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.OnInputUp*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputUp_Microsoft_MixedReality_Toolkit_Input_InputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.OnInputUp(Microsoft.MixedReality.Toolkit.Input.InputEventData)">OnInputUp(InputEventData)</h4>
+  <div class="markdown level1 summary"><p>Visualize digital and single axis controls up state on the controller model, if supported</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnInputUp(InputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputEventData.html">InputEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ControllerPoseSynchronizer.html#Microsoft_MixedReality_Toolkit_Input_ControllerPoseSynchronizer_OnInputUp_Microsoft_MixedReality_Toolkit_Input_InputEventData_">ControllerPoseSynchronizer.OnInputUp(InputEventData)</a></div>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputUp_Microsoft_MixedReality_Toolkit_Input_InputEventData__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Reserved for future implementation</p>
+</div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputUp_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.OnInputUp*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerVisualizer_OnInputUp_Microsoft_MixedReality_Toolkit_Input_InputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer.OnInputUp(Microsoft.MixedReality.Toolkit.Input.InputEventData)">OnInputUp(InputEventData)</h4>
   <div class="markdown level1 summary"><p>Visualize digital and single axis controls up state on the controller model, if supported</p>
@@ -356,6 +510,9 @@
   <div class="markdown level1 remarks"><p>Reserved for future implementation</p>
 </div>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
   <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityControllerPoseSynchronizer.html">IMixedRealityControllerPoseSynchronizer</a>
   </div>
@@ -394,6 +551,7 @@
   </div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
+      <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerMappingProfile.html">MixedRealityControllerMappingProfile</a></div>
       <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerMappingProfile.html">MixedRealityControllerMappingProfile</a></div>
   </div>
 </article>

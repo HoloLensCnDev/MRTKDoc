@@ -165,8 +165,81 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands__ctor_System_String_KeyCode_Microsoft_MixedReality_Toolkit_Input_MixedRealityInputAction_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.#ctor(System.String,KeyCode,Microsoft.MixedReality.Toolkit.Input.MixedRealityInputAction,System.String)">SpeechCommands(String, KeyCode, MixedRealityInputAction, String)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpeechCommands(string keyword, KeyCode keyCode, MixedRealityInputAction action, string localizationKey = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">keyword</span></td>
+        <td><p>The Keyword.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">KeyCode</span></td>
+        <td><span class="parametername">keyCode</span></td>
+        <td><p>The KeyCode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputAction.html">MixedRealityInputAction</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The Action to perform when Keyword or KeyCode is recognized.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">localizationKey</span></td>
+        <td><p>An optional key to use to override the keyword with a localized version</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_Action_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.Action*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_Action" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.Action">Action</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputAction.html">MixedRealityInputAction</a> that is raised by either the Keyword or KeyCode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityInputAction Action { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputAction.html">MixedRealityInputAction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_Action_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.Action*"></a>
@@ -221,6 +294,32 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_KeyCode_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.KeyCode*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_KeyCode" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.KeyCode">KeyCode</h4>
+  <div class="markdown level1 summary"><p>The corresponding KeyCode that also raises the same action as the Keyword.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyCode KeyCode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">KeyCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_Keyword_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.Keyword*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_Keyword" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.Keyword">Keyword</h4>
   <div class="markdown level1 summary"><p>The Fallback Keyword to listen for, or the localization key if no fallback keyword was set.</p>
@@ -229,6 +328,58 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Keyword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_Keyword_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.Keyword*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_Keyword" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.Keyword">Keyword</h4>
+  <div class="markdown level1 summary"><p>The Fallback Keyword to listen for, or the localization key if no fallback keyword was set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Keyword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_LocalizedKeyword_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.LocalizedKeyword*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechCommands_LocalizedKeyword" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.LocalizedKeyword">LocalizedKeyword</h4>
+  <div class="markdown level1 summary"><p>The localized version of the keyword</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LocalizedKeyword { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

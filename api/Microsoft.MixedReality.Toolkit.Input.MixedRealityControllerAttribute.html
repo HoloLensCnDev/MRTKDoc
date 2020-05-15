@@ -94,11 +94,15 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">MixedRealityControllerAttribute</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Attribute</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.html">Microsoft.MixedReality.Toolkit.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealityControllerAttribute : Attribute</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealityControllerAttribute : Attribute, Attribute</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -110,7 +114,49 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MixedRealityControllerAttribute(SupportedControllerType supportedControllerType, Handedness[] supportedHandedness, string texturePath = &quot;&quot;, MixedRealityControllerConfigurationFlags flags = (MixedRealityControllerConfigurationFlags)0)</code></pre>
+    <pre><code class="lang-csharp hljs">public MixedRealityControllerAttribute(SupportedControllerType supportedControllerType, Handedness[] supportedHandedness, string texturePath = &quot;&quot;, MixedRealityControllerConfigurationFlags flags = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SupportedControllerType.html">SupportedControllerType</a></td>
+        <td><span class="parametername">supportedControllerType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Handedness</span>[]</td>
+        <td><span class="parametername">supportedHandedness</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">texturePath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerConfigurationFlags.html">MixedRealityControllerConfigurationFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute__ctor_Microsoft_MixedReality_Toolkit_Input_SupportedControllerType_Handedness___System_String_Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerConfigurationFlags_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.#ctor(Microsoft.MixedReality.Toolkit.Input.SupportedControllerType,Handedness[],System.String,Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerConfigurationFlags)">MixedRealityControllerAttribute(SupportedControllerType, Handedness[], String, MixedRealityControllerConfigurationFlags)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityControllerAttribute(SupportedControllerType supportedControllerType, Handedness[] supportedHandedness, string texturePath = &quot;&quot;, MixedRealityControllerConfigurationFlags flags = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,6 +220,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_Flags_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.Flags*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_Flags" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.Flags">Flags</h4>
+  <div class="markdown level1 summary"><p>Additional flags for configuring controller capabilities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityControllerConfigurationFlags Flags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerConfigurationFlags.html">MixedRealityControllerConfigurationFlags</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_SupportedControllerType_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.SupportedControllerType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_SupportedControllerType" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.SupportedControllerType">SupportedControllerType</h4>
+  <div class="markdown level1 summary"><p>The SupportedControllerType to which the controller device belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SupportedControllerType SupportedControllerType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SupportedControllerType.html">SupportedControllerType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_SupportedControllerType_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.SupportedControllerType*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_SupportedControllerType" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.SupportedControllerType">SupportedControllerType</h4>
   <div class="markdown level1 summary"><p>The SupportedControllerType to which the controller device belongs to.</p>
@@ -220,6 +318,58 @@
     <tbody>
       <tr>
         <td><span class="xref">Handedness</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_SupportedHandedness_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.SupportedHandedness*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_SupportedHandedness" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.SupportedHandedness">SupportedHandedness</h4>
+  <div class="markdown level1 summary"><p>List of handedness values supported by the respective controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Handedness[] SupportedHandedness { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Handedness</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_TexturePath_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.TexturePath*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_TexturePath" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.TexturePath">TexturePath</h4>
+  <div class="markdown level1 summary"><p>Path to image file used when displaying an icon in the UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TexturePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -295,6 +445,53 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_Find_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.Find*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityControllerAttribute_Find_Type_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.Find(Type)">Find(Type)</h4>
+  <div class="markdown level1 summary"><p>Convenience function for retrieving the attribute given a certain class type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MixedRealityControllerAttribute Find(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerAttribute.html">MixedRealityControllerAttribute</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Attribute</span>
+  </div>
 </article>
           </div>
           

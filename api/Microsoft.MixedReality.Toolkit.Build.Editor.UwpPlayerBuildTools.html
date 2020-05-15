@@ -177,6 +177,109 @@
   
   
   <a id="Microsoft_MixedReality_Toolkit_Build_Editor_UwpPlayerBuildTools_BuildPlayer_" data-uid="Microsoft.MixedReality.Toolkit.Build.Editor.UwpPlayerBuildTools.BuildPlayer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Build_Editor_UwpPlayerBuildTools_BuildPlayer_Microsoft_MixedReality_Toolkit_Build_Editor_UwpBuildInfo_CancellationToken_" data-uid="Microsoft.MixedReality.Toolkit.Build.Editor.UwpPlayerBuildTools.BuildPlayer(Microsoft.MixedReality.Toolkit.Build.Editor.UwpBuildInfo,CancellationToken)">BuildPlayer(UwpBuildInfo, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Build the Uwp Player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; BuildPlayer(UwpBuildInfo buildInfo, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Build.Editor.UwpBuildInfo.html">UwpBuildInfo</a></td>
+        <td><span class="parametername">buildInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Build_Editor_UwpPlayerBuildTools_BuildPlayer_" data-uid="Microsoft.MixedReality.Toolkit.Build.Editor.UwpPlayerBuildTools.BuildPlayer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Build_Editor_UwpPlayerBuildTools_BuildPlayer_System_String_System_Boolean_CancellationToken_" data-uid="Microsoft.MixedReality.Toolkit.Build.Editor.UwpPlayerBuildTools.BuildPlayer(System.String,System.Boolean,CancellationToken)">BuildPlayer(String, Boolean, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Do a build configured for UWP Applications to the specified path, returns the error from <a class="xref" href="Microsoft.MixedReality.Toolkit.Build.Editor.UwpPlayerBuildTools.html#Microsoft_MixedReality_Toolkit_Build_Editor_UwpPlayerBuildTools_BuildPlayer_Microsoft_MixedReality_Toolkit_Build_Editor_UwpBuildInfo_CancellationToken_">BuildPlayer(UwpBuildInfo, CancellationToken)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; BuildPlayer(string buildDirectory, bool showDialog = true, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">buildDirectory</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">showDialog</span></td>
+        <td><p>Should the user be prompted to build the appx as well?</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>True, if build was successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Build_Editor_UwpPlayerBuildTools_BuildPlayer_" data-uid="Microsoft.MixedReality.Toolkit.Build.Editor.UwpPlayerBuildTools.BuildPlayer*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Build_Editor_UwpPlayerBuildTools_BuildPlayer_System_String_System_Boolean_CancellationToken_" data-uid="Microsoft.MixedReality.Toolkit.Build.Editor.UwpPlayerBuildTools.BuildPlayer(System.String,System.Boolean,CancellationToken)">BuildPlayer(String, Boolean, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Do a build configured for UWP Applications to the specified path, returns the error from <a class="xref" href="Microsoft.MixedReality.Toolkit.Build.Editor.UwpPlayerBuildTools.html#Microsoft_MixedReality_Toolkit_Build_Editor_UwpPlayerBuildTools_BuildPlayer_Microsoft_MixedReality_Toolkit_Build_Editor_UwpBuildInfo_CancellationToken_">BuildPlayer(UwpBuildInfo, CancellationToken)</a></p>
 </div>

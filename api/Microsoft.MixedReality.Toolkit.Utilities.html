@@ -201,6 +201,9 @@ those normals into a UV set. Smoothed normals can be used for a variety of effec
 extruding disjoint meshes along a vertex normal. This behavior is designed to be used in conjunction
 with the MRTK/Standard shader which assumes smoothed normals are packed into the 3rd UV set.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MigrationWindow.html">MigrationWindow</a></h4>
+      <section><p><a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Tools/MigrationWindow.html">https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Tools/MigrationWindow.html</a>This is an utility window for the MigrationTool.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityLineRenderer.html">MixedRealityLineRenderer</a></h4>
       <section><p>Implements Unity's built in line renderer component, and applies the line data to it.</p>
 </section>
@@ -208,6 +211,10 @@ with the MRTK/Standard shader which assumes smoothed normals are packed into the
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ObjectCollectionNode.html">ObjectCollectionNode</a></h4>
       <section><p>Collection node is a data storage class for individual data about an object in a collection.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ObjectManipulatorMigrationHandler.html">ObjectManipulatorMigrationHandler</a></h4>
+      <section><p>Interface defining a migration handler, which is used to migrate assets as they
+upgrade to new versions of MRTK.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.OBJWriterUtility.html">OBJWriterUtility</a></h4>
       <section><p>Utility for generating and saving OBJ files from GameObjects and their Meshes</p>
@@ -243,6 +250,9 @@ The Z component is scaled to the min of the X and Y components.</p>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Rest.html">Rest</a></h4>
       <section><p>REST Class for CRUD Transactions.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.RotationConstraintHelper.html">RotationConstraintHelper</a></h4>
+      <section><p>Helper class used to convert from RotationConstraintType to AxisFlags</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.RuntimeSceneUtils.html">RuntimeSceneUtils</a></h4>
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ScatterObjectCollection.html">ScatterObjectCollection</a></h4>
@@ -258,6 +268,17 @@ Extends C# Dictionary class to support typical API access methods</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.SplineDataProvider.html">SplineDataProvider</a></h4>
       <section><p>Creates a spline based on control points.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.StabilizedRay.html">StabilizedRay</a></h4>
+      <section><p>A ray whose position and direction are stabilized in a way similar to how gaze stabilization
+works in HoloLens.</p>
+<p>The ray uses Anatolie Gavrulic's &quot;DynamicExpDecay&quot; filter to stabilize the ray
+this filter adjusts its smoothing factor based on the velocity of the filtered object</p>
+<p>The formula is
+Y_smooted += ∆𝑌_𝑟
+where
+〖∆𝑌_𝑟=∆𝑌∗〖0.5〗^(∆𝑌/〖Halflife〗)</p>
+<p>In code, LERP(signal, oldValue, POW(0.5, ABS(signal – oldValue) / hl)</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.StandardShaderUtility.html">StandardShaderUtility</a></h4>
       <section><p>Mixed Reality standard shader utility class with commonly used constants, types and convenience methods.</p>
@@ -291,6 +312,8 @@ when using multiple threads with async methods.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.html">MixedRealityPose</a></h4>
       <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MixedRealityTransform.html">MixedRealityTransform</a></h4>
+      <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ProcessResult.html">ProcessResult</a></h4>
       <section><p>Result from a completed asynchronous process.</p>
 </section>
@@ -299,8 +322,17 @@ when using multiple threads with async methods.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Vector3Smoothed.html">Vector3Smoothed</a></h4>
       <section></section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.IMigrationHandler.html">IMigrationHandler</a></h4>
+      <section><p>Interface defining a migration handler, which is used to migrate assets as they
+upgrade to new versions of MRTK.</p>
+</section>
     <h3 id="enums">Enums
   </h3>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.GestureId.html">ArticulatedHandPose.GestureId</a></h4>
+      <section><p>Supported hand gestures.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ArticulatedHandPose.GestureId.html">ArticulatedHandPose.GestureId</a></h4>
       <section><p>Supported hand gestures.</p>
 </section>
@@ -309,14 +341,34 @@ when using multiple threads with async methods.</p>
 Both will warm up the component, ready for it's use (e.g. connecting backend services or registering for events.
 The first causes the feature to start immediately. The second allows the feature to be manually started at a later time.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.AutoStartBehavior.html">AutoStartBehavior</a></h4>
+      <section><p>This enumeration identifies two different ways to handle the startup behavior for a feature.
+Both will warm up the component, ready for it's use (e.g. connecting backend services or registering for events.
+The first causes the feature to start immediately. The second allows the feature to be manually started at a later time.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.AxisFlags.html">AxisFlags</a></h4>
+      <section><p>Flags used to represent a set of 3D axes</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.AxisType.html">AxisType</a></h4>
+      <section><p>The AxisType identifies the type of button or input being sent to the framework from a controller.
+This is mainly information only or for advanced users to understand the input coming directly from the controller.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.AxisType.html">AxisType</a></h4>
       <section><p>The AxisType identifies the type of button or input being sent to the framework from a controller.
 This is mainly information only or for advanced users to understand the input coming directly from the controller.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ClippingPrimitive.Side.html">ClippingPrimitive.Side</a></h4>
       <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ClippingPrimitive.Side.html">ClippingPrimitive.Side</a></h4>
+      <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.CollationOrder.html">CollationOrder</a></h4>
       <section><p>Collation order type used for sorting</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.CollationOrder.html">CollationOrder</a></h4>
+      <section><p>Collation order type used for sorting</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.CreateProfileMenuItemIndices.html">CreateProfileMenuItemIndices</a></h4>
+      <section><p>Defines the display order of the Assets &gt; Create &gt; Mixed Reality Toolkit &gt; Profiles menu items.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.CreateProfileMenuItemIndices.html">CreateProfileMenuItemIndices</a></h4>
       <section><p>Defines the display order of the Assets &gt; Create &gt; Mixed Reality Toolkit &gt; Profiles menu items.</p>
@@ -324,8 +376,19 @@ This is mainly information only or for advanced users to understand the input co
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Easing.BasicEaseCurves.html">Easing.BasicEaseCurves</a></h4>
       <section><p>basic ease curves for quick settings</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Easing.BasicEaseCurves.html">Easing.BasicEaseCurves</a></h4>
+      <section><p>basic ease curves for quick settings</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ExperienceScale.html">ExperienceScale</a></h4>
       <section><p>The ExperienceScale identifies the environment for which the experience is designed.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ExperienceScale.html">ExperienceScale</a></h4>
+      <section><p>The ExperienceScale identifies the environment for which the experience is designed.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Handedness.html">Handedness</a></h4>
+      <section><p>The Handedness defines which hand a controller is currently operating in.
+It is up to the developer to determine whether this affects the use of a controller or not.
+&quot;Other&quot; defines potential controllers that will offer a &quot;third&quot; hand, e.g. a full body tracking suit.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Handedness.html">Handedness</a></h4>
       <section><p>The Handedness defines which hand a controller is currently operating in.
@@ -336,13 +399,40 @@ It is up to the developer to determine whether this affects the use of a control
       <section><p>Describes where parent should be located
 relative to child layout elements.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutAnchor.html">LayoutAnchor</a></h4>
+      <section><p>Describes where parent should be located
+relative to child layout elements.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutHorizontalAlignment.html">LayoutHorizontalAlignment</a></h4>
+      <section><p>Describes how the layout should be arranged horizontally</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutOrder.html">LayoutOrder</a></h4>
       <section><p>Collection layout type enum</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutOrder.html">LayoutOrder</a></h4>
+      <section><p>Collection layout type enum</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.LayoutVerticalAlignment.html">LayoutVerticalAlignment</a></h4>
+      <section><p>Describes how the layout should be arranged vertically</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ManipulationHandFlags.html">ManipulationHandFlags</a></h4>
+      <section><p>Flags used to represent the number of hands that can be used in manipulation</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ManipulationProximityFlags.html">ManipulationProximityFlags</a></h4>
+      <section><p>Flags used to represent whether manipulation can be far, near or both</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MovementConstraintType.html">MovementConstraintType</a></h4>
+      <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MovementConstraintType.html">MovementConstraintType</a></h4>
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ObjectOrientationSurfaceType.html">ObjectOrientationSurfaceType</a></h4>
       <section><p>The type of surface to map the collect to.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ObjectOrientationSurfaceType.html">ObjectOrientationSurfaceType</a></h4>
+      <section><p>The type of surface to map the collect to.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.OrientationType.html">OrientationType</a></h4>
+      <section><p>Orientation type enum</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.OrientationType.html">OrientationType</a></h4>
       <section><p>Orientation type enum</p>
@@ -350,20 +440,41 @@ relative to child layout elements.</p>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.PivotAxis.html">PivotAxis</a></h4>
       <section><p>Rotational Pivot axis for orientating an object</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.PivotAxis.html">PivotAxis</a></h4>
+      <section><p>Rotational Pivot axis for orientating an object</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.RadialViewReferenceDirection.html">RadialViewReferenceDirection</a></h4>
+      <section><p>Which direction to orient the radial view object.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.RadialViewReferenceDirection.html">RadialViewReferenceDirection</a></h4>
       <section><p>Which direction to orient the radial view object.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.RecognitionConfidenceLevel.html">RecognitionConfidenceLevel</a></h4>
       <section><p>Indicates the confidence level of a recognized event.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.RecognitionConfidenceLevel.html">RecognitionConfidenceLevel</a></h4>
+      <section><p>Indicates the confidence level of a recognized event.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.RotationConstraintType.html">RotationConstraintType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.RotationConstraintType.html">RotationConstraintType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ScaleState.html">ScaleState</a></h4>
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ScaleState.html">ScaleState</a></h4>
       <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.SolverOrientationType.html">SolverOrientationType</a></h4>
       <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.SolverOrientationType.html">SolverOrientationType</a></h4>
+      <section></section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.SupportedApplicationModes.html">SupportedApplicationModes</a></h4>
       <section><p>The supported Application modes for specific features.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.SupportedApplicationModes.html">SupportedApplicationModes</a></h4>
+      <section><p>The supported Application modes for specific features.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.SupportedPlatforms.html">SupportedPlatforms</a></h4>
+      <section><p>The supported platforms for Mixed Reality Toolkit Components and Features.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.SupportedPlatforms.html">SupportedPlatforms</a></h4>
       <section><p>The supported platforms for Mixed Reality Toolkit Components and Features.</p>
@@ -371,13 +482,30 @@ relative to child layout elements.</p>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.GridDivisions.html">TileGridObjectCollection.GridDivisions</a></h4>
       <section><p>structure elements of a grid layout</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.GridDivisions.html">TileGridObjectCollection.GridDivisions</a></h4>
+      <section><p>structure elements of a grid layout</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TrackedHandJoint.html">TrackedHandJoint</a></h4>
+      <section><p>The supported tracked hand joints.</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TrackedHandJoint.html">TrackedHandJoint</a></h4>
       <section><p>The supported tracked hand joints.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html">TrackedObjectType</a></h4>
       <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html">TrackedObjectType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TransformFlags.html">TransformFlags</a></h4>
+      <section><p>Flags used to represent a combination of different types of transformation</p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TypeGrouping.html">TypeGrouping</a></h4>
       <section><p>Indicates how selectable classes should be collated in drop-down menu.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TypeGrouping.html">TypeGrouping</a></h4>
+      <section><p>Indicates how selectable classes should be collated in drop-down menu.</p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.VolumeType.html">VolumeType</a></h4>
+      <section><p>todo</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.VolumeType.html">VolumeType</a></h4>
       <section><p>todo</p>

@@ -94,11 +94,15 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">MixedRealityKeyboardPreview</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.UI.html">Microsoft.MixedReality.Toolkit.Experimental.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealityKeyboardPreview : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealityKeyboardPreview : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -124,6 +128,58 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_CaretIndex_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.CaretIndex*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_CaretIndex" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.CaretIndex">CaretIndex</h4>
+  <div class="markdown level1 summary"><p>Where the caret lies within the text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CaretIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_PreviewCaret_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.PreviewCaret*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_PreviewCaret" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.PreviewCaret">PreviewCaret</h4>
+  <div class="markdown level1 summary"><p>The transform to move based on the preview caret.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform PreviewCaret { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -182,6 +238,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_PreviewText_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.PreviewText*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_PreviewText" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.PreviewText">PreviewText</h4>
+  <div class="markdown level1 summary"><p>The Text Mesh Pro text field to display the preview text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextMeshPro PreviewText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TextMeshPro</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_Text_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.Text*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_Text" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.Text">Text</h4>
+  <div class="markdown level1 summary"><p>The text to display in the preview.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Text { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_Text_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.Text*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_Text" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.Text">Text</h4>
   <div class="markdown level1 summary"><p>The text to display in the preview.</p>
@@ -218,6 +326,21 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ToggleSolvers()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_ToggleSolvers_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.ToggleSolvers*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UI_MixedRealityKeyboardPreview_ToggleSolvers" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboardPreview.ToggleSolvers">ToggleSolvers()</h4>
+  <div class="markdown level1 summary"><p>Utility method which can be used to toggle if solvers update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleSolvers()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

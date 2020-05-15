@@ -102,15 +102,46 @@ The designer or engineer can take pixel based redlines and create UI at 1:1 scal
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ButtonBackgroundSize</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.UI.html">Microsoft.MixedReality.Toolkit.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;This component is no longer supported&quot;, true)]
-public class ButtonBackgroundSize : MonoBehaviour</code></pre>
+[Obsolete(&quot;This component is no longer supported&quot;, true)]
+public class ButtonBackgroundSize : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_ItemSize" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.ItemSize">ItemSize</h4>
+  <div class="markdown level1 summary"><p>The size of this object in 3D space, based on the scale factor.
+This value should match 2D design pixel values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 ItemSize</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_ItemSize" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.ItemSize">ItemSize</h4>
@@ -161,6 +192,58 @@ This value should match 2D design pixel values.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_GetBasePixelScale_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.GetBasePixelScale*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_GetBasePixelScale" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.GetBasePixelScale">GetBasePixelScale()</h4>
+  <div class="markdown level1 summary"><p>Get the base pixel scale</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetBasePixelScale()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_GetSize_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.GetSize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_GetSize" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.GetSize">GetSize()</h4>
+  <div class="markdown level1 summary"><p>Get the current size</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -221,6 +304,34 @@ This value should match 2D design pixel values.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_SetBasePixelScale_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.SetBasePixelScale*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_SetBasePixelScale_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.SetBasePixelScale(System.Single)">SetBasePixelScale(Single)</h4>
+  <div class="markdown level1 summary"><p>Set the base pixel scale</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBasePixelScale(float scale)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">scale</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_SetSize_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.SetSize*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_SetSize_Vector3_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.SetSize(Vector3)">SetSize(Vector3)</h4>
   <div class="markdown level1 summary"><p>Set the size at Runtime or through code</p>
@@ -247,6 +358,38 @@ This value should match 2D design pixel values.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_SetSize_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.SetSize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonBackgroundSize_SetSize_Vector3_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonBackgroundSize.SetSize(Vector3)">SetSize(Vector3)</h4>
+  <div class="markdown level1 summary"><p>Set the size at Runtime or through code</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSize(Vector3 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

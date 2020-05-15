@@ -95,11 +95,15 @@ This shows a simple dropdown list for selecting a binding, as well as a button f
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">KeyBindingInspector</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">PropertyDrawer</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.html">Microsoft.MixedReality.Toolkit.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_KeyBindingInspector_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KeyBindingInspector : PropertyDrawer</code></pre>
+    <pre><code class="lang-csharp hljs">public class KeyBindingInspector : PropertyDrawer, PropertyDrawer</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -140,6 +144,47 @@ This shows a simple dropdown list for selecting a binding, as well as a button f
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_KeyBindingInspector_OnGUI_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBindingInspector.OnGUI*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_KeyBindingInspector_OnGUI_Rect_SerializedProperty_GUIContent_" data-uid="Microsoft.MixedReality.Toolkit.Input.KeyBindingInspector.OnGUI(Rect,SerializedProperty,GUIContent)">OnGUI(Rect, SerializedProperty, GUIContent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">SerializedProperty</span></td>
+        <td><span class="parametername">property</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GUIContent</span></td>
+        <td><span class="parametername">label</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">PropertyDrawer</span>
+  </div>
 </article>
           </div>
           

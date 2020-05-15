@@ -142,6 +142,16 @@ pool.AddCreator(creator, &quot;projectile1&quot;);</code></pre>
 <p>Recycling the game object:</p>
 <pre><code>pool.Recycle(myProjectileObj, &quot;projectile1&quot;);</code></pre>
 
+  <p>Setup code for using the generic prefab instance creator:</p>
+<pre><code>GameObjectPool pool = new GameObjectPool();
+GenericPrefabInstanceCreator creator = new GenericPrefabInstanceCreator();
+creator.Prefab = MyProjectilePrefab;
+pool.AddCreator(creator, &quot;projectile1&quot;);</code></pre>
+<p>Requesting a game object from the pool:</p>
+<pre><code>var myProjectileObj = pool.GetGameObject(&quot;projectile1&quot;);</code></pre>
+<p>Recycling the game object:</p>
+<pre><code>pool.Recycle(myProjectileObj, &quot;projectile1&quot;);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   
@@ -155,8 +165,56 @@ pool.AddCreator(creator, &quot;projectile1&quot;);</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public GameObjectPool()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool__ctor" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.#ctor">GameObjectPool()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.html">GameObjectPool</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObjectPool()</code></pre>
+  </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_AddCreator_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.AddCreator*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_AddCreator_Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectCreator_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.AddCreator(Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectCreator,System.String)">AddCreator(GameObjectCreator, String)</h4>
+  <div class="markdown level1 summary"><p>GameObjects are created by an implementation of IGameObjectCreator in this GameObjectPool. This
+method adds your implementation of the IGameObjectCreator to use for objects that share a specific
+object identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddCreator(GameObjectCreator creator, string objectIdentifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectCreator.html">GameObjectCreator</a></td>
+        <td><span class="parametername">creator</span></td>
+        <td><p>The implementation of IGameObjectCreator to use for GameObjects associated with the objectIdentifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">objectIdentifier</span></td>
+        <td><p>The identifier you want to use to identify the kind of game objects you want to create.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_AddCreator_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.AddCreator*"></a>
@@ -239,6 +297,60 @@ object identifier.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_Count_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.Count*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_Count_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.Count(System.String)">Count(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the number of game objects in the pool for a specific identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count(string objectIdentifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">objectIdentifier</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_EmptyPool_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.EmptyPool*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_EmptyPool" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.EmptyPool">EmptyPool()</h4>
+  <div class="markdown level1 summary"><p>Removes and destroys all game objects in the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EmptyPool()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_EmptyPool_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.EmptyPool*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_EmptyPool" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.EmptyPool">EmptyPool()</h4>
   <div class="markdown level1 summary"><p>Removes and destroys all game objects in the pool.</p>
@@ -274,6 +386,79 @@ object identifier.</p>
         <td><span class="parametername">objectIdentifier</span></td>
         <td><p>The identifier you want to use to identify the kind of game objects to remove from the pool.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_EmptyPool_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.EmptyPool*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_EmptyPool_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.EmptyPool(System.String)">EmptyPool(String)</h4>
+  <div class="markdown level1 summary"><p>Removes and destroys all game objects in the pool associated with the specified objectIdentifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EmptyPool(string objectIdentifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">objectIdentifier</span></td>
+        <td><p>The identifier you want to use to identify the kind of game objects to remove from the pool.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_GetGameObject_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.GetGameObject*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_GetGameObject_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.GetGameObject(System.String)">GetGameObject(String)</h4>
+  <div class="markdown level1 summary"><p>Same as calling GetGameObject(objectIdentifier, Vector3.zero, Quaternion.identity)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject GetGameObject(string objectIdentifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">objectIdentifier</span></td>
+        <td><p>The identifier you want to use to identify the kind of game object you want to retrieve.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -376,6 +561,99 @@ added to the pool for handling objects associated with the objectIdentifier.</p>
       <tr>
         <td><span class="xref">GameObject</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_GetGameObject_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.GetGameObject*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_GetGameObject_System_String_Vector3_Quaternion_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.GetGameObject(System.String,Vector3,Quaternion)">GetGameObject(String, Vector3, Quaternion)</h4>
+  <div class="markdown level1 summary"><p>Gets a game object for a specific object identifier from the GameObjectPool. If the kind of game object
+being requested is not in the pool, then it will get created by a IGameObjectCreator that was
+added to the pool for handling objects associated with the objectIdentifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject GetGameObject(string objectIdentifier, Vector3 position, Quaternion rotation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">objectIdentifier</span></td>
+        <td><p>The identifier you want to use to identify the kind of game object you want to retrieve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position that the game object should have before it is activated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>The rotation that the game object should have before it is activated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_Recycle_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.Recycle*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_GameObjectManagement_GameObjectPool_Recycle_GameObject_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.GameObjectManagement.GameObjectPool.Recycle(GameObject,System.String)">Recycle(GameObject, String)</h4>
+  <div class="markdown level1 summary"><p>Adds a game object under a specific object identifier to the GameObjectPool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Recycle(GameObject gameObject, string objectIdentifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
+        <td><p>The GameObject to recycle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">objectIdentifier</span></td>
+        <td><p>The identifier you want to use to identify the kind of game object you are recycling.</p>
+</td>
       </tr>
     </tbody>
   </table>

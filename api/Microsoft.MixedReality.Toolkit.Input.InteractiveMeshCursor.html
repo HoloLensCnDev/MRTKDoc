@@ -103,6 +103,7 @@ A two part cursor with visual feedback for all cursor states</p>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourceStateHandler.html">IMixedRealitySourceStateHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html">IMixedRealityPointerHandler</a></div>
     <div><span class="xref">IEventSystemHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -261,10 +262,40 @@ A two part cursor with visual feedback for all cursor states</p>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_InteractiveMeshCursor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InteractiveMeshCursor : BaseCursor, IMixedRealityCursor, IMixedRealityFocusChangedHandler, IMixedRealitySourceStateHandler, IMixedRealityPointerHandler, IEventSystemHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class InteractiveMeshCursor : BaseCursor, IMixedRealityCursor, IMixedRealityFocusChangedHandler, IMixedRealitySourceStateHandler, IMixedRealityPointerHandler, IEventSystemHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InteractiveMeshCursor_OnCursorStateChange_" data-uid="Microsoft.MixedReality.Toolkit.Input.InteractiveMeshCursor.OnCursorStateChange*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InteractiveMeshCursor_OnCursorStateChange_Microsoft_MixedReality_Toolkit_Input_CursorStateEnum_" data-uid="Microsoft.MixedReality.Toolkit.Input.InteractiveMeshCursor.OnCursorStateChange(Microsoft.MixedReality.Toolkit.Input.CursorStateEnum)">OnCursorStateChange(CursorStateEnum)</h4>
+  <div class="markdown level1 summary"><p>Decide which element (ring or dot) should be visible and at what scale</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnCursorStateChange(CursorStateEnum state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CursorStateEnum.html">CursorStateEnum</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnCursorStateChange_Microsoft_MixedReality_Toolkit_Input_CursorStateEnum_">BaseCursor.OnCursorStateChange(CursorStateEnum)</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InteractiveMeshCursor_OnCursorStateChange_" data-uid="Microsoft.MixedReality.Toolkit.Input.InteractiveMeshCursor.OnCursorStateChange*"></a>
@@ -327,6 +358,49 @@ A two part cursor with visual feedback for all cursor states</p>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_SetVisibility_System_Boolean_">BaseCursor.SetVisibility(Boolean)</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_InteractiveMeshCursor_SetVisibility_" data-uid="Microsoft.MixedReality.Toolkit.Input.InteractiveMeshCursor.SetVisibility*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InteractiveMeshCursor_SetVisibility_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Input.InteractiveMeshCursor.SetVisibility(System.Boolean)">SetVisibility(Boolean)</h4>
+  <div class="markdown level1 summary"><p>override the base class for custom visibility</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetVisibility(bool visible)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">visible</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_SetVisibility_System_Boolean_">BaseCursor.SetVisibility(Boolean)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InteractiveMeshCursor_UpdateCursorTransform_" data-uid="Microsoft.MixedReality.Toolkit.Input.InteractiveMeshCursor.UpdateCursorTransform*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InteractiveMeshCursor_UpdateCursorTransform" data-uid="Microsoft.MixedReality.Toolkit.Input.InteractiveMeshCursor.UpdateCursorTransform">UpdateCursorTransform()</h4>
+  <div class="markdown level1 summary"><p>scale the cursor elements</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UpdateCursorTransform()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_UpdateCursorTransform">BaseCursor.UpdateCursorTransform()</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_InteractiveMeshCursor_UpdateCursorTransform_" data-uid="Microsoft.MixedReality.Toolkit.Input.InteractiveMeshCursor.UpdateCursorTransform*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InteractiveMeshCursor_UpdateCursorTransform" data-uid="Microsoft.MixedReality.Toolkit.Input.InteractiveMeshCursor.UpdateCursorTransform">UpdateCursorTransform()</h4>
   <div class="markdown level1 summary"><p>scale the cursor elements</p>
@@ -353,6 +427,9 @@ A two part cursor with visual feedback for all cursor states</p>
   </div>
   <div>
       <span class="xref">IEventSystemHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

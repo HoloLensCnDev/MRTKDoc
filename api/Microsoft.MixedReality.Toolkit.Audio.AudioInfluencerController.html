@@ -94,11 +94,15 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">AudioInfluencerController</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Audio.html">Microsoft.MixedReality.Toolkit.Audio</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AudioInfluencerController : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class AudioInfluencerController : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h5 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>AudioInfluencerController requires an <a href="https://docs.unity3d.com/ScriptReference/AudioSource.html">AudioSource</a> component. If one is not attached, it will be added automatically.
@@ -106,6 +110,35 @@ Each sound playing game object needs to have an AudioInfluencerController attach
 </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_NeutralHighFrequency" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.NeutralHighFrequency">NeutralHighFrequency</h4>
+  <div class="markdown level1 summary"><p>Frequency above the nominal range of human hearing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly float NeutralHighFrequency</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_NeutralHighFrequency_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This frequency can be used to set a low pass filter to allow all
+audible frequencies through the filter.</p>
+</div>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_NeutralHighFrequency" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.NeutralHighFrequency">NeutralHighFrequency</h4>
@@ -164,6 +197,35 @@ audible frequencies through the filter.</p>
   <div class="markdown level1 remarks"><p>This frequency can be used to set a high pass filter to allow all
 audible frequencies through the filter.</p>
 </div>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_NeutralLowFrequency" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.NeutralLowFrequency">NeutralLowFrequency</h4>
+  <div class="markdown level1 summary"><p>Frequency below the nominal range of human hearing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly float NeutralLowFrequency</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_NeutralLowFrequency_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This frequency can be used to set a high pass filter to allow all
+audible frequencies through the filter.</p>
+</div>
   <h3 id="properties">Properties
   </h3>
   
@@ -175,6 +237,58 @@ audible frequencies through the filter.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float MaxDistance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_MaxDistance_" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.MaxDistance*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_MaxDistance" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.MaxDistance">MaxDistance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MaxDistance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_NativeHighPassCutoffFrequency_" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.NativeHighPassCutoffFrequency*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_NativeHighPassCutoffFrequency" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.NativeHighPassCutoffFrequency">NativeHighPassCutoffFrequency</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the native high pass cutoff frequency for the
+sound emitter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float NativeHighPassCutoffFrequency { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,6 +361,33 @@ sound emitter.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_NativeLowPassCutoffFrequency_" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.NativeLowPassCutoffFrequency*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_NativeLowPassCutoffFrequency" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.NativeLowPassCutoffFrequency">NativeLowPassCutoffFrequency</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the native low pass cutoff frequency for the
+sound emitter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float NativeLowPassCutoffFrequency { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_UpdateInterval_" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.UpdateInterval*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_UpdateInterval" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.UpdateInterval">UpdateInterval</h4>
   <div class="markdown level1 summary"></div>
@@ -270,6 +411,35 @@ sound emitter.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_UpdateInterval_" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.UpdateInterval*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Audio_AudioInfluencerController_UpdateInterval" data-uid="Microsoft.MixedReality.Toolkit.Audio.AudioInfluencerController.UpdateInterval">UpdateInterval</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float UpdateInterval { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

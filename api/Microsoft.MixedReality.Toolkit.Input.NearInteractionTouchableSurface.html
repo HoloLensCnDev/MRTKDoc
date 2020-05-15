@@ -97,6 +97,10 @@
       <div class="level3"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable.html">NearInteractionTouchable</a></div>
       <div class="level3"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableUnityUI.html">NearInteractionTouchableUnityUI</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -122,7 +126,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_NearInteractionTouchableSurface_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class NearInteractionTouchableSurface : BaseNearInteractionTouchable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class NearInteractionTouchableSurface : BaseNearInteractionTouchable, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -148,6 +152,58 @@
     <tbody>
       <tr>
         <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_NearInteractionTouchableSurface_Bounds_" data-uid="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableSurface.Bounds*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_NearInteractionTouchableSurface_Bounds" data-uid="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableSurface.Bounds">Bounds</h4>
+  <div class="markdown level1 summary"><p>Bounds specify where touchable interactions can occur.  They are local bounds on the plane specified by the LocalCenter and LocalPressDirection (as a normal).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Vector2 Bounds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_NearInteractionTouchableSurface_LocalCenter_" data-uid="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableSurface.LocalCenter*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_NearInteractionTouchableSurface_LocalCenter" data-uid="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableSurface.LocalCenter">LocalCenter</h4>
+  <div class="markdown level1 summary"><p>The local center point of interaction.  This may be based on a collider position or Unity UI RectTransform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Vector3 LocalCenter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -204,6 +260,36 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_NearInteractionTouchableSurface_LocalPressDirection_" data-uid="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableSurface.LocalPressDirection*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_NearInteractionTouchableSurface_LocalPressDirection" data-uid="Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableSurface.LocalPressDirection">LocalPressDirection</h4>
+  <div class="markdown level1 summary"><p>This is the direction that a user will press on this element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Vector3 LocalPressDirection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

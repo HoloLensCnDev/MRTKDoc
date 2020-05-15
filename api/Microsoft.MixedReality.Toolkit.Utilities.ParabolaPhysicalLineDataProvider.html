@@ -96,6 +96,10 @@
     <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ParabolaLineDataProvider.html">ParabolaLineDataProvider</a></div>
     <div class="level3"><span class="xref">ParabolaPhysicalLineDataProvider</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -211,7 +215,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ParabolaPhysicalLineDataProvider : ParabolaLineDataProvider</code></pre>
+    <pre><code class="lang-csharp hljs">public class ParabolaPhysicalLineDataProvider : ParabolaLineDataProvider, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -236,6 +240,56 @@
     <tbody>
       <tr>
         <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_Direction_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.Direction*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_Direction" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.Direction">Direction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Direction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_DistanceMultiplier_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.DistanceMultiplier*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_DistanceMultiplier" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.DistanceMultiplier">DistanceMultiplier</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DistanceMultiplier { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -292,10 +346,34 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_Gravity_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.Gravity*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_Gravity" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.Gravity">Gravity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Gravity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_PointCount_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.PointCount*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_PointCount" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.PointCount">PointCount</h4>
-  <div class="markdown level1 summary"><p>The number of points this line has.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -318,6 +396,58 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineDataProvider.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineDataProvider_PointCount">BaseMixedRealityLineDataProvider.PointCount</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_PointCount_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.PointCount*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_PointCount" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.PointCount">PointCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int PointCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineDataProvider.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineDataProvider_PointCount">BaseMixedRealityLineDataProvider.PointCount</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_UseCustomGravity_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.UseCustomGravity*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_UseCustomGravity" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.UseCustomGravity">UseCustomGravity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseCustomGravity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_UseCustomGravity_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.UseCustomGravity*"></a>
@@ -368,15 +498,82 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_Velocity_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.Velocity*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_Velocity" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.Velocity">Velocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Velocity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetPointInternal_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetPointInternal*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetPointInternal_System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetPointInternal(System.Int32)">GetPointInternal(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get a point based on point index
-Point index will be pre-clamped</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Vector3 GetPointInternal(int pointIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">pointIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineDataProvider.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineDataProvider_GetPointInternal_System_Int32_">BaseMixedRealityLineDataProvider.GetPointInternal(Int32)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetPointInternal_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetPointInternal*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetPointInternal_System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetPointInternal(System.Int32)">GetPointInternal(Int32)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -420,9 +617,51 @@ Point index will be pre-clamped</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetPointInternal_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetPointInternal*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetPointInternal_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetPointInternal(System.Single)">GetPointInternal(Single)</h4>
-  <div class="markdown level1 summary"><p>Get a point based on normalized distance along line
-Normalized distance will be pre-clamped</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Vector3 GetPointInternal(float normalizedDistance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">normalizedDistance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineDataProvider.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineDataProvider_GetPointInternal_System_Single_">BaseMixedRealityLineDataProvider.GetPointInternal(Single)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetPointInternal_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetPointInternal*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetPointInternal_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetPointInternal(System.Single)">GetPointInternal(Single)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -466,8 +705,51 @@ Normalized distance will be pre-clamped</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetUpVectorInternal_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetUpVectorInternal*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetUpVectorInternal_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetUpVectorInternal(System.Single)">GetUpVectorInternal(Single)</h4>
-  <div class="markdown level1 summary"><p>Gets the up vector at a normalized length along line (used for rotation)</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Vector3 GetUpVectorInternal(float normalizedLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">normalizedLength</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ParabolaLineDataProvider.html#Microsoft_MixedReality_Toolkit_Utilities_ParabolaLineDataProvider_GetUpVectorInternal_System_Single_">ParabolaLineDataProvider.GetUpVectorInternal(Single)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetUpVectorInternal_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetUpVectorInternal*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_GetUpVectorInternal_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.GetUpVectorInternal(System.Single)">GetUpVectorInternal(Single)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -545,6 +827,48 @@ Normalized distance will be pre-clamped</p>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_SetPointInternal_System_Int32_Vector3__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This specific override doesn't set any points.</p>
 </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_SetPointInternal_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.SetPointInternal*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_SetPointInternal_System_Int32_Vector3_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.ParabolaPhysicalLineDataProvider.SetPointInternal(System.Int32,Vector3)">SetPointInternal(Int32, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Sets the point at index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SetPointInternal(int pointIndex, Vector3 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">pointIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineDataProvider.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineDataProvider_SetPointInternal_System_Int32_Vector3_">BaseMixedRealityLineDataProvider.SetPointInternal(Int32, Vector3)</a></div>
+  <h5 id="Microsoft_MixedReality_Toolkit_Utilities_ParabolaPhysicalLineDataProvider_SetPointInternal_System_Int32_Vector3__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This specific override doesn't set any points.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

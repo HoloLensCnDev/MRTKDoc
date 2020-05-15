@@ -95,12 +95,21 @@ GameObject is the object the fired the scroll.</p>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ScrollingObjectCollection.ScrollEvent</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">UnityEvent</span>&lt;<span class="xref">GameObject</span>&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.UI.html">Microsoft.MixedReality.Toolkit.Experimental.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Experimental_UI_ScrollingObjectCollection_ScrollEvent_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class ScrollEvent : UnityEvent&lt;GameObject&gt;</code></pre>
+[Serializable]
+public class ScrollEvent : UnityEvent&lt;GameObject&gt;, UnityEvent&lt;GameObject&gt;</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">UnityEvent&lt;&gt;</span>
   </div>
 </article>
           </div>

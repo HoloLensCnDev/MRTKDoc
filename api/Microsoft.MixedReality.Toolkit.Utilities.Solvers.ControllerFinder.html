@@ -97,12 +97,13 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IMixedRealitySourceStateHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Solvers.html">Microsoft.MixedReality.Toolkit.Utilities.Solvers</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ControllerFinder : MonoBehaviour, IMixedRealitySourceStateHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ControllerFinder : MonoBehaviour, IMixedRealitySourceStateHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -131,8 +132,59 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_ControllerTransform" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.ControllerTransform">ControllerTransform</h4>
+  <div class="markdown level1 summary"><p>The Transform of the currently found controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Transform ControllerTransform</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_Handedness_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.Handedness*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_Handedness" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.Handedness">Handedness</h4>
+  <div class="markdown level1 summary"><p>The handedness of the controller that should be found.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Handedness Handedness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Handedness.html">Handedness</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_Handedness_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.Handedness*"></a>
@@ -192,6 +244,48 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_AddControllerTransform_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.AddControllerTransform*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_AddControllerTransform_IMixedRealityController_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.AddControllerTransform(IMixedRealityController)">AddControllerTransform(IMixedRealityController)</h4>
+  <div class="markdown level1 summary"><p>Starts to track the passed in controller's transform, assuming it meets the previously set handedness criteria.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddControllerTransform(IMixedRealityController newController)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityController</span></td>
+        <td><span class="parametername">newController</span></td>
+        <td><p>The new controller to be tracked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnControllerFound_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnControllerFound*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnControllerFound" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnControllerFound">OnControllerFound()</h4>
+  <div class="markdown level1 summary"><p>Override this method to act when the correct controller is actually found.
+This provides similar functionality to overriding AddControllerTransform,
+without the overhead of needing to check that handedness matches.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnControllerFound()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnControllerFound_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnControllerFound*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnControllerFound" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnControllerFound">OnControllerFound()</h4>
   <div class="markdown level1 summary"><p>Override this method to act when the correct controller is actually found.
@@ -218,6 +312,29 @@ without the overhead of needing to check that handedness matches.</p>
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnControllerLost_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnControllerLost*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnControllerLost" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnControllerLost">OnControllerLost()</h4>
+  <div class="markdown level1 summary"><p>Override this method to act when the correct controller is actually lost.
+This provides similar functionality to overriding AddControllerTransform,
+without the overhead of needing to check that handedness matches.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnControllerLost()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnDisable_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnDisable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnDisable" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDisable()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnDisable_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnDisable*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnDisable" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnDisable">OnDisable()</h4>
   <div class="markdown level1 summary"></div>
@@ -238,6 +355,16 @@ without the overhead of needing to check that handedness matches.</p>
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnEnable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnEnable" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnSourceDetected_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnSourceDetected*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnSourceDetected_SourceStateEventData_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnSourceDetected(SourceStateEventData)">OnSourceDetected(SourceStateEventData)</h4>
   <div class="markdown level1 summary"></div>
@@ -245,6 +372,60 @@ without the overhead of needing to check that handedness matches.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void OnSourceDetected(SourceStateEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SourceStateEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnSourceDetected_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnSourceDetected*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnSourceDetected_SourceStateEventData_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnSourceDetected(SourceStateEventData)">OnSourceDetected(SourceStateEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnSourceDetected(SourceStateEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SourceStateEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnSourceLost_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnSourceLost*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_OnSourceLost_SourceStateEventData_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.OnSourceLost(SourceStateEventData)">OnSourceLost(SourceStateEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnSourceLost(SourceStateEventData eventData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,6 +484,28 @@ without the overhead of needing to check that handedness matches.</p>
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_RefreshControllerTransform_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.RefreshControllerTransform*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_RefreshControllerTransform" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.RefreshControllerTransform">RefreshControllerTransform()</h4>
+  <div class="markdown level1 summary"><p>Remove whichever controller is currently tracked, if any, and try to add a new one based on existing sources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RefreshControllerTransform()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_RemoveControllerTransform_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.RemoveControllerTransform*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_RemoveControllerTransform" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.RemoveControllerTransform">RemoveControllerTransform()</h4>
+  <div class="markdown level1 summary"><p>Remove whichever controller is currently tracked, if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RemoveControllerTransform()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_RemoveControllerTransform_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.RemoveControllerTransform*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_RemoveControllerTransform" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.RemoveControllerTransform">RemoveControllerTransform()</h4>
   <div class="markdown level1 summary"><p>Remove whichever controller is currently tracked, if any.</p>
@@ -323,9 +526,23 @@ without the overhead of needing to check that handedness matches.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void TryAndAddControllerTransform()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_TryAndAddControllerTransform_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.TryAndAddControllerTransform*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_ControllerFinder_TryAndAddControllerTransform" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.ControllerFinder.TryAndAddControllerTransform">TryAndAddControllerTransform()</h4>
+  <div class="markdown level1 summary"><p>Looks to see if the controller model already exists and registers it if so.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void TryAndAddControllerTransform()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IMixedRealitySourceStateHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

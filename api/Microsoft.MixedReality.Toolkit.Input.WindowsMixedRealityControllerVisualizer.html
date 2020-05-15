@@ -98,6 +98,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityControllerPoseSynchronizer.html">IMixedRealityControllerPoseSynchronizer</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourcePoseHandler.html">IMixedRealitySourcePoseHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourceStateHandler.html">IMixedRealitySourceStateHandler</a></div>
@@ -199,7 +200,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityControllerVisualizer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityControllerVisualizer : MixedRealityControllerVisualizer, IMixedRealityControllerPoseSynchronizer, IMixedRealitySourcePoseHandler, IMixedRealitySourceStateHandler, IMixedRealityInputHandler, IMixedRealityBaseInputHandler, IMixedRealityInputHandler&lt;float&gt;, IMixedRealityInputHandler&lt;Vector2&gt;, IMixedRealityInputHandler&lt;Vector3&gt;, IMixedRealityInputHandler&lt;Quaternion&gt;, IMixedRealityInputHandler&lt;MixedRealityPose&gt;, IEventSystemHandler, IMixedRealityControllerVisualizer</code></pre>
+    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityControllerVisualizer : MixedRealityControllerVisualizer, MonoBehaviour, IMixedRealityControllerPoseSynchronizer, IMixedRealitySourcePoseHandler, IMixedRealitySourceStateHandler, IMixedRealityInputHandler, IMixedRealityBaseInputHandler, IMixedRealityInputHandler&lt;float&gt;, IMixedRealityInputHandler&lt;Vector2&gt;, IMixedRealityInputHandler&lt;Vector3&gt;, IMixedRealityInputHandler&lt;Quaternion&gt;, IMixedRealityInputHandler&lt;MixedRealityPose&gt;, IEventSystemHandler, IMixedRealityControllerVisualizer</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -207,8 +208,36 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityControllerVisualizer_OnSourcePoseChanged_" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityControllerVisualizer.OnSourcePoseChanged*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityControllerVisualizer_OnSourcePoseChanged_Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_MixedRealityPose__" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityControllerVisualizer.OnSourcePoseChanged(Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData{MixedRealityPose})">OnSourcePoseChanged(SourcePoseEventData&lt;MixedRealityPose&gt;)</h4>
-  <div class="markdown level1 summary"><p>Raised when the source pose is changed.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnSourcePoseChanged(SourcePoseEventData&lt;MixedRealityPose&gt; eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData-1.html">SourcePoseEventData</a>&lt;<span class="xref">MixedRealityPose</span>&gt;</td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ControllerPoseSynchronizer.html#Microsoft_MixedReality_Toolkit_Input_ControllerPoseSynchronizer_OnSourcePoseChanged_Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_MixedRealityPose__">ControllerPoseSynchronizer.OnSourcePoseChanged(SourcePoseEventData&lt;MixedRealityPose&gt;)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityControllerVisualizer_OnSourcePoseChanged_" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityControllerVisualizer.OnSourcePoseChanged*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityControllerVisualizer_OnSourcePoseChanged_Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_MixedRealityPose__" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityControllerVisualizer.OnSourcePoseChanged(Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData{MixedRealityPose})">OnSourcePoseChanged(SourcePoseEventData&lt;MixedRealityPose&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -234,6 +263,9 @@
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ControllerPoseSynchronizer.html#Microsoft_MixedReality_Toolkit_Input_ControllerPoseSynchronizer_OnSourcePoseChanged_Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_MixedRealityPose__">ControllerPoseSynchronizer.OnSourcePoseChanged(SourcePoseEventData&lt;MixedRealityPose&gt;)</a></div>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
   <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityControllerPoseSynchronizer.html">IMixedRealityControllerPoseSynchronizer</a>
   </div>

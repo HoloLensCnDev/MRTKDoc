@@ -95,11 +95,15 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></div>
     <div class="level2"><span class="xref">MixedRealitySceneSystemProfile</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">ScriptableObject</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.SceneSystem.html">Microsoft.MixedReality.Toolkit.SceneSystem</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealitySceneSystemProfile : BaseMixedRealityProfile</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealitySceneSystemProfile : BaseMixedRealityProfile, ScriptableObject</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -124,6 +128,56 @@
     <tbody>
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.SceneSystem.SceneInfo.html">SceneInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_ContentScenes_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.ContentScenes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_ContentScenes" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.ContentScenes">ContentScenes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;SceneInfo&gt; ContentScenes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.SceneSystem.SceneInfo.html">SceneInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_ContentTags_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.ContentTags*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_ContentTags" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.ContentTags">ContentTags</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; ContentTags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -180,6 +234,56 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_DefaultLightingScene_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.DefaultLightingScene*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_DefaultLightingScene" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.DefaultLightingScene">DefaultLightingScene</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneInfo DefaultLightingScene { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.SceneSystem.SceneInfo.html">SceneInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_LightingScenes_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.LightingScenes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_LightingScenes" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.LightingScenes">LightingScenes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;SceneInfo&gt; LightingScenes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.SceneSystem.SceneInfo.html">SceneInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_LightingScenes_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.LightingScenes*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_LightingScenes" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.LightingScenes">LightingScenes</h4>
   <div class="markdown level1 summary"></div>
@@ -230,6 +334,31 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_ManagerScene_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.ManagerScene*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_ManagerScene" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.ManagerScene">ManagerScene</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneInfo ManagerScene { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.SceneSystem.SceneInfo.html">SceneInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_NumContentScenes_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.NumContentScenes*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_NumContentScenes" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.NumContentScenes">NumContentScenes</h4>
   <div class="markdown level1 summary"></div>
@@ -237,6 +366,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int NumContentScenes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_NumContentScenes_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.NumContentScenes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_NumContentScenes" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.NumContentScenes">NumContentScenes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumContentScenes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_NumLightingScenes_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.NumLightingScenes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_NumLightingScenes" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.NumLightingScenes">NumLightingScenes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumLightingScenes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,6 +484,56 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_PermittedLightingSceneComponentTypes_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.PermittedLightingSceneComponentTypes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_PermittedLightingSceneComponentTypes" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.PermittedLightingSceneComponentTypes">PermittedLightingSceneComponentTypes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Type&gt; PermittedLightingSceneComponentTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_UseLightingScene_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.UseLightingScene*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_UseLightingScene" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.UseLightingScene">UseLightingScene</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseLightingScene { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_UseLightingScene_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.UseLightingScene*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_UseLightingScene" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.UseLightingScene">UseLightingScene</h4>
   <div class="markdown level1 summary"></div>
@@ -353,8 +582,75 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_UseManagerScene_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.UseManagerScene*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_UseManagerScene" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.UseManagerScene">UseManagerScene</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseManagerScene { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_GetContentSceneNamesByTag_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.GetContentSceneNamesByTag*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_GetContentSceneNamesByTag_System_String_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.GetContentSceneNamesByTag(System.String)">GetContentSceneNamesByTag(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; GetContentSceneNamesByTag(string tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_GetContentSceneNamesByTag_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.GetContentSceneNamesByTag*"></a>
@@ -459,6 +755,72 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_GetLightingSceneSettings_" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.GetLightingSceneSettings*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SceneSystem_MixedRealitySceneSystemProfile_GetLightingSceneSettings_System_String_Microsoft_MixedReality_Toolkit_SceneSystem_SceneInfo__Microsoft_MixedReality_Toolkit_SceneSystem_RuntimeLightingSettings__Microsoft_MixedReality_Toolkit_SceneSystem_RuntimeRenderSettings__Microsoft_MixedReality_Toolkit_SceneSystem_RuntimeSunlightSettings__" data-uid="Microsoft.MixedReality.Toolkit.SceneSystem.MixedRealitySceneSystemProfile.GetLightingSceneSettings(System.String,Microsoft.MixedReality.Toolkit.SceneSystem.SceneInfo@,Microsoft.MixedReality.Toolkit.SceneSystem.RuntimeLightingSettings@,Microsoft.MixedReality.Toolkit.SceneSystem.RuntimeRenderSettings@,Microsoft.MixedReality.Toolkit.SceneSystem.RuntimeSunlightSettings@)">GetLightingSceneSettings(String, out SceneInfo, out RuntimeLightingSettings, out RuntimeRenderSettings, out RuntimeSunlightSettings)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetLightingSceneSettings(string lightingSceneName, out SceneInfo lightingScene, out RuntimeLightingSettings lightingSettings, out RuntimeRenderSettings renderSettings, out RuntimeSunlightSettings sunlightSettings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">lightingSceneName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.SceneSystem.SceneInfo.html">SceneInfo</a></td>
+        <td><span class="parametername">lightingScene</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.SceneSystem.RuntimeLightingSettings.html">RuntimeLightingSettings</a></td>
+        <td><span class="parametername">lightingSettings</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.SceneSystem.RuntimeRenderSettings.html">RuntimeRenderSettings</a></td>
+        <td><span class="parametername">renderSettings</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.SceneSystem.RuntimeSunlightSettings.html">RuntimeSunlightSettings</a></td>
+        <td><span class="parametername">sunlightSettings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">ScriptableObject</span>
+  </div>
 </article>
           </div>
           

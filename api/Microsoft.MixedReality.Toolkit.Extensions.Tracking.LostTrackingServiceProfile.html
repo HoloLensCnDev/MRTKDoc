@@ -95,11 +95,15 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></div>
     <div class="level2"><span class="xref">LostTrackingServiceProfile</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">ScriptableObject</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Extensions.Tracking.html">Microsoft.MixedReality.Toolkit.Extensions.Tracking</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LostTrackingServiceProfile : BaseMixedRealityProfile</code></pre>
+    <pre><code class="lang-csharp hljs">public class LostTrackingServiceProfile : BaseMixedRealityProfile, ScriptableObject</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -113,6 +117,58 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool HaltAudioOnTrackingLost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_HaltAudioOnTrackingLost_" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.HaltAudioOnTrackingLost*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_HaltAudioOnTrackingLost" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.HaltAudioOnTrackingLost">HaltAudioOnTrackingLost</h4>
+  <div class="markdown level1 summary"><p>If true, the service will pause audio while tracking is lost.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HaltAudioOnTrackingLost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_HaltTimeWhileTrackingLost_" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.HaltTimeWhileTrackingLost*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_HaltTimeWhileTrackingLost" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.HaltTimeWhileTrackingLost">HaltTimeWhileTrackingLost</h4>
+  <div class="markdown level1 summary"><p>If true, the service will set timescale to 0 while tracking is lost.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HaltTimeWhileTrackingLost { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,6 +239,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_TrackingLostCullingMask_" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.TrackingLostCullingMask*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_TrackingLostCullingMask" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.TrackingLostCullingMask">TrackingLostCullingMask</h4>
+  <div class="markdown level1 summary"><p>The culling mask to use when tracking is lost. The tracking lost visual layer is automatically included.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LayerMask TrackingLostCullingMask { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LayerMask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_TrackingLostVisualLayer_" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.TrackingLostVisualLayer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_TrackingLostVisualLayer" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.TrackingLostVisualLayer">TrackingLostVisualLayer</h4>
+  <div class="markdown level1 summary"><p>The layer used to display the lost tracking visual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TrackingLostVisualLayer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_TrackingLostVisualLayer_" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.TrackingLostVisualLayer*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_TrackingLostVisualLayer" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.TrackingLostVisualLayer">TrackingLostVisualLayer</h4>
   <div class="markdown level1 summary"><p>The layer used to display the lost tracking visual.</p>
@@ -234,6 +342,37 @@ A radial solver or tagalong script is recommended as well.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_TrackingLostVisualPrefab_" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.TrackingLostVisualPrefab*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Extensions_Tracking_LostTrackingServiceProfile_TrackingLostVisualPrefab" data-uid="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.TrackingLostVisualPrefab">TrackingLostVisualPrefab</h4>
+  <div class="markdown level1 summary"><p>Prefab for the lost tracking visual. Must include a component that implements ILostTrackingVisual.
+A radial solver or tagalong script is recommended as well.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject TrackingLostVisualPrefab { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">ScriptableObject</span>
+  </div>
 </article>
           </div>
           

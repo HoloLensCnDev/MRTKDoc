@@ -95,11 +95,15 @@ Good for responsive buttons that can stretch and object realign</p>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ButtonLayout</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.UI.html">Microsoft.MixedReality.Toolkit.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ButtonLayout : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class ButtonLayout : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -124,6 +128,56 @@ Good for responsive buttons that can stretch and object realign</p>
     <tbody>
       <tr>
         <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_Alignment" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.Alignment">Alignment</h4>
+  <div class="markdown level1 summary"><p>Where to set this object's center point in relation to the Anchor's center point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Alignment</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_Anchor" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.Anchor">Anchor</h4>
+  <div class="markdown level1 summary"><p>The transform this object should be linked and aligned to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform Anchor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -180,6 +234,56 @@ Good for responsive buttons that can stretch and object realign</p>
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_AnchorOffset" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.AnchorOffset">AnchorOffset</h4>
+  <div class="markdown level1 summary"><p>Offset this object's position based on the same pixel based size ratio.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 AnchorOffset</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_BasePixelSize" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.BasePixelSize">BasePixelSize</h4>
+  <div class="markdown level1 summary"><p>A pixel to Unity unit conversion, Default: 2048x2048 pixels covers a 1x1 Unity Unit or default primitive size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float BasePixelSize</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_BasePixelSize" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.BasePixelSize">BasePixelSize</h4>
   <div class="markdown level1 summary"><p>A pixel to Unity unit conversion, Default: 2048x2048 pixels covers a 1x1 Unity Unit or default primitive size.</p>
 </div>
@@ -227,8 +331,43 @@ Good for responsive buttons that can stretch and object realign</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_OnlyInEditMode" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.OnlyInEditMode">OnlyInEditMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OnlyInEditMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_Awake_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.Awake*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_Awake" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.Awake">Awake()</h4>
+  <div class="markdown level1 summary"><p>A transform is required for alignment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_Awake_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.Awake*"></a>
@@ -252,6 +391,16 @@ Good for responsive buttons that can stretch and object realign</p>
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_Update_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_Update" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Update()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_UpdatePosition_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.UpdatePosition*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_UpdatePosition" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.UpdatePosition">UpdatePosition()</h4>
   <div class="markdown level1 summary"><p>Set this object's position</p>
@@ -260,6 +409,21 @@ Good for responsive buttons that can stretch and object realign</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void UpdatePosition()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_UpdatePosition_" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.UpdatePosition*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ButtonLayout_UpdatePosition" data-uid="Microsoft.MixedReality.Toolkit.UI.ButtonLayout.UpdatePosition">UpdatePosition()</h4>
+  <div class="markdown level1 summary"><p>Set this object's position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdatePosition()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

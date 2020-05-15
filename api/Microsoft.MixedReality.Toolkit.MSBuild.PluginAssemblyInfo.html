@@ -188,8 +188,77 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_PluginAssemblyInfo__ctor_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_PluginAssemblyInfo__ctor_Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_Guid_System_String_Microsoft_MixedReality_Toolkit_MSBuild_PluginType_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.#ctor(Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo,Guid,System.String,Microsoft.MixedReality.Toolkit.MSBuild.PluginType)">PluginAssemblyInfo(UnityProjectInfo, Guid, String, PluginType)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.html">PluginAssemblyInfo</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginAssemblyInfo(UnityProjectInfo unityProjectInfo, Guid guid, string fullPath, PluginType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.html">UnityProjectInfo</a></td>
+        <td><span class="parametername">unityProjectInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">guid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">fullPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.PluginType.html">PluginType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_PluginAssemblyInfo_AutoReferenced_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.AutoReferenced*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_PluginAssemblyInfo_AutoReferenced" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.AutoReferenced">AutoReferenced</h4>
+  <div class="markdown level1 summary"><p>Gets whether this plugin is auto referenced, as in whether the generated projects will automatically reference this plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoReferenced { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_MSBuild_PluginAssemblyInfo_AutoReferenced_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.AutoReferenced*"></a>
@@ -240,6 +309,60 @@
     <tbody>
       <tr>
         <td><span class="xref">HashSet</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_PluginAssemblyInfo_DefineConstraints_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.DefineConstraints*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_PluginAssemblyInfo_DefineConstraints" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.DefineConstraints">DefineConstraints</h4>
+  <div class="markdown level1 summary"><p>If the plugin has define constraints, then it will only be referenced if the platform/project defines at least one of these constraints.
+! operator means that the specified plugin must not be included
+<a href="https://docs.unity3d.com/ScriptReference/PluginImporter.DefineConstraints.html">https://docs.unity3d.com/ScriptReference/PluginImporter.DefineConstraints.html</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HashSet&lt;string&gt; DefineConstraints { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HashSet</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_PluginAssemblyInfo_Type_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.Type*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_PluginAssemblyInfo_Type" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Gets the type of Plugin</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginType Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.PluginType.html">PluginType</a></td>
         <td></td>
       </tr>
     </tbody>

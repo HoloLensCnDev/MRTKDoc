@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Creating a Spatial Awareness system data provider | Mixed Reality Toolkit Documentation </title>
+    <title>&#21019;&#24314;&#31354;&#38388;&#24863;&#30693;&#31995;&#32479; data provider | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Creating a Spatial Awareness system data provider | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#21019;&#24314;&#31354;&#38388;&#24863;&#30693;&#31995;&#32479; data provider | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,54 +80,54 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="creating-a-spatial-awareness-system-data-provider">Creating a Spatial Awareness system data provider</h1>
+<h1 id="创建空间感知系统-data-provider">创建空间感知系统 data provider</h1>
 
-<p>The Spatial Awareness system is an extensible system for providing applications with data about real world environments. To add support for a new hardware platform or a new form of Spatial Awareness data, a custom data provider may be required.</p>
-<p>This article describes how to create <a href="../Architecture/SystemsExtensionsProviders.html">custom data providers</a>, also called Spatial Observers, for the Spatial Awareness system. The example code shown here is from the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver.SpatialObjectMeshObserver.html"><code>SpatialObjectMeshObserver</code></a> class implementation which is <a href="SpatialObjectMeshObserver.html">useful for loading 3D mesh data in-editor</a>.</p>
+<p>空间感知系统是一个可扩展的系统，用于向应用程序提供有关真实世界环境的数据。要添加对新硬件平台或新形式的空间感知数据的支持，可能需要自定义data provider。</p>
+<p>本文描述了如何为空间感知系统创建<a href="../Architecture/SystemsExtensionsProviders.html">自定义 data providers</a>，也称为空间Observers,。这里显示的示例代码来自于<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver.SpatialObjectMeshObserver.html"><code>SpatialObjectMeshObserver</code></a> 类实现，这是<a href="SpatialObjectMeshObserver.html">用于在编辑器中加载3D网格数据</a>。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The complete source code used in this example can be found in the <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Providers/ObjectMeshObserver">MixedRealityToolkit.Providers\ObjectMeshObserver folder</a>.</p>
+<p>本例中使用的完整源代码可以在<code>Assets/MRTK/Providers/ObjectMeshObserver</code>文件夹中找到。</p>
 </div>
-<h2 id="namespace-and-folder-structure">Namespace and folder structure</h2>
-<p>Data providers can be distributed in one of two ways:</p>
+<h2 id="名称空间和文件夹结构">名称空间和文件夹结构</h2>
+<p>data provider可以以下两种方式分发:</p>
 <ol>
-<li>Third party add-ons</li>
-<li>Part of the Microsoft Mixed Reality Toolkit</li>
+<li>第三方插件</li>
+<li>微软混合现实工具包的一部分</li>
 </ol>
-<p>The approval process for submissions of new data providers to the MRTK will vary on a case-by-case basis and will be communicated at the time of the initial proposal. Proposals can be submitted by creating a new <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/issues"><em>Feature Request</em> type issue</a>.</p>
-<h3 id="third-party-add-on">Third Party add-on</h3>
+<p>为MRTK提交新data providers的审批程序会视乎个别情况而有所不同，并会在提交初步建议时通知有关人士。提案可以通过创建一个新的<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/issues"><em>Feature Request</em> type issue</a>提交。</p>
+<h3 id="第三方插件">第三方插件</h3>
 <p><strong>Namespace</strong></p>
-<p>Data providers are required to have a namespace to mitigate potential name collisions. It is recommended that the namespace includes the following components.</p>
+<p>data provider需要有一个命名空间来减少潜在的名称冲突。建议该命名空间包含以下组件。</p>
 <ul>
-<li>Company name producing the add-on</li>
-<li>Feature area</li>
+<li>生产插件的公司名称</li>
+<li>功能区域</li>
 </ul>
-<p>For example, a Spatial Awareness data provider created and shipped by the Contoso company may be <em>&quot;Contoso.MixedReality.Toolkit.SpatialAwareness&quot;</em>.</p>
+<p>例如，Contoso公司创建并提供的空间感知data provider可能是 <em>&quot;Contoso.MixedReality.Toolkit.SpatialAwareness&quot;</em>。</p>
 <p><strong>Folder structure</strong></p>
-<p>It is recommended that the source code for data providers be layed out in a folder hierarchy as shown in the following image.</p>
+<p>建议将data provider的源代码放在文件夹层次结构中，如下图所示。</p>
 <p><img src="../Images/SpatialAwareness/ExampleProviderFolderStructure.png" alt="Example folder structure"></p>
-<p>Where the <em>ContosoSpatialAwareness</em> folder contains the implementation of the data provider, the <em>Editor</em> folder contains the inspector (and any other Unity editor specific code), and the <em>Profiles</em> folder contains one or more pre-made profile scriptable objects.</p>
-<h3 id="mrtk-submission">MRTK submission</h3>
+<p>其中，<em>ContosoSpatialAwareness</em>文件夹包含data provider的实现，<em>Editor</em>文件夹包含inspector(以及任何其他特定于Unity编辑器的代码)，而<em>Profiles</em>文件夹包含一个或多个预先制作的配置文件可编写脚本的对象。</p>
+<h3 id="mrtk提交">MRTK提交</h3>
 <p><strong>Namespace</strong></p>
-<p>If a spatial awareness system data provider is being submitted to the <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity">Mixed Reality Toolkit repository</a>, the namespace <strong>must</strong> begin with Microsoft.MixedReality.Toolkit (ex: <em>Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver</em>)</p>
-<p>and the code should be located in a folder beneath MixedRealityToolkit.Providers (ex: <em>MixedRealityToolkit.Providers\ObjectMeshObserver</em>).</p>
+<p>如果一个空间感知系统 data provider被提交到<a href="https://github.com/Microsoft/MixedRealityToolkit-Unity">Mixed Reality Toolkit repository</a>，命名空间<strong>必须</strong>以Microsoft.Microsoft.MixedReality.Toolkit 开头(例如:<em>Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver</em>)</p>
+<p>代码应该位于MRTK/Providers的文件夹下(例如:<em>MRTK/Providers/ObjectMeshObserver</em>)。</p>
 <p><strong>Folder structure</strong></p>
-<p>All code should be located in a folder beneath MixedRealityToolkit.Providers (ex: MixedRealityToolkit.Providers\ObjectMeshObserver).</p>
-<h2 id="define-the-spatial-data-object">Define the spatial data object</h2>
-<p>The first step in creating a Spatial Awareness data provider is determining the type of data (ex: meshes or planes) it will provide to applications.</p>
-<p>All spatial data objects must implement the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObject.html"><code>IMixedRealitySpatialAwarenessObject</code></a>
-interface.</p>
-<p>The Mixed Reality Toolkit foundation provides the following spatial objects that can be used or extended in new data providers.</p>
+<p>所有代码都应该位于MRTK/Providers(例如:MRTK/Providers/ObjectMeshObserver)下的文件夹中。</p>
+<h2 id="定义空间数据对象spatial-data-object">定义空间数据对象(spatial data object)</h2>
+<p>创建空间感知 data provider 的第一步是确定它将提供给应用程序的数据类型(例如:网格或平面)。
+所有空间数据对象必须实现<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObject.html"><code>IMixedRealitySpatialAwarenessObject</code></a>
+接口。</p>
+<p>混合现实工具包基础提供了以下空间对象，可以在新的data provider中使用或扩展。</p>
 <ul>
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialAwarenessObject.html"><code>BaseSpatialAwarenessObject</code></a></li>
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.SpatialAwarenessMeshObject.html"><code>SpatialAwarenessMeshObject</code></a></li>
 <li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.SpatialAwarenessPlanarObject.html"><code>SpatialAwarenessPlanarObject</code></a></li>
 </ul>
-<h2 id="implement-the-data-provider">Implement the data provider</h2>
-<h3 id="specify-interface-andor-base-class-inheritance">Specify interface and/or base class inheritance</h3>
-<p>All Spatial Awareness data providers must implement the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObserver.html"><code>IMixedRealitySpatialAwarenessObserver</code></a>
-interface, which specifies the minimum functionality required by the Spatial Awareness system. The MRTK foundation includes the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialObserver.html"><code>BaseSpatialObserver</code></a>
-class which provides a default implementation of this required functionality.</p>
+<h2 id="实现-data-provider">实现 data provider</h2>
+<h3 id="指定接口-和或-基类继承">指定接口 和/或 基类继承</h3>
+<p>所有空间感知data providers必须实现 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObserver.html"><code>IMixedRealitySpatialAwarenessObserver</code></a>
+接口，它指定空间感知系统所需的最小功能。MRTK基础包括 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialObserver.html"><code>BaseSpatialObserver</code></a>
+类,它提供此所需功能的默认实现。</p>
 <pre><code class="lang-c#">public class SpatialObjectMeshObserver :
     BaseSpatialObserver,
     IMixedRealitySpatialAwarenessMeshObserver,
@@ -136,11 +136,11 @@ class which provides a default implementation of this required functionality.</p
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityCapabilityCheck.html"><code>IMixedRealityCapabilityCheck</code></a> interface is used by the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver.SpatialObjectMeshObserver.html"><code>SpatialObjectMeshObserver</code></a> class to indicate that it provides support for the SpatialAwarenessMesh capability.</p>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityCapabilityCheck.html"><code>IMixedRealityCapabilityCheck</code></a> 接口被<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver.SpatialObjectMeshObserver.html"><code>SpatialObjectMeshObserver</code></a> 类使用,以表明它提供支持SpatialAwarenessMesh 能力。</p>
 </div>
-<h4 id="apply-the-mixedrealitydataprovider-attribute">Apply the MixedRealityDataProvider attribute</h4>
-<p>A key step in creating a Spatial Awareness data provider is to apply the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityDataProviderAttribute.html"><code>MixedRealityDataProvider</code></a>
-attribute to the class. This step enables setting the default profile and platform(s) for the data provider, when selected in the Spatial Awareness profile as well as Name, folder path, and more.</p>
+<h4 id="应用-mixedrealitydataprovider-属性">应用 MixedRealityDataProvider 属性</h4>
+<p>创建空间感知data provider的一个关键步骤是应用<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.MixedRealityDataProviderAttribute.html"><code>MixedRealityDataProvider</code></a>
+属性。当在空间感知配置文件以及名称、文件夹路径等中选中时，此步骤允许设置data provider的默认配置文件和平台。</p>
 <pre><code class="lang-c#">[MixedRealityDataProvider(
     typeof(IMixedRealitySpatialAwarenessSystem),
     SupportedPlatforms.WindowsEditor | SupportedPlatforms.MacEditor | SupportedPlatforms.LinuxEditor,
@@ -153,13 +153,13 @@ public class SpatialObjectMeshObserver :
     IMixedRealityCapabilityCheck
 { }
 </code></pre>
-<h3 id="implement-the-imixedrealitydataprovider-methods">Implement the IMixedRealityDataProvider methods</h3>
-<p>Once the class has been defined, the next step is to provide the implementation of the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider.html"><code>IMixedRealityDataProvider</code></a> interface.</p>
+<h3 id="实现-imixedrealitydataprovider-方法">实现 IMixedRealityDataProvider 方法</h3>
+<p>一旦定义了类，下一步就是提供<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider.html"><code>IMixedRealityDataProvider</code></a> 接口的实现。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialObserver.html"><code>BaseSpatialObserver</code></a> class, via the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.BaseService.html"><code>BaseService</code></a> class, provides only an empty implementations for <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider.html"><code>IMixedRealityDataProvider</code></a> methods. The details of these methods are generally data provider specific.</p>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialObserver.html"><code>BaseSpatialObserver</code></a> 类,通过<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.BaseService.html"><code>BaseService</code></a> 类,只提供一个空的实现对于<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider.html"><code>IMixedRealityDataProvider</code></a> 方法。这些方法的细节通常是特定于data provider的。</p>
 </div>
-<p>The methods that should be implemented by the data provider are:</p>
+<p>data provider方应该实现的方法有:</p>
 <ul>
 <li><code>Destroy()</code></li>
 <li><code>Disable()</code></li>
@@ -168,23 +168,23 @@ public class SpatialObjectMeshObserver :
 <li><code>Reset()</code></li>
 <li><code>Update()</code></li>
 </ul>
-<h3 id="implement-the-data-provider-logic">Implement the data provider logic</h3>
-<p>The next step is to add the logic of the data provider by implementing the specific data provider interface, for
-example <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessMeshObserver.html"><code>IMixedRealitySpatialAwarenessMeshObserver</code></a>. This portion of the data provider will typically be platform specific.</p>
-<h3 id="observation-change-notifications">Observation change notifications</h3>
-<p>To allow applications to respond to changes in the device's understanding of the environment, the data provider raises notification events as defined in the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObservationHandler-1.html"><code>IMixedRealitySpatialAwarenessObservationtHandler&lt;T&gt;</code></a> interface.</p>
+<h3 id="实现-data-provider-逻辑">实现 data provider 逻辑</h3>
+<p>下一步是通过实现特定的data provider接口来添加data provider的逻辑
+例如 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessMeshObserver.html"><code>IMixedRealitySpatialAwarenessMeshObserver</code></a>。data provider的这一部分通常是特定于平台的。</p>
+<h3 id="observation-更改通知">Observation 更改通知</h3>
+<p>允许应用程序对设备的理解环境的变化,data provider提出通知事件正如<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObservationHandler-1.html"><code>IMixedRealitySpatialAwarenessObservationtHandler&lt;T&gt;</code></a> 接口所定义的。</p>
 <ul>
 <li><code>OnObservationAdded()</code></li>
 <li><code>OnObservationRemoved()</code></li>
 <li><code>OnObservationUpdated()</code></li>
 </ul>
-<p>The following code from the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver.SpatialObjectMeshObserver.html"><code>SpatialObjectMeshObserver</code></a> examples demonstrates raising and event when mesh data is added.</p>
-<pre><code class="lang-c#">// The data to be sent when mesh observation events occur.
-// This member variable is initialized as part of the Initialize() method.
+<p>下面的代码来自<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver.SpatialObjectMeshObserver.html"><code>SpatialObjectMeshObserver</code></a>示例，演示了添加网格数据时的引发和事件。</p>
+<pre><code class="lang-c#">// mesh observation events 发生时要发送的数据。
+// /这个成员变量被初始化为 Initialize()方法的一部分
 private MixedRealitySpatialAwarenessEventData&lt;SpatialAwarenessMeshObject&gt; meshEventData = null;
 
 /// &lt;summary&gt;
-/// Sends the observations using the mesh data contained within the configured 3D model.
+/// 使用配置的3D模型中包含的网格数据发送观察结果
 /// &lt;/summary&gt;
 private void SendMeshObjects()
 {
@@ -209,9 +209,9 @@ private void SendMeshObjects()
 
             meshes.Add(currentMeshId, meshObject);
 
-            // Initialize the meshEventData variable with data for the added event.
+            // 用添加事件的数据初始化meshEventData变量。
             meshEventData.Initialize(this, currentMeshId, meshObject);
-            // Raise the event via the spatial awareness system.
+            // /通过空间感知系统引发事件。
             SpatialAwarenessSystem?.HandleEvent(meshEventData, OnMeshAdded);
 
             currentMeshId++;
@@ -223,13 +223,35 @@ private void SendMeshObjects()
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver.SpatialObjectMeshObserver.html"><code>SpatialObjectMeshObserver</code></a> does not raise <code>OnObservationUpdated</code> events since the 3D model is only loaded once. The implementation in the <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.Providers/WindowsMixedReality/WindowsMixedRealitySpatialMeshObserver.cs"><code>WindowsMixedRealitySpatialMeshObserver</code> file</a> provides an example of raising an <code>OnObservationUpdated</code> event for an observed mesh.</p>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver.SpatialObjectMeshObserver.html"><code>SpatialObjectMeshObserver</code></a>类不会引发 <code>OnObservationUpdated</code>事件，因为3D模型只加载一次。<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.WindowsMixedReality.SpatialAwareness.WindowsMixedRealitySpatialMeshObserver.html"><code>WindowsMixedRealitySpatialMeshObserver</code></a>类中的实现提供了一个为观察网格引发 <code>OnObservationUpdated</code>事件的例子。</p>
 </div>
-<h2 id="create-the-profile-and-inspector">Create the profile and inspector</h2>
-<p>In the Mixed Reality Toolkit, data providers are configured using <a href="../Profiles/Profiles.html">profiles</a>.</p>
-<h3 id="define-the-profile">Define the profile</h3>
-<p>Profile contents should mirror the accessible properties of the data provider (ex: update interval). All of the user configurable properties defined in each interface should be contained with the profile.</p>
-<p>Base classes are encouraged if a new data provider extends an existing provider. For example, the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver.SpatialObjectMeshObserverProfile.html"><code>SpatialObjectMeshObserverProfile</code></a> extends the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.html"><code>MixedRealitySpatialAwarenessMeshObserverProfile</code></a> to enable customers to provide a 3D model to be used as the environment data.</p>
+<h3 id="添加unity分析器工具">添加Unity分析器工具</h3>
+<p>在混合现实应用程序中，性能是至关重要的。每个组件都会增加一些应用程序必须考虑的开销。为此，重要的是所有空间感知data provider在内部循环中包含Unity 分析器(Profiler)工具和经常使用的代码路径。</p>
+<p>建议在检测自定义providers时实现MRTK所使用的模式。</p>
+<pre><code class="lang-c#">        private static readonly ProfilerMarker UpdateObserverPerfMarker = new ProfilerMarker(&quot;[MRTK] WindowsMixedRealitySpatialMeshObserver.UpdateObserver&quot;);
+
+        /// &lt;summary&gt;
+        /// Requests updates from the surface observer.
+        /// &lt;/summary&gt;
+        private void UpdateObserver()
+        {
+            using (UpdateObserverPerfMarker.Auto())
+            {
+                // Code to be measured.
+            }
+        }
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>用于标识分析器标记的名称是任意的。MRTK使用以下模式。</p>
+<p>&quot;[product] className.methodName - optional note&quot;</p>
+<p>建议自定义data provider遵循类似的模式，以帮助在分析跟踪时简化特定组件和方法的标识。</p>
+</div>
+<h2 id="创建配置文件和-inspector">创建配置文件和 inspector</h2>
+<p>在混合现实工具包中，data providers是使用<a href="../Profiles/Profiles.html">配置文件</a>配置的。</p>
+<h3 id="定义配置文件">定义配置文件</h3>
+<p>配置文件内容应该反映data provider的可访问属性(例如:更新间隔)。每个接口中定义的所有用户可配置属性都应该包含在配置文件中。</p>
+<p>如果新的data provider扩展了现有的provider，则鼓励使用基类。例如,<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver.SpatialObjectMeshObserverProfile.html"><code>SpatialObjectMeshObserverProfile</code></a>扩展了<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.html"><code>MixedRealitySpatialAwarenessMeshObserverProfile</code></a>让客户提供一个3D模型作为环境数据。</p>
 <pre><code class="lang-c#">[CreateAssetMenu(
     menuName = &quot;Mixed Reality Toolkit/Profiles/Spatial Object Mesh Observer Profile&quot;,
     fileName = &quot;SpatialObjectMeshObserverProfile&quot;,
@@ -246,44 +268,43 @@ public class SpatialObjectMeshObserverProfile : MixedRealitySpatialAwarenessMesh
     public GameObject SpatialMeshObject =&gt; spatialMeshObject;
 }
 </code></pre>
-<p>The <code>CreateAssetMenu</code> attribute can be applied to the profile class to enable customers to create a profile instance using the <strong>Create</strong> &gt; <strong>Assets</strong> &gt; <strong>Mixed Reality Toolkit</strong> &gt; <strong>Profiles</strong> menu.</p>
-<h3 id="implement-the-inspector">Implement the inspector</h3>
-<p>Profile inspectors are the user interface for configuring and viewing profile contents. Each profile inspector should extend the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityToolkitConfigurationProfileInspector.html"><code>BaseMixedRealityToolkitConfigurationProfileInspector</code></a> class.</p>
-<p>The <code>CustomEditor</code> attribute informs Unity the type of asset to which the inspector applies.</p>
+<p>可以将<code>CreateAssetMenu</code>属性应用于配置文件类，使客户能够使用 <strong>Create</strong> &gt; <strong>Assets</strong> &gt; <strong>Mixed Reality Toolkit</strong> &gt; <strong>Profiles</strong> 菜单创建配置文件实例。</p>
+<h3 id="实现-inspector">实现 inspector</h3>
+<p>配置文件inspector是配置和查看配置文件内容的用户界面。每个配置文件inspector应该扩展<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityToolkitConfigurationProfileInspector.html"><code>BaseMixedRealityToolkitConfigurationProfileInspector</code></a>类。</p>
+<p><code>CustomEditor</code>属性通知Unity inspector应用到的资源类型。</p>
 <pre><code class="lang-c#">[CustomEditor(typeof(SpatialObjectMeshObserverProfile))]
 public class SpatialObjectMeshObserverProfileInspector : BaseMixedRealityToolkitConfigurationProfileInspector
 { }
 </code></pre>
-<h2 id="create-assembly-definitions">Create assembly definition(s)</h2>
-<p>The Mixed Reality Toolkit uses assembly definition (<a href="https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html">.asmdef</a>) files to specify dependencies
-between components as well as to assist Unity in reducing compilation time.</p>
-<p>It is recommended that assembly definition files are created for all data providers and their editor components.</p>
-<p>Using the <a href="#namespace-and-folder-structure">folder structure</a> in the earlier example, there would be two .asmdef files for the ContosoSpatialAwareness data provider.</p>
-<p>The first assembly definition is for the data provider. For this example, it will be called ContosoSpatialAwareness and will be located in the example's <em>ContosoSpatialAwareness</em> folder. This assembly definition must specify a dependency on Microsoft.MixedReality.Toolkit and any other assemblies upon which it depends.</p>
-<p>The ContosoInputEditor assembly definition will specify the profile inspector and any editor specific code. This file must be located in the root folder of the editor code. In this example, the file will be located in the <em>ContosoSpatialAwareness\Editor</em> folder. This assembly definition will contain a reference to the ContosoSpatialAwareness assembly as well as:</p>
+<h2 id="创建程序集定义-create-assembly-definitions">创建程序集定义 Create assembly definition(s)</h2>
+<p>混合现实工具包使用程序集定义(<a href="https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html">.asmdef</a>)文件来指定组件之间依赖关系以及帮助Unity减少编译时间。</p>
+<p>建议为所有data providerd及其编辑器组件创建程序集定义文件。</p>
+<p>在前面的示例中使用<a href="#%E5%90%8D%E7%A7%B0%E7%A9%BA%E9%97%B4%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84">文件夹结构</a>， ContosoSpatialAwareness data provider将有两个.asmdef文件。</p>
+<p>第一个程序集定义用于data provider。对于本例，它将被称为ContosoSpatialAwareness，并将位于本例的<em>ContosoSpatialAwareness</em>文件夹中。这个程序集定义必须指定对Microsoft.MixedReality.Toolkit的依赖项和它所依赖的任何其他程序集。</p>
+<p>ContosoInputEditor 程序集定义(assembly definition)将指定配置文件inspector和任何特定于编辑器的代码。此文件必须位于编辑器代码的根文件夹中。在本例中，文件将位于<em>ContosoSpatialAwareness\Editor</em>文件夹中。此程序集定义将包含对ContosoSpatialAwareness程序集的引用，以及:</p>
 <ul>
 <li>Microsoft.MixedReality.Toolkit</li>
 <li>Microsoft.MixedReality.Toolkit.Editor.Inspectors</li>
 <li>Microsoft.MixedReality.Toolkit.Editor.Utilities</li>
 </ul>
-<h2 id="register-the-data-provider">Register the data provider</h2>
-<p>Once created, the data provider can be registered with the Spatial Awareness system to be used in the application.</p>
+<h2 id="注册-data-provider">注册 data provider</h2>
+<p>data provider一旦创建，就可以向应用程序中使用的空间感知系统注册。</p>
 <p><img src="../Images/SpatialAwareness/SelectObjectObserver.png" alt="Selecting the spatial object mesh observer"></p>
-<h2 id="packaging-and-distribution">Packaging and distribution</h2>
-<p>Data providers that are distributed as third party components have the specific details of packaging and distribution left to the preference of the developer. Likely, the most common solution will be to generate a .unitypackage and distribute via the Unity Asset Store.</p>
-<p>If a data provider is submitted and accepted as a part of the Microsoft Mixed Reality Toolkit package, the Microsoft MRTK team will package and distribute it as part of the MRTK offerings.</p>
-<h2 id="see-also">See also</h2>
+<h2 id="打包和发布">打包和发布</h2>
+<p>作为第三方组件发布的data provider具有打包和发布的特定细节，这取决于开发人员的偏好。最常见的解决方案可能是生成一个.unitypackage并通过Unity资源商店进行发布。</p>
+<p>如果data provider作为Microsoft混合现实工具包的一部分被提交和接受，Microsoft MRTK团队将把它作为MRTK产品的一部分进行打包和发布。</p>
+<h2 id="建议浏览">建议浏览</h2>
 <ul>
-<li><a href="SpatialAwarenessGettingStarted.html">Spatial awareness system</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObject.html"><code>IMixedRealitySpatialAwarenessObject</code> interface</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialAwarenessObject.html"><code>BaseSpatialAwarenessObject</code> class</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.SpatialAwarenessMeshObject.html"><code>SpatialAwarenessMeshObject</code> class</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.SpatialAwarenessPlanarObject.html"><code>SpatialAwarenessPlanarObject</code> class</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObserver.html"><code>IMixedRealitySpatialAwarenessObserver</code> interface</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialObserver.html"><code>BaseSpatialObserver</code> class</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessMeshObserver.html"><code>IMixedRealitySpatialAwarenessMeshObserver</code> interface</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider.html"><code>IMixedRealityDataProvider</code> interface</a></li>
-<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityCapabilityCheck.html"><code>IMixedRealityCapabilityCheck</code> interface</a></li>
+<li><a href="SpatialAwarenessGettingStarted.html">空间感知系统</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObject.html"><code>IMixedRealitySpatialAwarenessObject</code> 接口</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialAwarenessObject.html"><code>BaseSpatialAwarenessObject</code> 类</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.SpatialAwarenessMeshObject.html"><code>SpatialAwarenessMeshObject</code> 类</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.SpatialAwarenessPlanarObject.html"><code>SpatialAwarenessPlanarObject</code> 类</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObserver.html"><code>IMixedRealitySpatialAwarenessObserver</code> 接口</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialObserver.html"><code>BaseSpatialObserver</code> 类</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessMeshObserver.html"><code>IMixedRealitySpatialAwarenessMeshObserver</code> 接口</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider.html"><code>IMixedRealityDataProvider</code> 接口</a></li>
+<li><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityCapabilityCheck.html"><code>IMixedRealityCapabilityCheck</code> 接口</a></li>
 </ul>
 </article>
           </div>

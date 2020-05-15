@@ -171,6 +171,49 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableThemeShaderUtils_GetPropertyBlock_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableThemeShaderUtils.GetPropertyBlock*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableThemeShaderUtils_GetPropertyBlock_GameObject_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableThemeShaderUtils.GetPropertyBlock(GameObject)">GetPropertyBlock(GameObject)</h4>
+  <div class="markdown level1 summary"><p>Get the MaterialPropertyBlock from a renderer on a gameObject</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MaterialPropertyBlock GetPropertyBlock(GameObject gameObject)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MaterialPropertyBlock</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableThemeShaderUtils_GetValidMaterial_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableThemeShaderUtils.GetValidMaterial*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableThemeShaderUtils_GetValidMaterial_Renderer_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableThemeShaderUtils.GetValidMaterial(Renderer)">GetValidMaterial(Renderer)</h4>
   <div class="markdown level1 summary"><p>Grab the shared material to avoid creating new material instances and breaking batching.
@@ -210,6 +253,99 @@ used to set the initial state of the MaterialPropertyBlock(s) before mutating st
     <tbody>
       <tr>
         <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableThemeShaderUtils_GetValidMaterial_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableThemeShaderUtils.GetValidMaterial*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableThemeShaderUtils_GetValidMaterial_Renderer_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableThemeShaderUtils.GetValidMaterial(Renderer)">GetValidMaterial(Renderer)</h4>
+  <div class="markdown level1 summary"><p>Grab the shared material to avoid creating new material instances and breaking batching.
+Because MaterialPropertyBlocks are used for setting material properties the shared material is
+used to set the initial state of the MaterialPropertyBlock(s) before mutating state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Material GetValidMaterial(Renderer renderer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Renderer</span></td>
+        <td><span class="parametername">renderer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableThemeShaderUtils_InitMaterialPropertyBlock_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableThemeShaderUtils.InitMaterialPropertyBlock*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableThemeShaderUtils_InitMaterialPropertyBlock_GameObject_List_Microsoft_MixedReality_Toolkit_UI_ThemeStateProperty__" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableThemeShaderUtils.InitMaterialPropertyBlock(GameObject,List{Microsoft.MixedReality.Toolkit.UI.ThemeStateProperty})">InitMaterialPropertyBlock(GameObject, List&lt;ThemeStateProperty&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get a MaterialPropertyBlock and copy the designated properties</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MaterialPropertyBlock InitMaterialPropertyBlock(GameObject gameObject, List&lt;ThemeStateProperty&gt; props)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ThemeStateProperty.html">ThemeStateProperty</a>&gt;</td>
+        <td><span class="parametername">props</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MaterialPropertyBlock</span></td>
         <td></td>
       </tr>
     </tbody>

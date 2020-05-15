@@ -97,6 +97,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">BaseController</span></div>
     <div><span class="xref">IMixedRealityHand</span></div>
   </div>
   <div class="inheritedMembers">
@@ -115,10 +116,53 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityArticulatedHand : BaseWindowsMixedRealitySource, IMixedRealityHand</code></pre>
+    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityArticulatedHand : BaseWindowsMixedRealitySource, BaseController, IMixedRealityHand</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand__ctor_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand__ctor_Microsoft_MixedReality_Toolkit_TrackingState_Handedness_IMixedRealityInputSource_MixedRealityInteractionMapping___" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.#ctor(Microsoft.MixedReality.Toolkit.TrackingState,Handedness,IMixedRealityInputSource,MixedRealityInteractionMapping[])">WindowsMixedRealityArticulatedHand(TrackingState, Handedness, IMixedRealityInputSource, MixedRealityInteractionMapping[])</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowsMixedRealityArticulatedHand(TrackingState trackingState, Handedness controllerHandedness, IMixedRealityInputSource inputSource = null, MixedRealityInteractionMapping[] interactions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.TrackingState.html">TrackingState</a></td>
+        <td><span class="parametername">trackingState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">controllerHandedness</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IMixedRealityInputSource</span></td>
+        <td><span class="parametername">inputSource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MixedRealityInteractionMapping</span>[]</td>
+        <td><span class="parametername">interactions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand__ctor_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.#ctor*"></a>
@@ -195,6 +239,60 @@
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand_DefaultInteractions_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.DefaultInteractions*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand_DefaultInteractions" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.DefaultInteractions">DefaultInteractions</h4>
+  <div class="markdown level1 summary"><p>The Windows Mixed Reality articulated hands default interactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MixedRealityInteractionMapping[] DefaultInteractions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MixedRealityInteractionMapping</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand_DefaultInteractions_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A single interaction mapping works for both left and right articulated hands.</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand_IsInPointingPose_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.IsInPointingPose*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand_IsInPointingPose" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.IsInPointingPose">IsInPointingPose</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsInPointingPose { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand_IsInPointingPose_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.IsInPointingPose*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand_IsInPointingPose" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.IsInPointingPose">IsInPointingPose</h4>
   <div class="markdown level1 summary"></div>
@@ -267,7 +365,57 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand_TryGetJoint_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.TryGetJoint*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityArticulatedHand_TryGetJoint_TrackedHandJoint_MixedRealityPose__" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand.TryGetJoint(TrackedHandJoint,MixedRealityPose@)">TryGetJoint(TrackedHandJoint, out MixedRealityPose)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetJoint(TrackedHandJoint joint, out MixedRealityPose pose)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TrackedHandJoint</span></td>
+        <td><span class="parametername">joint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MixedRealityPose</span></td>
+        <td><span class="parametername">pose</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseController</span>
+  </div>
   <div>
       <span class="xref">IMixedRealityHand</span>
   </div>

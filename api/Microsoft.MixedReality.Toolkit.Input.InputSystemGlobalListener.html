@@ -94,14 +94,48 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">InputSystemGlobalListener</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.html">Microsoft.MixedReality.Toolkit.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InputSystemGlobalListener : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class InputSystemGlobalListener : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_EnsureInputSystemValid_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.EnsureInputSystemValid*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_EnsureInputSystemValid" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.EnsureInputSystemValid">EnsureInputSystemValid()</h4>
+  <div class="markdown level1 summary"><p>A task that will only complete when the input system has in a valid state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task EnsureInputSystemValid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_EnsureInputSystemValid_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It's possible for this object to have been destroyed after the await, which
+implies that callers should check that this != null after awaiting this task.</p>
+</div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_EnsureInputSystemValid_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.EnsureInputSystemValid*"></a>
@@ -144,6 +178,26 @@ implies that callers should check that this != null after awaiting this task.</p
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_OnDisable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.OnDisable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_OnDisable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDisable()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.OnEnable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_OnEnable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.OnEnable*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_OnEnable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.OnEnable">OnEnable()</h4>
   <div class="markdown level1 summary"></div>
@@ -161,6 +215,20 @@ implies that callers should check that this != null after awaiting this task.</p
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void Start()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_Start_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.Start*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalListener_Start" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalListener.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Start()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

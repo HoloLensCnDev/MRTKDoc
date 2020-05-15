@@ -95,6 +95,10 @@
     <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityToolkitConfigurationProfileInspector.html">BaseMixedRealityToolkitConfigurationProfileInspector</a></div>
     <div class="level3"><span class="xref">MixedRealitySpeechCommandsProfileInspector</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">UnityEditor.Editor</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -128,6 +132,9 @@
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityToolkitConfigurationProfileInspector.html#Microsoft_MixedReality_Toolkit_Editor_BaseMixedRealityToolkitConfigurationProfileInspector_CheckMixedRealityInputActions">BaseMixedRealityToolkitConfigurationProfileInspector.CheckMixedRealityInputActions()</a>
     </div>
     <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityToolkitConfigurationProfileInspector.html#Microsoft_MixedReality_Toolkit_Editor_BaseMixedRealityToolkitConfigurationProfileInspector_IsProfileRequired_SystemType_">BaseMixedRealityToolkitConfigurationProfileInspector.IsProfileRequired(SystemType)</a>
+    </div>
+    <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityProfileInspector.html#Microsoft_MixedReality_Toolkit_Editor_BaseMixedRealityProfileInspector_RenderReadOnlyProfile_SerializedProperty_">BaseMixedRealityProfileInspector.RenderReadOnlyProfile(SerializedProperty)</a>
     </div>
     <div>
@@ -144,10 +151,37 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealitySpeechCommandsProfileInspector_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealitySpeechCommandsProfileInspector : BaseMixedRealityToolkitConfigurationProfileInspector</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealitySpeechCommandsProfileInspector : BaseMixedRealityToolkitConfigurationProfileInspector, UnityEditor.Editor</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealitySpeechCommandsProfileInspector_IsProfileInActiveInstance_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealitySpeechCommandsProfileInspector.IsProfileInActiveInstance*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealitySpeechCommandsProfileInspector_IsProfileInActiveInstance" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealitySpeechCommandsProfileInspector.IsProfileInActiveInstance">IsProfileInActiveInstance()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool IsProfileInActiveInstance()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityToolkitConfigurationProfileInspector.html#Microsoft_MixedReality_Toolkit_Editor_BaseMixedRealityToolkitConfigurationProfileInspector_IsProfileInActiveInstance">BaseMixedRealityToolkitConfigurationProfileInspector.IsProfileInActiveInstance()</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealitySpeechCommandsProfileInspector_IsProfileInActiveInstance_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealitySpeechCommandsProfileInspector.IsProfileInActiveInstance*"></a>
@@ -189,6 +223,18 @@
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityProfileInspector.html#Microsoft_MixedReality_Toolkit_Editor_BaseMixedRealityProfileInspector_OnEnable">BaseMixedRealityProfileInspector.OnEnable()</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealitySpeechCommandsProfileInspector_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealitySpeechCommandsProfileInspector.OnEnable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealitySpeechCommandsProfileInspector_OnEnable" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealitySpeechCommandsProfileInspector.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityProfileInspector.html#Microsoft_MixedReality_Toolkit_Editor_BaseMixedRealityProfileInspector_OnEnable">BaseMixedRealityProfileInspector.OnEnable()</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealitySpeechCommandsProfileInspector_OnInspectorGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealitySpeechCommandsProfileInspector.OnInspectorGUI*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealitySpeechCommandsProfileInspector_OnInspectorGUI" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealitySpeechCommandsProfileInspector.OnInspectorGUI">OnInspectorGUI()</h4>
   <div class="markdown level1 summary"></div>
@@ -196,6 +242,20 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void OnInspectorGUI()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealitySpeechCommandsProfileInspector_OnInspectorGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealitySpeechCommandsProfileInspector.OnInspectorGUI*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealitySpeechCommandsProfileInspector_OnInspectorGUI" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealitySpeechCommandsProfileInspector.OnInspectorGUI">OnInspectorGUI()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnInspectorGUI()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">UnityEditor.Editor</span>
   </div>
 </article>
           </div>

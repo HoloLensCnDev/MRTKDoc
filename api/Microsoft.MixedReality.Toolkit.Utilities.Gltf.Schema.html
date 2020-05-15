@@ -227,9 +227,24 @@ When a node is targeted for animation
       <section><p>Specifies if the attribute is a scalar, vector, or matrix.
 <a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/accessor.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/accessor.schema.json</a></p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessorAttributeType.html">GltfAccessorAttributeType</a></h4>
+      <section><p>Specifies if the attribute is a scalar, vector, or matrix.
+<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/accessor.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/accessor.schema.json</a></p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAlphaMode.html">GltfAlphaMode</a></h4>
       <section><p>The alpha rendering mode of the material.
 <a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/material.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/material.schema.json</a></p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAlphaMode.html">GltfAlphaMode</a></h4>
+      <section><p>The alpha rendering mode of the material.
+<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/material.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/material.schema.json</a></p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAnimationChannelPath.html">GltfAnimationChannelPath</a></h4>
+      <section><p>The name of the node's TRS property to modify, or the weights of the Morph Target it instantiates.
+For the translation property, the values that are provided by the sampler are the translation along the x, y, and z axes.
+For the rotation property, the values are a quaternion in the order (x, y, z, w), where w is the scalar.
+For the scale property, the values are the scaling factors along the x, y, and z axes.
+<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/animation.channel.target.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/animation.channel.target.schema.json</a></p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAnimationChannelPath.html">GltfAnimationChannelPath</a></h4>
       <section><p>The name of the node's TRS property to modify, or the weights of the Morph Target it instantiates.
@@ -242,9 +257,23 @@ For the scale property, the values are the scaling factors along the x, y, and z
       <section><p>The target that the GPU buffer should be bound to.
 <a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/bufferView.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/bufferView.schema.json</a></p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfBufferViewTarget.html">GltfBufferViewTarget</a></h4>
+      <section><p>The target that the GPU buffer should be bound to.
+<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/bufferView.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/bufferView.schema.json</a></p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfCameraType.html">GltfCameraType</a></h4>
       <section><p>Specifies if the camera uses a perspective or orthographic projection.
 <a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/camera.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/camera.schema.json</a></p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfCameraType.html">GltfCameraType</a></h4>
+      <section><p>Specifies if the camera uses a perspective or orthographic projection.
+<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/camera.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/camera.schema.json</a></p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfComponentType.html">GltfComponentType</a></h4>
+      <section><p><a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/accessor.schema.json:componentType">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/accessor.schema.json:componentType</a> <p>
+The datatype of components in the attribute.  All valid values correspond to WebGL enums.
+The corresponding typed arrays are 'Int8Array', 'Uint8Array', 'Int16Array', 'Uint16Array', 'Uint32Array', and 'Float32Array', respectively.
+5125 (UNSIGNED_INT) is only allowed when the accessor contains indices, i.e., the accessor is only referenced by 'primitive.indices'.</p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfComponentType.html">GltfComponentType</a></h4>
       <section><p><a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/accessor.schema.json:componentType">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/accessor.schema.json:componentType</a> <p>
@@ -256,6 +285,14 @@ The corresponding typed arrays are 'Int8Array', 'Uint8Array', 'Int16Array', 'Uin
       <section><p>The type of primitives to render.
 <a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/mesh.primitive.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/mesh.primitive.schema.json</a></p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfDrawMode.html">GltfDrawMode</a></h4>
+      <section><p>The type of primitives to render.
+<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/mesh.primitive.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/mesh.primitive.schema.json</a></p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfInterpolationType.html">GltfInterpolationType</a></h4>
+      <section><p>Interpolation algorithm.
+<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/animation.sampler.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/animation.sampler.schema.json</a></p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfInterpolationType.html">GltfInterpolationType</a></h4>
       <section><p>Interpolation algorithm.
 <a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/animation.sampler.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/animation.sampler.schema.json</a></p>
@@ -264,8 +301,20 @@ The corresponding typed arrays are 'Int8Array', 'Uint8Array', 'Int16Array', 'Uin
       <section><p>Magnification filter mode.
 <a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/sampler.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/sampler.schema.json</a></p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMagnificationFilterMode.html">GltfMagnificationFilterMode</a></h4>
+      <section><p>Magnification filter mode.
+<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/sampler.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/sampler.schema.json</a></p>
+</section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMinFilterMode.html">GltfMinFilterMode</a></h4>
       <section><p>Minification filter mode.
+<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/sampler.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/sampler.schema.json</a></p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfMinFilterMode.html">GltfMinFilterMode</a></h4>
+      <section><p>Minification filter mode.
+<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/sampler.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/sampler.schema.json</a></p>
+</section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfWrapMode.html">GltfWrapMode</a></h4>
+      <section><p>Texture wrap mode.
 <a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/sampler.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/sampler.schema.json</a></p>
 </section>
       <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfWrapMode.html">GltfWrapMode</a></h4>

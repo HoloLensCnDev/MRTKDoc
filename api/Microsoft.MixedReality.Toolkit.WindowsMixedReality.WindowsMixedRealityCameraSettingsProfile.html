@@ -94,11 +94,15 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">WindowsMixedRealityCameraSettingsProfile</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseCameraSettingsProfile</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.WindowsMixedReality.html">Microsoft.MixedReality.Toolkit.WindowsMixedReality</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_WindowsMixedRealityCameraSettingsProfile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityCameraSettingsProfile : BaseCameraSettingsProfile</code></pre>
+    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityCameraSettingsProfile : BaseCameraSettingsProfile, BaseCameraSettingsProfile</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -134,9 +138,39 @@ This HolographicCamera provides view matrices corresponding to the photo/video c
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_WindowsMixedRealityCameraSettingsProfile_RenderFromPVCameraForMixedRealityCapture_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.WindowsMixedRealityCameraSettingsProfile.RenderFromPVCameraForMixedRealityCapture*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_WindowsMixedRealityCameraSettingsProfile_RenderFromPVCameraForMixedRealityCapture" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.WindowsMixedRealityCameraSettingsProfile.RenderFromPVCameraForMixedRealityCapture">RenderFromPVCameraForMixedRealityCapture</h4>
+  <div class="markdown level1 summary"><p>Whether to use photo/video camera rendering for Mixed Reality Capture on Windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RenderFromPVCameraForMixedRealityCapture { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_WindowsMixedRealityCameraSettingsProfile_RenderFromPVCameraForMixedRealityCapture_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If true, the platform will provide an additional HolographicCamera to the app when a mixed reality capture photo or video is taken.
+This HolographicCamera provides view matrices corresponding to the photo/video camera location, and it provides projection matrices using the photo/video camera field of view.</p>
+</div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_WindowsMixedRealityCameraSettingsProfile_ReprojectionMethod_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.WindowsMixedRealityCameraSettingsProfile.ReprojectionMethod*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_WindowsMixedRealityCameraSettingsProfile_ReprojectionMethod" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.WindowsMixedRealityCameraSettingsProfile.ReprojectionMethod">ReprojectionMethod</h4>
-  <div class="markdown level1 summary"><p>Specifies the default depth reprojection method for HoloLens 2.</p>
+  <div class="markdown level1 summary"><p>Specifies the default reprojection method for HoloLens 2.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -161,6 +195,39 @@ This HolographicCamera provides view matrices corresponding to the photo/video c
   <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_WindowsMixedRealityCameraSettingsProfile_ReprojectionMethod_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>AutoPlanar requires the DotNetWinRT adapter. DepthReprojection is the default if the adapter isn't present.</p>
 </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_WindowsMixedRealityCameraSettingsProfile_ReprojectionMethod_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.WindowsMixedRealityCameraSettingsProfile.ReprojectionMethod*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_WindowsMixedRealityCameraSettingsProfile_ReprojectionMethod" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.WindowsMixedRealityCameraSettingsProfile.ReprojectionMethod">ReprojectionMethod</h4>
+  <div class="markdown level1 summary"><p>Specifies the default reprojection method for HoloLens 2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HolographicDepthReprojectionMethod ReprojectionMethod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.WindowsMixedReality.HolographicDepthReprojectionMethod.html">HolographicDepthReprojectionMethod</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_WindowsMixedRealityCameraSettingsProfile_ReprojectionMethod_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>AutoPlanar requires the DotNetWinRT adapter. DepthReprojection is the default if the adapter isn't present.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseCameraSettingsProfile</span>
+  </div>
 </article>
           </div>
           

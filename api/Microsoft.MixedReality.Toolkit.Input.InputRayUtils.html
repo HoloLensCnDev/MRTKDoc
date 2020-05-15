@@ -155,9 +155,36 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_GetHeadGazeRay_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.GetHeadGazeRay*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_GetHeadGazeRay" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.GetHeadGazeRay">GetHeadGazeRay()</h4>
+  <div class="markdown level1 summary"><p>Gets the ray representing the position and direction of the user's head.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Ray GetHeadGazeRay()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><p>The ray the head gaze</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_TryGetEyeGazeRay_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.TryGetEyeGazeRay*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_TryGetEyeGazeRay_Ray__" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.TryGetEyeGazeRay(Ray@)">TryGetEyeGazeRay(out Ray)</h4>
-  <div class="markdown level1 summary"><p>Gets the ray&gt; representing the position and direction of the user's eyes.</p>
+  <div class="markdown level1 summary"><p>Gets the ray representing the position and direction of the user's eyes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -174,6 +201,102 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><span class="parametername">ray</span></td>
+        <td><p>The ray being returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the ray is being returned, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_TryGetEyeGazeRay_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.TryGetEyeGazeRay*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_TryGetEyeGazeRay_Ray__" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.TryGetEyeGazeRay(Ray@)">TryGetEyeGazeRay(out Ray)</h4>
+  <div class="markdown level1 summary"><p>Gets the ray representing the position and direction of the user's eyes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetEyeGazeRay(out Ray ray)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><span class="parametername">ray</span></td>
+        <td><p>The ray being returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the ray is being returned, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_TryGetHandRay_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.TryGetHandRay*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_TryGetHandRay_Handedness_Ray__" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.TryGetHandRay(Handedness,Ray@)">TryGetHandRay(Handedness, out Ray)</h4>
+  <div class="markdown level1 summary"><p>Gets the ray associated with the user's hand.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetHandRay(Handedness hand, out Ray ray)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">hand</span></td>
+        <td><p>The handedness of the hand</p>
+</td>
+      </tr>
       <tr>
         <td><span class="xref">Ray</span></td>
         <td><span class="parametername">ray</span></td>
@@ -274,6 +397,115 @@
         <td><span class="xref">Handedness</span></td>
         <td><span class="parametername">hand</span></td>
         <td><p>The handedness of the motion controller</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><span class="parametername">ray</span></td>
+        <td><p>The ray being returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the ray is being returned, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_TryGetMotionControllerRay_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.TryGetMotionControllerRay*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_TryGetMotionControllerRay_Handedness_Ray__" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.TryGetMotionControllerRay(Handedness,Ray@)">TryGetMotionControllerRay(Handedness, out Ray)</h4>
+  <div class="markdown level1 summary"><p>Gets the ray associated with the motion controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetMotionControllerRay(Handedness hand, out Ray ray)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">hand</span></td>
+        <td><p>The handedness of the motion controller</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><span class="parametername">ray</span></td>
+        <td><p>The ray being returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the ray is being returned, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_TryGetRay_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.TryGetRay*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRayUtils_TryGetRay_Microsoft_MixedReality_Toolkit_Input_InputSourceType_Handedness_Ray__" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRayUtils.TryGetRay(Microsoft.MixedReality.Toolkit.Input.InputSourceType,Handedness,Ray@)">TryGetRay(InputSourceType, Handedness, out Ray)</h4>
+  <div class="markdown level1 summary"><p>Gets the ray associated with the desired input source type
+and hand.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetRay(InputSourceType sourceType, Handedness hand, out Ray ray)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSourceType.html">InputSourceType</a></td>
+        <td><span class="parametername">sourceType</span></td>
+        <td><p>The type of input source</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">hand</span></td>
+        <td><p>The handedness of the input source</p>
 </td>
       </tr>
       <tr>

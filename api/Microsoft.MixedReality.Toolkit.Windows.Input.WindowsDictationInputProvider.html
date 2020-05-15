@@ -97,12 +97,13 @@
     <h5>Implements</h5>
     <div><span class="xref">IMixedRealityDictationSystem</span></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityCapabilityCheck.html">IMixedRealityCapabilityCheck</a></div>
+    <div><span class="xref">BaseInputDeviceManager</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Windows.Input.html">Microsoft.MixedReality.Toolkit.Windows.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WindowsDictationInputProvider : BaseInputDeviceManager, IMixedRealityDictationSystem, IMixedRealityCapabilityCheck</code></pre>
+    <pre><code class="lang-csharp hljs">public class WindowsDictationInputProvider : BaseInputDeviceManager, IMixedRealityDictationSystem, IMixedRealityCapabilityCheck, BaseInputDeviceManager</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -127,6 +128,107 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityInputSystem</span></td>
+        <td><span class="parametername">inputSystem</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a> instance that receives data from this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Friendly name of the service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Service priority. Used to determine order of instantiation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The service's configuration profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider__ctor_IMixedRealityInputSystem_System_String_System_UInt32_Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.#ctor(IMixedRealityInputSystem,System.String,System.UInt32,Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile)">WindowsDictationInputProvider(IMixedRealityInputSystem, String, UInt32, BaseMixedRealityProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowsDictationInputProvider(IMixedRealityInputSystem inputSystem, string name = null, uint priority = default(uint), BaseMixedRealityProfile profile = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityInputSystem</span></td>
+        <td><span class="parametername">inputSystem</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a> instance that receives data from this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Friendly name of the service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Service priority. Used to determine order of instantiation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The service's configuration profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider__ctor_Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar_IMixedRealityInputSystem_System_String_System_UInt32_Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.#ctor(Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar,IMixedRealityInputSystem,System.String,System.UInt32,Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile)">WindowsDictationInputProvider(IMixedRealityServiceRegistrar, IMixedRealityInputSystem, String, UInt32, BaseMixedRealityProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This constructor is obsolete (registrar parameter is no longer required) and will be removed in a future version of the Microsoft Mixed Reality Toolkit.&quot;)]
+public WindowsDictationInputProvider(IMixedRealityServiceRegistrar registrar, IMixedRealityInputSystem inputSystem, string name = null, uint priority = default(uint), BaseMixedRealityProfile profile = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></td>
+        <td><span class="parametername">registrar</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a> instance that loaded the data provider.</p>
+</td>
+      </tr>
       <tr>
         <td><span class="xref">IMixedRealityInputSystem</span></td>
         <td><span class="parametername">inputSystem</span></td>
@@ -234,15 +336,38 @@ public WindowsDictationInputProvider(IMixedRealityServiceRegistrar registrar, IM
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_IsListening_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.IsListening*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_IsListening" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.IsListening">IsListening</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsListening { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_CheckCapability_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.CheckCapability*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_CheckCapability_Microsoft_MixedReality_Toolkit_MixedRealityCapability_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.CheckCapability(Microsoft.MixedReality.Toolkit.MixedRealityCapability)">CheckCapability(MixedRealityCapability)</h4>
-  <div class="markdown level1 summary"><p>Checks to see if one or more registered data providers supports the requested capability
-on the current platform.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -261,8 +386,7 @@ on the current platform.</p>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityCapability.html">MixedRealityCapability</a></td>
         <td><span class="parametername">capability</span></td>
-        <td><p>The capability to check.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -277,8 +401,96 @@ on the current platform.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>True if the capability is supported, false otherwise.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_CheckCapability_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.CheckCapability*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_CheckCapability_Microsoft_MixedReality_Toolkit_MixedRealityCapability_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.CheckCapability(Microsoft.MixedReality.Toolkit.MixedRealityCapability)">CheckCapability(MixedRealityCapability)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckCapability(MixedRealityCapability capability)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityCapability.html">MixedRealityCapability</a></td>
+        <td><span class="parametername">capability</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_StartRecording_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.StartRecording*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_StartRecording_GameObject_System_Single_System_Single_System_Int32_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.StartRecording(GameObject,System.Single,System.Single,System.Int32,System.String)">StartRecording(GameObject, Single, Single, Int32, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartRecording(GameObject listener, float initialSilenceTimeout = 5F, float autoSilenceTimeout = 20F, int recordingTime = 10, string micDeviceName = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">listener</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">initialSilenceTimeout</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">autoSilenceTimeout</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">recordingTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">micDeviceName</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -393,6 +605,78 @@ on the current platform.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_StartRecordingAsync_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.StartRecordingAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_StartRecordingAsync_GameObject_System_Single_System_Single_System_Int32_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.StartRecordingAsync(GameObject,System.Single,System.Single,System.Int32,System.String)">StartRecordingAsync(GameObject, Single, Single, Int32, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task StartRecordingAsync(GameObject listener = null, float initialSilenceTimeout = 5F, float autoSilenceTimeout = 20F, int recordingTime = 10, string micDeviceName = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">listener</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">initialSilenceTimeout</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">autoSilenceTimeout</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">recordingTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">micDeviceName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_StopRecording_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.StopRecording*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_StopRecording" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.StopRecording">StopRecording()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopRecording()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_StopRecording_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.StopRecording*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_StopRecording" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.StopRecording">StopRecording()</h4>
   <div class="markdown level1 summary"></div>
@@ -426,12 +710,40 @@ on the current platform.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_StopRecordingAsync_" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.StopRecordingAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Windows_Input_WindowsDictationInputProvider_StopRecordingAsync" data-uid="Microsoft.MixedReality.Toolkit.Windows.Input.WindowsDictationInputProvider.StopRecordingAsync">StopRecordingAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AudioClip&gt; StopRecordingAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">AudioClip</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IMixedRealityDictationSystem</span>
   </div>
   <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityCapabilityCheck.html">IMixedRealityCapabilityCheck</a>
+  </div>
+  <div>
+      <span class="xref">BaseInputDeviceManager</span>
   </div>
 </article>
           </div>

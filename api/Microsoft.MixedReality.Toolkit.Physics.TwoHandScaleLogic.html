@@ -168,6 +168,41 @@ Call Update any time to update the move logic and get a new rotation for the obj
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Physics_TwoHandScaleLogic_Setup_" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandScaleLogic.Setup*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_TwoHandScaleLogic_Setup_Vector3___Transform_" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandScaleLogic.Setup(Vector3[],Transform)">Setup(Vector3[], Transform)</h4>
+  <div class="markdown level1 summary"><p>Initialize system with source info from controllers/hands</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Setup(Vector3[] handsPressedArray, Transform manipulationRoot)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">handsPressedArray</span></td>
+        <td><p>Array with positions of down pointers</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">manipulationRoot</span></td>
+        <td><p>Transform of gameObject to be manipulated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Physics_TwoHandScaleLogic_UpdateMap_" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandScaleLogic.UpdateMap*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Physics_TwoHandScaleLogic_UpdateMap_Dictionary_System_UInt32_Vector3__" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandScaleLogic.UpdateMap(Dictionary{System.UInt32,Vector3})">UpdateMap(Dictionary&lt;UInt32, Vector3&gt;)</h4>
   <div class="markdown level1 summary"><p>update GameObject with new Scale state</p>
@@ -191,6 +226,51 @@ Call Update any time to update the move logic and get a new rotation for the obj
         <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a>, <span class="xref">Vector3</span>&gt;</td>
         <td><span class="parametername">handsPressedMap</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><p>a Vector3 describing the new Scale of the object being manipulated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Physics_TwoHandScaleLogic_UpdateMap_" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandScaleLogic.UpdateMap*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_TwoHandScaleLogic_UpdateMap_Vector3___" data-uid="Microsoft.MixedReality.Toolkit.Physics.TwoHandScaleLogic.UpdateMap(Vector3[])">UpdateMap(Vector3[])</h4>
+  <div class="markdown level1 summary"><p>update GameObject with new Scale state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Vector3 UpdateMap(Vector3[] handsPressedArray)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">handsPressedArray</span></td>
+        <td><p>Array with positions of down pointers, order should be the same as handsPressedArray provided in Setup</p>
+</td>
       </tr>
     </tbody>
   </table>

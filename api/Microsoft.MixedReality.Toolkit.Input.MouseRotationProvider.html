@@ -153,8 +153,75 @@ such as cursor visibility/locking</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MouseRotationProvider_IsRotating_" data-uid="Microsoft.MixedReality.Toolkit.Input.MouseRotationProvider.IsRotating*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MouseRotationProvider_IsRotating" data-uid="Microsoft.MixedReality.Toolkit.Input.MouseRotationProvider.IsRotating">IsRotating</h4>
+  <div class="markdown level1 summary"><p>True when rotation is currently active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRotating { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MouseRotationProvider_Update_" data-uid="Microsoft.MixedReality.Toolkit.Input.MouseRotationProvider.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MouseRotationProvider_Update_Microsoft_MixedReality_Toolkit_Input_KeyBinding_Microsoft_MixedReality_Toolkit_Input_KeyBinding_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Input.MouseRotationProvider.Update(Microsoft.MixedReality.Toolkit.Input.KeyBinding,Microsoft.MixedReality.Toolkit.Input.KeyBinding,System.Boolean)">Update(KeyBinding, KeyBinding, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Start or stop rotation based on the key binding.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update(KeyBinding rotationKey, KeyBinding cancelRotationKey, bool toggle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.html">KeyBinding</a></td>
+        <td><span class="parametername">rotationKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.KeyBinding.html">KeyBinding</a></td>
+        <td><span class="parametername">cancelRotationKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">toggle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_MouseRotationProvider_Update_Microsoft_MixedReality_Toolkit_Input_KeyBinding_Microsoft_MixedReality_Toolkit_Input_KeyBinding_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Also manages shared features such as cursor visibility that can be activated by different rotation providers.</p>
+</div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_MouseRotationProvider_Update_" data-uid="Microsoft.MixedReality.Toolkit.Input.MouseRotationProvider.Update*"></a>

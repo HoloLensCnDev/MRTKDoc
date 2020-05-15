@@ -123,6 +123,7 @@
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
+[Serializable]
 public class Easing</code></pre>
   </div>
   <h3 id="constructors">Constructors
@@ -137,8 +138,43 @@ public class Easing</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Easing()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing__ctor" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.#ctor">Easing()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Easing()</code></pre>
+  </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Curve" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Curve">Curve</h4>
+  <div class="markdown level1 summary"><p>The animation curve to use for the ease - default should be linear</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurve Curve</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AnimationCurve</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Curve" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Curve">Curve</h4>
@@ -185,6 +221,56 @@ public class Easing</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Enabled" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Is the ease enabled?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Enabled</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_LerpTime" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.LerpTime">LerpTime</h4>
+  <div class="markdown level1 summary"><p>The amount of time the ease should run in seconds</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LerpTime</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -245,6 +331,33 @@ public class Easing</code></pre>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Copy_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Copy*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Copy" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Copy">Copy()</h4>
+  <div class="markdown level1 summary"><p>Create Easing object with copied internal properties</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Easing Copy()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Easing.html">Easing</a></td>
+        <td><p>Copy of current Easing instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_GetCurved_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.GetCurved*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_GetCurved" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.GetCurved">GetCurved()</h4>
   <div class="markdown level1 summary"><p>get the ease value based on the animation curve</p>
@@ -253,6 +366,58 @@ public class Easing</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float GetCurved()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_GetCurved_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.GetCurved*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_GetCurved" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.GetCurved">GetCurved()</h4>
+  <div class="markdown level1 summary"><p>get the ease value based on the animation curve</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetCurved()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_GetLinear_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.GetLinear*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_GetLinear" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.GetLinear">GetLinear()</h4>
+  <div class="markdown level1 summary"><p>get the linear ease value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetLinear()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -322,6 +487,31 @@ public class Easing</code></pre>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_IsLinear_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.IsLinear*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_IsLinear" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.IsLinear">IsLinear()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IsLinear()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_IsPlaying_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.IsPlaying*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_IsPlaying" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.IsPlaying">IsPlaying()</h4>
   <div class="markdown level1 summary"><p>Is the ease currently running?</p>
@@ -346,6 +536,43 @@ public class Easing</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_IsPlaying_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.IsPlaying*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_IsPlaying" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.IsPlaying">IsPlaying()</h4>
+  <div class="markdown level1 summary"><p>Is the ease currently running?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPlaying()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_OnUpdate_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.OnUpdate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_OnUpdate" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.OnUpdate">OnUpdate()</h4>
+  <div class="markdown level1 summary"><p>Update the ease each frame or on Update</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnUpdate()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_OnUpdate_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.OnUpdate*"></a>
@@ -387,6 +614,34 @@ public class Easing</code></pre>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_SetCurve_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.SetCurve*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_SetCurve_Microsoft_MixedReality_Toolkit_Utilities_Easing_BasicEaseCurves_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.SetCurve(Microsoft.MixedReality.Toolkit.Utilities.Easing.BasicEaseCurves)">SetCurve(Easing.BasicEaseCurves)</h4>
+  <div class="markdown level1 summary"><p>set the animation curve using a preset</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCurve(Easing.BasicEaseCurves curve)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Easing.BasicEaseCurves.html">Easing.BasicEaseCurves</a></td>
+        <td><span class="parametername">curve</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Start_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Start*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Start" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Start">Start()</h4>
   <div class="markdown level1 summary"><p>start the ease if enabled</p>
@@ -395,6 +650,28 @@ public class Easing</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Start_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Start*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Start" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Start">Start()</h4>
+  <div class="markdown level1 summary"><p>start the ease if enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Stop_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Stop*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Easing_Stop" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Easing.Stop">Stop()</h4>
+  <div class="markdown level1 summary"><p>stop the ease</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
   </div>
   
   

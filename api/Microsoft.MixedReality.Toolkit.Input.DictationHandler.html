@@ -99,6 +99,7 @@ For this script to work, a dictation system like 'Windows Dictation Input Provid
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationHandler.html">IMixedRealityDictationHandler</a></div>
     <div><span class="xref">IEventSystemHandler</span></div>
   </div>
@@ -121,7 +122,7 @@ For this script to work, a dictation system like 'Windows Dictation Input Provid
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DictationHandler : BaseInputHandler, IMixedRealityDictationHandler, IEventSystemHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class DictationHandler : BaseInputHandler, MonoBehaviour, IMixedRealityDictationHandler, IEventSystemHandler</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -134,6 +135,56 @@ For this script to work, a dictation system like 'Windows Dictation Input Provid
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public DictationHandler.StringUnityEvent OnDictationComplete</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DictationHandler.StringUnityEvent.html">DictationHandler.StringUnityEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_OnDictationComplete" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.OnDictationComplete">OnDictationComplete</h4>
+  <div class="markdown level1 summary"><p>Event raised when the recognizer stops. Contains the final recognized string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DictationHandler.StringUnityEvent OnDictationComplete</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DictationHandler.StringUnityEvent.html">DictationHandler.StringUnityEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_OnDictationError" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.OnDictationError">OnDictationError</h4>
+  <div class="markdown level1 summary"><p>Event raised when an error occurs. Contains the string representation of the error reason.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DictationHandler.StringUnityEvent OnDictationError</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,6 +253,56 @@ For this script to work, a dictation system like 'Windows Dictation Input Provid
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_OnDictationHypothesis" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.OnDictationHypothesis">OnDictationHypothesis</h4>
+  <div class="markdown level1 summary"><p>Event raised while the user is talking. As the recognizer listens, it provides text of what it's heard so far.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DictationHandler.StringUnityEvent OnDictationHypothesis</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DictationHandler.StringUnityEvent.html">DictationHandler.StringUnityEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_OnDictationResult" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.OnDictationResult">OnDictationResult</h4>
+  <div class="markdown level1 summary"><p>Event raised after the user pauses, typically at the end of a sentence. Contains the full recognized string so far.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DictationHandler.StringUnityEvent OnDictationResult</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DictationHandler.StringUnityEvent.html">DictationHandler.StringUnityEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_OnDictationResult" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.OnDictationResult">OnDictationResult</h4>
   <div class="markdown level1 summary"><p>Event raised after the user pauses, typically at the end of a sentence. Contains the full recognized string so far.</p>
 </div>
@@ -241,11 +342,21 @@ For this script to work, a dictation system like 'Windows Dictation Input Provid
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputHandler.html#Microsoft_MixedReality_Toolkit_Input_BaseInputHandler_OnDisable">BaseInputHandler.OnDisable()</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_OnDisable_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.OnDisable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_OnDisable" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDisable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputHandler.html#Microsoft_MixedReality_Toolkit_Input_BaseInputHandler_OnDisable">BaseInputHandler.OnDisable()</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_RegisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.RegisterHandlers*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_RegisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.RegisterHandlers">RegisterHandlers()</h4>
-  <div class="markdown level1 summary"><p>Overload this method to specify, which global events component wants to listen to.
-Use RegisterHandler API of InputSystem</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -253,6 +364,30 @@ Use RegisterHandler API of InputSystem</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_RegisterHandlers">InputSystemGlobalHandlerListener.RegisterHandlers()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_RegisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.RegisterHandlers*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_RegisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.RegisterHandlers">RegisterHandlers()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RegisterHandlers()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_RegisterHandlers">InputSystemGlobalHandlerListener.RegisterHandlers()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Start_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Start*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Start" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Start()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputHandler.html#Microsoft_MixedReality_Toolkit_Input_BaseInputHandler_Start">BaseInputHandler.Start()</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Start_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Start*"></a>
@@ -278,6 +413,28 @@ Use RegisterHandler API of InputSystem</p>
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_StartRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.StartRecording*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_StartRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.StartRecording">StartRecording()</h4>
+  <div class="markdown level1 summary"><p>Start a recording session in the dictation system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartRecording()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_StopRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.StopRecording*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_StopRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.StopRecording">StopRecording()</h4>
+  <div class="markdown level1 summary"><p>Stop a recording session in the dictation system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopRecording()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_StopRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.StopRecording*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_StopRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.StopRecording">StopRecording()</h4>
   <div class="markdown level1 summary"><p>Stop a recording session in the dictation system.</p>
@@ -291,9 +448,19 @@ Use RegisterHandler API of InputSystem</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_UnregisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.UnregisterHandlers*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_UnregisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.UnregisterHandlers">UnregisterHandlers()</h4>
-  <div class="markdown level1 summary"><p>Overload this method to specify, which global events component should stop listening to.
-Use UnregisterHandler API of InputSystem</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UnregisterHandlers()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_UnregisterHandlers">InputSystemGlobalHandlerListener.UnregisterHandlers()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_UnregisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.UnregisterHandlers*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_UnregisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.UnregisterHandlers">UnregisterHandlers()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -312,6 +479,60 @@ Use UnregisterHandler API of InputSystem</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void IMixedRealityDictationHandler.OnDictationComplete(DictationEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DictationEventData.html">DictationEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationHandler_OnDictationComplete_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityDictationHandler#OnDictationComplete*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationHandler_OnDictationComplete_Microsoft_MixedReality_Toolkit_Input_DictationEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityDictationHandler#OnDictationComplete(Microsoft.MixedReality.Toolkit.Input.DictationEventData)">IMixedRealityDictationHandler.OnDictationComplete(DictationEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityDictationHandler.OnDictationComplete(DictationEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DictationEventData.html">DictationEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationHandler_OnDictationError_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityDictationHandler#OnDictationError*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationHandler_OnDictationError_Microsoft_MixedReality_Toolkit_Input_DictationEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityDictationHandler#OnDictationError(Microsoft.MixedReality.Toolkit.Input.DictationEventData)">IMixedRealityDictationHandler.OnDictationError(DictationEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityDictationHandler.OnDictationError(DictationEventData eventData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -386,6 +607,60 @@ Use UnregisterHandler API of InputSystem</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationHandler_OnDictationHypothesis_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityDictationHandler#OnDictationHypothesis*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationHandler_OnDictationHypothesis_Microsoft_MixedReality_Toolkit_Input_DictationEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityDictationHandler#OnDictationHypothesis(Microsoft.MixedReality.Toolkit.Input.DictationEventData)">IMixedRealityDictationHandler.OnDictationHypothesis(DictationEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityDictationHandler.OnDictationHypothesis(DictationEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DictationEventData.html">DictationEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationHandler_OnDictationResult_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityDictationHandler#OnDictationResult*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationHandler_OnDictationResult_Microsoft_MixedReality_Toolkit_Input_DictationEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityDictationHandler#OnDictationResult(Microsoft.MixedReality.Toolkit.Input.DictationEventData)">IMixedRealityDictationHandler.OnDictationResult(DictationEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityDictationHandler.OnDictationResult(DictationEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.DictationEventData.html">DictationEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationHandler_OnDictationResult_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityDictationHandler#OnDictationResult*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_DictationHandler_Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationHandler_OnDictationResult_Microsoft_MixedReality_Toolkit_Input_DictationEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.DictationHandler.Microsoft#MixedReality#Toolkit#Input#IMixedRealityDictationHandler#OnDictationResult(Microsoft.MixedReality.Toolkit.Input.DictationEventData)">IMixedRealityDictationHandler.OnDictationResult(DictationEventData)</h4>
   <div class="markdown level1 summary"></div>
@@ -412,6 +687,9 @@ Use UnregisterHandler API of InputSystem</p>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
   <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationHandler.html">IMixedRealityDictationHandler</a>
   </div>

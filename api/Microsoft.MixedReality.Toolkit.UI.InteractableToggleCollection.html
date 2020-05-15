@@ -94,14 +94,42 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">InteractableToggleCollection</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.UI.html">Microsoft.MixedReality.Toolkit.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InteractableToggleCollection : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class InteractableToggleCollection : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_OnSelectionEvents" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.OnSelectionEvents">OnSelectionEvents</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnSelectionEvents</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_OnSelectionEvents" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.OnSelectionEvents">OnSelectionEvents</h4>
@@ -156,6 +184,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_CurrentIndex_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.CurrentIndex*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_CurrentIndex" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.CurrentIndex">CurrentIndex</h4>
+  <div class="markdown level1 summary"><p>The current index in the array of interactable toggles</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CurrentIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_ToggleList_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.ToggleList*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_ToggleList" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.ToggleList">ToggleList</h4>
+  <div class="markdown level1 summary"><p>Array of Interactables that will be managed by this controller</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Interactable[] ToggleList { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.Interactable.html">Interactable</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_ToggleList_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.ToggleList*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_ToggleList" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.ToggleList">ToggleList</h4>
   <div class="markdown level1 summary"><p>Array of Interactables that will be managed by this controller</p>
@@ -182,6 +262,38 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_OnSelection_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.OnSelection*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_OnSelection_System_Int32_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.OnSelection(System.Int32,System.Boolean)">OnSelection(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnSelection(int index, bool force = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_OnSelection_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.OnSelection*"></a>
@@ -256,6 +368,52 @@ when the CurrentIndex is updated via script or inspector
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_SetSelection_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.SetSelection*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableToggleCollection_SetSelection_System_Int32_System_Boolean_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableToggleCollection.SetSelection(System.Int32,System.Boolean,System.Boolean)">SetSelection(Int32, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Set the selection of a an element in the toggle collection based on index.</p>
+<param name="index">Index of an element in ToggleList
+<param name="force">Force selection set
+<param name="fireOnClick">The manual trigger of the OnClick event. OnClick event is manually triggered 
+when the CurrentIndex is updated via script or inspector
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSelection(int index, bool force = false, bool fireOnClick = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">fireOnClick</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

@@ -167,6 +167,48 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_SliderEventData__ctor_" data-uid="Microsoft.MixedReality.Toolkit.UI.SliderEventData.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_SliderEventData__ctor_System_Single_System_Single_IMixedRealityPointer_Microsoft_MixedReality_Toolkit_UI_PinchSlider_" data-uid="Microsoft.MixedReality.Toolkit.UI.SliderEventData.#ctor(System.Single,System.Single,IMixedRealityPointer,Microsoft.MixedReality.Toolkit.UI.PinchSlider)">SliderEventData(Single, Single, IMixedRealityPointer, PinchSlider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SliderEventData(float o, float n, IMixedRealityPointer pointer, PinchSlider slider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">o</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">n</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
+        <td><span class="parametername">pointer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.PinchSlider.html">PinchSlider</a></td>
+        <td><span class="parametername">slider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -179,6 +221,58 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float NewValue { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_SliderEventData_NewValue_" data-uid="Microsoft.MixedReality.Toolkit.UI.SliderEventData.NewValue*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_SliderEventData_NewValue" data-uid="Microsoft.MixedReality.Toolkit.UI.SliderEventData.NewValue">NewValue</h4>
+  <div class="markdown level1 summary"><p>The current value of the slider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float NewValue { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_SliderEventData_OldValue_" data-uid="Microsoft.MixedReality.Toolkit.UI.SliderEventData.OldValue*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_SliderEventData_OldValue" data-uid="Microsoft.MixedReality.Toolkit.UI.SliderEventData.OldValue">OldValue</h4>
+  <div class="markdown level1 summary"><p>The previous value of the slider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float OldValue { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -246,6 +340,61 @@ OnStart, so always check if this field is null before using!</p>
     <tbody>
       <tr>
         <td><span class="xref">IMixedRealityPointer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_SliderEventData_Pointer_" data-uid="Microsoft.MixedReality.Toolkit.UI.SliderEventData.Pointer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_SliderEventData_Pointer" data-uid="Microsoft.MixedReality.Toolkit.UI.SliderEventData.Pointer">Pointer</h4>
+  <div class="markdown level1 summary"><p>The currently active pointer manipulating / hovering the slider,
+or null if no pointer is manipulating the slider.
+Note: OnSliderUpdated is called with .Pointer == null
+OnStart, so always check if this field is null before using!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMixedRealityPointer Pointer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_SliderEventData_Slider_" data-uid="Microsoft.MixedReality.Toolkit.UI.SliderEventData.Slider*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_SliderEventData_Slider" data-uid="Microsoft.MixedReality.Toolkit.UI.SliderEventData.Slider">Slider</h4>
+  <div class="markdown level1 summary"><p>The slider that triggered this event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PinchSlider Slider { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.PinchSlider.html">PinchSlider</a></td>
         <td></td>
       </tr>
     </tbody>

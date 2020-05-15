@@ -95,6 +95,10 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.BaseWindowsMixedRealitySource.html">BaseWindowsMixedRealitySource</a></div>
     <div class="level2"><span class="xref">WindowsMixedRealityGGVHand</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseController</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -111,10 +115,52 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityGGVHand_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityGGVHand : BaseWindowsMixedRealitySource</code></pre>
+    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityGGVHand : BaseWindowsMixedRealitySource, BaseController</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityGGVHand__ctor_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityGGVHand__ctor_Microsoft_MixedReality_Toolkit_TrackingState_Handedness_IMixedRealityInputSource_MixedRealityInteractionMapping___" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand.#ctor(Microsoft.MixedReality.Toolkit.TrackingState,Handedness,IMixedRealityInputSource,MixedRealityInteractionMapping[])">WindowsMixedRealityGGVHand(TrackingState, Handedness, IMixedRealityInputSource, MixedRealityInteractionMapping[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowsMixedRealityGGVHand(TrackingState trackingState, Handedness controllerHandedness, IMixedRealityInputSource inputSource = null, MixedRealityInteractionMapping[] interactions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.TrackingState.html">TrackingState</a></td>
+        <td><span class="parametername">trackingState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">controllerHandedness</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IMixedRealityInputSource</span></td>
+        <td><span class="parametername">inputSource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MixedRealityInteractionMapping</span>[]</td>
+        <td><span class="parametername">interactions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityGGVHand__ctor_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand.#ctor*"></a>
@@ -163,7 +209,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityGGVHand_DefaultInteractions_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand.DefaultInteractions*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityGGVHand_DefaultInteractions" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand.DefaultInteractions">DefaultInteractions</h4>
-  <div class="markdown level1 summary"><p>The GGV hand default interactions</p>
+  <div class="markdown level1 summary"><p>The GGV hand default interactions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -188,6 +234,39 @@
   <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityGGVHand_DefaultInteractions_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>A single interaction mapping works for both left and right controllers.</p>
 </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityGGVHand_DefaultInteractions_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand.DefaultInteractions*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityGGVHand_DefaultInteractions" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand.DefaultInteractions">DefaultInteractions</h4>
+  <div class="markdown level1 summary"><p>The GGV hand default interactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MixedRealityInteractionMapping[] DefaultInteractions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MixedRealityInteractionMapping</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityGGVHand_DefaultInteractions_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A single interaction mapping works for both left and right controllers.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseController</span>
+  </div>
 </article>
           </div>
           

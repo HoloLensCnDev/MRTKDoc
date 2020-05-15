@@ -123,6 +123,7 @@
   <h5 id="Microsoft_MixedReality_Toolkit_UI_InteractableEvent_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
+[Serializable]
 public class InteractableEvent</code></pre>
   </div>
   <h3 id="fields">Fields
@@ -148,6 +149,56 @@ public class InteractableEvent</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableEvent_Event" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableEvent.Event">Event</h4>
+  <div class="markdown level1 summary"><p>Base Event used to initialize EventReceiver class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent Event</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableEvent_Receiver" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableEvent.Receiver">Receiver</h4>
+  <div class="markdown level1 summary"><p>ReceiverBase instantiation for this InteractableEvent. Used at runtime by Interactable class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReceiverBase Receiver</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.html">ReceiverBase</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -205,8 +256,78 @@ public class InteractableEvent</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableEvent_ReceiverType_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableEvent.ReceiverType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableEvent_ReceiverType" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableEvent.ReceiverType">ReceiverType</h4>
+  <div class="markdown level1 summary"><p>Defines the type of Receiver to associate. Type must be a class that extends ReceiverBase</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type ReceiverType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_InteractableEvent_CreateReceiver_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableEvent.CreateReceiver*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_InteractableEvent_CreateReceiver_Microsoft_MixedReality_Toolkit_UI_InteractableEvent_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableEvent.CreateReceiver(Microsoft.MixedReality.Toolkit.UI.InteractableEvent)">CreateReceiver(InteractableEvent)</h4>
+  <div class="markdown level1 summary"><p>Create the event and setup the values from the inspector. If the asset is invalid,
+returns null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReceiverBase CreateReceiver(InteractableEvent iEvent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableEvent.html">InteractableEvent</a></td>
+        <td><span class="parametername">iEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.html">ReceiverBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_InteractableEvent_CreateReceiver_" data-uid="Microsoft.MixedReality.Toolkit.UI.InteractableEvent.CreateReceiver*"></a>

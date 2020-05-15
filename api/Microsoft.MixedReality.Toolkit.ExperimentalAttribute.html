@@ -94,11 +94,15 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ExperimentalAttribute</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">PropertyAttribute</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.html">Microsoft.MixedReality.Toolkit</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_ExperimentalAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ExperimentalAttribute : PropertyAttribute</code></pre>
+    <pre><code class="lang-csharp hljs">public class ExperimentalAttribute : PropertyAttribute, PropertyAttribute</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -111,7 +115,36 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ExperimentalAttribute(string experimentalText = &quot;&lt;b&gt;&lt;color=yellow&gt;This is an experimental feature.&lt;/color&gt;&lt;/b&gt;\nParts of the MRTK appear to have a lot of value even if the details haven&#8217;t fully been fleshed out. For these types of features, we want the community to see them and get value out of them early. Because they are early in the cycle, we label them as experimental to indicate that they are still evolving, and subject to change over time.&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public ExperimentalAttribute(string experimentalText = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">experimentalText</span></td>
+        <td><p>The experimental text to display in the warning box.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_ExperimentalAttribute__ctor_" data-uid="Microsoft.MixedReality.Toolkit.ExperimentalAttribute.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_ExperimentalAttribute__ctor_System_String_" data-uid="Microsoft.MixedReality.Toolkit.ExperimentalAttribute.#ctor(System.String)">ExperimentalAttribute(String)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExperimentalAttribute(string experimentalText = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,6 +191,35 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_ExperimentalAttribute_Text" data-uid="Microsoft.MixedReality.Toolkit.ExperimentalAttribute.Text">Text</h4>
+  <div class="markdown level1 summary"><p>The text to display in the warning box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Text</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">PropertyAttribute</span>
+  </div>
 </article>
           </div>
           

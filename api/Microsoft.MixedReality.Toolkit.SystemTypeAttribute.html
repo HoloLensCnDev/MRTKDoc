@@ -97,11 +97,15 @@ a <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.SystemType.html
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.ExtendsAttribute.html">ExtendsAttribute</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.ImplementsAttribute.html">ImplementsAttribute</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">PropertyAttribute</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.html">Microsoft.MixedReality.Toolkit</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SystemTypeAttribute : PropertyAttribute</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SystemTypeAttribute : PropertyAttribute, PropertyAttribute</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -134,7 +138,41 @@ a <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.SystemType.html
       <tr>
         <td><span class="xref">TypeGrouping</span></td>
         <td><span class="parametername">grouping</span></td>
-        <td><p>Gets or sets grouping of selectable classes. Defaults to <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TypeGrouping.html#Microsoft_MixedReality_Toolkit_Utilities_TypeGrouping_ByNamespaceFlat">ByNamespaceFlat</a> unless explicitly specified.</p>
+        <td><p>Gets or sets grouping of selectable classes. Defaults to <see cref="!:Utilities.TypeGrouping.ByNamespaceFlat"></see> unless explicitly specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute__ctor_" data-uid="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute__ctor_Type_TypeGrouping_" data-uid="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.#ctor(Type,TypeGrouping)">SystemTypeAttribute(Type, TypeGrouping)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SystemTypeAttribute(Type type, TypeGrouping grouping = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Initializes a new instance of the <a class="xref" href="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.html">SystemTypeAttribute</a> class.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TypeGrouping</span></td>
+        <td><span class="parametername">grouping</span></td>
+        <td><p>Gets or sets grouping of selectable classes. Defaults to <see cref="!:Utilities.TypeGrouping.ByNamespaceFlat"></see> unless explicitly specified.</p>
 </td>
       </tr>
     </tbody>
@@ -170,9 +208,62 @@ Defaults to a value of <code>false</code> unless explicitly specified.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute_AllowAbstract_" data-uid="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.AllowAbstract*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute_AllowAbstract" data-uid="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.AllowAbstract">AllowAbstract</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether abstract classes can be selected from drop-down.
+Defaults to a value of <code>false</code> unless explicitly specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowAbstract { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute_Grouping_" data-uid="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.Grouping*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute_Grouping" data-uid="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.Grouping">Grouping</h4>
-  <div class="markdown level1 summary"><p>Gets or sets grouping of selectable classes. Defaults to <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TypeGrouping.html#Microsoft_MixedReality_Toolkit_Utilities_TypeGrouping_ByNamespaceFlat">ByNamespaceFlat</a> unless explicitly specified.</p>
+  <div class="markdown level1 summary"><p>Gets or sets grouping of selectable classes. Defaults to <see cref="!:Utilities.TypeGrouping.ByNamespaceFlat"></see> unless explicitly specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TypeGrouping Grouping { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TypeGrouping</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute_Grouping_" data-uid="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.Grouping*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute_Grouping" data-uid="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.Grouping">Grouping</h4>
+  <div class="markdown level1 summary"><p>Gets or sets grouping of selectable classes. Defaults to <see cref="!:Utilities.TypeGrouping.ByNamespaceFlat"></see> unless explicitly specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -242,6 +333,56 @@ satisfies this constraint and should thus be selectable.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute_IsConstraintSatisfied_" data-uid="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.IsConstraintSatisfied*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SystemTypeAttribute_IsConstraintSatisfied_Type_" data-uid="Microsoft.MixedReality.Toolkit.SystemTypeAttribute.IsConstraintSatisfied(Type)">IsConstraintSatisfied(Type)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> satisfies filter constraint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsConstraintSatisfied(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Type to test.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a> value indicating if the type specified by <code data-dev-comment-type="paramref" class="paramref">type</code>
+satisfies this constraint and should thus be selectable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">PropertyAttribute</span>
+  </div>
 </article>
           </div>
           

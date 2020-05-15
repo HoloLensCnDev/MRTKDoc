@@ -94,14 +94,71 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">SystemTypeReferencePropertyDrawer</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">PropertyDrawer</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.html">Microsoft.MixedReality.Toolkit.Editor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SystemTypeReferencePropertyDrawer : PropertyDrawer</code></pre>
+    <pre><code class="lang-csharp hljs">public class SystemTypeReferencePropertyDrawer : PropertyDrawer, PropertyDrawer</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_ExcludedTypeCollectionGetter_" data-uid="Microsoft.MixedReality.Toolkit.Editor.SystemTypeReferencePropertyDrawer.ExcludedTypeCollectionGetter*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_ExcludedTypeCollectionGetter" data-uid="Microsoft.MixedReality.Toolkit.Editor.SystemTypeReferencePropertyDrawer.ExcludedTypeCollectionGetter">ExcludedTypeCollectionGetter</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a function that returns a collection of types that are
+to be excluded from drop-down. A value of <code>null</code> specifies that
+no types are to be excluded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;ICollection&lt;Type&gt;&gt; ExcludedTypeCollectionGetter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">ICollection</span>&lt;<span class="xref">Type</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_ExcludedTypeCollectionGetter_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This property must be set immediately before presenting a class
+type reference property field using <a href="https://docs.unity3d.com/ScriptReference/EditorGUI.PropertyField.html">EditorGUI.PropertyField</a>
+since the value of this property is reset to <code>null</code> each time the control is drawn.</p>
+<p>Since filtering makes extensive use of <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1.contains#System_Collections_Generic_ICollection_1_Contains__0_">Contains(T)</a>
+it is recommended to use a collection that is optimized for fast
+look ups such as HashSet for better performance.</p>
+</div>
+  <h5 id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_ExcludedTypeCollectionGetter_examples">Examples</h5>
+  <p>Exclude a specific type from being selected:</p>
+<pre><code class="lang-csharp">private SerializedProperty someTypeReferenceProperty;
+<p>public override void OnInspectorGUI() {
+serializedObject.Update();</p>
+<pre><code>ClassTypeReferencePropertyDrawer.ExcludedTypeCollectionGetter = GetExcludedTypeCollection;
+EditorGUILayout.PropertyField(someTypeReferenceProperty);
+
+serializedObject.ApplyModifiedProperties();
+</code></pre>
+<p>}</p>
+<p>private ICollection&lt;Type&gt; GetExcludedTypeCollection() {
+var set = new HashSet&lt;Type&gt;();
+set.Add(typeof(SpecialClassToHideInDropdown));
+return set;
+}</code></pre><p>
+
   
   
   <a id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_ExcludedTypeCollectionGetter_" data-uid="Microsoft.MixedReality.Toolkit.Editor.SystemTypeReferencePropertyDrawer.ExcludedTypeCollectionGetter*"></a>
@@ -206,6 +263,53 @@ return set;
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_GetPropertyHeight_" data-uid="Microsoft.MixedReality.Toolkit.Editor.SystemTypeReferencePropertyDrawer.GetPropertyHeight*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_GetPropertyHeight_SerializedProperty_GUIContent_" data-uid="Microsoft.MixedReality.Toolkit.Editor.SystemTypeReferencePropertyDrawer.GetPropertyHeight(SerializedProperty,GUIContent)">GetPropertyHeight(SerializedProperty, GUIContent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float GetPropertyHeight(SerializedProperty property, GUIContent label)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SerializedProperty</span></td>
+        <td><span class="parametername">property</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GUIContent</span></td>
+        <td><span class="parametername">label</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_OnGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.SystemTypeReferencePropertyDrawer.OnGUI*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_OnGUI_Rect_SerializedProperty_GUIContent_" data-uid="Microsoft.MixedReality.Toolkit.Editor.SystemTypeReferencePropertyDrawer.OnGUI(Rect,SerializedProperty,GUIContent)">OnGUI(Rect, SerializedProperty, GUIContent)</h4>
   <div class="markdown level1 summary"></div>
@@ -241,6 +345,47 @@ return set;
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_OnGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.SystemTypeReferencePropertyDrawer.OnGUI*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_SystemTypeReferencePropertyDrawer_OnGUI_Rect_SerializedProperty_GUIContent_" data-uid="Microsoft.MixedReality.Toolkit.Editor.SystemTypeReferencePropertyDrawer.OnGUI(Rect,SerializedProperty,GUIContent)">OnGUI(Rect, SerializedProperty, GUIContent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">SerializedProperty</span></td>
+        <td><span class="parametername">property</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GUIContent</span></td>
+        <td><span class="parametername">label</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">PropertyDrawer</span>
+  </div>
 </article>
           </div>
           

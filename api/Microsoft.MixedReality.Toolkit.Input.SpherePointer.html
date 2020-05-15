@@ -98,6 +98,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityControllerPoseSynchronizer.html">IMixedRealityControllerPoseSynchronizer</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourcePoseHandler.html">IMixedRealitySourcePoseHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourceStateHandler.html">IMixedRealitySourceStateHandler</a></div>
@@ -224,6 +225,9 @@
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseControllerPointer.html#Microsoft_MixedReality_Toolkit_Input_BaseControllerPointer_OnInputDown_Microsoft_MixedReality_Toolkit_Input_InputEventData_">BaseControllerPointer.OnInputDown(InputEventData)</a>
     </div>
     <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseControllerPointer.html#Microsoft_MixedReality_Toolkit_Input_BaseControllerPointer_Reset">BaseControllerPointer.Reset()</a>
+    </div>
+    <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ControllerPoseSynchronizer.html#Microsoft_MixedReality_Toolkit_Input_ControllerPoseSynchronizer_Handedness">ControllerPoseSynchronizer.Handedness</a>
     </div>
     <div>
@@ -288,10 +292,34 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SpherePointer : BaseControllerPointer, IMixedRealityControllerPoseSynchronizer, IMixedRealitySourcePoseHandler, IMixedRealitySourceStateHandler, IMixedRealityInputHandler, IMixedRealityBaseInputHandler, IMixedRealityInputHandler&lt;float&gt;, IMixedRealityInputHandler&lt;Vector2&gt;, IMixedRealityInputHandler&lt;Vector3&gt;, IMixedRealityInputHandler&lt;Quaternion&gt;, IMixedRealityInputHandler&lt;MixedRealityPose&gt;, IEventSystemHandler, IMixedRealityNearPointer, IMixedRealityPointer, IEqualityComparer</code></pre>
+    <pre><code class="lang-csharp hljs">public class SpherePointer : BaseControllerPointer, MonoBehaviour, IMixedRealityControllerPoseSynchronizer, IMixedRealitySourcePoseHandler, IMixedRealitySourceStateHandler, IMixedRealityInputHandler, IMixedRealityBaseInputHandler, IMixedRealityInputHandler&lt;float&gt;, IMixedRealityInputHandler&lt;Vector2&gt;, IMixedRealityInputHandler&lt;Vector3&gt;, IMixedRealityInputHandler&lt;Quaternion&gt;, IMixedRealityInputHandler&lt;MixedRealityPose&gt;, IEventSystemHandler, IMixedRealityNearPointer, IMixedRealityPointer, IEqualityComparer</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_triggerInteraction" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.triggerInteraction">triggerInteraction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected QueryTriggerInteraction triggerInteraction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">QueryTriggerInteraction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_triggerInteraction" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.triggerInteraction">triggerInteraction</h4>
@@ -347,6 +375,95 @@
   <h5 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_GrabLayerMasks_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Only <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html">NearInteractionGrabbables</a> in one of the LayerMasks will raise events.</p>
 </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_GrabLayerMasks_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.GrabLayerMasks*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_GrabLayerMasks" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.GrabLayerMasks">GrabLayerMasks</h4>
+  <div class="markdown level1 summary"><p>The LayerMasks, in prioritized order, that are used to determine the touchable objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LayerMask[] GrabLayerMasks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LayerMask</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_GrabLayerMasks_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable.html">NearInteractionGrabbables</a> in one of the LayerMasks will raise events.</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_IgnoreCollidersNotInFOV_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.IgnoreCollidersNotInFOV*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_IgnoreCollidersNotInFOV" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.IgnoreCollidersNotInFOV">IgnoreCollidersNotInFOV</h4>
+  <div class="markdown level1 summary"><p>Whether to ignore colliders that may be near the pointer, but not actually in the visual FOV.
+This can prevent accidental grabs, and will allow hand rays to turn on when you may be near
+a grabbable but cannot see it. Visual FOV is defined by cone centered about display center,
+radius equal to half display height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IgnoreCollidersNotInFOV { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_IsInteractionEnabled_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.IsInteractionEnabled*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_IsInteractionEnabled" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.IsInteractionEnabled">IsInteractionEnabled</h4>
+  <div class="markdown level1 summary"><p>Test if the pointer is within the grabbable radius of collider that's both on a grabbable layer mask, and has a NearInteractionGrabbable.
+Uses SphereCastRadius to determine if near an object.
+Note: if focus on pointer is locked, will always return true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsInteractionEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the pointer is within the grabbable radius of collider that's both on a grabbable layer mask, and has a NearInteractionGrabbable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseControllerPointer.html#Microsoft_MixedReality_Toolkit_Input_BaseControllerPointer_IsInteractionEnabled">BaseControllerPointer.IsInteractionEnabled</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_IsInteractionEnabled_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.IsInteractionEnabled*"></a>
@@ -408,6 +525,63 @@ Uses SphereCastRadius + NearObjectMargin to determine if near an object.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_IsNearObject_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.IsNearObject*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_IsNearObject" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.IsNearObject">IsNearObject</h4>
+  <div class="markdown level1 summary"><p>Test if the pointer is near any collider that's both on a grabbable layer mask, and has a NearInteractionGrabbable.
+Uses SphereCastRadius + NearObjectMargin to determine if near an object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNearObject { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the pointer is near any collider that's both on a grabbable layer mask, and has a NearInteractionGrabbable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_NearObjectMargin_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.NearObjectMargin*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_NearObjectMargin" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.NearObjectMargin">NearObjectMargin</h4>
+  <div class="markdown level1 summary"><p>Additional distance on top of<a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseControllerPointer.html#Microsoft_MixedReality_Toolkit_Input_BaseControllerPointer_SphereCastRadius">SphereCastRadius</a> when pointer is considered 'near' an object and far interaction will turn off.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float NearObjectMargin { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_NearObjectMargin_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This creates a dead zone in which far interaction is disabled before objects become grabbable.</p>
+</div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_NearObjectMargin_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.NearObjectMargin*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_NearObjectMargin" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.NearObjectMargin">NearObjectMargin</h4>
   <div class="markdown level1 summary"><p>Additional distance on top of<a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseControllerPointer.html#Microsoft_MixedReality_Toolkit_Input_BaseControllerPointer_SphereCastRadius">SphereCastRadius</a> when pointer is considered 'near' an object and far interaction will turn off.</p>
@@ -466,6 +640,61 @@ Uses SphereCastRadius + NearObjectMargin to determine if near an object.</p>
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_NearObjectRadius_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.NearObjectRadius*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_NearObjectRadius" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.NearObjectRadius">NearObjectRadius</h4>
+  <div class="markdown level1 summary"><p>Distance at which the pointer is considered &quot;near&quot; an object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float NearObjectRadius { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_NearObjectRadius_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Sum of <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseControllerPointer.html#Microsoft_MixedReality_Toolkit_Input_BaseControllerPointer_SphereCastRadius">SphereCastRadius</a> and <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SpherePointer.html#Microsoft_MixedReality_Toolkit_Input_SpherePointer_NearObjectMargin">NearObjectMargin</a>. Entering the <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SpherePointer.html#Microsoft_MixedReality_Toolkit_Input_SpherePointer_NearObjectRadius">NearObjectRadius</a> disables far interaction.</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_SceneQueryBufferSize_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.SceneQueryBufferSize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_SceneQueryBufferSize" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.SceneQueryBufferSize">SceneQueryBufferSize</h4>
+  <div class="markdown level1 summary"><p>Maximum number of colliders that can be detected in a scene query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SceneQueryBufferSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_SceneQueryBufferSize_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.SceneQueryBufferSize*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_SceneQueryBufferSize" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.SceneQueryBufferSize">SceneQueryBufferSize</h4>
   <div class="markdown level1 summary"><p>Maximum number of colliders that can be detected in a scene query.</p>
@@ -494,8 +723,34 @@ Uses SphereCastRadius + NearObjectMargin to determine if near an object.</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_SceneQueryType_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.SceneQueryType*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_SceneQueryType" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.SceneQueryType">SceneQueryType</h4>
-  <div class="markdown level1 summary"><p>The type of physics scene query to use.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override SceneQueryType SceneQueryType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SceneQueryType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseControllerPointer.html#Microsoft_MixedReality_Toolkit_Input_BaseControllerPointer_SceneQueryType">BaseControllerPointer.SceneQueryType</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_SceneQueryType_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.SceneQueryType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_SceneQueryType" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.SceneQueryType">SceneQueryType</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -544,14 +799,51 @@ Uses SphereCastRadius + NearObjectMargin to determine if near an object.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TriggerInteraction_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TriggerInteraction*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TriggerInteraction" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TriggerInteraction">TriggerInteraction</h4>
+  <div class="markdown level1 summary"><p>Specify whether queries for grabbable objects hit triggers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QueryTriggerInteraction TriggerInteraction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">QueryTriggerInteraction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_OnPreSceneQuery_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.OnPreSceneQuery*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_OnPreSceneQuery" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.OnPreSceneQuery">OnPreSceneQuery()</h4>
-  <div class="markdown level1 summary"><p>Called before performing the scene query.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnPreSceneQuery()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseControllerPointer.html#Microsoft_MixedReality_Toolkit_Input_BaseControllerPointer_OnPreSceneQuery">BaseControllerPointer.OnPreSceneQuery()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_OnPreSceneQuery_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.OnPreSceneQuery*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_OnPreSceneQuery" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.OnPreSceneQuery">OnPreSceneQuery()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -563,9 +855,7 @@ Uses SphereCastRadius + NearObjectMargin to determine if near an object.</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TryGetDistanceToNearestSurface_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TryGetDistanceToNearestSurface*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TryGetDistanceToNearestSurface_System_Single__" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TryGetDistanceToNearestSurface(System.Single@)">TryGetDistanceToNearestSurface(out Single)</h4>
-  <div class="markdown level1 summary"><p>Near pointers often interact with surfaces.</p>
-<p>This method provides a mechanism to get the distance to the closest surface the near pointer is interacting with.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -584,8 +874,7 @@ Uses SphereCastRadius + NearObjectMargin to determine if near an object.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td><span class="parametername">distance</span></td>
-        <td><p>Out parameter filled with the distance along the surface normal from the surface to the pointer if available, otherwise 0.0f.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -600,8 +889,94 @@ Uses SphereCastRadius + NearObjectMargin to determine if near an object.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>True if a distance was retrieved, false if not.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TryGetDistanceToNearestSurface_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TryGetDistanceToNearestSurface*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TryGetDistanceToNearestSurface_System_Single__" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TryGetDistanceToNearestSurface(System.Single@)">TryGetDistanceToNearestSurface(out Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetDistanceToNearestSurface(out float distance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">distance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TryGetNearGraspPoint_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TryGetNearGraspPoint*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TryGetNearGraspPoint_Vector3__" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TryGetNearGraspPoint(Vector3@)">TryGetNearGraspPoint(out Vector3)</h4>
+  <div class="markdown level1 summary"><p>Gets the position of where grasp happens
+For IMixedRealityHand it's the average of index and thumb.
+For any other IMixedRealityController, return just the pointer origin</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetNearGraspPoint(out Vector3 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -654,9 +1029,7 @@ For any other IMixedRealityController, return just the pointer origin</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TryGetNormalToNearestSurface_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TryGetNormalToNearestSurface*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TryGetNormalToNearestSurface_Vector3__" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TryGetNormalToNearestSurface(Vector3@)">TryGetNormalToNearestSurface(out Vector3)</h4>
-  <div class="markdown level1 summary"><p>Near pointers often interact with surfaces.</p>
-<p>This method provides a mechanism to get the normal of the closest surface the near pointer is interacting with.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -675,8 +1048,7 @@ For any other IMixedRealityController, return just the pointer origin</p>
       <tr>
         <td><span class="xref">Vector3</span></td>
         <td><span class="parametername">normal</span></td>
-        <td><p>Out parameter filled with the surface normal if available, otherwise <a href="https://docs.unity3d.com/ScriptReference/Vector3-zero.html">Vector3.zero</a>.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -691,12 +1063,56 @@ For any other IMixedRealityController, return just the pointer origin</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>True if a normal was retrieved, false if not.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TryGetNormalToNearestSurface_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TryGetNormalToNearestSurface*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpherePointer_TryGetNormalToNearestSurface_Vector3__" data-uid="Microsoft.MixedReality.Toolkit.Input.SpherePointer.TryGetNormalToNearestSurface(Vector3@)">TryGetNormalToNearestSurface(out Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetNormalToNearestSurface(out Vector3 normal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
   <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityControllerPoseSynchronizer.html">IMixedRealityControllerPoseSynchronizer</a>
   </div>

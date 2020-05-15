@@ -94,11 +94,15 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">TileGridObjectCollection</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.html">Microsoft.MixedReality.Toolkit.Utilities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TileGridObjectCollection : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class TileGridObjectCollection : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -123,6 +127,56 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_Centered" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.Centered">Centered</h4>
+  <div class="markdown level1 summary"><p>Will the grid be centered or start in the top corner</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool Centered</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_Columns" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.Columns">Columns</h4>
+  <div class="markdown level1 summary"><p>How many columns should the grid have</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int Columns</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -179,6 +233,55 @@
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_DepthCalculatedBy" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.DepthCalculatedBy">DepthCalculatedBy</h4>
+  <div class="markdown level1 summary"><p>The depth or z uses the rows if true or columns if false</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TileGridObjectCollection.GridDivisions DepthCalculatedBy</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.GridDivisions.html">TileGridObjectCollection.GridDivisions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_editorUpdated" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.editorUpdated">editorUpdated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool editorUpdated</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_editorUpdated" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.editorUpdated">editorUpdated</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -210,6 +313,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected Vector3 Gutters</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_Gutters" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.Gutters">Gutters</h4>
+  <div class="markdown level1 summary"><p>The space between tiles in pixels</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 Gutters</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_LayoutDireciton" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.LayoutDireciton">LayoutDireciton</h4>
+  <div class="markdown level1 summary"><p>The layout direction as a normalized vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 LayoutDireciton</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -277,6 +430,55 @@
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_offSet" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.offSet">offSet</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 offSet</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_OnlyInEditMode" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.OnlyInEditMode">OnlyInEditMode</h4>
+  <div class="markdown level1 summary"><p>Should this update during run-time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool OnlyInEditMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_OnlyInEditMode" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.OnlyInEditMode">OnlyInEditMode</h4>
   <div class="markdown level1 summary"><p>Should this update during run-time</p>
 </div>
@@ -309,6 +511,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected Vector3 StartPosition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_StartPosition" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.StartPosition">StartPosition</h4>
+  <div class="markdown level1 summary"><p>The starting position of the grid - an offset value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 StartPosition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_TileSize" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.TileSize">TileSize</h4>
+  <div class="markdown level1 summary"><p>Tile size in pixels</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 TileSize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -413,6 +665,108 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_ConfigureGrid_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.ConfigureGrid*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_ConfigureGrid_System_Int32_Vector3_Vector3_Vector3_Vector3_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.ConfigureGrid(System.Int32,Vector3,Vector3,Vector3,Vector3,System.Boolean)">ConfigureGrid(Int32, Vector3, Vector3, Vector3, Vector3, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Load the settings of the grid with code</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ConfigureGrid(int columns, Vector3 tileSize, Vector3 gutters, Vector3 layouDirection, Vector3 startPosition, bool centered)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">columns</span></td>
+        <td><p>the amount of columns</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">tileSize</span></td>
+        <td><p>grid tile size in pixels</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">gutters</span></td>
+        <td><p>gutter size in pixels</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">layouDirection</span></td>
+        <td><p>normalized vector flow direction</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">startPosition</span></td>
+        <td><p>start position offset</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">centered</span></td>
+        <td><p>center the grid or layout from edge</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_GetListPosition_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.GetListPosition*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_GetListPosition_System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.GetListPosition(System.Int32)">GetListPosition(Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the item position by index</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Vector3 GetListPosition(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_GetListPosition_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.GetListPosition*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_GetListPosition_System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.GetListPosition(System.Int32)">GetListPosition(Int32)</h4>
   <div class="markdown level1 summary"><p>Set the item position by index</p>
@@ -466,6 +820,26 @@
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_OnValidate_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.OnValidate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_OnValidate" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.OnValidate">OnValidate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnValidate()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_Start_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.Start*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_Start" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Start()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_Start_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.Start*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_Start" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
@@ -483,6 +857,20 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void Update()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_Update_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_TileGridObjectCollection_Update" data-uid="Microsoft.MixedReality.Toolkit.Utilities.TileGridObjectCollection.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Update()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

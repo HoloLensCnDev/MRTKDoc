@@ -117,6 +117,18 @@
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_RequestPointers_Microsoft_MixedReality_Toolkit_Input_SupportedControllerType_Handedness_">BaseInputDeviceManager.RequestPointers(SupportedControllerType, Handedness)</a>
     </div>
     <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_EnablePointerCache">BaseInputDeviceManager.EnablePointerCache</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_Initialize">BaseInputDeviceManager.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_Destroy">BaseInputDeviceManager.Destroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_RecyclePointers_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSource_">BaseInputDeviceManager.RecyclePointers(IMixedRealityInputSource)</a>
+    </div>
+    <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.BaseDataProvider-1.html#Microsoft_MixedReality_Toolkit_BaseDataProvider_1_Registrar">BaseDataProvider&lt;IMixedRealityInputSystem&gt;.Registrar</a>
     </div>
     <div>
@@ -135,16 +147,10 @@
       <a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_ConfigurationProfile">BaseService.ConfigurationProfile</a>
     </div>
     <div>
-      <a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Initialize">BaseService.Initialize()</a>
-    </div>
-    <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Reset">BaseService.Reset()</a>
     </div>
     <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Update">BaseService.Update()</a>
-    </div>
-    <div>
-      <a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Destroy">BaseService.Destroy()</a>
     </div>
     <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_disposed">BaseService.disposed</a>
@@ -194,7 +200,60 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputRecordingService(IMixedRealityServiceRegistrar registrar, IMixedRealityInputSystem inputSystem, string name = null, uint priority = 10U, BaseMixedRealityProfile profile = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public InputRecordingService(IMixedRealityServiceRegistrar registrar, IMixedRealityInputSystem inputSystem, string name = null, uint priority = default(uint), BaseMixedRealityProfile profile = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></td>
+        <td><span class="parametername">registrar</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a> instance that loaded the data provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a></td>
+        <td><span class="parametername">inputSystem</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a> instance that receives data from this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Friendly name of the service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Service priority. Used to determine order of instantiation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The service's configuration profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService__ctor_Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSystem_System_String_System_UInt32_Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.#ctor(Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar,Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem,System.String,System.UInt32,Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile)">InputRecordingService(IMixedRealityServiceRegistrar, IMixedRealityInputSystem, String, UInt32, BaseMixedRealityProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputRecordingService(IMixedRealityServiceRegistrar registrar, IMixedRealityInputSystem inputSystem, string name = null, uint priority = default(uint), BaseMixedRealityProfile profile = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,7 +306,54 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputRecordingService(IMixedRealityInputSystem inputSystem, string name = null, uint priority = 10U, BaseMixedRealityProfile profile = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public InputRecordingService(IMixedRealityInputSystem inputSystem, string name = null, uint priority = default(uint), BaseMixedRealityProfile profile = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a></td>
+        <td><span class="parametername">inputSystem</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a> instance that receives data from this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Friendly name of the service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Service priority. Used to determine order of instantiation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The service's configuration profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService__ctor_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSystem_System_String_System_UInt32_Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.#ctor(Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem,System.String,System.UInt32,Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile)">InputRecordingService(IMixedRealityInputSystem, String, UInt32, BaseMixedRealityProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputRecordingService(IMixedRealityInputSystem inputSystem, string name = null, uint priority = default(uint), BaseMixedRealityProfile profile = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,6 +421,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_InputRecordingProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.InputRecordingProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_InputRecordingProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.InputRecordingProfile">InputRecordingProfile</h4>
+  <div class="markdown level1 summary"><p>Return the service profile and ensure that the type is correct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityInputRecordingProfile InputRecordingProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputRecordingProfile.html">MixedRealityInputRecordingProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_IsEnabled_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.IsEnabled*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_IsEnabled" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.IsEnabled">IsEnabled</h4>
+  <div class="markdown level1 summary"><p>Service has been enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_IsEnabled_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.IsEnabled*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_IsEnabled" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.IsEnabled">IsEnabled</h4>
   <div class="markdown level1 summary"><p>Service has been enabled.</p>
@@ -343,8 +501,32 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_IsRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.IsRecording*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_IsRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.IsRecording">IsRecording</h4>
-  <div class="markdown level1 summary"><p>True if input is being recorded.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRecording { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_IsRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.IsRecording*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_IsRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.IsRecording">IsRecording</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -369,8 +551,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_RecordingBufferTimeLimit_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.RecordingBufferTimeLimit*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_RecordingBufferTimeLimit" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.RecordingBufferTimeLimit">RecordingBufferTimeLimit</h4>
-  <div class="markdown level1 summary"><p>Maximum duration in seconds of the input recording if UseBufferTimeLimit is enabled.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -391,9 +572,56 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_RecordingBufferTimeLimit_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If UseBufferTimeLimit is enabled then keyframes older than this limit will be discarded.</p>
-</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_RecordingBufferTimeLimit_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.RecordingBufferTimeLimit*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_RecordingBufferTimeLimit" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.RecordingBufferTimeLimit">RecordingBufferTimeLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RecordingBufferTimeLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StartTime_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StartTime*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StartTime" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StartTime">StartTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float StartTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StartTime_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StartTime*"></a>
@@ -423,8 +651,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_UseBufferTimeLimit_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.UseBufferTimeLimit*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_UseBufferTimeLimit" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.UseBufferTimeLimit">UseBufferTimeLimit</h4>
-  <div class="markdown level1 summary"><p>Limit the size of the recording buffer.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -445,17 +672,50 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_UseBufferTimeLimit_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If recording is limited any input older than the RecordingBufferTimeLimit will be discarded.</p>
-</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_UseBufferTimeLimit_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.UseBufferTimeLimit*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_UseBufferTimeLimit" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.UseBufferTimeLimit">UseBufferTimeLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseBufferTimeLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_Disable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.Disable*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_Disable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.Disable">Disable()</h4>
-  <div class="markdown level1 summary"><p>Optional Disable function to pause the service.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Disable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Disable">BaseService.Disable()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_Disable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.Disable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_Disable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.Disable">Disable()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -467,8 +727,17 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_DiscardRecordedInput_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.DiscardRecordedInput*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_DiscardRecordedInput" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.DiscardRecordedInput">DiscardRecordedInput()</h4>
-  <div class="markdown level1 summary"><p>Discard all recorded input</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DiscardRecordedInput()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_DiscardRecordedInput_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.DiscardRecordedInput*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_DiscardRecordedInput" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.DiscardRecordedInput">DiscardRecordedInput()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -478,8 +747,19 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_Enable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.Enable*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_Enable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.Enable">Enable()</h4>
-  <div class="markdown level1 summary"><p>Optional Enable function to enable / re-enable the service.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Enable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Enable">BaseService.Enable()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_Enable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.Enable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_Enable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.Enable">Enable()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -491,8 +771,19 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_LateUpdate_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.LateUpdate*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_LateUpdate" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.LateUpdate">LateUpdate()</h4>
-  <div class="markdown level1 summary"><p>Optional LateUpdate function to that is called after Update has been called on all services.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void LateUpdate()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_LateUpdate">BaseService.LateUpdate()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_LateUpdate_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.LateUpdate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_LateUpdate" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.LateUpdate">LateUpdate()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -504,8 +795,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_SaveInputAnimation_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.SaveInputAnimation*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_SaveInputAnimation_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.SaveInputAnimation(System.String)">SaveInputAnimation(String)</h4>
-  <div class="markdown level1 summary"><p>Save recorded input animation to a file.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -524,8 +814,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">directory</span></td>
-        <td><p>Directory in which to create the file. If null the persistent data path of the app is used.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -540,20 +829,57 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>File path where input has been recorded.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_SaveInputAnimation_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Filename is determined automatically.</p>
-</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_SaveInputAnimation_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.SaveInputAnimation*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_SaveInputAnimation_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.SaveInputAnimation(System.String)">SaveInputAnimation(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaveInputAnimation(string directory = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">directory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_SaveInputAnimation_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.SaveInputAnimation*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_SaveInputAnimation_System_String_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.SaveInputAnimation(System.String,System.String)">SaveInputAnimation(String, String)</h4>
-  <div class="markdown level1 summary"><p>Save recorded input animation to a file.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -572,14 +898,12 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">filename</span></td>
-        <td><p>Name of the file to create.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">directory</span></td>
-        <td><p>Directory in which to create the file. If null the persistent data path of the app is used.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -594,8 +918,54 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>File path where input has been recorded.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_SaveInputAnimation_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.SaveInputAnimation*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_SaveInputAnimation_System_String_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.SaveInputAnimation(System.String,System.String)">SaveInputAnimation(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaveInputAnimation(string filename, string directory = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">filename</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">directory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -603,8 +973,17 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StartRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StartRecording*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StartRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StartRecording">StartRecording()</h4>
-  <div class="markdown level1 summary"><p>Start unlimited input recording.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartRecording()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StartRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StartRecording*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StartRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StartRecording">StartRecording()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -614,8 +993,17 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StopRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StopRecording*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StopRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StopRecording">StopRecording()</h4>
-  <div class="markdown level1 summary"><p>Stop recording input.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopRecording()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StopRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StopRecording*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_StopRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.StopRecording">StopRecording()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -631,6 +1019,54 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Action OnRecordingStarted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_OnRecordingStarted" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.OnRecordingStarted">OnRecordingStarted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnRecordingStarted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputRecordingService_OnRecordingStopped" data-uid="Microsoft.MixedReality.Toolkit.Input.InputRecordingService.OnRecordingStopped">OnRecordingStopped</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnRecordingStopped</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">

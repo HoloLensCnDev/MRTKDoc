@@ -151,8 +151,84 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_EdgeUtilities_InvalidPoint" data-uid="Microsoft.MixedReality.Toolkit.Utilities.EdgeUtilities.InvalidPoint">InvalidPoint</h4>
+  <div class="markdown level1 summary"><p>A value representing an invalid point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Vector2 InvalidPoint</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_EdgeUtilities_GetIntersectionPoint_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.EdgeUtilities.GetIntersectionPoint*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_EdgeUtilities_GetIntersectionPoint_Edge_Edge_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.EdgeUtilities.GetIntersectionPoint(Edge,Edge)">GetIntersectionPoint(Edge, Edge)</h4>
+  <div class="markdown level1 summary"><p>Returns the point at which two <a class="xref" href="Microsoft.MixedReality.Toolkit.Boundary.Edge.html">Edge</a> values intersect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 GetIntersectionPoint(Edge edgeA, Edge edgeB)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Edge</span></td>
+        <td><span class="parametername">edgeA</span></td>
+        <td><p>The first edge</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Edge</span></td>
+        <td><span class="parametername">edgeB</span></td>
+        <td><p>The second edge</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><p>A Vector2 representing the point at which the two edges intersect, InscribedRectangleDescription.InvalidPoint otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_EdgeUtilities_GetIntersectionPoint_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.EdgeUtilities.GetIntersectionPoint*"></a>
@@ -255,6 +331,105 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_EdgeUtilities_IsInsideBoundary_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.EdgeUtilities.IsInsideBoundary*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_EdgeUtilities_IsInsideBoundary_Edge___Vector2_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.EdgeUtilities.IsInsideBoundary(Edge[],Vector2)">IsInsideBoundary(Edge[], Vector2)</h4>
+  <div class="markdown level1 summary"><p>Determines if the specified point is within the provided geometry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInsideBoundary(Edge[] geometryEdges, Vector2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Edge</span>[]</td>
+        <td><span class="parametername">geometryEdges</span></td>
+        <td><p>The geometry for which we are checking the point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point being checked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the point falls within the geometry, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_EdgeUtilities_IsValidPoint_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.EdgeUtilities.IsValidPoint*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_EdgeUtilities_IsValidPoint_Vector2_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.EdgeUtilities.IsValidPoint(Vector2)">IsValidPoint(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Checks to see if a point is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValidPoint(Vector2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the point is valid, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Utilities_EdgeUtilities_IsValidPoint_Vector2__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A point is considered invalid if any one of it's coordinate values are infinite or not a number.</p>
+</div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_EdgeUtilities_IsValidPoint_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.EdgeUtilities.IsValidPoint*"></a>

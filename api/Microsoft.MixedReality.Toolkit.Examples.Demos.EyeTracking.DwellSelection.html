@@ -96,15 +96,41 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IMixedRealityPointerHandler</span></div>
+    <div><span class="xref">BaseEyeFocusHandler</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.html">Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DwellSelection : BaseEyeFocusHandler, IMixedRealityPointerHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class DwellSelection : BaseEyeFocusHandler, IMixedRealityPointerHandler, BaseEyeFocusHandler</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_TextureShaderProperty_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.TextureShaderProperty*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_TextureShaderProperty" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.TextureShaderProperty">TextureShaderProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TextureShaderProperty { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_TextureShaderProperty_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.TextureShaderProperty*"></a>
@@ -144,6 +170,16 @@
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_DisableDwell_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.DisableDwell*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_DisableDwell" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.DisableDwell">DisableDwell()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisableDwell()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_EnableDwell_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.EnableDwell*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_EnableDwell" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.EnableDwell">EnableDwell()</h4>
   <div class="markdown level1 summary"></div>
@@ -151,6 +187,26 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void EnableDwell()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_EnableDwell_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.EnableDwell*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_EnableDwell" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.EnableDwell">EnableDwell()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableDwell()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_OnEyeFocusStart_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.OnEyeFocusStart*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_OnEyeFocusStart" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.OnEyeFocusStart">OnEyeFocusStart()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEyeFocusStart()</code></pre>
   </div>
   
   
@@ -174,6 +230,26 @@
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_OnEyeFocusStay_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.OnEyeFocusStay*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_OnEyeFocusStay" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.OnEyeFocusStay">OnEyeFocusStay()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEyeFocusStay()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_OnEyeFocusStop_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.OnEyeFocusStop*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_OnEyeFocusStop" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.OnEyeFocusStop">OnEyeFocusStop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEyeFocusStop()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_OnEyeFocusStop_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.OnEyeFocusStop*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_OnEyeFocusStop" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.OnEyeFocusStop">OnEyeFocusStop()</h4>
   <div class="markdown level1 summary"></div>
@@ -192,9 +268,22 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void Update()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_Update_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_DwellSelection_Update" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.DwellSelection.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Update()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IMixedRealityPointerHandler</span>
+  </div>
+  <div>
+      <span class="xref">BaseEyeFocusHandler</span>
   </div>
 </article>
           </div>

@@ -104,15 +104,41 @@ custom service management component for one or more services, similar to the Mix
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.html">Microsoft.MixedReality.Toolkit.Experimental</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BaseServiceManager : MonoBehaviour, IMixedRealityServiceRegistrar</code></pre>
+    <pre><code class="lang-csharp hljs">public class BaseServiceManager : MonoBehaviour, IMixedRealityServiceRegistrar, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_registeredServices" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.registeredServices">registeredServices</h4>
+  <div class="markdown level1 summary"><p>The collection of registered services.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Dictionary&lt;Type, IMixedRealityService&gt; registeredServices</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">Type</span>, <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityService.html">IMixedRealityService</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_registeredServices" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.registeredServices">registeredServices</h4>
@@ -144,12 +170,12 @@ custom service management component for one or more services, similar to the Mix
   
   <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_GetService_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.GetService*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_GetService__1_System_String_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.GetService``1(System.String,System.Boolean)">GetService&lt;T&gt;(String, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Gets the instance of the registered service.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public T GetService&lt;T&gt;(string name = null, bool showLogs = true)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -165,14 +191,12 @@ custom service management component for one or more services, similar to the Mix
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
-        <td><p>The name of the service.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">showLogs</span></td>
-        <td><p>Indicates whether or not diagnostic logging should be performed in case of an error</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -187,8 +211,7 @@ custom service management component for one or more services, similar to the Mix
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><p>The registered service instance as the requested type.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -203,21 +226,20 @@ custom service management component for one or more services, similar to the Mix
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The interface type of the service (ex: IMixedRealityBoundarySystem).</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_GetServices_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.GetServices*"></a>
-  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_GetServices__1_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.GetServices``1(System.String)">GetServices&lt;T&gt;(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the collection of the registered service instances matching the requested type.</p>
-</div>
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_GetService_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.GetService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_GetService__1_System_String_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.GetService``1(System.String,System.Boolean)">GetService&lt;T&gt;(String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;T&gt; GetServices&lt;T&gt;(string name = null)
+    <pre><code class="lang-csharp hljs">public T GetService&lt;T&gt;(string name = null, bool showLogs = true)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -233,8 +255,71 @@ custom service management component for one or more services, similar to the Mix
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
-        <td><p>Friendly name of the service.</p>
-</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">showLogs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_GetServices_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.GetServices*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_GetServices__1_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.GetServices``1(System.String)">GetServices&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;T&gt; GetServices&lt;T&gt;(string name = null)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -249,7 +334,123 @@ custom service management component for one or more services, similar to the Mix
     <tbody>
       <tr>
         <td><span class="xref">IReadOnlyList</span>&lt;T&gt;</td>
-        <td><p>Read-only collection of the service instances, as the requested type.</p>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_GetServices_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.GetServices*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_GetServices__1_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.GetServices``1(System.String)">GetServices&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;T&gt; GetServices&lt;T&gt;(string name = null)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_Initialize_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.Initialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_Initialize__1_Type_SupportedPlatforms_System_Object___" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.Initialize``1(Type,SupportedPlatforms,System.Object[])">Initialize&lt;T&gt;(Type, SupportedPlatforms, Object[])</h4>
+  <div class="markdown level1 summary"><p>Initialize a service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Initialize&lt;T&gt;(Type concreteType, SupportedPlatforms supportedPlatforms = null, params object[] args)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">concreteType</span></td>
+        <td><p>The concrete type of the service to initialize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">SupportedPlatforms</span></td>
+        <td><span class="parametername">supportedPlatforms</span></td>
+        <td><p>The platform(s) on which the service is supported.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Arguments to provide to the service class constructor.</p>
 </td>
       </tr>
     </tbody>
@@ -265,7 +466,7 @@ custom service management component for one or more services, similar to the Mix
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The interface type of the service (ex: IMixedRealityBoundarySystem).</p>
+        <td><p>The interface type for the service to be initialized.</p>
 </td>
       </tr>
     </tbody>
@@ -280,6 +481,7 @@ custom service management component for one or more services, similar to the Mix
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void Initialize&lt;T&gt;(Type concreteType, SupportedPlatforms supportedPlatforms = null, params object[] args)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -332,12 +534,12 @@ custom service management component for one or more services, similar to the Mix
   
   <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_IsServiceRegistered_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.IsServiceRegistered*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_IsServiceRegistered__1_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.IsServiceRegistered``1(System.String)">IsServiceRegistered&lt;T&gt;(String)</h4>
-  <div class="markdown level1 summary"><p>Checks to see if a service of the specified type has been registered.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsServiceRegistered&lt;T&gt;(string name = null)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -353,8 +555,7 @@ custom service management component for one or more services, similar to the Mix
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
-        <td><p>The name of the service.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -369,8 +570,7 @@ custom service management component for one or more services, similar to the Mix
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>True if the service is registered, false otherwise.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -385,8 +585,66 @@ custom service management component for one or more services, similar to the Mix
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The interface type of the service (ex: IMixedRealityBoundarySystem).</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_IsServiceRegistered_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.IsServiceRegistered*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_IsServiceRegistered__1_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.IsServiceRegistered``1(System.String)">IsServiceRegistered&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsServiceRegistered&lt;T&gt;(string name = null)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -399,6 +657,26 @@ custom service management component for one or more services, similar to the Mix
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnDestroy()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_OnDestroy_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.OnDestroy*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_OnDestroy" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.OnDestroy">OnDestroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDestroy()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_OnDisable_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.OnDisable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_OnDisable" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDisable()</code></pre>
   </div>
   
   
@@ -422,6 +700,16 @@ custom service management component for one or more services, similar to the Mix
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.OnEnable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_OnEnable" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_RegisterService_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.RegisterService*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_RegisterService__1___0_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.RegisterService``1(``0)">RegisterService&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"></div>
@@ -429,6 +717,66 @@ custom service management component for one or more services, similar to the Mix
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool RegisterService&lt;T&gt;(T serviceInstance)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">serviceInstance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_RegisterService_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.RegisterService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_RegisterService__1___0_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.RegisterService``1(``0)">RegisterService&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RegisterService&lt;T&gt;(T serviceInstance)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -482,12 +830,12 @@ custom service management component for one or more services, similar to the Mix
   
   <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_RegisterService_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.RegisterService*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_RegisterService__1_Type_SupportedPlatforms_System_Object___" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.RegisterService``1(Type,SupportedPlatforms,System.Object[])">RegisterService&lt;T&gt;(Type, SupportedPlatforms, Object[])</h4>
-  <div class="markdown level1 summary"><p>Registers a service of the specified type.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool RegisterService&lt;T&gt;(Type concreteType, SupportedPlatforms supportedPlatforms = null, params object[] args)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -503,20 +851,17 @@ custom service management component for one or more services, similar to the Mix
       <tr>
         <td><span class="xref">Type</span></td>
         <td><span class="parametername">concreteType</span></td>
-        <td><p>The concrete type to instantiate.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">SupportedPlatforms</span></td>
         <td><span class="parametername">supportedPlatforms</span></td>
-        <td><p>The platform(s) on which the service is supported.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
         <td><span class="parametername">args</span></td>
-        <td><p>Optional arguments used when instantiating the concrete type.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -531,8 +876,7 @@ custom service management component for one or more services, similar to the Mix
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>True if the service was successfully registered, false otherwise.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -547,7 +891,104 @@ custom service management component for one or more services, similar to the Mix
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The interface type of the service to be registered (ex: IMixedRealityBoundarySystem).</p>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_RegisterService_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.RegisterService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_RegisterService__1_Type_SupportedPlatforms_System_Object___" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.RegisterService``1(Type,SupportedPlatforms,System.Object[])">RegisterService&lt;T&gt;(Type, SupportedPlatforms, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RegisterService&lt;T&gt;(Type concreteType, SupportedPlatforms supportedPlatforms = null, params object[] args)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">concreteType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">SupportedPlatforms</span></td>
+        <td><span class="parametername">supportedPlatforms</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_Uninitialize_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.Uninitialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_Uninitialize__1" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.Uninitialize``1">Uninitialize&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Uninitialize a service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Uninitialize&lt;T&gt;()
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The interface type for the service to uninitialize.</p>
 </td>
       </tr>
     </tbody>
@@ -562,6 +1003,7 @@ custom service management component for one or more services, similar to the Mix
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void Uninitialize&lt;T&gt;()
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -589,6 +1031,66 @@ custom service management component for one or more services, similar to the Mix
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool UnregisterService&lt;T&gt;(T serviceInstance)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">serviceInstance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_UnregisterService_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.UnregisterService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_UnregisterService__1___0_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.UnregisterService``1(``0)">UnregisterService&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UnregisterService&lt;T&gt;(T serviceInstance)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -642,12 +1144,12 @@ custom service management component for one or more services, similar to the Mix
   
   <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_UnregisterService_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.UnregisterService*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_UnregisterService__1_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.UnregisterService``1(System.String)">UnregisterService&lt;T&gt;(String)</h4>
-  <div class="markdown level1 summary"><p>Unregisters a service of the specified type.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool UnregisterService&lt;T&gt;(string name = null)
+
     where T : IMixedRealityService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -663,8 +1165,7 @@ custom service management component for one or more services, similar to the Mix
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
-        <td><p>The name of the service to unregister.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -679,8 +1180,7 @@ custom service management component for one or more services, similar to the Mix
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>True if the service was successfully unregistered, false otherwise.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -695,14 +1195,79 @@ custom service management component for one or more services, similar to the Mix
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The interface type of the service to be unregistered (ex: IMixedRealityBoundarySystem).</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_UnregisterService__1_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the name argument is not specified, the first instance will be unregistered</p>
-</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_UnregisterService_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.UnregisterService*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_UnregisterService__1_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.UnregisterService``1(System.String)">UnregisterService&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UnregisterService&lt;T&gt;(string name = null)
+
+    where T : IMixedRealityService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_Update_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_Update" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Update()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Experimental_BaseServiceManager_Update_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.BaseServiceManager.Update*"></a>
@@ -716,6 +1281,9 @@ custom service management component for one or more services, similar to the Mix
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

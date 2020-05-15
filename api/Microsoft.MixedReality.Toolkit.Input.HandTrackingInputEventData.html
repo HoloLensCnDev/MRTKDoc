@@ -96,6 +96,10 @@
     <div class="level3"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputEventData-1.html">InputEventData</a>&lt;<span class="xref">Vector3</span>&gt;</div>
     <div class="level4"><span class="xref">HandTrackingInputEventData</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseEventData</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -130,7 +134,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_HandTrackingInputEventData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HandTrackingInputEventData : InputEventData&lt;Vector3&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class HandTrackingInputEventData : InputEventData&lt;Vector3&gt;, BaseEventData</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -163,8 +167,62 @@ Requires initialization.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_HandTrackingInputEventData__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.HandTrackingInputEventData.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_HandTrackingInputEventData__ctor_EventSystem_" data-uid="Microsoft.MixedReality.Toolkit.Input.HandTrackingInputEventData.#ctor(EventSystem)">HandTrackingInputEventData(EventSystem)</h4>
+  <div class="markdown level1 summary"><p>Constructor creates a default EventData object.
+Requires initialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HandTrackingInputEventData(EventSystem eventSystem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventSystem</span></td>
+        <td><span class="parametername">eventSystem</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_HandTrackingInputEventData_Controller_" data-uid="Microsoft.MixedReality.Toolkit.Input.HandTrackingInputEventData.Controller*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_HandTrackingInputEventData_Controller" data-uid="Microsoft.MixedReality.Toolkit.Input.HandTrackingInputEventData.Controller">Controller</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMixedRealityController Controller { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityController.html">IMixedRealityController</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_HandTrackingInputEventData_Controller_" data-uid="Microsoft.MixedReality.Toolkit.Input.HandTrackingInputEventData.Controller*"></a>
@@ -239,6 +297,57 @@ Requires initialization.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_HandTrackingInputEventData_Initialize_" data-uid="Microsoft.MixedReality.Toolkit.Input.HandTrackingInputEventData.Initialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_HandTrackingInputEventData_Initialize_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSource_Microsoft_MixedReality_Toolkit_Input_IMixedRealityController_Handedness_Vector3_" data-uid="Microsoft.MixedReality.Toolkit.Input.HandTrackingInputEventData.Initialize(Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource,Microsoft.MixedReality.Toolkit.Input.IMixedRealityController,Handedness,Vector3)">Initialize(IMixedRealityInputSource, IMixedRealityController, Handedness, Vector3)</h4>
+  <div class="markdown level1 summary"><p>This function is called to fill the HandTrackingIntputEventData object with information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize(IMixedRealityInputSource inputSource, IMixedRealityController controller, Handedness sourceHandedness, Vector3 touchPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource.html">IMixedRealityInputSource</a></td>
+        <td><span class="parametername">inputSource</span></td>
+        <td><p>Reference to the HandTrackingInputSource that created the EventData</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityController.html">IMixedRealityController</a></td>
+        <td><span class="parametername">controller</span></td>
+        <td><p>Reference to the IMixedRealityController that created the EventData</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">sourceHandedness</span></td>
+        <td><p>Handedness of the HandTrackingInputSource that created the EventData</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">touchPoint</span></td>
+        <td><p>Global position of the HandTrackingInputSource that created the EventData</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseEventData</span>
+  </div>
 </article>
           </div>
           

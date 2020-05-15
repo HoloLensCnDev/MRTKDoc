@@ -170,8 +170,67 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase__ctor_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase__ctor_UnityEvent_System_String_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.#ctor(UnityEvent,System.String)">ReceiverBase(UnityEvent, String)</h4>
+  <div class="markdown level1 summary"><p>Constructs an interaction receiver that will raise unity event when triggered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ReceiverBase(UnityEvent ev, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td><span class="parametername">ev</span></td>
+        <td><p>Unity event to invoke. Add more events in deriving class.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the unity event that will get invoked (visible in editor).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_uEvent" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.uEvent">uEvent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnityEvent uEvent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_uEvent" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.uEvent">uEvent</h4>
@@ -226,6 +285,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_Event_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.Event*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_Event" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.Event">Event</h4>
+  <div class="markdown level1 summary"><p>Each Receiver has a base Event it raises, (in addition to others).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent Event { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_HideUnityEvents_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.HideUnityEvents*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_HideUnityEvents" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.HideUnityEvents">HideUnityEvents</h4>
+  <div class="markdown level1 summary"><p>Defines whether Unity Events should be hidden in inspector for this type of EventReceiver</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HideUnityEvents { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_HideUnityEvents_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.HideUnityEvents*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_HideUnityEvents" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.HideUnityEvents">HideUnityEvents</h4>
   <div class="markdown level1 summary"><p>Defines whether Unity Events should be hidden in inspector for this type of EventReceiver</p>
@@ -272,6 +383,58 @@
     <tbody>
       <tr>
         <td><span class="xref">MonoBehaviour</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_Host_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.Host*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_Host" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.Host">Host</h4>
+  <div class="markdown level1 summary"><p>Targeted component for Event Receiver at runtime</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MonoBehaviour Host { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MonoBehaviour</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_Name_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.Name*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_Name" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of Event Receiver</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -344,6 +507,44 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_OnClick_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.OnClick*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_OnClick_Microsoft_MixedReality_Toolkit_UI_InteractableStates_Microsoft_MixedReality_Toolkit_UI_Interactable_IMixedRealityPointer_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.OnClick(Microsoft.MixedReality.Toolkit.UI.InteractableStates,Microsoft.MixedReality.Toolkit.UI.Interactable,IMixedRealityPointer)">OnClick(InteractableStates, Interactable, IMixedRealityPointer)</h4>
+  <div class="markdown level1 summary"><p>A click event happened</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnClick(InteractableStates state, Interactable source, IMixedRealityPointer pointer = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableStates.html">InteractableStates</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.Interactable.html">Interactable</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
+        <td><span class="parametername">pointer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_OnUpdate_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.OnUpdate*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_OnUpdate_Microsoft_MixedReality_Toolkit_UI_InteractableStates_Microsoft_MixedReality_Toolkit_UI_Interactable_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.OnUpdate(Microsoft.MixedReality.Toolkit.UI.InteractableStates,Microsoft.MixedReality.Toolkit.UI.Interactable)">OnUpdate(InteractableStates, Interactable)</h4>
   <div class="markdown level1 summary"><p>The state has changed</p>
@@ -371,6 +572,87 @@
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.Interactable.html">Interactable</a></td>
         <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_OnUpdate_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.OnUpdate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_OnUpdate_Microsoft_MixedReality_Toolkit_UI_InteractableStates_Microsoft_MixedReality_Toolkit_UI_Interactable_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.OnUpdate(Microsoft.MixedReality.Toolkit.UI.InteractableStates,Microsoft.MixedReality.Toolkit.UI.Interactable)">OnUpdate(InteractableStates, Interactable)</h4>
+  <div class="markdown level1 summary"><p>The state has changed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void OnUpdate(InteractableStates state, Interactable source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableStates.html">InteractableStates</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.Interactable.html">Interactable</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_OnVoiceCommand_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.OnVoiceCommand*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ReceiverBase_OnVoiceCommand_Microsoft_MixedReality_Toolkit_UI_InteractableStates_Microsoft_MixedReality_Toolkit_UI_Interactable_System_String_System_Int32_System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.UI.ReceiverBase.OnVoiceCommand(Microsoft.MixedReality.Toolkit.UI.InteractableStates,Microsoft.MixedReality.Toolkit.UI.Interactable,System.String,System.Int32,System.Int32)">OnVoiceCommand(InteractableStates, Interactable, String, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>A voice command was called</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnVoiceCommand(InteractableStates state, Interactable source, string command, int index = 0, int length = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.InteractableStates.html">InteractableStates</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.Interactable.html">Interactable</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">length</span></td>
         <td></td>
       </tr>
     </tbody>

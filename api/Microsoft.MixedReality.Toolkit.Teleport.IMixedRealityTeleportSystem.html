@@ -175,8 +175,69 @@ All replacement systems for providing Teleportation functionality should derive 
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportSystem_TeleportDuration_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportSystem.TeleportDuration*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportSystem_TeleportDuration" data-uid="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportSystem.TeleportDuration">TeleportDuration</h4>
+  <div class="markdown level1 summary"><p>The duration of the teleport in seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float TeleportDuration { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportSystem_RaiseTeleportCanceled_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportSystem.RaiseTeleportCanceled*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportSystem_RaiseTeleportCanceled_IMixedRealityPointer_Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportHotSpot_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportSystem.RaiseTeleportCanceled(IMixedRealityPointer,Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHotSpot)">RaiseTeleportCanceled(IMixedRealityPointer, IMixedRealityTeleportHotSpot)</h4>
+  <div class="markdown level1 summary"><p>Raise a teleportation canceled event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RaiseTeleportCanceled(IMixedRealityPointer pointer, IMixedRealityTeleportHotSpot hotSpot)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
+        <td><span class="parametername">pointer</span></td>
+        <td><p>The pointer that raised the event.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHotSpot.html">IMixedRealityTeleportHotSpot</a></td>
+        <td><span class="parametername">hotSpot</span></td>
+        <td><p>The teleport target</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportSystem_RaiseTeleportCanceled_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportSystem.RaiseTeleportCanceled*"></a>
@@ -222,6 +283,76 @@ All replacement systems for providing Teleportation functionality should derive 
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void RaiseTeleportRequest(IMixedRealityPointer pointer, IMixedRealityTeleportHotSpot hotSpot)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
+        <td><span class="parametername">pointer</span></td>
+        <td><p>The pointer that raised the event.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHotSpot.html">IMixedRealityTeleportHotSpot</a></td>
+        <td><span class="parametername">hotSpot</span></td>
+        <td><p>The teleport target</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportSystem_RaiseTeleportRequest_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportSystem.RaiseTeleportRequest*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportSystem_RaiseTeleportRequest_IMixedRealityPointer_Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportHotSpot_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportSystem.RaiseTeleportRequest(IMixedRealityPointer,Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHotSpot)">RaiseTeleportRequest(IMixedRealityPointer, IMixedRealityTeleportHotSpot)</h4>
+  <div class="markdown level1 summary"><p>Raise a teleportation request event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RaiseTeleportRequest(IMixedRealityPointer pointer, IMixedRealityTeleportHotSpot hotSpot)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
+        <td><span class="parametername">pointer</span></td>
+        <td><p>The pointer that raised the event.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHotSpot.html">IMixedRealityTeleportHotSpot</a></td>
+        <td><span class="parametername">hotSpot</span></td>
+        <td><p>The teleport target</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportSystem_RaiseTeleportStarted_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportSystem.RaiseTeleportStarted*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportSystem_RaiseTeleportStarted_IMixedRealityPointer_Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportHotSpot_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportSystem.RaiseTeleportStarted(IMixedRealityPointer,Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHotSpot)">RaiseTeleportStarted(IMixedRealityPointer, IMixedRealityTeleportHotSpot)</h4>
+  <div class="markdown level1 summary"><p>Raise a teleportation started event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RaiseTeleportStarted(IMixedRealityPointer pointer, IMixedRealityTeleportHotSpot hotSpot)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

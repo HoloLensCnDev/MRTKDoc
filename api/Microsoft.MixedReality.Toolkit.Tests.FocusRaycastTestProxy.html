@@ -97,11 +97,15 @@ as the pointer's new focus target after the values are set on the <a class="xref
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">FocusRaycastTestProxy</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Tests.html">Microsoft.MixedReality.Toolkit.Tests</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Tests_FocusRaycastTestProxy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FocusRaycastTestProxy : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class FocusRaycastTestProxy : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -133,9 +137,35 @@ If the target object doesn't match, it will fail the test.</p>
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_Tests_FocusRaycastTestProxy_ExpectedHitObject" data-uid="Microsoft.MixedReality.Toolkit.Tests.FocusRaycastTestProxy.ExpectedHitObject">ExpectedHitObject</h4>
+  <div class="markdown level1 summary"><p>The object that is expected to be set for the <a class="xref" href="Microsoft.MixedReality.Toolkit.Tests.TestPointer.html">TestPointer</a>'s <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IPointerResult.html#Microsoft_MixedReality_Toolkit_Input_IPointerResult_CurrentPointerTarget">CurrentPointerTarget</a> after <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.FocusProvider.html#Microsoft_MixedReality_Toolkit_Input_FocusProvider_Update">Update()</a>.
+If the target object doesn't match, it will fail the test.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject ExpectedHitObject</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_Tests_FocusRaycastTestProxy_LineCastResolution" data-uid="Microsoft.MixedReality.Toolkit.Tests.FocusRaycastTestProxy.LineCastResolution">LineCastResolution</h4>
   <div class="markdown level1 summary"><p>The number of RaySteps to generate from <a class="xref" href="Microsoft.MixedReality.Toolkit.Tests.FocusRaycastTestProxy.html#Microsoft_MixedReality_Toolkit_Tests_FocusRaycastTestProxy_RayLineData">RayLineData</a>.
-Corresponds to <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.LinePointer.html#Microsoft_MixedReality_Toolkit_Input_LinePointer_LineCastResolution">LineCastResolution</a> and is used to set that value on the <a class="xref" href="Microsoft.MixedReality.Toolkit.Tests.TestPointer.html">TestPointer</a>.</p>
+Corresponds to <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CurvePointer.html#Microsoft_MixedReality_Toolkit_Input_CurvePointer_LineCastResolution">LineCastResolution</a> and is used to set that value on the <a class="xref" href="Microsoft.MixedReality.Toolkit.Tests.TestPointer.html">TestPointer</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -153,6 +183,58 @@ Corresponds to <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.LinePo
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Tests_FocusRaycastTestProxy_LineCastResolution" data-uid="Microsoft.MixedReality.Toolkit.Tests.FocusRaycastTestProxy.LineCastResolution">LineCastResolution</h4>
+  <div class="markdown level1 summary"><p>The number of RaySteps to generate from <a class="xref" href="Microsoft.MixedReality.Toolkit.Tests.FocusRaycastTestProxy.html#Microsoft_MixedReality_Toolkit_Tests_FocusRaycastTestProxy_RayLineData">RayLineData</a>.
+Corresponds to <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CurvePointer.html#Microsoft_MixedReality_Toolkit_Input_CurvePointer_LineCastResolution">LineCastResolution</a> and is used to set that value on the <a class="xref" href="Microsoft.MixedReality.Toolkit.Tests.TestPointer.html">TestPointer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LineCastResolution</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Tests_FocusRaycastTestProxy_PrioritizedLayerMasks" data-uid="Microsoft.MixedReality.Toolkit.Tests.FocusRaycastTestProxy.PrioritizedLayerMasks">PrioritizedLayerMasks</h4>
+  <div class="markdown level1 summary"><p>The physics layers used for the <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.FocusProvider.html">FocusProvider</a> raycasts and prioritization.
+Corresponds to <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html#Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointer_PrioritizedLayerMasksOverride">PrioritizedLayerMasksOverride</a> and is used to set that value on the <a class="xref" href="Microsoft.MixedReality.Toolkit.Tests.TestPointer.html">TestPointer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LayerMask[] PrioritizedLayerMasks</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LayerMask</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -209,6 +291,36 @@ Corresponds to <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.LinePo
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Tests_FocusRaycastTestProxy_RayLineData" data-uid="Microsoft.MixedReality.Toolkit.Tests.FocusRaycastTestProxy.RayLineData">RayLineData</h4>
+  <div class="markdown level1 summary"><p>Represents the ray line along which the <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.FocusProvider.html">FocusProvider</a> will raycast.
+Corresponds to <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.LinePointer.html#Microsoft_MixedReality_Toolkit_Input_LinePointer_LineBase">LineBase</a> and is used to set that value on the <a class="xref" href="Microsoft.MixedReality.Toolkit.Tests.TestPointer.html">TestPointer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseMixedRealityLineDataProvider RayLineData</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseMixedRealityLineDataProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

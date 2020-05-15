@@ -175,6 +175,54 @@
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_GetGltfObjectFromGlb_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.GltfUtility.GetGltfObjectFromGlb*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_GetGltfObjectFromGlb_System_Byte___" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.GltfUtility.GetGltfObjectFromGlb(System.Byte[])">GetGltfObjectFromGlb(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Gets a glTF object from the provided byte array</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GltfObject GetGltfObjectFromGlb(byte[] glbData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">glbData</span></td>
+        <td><p>Raw glb byte data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GltfObject</span></td>
+        <td><p><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfObject.html">GltfObject</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_GetGltfObjectFromGlb_System_Byte____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Returned <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfObject.html">GltfObject</a> still needs to be initialized using <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.ConstructGltf.html#Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_ConstructGltf_ConstructAsync_GltfObject_">ConstructAsync(GltfObject)</a>.</p>
+</div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_GetGltfObjectFromJson_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.GltfUtility.GetGltfObjectFromJson*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_GetGltfObjectFromJson_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.GltfUtility.GetGltfObjectFromJson(System.String)">GetGltfObjectFromJson(String)</h4>
   <div class="markdown level1 summary"><p>Gets a glTF object from the provided json string.</p>
@@ -220,6 +268,103 @@
   </table>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_GetGltfObjectFromJson_System_String__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Returned <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfObject.html">GltfObject</a> still needs to be initialized using <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.ConstructGltf.html#Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_ConstructGltf_ConstructAsync_GltfObject_">ConstructAsync(GltfObject)</a>.</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_GetGltfObjectFromJson_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.GltfUtility.GetGltfObjectFromJson*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_GetGltfObjectFromJson_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.GltfUtility.GetGltfObjectFromJson(System.String)">GetGltfObjectFromJson(String)</h4>
+  <div class="markdown level1 summary"><p>Gets a glTF object from the provided json string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GltfObject GetGltfObjectFromJson(string jsonString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">jsonString</span></td>
+        <td><p>String defining a glTF Object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GltfObject</span></td>
+        <td><p><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfObject.html">GltfObject</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_GetGltfObjectFromJson_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Returned <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfObject.html">GltfObject</a> still needs to be initialized using <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.ConstructGltf.html#Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_ConstructGltf_ConstructAsync_GltfObject_">ConstructAsync(GltfObject)</a>.</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_ImportGltfObjectFromPathAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.GltfUtility.ImportGltfObjectFromPathAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_ImportGltfObjectFromPathAsync_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Serialization.GltfUtility.ImportGltfObjectFromPathAsync(System.String)">ImportGltfObjectFromPathAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Imports a glTF object from the provided uri.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GltfObject&gt; ImportGltfObjectFromPathAsync(string uri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>the path to the file to load</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">GltfObject</span>&gt;</td>
+        <td><p>New <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfObject.html">GltfObject</a> imported from uri.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Serialization_GltfUtility_ImportGltfObjectFromPathAsync_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Must be called from the main thread.
+If the <a href="https://docs.unity3d.com/ScriptReference/Application-isPlaying.html">Application.isPlaying</a> is false, then this method will run synchronously.</p>
 </div>
   
   

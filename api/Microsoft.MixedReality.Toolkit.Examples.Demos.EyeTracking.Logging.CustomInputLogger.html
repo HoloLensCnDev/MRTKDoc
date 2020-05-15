@@ -95,6 +95,10 @@
     <div class="level2"><span class="xref">CustomInputLogger</span></div>
       <div class="level3"><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.UserInputRecorder.html">UserInputRecorder</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -144,7 +148,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class CustomInputLogger : BasicInputLogger</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class CustomInputLogger : BasicInputLogger, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -168,6 +172,54 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_filename" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.filename">filename</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string filename</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_printedHeader" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.printedHeader">printedHeader</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool printedHeader</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -220,6 +272,30 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_TimerStart" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.TimerStart">TimerStart</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static DateTime TimerStart</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -231,6 +307,26 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CancelLogging()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_CancelLogging_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.CancelLogging*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_CancelLogging" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.CancelLogging">CancelLogging()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CancelLogging()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_CreateNewLog_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.CreateNewLog*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_CreateNewLog" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.CreateNewLog">CreateNewLog()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void CreateNewLog()</code></pre>
   </div>
   
   
@@ -271,6 +367,43 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_CustomAppend_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.CustomAppend*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_CustomAppend_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.CustomAppend(System.String)">CustomAppend(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void CustomAppend(string msg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">msg</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_StartLogging_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.StartLogging*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_StartLogging" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.StartLogging">StartLogging()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartLogging()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_StartLogging_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.StartLogging*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_StartLogging" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.StartLogging">StartLogging()</h4>
   <div class="markdown level1 summary"></div>
@@ -288,6 +421,20 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void StopLoggingAndSave()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_StopLoggingAndSave_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.StopLoggingAndSave*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_Logging_CustomInputLogger_StopLoggingAndSave" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging.CustomInputLogger.StopLoggingAndSave">StopLoggingAndSave()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopLoggingAndSave()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

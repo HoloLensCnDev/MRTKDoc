@@ -96,11 +96,15 @@ A service must implement all required types and no excluded types to be consider
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">MixedRealityServiceProfileAttribute</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Attribute</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.html">Microsoft.MixedReality.Toolkit</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealityServiceProfileAttribute : Attribute</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealityServiceProfileAttribute : Attribute, Attribute</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -132,6 +136,70 @@ A service must implement all required types and no excluded types to be consider
       <tr>
         <td><span class="xref">Type</span></td>
         <td><span class="parametername">excludedType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute__ctor_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceProfileAttribute.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute__ctor_Type_Type_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceProfileAttribute.#ctor(Type,Type)">MixedRealityServiceProfileAttribute(Type, Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityServiceProfileAttribute(Type requiredType, Type excludedType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">requiredType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">excludedType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute__ctor_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceProfileAttribute.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute__ctor_Type___Type___" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceProfileAttribute.#ctor(Type[],Type[])">MixedRealityServiceProfileAttribute(Type[], Type[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityServiceProfileAttribute(Type[] requiredTypes, Type[] excludedTypes = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span>[]</td>
+        <td><span class="parametername">requiredTypes</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span>[]</td>
+        <td><span class="parametername">excludedTypes</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -197,6 +265,31 @@ A service must implement all required types and no excluded types to be consider
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute_ExcludedTypes_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceProfileAttribute.ExcludedTypes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute_ExcludedTypes" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceProfileAttribute.ExcludedTypes">ExcludedTypes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type[] ExcludedTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute_RequiredTypes_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceProfileAttribute.RequiredTypes*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute_RequiredTypes" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceProfileAttribute.RequiredTypes">RequiredTypes</h4>
   <div class="markdown level1 summary"></div>
@@ -220,6 +313,35 @@ A service must implement all required types and no excluded types to be consider
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute_RequiredTypes_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceProfileAttribute.RequiredTypes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityServiceProfileAttribute_RequiredTypes" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityServiceProfileAttribute.RequiredTypes">RequiredTypes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type[] RequiredTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Attribute</span>
+  </div>
 </article>
           </div>
           

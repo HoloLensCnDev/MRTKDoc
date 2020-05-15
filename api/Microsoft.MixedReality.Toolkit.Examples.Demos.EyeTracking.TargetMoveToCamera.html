@@ -93,11 +93,15 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">TargetMoveToCamera</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseEyeFocusHandler</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.html">Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TargetMoveToCamera : BaseEyeFocusHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class TargetMoveToCamera : BaseEyeFocusHandler, BaseEyeFocusHandler</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -121,6 +125,54 @@
     <tbody>
       <tr>
         <td><span class="xref">MonoBehaviour</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_ActivateBehaviorsWhenInFront" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.ActivateBehaviorsWhenInFront">ActivateBehaviorsWhenInFront</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MonoBehaviour[] ActivateBehaviorsWhenInFront</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MonoBehaviour</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_currentlyFocusedTarget" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.currentlyFocusedTarget">currentlyFocusedTarget</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TargetMoveToCamera currentlyFocusedTarget</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.html">TargetMoveToCamera</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -173,6 +225,30 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_DistanceToCamera" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.DistanceToCamera">DistanceToCamera</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DistanceToCamera</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -184,6 +260,26 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void OnEyeFocusStop()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_OnEyeFocusStop_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.OnEyeFocusStop*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_OnEyeFocusStop" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.OnEyeFocusStop">OnEyeFocusStop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEyeFocusStop()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_OnSelect_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.OnSelect*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_OnSelect" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.OnSelect">OnSelect()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnSelect()</code></pre>
   </div>
   
   
@@ -207,6 +303,26 @@
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_ReturnHome_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.ReturnHome*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_ReturnHome" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.ReturnHome">ReturnHome()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReturnHome()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_TransitionToUser_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.TransitionToUser*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_TransitionToUser" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.TransitionToUser">TransitionToUser()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TransitionToUser()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_TransitionToUser_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.TransitionToUser*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_TransitionToUser" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.TransitionToUser">TransitionToUser()</h4>
   <div class="markdown level1 summary"></div>
@@ -224,6 +340,20 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void Update()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_Update_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetMoveToCamera_Update" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetMoveToCamera.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Update()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseEyeFocusHandler</span>
   </div>
 </article>
           </div>

@@ -97,14 +97,45 @@
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.ClippingPlaneEditor.html">ClippingPlaneEditor</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.ClippingSphereEditor.html">ClippingSphereEditor</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">UnityEditor.Editor</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.html">Microsoft.MixedReality.Toolkit.Editor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Editor_ClippingPrimitiveEditor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ClippingPrimitiveEditor : UnityEditor.Editor</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ClippingPrimitiveEditor : UnityEditor.Editor, UnityEditor.Editor</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_ClippingPrimitiveEditor_HasFrameBounds_" data-uid="Microsoft.MixedReality.Toolkit.Editor.ClippingPrimitiveEditor.HasFrameBounds*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_ClippingPrimitiveEditor_HasFrameBounds" data-uid="Microsoft.MixedReality.Toolkit.Editor.ClippingPrimitiveEditor.HasFrameBounds">HasFrameBounds()</h4>
+  <div class="markdown level1 summary"><p>Notifies the Unity editor if this object has custom frame bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool HasFrameBounds()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if custom frame bounds can be used from OnGetFrameBounds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Editor_ClippingPrimitiveEditor_HasFrameBounds_" data-uid="Microsoft.MixedReality.Toolkit.Editor.ClippingPrimitiveEditor.HasFrameBounds*"></a>
@@ -161,6 +192,33 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Editor_ClippingPrimitiveEditor_OnGetFrameBounds_" data-uid="Microsoft.MixedReality.Toolkit.Editor.ClippingPrimitiveEditor.OnGetFrameBounds*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_ClippingPrimitiveEditor_OnGetFrameBounds" data-uid="Microsoft.MixedReality.Toolkit.Editor.ClippingPrimitiveEditor.OnGetFrameBounds">OnGetFrameBounds()</h4>
+  <div class="markdown level1 summary"><p>Returns the bounds the editor should focus on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Bounds OnGetFrameBounds()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bounds</span></td>
+        <td><p>The bounds of the clipping primitive.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Editor_ClippingPrimitiveEditor_OnInspectorGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.ClippingPrimitiveEditor.OnInspectorGUI*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Editor_ClippingPrimitiveEditor_OnInspectorGUI" data-uid="Microsoft.MixedReality.Toolkit.Editor.ClippingPrimitiveEditor.OnInspectorGUI">OnInspectorGUI()</h4>
   <div class="markdown level1 summary"><p>Looks for changes to the list of renderers and gracefully adds and removes them.</p>
@@ -169,6 +227,21 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void OnInspectorGUI()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_ClippingPrimitiveEditor_OnInspectorGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.ClippingPrimitiveEditor.OnInspectorGUI*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_ClippingPrimitiveEditor_OnInspectorGUI" data-uid="Microsoft.MixedReality.Toolkit.Editor.ClippingPrimitiveEditor.OnInspectorGUI">OnInspectorGUI()</h4>
+  <div class="markdown level1 summary"><p>Looks for changes to the list of renderers and gracefully adds and removes them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnInspectorGUI()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">UnityEditor.Editor</span>
   </div>
 </article>
           </div>

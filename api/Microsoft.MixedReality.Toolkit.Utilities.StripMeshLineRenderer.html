@@ -95,6 +95,10 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineRenderer.html">BaseMixedRealityLineRenderer</a></div>
     <div class="level2"><span class="xref">StripMeshLineRenderer</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -141,10 +145,67 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_StripMeshLineRenderer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StripMeshLineRenderer : BaseMixedRealityLineRenderer</code></pre>
+    <pre><code class="lang-csharp hljs">public class StripMeshLineRenderer : BaseMixedRealityLineRenderer, MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_StripMeshLineRenderer_GenerateStripMesh_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.StripMeshLineRenderer.GenerateStripMesh*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_StripMeshLineRenderer_GenerateStripMesh_List_Vector3__List_Color__List_System_Single__System_Single_List_Vector3__Mesh_Vector3_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.StripMeshLineRenderer.GenerateStripMesh(List{Vector3},List{Color},List{System.Single},System.Single,List{Vector3},Mesh,Vector3)">GenerateStripMesh(List&lt;Vector3&gt;, List&lt;Color&gt;, List&lt;Single&gt;, Single, List&lt;Vector3&gt;, Mesh, Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GenerateStripMesh(List&lt;Vector3&gt; positionList, List&lt;Color&gt; colorList, List&lt;float&gt; thicknessList, float uvOffsetLocal, List&lt;Vector3&gt; forwardList, Mesh mesh, Vector3 up)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td><span class="parametername">positionList</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">Color</span>&gt;</td>
+        <td><span class="parametername">colorList</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><span class="parametername">thicknessList</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">uvOffsetLocal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td><span class="parametername">forwardList</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td><span class="parametername">mesh</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_StripMeshLineRenderer_GenerateStripMesh_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.StripMeshLineRenderer.GenerateStripMesh*"></a>
@@ -214,6 +275,22 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineRenderer.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineRenderer_UpdateLine">BaseMixedRealityLineRenderer.UpdateLine()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_StripMeshLineRenderer_UpdateLine_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.StripMeshLineRenderer.UpdateLine*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_StripMeshLineRenderer_UpdateLine" data-uid="Microsoft.MixedReality.Toolkit.Utilities.StripMeshLineRenderer.UpdateLine">UpdateLine()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UpdateLine()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineRenderer.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineRenderer_UpdateLine">BaseMixedRealityLineRenderer.UpdateLine()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

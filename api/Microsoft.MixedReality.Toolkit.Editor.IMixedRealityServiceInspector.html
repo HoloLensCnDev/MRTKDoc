@@ -127,6 +127,58 @@ and mark it with the MixedRealityServiceInspector attribute.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_AlwaysDrawSceneGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.AlwaysDrawSceneGUI*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_AlwaysDrawSceneGUI" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.AlwaysDrawSceneGUI">AlwaysDrawSceneGUI</h4>
+  <div class="markdown level1 summary"><p>If true, DrawSceneGUI will be called even when facade object is not selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AlwaysDrawSceneGUI { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawProfileField_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawProfileField*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawProfileField" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawProfileField">DrawProfileField</h4>
+  <div class="markdown level1 summary"><p>If true, inspector will include a field for the service's profile at the top (if applicable)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool DrawProfileField { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawProfileField_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawProfileField*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawProfileField" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawProfileField">DrawProfileField</h4>
   <div class="markdown level1 summary"><p>If true, inspector will include a field for the service's profile at the top (if applicable)</p>
@@ -183,6 +235,34 @@ and mark it with the MixedRealityServiceInspector attribute.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawGizmos_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawGizmos*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawGizmos_System_Object_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawGizmos(System.Object)">DrawGizmos(Object)</h4>
+  <div class="markdown level1 summary"><p>Used to draw gizmos in the scene</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawGizmos(object target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawInspectorGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawInspectorGUI*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawInspectorGUI_System_Object_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawInspectorGUI(System.Object)">DrawInspectorGUI(Object)</h4>
   <div class="markdown level1 summary"><p>Used to draw an inspector for a service facade.</p>
@@ -205,6 +285,67 @@ and mark it with the MixedRealityServiceInspector attribute.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawInspectorGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawInspectorGUI*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawInspectorGUI_System_Object_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawInspectorGUI(System.Object)">DrawInspectorGUI(Object)</h4>
+  <div class="markdown level1 summary"><p>Used to draw an inspector for a service facade.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawInspectorGUI(object target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawSceneGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawSceneGUI*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_IMixedRealityServiceInspector_DrawSceneGUI_System_Object_SceneView_" data-uid="Microsoft.MixedReality.Toolkit.Editor.IMixedRealityServiceInspector.DrawSceneGUI(System.Object,SceneView)">DrawSceneGUI(Object, SceneView)</h4>
+  <div class="markdown level1 summary"><p>Used to draw handles and visualizations in scene view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawSceneGUI(object target, SceneView sceneView)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">SceneView</span></td>
+        <td><span class="parametername">sceneView</span></td>
         <td></td>
       </tr>
     </tbody>

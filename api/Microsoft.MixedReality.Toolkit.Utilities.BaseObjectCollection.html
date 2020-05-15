@@ -94,11 +94,15 @@
     <div class="level1"><span class="xref">BaseObjectCollection</span></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.html">GridObjectCollection</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.html">Microsoft.MixedReality.Toolkit.Utilities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseObjectCollection : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseObjectCollection : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -124,6 +128,58 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_IgnoreInactiveTransforms_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.IgnoreInactiveTransforms*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_IgnoreInactiveTransforms" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.IgnoreInactiveTransforms">IgnoreInactiveTransforms</h4>
+  <div class="markdown level1 summary"><p>Whether to include space for inactive transforms in the layout</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IgnoreInactiveTransforms { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_NodeList_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.NodeList*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_NodeList" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.NodeList">NodeList</h4>
+  <div class="markdown level1 summary"><p>List of objects with generated data on the object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;ObjectCollectionNode&gt; NodeList { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ObjectCollectionNode.html">ObjectCollectionNode</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -182,6 +238,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_OnCollectionUpdated_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.OnCollectionUpdated*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_OnCollectionUpdated" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.OnCollectionUpdated">OnCollectionUpdated</h4>
+  <div class="markdown level1 summary"><p>Action called when collection is updated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;BaseObjectCollection&gt; OnCollectionUpdated { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.html">BaseObjectCollection</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_SortType_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.SortType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_SortType" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.SortType">SortType</h4>
+  <div class="markdown level1 summary"><p>Type of sorting to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CollationOrder SortType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.CollationOrder.html">CollationOrder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_SortType_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.SortType*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_SortType" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.SortType">SortType</h4>
   <div class="markdown level1 summary"><p>Type of sorting to use.</p>
@@ -208,6 +316,51 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_ContainsNode_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.ContainsNode*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_ContainsNode_Transform_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.ContainsNode(Transform)">ContainsNode(Transform)</h4>
+  <div class="markdown level1 summary"><p>Check if a node exists in the NodeList.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool ContainsNode(Transform node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>The Transfrom belonging to the <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ObjectCollectionNode.html">ObjectCollectionNode</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true when <code data-dev-comment-type="paramref" class="paramref">node</code> belongs to an element of the list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_ContainsNode_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.ContainsNode*"></a>
@@ -306,6 +459,57 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_ContainsNode_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.ContainsNode*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_ContainsNode_Transform_System_Int32__" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.ContainsNode(Transform,System.Int32@)">ContainsNode(Transform, out Int32)</h4>
+  <div class="markdown level1 summary"><p>Check if a node exists in the NodeList.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool ContainsNode(Transform node, out int nodeIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>The Transform belonging to <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.ObjectCollectionNode.html">ObjectCollectionNode</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">nodeIndex</span></td>
+        <td><p>The index of the element in <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.html#Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_NodeList">NodeList</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true when <code data-dev-comment-type="paramref" class="paramref">node</code> belongs to an element of the list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_LayoutChildren_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.LayoutChildren*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_LayoutChildren" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.LayoutChildren">LayoutChildren()</h4>
   <div class="markdown level1 summary"><p>Implement for laying out all children when UpdateCollection is called.</p>
@@ -314,6 +518,28 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void LayoutChildren()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_LayoutChildren_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.LayoutChildren*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_LayoutChildren" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.LayoutChildren">LayoutChildren()</h4>
+  <div class="markdown level1 summary"><p>Implement for laying out all children when UpdateCollection is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void LayoutChildren()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_PruneEmptyNodes_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.PruneEmptyNodes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_PruneEmptyNodes" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.PruneEmptyNodes">PruneEmptyNodes()</h4>
+  <div class="markdown level1 summary"><p>Checks for empty nodes and removes them</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void PruneEmptyNodes()</code></pre>
   </div>
   
   
@@ -339,6 +565,17 @@
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_SortNodes_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.SortNodes*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_SortNodes" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.SortNodes">SortNodes()</h4>
+  <div class="markdown level1 summary"><p>Sorts NodeList based on <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.html#Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_SortType">SortType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SortNodes()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_UpdateCollection_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.UpdateCollection*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_UpdateCollection" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.UpdateCollection">UpdateCollection()</h4>
   <div class="markdown level1 summary"><p>Rebuilds / updates the collection layout.
@@ -348,6 +585,22 @@ Update collection is called from the editor button on the inspector.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void UpdateCollection()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_UpdateCollection_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.UpdateCollection*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseObjectCollection_UpdateCollection" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseObjectCollection.UpdateCollection">UpdateCollection()</h4>
+  <div class="markdown level1 summary"><p>Rebuilds / updates the collection layout.
+Update collection is called from the editor button on the inspector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UpdateCollection()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

@@ -172,8 +172,81 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo__ctor_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo__ctor_Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_Guid_Uri_System_String_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.#ctor(Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo,Guid,Uri,System.String)">ReferenceItemInfo(UnityProjectInfo, Guid, Uri, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ReferenceItemInfo(UnityProjectInfo unityProjectInfo, Guid guid, Uri referencePath, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.html">UnityProjectInfo</a></td>
+        <td><span class="parametername">unityProjectInfo</span></td>
+        <td><p>Instance of parsed unity project info.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">guid</span></td>
+        <td><p>The unique Guid of this reference item.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Uri</span></td>
+        <td><span class="parametername">referencePath</span></td>
+        <td><p>The output path to the reference item.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the reference.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_Guid_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.Guid*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_Guid" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.Guid">Guid</h4>
+  <div class="markdown level1 summary"><p>Gets the Guid associated with the reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid Guid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_Guid_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.Guid*"></a>
@@ -232,6 +305,36 @@ Otherwise we fallback to just the platforms specified in the editor.</p>
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_InEditorPlatforms_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.InEditorPlatforms*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_InEditorPlatforms" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.InEditorPlatforms">InEditorPlatforms</h4>
+  <div class="markdown level1 summary"><p>Gets a set of platforms supported for the InEditor configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;BuildTarget, CompilationPlatformInfo&gt; InEditorPlatforms { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyDictionary</span>&lt;<span class="xref">BuildTarget</span>, <a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.CompilationPlatformInfo.html">CompilationPlatformInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_InEditorPlatforms_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>In the editor, we can support all platforms if it's a pre-defined assembly, or an asmdef with Editor platform checked.
+Otherwise we fallback to just the platforms specified in the editor.</p>
+</div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_Name_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.Name*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_Name" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.Name">Name</h4>
   <div class="markdown level1 summary"><p>Gets name of the reference item.</p>
@@ -256,6 +359,61 @@ Otherwise we fallback to just the platforms specified in the editor.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_Name_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.Name*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_Name" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Gets name of the reference item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_PlayerPlatforms_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.PlayerPlatforms*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_PlayerPlatforms" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.PlayerPlatforms">PlayerPlatforms</h4>
+  <div class="markdown level1 summary"><p>Gets a set of platforms supported for the Player configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;BuildTarget, CompilationPlatformInfo&gt; PlayerPlatforms { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyDictionary</span>&lt;<span class="xref">BuildTarget</span>, <a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.CompilationPlatformInfo.html">CompilationPlatformInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_PlayerPlatforms_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>In the player, we support any platform if pre-defined assembly, or the ones explicitly specified in the AsmDef player.</p>
+</div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_PlayerPlatforms_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.PlayerPlatforms*"></a>
@@ -313,6 +471,58 @@ Otherwise we fallback to just the platforms specified in the editor.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_ReferencePath_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.ReferencePath*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_ReferencePath" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.ReferencePath">ReferencePath</h4>
+  <div class="markdown level1 summary"><p>Gets the output path to the reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Uri ReferencePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Uri</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_UnityProjectInfo_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.UnityProjectInfo*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_UnityProjectInfo" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.UnityProjectInfo">UnityProjectInfo</h4>
+  <div class="markdown level1 summary"><p>Gets the instance of the parsed project information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UnityProjectInfo UnityProjectInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.html">UnityProjectInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_UnityProjectInfo_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.UnityProjectInfo*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_UnityProjectInfo" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.UnityProjectInfo">UnityProjectInfo</h4>
   <div class="markdown level1 summary"><p>Gets the instance of the parsed project information.</p>
@@ -339,6 +549,34 @@ Otherwise we fallback to just the platforms specified in the editor.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_ToString_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.ToString*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_ToString" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>A much more readable string representation of this reference item info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_MSBuild_ReferenceItemInfo_ToString_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.ReferenceItemInfo.ToString*"></a>

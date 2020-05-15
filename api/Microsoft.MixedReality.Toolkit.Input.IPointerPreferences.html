@@ -130,8 +130,80 @@ since it's an internal class.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_IPointerPreferences_GazePointerBehavior_" data-uid="Microsoft.MixedReality.Toolkit.Input.IPointerPreferences.GazePointerBehavior*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_IPointerPreferences_GazePointerBehavior" data-uid="Microsoft.MixedReality.Toolkit.Input.IPointerPreferences.GazePointerBehavior">GazePointerBehavior</h4>
+  <div class="markdown level1 summary"><p>Pointer behavior for the gaze pointer.
+We make gaze pointer unique because the internal
+gaze pointer actually cannot be referenced from here
+since it's an internal class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PointerBehavior GazePointerBehavior { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html">PointerBehavior</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_IPointerPreferences_GetPointerBehavior_" data-uid="Microsoft.MixedReality.Toolkit.Input.IPointerPreferences.GetPointerBehavior*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_IPointerPreferences_GetPointerBehavior_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointer_" data-uid="Microsoft.MixedReality.Toolkit.Input.IPointerPreferences.GetPointerBehavior(Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer)">GetPointerBehavior(IMixedRealityPointer)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html">PointerBehavior</a> for a given pointer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PointerBehavior GetPointerBehavior(IMixedRealityPointer pointer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html">IMixedRealityPointer</a></td>
+        <td><span class="parametername">pointer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html">PointerBehavior</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_IPointerPreferences_GetPointerBehavior_" data-uid="Microsoft.MixedReality.Toolkit.Input.IPointerPreferences.GetPointerBehavior*"></a>
@@ -186,6 +258,76 @@ handedness, and input type</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">PointerBehavior GetPointerBehavior&lt;T&gt;(Handedness handedness, InputSourceType sourceType)
+
+    where T : class, IMixedRealityPointer</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">handedness</span></td>
+        <td><p>Specify Handedness.Any to apply to all handedness, or specify a specific handedness to just disable, right, left.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSourceType.html">InputSourceType</a></td>
+        <td><span class="parametername">sourceType</span></td>
+        <td><p>Allows specification of pointer behavior per input source, so that pointers can be disabled for hands but not controllers, and vice versa.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html">PointerBehavior</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>All pointers that are of this type, or a subclass of this type, will have the given behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_IPointerPreferences_GetPointerBehavior_" data-uid="Microsoft.MixedReality.Toolkit.Input.IPointerPreferences.GetPointerBehavior*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_IPointerPreferences_GetPointerBehavior__1_Handedness_Microsoft_MixedReality_Toolkit_Input_InputSourceType_" data-uid="Microsoft.MixedReality.Toolkit.Input.IPointerPreferences.GetPointerBehavior``1(Handedness,Microsoft.MixedReality.Toolkit.Input.InputSourceType)">GetPointerBehavior&lt;T&gt;(Handedness, InputSourceType)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html">PointerBehavior</a> for a given pointer type,
+handedness, and input type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PointerBehavior GetPointerBehavior&lt;T&gt;(Handedness handedness, InputSourceType sourceType)
+
     where T : class, IMixedRealityPointer</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -254,6 +396,65 @@ handedness, and input type</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void SetPointerBehavior&lt;T&gt;(Handedness handedness, InputSourceType inputType, PointerBehavior pointerBehavior)
+
+    where T : class, IMixedRealityPointer</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">handedness</span></td>
+        <td><p>Specify Handedness.Any to apply to all handedness, or specify a specific handedness to just disable, right, left.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSourceType.html">InputSourceType</a></td>
+        <td><span class="parametername">inputType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html">PointerBehavior</a></td>
+        <td><span class="parametername">pointerBehavior</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>All pointers that are of this type, or a subclass of this type, will have the given behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_IPointerPreferences_SetPointerBehavior_" data-uid="Microsoft.MixedReality.Toolkit.Input.IPointerPreferences.SetPointerBehavior*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_IPointerPreferences_SetPointerBehavior__1_Handedness_Microsoft_MixedReality_Toolkit_Input_InputSourceType_Microsoft_MixedReality_Toolkit_Input_PointerBehavior_" data-uid="Microsoft.MixedReality.Toolkit.Input.IPointerPreferences.SetPointerBehavior``1(Handedness,Microsoft.MixedReality.Toolkit.Input.InputSourceType,Microsoft.MixedReality.Toolkit.Input.PointerBehavior)">SetPointerBehavior&lt;T&gt;(Handedness, InputSourceType, PointerBehavior)</h4>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html">PointerBehavior</a> for a given pointer type,
+handedness, and input type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetPointerBehavior&lt;T&gt;(Handedness handedness, InputSourceType inputType, PointerBehavior pointerBehavior)
+
     where T : class, IMixedRealityPointer</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

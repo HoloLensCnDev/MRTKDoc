@@ -104,6 +104,7 @@ It also allows for scrolling by restricting panning to one direction.</p>
     <div><span class="xref">IMixedRealityFocusHandler</span></div>
     <div><span class="xref">IMixedRealitySourceStateHandler</span></div>
     <div><span class="xref">IMixedRealityHandJointHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -211,10 +212,64 @@ It also allows for scrolling by restricting panning to one direction.</p>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PanZoomBaseRectTransf : PanZoomBase, IMixedRealityPointerHandler, IMixedRealityFocusHandler, IMixedRealitySourceStateHandler, IMixedRealityHandJointHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class PanZoomBaseRectTransf : PanZoomBase, IMixedRealityPointerHandler, IMixedRealityFocusHandler, IMixedRealitySourceStateHandler, IMixedRealityHandJointHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ComputePanSpeed_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ComputePanSpeed*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ComputePanSpeed_System_Single_System_Single_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ComputePanSpeed(System.Single,System.Single,System.Single)">ComputePanSpeed(Single, Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float ComputePanSpeed(float uvCursorPos, float maxSpeed, float minDistFromCenterForAutoPan)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">uvCursorPos</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">maxSpeed</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">minDistFromCenterForAutoPan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_ComputePanSpeed_System_Single_System_Single_System_Single_">PanZoomBase.ComputePanSpeed(Single, Single, Single)</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ComputePanSpeed_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ComputePanSpeed*"></a>
@@ -283,6 +338,18 @@ It also allows for scrolling by restricting panning to one direction.</p>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_Initialize">PanZoomBase.Initialize()</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_Initialize_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.Initialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_Initialize" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_Initialize">PanZoomBase.Initialize()</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_UpdateCursorPosInHitBox_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.UpdateCursorPosInHitBox*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_UpdateCursorPosInHitBox" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.UpdateCursorPosInHitBox">UpdateCursorPosInHitBox()</h4>
   <div class="markdown level1 summary"><p>Determine the position of the cursor within the hitbox.</p>
@@ -310,6 +377,47 @@ It also allows for scrolling by restricting panning to one direction.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_UpdateCursorPosInHitBox">PanZoomBase.UpdateCursorPosInHitBox()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_UpdateCursorPosInHitBox_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.UpdateCursorPosInHitBox*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_UpdateCursorPosInHitBox" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.UpdateCursorPosInHitBox">UpdateCursorPosInHitBox()</h4>
+  <div class="markdown level1 summary"><p>Determine the position of the cursor within the hitbox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool UpdateCursorPosInHitBox()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if this GameObject is hit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_UpdateCursorPosInHitBox">PanZoomBase.UpdateCursorPosInHitBox()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_UpdatePanZoom_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.UpdatePanZoom*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_UpdatePanZoom" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.UpdatePanZoom">UpdatePanZoom()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UpdatePanZoom()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_UpdatePanZoom">PanZoomBase.UpdatePanZoom()</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_UpdatePanZoom_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.UpdatePanZoom*"></a>
@@ -368,6 +476,50 @@ It also allows for scrolling by restricting panning to one direction.</p>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_ZoomDir_System_Boolean_">PanZoomBase.ZoomDir(Boolean)</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ZoomDir_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ZoomDir*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ZoomDir_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ZoomDir(System.Boolean)">ZoomDir(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int ZoomDir(bool zoomIn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">zoomIn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_ZoomDir_System_Boolean_">PanZoomBase.ZoomDir(Boolean)</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ZoomIn_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ZoomIn*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ZoomIn" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ZoomIn">ZoomIn()</h4>
   <div class="markdown level1 summary"></div>
@@ -378,6 +530,30 @@ It also allows for scrolling by restricting panning to one direction.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_ZoomIn">PanZoomBase.ZoomIn()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ZoomIn_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ZoomIn*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ZoomIn" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ZoomIn">ZoomIn()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ZoomIn()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_ZoomIn">PanZoomBase.ZoomIn()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ZoomOut_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ZoomOut*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ZoomOut" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ZoomOut">ZoomOut()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ZoomOut()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBase.html#Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBase_ZoomOut">PanZoomBase.ZoomOut()</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_PanZoomBaseRectTransf_ZoomOut_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.PanZoomBaseRectTransf.ZoomOut*"></a>
@@ -402,6 +578,9 @@ It also allows for scrolling by restricting panning to one direction.</p>
   </div>
   <div>
       <span class="xref">IMixedRealityHandJointHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

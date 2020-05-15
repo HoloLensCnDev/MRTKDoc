@@ -97,6 +97,10 @@
     <div class="level3"><span class="xref">InputEventData&lt;T&gt;</span></div>
       <div class="level4"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandTrackingInputEventData.html">HandTrackingInputEventData</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseEventData</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -125,7 +129,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_InputEventData_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InputEventData&lt;T&gt; : InputEventData</code></pre>
+    <pre><code class="lang-csharp hljs">public class InputEventData&lt;T&gt; : InputEventData, BaseEventData</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,8 +152,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputEventData_1__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputEventData`1.#ctor*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputEventData_1__ctor_EventSystem_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputEventData`1.#ctor(EventSystem)">InputEventData(EventSystem)</h4>
-  <div class="markdown level1 summary"><p>Constructor.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -168,13 +171,65 @@
       <tr>
         <td><span class="xref">EventSystem</span></td>
         <td><span class="parametername">eventSystem</span></td>
-        <td><p>Typically will be <a href="https://docs.unity3d.com/ScriptReference/EventSystems.EventSystem-current.html">EventSystems.EventSystem.current</a></p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputEventData_1__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputEventData`1.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputEventData_1__ctor_EventSystem_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputEventData`1.#ctor(EventSystem)">InputEventData(EventSystem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputEventData(EventSystem eventSystem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventSystem</span></td>
+        <td><span class="parametername">eventSystem</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputEventData_1_InputData_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputEventData`1.InputData*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputEventData_1_InputData" data-uid="Microsoft.MixedReality.Toolkit.Input.InputEventData`1.InputData">InputData</h4>
+  <div class="markdown level1 summary"><p>The input data of the event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T InputData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputEventData_1_InputData_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputEventData`1.InputData*"></a>
@@ -246,6 +301,53 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputEventData_1_Initialize_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputEventData`1.Initialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputEventData_1_Initialize_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSource_Handedness_Microsoft_MixedReality_Toolkit_Input_MixedRealityInputAction__0_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputEventData`1.Initialize(Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource,Handedness,Microsoft.MixedReality.Toolkit.Input.MixedRealityInputAction,`0)">Initialize(IMixedRealityInputSource, Handedness, MixedRealityInputAction, T)</h4>
+  <div class="markdown level1 summary"><p>Used to initialize/reset the event and populate the data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize(IMixedRealityInputSource inputSource, Handedness handedness, MixedRealityInputAction inputAction, T data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource.html">IMixedRealityInputSource</a></td>
+        <td><span class="parametername">inputSource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">handedness</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputAction.html">MixedRealityInputAction</a></td>
+        <td><span class="parametername">inputAction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseEventData</span>
+  </div>
 </article>
           </div>
           

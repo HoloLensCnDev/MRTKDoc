@@ -181,6 +181,57 @@ If it doesn't exist, creates it.</p>
   
   
   <a id="Microsoft_MixedReality_Toolkit_ComponentExtensions_EnsureComponent_" data-uid="Microsoft.MixedReality.Toolkit.ComponentExtensions.EnsureComponent*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_ComponentExtensions_EnsureComponent_GameObject_Type_" data-uid="Microsoft.MixedReality.Toolkit.ComponentExtensions.EnsureComponent(GameObject,Type)">EnsureComponent(GameObject, Type)</h4>
+  <div class="markdown level1 summary"><p>Ensure that a component of type exists on the game object.
+If it doesn't exist, creates it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Component EnsureComponent(this GameObject gameObject, Type component)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">component</span></td>
+        <td><p>A component on the game object for which a component of type should exist.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Component</span></td>
+        <td><p>The component that was retrieved or created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_ComponentExtensions_EnsureComponent_" data-uid="Microsoft.MixedReality.Toolkit.ComponentExtensions.EnsureComponent*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_ComponentExtensions_EnsureComponent__1_Component_" data-uid="Microsoft.MixedReality.Toolkit.ComponentExtensions.EnsureComponent``1(Component)">EnsureComponent&lt;T&gt;(Component)</h4>
   <div class="markdown level1 summary"><p>Ensure that a component of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> exists on the game object.
 If it doesn't exist, creates it.</p>
@@ -189,6 +240,71 @@ If it doesn't exist, creates it.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T EnsureComponent&lt;T&gt;(this Component component)
+
+    where T : Component</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Component</span></td>
+        <td><span class="parametername">component</span></td>
+        <td><p>A component on the game object for which a component of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> should exist.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The component that was retrieved or created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of the component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_ComponentExtensions_EnsureComponent_" data-uid="Microsoft.MixedReality.Toolkit.ComponentExtensions.EnsureComponent*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_ComponentExtensions_EnsureComponent__1_Component_" data-uid="Microsoft.MixedReality.Toolkit.ComponentExtensions.EnsureComponent``1(Component)">EnsureComponent&lt;T&gt;(Component)</h4>
+  <div class="markdown level1 summary"><p>Ensure that a component of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> exists on the game object.
+If it doesn't exist, creates it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T EnsureComponent&lt;T&gt;(this Component component)
+
     where T : Component</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -252,6 +368,74 @@ If it doesn't exist, creates it.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T EnsureComponent&lt;T&gt;(this GameObject gameObject)
+
+    where T : Component</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
+        <td><p>Game object on which component should be.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The component that was retrieved or created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of the component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_ComponentExtensions_EnsureComponent__1_GameObject__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This extension has to remain in this class as it is required by the <a class="xref" href="Microsoft.MixedReality.Toolkit.ComponentExtensions.html#Microsoft_MixedReality_Toolkit_ComponentExtensions_EnsureComponent__1_Component_">EnsureComponent&lt;T&gt;(Component)</a> method</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_ComponentExtensions_EnsureComponent_" data-uid="Microsoft.MixedReality.Toolkit.ComponentExtensions.EnsureComponent*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_ComponentExtensions_EnsureComponent__1_GameObject_" data-uid="Microsoft.MixedReality.Toolkit.ComponentExtensions.EnsureComponent``1(GameObject)">EnsureComponent&lt;T&gt;(GameObject)</h4>
+  <div class="markdown level1 summary"><p>Ensure that a component of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> exists on the game object.
+If it doesn't exist, creates it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T EnsureComponent&lt;T&gt;(this GameObject gameObject)
+
     where T : Component</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -317,6 +501,76 @@ If it doesn't exist, creates it.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T FindAncestorComponent&lt;T&gt;(this Component component, bool includeSelf = true)
+
+    where T : Component</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Component</span></td>
+        <td><span class="parametername">component</span></td>
+        <td><p>Component for which its game object's ancestors must be considered.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">includeSelf</span></td>
+        <td><p>Indicates whether the specified game object should be included.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The component of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>. Null if it none was found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of component to find.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_ComponentExtensions_FindAncestorComponent_" data-uid="Microsoft.MixedReality.Toolkit.ComponentExtensions.FindAncestorComponent*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_ComponentExtensions_FindAncestorComponent__1_Component_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.ComponentExtensions.FindAncestorComponent``1(Component,System.Boolean)">FindAncestorComponent&lt;T&gt;(Component, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Find the first component of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> in the ancestors of the game object of the specified component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FindAncestorComponent&lt;T&gt;(this Component component, bool includeSelf = true)
+
     where T : Component</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

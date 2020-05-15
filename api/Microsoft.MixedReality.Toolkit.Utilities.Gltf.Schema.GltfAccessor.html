@@ -165,6 +165,32 @@ If this is undefined, look in the sparse object for the index and value buffer v
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_bufferView" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.bufferView">bufferView</h4>
+  <div class="markdown level1 summary"><p>The index of the bufferView.
+If this is undefined, look in the sparse object for the index and value buffer views.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int bufferView</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_byteOffset" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.byteOffset">byteOffset</h4>
   <div class="markdown level1 summary"><p>The offset relative to the start of the bufferView in bytes.
 This must be a multiple of the size of the component datatype.</p>
@@ -185,6 +211,62 @@ This must be a multiple of the size of the component datatype.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_byteOffset" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.byteOffset">byteOffset</h4>
+  <div class="markdown level1 summary"><p>The offset relative to the start of the bufferView in bytes.
+This must be a multiple of the size of the component datatype.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int byteOffset</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_componentType" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.componentType">componentType</h4>
+  <div class="markdown level1 summary"><p>The datatype of components in the attribute.
+All valid values correspond to WebGL enums.
+The corresponding typed arrays are: <code>Int8Array</code>, <code>Uint8Array</code>, <code>Int16Array</code>,
+<code>Uint16Array</code>, <code>Uint32Array</code>, and <code>Float32Array</code>, respectively.
+5125 (UNSIGNED_INT) is only allowed when the accessor contains indices
+i.e., the accessor is only referenced by <code>primitive.indices</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GltfComponentType componentType</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfComponentType.html">GltfComponentType</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -248,6 +330,33 @@ with the number of bytes or number of components.
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_count" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.count">count</h4>
+  <div class="markdown level1 summary"><p>The number of attributes referenced by this accessor, not to be confused
+with the number of bytes or number of components.
+<minimum>1</minimum></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int count</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_max" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.max">max</h4>
   <div class="markdown level1 summary"><p>Maximum value of each component in this attribute.
 Both min and max arrays have the same length.
@@ -267,6 +376,79 @@ applied.
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float[] max</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_max" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.max">max</h4>
+  <div class="markdown level1 summary"><p>Maximum value of each component in this attribute.
+Both min and max arrays have the same length.
+The length is determined by the value of the type property;
+it can be 1, 2, 3, 4, 9, or 16.</p>
+<p>When <code>componentType</code> is <code>5126</code> (FLOAT) each array value must be stored as
+double-precision JSON number with numerical value which is equal to
+buffer-stored single-precision value to avoid extra runtime conversions.</p>
+<p><code>normalized</code> property has no effect on array values: they always correspond
+to the actual values stored in the buffer. When accessor is sparse, this
+property must contain max values of accessor data with sparse substitution
+applied.
+<minitems>1</minitems>
+<maxitems>16</maxitems></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] max</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_min" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.min">min</h4>
+  <div class="markdown level1 summary"><p>Minimum value of each component in this attribute.
+Both min and max arrays have the same length.  The length is determined by
+the value of the type property; it can be 1, 2, 3, 4, 9, or 16.</p>
+<p>When <code>componentType</code> is <code>5126</code> (FLOAT) each array value must be stored as
+double-precision JSON number with numerical value which is equal to
+buffer-stored single-precision value to avoid extra runtime conversions.</p>
+<p><code>normalized</code> property has no effect on array values: they always correspond
+to the actual values stored in the buffer. When accessor is sparse, this
+property must contain min values of accessor data with sparse substitution
+applied.
+<minitems>1</minitems>
+<maxitems>16</maxitems></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] min</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,6 +531,59 @@ Must be <code>false</code> when accessor is used for animation data.</p>
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_normalized" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.normalized">normalized</h4>
+  <div class="markdown level1 summary"><p>Specifies whether integer data values should be normalized
+(<code>true</code>) to [0, 1] (for unsigned types) or [-1, 1] (for signed types),
+or converted directly (<code>false</code>) when they are accessed.
+Must be <code>false</code> when accessor is used for animation data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool normalized</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_sparse" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.sparse">sparse</h4>
+  <div class="markdown level1 summary"><p>Sparse storage of attributes that deviate from their initialization value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GltfAccessorSparse sparse</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessorSparse.html">GltfAccessorSparse</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_sparse" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.sparse">sparse</h4>
   <div class="markdown level1 summary"><p>Sparse storage of attributes that deviate from their initialization value.</p>
 </div>
@@ -398,8 +633,60 @@ and the number of elements in the vector or matrix.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_type" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.type">type</h4>
+  <div class="markdown level1 summary"><p>Specifies if the attribute is a scalar, vector, or matrix,
+and the number of elements in the vector or matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string type</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_BufferView_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.BufferView*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_BufferView" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.BufferView">BufferView</h4>
+  <div class="markdown level1 summary"><p><a href="https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/bufferView.schema.json">https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/schema/bufferView.schema.json</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GltfBufferView BufferView { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfBufferView.html">GltfBufferView</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAccessor_BufferView_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAccessor.BufferView*"></a>

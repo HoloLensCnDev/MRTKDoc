@@ -95,6 +95,10 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityExtensionServiceAttribute.html">MixedRealityExtensionServiceAttribute</a></div>
     <div class="level2"><span class="xref">MixedRealityDataProviderAttribute</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Attribute</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -112,12 +116,15 @@
     <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityExtensionServiceAttribute.html#Microsoft_MixedReality_Toolkit_MixedRealityExtensionServiceAttribute_DefaultProfile">MixedRealityExtensionServiceAttribute.DefaultProfile</a>
     </div>
+    <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityExtensionServiceAttribute.html#Microsoft_MixedReality_Toolkit_MixedRealityExtensionServiceAttribute_RequiresProfile">MixedRealityExtensionServiceAttribute.RequiresProfile</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.html">Microsoft.MixedReality.Toolkit</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_MixedRealityDataProviderAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealityDataProviderAttribute : MixedRealityExtensionServiceAttribute</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealityDataProviderAttribute : MixedRealityExtensionServiceAttribute, Attribute</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -168,6 +175,58 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityDataProviderAttribute__ctor_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityDataProviderAttribute.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityDataProviderAttribute__ctor_Type_SupportedPlatforms_System_String_System_String_System_String_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityDataProviderAttribute.#ctor(Type,SupportedPlatforms,System.String,System.String,System.String,System.Boolean)">MixedRealityDataProviderAttribute(Type, SupportedPlatforms, String, String, String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityDataProviderAttribute(Type serviceInterfaceType, SupportedPlatforms runtimePlatforms, string name = &quot;&quot;, string profilePath = &quot;&quot;, string packageFolder = &quot;MixedRealityToolkit&quot;, bool requiresProfile = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">serviceInterfaceType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">SupportedPlatforms</span></td>
+        <td><span class="parametername">runtimePlatforms</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">profilePath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">packageFolder</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">requiresProfile</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -196,6 +255,36 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MixedRealityDataProviderAttribute_ServiceInterfaceType_" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityDataProviderAttribute.ServiceInterfaceType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MixedRealityDataProviderAttribute_ServiceInterfaceType" data-uid="Microsoft.MixedReality.Toolkit.MixedRealityDataProviderAttribute.ServiceInterfaceType">ServiceInterfaceType</h4>
+  <div class="markdown level1 summary"><p>The interface type of the IMixedRealityService for which the data provider is supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type ServiceInterfaceType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Attribute</span>
+  </div>
 </article>
           </div>
           

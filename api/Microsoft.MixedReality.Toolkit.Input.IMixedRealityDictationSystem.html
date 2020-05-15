@@ -159,8 +159,87 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_IsListening_" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.IsListening*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_IsListening" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.IsListening">IsListening</h4>
+  <div class="markdown level1 summary"><p>Is the system currently listing for dictation input?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsListening { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StartRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StartRecording*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StartRecording_GameObject_System_Single_System_Single_System_Int32_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StartRecording(GameObject,System.Single,System.Single,System.Int32,System.String)">StartRecording(GameObject, Single, Single, Int32, String)</h4>
+  <div class="markdown level1 summary"><p>Turns on the dictation recognizer and begins recording audio from the default microphone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StartRecording(GameObject listener, float initialSilenceTimeout = 5F, float autoSilenceTimeout = 20F, int recordingTime = 10, string micDeviceName = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">listener</span></td>
+        <td><p>GameObject listening for the dictation input.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">initialSilenceTimeout</span></td>
+        <td><p>The time length in seconds before dictation recognizer session ends due to lack of audio input in case there was no audio heard in the current session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">autoSilenceTimeout</span></td>
+        <td><p>The time length in seconds before dictation recognizer session ends due to lack of audio input.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">recordingTime</span></td>
+        <td><p>Length in seconds for the manager to listen.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">micDeviceName</span></td>
+        <td><p>Optional: The microphone device to listen to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StartRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StartRecording*"></a>
@@ -284,6 +363,74 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StartRecordingAsync_" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StartRecordingAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StartRecordingAsync_GameObject_System_Single_System_Single_System_Int32_System_String_" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StartRecordingAsync(GameObject,System.Single,System.Single,System.Int32,System.String)">StartRecordingAsync(GameObject, Single, Single, Int32, String)</h4>
+  <div class="markdown level1 summary"><p>Turns on the dictation recognizer and begins recording audio from the default microphone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task StartRecordingAsync(GameObject listener, float initialSilenceTimeout = 5F, float autoSilenceTimeout = 20F, int recordingTime = 10, string micDeviceName = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">listener</span></td>
+        <td><p>GameObject listening for the dictation input.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">initialSilenceTimeout</span></td>
+        <td><p>The time length in seconds before dictation recognizer session ends due to lack of audio input in case there was no audio heard in the current session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">autoSilenceTimeout</span></td>
+        <td><p>The time length in seconds before dictation recognizer session ends due to lack of audio input.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">recordingTime</span></td>
+        <td><p>Length in seconds for the manager to listen.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">micDeviceName</span></td>
+        <td><p>Optional: The microphone device to listen to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StopRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StopRecording*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StopRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StopRecording">StopRecording()</h4>
   <div class="markdown level1 summary"><p>Ends the recording session.</p>
@@ -293,6 +440,44 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void StopRecording()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StopRecording_" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StopRecording*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StopRecording" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StopRecording">StopRecording()</h4>
+  <div class="markdown level1 summary"><p>Ends the recording session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StopRecording()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StopRecordingAsync_" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StopRecordingAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StopRecordingAsync" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StopRecordingAsync">StopRecordingAsync()</h4>
+  <div class="markdown level1 summary"><p>Ends the recording session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;AudioClip&gt; StopRecordingAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">AudioClip</span>&gt;</td>
+        <td><p><a href="https://docs.unity3d.com/ScriptReference/AudioClip.html">AudioClip</a> of the last recording session.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_IMixedRealityDictationSystem_StopRecordingAsync_" data-uid="Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationSystem.StopRecordingAsync*"></a>

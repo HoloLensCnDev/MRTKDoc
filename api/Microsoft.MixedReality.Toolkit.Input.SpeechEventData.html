@@ -95,6 +95,10 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputEventData.html">BaseInputEventData</a></div>
     <div class="level2"><span class="xref">SpeechEventData</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseEventData</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -117,7 +121,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SpeechEventData : BaseInputEventData</code></pre>
+    <pre><code class="lang-csharp hljs">public class SpeechEventData : BaseInputEventData, BaseEventData</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -125,8 +129,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.#ctor*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData__ctor_EventSystem_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.#ctor(EventSystem)">SpeechEventData(EventSystem)</h4>
-  <div class="markdown level1 summary"><p>Constructor.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -145,13 +148,65 @@
       <tr>
         <td><span class="xref">EventSystem</span></td>
         <td><span class="parametername">eventSystem</span></td>
-        <td><p>Typically will be <a href="https://docs.unity3d.com/ScriptReference/EventSystems.EventSystem-current.html">EventSystems.EventSystem.current</a></p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData__ctor_EventSystem_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.#ctor(EventSystem)">SpeechEventData(EventSystem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpeechEventData(EventSystem eventSystem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventSystem</span></td>
+        <td><span class="parametername">eventSystem</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_Command_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.Command*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_Command" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.Command">Command</h4>
+  <div class="markdown level1 summary"><p>The text that was recognized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpeechCommands Command { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.html">SpeechCommands</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_Command_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.Command*"></a>
@@ -206,6 +261,32 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_Confidence_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.Confidence*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_Confidence" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.Confidence">Confidence</h4>
+  <div class="markdown level1 summary"><p>A measure of correct recognition certainty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecognitionConfidenceLevel Confidence { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RecognitionConfidenceLevel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_PhraseDuration_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.PhraseDuration*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_PhraseDuration" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.PhraseDuration">PhraseDuration</h4>
   <div class="markdown level1 summary"><p>The time it took for the phrase to be uttered.</p>
@@ -226,6 +307,58 @@
     <tbody>
       <tr>
         <td><span class="xref">TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_PhraseDuration_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.PhraseDuration*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_PhraseDuration" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.PhraseDuration">PhraseDuration</h4>
+  <div class="markdown level1 summary"><p>The time it took for the phrase to be uttered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan PhraseDuration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_PhraseStartTime_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.PhraseStartTime*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_PhraseStartTime" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.PhraseStartTime">PhraseStartTime</h4>
+  <div class="markdown level1 summary"><p>The moment in UTC time when uttering of the phrase began.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime PhraseStartTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -306,6 +439,58 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_Initialize_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.Initialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SpeechEventData_Initialize_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSource_RecognitionConfidenceLevel_TimeSpan_DateTime_Microsoft_MixedReality_Toolkit_Input_SpeechCommands_" data-uid="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.Initialize(Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource,RecognitionConfidenceLevel,TimeSpan,DateTime,Microsoft.MixedReality.Toolkit.Input.SpeechCommands)">Initialize(IMixedRealityInputSource, RecognitionConfidenceLevel, TimeSpan, DateTime, SpeechCommands)</h4>
+  <div class="markdown level1 summary"><p>Populates the event with data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize(IMixedRealityInputSource inputSource, RecognitionConfidenceLevel confidence, TimeSpan phraseDuration, DateTime phraseStartTime, SpeechCommands command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource.html">IMixedRealityInputSource</a></td>
+        <td><span class="parametername">inputSource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">RecognitionConfidenceLevel</span></td>
+        <td><span class="parametername">confidence</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">phraseDuration</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
+        <td><span class="parametername">phraseStartTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SpeechCommands.html">SpeechCommands</a></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseEventData</span>
+  </div>
 </article>
           </div>
           

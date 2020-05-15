@@ -94,14 +94,65 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">UnityARCameraSettings</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseCameraSettingsProvider</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.html">Microsoft.MixedReality.Toolkit.Experimental.UnityAR</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettings_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UnityARCameraSettings : BaseCameraSettingsProvider</code></pre>
+    <pre><code class="lang-csharp hljs">public class UnityARCameraSettings : BaseCameraSettingsProvider, BaseCameraSettingsProvider</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettings__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettings.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettings__ctor_IMixedRealityCameraSystem_System_String_System_UInt32_BaseCameraSettingsProfile_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettings.#ctor(IMixedRealityCameraSystem,System.String,System.UInt32,BaseCameraSettingsProfile)">UnityARCameraSettings(IMixedRealityCameraSystem, String, UInt32, BaseCameraSettingsProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityARCameraSettings(IMixedRealityCameraSystem cameraSystem, string name = null, uint priority = default(uint), BaseCameraSettingsProfile profile = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityCameraSystem</span></td>
+        <td><span class="parametername">cameraSystem</span></td>
+        <td><p>The instance of the camera system which is managing this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Friendly name of the provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Provider priority. Used to determine order of instantiation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">BaseCameraSettingsProfile</span></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The provider's configuration profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettings__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettings.#ctor*"></a>
@@ -178,6 +229,31 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettings_IsOpaque_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettings.IsOpaque*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettings_IsOpaque" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettings.IsOpaque">IsOpaque</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsOpaque { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettings_SettingsProfile_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettings.SettingsProfile*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettings_SettingsProfile" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettings.SettingsProfile">SettingsProfile</h4>
   <div class="markdown level1 summary"><p>The profile used to configure the camera.</p>
@@ -202,6 +278,36 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettings_SettingsProfile_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettings.SettingsProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_UnityAR_UnityARCameraSettings_SettingsProfile" data-uid="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettings.SettingsProfile">SettingsProfile</h4>
+  <div class="markdown level1 summary"><p>The profile used to configure the camera.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityARCameraSettingsProfile SettingsProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.UnityAR.UnityARCameraSettingsProfile.html">UnityARCameraSettingsProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseCameraSettingsProvider</span>
+  </div>
 </article>
           </div>
           

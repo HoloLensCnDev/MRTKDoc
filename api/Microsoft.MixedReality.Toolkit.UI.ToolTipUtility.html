@@ -193,6 +193,105 @@ Instead, find strategic moments to update nearest pivot (i.e. only once when Too
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_ToolTipUtility_FindClosestAttachPointToAnchor_" data-uid="Microsoft.MixedReality.Toolkit.UI.ToolTipUtility.FindClosestAttachPointToAnchor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ToolTipUtility_FindClosestAttachPointToAnchor_Transform_Transform_Vector3___Microsoft_MixedReality_Toolkit_UI_ToolTipAttachPoint_" data-uid="Microsoft.MixedReality.Toolkit.UI.ToolTipUtility.FindClosestAttachPointToAnchor(Transform,Transform,Vector3[],Microsoft.MixedReality.Toolkit.UI.ToolTipAttachPoint)">FindClosestAttachPointToAnchor(Transform, Transform, Vector3[], ToolTipAttachPoint)</h4>
+  <div class="markdown level1 summary"><p>Avoid running this query in Update function because calculating Vector3.Distance requires sqr root calculation (expensive)
+Instead, find strategic moments to update nearest pivot (i.e. only once when ToolTip becomes active)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 FindClosestAttachPointToAnchor(Transform anchor, Transform contentParent, Vector3[] localPivotPositions, ToolTipAttachPoint pivotType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">anchor</span></td>
+        <td><p>Transform of object serving as anchor for tooltip</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">contentParent</span></td>
+        <td><p>Transform for the tooltip content</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">localPivotPositions</span></td>
+        <td><p>list of positions to find the closest</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ToolTipAttachPoint.html">ToolTipAttachPoint</a></td>
+        <td><span class="parametername">pivotType</span></td>
+        <td><p>pivot type needed for calculation of closest</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><p>Vector3 the point in localPivotPositions which is closest to the anchor position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_ToolTipUtility_GetAttachPointPositions_" data-uid="Microsoft.MixedReality.Toolkit.UI.ToolTipUtility.GetAttachPointPositions*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_ToolTipUtility_GetAttachPointPositions_Vector3____Vector2_" data-uid="Microsoft.MixedReality.Toolkit.UI.ToolTipUtility.GetAttachPointPositions(Vector3[]@,Vector2)">GetAttachPointPositions(ref Vector3[], Vector2)</h4>
+  <div class="markdown level1 summary"><p>gets an array of pivot positions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetAttachPointPositions(ref Vector3[] pivotPositions, Vector2 localContentSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">pivotPositions</span></td>
+        <td><p>ref array that gets filled with positions</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">localContentSize</span></td>
+        <td><p>the xy scale of the tooltip</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_ToolTipUtility_GetAttachPointPositions_" data-uid="Microsoft.MixedReality.Toolkit.UI.ToolTipUtility.GetAttachPointPositions*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_ToolTipUtility_GetAttachPointPositions_Vector3____Vector2_" data-uid="Microsoft.MixedReality.Toolkit.UI.ToolTipUtility.GetAttachPointPositions(Vector3[]@,Vector2)">GetAttachPointPositions(ref Vector3[], Vector2)</h4>
   <div class="markdown level1 summary"><p>gets an array of pivot positions</p>

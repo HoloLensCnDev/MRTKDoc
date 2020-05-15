@@ -96,14 +96,42 @@ GridObjectCollectionTests.</p>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">GridObjectLayoutControl</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.html">Microsoft.MixedReality.Toolkit.Examples.Demos</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Examples_Demos_GridObjectLayoutControl_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GridObjectLayoutControl : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class GridObjectLayoutControl : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_GridObjectLayoutControl_grid" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.GridObjectLayoutControl.grid">grid</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridObjectCollection grid</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GridObjectCollection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_GridObjectLayoutControl_grid" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.GridObjectLayoutControl.grid">grid</h4>
@@ -152,6 +180,30 @@ GridObjectCollectionTests.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_GridObjectLayoutControl_text" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.GridObjectLayoutControl.text">text</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TMPro.TextMeshPro text</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMPro.TextMeshPro</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -164,6 +216,28 @@ GridObjectCollectionTests.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void NextLayout()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_GridObjectLayoutControl_NextLayout_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.GridObjectLayoutControl.NextLayout*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_GridObjectLayoutControl_NextLayout" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.GridObjectLayoutControl.NextLayout">NextLayout()</h4>
+  <div class="markdown level1 summary"><p>Change the grid collection's layout to the next one in order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void NextLayout()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_GridObjectLayoutControl_PreviousLayout_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.GridObjectLayoutControl.PreviousLayout*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_GridObjectLayoutControl_PreviousLayout" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.GridObjectLayoutControl.PreviousLayout">PreviousLayout()</h4>
+  <div class="markdown level1 summary"><p>Change the grid's layout to the previous one in order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PreviousLayout()</code></pre>
   </div>
   
   
@@ -190,6 +264,25 @@ it will be of form &quot;printgrid-yyMMdd-HHmmss.txt&quot;</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void RunTest()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_GridObjectLayoutControl_RunTest_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.GridObjectLayoutControl.RunTest*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_GridObjectLayoutControl_RunTest" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.GridObjectLayoutControl.RunTest">RunTest()</h4>
+  <div class="markdown level1 summary"><p>Use this to run mock tests in grid object collection tests
+and print the resulting positions of child objects to a file.
+Used to get expected values for GridObjectCollectionTests.
+When you run the comand, look in the Debug log for where the file is output,
+it will be of form &quot;printgrid-yyMMdd-HHmmss.txt&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RunTest()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

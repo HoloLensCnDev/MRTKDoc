@@ -99,14 +99,47 @@
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessEventData.html">MixedRealitySpatialAwarenessEventData</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.TeleportEventData.html">TeleportEventData</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseEventData</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.html">Microsoft.MixedReality.Toolkit</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GenericBaseEventData : BaseEventData</code></pre>
+    <pre><code class="lang-csharp hljs">public class GenericBaseEventData : BaseEventData, BaseEventData</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GenericBaseEventData__ctor_" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GenericBaseEventData__ctor_EventSystem_" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.#ctor(EventSystem)">GenericBaseEventData(EventSystem)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GenericBaseEventData(EventSystem eventSystem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventSystem</span></td>
+        <td><span class="parametername">eventSystem</span></td>
+        <td><p>Usually <a href="https://docs.unity3d.com/ScriptReference/EventSystems.EventSystem-current.html">EventSystems.EventSystem.current</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_GenericBaseEventData__ctor_" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.#ctor*"></a>
@@ -166,6 +199,32 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_EventSource_" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.EventSource*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_EventSource" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.EventSource">EventSource</h4>
+  <div class="markdown level1 summary"><p>The Event Source that the event originates from.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMixedRealityEventSource EventSource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityEventSource.html">IMixedRealityEventSource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_EventTime_" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.EventTime*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_EventTime" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.EventTime">EventTime</h4>
   <div class="markdown level1 summary"><p>The UTC time at which the event occurred.</p>
@@ -190,6 +249,65 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_EventTime_" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.EventTime*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_EventTime" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.EventTime">EventTime</h4>
+  <div class="markdown level1 summary"><p>The UTC time at which the event occurred.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime EventTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_selectedObject_" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.selectedObject*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_selectedObject" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.selectedObject">selectedObject</h4>
+  <div class="markdown level1 summary"><p>The BaseEventData.selectedObject is explicitly hidden because access to it
+(either via get or set) throws a NullReferenceException in typical usage within
+the MRTK. Prefer using the subclasses own fields to access information about
+the event instead of fields on BaseEventData.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject selectedObject { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_selectedObject_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>BaseEventData is only used because it's part of Unity's EventSystem dispatching,
+so this code must subclass it in order to leverage EventSystem.ExecuteEvents</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   
@@ -221,6 +339,39 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_BaseInitialize_" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.BaseInitialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GenericBaseEventData_BaseInitialize_Microsoft_MixedReality_Toolkit_IMixedRealityEventSource_" data-uid="Microsoft.MixedReality.Toolkit.GenericBaseEventData.BaseInitialize(Microsoft.MixedReality.Toolkit.IMixedRealityEventSource)">BaseInitialize(IMixedRealityEventSource)</h4>
+  <div class="markdown level1 summary"><p>Used to initialize/reset the event and populate the data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void BaseInitialize(IMixedRealityEventSource eventSource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityEventSource.html">IMixedRealityEventSource</a></td>
+        <td><span class="parametername">eventSource</span></td>
+        <td><p>The source of the event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseEventData</span>
+  </div>
 </article>
           </div>
           

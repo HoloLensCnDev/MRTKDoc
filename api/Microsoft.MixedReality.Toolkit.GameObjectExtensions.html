@@ -163,6 +163,41 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_ApplyLayerCacheRecursively_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.ApplyLayerCacheRecursively*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_ApplyLayerCacheRecursively_GameObject_Dictionary_GameObject_System_Int32__" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.ApplyLayerCacheRecursively(GameObject,Dictionary{GameObject,System.Int32})">ApplyLayerCacheRecursively(GameObject, Dictionary&lt;GameObject, Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Reapplies previously cached hierarchy layers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyLayerCacheRecursively(this GameObject root, Dictionary&lt;GameObject, int&gt; cache)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">root</span></td>
+        <td><p>Start point of the traverse</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">GameObject</span>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">cache</span></td>
+        <td><p>The previously set layer for each object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_ApplyToHierarchy_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.ApplyToHierarchy*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_ApplyToHierarchy_GameObject_Action_GameObject__" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.ApplyToHierarchy(GameObject,Action{GameObject})">ApplyToHierarchy(GameObject, Action&lt;GameObject&gt;)</h4>
   <div class="markdown level1 summary"><p>Apply the specified delegate to all objects in the hierarchy under a specified game object.</p>
@@ -192,6 +227,76 @@
         <td><span class="xref">Action</span>&lt;<span class="xref">GameObject</span>&gt;</td>
         <td><span class="parametername">action</span></td>
         <td><p>Delegate to apply.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_ApplyToHierarchy_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.ApplyToHierarchy*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_ApplyToHierarchy_GameObject_Action_GameObject__" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.ApplyToHierarchy(GameObject,Action{GameObject})">ApplyToHierarchy(GameObject, Action&lt;GameObject&gt;)</h4>
+  <div class="markdown level1 summary"><p>Apply the specified delegate to all objects in the hierarchy under a specified game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyToHierarchy(this GameObject root, Action&lt;GameObject&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">root</span></td>
+        <td><p>Root game object of the hierarchy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Delegate to apply.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_DestroyGameObject_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.DestroyGameObject*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_DestroyGameObject_GameObject_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.DestroyGameObject(GameObject,System.Single)">DestroyGameObject(GameObject, Single)</h4>
+  <div class="markdown level1 summary"><p>Destroys GameObject appropriately depending if in edit or playmode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DestroyGameObject(GameObject gameObject, float t = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
+        <td><p>GameObject to destroy</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">t</span></td>
+        <td><p>time in seconds at which to destroy GameObject if applicable</p>
 </td>
       </tr>
     </tbody>
@@ -286,6 +391,59 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_ExportOBJAsync_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.ExportOBJAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_ExportOBJAsync_GameObject_System_String_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.ExportOBJAsync(GameObject,System.String,System.Boolean)">ExportOBJAsync(GameObject, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Export mesh data of current GameObject, and children if enabled, to file provided in OBJ format</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task ExportOBJAsync(this GameObject root, string filePath, bool includeChildren = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">root</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">filePath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">includeChildren</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_FindAncestorComponent_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.FindAncestorComponent*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_FindAncestorComponent__1_GameObject_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.FindAncestorComponent``1(GameObject,System.Boolean)">FindAncestorComponent&lt;T&gt;(GameObject, Boolean)</h4>
   <div class="markdown level1 summary"><p>Find the first component of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> in the ancestors of the specified game object.</p>
@@ -294,6 +452,76 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T FindAncestorComponent&lt;T&gt;(this GameObject gameObject, bool includeSelf = true)
+
+    where T : Component</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
+        <td><p>Game object for which ancestors must be considered.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">includeSelf</span></td>
+        <td><p>Indicates whether the specified game object should be included.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The component of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>. Null if it none was found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of component to find.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_FindAncestorComponent_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.FindAncestorComponent*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_FindAncestorComponent__1_GameObject_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.FindAncestorComponent``1(GameObject,System.Boolean)">FindAncestorComponent&lt;T&gt;(GameObject, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Find the first component of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> in the ancestors of the specified game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FindAncestorComponent&lt;T&gt;(this GameObject gameObject, bool includeSelf = true)
+
     where T : Component</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -405,6 +633,180 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_ForEachComponent_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.ForEachComponent*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_ForEachComponent__1_GameObject_Action___0__" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.ForEachComponent``1(GameObject,Action{``0})">ForEachComponent&lt;T&gt;(GameObject, Action&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Perform an action on every component of type T that is on this GameObject</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ForEachComponent&lt;T&gt;(this GameObject gameObject, Action&lt;T&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
+        <td><p>this gameObject</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;T&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>Action to perform.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Component Type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_IsComponentRequired_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.IsComponentRequired*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_IsComponentRequired__1_GameObject_List_Type___" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.IsComponentRequired``1(GameObject,List{Type}@)">IsComponentRequired&lt;T&gt;(GameObject, out List&lt;Type&gt;)</h4>
+  <div class="markdown level1 summary"><p>Checks if any MonoBehaviour on the given GameObject is using the RequireComponentAttribute requiring type T</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsComponentRequired&lt;T&gt;(this GameObject gameObject, out List&lt;Type&gt; requiringTypes)
+
+    where T : Component</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
+        <td><p>the GameObject requiring the component</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">Type</span>&gt;</td>
+        <td><span class="parametername">requiringTypes</span></td>
+        <td><p>A list of types that do require the component in question</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> appears in any RequireComponentAttribute, otherwise false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The potentially required component</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_IsComponentRequired__1_GameObject_List_Type____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only functions when called within a UNITY_EDITOR context. Outside of UNITY_EDITOR, always returns false</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_IsInLayerMask_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.IsInLayerMask*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_IsInLayerMask_GameObject_LayerMask_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.IsInLayerMask(GameObject,LayerMask)">IsInLayerMask(GameObject, LayerMask)</h4>
+  <div class="markdown level1 summary"><p>Determines whether or not a game object's layer is included in the specified layer mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInLayerMask(this GameObject gameObject, LayerMask layerMask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
+        <td><p>The game object whose layer to test.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">LayerMask</span></td>
+        <td><span class="parametername">layerMask</span></td>
+        <td><p>The layer mask to test against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if <code data-dev-comment-type="paramref" class="paramref">gameObject</code>'s layer is included in <code data-dev-comment-type="paramref" class="paramref">layerMask</code>, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_IsInLayerMask_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.IsInLayerMask*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_IsInLayerMask_GameObject_LayerMask_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.IsInLayerMask(GameObject,LayerMask)">IsInLayerMask(GameObject, LayerMask)</h4>
   <div class="markdown level1 summary"><p>Determines whether or not a game object's layer is included in the specified layer mask.</p>
@@ -494,6 +896,44 @@
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_SetChildrenActive_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.SetChildrenActive*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_SetChildrenActive_GameObject_System_Boolean_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.SetChildrenActive(GameObject,System.Boolean)">SetChildrenActive(GameObject, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Set all GameObject children active or inactive based on argument</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetChildrenActive(this GameObject root, bool isActive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">root</span></td>
+        <td><p>GameObject parent to traverse from</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isActive</span></td>
+        <td><p>Indicates whether children GameObjects should be active or not</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_SetChildrenActive_GameObject_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Does not call SetActive on the top level GameObject, only its children</p>
+</div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_SetLayerRecursively_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.SetLayerRecursively*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_SetLayerRecursively_GameObject_System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.SetLayerRecursively(GameObject,System.Int32)">SetLayerRecursively(GameObject, Int32)</h4>
   <div class="markdown level1 summary"><p>Set the layer to the given object and the full hierarchy below it.</p>
@@ -523,6 +963,82 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">layer</span></td>
         <td><p>The layer to apply</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_SetLayerRecursively_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.SetLayerRecursively*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_SetLayerRecursively_GameObject_System_Int32_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.SetLayerRecursively(GameObject,System.Int32)">SetLayerRecursively(GameObject, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the layer to the given object and the full hierarchy below it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetLayerRecursively(this GameObject root, int layer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">root</span></td>
+        <td><p>Start point of the traverse</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">layer</span></td>
+        <td><p>The layer to apply</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_SetLayerRecursively_" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.SetLayerRecursively*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_GameObjectExtensions_SetLayerRecursively_GameObject_System_Int32_Dictionary_GameObject_System_Int32___" data-uid="Microsoft.MixedReality.Toolkit.GameObjectExtensions.SetLayerRecursively(GameObject,System.Int32,Dictionary{GameObject,System.Int32}@)">SetLayerRecursively(GameObject, Int32, out Dictionary&lt;GameObject, Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the layer to the given object and the full hierarchy below it and cache the previous layers in the out parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetLayerRecursively(this GameObject root, int layer, out Dictionary&lt;GameObject, int&gt; cache)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">root</span></td>
+        <td><p>Start point of the traverse</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">layer</span></td>
+        <td><p>The layer to apply</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">GameObject</span>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">cache</span></td>
+        <td><p>The previously set layer for each object</p>
 </td>
       </tr>
     </tbody>

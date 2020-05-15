@@ -99,6 +99,7 @@
     <div><span class="xref">IMixedRealityTeleportPointer</span></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHandler.html">IMixedRealityTeleportHandler</a></div>
     <div><span class="xref">IEventSystemHandler</span></div>
+    <div><span class="xref">LinePointer</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -159,15 +160,30 @@
     <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.TeleportPointer.html#Microsoft_MixedReality_Toolkit_Teleport_TeleportPointer_OnTeleportCanceled_Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData_">TeleportPointer.OnTeleportCanceled(TeleportEventData)</a>
     </div>
+    <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.TeleportPointer.html#Microsoft_MixedReality_Toolkit_Teleport_TeleportPointer_TeleportInputAction">TeleportPointer.TeleportInputAction</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.html">Microsoft.MixedReality.Toolkit.Teleport</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Teleport_ParabolicTeleportPointer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ParabolicTeleportPointer : TeleportPointer, IMixedRealityTeleportPointer, IMixedRealityTeleportHandler, IEventSystemHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class ParabolicTeleportPointer : TeleportPointer, IMixedRealityTeleportPointer, IMixedRealityTeleportHandler, IEventSystemHandler, LinePointer</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Teleport_ParabolicTeleportPointer_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.ParabolicTeleportPointer.OnEnable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Teleport_ParabolicTeleportPointer_OnEnable" data-uid="Microsoft.MixedReality.Toolkit.Teleport.ParabolicTeleportPointer.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.TeleportPointer.html#Microsoft_MixedReality_Toolkit_Teleport_TeleportPointer_OnEnable">TeleportPointer.OnEnable()</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Teleport_ParabolicTeleportPointer_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.ParabolicTeleportPointer.OnEnable*"></a>
@@ -192,6 +208,18 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.TeleportPointer.html#Microsoft_MixedReality_Toolkit_Teleport_TeleportPointer_OnPreSceneQuery">TeleportPointer.OnPreSceneQuery()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Teleport_ParabolicTeleportPointer_OnPreSceneQuery_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.ParabolicTeleportPointer.OnPreSceneQuery*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Teleport_ParabolicTeleportPointer_OnPreSceneQuery" data-uid="Microsoft.MixedReality.Toolkit.Teleport.ParabolicTeleportPointer.OnPreSceneQuery">OnPreSceneQuery()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnPreSceneQuery()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.TeleportPointer.html#Microsoft_MixedReality_Toolkit_Teleport_TeleportPointer_OnPreSceneQuery">TeleportPointer.OnPreSceneQuery()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IMixedRealityTeleportPointer</span>
@@ -201,6 +229,9 @@
   </div>
   <div>
       <span class="xref">IEventSystemHandler</span>
+  </div>
+  <div>
+      <span class="xref">LinePointer</span>
   </div>
 </article>
           </div>

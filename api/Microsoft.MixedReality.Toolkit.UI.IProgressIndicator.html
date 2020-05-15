@@ -125,6 +125,33 @@ You can use this to attach follow scripts or solvers to the indicator.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_MainTransform_" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.MainTransform*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_MainTransform" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.MainTransform">MainTransform</h4>
+  <div class="markdown level1 summary"><p>The progress indicator's main transform.
+You can use this to attach follow scripts or solvers to the indicator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Transform MainTransform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_Message_" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.Message*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_Message" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.Message">Message</h4>
   <div class="markdown level1 summary"><p>The message to display during loading.</p>
@@ -145,6 +172,58 @@ You can use this to attach follow scripts or solvers to the indicator.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_Message_" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.Message*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_Message" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.Message">Message</h4>
+  <div class="markdown level1 summary"><p>The message to display during loading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Message { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_Progress_" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.Progress*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_Progress" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.Progress">Progress</h4>
+  <div class="markdown level1 summary"><p>Loading progress value from 0 (just started) to 1 (complete)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Progress { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -201,8 +280,60 @@ You can use this to attach follow scripts or solvers to the indicator.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_State_" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.State*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_State" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.State">State</h4>
+  <div class="markdown level1 summary"><p>Used to determine whether it's appropriate to use this indicator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ProgressIndicatorState State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.UI.ProgressIndicatorState.html">ProgressIndicatorState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_AwaitTransitionAsync_" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.AwaitTransitionAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_AwaitTransitionAsync" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.AwaitTransitionAsync">AwaitTransitionAsync()</h4>
+  <div class="markdown level1 summary"><p>Returns after progress indicator completes its opening or closing transition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task AwaitTransitionAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_CloseAsync_" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.CloseAsync*"></a>
@@ -213,6 +344,58 @@ You can use this to attach follow scripts or solvers to the indicator.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task CloseAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_CloseAsync_" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.CloseAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_CloseAsync" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.CloseAsync">CloseAsync()</h4>
+  <div class="markdown level1 summary"><p>Closes the progress indicator after loading is finished. Method is async to allow for animation to complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task CloseAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_OpenAsync_" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.OpenAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_UI_IProgressIndicator_OpenAsync" data-uid="Microsoft.MixedReality.Toolkit.UI.IProgressIndicator.OpenAsync">OpenAsync()</h4>
+  <div class="markdown level1 summary"><p>Opens the progress indicator before loading begins. Method is async to allow for animation to begin before loading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task OpenAsync()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">

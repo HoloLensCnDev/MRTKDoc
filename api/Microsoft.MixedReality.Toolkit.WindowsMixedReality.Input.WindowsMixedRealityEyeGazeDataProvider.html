@@ -98,12 +98,13 @@
     <div><span class="xref">IMixedRealityEyeGazeDataProvider</span></div>
     <div><span class="xref">IMixedRealityEyeSaccadeProvider</span></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityCapabilityCheck.html">IMixedRealityCapabilityCheck</a></div>
+    <div><span class="xref">BaseInputDeviceManager</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.html">Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityEyeGazeDataProvider : BaseInputDeviceManager, IMixedRealityEyeGazeDataProvider, IMixedRealityEyeSaccadeProvider, IMixedRealityCapabilityCheck</code></pre>
+    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityEyeGazeDataProvider : BaseInputDeviceManager, IMixedRealityEyeGazeDataProvider, IMixedRealityEyeSaccadeProvider, IMixedRealityCapabilityCheck, BaseInputDeviceManager</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -128,6 +129,106 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityInputSystem</span></td>
+        <td><span class="parametername">inputSystem</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a> instance that receives data from this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Friendly name of the service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Service priority. Used to determine order of instantiation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The service's configuration profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider__ctor_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider__ctor_IMixedRealityInputSystem_System_String_System_UInt32_Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.#ctor(IMixedRealityInputSystem,System.String,System.UInt32,Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile)">WindowsMixedRealityEyeGazeDataProvider(IMixedRealityInputSystem, String, UInt32, BaseMixedRealityProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowsMixedRealityEyeGazeDataProvider(IMixedRealityInputSystem inputSystem, string name, uint priority, BaseMixedRealityProfile profile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityInputSystem</span></td>
+        <td><span class="parametername">inputSystem</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a> instance that receives data from this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Friendly name of the service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Service priority. Used to determine order of instantiation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The service's configuration profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider__ctor_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider__ctor_Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar_IMixedRealityInputSystem_System_String_System_UInt32_Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.#ctor(Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar,IMixedRealityInputSystem,System.String,System.UInt32,Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile)">WindowsMixedRealityEyeGazeDataProvider(IMixedRealityServiceRegistrar, IMixedRealityInputSystem, String, UInt32, BaseMixedRealityProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowsMixedRealityEyeGazeDataProvider(IMixedRealityServiceRegistrar registrar, IMixedRealityInputSystem inputSystem, string name, uint priority, BaseMixedRealityProfile profile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></td>
+        <td><span class="parametername">registrar</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a> instance that loaded the data provider.</p>
+</td>
+      </tr>
       <tr>
         <td><span class="xref">IMixedRealityInputSystem</span></td>
         <td><span class="parametername">inputSystem</span></td>
@@ -236,6 +337,56 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_SaccadeProvider_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.SaccadeProvider*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_SaccadeProvider" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.SaccadeProvider">SaccadeProvider</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMixedRealityEyeSaccadeProvider SaccadeProvider { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityEyeSaccadeProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_SmoothEyeTracking_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.SmoothEyeTracking*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_SmoothEyeTracking" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.SmoothEyeTracking">SmoothEyeTracking</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SmoothEyeTracking { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_SmoothEyeTracking_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.SmoothEyeTracking*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_SmoothEyeTracking" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.SmoothEyeTracking">SmoothEyeTracking</h4>
   <div class="markdown level1 summary"></div>
@@ -265,9 +416,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_CheckCapability_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.CheckCapability*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_CheckCapability_Microsoft_MixedReality_Toolkit_MixedRealityCapability_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.CheckCapability(Microsoft.MixedReality.Toolkit.MixedRealityCapability)">CheckCapability(MixedRealityCapability)</h4>
-  <div class="markdown level1 summary"><p>Checks to see if one or more registered data providers supports the requested capability
-on the current platform.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -286,8 +435,7 @@ on the current platform.</p>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityCapability.html">MixedRealityCapability</a></td>
         <td><span class="parametername">capability</span></td>
-        <td><p>The capability to check.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -302,8 +450,49 @@ on the current platform.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>True if the capability is supported, false otherwise.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_CheckCapability_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.CheckCapability*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_CheckCapability_Microsoft_MixedReality_Toolkit_MixedRealityCapability_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.CheckCapability(Microsoft.MixedReality.Toolkit.MixedRealityCapability)">CheckCapability(MixedRealityCapability)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckCapability(MixedRealityCapability capability)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityCapability.html">MixedRealityCapability</a></td>
+        <td><span class="parametername">capability</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -316,6 +505,26 @@ on the current platform.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_Initialize_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.Initialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_Initialize" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_Update_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_Update" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Update()</code></pre>
   </div>
   
   
@@ -337,6 +546,54 @@ on the current platform.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Action OnSaccade</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_OnSaccade" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.OnSaccade">OnSaccade</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnSaccade</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_OnSaccadeX" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.OnSaccadeX">OnSaccadeX</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnSaccadeX</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -401,6 +658,30 @@ on the current platform.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_WindowsMixedRealityEyeGazeDataProvider_OnSaccadeY" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityEyeGazeDataProvider.OnSaccadeY">OnSaccadeY</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnSaccadeY</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IMixedRealityEyeGazeDataProvider</span>
@@ -410,6 +691,9 @@ on the current platform.</p>
   </div>
   <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityCapabilityCheck.html">IMixedRealityCapabilityCheck</a>
+  </div>
+  <div>
+      <span class="xref">BaseInputDeviceManager</span>
   </div>
 </article>
           </div>

@@ -97,12 +97,13 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IMixedRealityPointerHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.html">Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TargetGroupIterator : MonoBehaviour, IMixedRealityPointerHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class TargetGroupIterator : MonoBehaviour, IMixedRealityPointerHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -128,6 +129,58 @@
     <tbody>
       <tr>
         <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_CurrentTarget_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.CurrentTarget*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_CurrentTarget" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.CurrentTarget">CurrentTarget</h4>
+  <div class="markdown level1 summary"><p>Property which returns the current query target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject CurrentTarget { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_CurrentTargetIsValid_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.CurrentTargetIsValid*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_CurrentTargetIsValid" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.CurrentTargetIsValid">CurrentTargetIsValid</h4>
+  <div class="markdown level1 summary"><p>Property which returns whether the current query target is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CurrentTargetIsValid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -186,6 +239,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_HighlightColor_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.HighlightColor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_HighlightColor" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.HighlightColor">HighlightColor</h4>
+  <div class="markdown level1 summary"><p>Property that returns the highlight color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color HighlightColor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_PreviousTarget_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.PreviousTarget*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_PreviousTarget" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.PreviousTarget">PreviousTarget</h4>
+  <div class="markdown level1 summary"><p>Property which returns the previous query target or 'null' in case there is no previous target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject PreviousTarget { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_PreviousTarget_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.PreviousTarget*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_PreviousTarget" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.PreviousTarget">PreviousTarget</h4>
   <div class="markdown level1 summary"><p>Property which returns the previous query target or 'null' in case there is no previous target.</p>
@@ -223,8 +328,43 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ResetIterator()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_ResetIterator_" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.ResetIterator*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_ResetIterator" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.ResetIterator">ResetIterator()</h4>
+  <div class="markdown level1 summary"><p>Reset the target group iterator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetIterator()</code></pre>
+  </div>
   <h3 id="events">Events
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_OnAllTargetsSelected" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.OnAllTargetsSelected">OnAllTargetsSelected</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event TargetGroupIterator.TargetGroupEventHandler OnAllTargetsSelected</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.TargetGroupEventHandler.html">TargetGroupIterator.TargetGroupEventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_OnAllTargetsSelected" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.OnAllTargetsSelected">OnAllTargetsSelected</h4>
@@ -273,9 +413,36 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_Demos_EyeTracking_TargetGroupIterator_OnTargetSelected" data-uid="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.OnTargetSelected">OnTargetSelected</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event TargetGroupIterator.TargetGroupEventHandler OnTargetSelected</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.TargetGroupIterator.TargetGroupEventHandler.html">TargetGroupIterator.TargetGroupEventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IMixedRealityPointerHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

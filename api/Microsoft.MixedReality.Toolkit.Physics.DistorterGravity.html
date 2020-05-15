@@ -99,6 +99,7 @@ center of gravity as defined by WorldCenterOfGravity.</p>
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Physics.Distorter.html">Distorter</a>&gt;</div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -131,7 +132,7 @@ center of gravity as defined by WorldCenterOfGravity.</p>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DistorterGravity : Distorter, IComparable&lt;Distorter&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class DistorterGravity : Distorter, IComparable&lt;Distorter&gt;, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -156,6 +157,56 @@ center of gravity as defined by WorldCenterOfGravity.</p>
     <tbody>
       <tr>
         <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_AxisStrength_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.AxisStrength*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_AxisStrength" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.AxisStrength">AxisStrength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 AxisStrength { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_GravityStrength_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.GravityStrength*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_GravityStrength" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.GravityStrength">GravityStrength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurve GravityStrength { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AnimationCurve</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -212,6 +263,56 @@ center of gravity as defined by WorldCenterOfGravity.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_LocalCenterOfGravity_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.LocalCenterOfGravity*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_LocalCenterOfGravity" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.LocalCenterOfGravity">LocalCenterOfGravity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 LocalCenterOfGravity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_Radius_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.Radius*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_Radius" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.Radius">Radius</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Radius { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_Radius_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.Radius*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_Radius" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.Radius">Radius</h4>
   <div class="markdown level1 summary"></div>
@@ -260,14 +361,87 @@ center of gravity as defined by WorldCenterOfGravity.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_WorldCenterOfGravity_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.WorldCenterOfGravity*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_WorldCenterOfGravity" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.WorldCenterOfGravity">WorldCenterOfGravity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 WorldCenterOfGravity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_DistortPointInternal_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.DistortPointInternal*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_DistortPointInternal_Vector3_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.DistortPointInternal(Vector3,System.Single)">DistortPointInternal(Vector3, Single)</h4>
-  <div class="markdown level1 summary"><p>Internal function where position distortion is done</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Vector3 DistortPointInternal(Vector3 point, float strength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">strength</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Physics.Distorter.html#Microsoft_MixedReality_Toolkit_Physics_Distorter_DistortPointInternal_Vector3_System_Single_">Distorter.DistortPointInternal(Vector3, Single)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_DistortPointInternal_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.DistortPointInternal*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_DistortPointInternal_Vector3_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.DistortPointInternal(Vector3,System.Single)">DistortPointInternal(Vector3, Single)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -316,8 +490,56 @@ center of gravity as defined by WorldCenterOfGravity.</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_DistortScaleInternal_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.DistortScaleInternal*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_DistortScaleInternal_Vector3_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.DistortScaleInternal(Vector3,System.Single)">DistortScaleInternal(Vector3, Single)</h4>
-  <div class="markdown level1 summary"><p>Internal function where scale distortion is done</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Vector3 DistortScaleInternal(Vector3 point, float strength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">strength</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Physics.Distorter.html#Microsoft_MixedReality_Toolkit_Physics_Distorter_DistortScaleInternal_Vector3_System_Single_">Distorter.DistortScaleInternal(Vector3, Single)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_DistortScaleInternal_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.DistortScaleInternal*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_DistortScaleInternal_Vector3_System_Single_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.DistortScaleInternal(Vector3,System.Single)">DistortScaleInternal(Vector3, Single)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -372,9 +594,22 @@ center of gravity as defined by WorldCenterOfGravity.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void OnDrawGizmos()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_OnDrawGizmos_" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.OnDrawGizmos*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Physics_DistorterGravity_OnDrawGizmos" data-uid="Microsoft.MixedReality.Toolkit.Physics.DistorterGravity.OnDrawGizmos">OnDrawGizmos()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnDrawGizmos()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IComparable&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

@@ -96,6 +96,10 @@
     <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialAwarenessObserverProfile.html">BaseSpatialAwarenessObserverProfile</a></div>
     <div class="level3"><span class="xref">MixedRealitySpatialAwarenessMeshObserverProfile</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">ScriptableObject</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -118,7 +122,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealitySpatialAwarenessMeshObserverProfile : BaseSpatialAwarenessObserverProfile</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealitySpatialAwarenessMeshObserverProfile : BaseSpatialAwarenessObserverProfile, ScriptableObject</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -144,6 +148,58 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.SpatialAwareness.SpatialAwarenessMeshDisplayOptions.html">SpatialAwarenessMeshDisplayOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_DisplayOption_" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.DisplayOption*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_DisplayOption" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.DisplayOption">DisplayOption</h4>
+  <div class="markdown level1 summary"><p>Indicates how the mesh subsystem is to display surface meshes within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpatialAwarenessMeshDisplayOptions DisplayOption { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.SpatialAwareness.SpatialAwarenessMeshDisplayOptions.html">SpatialAwarenessMeshDisplayOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_LevelOfDetail_" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.LevelOfDetail*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_LevelOfDetail" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.LevelOfDetail">LevelOfDetail</h4>
+  <div class="markdown level1 summary"><p>The level of detail used when creating the mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpatialAwarenessMeshLevelOfDetail LevelOfDetail { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.SpatialAwareness.SpatialAwarenessMeshLevelOfDetail.html">SpatialAwarenessMeshLevelOfDetail</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -202,6 +258,32 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_MeshPhysicsLayer_" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.MeshPhysicsLayer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_MeshPhysicsLayer" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.MeshPhysicsLayer">MeshPhysicsLayer</h4>
+  <div class="markdown level1 summary"><p>The Unity Physics Layer on which to set observed meshes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MeshPhysicsLayer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_OcclusionMaterial_" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.OcclusionMaterial*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_OcclusionMaterial" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.OcclusionMaterial">OcclusionMaterial</h4>
   <div class="markdown level1 summary"><p>The material to be used when observed meshes should occlude other objects.</p>
@@ -222,6 +304,59 @@
     <tbody>
       <tr>
         <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_OcclusionMaterial_" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.OcclusionMaterial*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_OcclusionMaterial" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.OcclusionMaterial">OcclusionMaterial</h4>
+  <div class="markdown level1 summary"><p>The material to be used when observed meshes should occlude other objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Material OcclusionMaterial { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_RecalculateNormals_" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.RecalculateNormals*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_RecalculateNormals" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.RecalculateNormals">RecalculateNormals</h4>
+  <div class="markdown level1 summary"><p>Indicates if the spatial awareness system to generate normal for the returned meshes
+as some platforms may not support returning normal along with the spatial mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RecalculateNormals { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -284,6 +419,35 @@ as some platforms may not support returning normal along with the spatial mesh.<
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_TrianglesPerCubicMeter_" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.TrianglesPerCubicMeter*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_TrianglesPerCubicMeter" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.TrianglesPerCubicMeter">TrianglesPerCubicMeter</h4>
+  <div class="markdown level1 summary"><p>The level of detail, in triangles per cubic meter, for the returned spatial mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TrianglesPerCubicMeter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_TrianglesPerCubicMeter_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This value is ignored, unless <a class="xref" href="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.html#Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_LevelOfDetail">LevelOfDetail</a> is set to Custom.</p>
+</div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_VisibleMaterial_" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.VisibleMaterial*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_VisibleMaterial" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.VisibleMaterial">VisibleMaterial</h4>
   <div class="markdown level1 summary"><p>The material to be used when displaying observed meshes.</p>
@@ -308,6 +472,36 @@ as some platforms may not support returning normal along with the spatial mesh.<
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_VisibleMaterial_" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.VisibleMaterial*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_SpatialAwareness_MixedRealitySpatialAwarenessMeshObserverProfile_VisibleMaterial" data-uid="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessMeshObserverProfile.VisibleMaterial">VisibleMaterial</h4>
+  <div class="markdown level1 summary"><p>The material to be used when displaying observed meshes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Material VisibleMaterial { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">ScriptableObject</span>
+  </div>
 </article>
           </div>
           

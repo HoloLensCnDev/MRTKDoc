@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Teleport System | Mixed Reality Toolkit Documentation </title>
+    <title>&#20256;&#36865;&#31995;&#32479; Teleport system | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Teleport System | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#20256;&#36865;&#31995;&#32479; Teleport system | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,17 +80,15 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="teleport-system">Teleport System</h1>
+<h1 id="传送系统-teleport-system">传送系统 Teleport system</h1>
 
-<p>The teleport system is a sub-system of the MRTK that handles teleporting the user when the
-application is using an opaque display. For AR experiences (like HoloLens), the teleportation
-system is not active. For immersive HMD experiences (OpenVR, WMR) the teleport system can
-be enabled.</p>
-<h2 id="enabling-and-disabling">Enabling and disabling</h2>
-<p>The teleport system can be enabled or disabled by toggling the checkbox in its profile.
-This can be done by selecting the MixedRealityToolkit object in the scene, clicking
-&quot;Teleport&quot; and then toggling the &quot;Enable Teleport System&quot; checkbox.</p>
+<p>传送系统是MRTK的一个子系统，当应用程序使用不透明显示时，它处理传送用户。对于AR的体验(如HoloLens)，传送系统不启用。对于沉浸式HMD体验(OpenVR, WMR)，可以启用传送系统。</p>
+<h2 id="启用和禁用">启用和禁用</h2>
 <p>This can also be done at runtime:</p>
+<p>传送系统可以通过在其配置文件中切换复选框来启用或禁用。
+这可以通过在场景中选择MixedRealityToolkit对象来完成，单击
+&quot;Teleport&quot; ，然后切换 &quot;Enable Teleport System&quot; 复选框。</p>
+<p>这也可以在运行时完成:</p>
 <pre><code class="lang-c#">void DisableTeleportSystem()
 {
     CoreServices.TeleportSystem.Disable();
@@ -101,15 +99,13 @@ void EnableTeleportSystem()
     CoreServices.TeleportSystem.Enable();
 }
 </code></pre>
-<h2 id="events">Events</h2>
-<p>The teleport system exposes events through the <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHandler.html"><code>IMixedRealityTeleportHandler</code></a>
-interface to provide signals on when teleport actions begin, end, or get cancelled.
-See the linked API documentation for more details on the mechanics of the events
-and their associated payload.</p>
-<h2 id="usage">Usage</h2>
-<h3 id="how-to-register-for-teleportation-events">How to register for teleportation events</h3>
-<p>The code below shows how to create a MonoBehaviour that will listen for teleportation
-events. This code assumes that the teleport system is enabled.</p>
+<h2 id="事件">事件</h2>
+<p>传送系统通过 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHandler.html"><code>IMixedRealityTeleportHandler</code></a> 接口公开事件，以便在传送操作开始、结束或取消 时提供信号。</p>
+<p>有关事件的机制及其相关负载的更多细节，请参见链接的API文档。</p>
+<h2 id="使用">使用</h2>
+<h3 id="如何注册传送事件">如何注册传送事件</h3>
+<p>下面的代码展示了如何创建一个监听传送事件的MonoBehaviour
+。此代码假设已启用了传送系统。</p>
 <pre><code class="lang-c#">using Microsoft.MixedReality.Toolkit;
 using Microsoft.MixedReality.Toolkit.Teleport;
 using UnityEngine;
@@ -138,15 +134,13 @@ public class TeleportHandlerExample : MonoBehaviour, IMixedRealityTeleportHandle
 
     void OnEnable()
     {
-        // This is the critical call that registers this class for events. Without this
-        // class's IMixedRealityTeleportHandler interface will not be called.
+        // 这是为事件注册该类的关键调用。没有这个，类的IMixedRealityTeleportHandler接口将不会被调用。
         CoreServices.TeleportSystem.RegisterHandler&lt;IMixedRealityTeleportHandler&gt;(this);
     }
 
     void OnDisable()
     {
-        // Unregistering when disabled is important, otherwise this class will continue
-        // to receive teleportation events.
+        // 在禁用时取消注册很重要，否则这个类将继续接收传送事件
         CoreServices.TeleportSystem.UnregisterHandler&lt;IMixedRealityTeleportHandler&gt;(this);
     }
 }

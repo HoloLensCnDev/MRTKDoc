@@ -97,14 +97,30 @@ with the MRTK/Standard shader which assumes smoothed normals are packed into the
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">MeshSmoother</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.html">Microsoft.MixedReality.Toolkit.Utilities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_MeshSmoother_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MeshSmoother : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class MeshSmoother : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MeshSmoother_SmoothNormals_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.SmoothNormals*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MeshSmoother_SmoothNormals" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.SmoothNormals">SmoothNormals()</h4>
+  <div class="markdown level1 summary"><p>Performs normal smoothing on the current mesh filter associated with this component synchronously.
+This method will not try and re-smooth meshes which have already been smoothed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SmoothNormals()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_MeshSmoother_SmoothNormals_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.SmoothNormals*"></a>
@@ -145,6 +161,38 @@ This method will not try and re-smooth meshes which have already been smoothed.<
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MeshSmoother_SmoothNormalsAsync_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.SmoothNormalsAsync*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MeshSmoother_SmoothNormalsAsync" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother.SmoothNormalsAsync">SmoothNormalsAsync()</h4>
+  <div class="markdown level1 summary"><p>Performs normal smoothing on the current mesh filter associated with this component asynchronously.
+This method will not try and re-smooth meshes which have already been smoothed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SmoothNormalsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>A task which will complete once normal smoothing is finished.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

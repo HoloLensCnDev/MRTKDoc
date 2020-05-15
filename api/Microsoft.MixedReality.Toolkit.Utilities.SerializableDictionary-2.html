@@ -98,12 +98,13 @@ Extends C# Dictionary class to support typical API access methods</p>
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">ISerializationCallbackReceiver</span></div>
+    <div><span class="xref">Dictionary</span>&lt;TKey, TValue&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.html">Microsoft.MixedReality.Toolkit.Utilities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_SerializableDictionary_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SerializableDictionary&lt;TKey, TValue&gt; : Dictionary&lt;TKey, TValue&gt;, ISerializationCallbackReceiver</code></pre>
+    <pre><code class="lang-csharp hljs">public class SerializableDictionary&lt;TKey, TValue&gt; : Dictionary&lt;TKey, TValue&gt;, ISerializationCallbackReceiver, Dictionary&lt;TKey, TValue&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,6 +141,26 @@ Extends C# Dictionary class to support typical API access methods</p>
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_SerializableDictionary_2_OnAfterDeserialize_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.SerializableDictionary`2.OnAfterDeserialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_SerializableDictionary_2_OnAfterDeserialize" data-uid="Microsoft.MixedReality.Toolkit.Utilities.SerializableDictionary`2.OnAfterDeserialize">OnAfterDeserialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnAfterDeserialize()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_SerializableDictionary_2_OnBeforeSerialize_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.SerializableDictionary`2.OnBeforeSerialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_SerializableDictionary_2_OnBeforeSerialize" data-uid="Microsoft.MixedReality.Toolkit.Utilities.SerializableDictionary`2.OnBeforeSerialize">OnBeforeSerialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnBeforeSerialize()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_SerializableDictionary_2_OnBeforeSerialize_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.SerializableDictionary`2.OnBeforeSerialize*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_SerializableDictionary_2_OnBeforeSerialize" data-uid="Microsoft.MixedReality.Toolkit.Utilities.SerializableDictionary`2.OnBeforeSerialize">OnBeforeSerialize()</h4>
   <div class="markdown level1 summary"></div>
@@ -151,6 +172,9 @@ Extends C# Dictionary class to support typical API access methods</p>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">ISerializationCallbackReceiver</span>
+  </div>
+  <div>
+      <span class="xref">Dictionary&lt;, &gt;</span>
   </div>
 </article>
           </div>

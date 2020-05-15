@@ -189,6 +189,67 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_AsReadOnly_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.AsReadOnly*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_AsReadOnly__1_IList___0__" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.AsReadOnly``1(IList{``0})">AsReadOnly&lt;TElement&gt;(IList&lt;TElement&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a read-only wrapper around an existing collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlyCollection&lt;TElement&gt; AsReadOnly&lt;TElement&gt;(this IList&lt;TElement&gt; elements)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;TElement&gt;</td>
+        <td><span class="parametername">elements</span></td>
+        <td><p>The collection to be wrapped.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ReadOnlyCollection</span>&lt;TElement&gt;</td>
+        <td><p>The new, read-only wrapper around <code data-dev-comment-type="paramref" class="paramref">elements</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TElement</span></td>
+        <td><p>The type of element in the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_DisposeElements_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.DisposeElements*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_DisposeElements__1_IEnumerable___0__" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.DisposeElements``1(IEnumerable{``0})">DisposeElements&lt;TElement&gt;(IEnumerable&lt;TElement&gt;)</h4>
   <div class="markdown level1 summary"><p>Disposes of all non-null elements in a collection.</p>
@@ -197,6 +258,54 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DisposeElements&lt;TElement&gt;(this IEnumerable&lt;TElement&gt; elements)
+
+    where TElement : IDisposable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TElement&gt;</td>
+        <td><span class="parametername">elements</span></td>
+        <td><p>The collection of elements to be disposed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TElement</span></td>
+        <td><p>The type of element in the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_DisposeElements_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.DisposeElements*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_DisposeElements__1_IEnumerable___0__" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.DisposeElements``1(IEnumerable{``0})">DisposeElements&lt;TElement&gt;(IEnumerable&lt;TElement&gt;)</h4>
+  <div class="markdown level1 summary"><p>Disposes of all non-null elements in a collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DisposeElements&lt;TElement&gt;(this IEnumerable&lt;TElement&gt; elements)
+
     where TElement : IDisposable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -243,6 +352,54 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DisposeElements&lt;TElement&gt;(this IList&lt;TElement&gt; elements)
+
+    where TElement : IDisposable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;TElement&gt;</td>
+        <td><span class="parametername">elements</span></td>
+        <td><p>The collection of elements to be disposed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TElement</span></td>
+        <td><p>The type of element in the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_DisposeElements_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.DisposeElements*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_DisposeElements__1_IList___0__" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.DisposeElements``1(IList{``0})">DisposeElements&lt;TElement&gt;(IList&lt;TElement&gt;)</h4>
+  <div class="markdown level1 summary"><p>Disposes of all non-null elements in a collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DisposeElements&lt;TElement&gt;(this IList&lt;TElement&gt; elements)
+
     where TElement : IDisposable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -337,6 +494,117 @@
         <td><span class="parametername">T</span></td>
         <td><p>Type of data stored in the values of the Dictionary</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_ExportDictionaryValuesAsArray_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.ExportDictionaryValuesAsArray*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_ExportDictionaryValuesAsArray__1_Dictionary_System_UInt32___0__" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.ExportDictionaryValuesAsArray``1(Dictionary{System.UInt32,``0})">ExportDictionaryValuesAsArray&lt;T&gt;(Dictionary&lt;UInt32, T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Exports the values of a uint indexed Dictionary as an Array</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T[] ExportDictionaryValuesAsArray&lt;T&gt;(this Dictionary&lt;uint, T&gt; input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a>, T&gt;</td>
+        <td><span class="parametername">input</span></td>
+        <td><p>Dictionary to be exported</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><p>array in the type of data stored in the Dictionary</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of data stored in the values of the Dictionary</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_GetInteractionByType_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.GetInteractionByType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_GetInteractionByType_MixedRealityInteractionMapping___DeviceInputType_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.GetInteractionByType(MixedRealityInteractionMapping[],DeviceInputType)">GetInteractionByType(MixedRealityInteractionMapping[], DeviceInputType)</h4>
+  <div class="markdown level1 summary"><p>Overload extension to enable getting of an InteractionDefinition of a specific type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MixedRealityInteractionMapping GetInteractionByType(this MixedRealityInteractionMapping[] input, DeviceInputType key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MixedRealityInteractionMapping</span>[]</td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The InteractionDefinition array reference</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DeviceInputType</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The specific DeviceInputType value to query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MixedRealityInteractionMapping</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -467,6 +735,81 @@ bunch of items and then consume the sorted collection at the end, it's faster to
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_SortedInsert_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.SortedInsert*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_SortedInsert__1_List___0____0_IComparer___0__" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.SortedInsert``1(List{``0},``0,IComparer{``0})">SortedInsert&lt;TElement&gt;(List&lt;TElement&gt;, TElement, IComparer&lt;TElement&gt;)</h4>
+  <div class="markdown level1 summary"><p>Inserts an item in its sorted position into an already sorted collection. This is useful if you need to consume the
+collection in between insertions and need it to stay correctly sorted the whole time. If you just need to insert a
+bunch of items and then consume the sorted collection at the end, it's faster to add all the elements and then use
+<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.sort#System_Collections_Generic_List_1_Sort">Sort()</a> at the end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int SortedInsert&lt;TElement&gt;(this List&lt;TElement&gt; elements, TElement toInsert, IComparer&lt;TElement&gt; comparer = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;TElement&gt;</td>
+        <td><span class="parametername">elements</span></td>
+        <td><p>The collection of sorted elements to be inserted into.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TElement</span></td>
+        <td><span class="parametername">toInsert</span></td>
+        <td><p>The element to insert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IComparer</span>&lt;TElement&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td><p>The comparer to use when sorting or null to use <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.comparer-1.default#System_Collections_Generic_Comparer_1_Default">Default</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TElement</span></td>
+        <td><p>The type of element in the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_SupportsInputType_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.SupportsInputType*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_SupportsInputType_MixedRealityInteractionMapping___DeviceInputType_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.SupportsInputType(MixedRealityInteractionMapping[],DeviceInputType)">SupportsInputType(MixedRealityInteractionMapping[], DeviceInputType)</h4>
   <div class="markdown level1 summary"><p>Overload extension to enable getting of an InteractionDefinition of a specific type</p>
@@ -512,6 +855,117 @@ bunch of items and then consume the sorted collection at the end, it's faster to
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_SupportsInputType_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.SupportsInputType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_SupportsInputType_MixedRealityInteractionMapping___DeviceInputType_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.SupportsInputType(MixedRealityInteractionMapping[],DeviceInputType)">SupportsInputType(MixedRealityInteractionMapping[], DeviceInputType)</h4>
+  <div class="markdown level1 summary"><p>Overload extension to enable getting of an InteractionDefinition of a specific type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SupportsInputType(this MixedRealityInteractionMapping[] input, DeviceInputType key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MixedRealityInteractionMapping</span>[]</td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The InteractionDefinition array reference</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DeviceInputType</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The specific DeviceInputType value to query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_ToReadOnlyCollection_" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.ToReadOnlyCollection*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CollectionsExtensions_ToReadOnlyCollection__1_IEnumerable___0__" data-uid="Microsoft.MixedReality.Toolkit.CollectionsExtensions.ToReadOnlyCollection``1(IEnumerable{``0})">ToReadOnlyCollection&lt;TElement&gt;(IEnumerable&lt;TElement&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a read-only copy of an existing collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlyCollection&lt;TElement&gt; ToReadOnlyCollection&lt;TElement&gt;(this IEnumerable&lt;TElement&gt; elements)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TElement&gt;</td>
+        <td><span class="parametername">elements</span></td>
+        <td><p>The collection to be copied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ReadOnlyCollection</span>&lt;TElement&gt;</td>
+        <td><p>The new, read-only copy of <code data-dev-comment-type="paramref" class="paramref">elements</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TElement</span></td>
+        <td><p>The type of element in the collection.</p>
+</td>
       </tr>
     </tbody>
   </table>

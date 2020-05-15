@@ -101,12 +101,13 @@
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandJointHandler.html">IMixedRealityHandJointHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandMeshHandler.html">IMixedRealityHandMeshHandler</a></div>
     <div><span class="xref">IEventSystemHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.html">Microsoft.MixedReality.Toolkit.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BaseHandVisualizer : MonoBehaviour, IMixedRealityHandVisualizer, IMixedRealityControllerVisualizer, IMixedRealitySourceStateHandler, IMixedRealityHandJointHandler, IMixedRealityHandMeshHandler, IEventSystemHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class BaseHandVisualizer : MonoBehaviour, IMixedRealityHandVisualizer, IMixedRealityControllerVisualizer, IMixedRealitySourceStateHandler, IMixedRealityHandJointHandler, IMixedRealityHandMeshHandler, IEventSystemHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -130,6 +131,54 @@
     <tbody>
       <tr>
         <td><span class="xref">MeshFilter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_handMeshFilter" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.handMeshFilter">handMeshFilter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MeshFilter handMeshFilter</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MeshFilter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_joints" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.joints">joints</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly Dictionary&lt;TrackedHandJoint, Transform&gt; joints</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">TrackedHandJoint</span>, <span class="xref">Transform</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -187,6 +236,31 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Controller_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Controller*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Controller" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Controller">Controller</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMixedRealityController Controller { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityController.html">IMixedRealityController</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_GameObjectProxy_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.GameObjectProxy*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_GameObjectProxy" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.GameObjectProxy">GameObjectProxy</h4>
   <div class="markdown level1 summary"></div>
@@ -206,6 +280,56 @@
     <tbody>
       <tr>
         <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_GameObjectProxy_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.GameObjectProxy*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_GameObjectProxy" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.GameObjectProxy">GameObjectProxy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject GameObjectProxy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Handedness_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Handedness*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Handedness" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Handedness">Handedness</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Handedness Handedness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -260,6 +384,80 @@
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputEventData-1.html">InputEventData</a>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandMeshInfo.html">HandMeshInfo</a>&gt;</td>
         <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_OnHandMeshUpdated_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.OnHandMeshUpdated*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_OnHandMeshUpdated_Microsoft_MixedReality_Toolkit_Input_InputEventData_Microsoft_MixedReality_Toolkit_Input_HandMeshInfo__" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.OnHandMeshUpdated(Microsoft.MixedReality.Toolkit.Input.InputEventData{Microsoft.MixedReality.Toolkit.Input.HandMeshInfo})">OnHandMeshUpdated(InputEventData&lt;HandMeshInfo&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnHandMeshUpdated(InputEventData&lt;HandMeshInfo&gt; eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputEventData-1.html">InputEventData</a>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandMeshInfo.html">HandMeshInfo</a>&gt;</td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_TryGetJointTransform_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.TryGetJointTransform*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_TryGetJointTransform_TrackedHandJoint_Transform__" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.TryGetJointTransform(TrackedHandJoint,Transform@)">TryGetJointTransform(TrackedHandJoint, out Transform)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetJointTransform(TrackedHandJoint joint, out Transform jointTransform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TrackedHandJoint</span></td>
+        <td><span class="parametername">joint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">jointTransform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -342,6 +540,33 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Microsoft_MixedReality_Toolkit_Input_IMixedRealityHandJointHandler_OnHandJointsUpdated_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Microsoft#MixedReality#Toolkit#Input#IMixedRealityHandJointHandler#OnHandJointsUpdated*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Microsoft_MixedReality_Toolkit_Input_IMixedRealityHandJointHandler_OnHandJointsUpdated_Microsoft_MixedReality_Toolkit_Input_InputEventData_IDictionary_TrackedHandJoint_MixedRealityPose___" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Microsoft#MixedReality#Toolkit#Input#IMixedRealityHandJointHandler#OnHandJointsUpdated(Microsoft.MixedReality.Toolkit.Input.InputEventData{IDictionary{TrackedHandJoint,MixedRealityPose}})">IMixedRealityHandJointHandler.OnHandJointsUpdated(InputEventData&lt;IDictionary&lt;TrackedHandJoint, MixedRealityPose&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityHandJointHandler.OnHandJointsUpdated(InputEventData&lt;IDictionary&lt;TrackedHandJoint, MixedRealityPose&gt;&gt; eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputEventData-1.html">InputEventData</a>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">TrackedHandJoint</span>, <span class="xref">MixedRealityPose</span>&gt;&gt;</td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Microsoft_MixedReality_Toolkit_Input_IMixedRealitySourceStateHandler_OnSourceDetected_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Microsoft#MixedReality#Toolkit#Input#IMixedRealitySourceStateHandler#OnSourceDetected*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Microsoft_MixedReality_Toolkit_Input_IMixedRealitySourceStateHandler_OnSourceDetected_Microsoft_MixedReality_Toolkit_Input_SourceStateEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Microsoft#MixedReality#Toolkit#Input#IMixedRealitySourceStateHandler#OnSourceDetected(Microsoft.MixedReality.Toolkit.Input.SourceStateEventData)">IMixedRealitySourceStateHandler.OnSourceDetected(SourceStateEventData)</h4>
   <div class="markdown level1 summary"></div>
@@ -349,6 +574,60 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void IMixedRealitySourceStateHandler.OnSourceDetected(SourceStateEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SourceStateEventData.html">SourceStateEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Microsoft_MixedReality_Toolkit_Input_IMixedRealitySourceStateHandler_OnSourceDetected_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Microsoft#MixedReality#Toolkit#Input#IMixedRealitySourceStateHandler#OnSourceDetected*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Microsoft_MixedReality_Toolkit_Input_IMixedRealitySourceStateHandler_OnSourceDetected_Microsoft_MixedReality_Toolkit_Input_SourceStateEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Microsoft#MixedReality#Toolkit#Input#IMixedRealitySourceStateHandler#OnSourceDetected(Microsoft.MixedReality.Toolkit.Input.SourceStateEventData)">IMixedRealitySourceStateHandler.OnSourceDetected(SourceStateEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealitySourceStateHandler.OnSourceDetected(SourceStateEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SourceStateEventData.html">SourceStateEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Microsoft_MixedReality_Toolkit_Input_IMixedRealitySourceStateHandler_OnSourceLost_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Microsoft#MixedReality#Toolkit#Input#IMixedRealitySourceStateHandler#OnSourceLost*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseHandVisualizer_Microsoft_MixedReality_Toolkit_Input_IMixedRealitySourceStateHandler_OnSourceLost_Microsoft_MixedReality_Toolkit_Input_SourceStateEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer.Microsoft#MixedReality#Toolkit#Input#IMixedRealitySourceStateHandler#OnSourceLost(Microsoft.MixedReality.Toolkit.Input.SourceStateEventData)">IMixedRealitySourceStateHandler.OnSourceLost(SourceStateEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealitySourceStateHandler.OnSourceLost(SourceStateEventData eventData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -412,6 +691,9 @@
   </div>
   <div>
       <span class="xref">IEventSystemHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

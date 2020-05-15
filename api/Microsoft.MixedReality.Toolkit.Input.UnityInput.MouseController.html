@@ -168,6 +168,9 @@
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_GetControllerMappings">BaseController.GetControllerMappings()</a>
     </div>
     <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_SetupDefaultInteractions">BaseController.SetupDefaultInteractions()</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
     <div>
@@ -244,14 +247,87 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController__ctor_Microsoft_MixedReality_Toolkit_TrackingState_Handedness_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSource_Microsoft_MixedReality_Toolkit_Input_MixedRealityInteractionMapping___" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.#ctor(Microsoft.MixedReality.Toolkit.TrackingState,Handedness,Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource,Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping[])">MouseController(TrackingState, Handedness, IMixedRealityInputSource, MixedRealityInteractionMapping[])</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MouseController(TrackingState trackingState, Handedness controllerHandedness, IMixedRealityInputSource inputSource = null, MixedRealityInteractionMapping[] interactions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.TrackingState.html">TrackingState</a></td>
+        <td><span class="parametername">trackingState</span></td>
+        <td><p>The controller's tracking state.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">controllerHandedness</span></td>
+        <td><p>The handedness (ex: right) of the controller.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource.html">IMixedRealityInputSource</a></td>
+        <td><span class="parametername">inputSource</span></td>
+        <td><p>The controller's input source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping.html">MixedRealityInteractionMapping</a>[]</td>
+        <td><span class="parametername">interactions</span></td>
+        <td><p>The set of interactions supported by this controller.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController_DefaultInteractions_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.DefaultInteractions*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController_DefaultInteractions" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.DefaultInteractions">DefaultInteractions</h4>
-  <div class="markdown level1 summary"><p>The default interactions for this controller.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MixedRealityInteractionMapping[] DefaultInteractions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInteractionMapping.html">MixedRealityInteractionMapping</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_DefaultInteractions">BaseController.DefaultInteractions</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController_DefaultInteractions_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.DefaultInteractions*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController_DefaultInteractions" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.DefaultInteractions">DefaultInteractions</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -280,8 +356,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController_SetupDefaultInteractions_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.SetupDefaultInteractions*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController_SetupDefaultInteractions_Handedness_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.SetupDefaultInteractions(Handedness)">SetupDefaultInteractions(Handedness)</h4>
-  <div class="markdown level1 summary"><p>Assign the default interactions based on controller handedness, if necessary.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -306,6 +381,17 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseController.html#Microsoft_MixedReality_Toolkit_Input_BaseController_SetupDefaultInteractions_Handedness_">BaseController.SetupDefaultInteractions(Handedness)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController_Update_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController_Update" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.Update">Update()</h4>
+  <div class="markdown level1 summary"><p>Update controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_UnityInput_MouseController_Update_" data-uid="Microsoft.MixedReality.Toolkit.Input.UnityInput.MouseController.Update*"></a>

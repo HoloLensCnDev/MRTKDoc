@@ -95,6 +95,10 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.BaseDwellSample.html">BaseDwellSample</a></div>
     <div class="level2"><span class="xref">ToggleDwellSample</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -120,7 +124,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ToggleDwellSample : BaseDwellSample</code></pre>
+    <pre><code class="lang-csharp hljs">public class ToggleDwellSample : BaseDwellSample, MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -136,6 +140,47 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.BaseDwellSample.html#Microsoft_MixedReality_Toolkit_Experimental_Dwell_BaseDwellSample_ButtonExecute">BaseDwellSample.ButtonExecute()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_ButtonExecute_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.ButtonExecute*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_ButtonExecute" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.ButtonExecute">ButtonExecute()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ButtonExecute()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.BaseDwellSample.html#Microsoft_MixedReality_Toolkit_Experimental_Dwell_BaseDwellSample_ButtonExecute">BaseDwellSample.ButtonExecute()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_DwellCanceled_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.DwellCanceled*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_DwellCanceled_IMixedRealityPointer_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.DwellCanceled(IMixedRealityPointer)">DwellCanceled(IMixedRealityPointer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DwellCanceled(IMixedRealityPointer pointer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
+        <td><span class="parametername">pointer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.BaseDwellSample.html#Microsoft_MixedReality_Toolkit_Experimental_Dwell_BaseDwellSample_DwellCanceled_IMixedRealityPointer_">BaseDwellSample.DwellCanceled(IMixedRealityPointer)</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_DwellCanceled_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.DwellCanceled*"></a>
@@ -196,6 +241,64 @@
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.BaseDwellSample.html#Microsoft_MixedReality_Toolkit_Experimental_Dwell_BaseDwellSample_DwellCompleted_IMixedRealityPointer_">BaseDwellSample.DwellCompleted(IMixedRealityPointer)</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_DwellCompleted_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.DwellCompleted*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_DwellCompleted_IMixedRealityPointer_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.DwellCompleted(IMixedRealityPointer)">DwellCompleted(IMixedRealityPointer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DwellCompleted(IMixedRealityPointer pointer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
+        <td><span class="parametername">pointer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.BaseDwellSample.html#Microsoft_MixedReality_Toolkit_Experimental_Dwell_BaseDwellSample_DwellCompleted_IMixedRealityPointer_">BaseDwellSample.DwellCompleted(IMixedRealityPointer)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_DwellIntended_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.DwellIntended*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_DwellIntended_IMixedRealityPointer_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.DwellIntended(IMixedRealityPointer)">DwellIntended(IMixedRealityPointer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DwellIntended(IMixedRealityPointer pointer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
+        <td><span class="parametername">pointer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.BaseDwellSample.html#Microsoft_MixedReality_Toolkit_Experimental_Dwell_BaseDwellSample_DwellIntended_IMixedRealityPointer_">BaseDwellSample.DwellIntended(IMixedRealityPointer)</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_DwellIntended_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.DwellIntended*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_DwellIntended_IMixedRealityPointer_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.DwellIntended(IMixedRealityPointer)">DwellIntended(IMixedRealityPointer)</h4>
   <div class="markdown level1 summary"></div>
@@ -232,6 +335,20 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_Update_" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Experimental_Dwell_ToggleDwellSample_Update" data-uid="Microsoft.MixedReality.Toolkit.Experimental.Dwell.ToggleDwellSample.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

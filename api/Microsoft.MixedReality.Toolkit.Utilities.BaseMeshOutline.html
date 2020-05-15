@@ -96,11 +96,15 @@
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MeshOutline.html">MeshOutline</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.MeshOutlineHierarchy.html">MeshOutlineHierarchy</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.html">Microsoft.MixedReality.Toolkit.Utilities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseMeshOutline : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseMeshOutline : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -124,6 +128,54 @@
     <tbody>
       <tr>
         <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_outlineMaterial" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.outlineMaterial">outlineMaterial</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Material outlineMaterial</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_outlineWidth" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.outlineWidth">outlineWidth</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float outlineWidth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -183,6 +235,59 @@ Most MRTK/Standard features should work as an outline material, but it is recomm
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_OutlineMaterial_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.OutlineMaterial*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_OutlineMaterial" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.OutlineMaterial">OutlineMaterial</h4>
+  <div class="markdown level1 summary"><p>The material used to render the outline. Outline materials should normal have &quot;Depth Write&quot; set to Off and &quot;Vertex Extrusion&quot; enabled.
+Most MRTK/Standard features should work as an outline material, but it is recommended to keep the outline material as simple as possible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Material OutlineMaterial { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_OutlineWidth_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.OutlineWidth*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_OutlineWidth" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.OutlineWidth">OutlineWidth</h4>
+  <div class="markdown level1 summary"><p>How thick (in meters) should the outline be. Overrides the &quot;Extrusion Value&quot; in the MRTK/Standard material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float OutlineWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_OutlineWidth_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.OutlineWidth*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_OutlineWidth" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.OutlineWidth">OutlineWidth</h4>
   <div class="markdown level1 summary"><p>How thick (in meters) should the outline be. Overrides the &quot;Extrusion Value&quot; in the MRTK/Standard material.</p>
@@ -221,6 +326,26 @@ Most MRTK/Standard features should work as an outline material, but it is recomm
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_ApplyOutlineMaterial_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.ApplyOutlineMaterial*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_ApplyOutlineMaterial" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.ApplyOutlineMaterial">ApplyOutlineMaterial()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void ApplyOutlineMaterial()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_ApplyOutlineWidth_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.ApplyOutlineWidth*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_ApplyOutlineWidth" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.ApplyOutlineWidth">ApplyOutlineWidth()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void ApplyOutlineWidth()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_ApplyOutlineWidth_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.ApplyOutlineWidth*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_ApplyOutlineWidth" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.ApplyOutlineWidth">ApplyOutlineWidth()</h4>
   <div class="markdown level1 summary"></div>
@@ -239,6 +364,21 @@ Most MRTK/Standard features should work as an outline material, but it is recomm
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnValidate()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_OnValidate_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.OnValidate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_BaseMeshOutline_OnValidate" data-uid="Microsoft.MixedReality.Toolkit.Utilities.BaseMeshOutline.OnValidate">OnValidate()</h4>
+  <div class="markdown level1 summary"><p>Enables users to modify inspector properties while playing in the editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnValidate()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

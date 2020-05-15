@@ -95,11 +95,15 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></div>
     <div class="level2"><span class="xref">MixedRealityInputSystemProfile</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">ScriptableObject</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.html">Microsoft.MixedReality.Toolkit.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealityInputSystemProfile : BaseMixedRealityProfile</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealityInputSystemProfile : BaseMixedRealityProfile, ScriptableObject</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -125,6 +129,58 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerMappingProfile.html">MixedRealityControllerMappingProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_ControllerMappingProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.ControllerMappingProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_ControllerMappingProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.ControllerMappingProfile">ControllerMappingProfile</h4>
+  <div class="markdown level1 summary"><p>Active profile for controller mapping configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityControllerMappingProfile ControllerMappingProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerMappingProfile.html">MixedRealityControllerMappingProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_ControllerVisualizationProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.ControllerVisualizationProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_ControllerVisualizationProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.ControllerVisualizationProfile">ControllerVisualizationProfile</h4>
+  <div class="markdown level1 summary"><p>Device profile for rendering spatial controllers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityControllerVisualizationProfile ControllerVisualizationProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizationProfile.html">MixedRealityControllerVisualizationProfile</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -183,6 +239,32 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_DataProviderConfigurations_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.DataProviderConfigurations*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_DataProviderConfigurations" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.DataProviderConfigurations">DataProviderConfigurations</h4>
+  <div class="markdown level1 summary"><p>List of input data provider configurations to initialize and manage by the Input System registrar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityInputDataProviderConfiguration[] DataProviderConfigurations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputDataProviderConfiguration.html">MixedRealityInputDataProviderConfiguration</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_FocusIndividualCompoundCollider_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.FocusIndividualCompoundCollider*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_FocusIndividualCompoundCollider" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.FocusIndividualCompoundCollider">FocusIndividualCompoundCollider</h4>
   <div class="markdown level1 summary"><p>In case of a compound collider, does the individual collider receive focus</p>
@@ -203,6 +285,58 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_FocusIndividualCompoundCollider_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.FocusIndividualCompoundCollider*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_FocusIndividualCompoundCollider" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.FocusIndividualCompoundCollider">FocusIndividualCompoundCollider</h4>
+  <div class="markdown level1 summary"><p>In case of a compound collider, does the individual collider receive focus</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FocusIndividualCompoundCollider { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_FocusProviderType_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.FocusProviderType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_FocusProviderType" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.FocusProviderType">FocusProviderType</h4>
+  <div class="markdown level1 summary"><p>The focus provider service concrete type to use when raycasting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemType FocusProviderType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SystemType</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -261,6 +395,32 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_FocusQueryBufferSize_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.FocusQueryBufferSize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_FocusQueryBufferSize" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.FocusQueryBufferSize">FocusQueryBufferSize</h4>
+  <div class="markdown level1 summary"><p>Maximum number of colliders that can be detected in a SphereOverlap scene query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FocusQueryBufferSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_GesturesProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.GesturesProfile*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_GesturesProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.GesturesProfile">GesturesProfile</h4>
   <div class="markdown level1 summary"><p>Gesture Mapping Profile for recognizing gestures across all platforms.</p>
@@ -281,6 +441,58 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.html">MixedRealityGesturesProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_GesturesProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.GesturesProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_GesturesProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.GesturesProfile">GesturesProfile</h4>
+  <div class="markdown level1 summary"><p>Gesture Mapping Profile for recognizing gestures across all platforms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityGesturesProfile GesturesProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityGesturesProfile.html">MixedRealityGesturesProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_HandTrackingProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.HandTrackingProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_HandTrackingProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.HandTrackingProfile">HandTrackingProfile</h4>
+  <div class="markdown level1 summary"><p>Active profile for hands tracking</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityHandTrackingProfile HandTrackingProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityHandTrackingProfile.html">MixedRealityHandTrackingProfile</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -339,6 +551,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_InputActionRulesProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.InputActionRulesProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_InputActionRulesProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.InputActionRulesProfile">InputActionRulesProfile</h4>
+  <div class="markdown level1 summary"><p>Input Action Rules Profile for raising actions based on specific criteria.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityInputActionRulesProfile InputActionRulesProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputActionRulesProfile.html">MixedRealityInputActionRulesProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_InputActionsProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.InputActionsProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_InputActionsProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.InputActionsProfile">InputActionsProfile</h4>
+  <div class="markdown level1 summary"><p>Input System Action Mapping profile for wiring up Controller input to Actions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityInputActionsProfile InputActionsProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputActionsProfile.html">MixedRealityInputActionsProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_InputActionsProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.InputActionsProfile*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_InputActionsProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.InputActionsProfile">InputActionsProfile</h4>
   <div class="markdown level1 summary"><p>Input System Action Mapping profile for wiring up Controller input to Actions.</p>
@@ -373,6 +637,58 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsControllerMappingEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_IsControllerMappingEnabled_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.IsControllerMappingEnabled*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_IsControllerMappingEnabled" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.IsControllerMappingEnabled">IsControllerMappingEnabled</h4>
+  <div class="markdown level1 summary"><p>Enable and configure the devices for your application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsControllerMappingEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_IsSpeechSupported_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.IsSpeechSupported*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_IsSpeechSupported" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.IsSpeechSupported">IsSpeechSupported</h4>
+  <div class="markdown level1 summary"><p>Returns whether speech is supported for the current language or not</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSpeechSupported { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -443,6 +759,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_PointerProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.PointerProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_PointerProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.PointerProfile">PointerProfile</h4>
+  <div class="markdown level1 summary"><p>Pointer configuration options</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityPointerProfile PointerProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerProfile.html">MixedRealityPointerProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_RaycastProviderType_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.RaycastProviderType*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_RaycastProviderType" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.RaycastProviderType">RaycastProviderType</h4>
+  <div class="markdown level1 summary"><p>The raycast provider service concrete type to use when raycasting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemType RaycastProviderType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SystemType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_RaycastProviderType_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.RaycastProviderType*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_RaycastProviderType" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.RaycastProviderType">RaycastProviderType</h4>
   <div class="markdown level1 summary"><p>The raycast provider service concrete type to use when raycasting.</p>
@@ -493,6 +861,36 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_SpeechCommandsProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.SpeechCommandsProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystemProfile_SpeechCommandsProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystemProfile.SpeechCommandsProfile">SpeechCommandsProfile</h4>
+  <div class="markdown level1 summary"><p>Speech commands profile for configured speech commands, for use by the speech recognition system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealitySpeechCommandsProfile SpeechCommandsProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealitySpeechCommandsProfile.html">MixedRealitySpeechCommandsProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">ScriptableObject</span>
+  </div>
 </article>
           </div>
           

@@ -158,6 +158,38 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo__ctor_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo__ctor_IEnumerable_Microsoft_MixedReality_Toolkit_MSBuild_CompilationPlatformInfo__System_String_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.#ctor(IEnumerable{Microsoft.MixedReality.Toolkit.MSBuild.CompilationPlatformInfo},System.String)">UnityProjectInfo(IEnumerable&lt;CompilationPlatformInfo&gt;, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityProjectInfo(IEnumerable&lt;CompilationPlatformInfo&gt; availablePlatforms, string projectOutputPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.CompilationPlatformInfo.html">CompilationPlatformInfo</a>&gt;</td>
+        <td><span class="parametername">availablePlatforms</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">projectOutputPath</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -182,6 +214,58 @@
     <tbody>
       <tr>
         <td><span class="xref">IReadOnlyDictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.CSProjectInfo.html">CSProjectInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_CSProjects_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.CSProjects*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_CSProjects" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.CSProjects">CSProjects</h4>
+  <div class="markdown level1 summary"><p>Gets all the parsed CSProjects for this Unity project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, CSProjectInfo&gt; CSProjects { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyDictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.CSProjectInfo.html">CSProjectInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_Plugins_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.Plugins*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_Plugins" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.Plugins">Plugins</h4>
+  <div class="markdown level1 summary"><p>Gets all the parsed DLLs for this Unity project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;PluginAssemblyInfo&gt; Plugins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.MSBuild.PluginAssemblyInfo.html">PluginAssemblyInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -238,8 +322,75 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_UnityProjectName_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.UnityProjectName*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_UnityProjectName" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.UnityProjectName">UnityProjectName</h4>
+  <div class="markdown level1 summary"><p>Gets the name of this Unity Project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UnityProjectName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_ExportSolution_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.ExportSolution*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_ExportSolution_System_String_System_String_System_String_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.ExportSolution(System.String,System.String,System.String)">ExportSolution(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Exports the project info into a solution file, and the CSProject files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExportSolution(string solutionTemplateText, string projectFileTemplateText, string generatedProjectPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">solutionTemplateText</span></td>
+        <td><p>The solution file template text.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">projectFileTemplateText</span></td>
+        <td><p>The project file template text.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">generatedProjectPath</span></td>
+        <td><p>The output folder of the platform props.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_MSBuild_UnityProjectInfo_ExportSolution_" data-uid="Microsoft.MixedReality.Toolkit.MSBuild.UnityProjectInfo.ExportSolution*"></a>

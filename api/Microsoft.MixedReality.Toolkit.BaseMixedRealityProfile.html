@@ -86,7 +86,9 @@
   
   <h1 id="Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile" data-uid="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile" class="text-break">Class BaseMixedRealityProfile
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Base abstract class for all Mixed Reality profile configurations.
+Extends ScriptableObject and used as a property container to initialize MRTK services.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -95,6 +97,7 @@
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Boundary.MixedRealityBoundaryVisualizationProfile.html">MixedRealityBoundaryVisualizationProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProfile.html">BaseCameraSettingsProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Diagnostics.MixedRealityDiagnosticsProfile.html">MixedRealityDiagnosticsProfile</a></div>
+      <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Extensions.HandPhysics.HandPhysicsServiceProfile.html">HandPhysicsServiceProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Extensions.SceneTransitions.SceneTransitionServiceProfile.html">SceneTransitionServiceProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Extensions.Tracking.LostTrackingServiceProfile.html">LostTrackingServiceProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerMappingProfile.html">MixedRealityControllerMappingProfile</a></div>
@@ -110,6 +113,7 @@
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityMouseInputProfile.html">MixedRealityMouseInputProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerProfile.html">MixedRealityPointerProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealitySpeechCommandsProfile.html">MixedRealitySpeechCommandsProfile</a></div>
+      <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.LeapMotion.Input.LeapMotionDeviceManagerProfile.html">LeapMotionDeviceManagerProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityCameraProfile.html">MixedRealityCameraProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityRegisteredServiceProvidersProfile.html">MixedRealityRegisteredServiceProvidersProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityToolkitConfigurationProfile.html">MixedRealityToolkitConfigurationProfile</a></div>
@@ -117,11 +121,19 @@
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.SpatialAwareness.BaseSpatialAwarenessObserverProfile.html">BaseSpatialAwarenessObserverProfile</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessSystemProfile.html">MixedRealitySpatialAwarenessSystemProfile</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">ScriptableObject</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.html">Microsoft.MixedReality.Toolkit</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseMixedRealityProfile : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseMixedRealityProfile : ScriptableObject, ScriptableObject</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">ScriptableObject</span>
   </div>
 </article>
           </div>

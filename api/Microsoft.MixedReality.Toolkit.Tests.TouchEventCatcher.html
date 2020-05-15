@@ -98,6 +98,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
     <div><span class="xref">IMixedRealityTouchHandler</span></div>
   </div>
   <div class="inheritedMembers">
@@ -119,7 +120,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Tests_TouchEventCatcher_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TouchEventCatcher : FocusedObjectEventCatcher&lt;TouchEventCatcher&gt;, IDisposable, IMixedRealityTouchHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class TouchEventCatcher : FocusedObjectEventCatcher&lt;TouchEventCatcher&gt;, IDisposable, MonoBehaviour, IMixedRealityTouchHandler</code></pre>
   </div>
   <h5 id="Microsoft_MixedReality_Toolkit_Tests_TouchEventCatcher_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Touching an object does not imply getting focus, so use a global event handler to be independent from focus.</p>
@@ -134,6 +135,54 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly UnityEvent OnTouchCompletedEvent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Tests_TouchEventCatcher_OnTouchCompletedEvent" data-uid="Microsoft.MixedReality.Toolkit.Tests.TouchEventCatcher.OnTouchCompletedEvent">OnTouchCompletedEvent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly UnityEvent OnTouchCompletedEvent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Tests_TouchEventCatcher_OnTouchStartedEvent" data-uid="Microsoft.MixedReality.Toolkit.Tests.TouchEventCatcher.OnTouchStartedEvent">OnTouchStartedEvent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly UnityEvent OnTouchStartedEvent</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,6 +234,60 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void OnTouchCompleted(HandTrackingInputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HandTrackingInputEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Tests_TouchEventCatcher_OnTouchCompleted_" data-uid="Microsoft.MixedReality.Toolkit.Tests.TouchEventCatcher.OnTouchCompleted*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Tests_TouchEventCatcher_OnTouchCompleted_HandTrackingInputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Tests.TouchEventCatcher.OnTouchCompleted(HandTrackingInputEventData)">OnTouchCompleted(HandTrackingInputEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTouchCompleted(HandTrackingInputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HandTrackingInputEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Tests_TouchEventCatcher_OnTouchStarted_" data-uid="Microsoft.MixedReality.Toolkit.Tests.TouchEventCatcher.OnTouchStarted*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Tests_TouchEventCatcher_OnTouchStarted_HandTrackingInputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Tests.TouchEventCatcher.OnTouchStarted(HandTrackingInputEventData)">OnTouchStarted(HandTrackingInputEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTouchStarted(HandTrackingInputEventData eventData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,9 +360,39 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Tests_TouchEventCatcher_OnTouchUpdated_" data-uid="Microsoft.MixedReality.Toolkit.Tests.TouchEventCatcher.OnTouchUpdated*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Tests_TouchEventCatcher_OnTouchUpdated_HandTrackingInputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Tests.TouchEventCatcher.OnTouchUpdated(HandTrackingInputEventData)">OnTouchUpdated(HandTrackingInputEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTouchUpdated(HandTrackingInputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HandTrackingInputEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
   <div>
       <span class="xref">IMixedRealityTouchHandler</span>

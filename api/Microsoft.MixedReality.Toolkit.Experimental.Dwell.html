@@ -126,6 +126,14 @@ DwellStarted - State reached when Focus stays on target for dwellIntentDelay + d
 DwellCompleted - State reached when Focus stays on target for dwellIntentDelay + dwellStartDelay + timeToCompleteDwell seconds. Typically invokes the button clicked event.
 DwellCanceled - State reached when DwellStarted state is reached but focus exits the target before timeToCompleteDwell.</p>
 </section>
+      <h4><a class="xref" href="Microsoft.MixedReality.Toolkit.Experimental.Dwell.DwellHandler.DwellStateType.html">DwellHandler.DwellStateType</a></h4>
+      <section><p>None = 0 - Default state
+FocusGained - State reached when Focus enters target
+DwellIntended - State reached when Focus stays on target for dwellIntentDelay seconds. Signifies user's intent to interact with the target.
+DwellStarted - State reached when Focus stays on target for dwellIntentDelay + dwellStartDelay seconds. Typically tied to invoke feedback for dwell.
+DwellCompleted - State reached when Focus stays on target for dwellIntentDelay + dwellStartDelay + timeToCompleteDwell seconds. Typically invokes the button clicked event.
+DwellCanceled - State reached when DwellStarted state is reached but focus exits the target before timeToCompleteDwell.</p>
+</section>
 </article>
           </div>
           

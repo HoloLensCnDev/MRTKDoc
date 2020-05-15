@@ -95,6 +95,10 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.MixedRealityShaderGUI.html">MixedRealityShaderGUI</a></div>
     <div class="level2"><span class="xref">MixedRealityWireframeShaderGUI</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">ShaderGUI</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -183,10 +187,34 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MixedRealityWireframeShaderGUI : MixedRealityShaderGUI</code></pre>
+    <pre><code class="lang-csharp hljs">public class MixedRealityWireframeShaderGUI : MixedRealityShaderGUI, ShaderGUI</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_baseColor" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.baseColor">baseColor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MaterialProperty baseColor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MaterialProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_baseColor" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.baseColor">baseColor</h4>
@@ -219,6 +247,54 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected MaterialProperty wireColor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MaterialProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_wireColor" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.wireColor">wireColor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MaterialProperty wireColor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MaterialProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_wireThickness" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.wireThickness">wireThickness</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MaterialProperty wireThickness</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -295,6 +371,75 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_AdvancedOptions_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.AdvancedOptions*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_AdvancedOptions_MaterialEditor_Material_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.AdvancedOptions(MaterialEditor,Material)">AdvancedOptions(MaterialEditor, Material)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void AdvancedOptions(MaterialEditor materialEditor, Material material)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MaterialEditor</span></td>
+        <td><span class="parametername">materialEditor</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Material</span></td>
+        <td><span class="parametername">material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_AssignNewShaderToMaterial_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.AssignNewShaderToMaterial*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_AssignNewShaderToMaterial_Material_Shader_Shader_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.AssignNewShaderToMaterial(Material,Shader,Shader)">AssignNewShaderToMaterial(Material, Shader, Shader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void AssignNewShaderToMaterial(Material material, Shader oldShader, Shader newShader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
+        <td><span class="parametername">material</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Shader</span></td>
+        <td><span class="parametername">oldShader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Shader</span></td>
+        <td><span class="parametername">newShader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_AssignNewShaderToMaterial_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.AssignNewShaderToMaterial*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_AssignNewShaderToMaterial_Material_Shader_Shader_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.AssignNewShaderToMaterial(Material,Shader,Shader)">AssignNewShaderToMaterial(Material, Shader, Shader)</h4>
   <div class="markdown level1 summary"></div>
@@ -361,6 +506,35 @@
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.MixedRealityShaderGUI.html#Microsoft_MixedReality_Toolkit_Editor_MixedRealityShaderGUI_FindProperties_MaterialProperty___">MixedRealityShaderGUI.FindProperties(MaterialProperty[])</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_FindProperties_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.FindProperties*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_FindProperties_MaterialProperty___" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.FindProperties(MaterialProperty[])">FindProperties(MaterialProperty[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void FindProperties(MaterialProperty[] props)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MaterialProperty</span>[]</td>
+        <td><span class="parametername">props</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.MixedRealityShaderGUI.html#Microsoft_MixedReality_Toolkit_Editor_MixedRealityShaderGUI_FindProperties_MaterialProperty___">MixedRealityShaderGUI.FindProperties(MaterialProperty[])</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_OnGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.OnGUI*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_OnGUI_MaterialEditor_MaterialProperty___" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.OnGUI(MaterialEditor,MaterialProperty[])">OnGUI(MaterialEditor, MaterialProperty[])</h4>
   <div class="markdown level1 summary"></div>
@@ -393,6 +567,44 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.MixedRealityShaderGUI.html#Microsoft_MixedReality_Toolkit_Editor_MixedRealityShaderGUI_OnGUI_MaterialEditor_MaterialProperty___">MixedRealityShaderGUI.OnGUI(MaterialEditor, MaterialProperty[])</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_OnGUI_" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.OnGUI*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Editor_MixedRealityWireframeShaderGUI_OnGUI_MaterialEditor_MaterialProperty___" data-uid="Microsoft.MixedReality.Toolkit.Editor.MixedRealityWireframeShaderGUI.OnGUI(MaterialEditor,MaterialProperty[])">OnGUI(MaterialEditor, MaterialProperty[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] props)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MaterialEditor</span></td>
+        <td><span class="parametername">materialEditor</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MaterialProperty</span>[]</td>
+        <td><span class="parametername">props</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Editor.MixedRealityShaderGUI.html#Microsoft_MixedReality_Toolkit_Editor_MixedRealityShaderGUI_OnGUI_MaterialEditor_MaterialProperty___">MixedRealityShaderGUI.OnGUI(MaterialEditor, MaterialProperty[])</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">ShaderGUI</span>
+  </div>
 </article>
           </div>
           

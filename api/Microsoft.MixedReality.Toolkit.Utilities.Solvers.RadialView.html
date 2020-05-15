@@ -95,6 +95,10 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Solvers.Solver.html">Solver</a></div>
     <div class="level2"><span class="xref">RadialView</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -189,7 +193,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RadialView : Solver</code></pre>
+    <pre><code class="lang-csharp hljs">public class RadialView : Solver, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -203,6 +207,58 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float AspectV { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_AspectV_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.AspectV*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_AspectV" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.AspectV">AspectV</h4>
+  <div class="markdown level1 summary"><p>Apply a different clamp to vertical FOV than horizontal. Vertical = Horizontal * AspectV.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AspectV { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_FixedVerticalPosition_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.FixedVerticalPosition*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_FixedVerticalPosition" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.FixedVerticalPosition">FixedVerticalPosition</h4>
+  <div class="markdown level1 summary"><p>Offset amount of the vertical position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FixedVerticalPosition { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -273,6 +329,58 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_IgnoreAngleClamp_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.IgnoreAngleClamp*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_IgnoreAngleClamp" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.IgnoreAngleClamp">IgnoreAngleClamp</h4>
+  <div class="markdown level1 summary"><p>Option to ignore angle clamping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IgnoreAngleClamp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_IgnoreDistanceClamp_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.IgnoreDistanceClamp*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_IgnoreDistanceClamp" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.IgnoreDistanceClamp">IgnoreDistanceClamp</h4>
+  <div class="markdown level1 summary"><p>Option to ignore distance clamping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IgnoreDistanceClamp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_IgnoreDistanceClamp_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.IgnoreDistanceClamp*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_IgnoreDistanceClamp" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.IgnoreDistanceClamp">IgnoreDistanceClamp</h4>
   <div class="markdown level1 summary"><p>Option to ignore distance clamping.</p>
@@ -307,6 +415,58 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float MaxDistance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_MaxDistance_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.MaxDistance*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_MaxDistance" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.MaxDistance">MaxDistance</h4>
+  <div class="markdown level1 summary"><p>Max distance from eye to element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MaxDistance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_MaxViewDegrees_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.MaxViewDegrees*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_MaxViewDegrees" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.MaxViewDegrees">MaxViewDegrees</h4>
+  <div class="markdown level1 summary"><p>The element will stay at least this close to the center of view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MaxViewDegrees { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,6 +537,32 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_MinDistance_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.MinDistance*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_MinDistance" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.MinDistance">MinDistance</h4>
+  <div class="markdown level1 summary"><p>Min distance from eye to position element around, i.e. the sphere radius.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MinDistance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_MinViewDegrees_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.MinViewDegrees*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_MinViewDegrees" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.MinViewDegrees">MinViewDegrees</h4>
   <div class="markdown level1 summary"><p>The element will stay at least this far away from the center of view.</p>
@@ -397,6 +583,58 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_MinViewDegrees_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.MinViewDegrees*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_MinViewDegrees" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.MinViewDegrees">MinViewDegrees</h4>
+  <div class="markdown level1 summary"><p>The element will stay at least this far away from the center of view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MinViewDegrees { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_OrientToReferenceDirection_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.OrientToReferenceDirection*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_OrientToReferenceDirection" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.OrientToReferenceDirection">OrientToReferenceDirection</h4>
+  <div class="markdown level1 summary"><p>If true, element will orient to ReferenceDirection, otherwise it will orient to ref position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OrientToReferenceDirection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -458,6 +696,61 @@ and HeadMoveDirection uses the direction the head last moved without roll.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_ReferenceDirection_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.ReferenceDirection*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_ReferenceDirection" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.ReferenceDirection">ReferenceDirection</h4>
+  <div class="markdown level1 summary"><p>Which direction to position the element relative to:
+HeadOriented rolls with the head,
+HeadFacingWorldUp view direction but ignores head roll,
+and HeadMoveDirection uses the direction the head last moved without roll.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RadialViewReferenceDirection ReferenceDirection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.RadialViewReferenceDirection.html">RadialViewReferenceDirection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_UseFixedVerticalPosition_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.UseFixedVerticalPosition*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_UseFixedVerticalPosition" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.UseFixedVerticalPosition">UseFixedVerticalPosition</h4>
+  <div class="markdown level1 summary"><p>Ignore vertical movement and lock the Y position of the object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseFixedVerticalPosition { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_UseFixedVerticalPosition_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.UseFixedVerticalPosition*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_UseFixedVerticalPosition" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.UseFixedVerticalPosition">UseFixedVerticalPosition</h4>
   <div class="markdown level1 summary"><p>Ignore vertical movement and lock the Y position of the object.</p>
@@ -488,8 +781,7 @@ and HeadMoveDirection uses the direction the head last moved without roll.</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_SolverUpdate_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.SolverUpdate*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_SolverUpdate" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.SolverUpdate">SolverUpdate()</h4>
-  <div class="markdown level1 summary"><p>Should be implemented in derived classes, but Solver can be used to flush shared transform to real transform</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -497,6 +789,22 @@ and HeadMoveDirection uses the direction the head last moved without roll.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Solvers.Solver.html#Microsoft_MixedReality_Toolkit_Utilities_Solvers_Solver_SolverUpdate">Solver.SolverUpdate()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_SolverUpdate_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.SolverUpdate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Solvers_RadialView_SolverUpdate" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.SolverUpdate">SolverUpdate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SolverUpdate()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Solvers.Solver.html#Microsoft_MixedReality_Toolkit_Utilities_Solvers_Solver_SolverUpdate">Solver.SolverUpdate()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

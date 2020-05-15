@@ -97,14 +97,61 @@
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityController.html">WindowsMixedRealityController</a></div>
       <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand.html">WindowsMixedRealityGGVHand</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseController</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.html">Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_BaseWindowsMixedRealitySource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseWindowsMixedRealitySource : BaseController</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseWindowsMixedRealitySource : BaseController, BaseController</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_BaseWindowsMixedRealitySource__ctor_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.BaseWindowsMixedRealitySource.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_BaseWindowsMixedRealitySource__ctor_Microsoft_MixedReality_Toolkit_TrackingState_Handedness_IMixedRealityInputSource_MixedRealityInteractionMapping___" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.BaseWindowsMixedRealitySource.#ctor(Microsoft.MixedReality.Toolkit.TrackingState,Handedness,IMixedRealityInputSource,MixedRealityInteractionMapping[])">BaseWindowsMixedRealitySource(TrackingState, Handedness, IMixedRealityInputSource, MixedRealityInteractionMapping[])</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseWindowsMixedRealitySource(TrackingState trackingState, Handedness sourceHandedness, IMixedRealityInputSource inputSource = null, MixedRealityInteractionMapping[] interactions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.TrackingState.html">TrackingState</a></td>
+        <td><span class="parametername">trackingState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Handedness</span></td>
+        <td><span class="parametername">sourceHandedness</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IMixedRealityInputSource</span></td>
+        <td><span class="parametername">inputSource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MixedRealityInteractionMapping</span>[]</td>
+        <td><span class="parametername">interactions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_BaseWindowsMixedRealitySource__ctor_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.BaseWindowsMixedRealitySource.#ctor*"></a>
@@ -177,6 +224,56 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_BaseWindowsMixedRealitySource_DefaultLeftHandedInteractions_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.BaseWindowsMixedRealitySource.DefaultLeftHandedInteractions*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_BaseWindowsMixedRealitySource_DefaultLeftHandedInteractions" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.BaseWindowsMixedRealitySource.DefaultLeftHandedInteractions">DefaultLeftHandedInteractions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MixedRealityInteractionMapping[] DefaultLeftHandedInteractions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MixedRealityInteractionMapping</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_BaseWindowsMixedRealitySource_DefaultRightHandedInteractions_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.BaseWindowsMixedRealitySource.DefaultRightHandedInteractions*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_BaseWindowsMixedRealitySource_DefaultRightHandedInteractions" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.BaseWindowsMixedRealitySource.DefaultRightHandedInteractions">DefaultRightHandedInteractions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MixedRealityInteractionMapping[] DefaultRightHandedInteractions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MixedRealityInteractionMapping</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_BaseWindowsMixedRealitySource_DefaultRightHandedInteractions_" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.BaseWindowsMixedRealitySource.DefaultRightHandedInteractions*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_WindowsMixedReality_Input_BaseWindowsMixedRealitySource_DefaultRightHandedInteractions" data-uid="Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.BaseWindowsMixedRealitySource.DefaultRightHandedInteractions">DefaultRightHandedInteractions</h4>
   <div class="markdown level1 summary"></div>
@@ -229,6 +326,10 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseController</span>
+  </div>
 </article>
           </div>
           

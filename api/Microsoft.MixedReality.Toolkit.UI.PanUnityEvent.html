@@ -94,12 +94,21 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">PanUnityEvent</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">UnityEvent</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.UI.HandPanEventData.html">HandPanEventData</a>&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.UI.html">Microsoft.MixedReality.Toolkit.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_UI_PanUnityEvent_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class PanUnityEvent : UnityEvent&lt;HandPanEventData&gt;</code></pre>
+[Serializable]
+public class PanUnityEvent : UnityEvent&lt;HandPanEventData&gt;, UnityEvent&lt;HandPanEventData&gt;</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">UnityEvent&lt;&gt;</span>
   </div>
 </article>
           </div>

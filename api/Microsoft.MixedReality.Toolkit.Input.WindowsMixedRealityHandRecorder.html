@@ -94,14 +94,44 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">WindowsMixedRealityHandRecorder</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.html">Microsoft.MixedReality.Toolkit.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityHandRecorder : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class WindowsMixedRealityHandRecorder : MonoBehaviour, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_OutputFileName_" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.OutputFileName*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_OutputFileName" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.OutputFileName">OutputFileName</h4>
+  <div class="markdown level1 summary"><p>Default output filename for saving the recorded pose.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OutputFileName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_OutputFileName_" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.OutputFileName*"></a>
@@ -159,8 +189,49 @@
 Example: A &quot;poke&quot; gesture can be simulated by moving the index finger forward between start and stop,
 giving an offset that creates a poking motion when interpolated.</p>
 </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_ReferenceJoint_" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.ReferenceJoint*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_ReferenceJoint" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.ReferenceJoint">ReferenceJoint</h4>
+  <div class="markdown level1 summary"><p>The joint positioned at the origin at the start of the recording.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TrackedHandJoint ReferenceJoint { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TrackedHandJoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_ReferenceJoint_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the reference joint moves between start and stop of recording then final position is used as an offset.
+Example: A &quot;poke&quot; gesture can be simulated by moving the index finger forward between start and stop,
+giving an offset that creates a poking motion when interpolated.</p>
+</div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_RecordHandStop_" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.RecordHandStop*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_RecordHandStop" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.RecordHandStop">RecordHandStop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordHandStop()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_RecordHandStop_" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.RecordHandStop*"></a>
@@ -183,6 +254,16 @@ giving an offset that creates a poking motion when interpolated.</p>
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_RecordLeftHandStart_" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.RecordLeftHandStart*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_RecordLeftHandStart" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.RecordLeftHandStart">RecordLeftHandStart()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordLeftHandStart()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_RecordRightHandStart_" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.RecordRightHandStart*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_RecordRightHandStart" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.RecordRightHandStart">RecordRightHandStart()</h4>
   <div class="markdown level1 summary"></div>
@@ -190,6 +271,20 @@ giving an offset that creates a poking motion when interpolated.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void RecordRightHandStart()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_RecordRightHandStart_" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.RecordRightHandStart*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_WindowsMixedRealityHandRecorder_RecordRightHandStart" data-uid="Microsoft.MixedReality.Toolkit.Input.WindowsMixedRealityHandRecorder.RecordRightHandStart">RecordRightHandStart()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordRightHandStart()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

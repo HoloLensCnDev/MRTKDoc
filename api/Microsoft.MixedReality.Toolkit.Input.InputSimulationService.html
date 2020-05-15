@@ -135,6 +135,12 @@
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_RequestPointers_Microsoft_MixedReality_Toolkit_Input_SupportedControllerType_Handedness_">BaseInputDeviceManager.RequestPointers(SupportedControllerType, Handedness)</a>
     </div>
     <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_EnablePointerCache">BaseInputDeviceManager.EnablePointerCache</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_RecyclePointers_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSource_">BaseInputDeviceManager.RecyclePointers(IMixedRealityInputSource)</a>
+    </div>
+    <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.BaseDataProvider-1.html#Microsoft_MixedReality_Toolkit_BaseDataProvider_1_Registrar">BaseDataProvider&lt;IMixedRealityInputSystem&gt;.Registrar</a>
     </div>
     <div>
@@ -251,6 +257,107 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService__ctor_Microsoft_MixedReality_Toolkit_IMixedRealityServiceRegistrar_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSystem_System_String_System_UInt32_Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.#ctor(Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar,Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem,System.String,System.UInt32,Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile)">InputSimulationService(IMixedRealityServiceRegistrar, IMixedRealityInputSystem, String, UInt32, BaseMixedRealityProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This constructor is obsolete (registrar parameter is no longer required) and will be removed in a future version of the Microsoft Mixed Reality Toolkit.&quot;)]
+public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRealityInputSystem inputSystem, string name, uint priority, BaseMixedRealityProfile profile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a></td>
+        <td><span class="parametername">registrar</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar.html">IMixedRealityServiceRegistrar</a> instance that loaded the data provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a></td>
+        <td><span class="parametername">inputSystem</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a> instance that receives data from this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Friendly name of the service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Service priority. Used to determine order of instantiation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The service's configuration profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService__ctor_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSystem_System_String_System_UInt32_Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.#ctor(Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem,System.String,System.UInt32,Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile)">InputSimulationService(IMixedRealityInputSystem, String, UInt32, BaseMixedRealityProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputSimulationService(IMixedRealityInputSystem inputSystem, string name, uint priority, BaseMixedRealityProfile profile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a></td>
+        <td><span class="parametername">inputSystem</span></td>
+        <td><p>The <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a> instance that receives data from this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Friendly name of the service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Service priority. Used to determine order of instantiation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile.html">BaseMixedRealityProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The service's configuration profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.#ctor*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService__ctor_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSystem_System_String_System_UInt32_Microsoft_MixedReality_Toolkit_BaseMixedRealityProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.#ctor(Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSystem,System.String,System.UInt32,Microsoft.MixedReality.Toolkit.BaseMixedRealityProfile)">InputSimulationService(IMixedRealityInputSystem, String, UInt32, BaseMixedRealityProfile)</h4>
   <div class="markdown level1 summary"><p>Constructor.</p>
 </div>
@@ -301,8 +408,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandDataLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandDataLeft*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandDataLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandDataLeft">HandDataLeft</h4>
-  <div class="markdown level1 summary"><p>Pose data for the left hand.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimulatedHandData HandDataLeft { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SimulatedHandData.html">SimulatedHandData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandDataLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandDataLeft*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandDataLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandDataLeft">HandDataLeft</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -327,8 +458,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandDataRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandDataRight*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandDataRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandDataRight">HandDataRight</h4>
-  <div class="markdown level1 summary"><p>Pose data for the right hand.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimulatedHandData HandDataRight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SimulatedHandData.html">SimulatedHandData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandDataRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandDataRight*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandDataRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandDataRight">HandDataRight</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -353,8 +508,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandPositionLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandPositionLeft*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandPositionLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandPositionLeft">HandPositionLeft</h4>
-  <div class="markdown level1 summary"><p>Position of the left hand in view space.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 HandPositionLeft { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandPositionLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandPositionLeft*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandPositionLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandPositionLeft">HandPositionLeft</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -379,8 +558,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandPositionRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandPositionRight*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandPositionRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandPositionRight">HandPositionRight</h4>
-  <div class="markdown level1 summary"><p>Position of the right hand in view space.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 HandPositionRight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandPositionRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandPositionRight*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandPositionRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandPositionRight">HandPositionRight</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -405,8 +608,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandRotationLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandRotationLeft*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandRotationLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandRotationLeft">HandRotationLeft</h4>
-  <div class="markdown level1 summary"><p>Rotation euler angles of the left hand in view space.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 HandRotationLeft { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandRotationLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandRotationLeft*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandRotationLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandRotationLeft">HandRotationLeft</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -431,8 +658,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandRotationRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandRotationRight*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandRotationRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandRotationRight">HandRotationRight</h4>
-  <div class="markdown level1 summary"><p>Rotation euler angles of the right hand in view space.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 HandRotationRight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandRotationRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandRotationRight*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandRotationRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandRotationRight">HandRotationRight</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -457,8 +708,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandSimulationMode_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandSimulationMode*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandSimulationMode" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandSimulationMode">HandSimulationMode</h4>
-  <div class="markdown level1 summary"><p>Simulated hand behavior.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HandSimulationMode HandSimulationMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.HandSimulationMode.html">HandSimulationMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandSimulationMode_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandSimulationMode*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_HandSimulationMode" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.HandSimulationMode">HandSimulationMode</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -483,8 +758,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_InputSimulationProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.InputSimulationProfile*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_InputSimulationProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.InputSimulationProfile">InputSimulationProfile</h4>
-  <div class="markdown level1 summary"><p>Typed representation of the ConfigurationProfile property.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MixedRealityInputSimulationProfile InputSimulationProfile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSimulationProfile.html">MixedRealityInputSimulationProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_InputSimulationProfile_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.InputSimulationProfile*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_InputSimulationProfile" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.InputSimulationProfile">InputSimulationProfile</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -509,8 +808,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsAlwaysVisibleHandLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsAlwaysVisibleHandLeft*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsAlwaysVisibleHandLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsAlwaysVisibleHandLeft">IsAlwaysVisibleHandLeft</h4>
-  <div class="markdown level1 summary"><p>The left hand is always tracking.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAlwaysVisibleHandLeft { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsAlwaysVisibleHandLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsAlwaysVisibleHandLeft*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsAlwaysVisibleHandLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsAlwaysVisibleHandLeft">IsAlwaysVisibleHandLeft</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -535,8 +858,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsAlwaysVisibleHandRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsAlwaysVisibleHandRight*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsAlwaysVisibleHandRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsAlwaysVisibleHandRight">IsAlwaysVisibleHandRight</h4>
-  <div class="markdown level1 summary"><p>The right hand is always tracking.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAlwaysVisibleHandRight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsAlwaysVisibleHandRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsAlwaysVisibleHandRight*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsAlwaysVisibleHandRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsAlwaysVisibleHandRight">IsAlwaysVisibleHandRight</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -561,8 +908,32 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsSimulatingHandLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsSimulatingHandLeft*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsSimulatingHandLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsSimulatingHandLeft">IsSimulatingHandLeft</h4>
-  <div class="markdown level1 summary"><p>The left hand is controlled by user input.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSimulatingHandLeft { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsSimulatingHandLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsSimulatingHandLeft*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsSimulatingHandLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsSimulatingHandLeft">IsSimulatingHandLeft</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -587,12 +958,88 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsSimulatingHandRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsSimulatingHandRight*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsSimulatingHandRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsSimulatingHandRight">IsSimulatingHandRight</h4>
-  <div class="markdown level1 summary"><p>The right hand is controlled by user input.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsSimulatingHandRight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsSimulatingHandRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsSimulatingHandRight*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_IsSimulatingHandRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.IsSimulatingHandRight">IsSimulatingHandRight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSimulatingHandRight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_SimulateEyePosition_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.SimulateEyePosition*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_SimulateEyePosition" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.SimulateEyePosition">SimulateEyePosition</h4>
+  <div class="markdown level1 summary"><p>If true then camera forward direction is used to simulate eye tracking data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SimulateEyePosition { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_UserInputEnabled_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.UserInputEnabled*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_UserInputEnabled" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.UserInputEnabled">UserInputEnabled</h4>
+  <div class="markdown level1 summary"><p>If true then keyboard and mouse input are used to simulate hands.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UserInputEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -641,9 +1088,7 @@ public InputSimulationService(IMixedRealityServiceRegistrar registrar, IMixedRea
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_CheckCapability_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.CheckCapability*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_CheckCapability_Microsoft_MixedReality_Toolkit_MixedRealityCapability_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.CheckCapability(Microsoft.MixedReality.Toolkit.MixedRealityCapability)">CheckCapability(MixedRealityCapability)</h4>
-  <div class="markdown level1 summary"><p>Checks to see if one or more registered data providers supports the requested capability
-on the current platform.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -662,8 +1107,7 @@ on the current platform.</p>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityCapability.html">MixedRealityCapability</a></td>
         <td><span class="parametername">capability</span></td>
-        <td><p>The capability to check.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -678,8 +1122,49 @@ on the current platform.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>True if the capability is supported, false otherwise.</p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_CheckCapability_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.CheckCapability*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_CheckCapability_Microsoft_MixedReality_Toolkit_MixedRealityCapability_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.CheckCapability(Microsoft.MixedReality.Toolkit.MixedRealityCapability)">CheckCapability(MixedRealityCapability)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckCapability(MixedRealityCapability capability)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.MixedRealityCapability.html">MixedRealityCapability</a></td>
+        <td><span class="parametername">capability</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -687,21 +1172,43 @@ on the current platform.</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Destroy_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Destroy*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Destroy" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Destroy">Destroy()</h4>
-  <div class="markdown level1 summary"><p>Optional Destroy function to perform cleanup of the service before the Mixed Reality Toolkit is destroyed.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void Destroy()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Destroy">BaseService.Destroy()</a></div>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_Destroy">BaseInputDeviceManager.Destroy()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Destroy_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Destroy*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Destroy" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Destroy()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_Destroy">BaseInputDeviceManager.Destroy()</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Disable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Disable*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Disable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Disable">Disable()</h4>
-  <div class="markdown level1 summary"><p>Optional Disable function to pause the service.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Disable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Disable">BaseService.Disable()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Disable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Disable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Disable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Disable">Disable()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -713,8 +1220,19 @@ on the current platform.</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Enable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Enable*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Enable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Enable">Enable()</h4>
-  <div class="markdown level1 summary"><p>Optional Enable function to enable / re-enable the service.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Enable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Enable">BaseService.Enable()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Enable_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Enable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Enable" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Enable">Enable()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -726,22 +1244,43 @@ on the current platform.</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Initialize_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Initialize*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Initialize" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"><p>The initialize function is used to setup the service once created.
-This method is called once all services have been registered in the Mixed Reality Toolkit.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Initialize">BaseService.Initialize()</a></div>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_Initialize">BaseInputDeviceManager.Initialize()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Initialize_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Initialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Initialize" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager.html#Microsoft_MixedReality_Toolkit_Input_BaseInputDeviceManager_Initialize">BaseInputDeviceManager.Initialize()</a></div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_LateUpdate_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.LateUpdate*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_LateUpdate" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.LateUpdate">LateUpdate()</h4>
-  <div class="markdown level1 summary"><p>Optional LateUpdate function to that is called after Update has been called on all services.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void LateUpdate()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_LateUpdate">BaseService.LateUpdate()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_LateUpdate_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.LateUpdate*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_LateUpdate" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.LateUpdate">LateUpdate()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -753,8 +1292,17 @@ This method is called once all services have been registered in the Mixed Realit
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_ResetHandLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.ResetHandLeft*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_ResetHandLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.ResetHandLeft">ResetHandLeft()</h4>
-  <div class="markdown level1 summary"><p>Reset the left hand.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetHandLeft()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_ResetHandLeft_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.ResetHandLeft*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_ResetHandLeft" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.ResetHandLeft">ResetHandLeft()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -764,8 +1312,17 @@ This method is called once all services have been registered in the Mixed Realit
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_ResetHandRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.ResetHandRight*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_ResetHandRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.ResetHandRight">ResetHandRight()</h4>
-  <div class="markdown level1 summary"><p>Reset the right hand.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetHandRight()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_ResetHandRight_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.ResetHandRight*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_ResetHandRight" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.ResetHandRight">ResetHandRight()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -775,8 +1332,19 @@ This method is called once all services have been registered in the Mixed Realit
   
   <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Update_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Update*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Update" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Update">Update()</h4>
-  <div class="markdown level1 summary"><p>Optional Update function to perform per-frame updates of the service.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Update()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.BaseService.html#Microsoft_MixedReality_Toolkit_BaseService_Update">BaseService.Update()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Update_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Update*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Update" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -807,6 +1375,56 @@ This method is called once all services have been registered in the Mixed Realit
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityEyeSaccadeProvider.html">IMixedRealityEyeSaccadeProvider</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Microsoft_MixedReality_Toolkit_Input_IMixedRealityEyeGazeDataProvider_SaccadeProvider_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Microsoft#MixedReality#Toolkit#Input#IMixedRealityEyeGazeDataProvider#SaccadeProvider*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Microsoft_MixedReality_Toolkit_Input_IMixedRealityEyeGazeDataProvider_SaccadeProvider" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Microsoft#MixedReality#Toolkit#Input#IMixedRealityEyeGazeDataProvider#SaccadeProvider">IMixedRealityEyeGazeDataProvider.SaccadeProvider</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IMixedRealityEyeSaccadeProvider IMixedRealityEyeGazeDataProvider.SaccadeProvider { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityEyeSaccadeProvider.html">IMixedRealityEyeSaccadeProvider</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Microsoft_MixedReality_Toolkit_Input_IMixedRealityEyeGazeDataProvider_SmoothEyeTracking_" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Microsoft#MixedReality#Toolkit#Input#IMixedRealityEyeGazeDataProvider#SmoothEyeTracking*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_InputSimulationService_Microsoft_MixedReality_Toolkit_Input_IMixedRealityEyeGazeDataProvider_SmoothEyeTracking" data-uid="Microsoft.MixedReality.Toolkit.Input.InputSimulationService.Microsoft#MixedReality#Toolkit#Input#IMixedRealityEyeGazeDataProvider#SmoothEyeTracking">IMixedRealityEyeGazeDataProvider.SmoothEyeTracking</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IMixedRealityEyeGazeDataProvider.SmoothEyeTracking { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>

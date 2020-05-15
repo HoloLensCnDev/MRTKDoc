@@ -103,6 +103,7 @@ It simply links the game object to set to active with its associated cursor stat
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourceStateHandler.html">IMixedRealitySourceStateHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html">IMixedRealityPointerHandler</a></div>
     <div><span class="xref">IEventSystemHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -264,7 +265,7 @@ It simply links the game object to set to active with its associated cursor stat
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_ObjectCursor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ObjectCursor : BaseCursor, IMixedRealityCursor, IMixedRealityFocusChangedHandler, IMixedRealitySourceStateHandler, IMixedRealityPointerHandler, IEventSystemHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class ObjectCursor : BaseCursor, IMixedRealityCursor, IMixedRealityFocusChangedHandler, IMixedRealitySourceStateHandler, IMixedRealityPointerHandler, IEventSystemHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -288,6 +289,55 @@ It simply links the game object to set to active with its associated cursor stat
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.ObjectCursorDatum.html">ObjectCursor.ObjectCursorDatum</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_ObjectCursor_CursorStateData" data-uid="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.CursorStateData">CursorStateData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObjectCursor.ObjectCursorDatum[] CursorStateData</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.ObjectCursorDatum.html">ObjectCursor.ObjectCursorDatum</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_ObjectCursor_ParentTransform" data-uid="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.ParentTransform">ParentTransform</h4>
+  <div class="markdown level1 summary"><p>Sprite renderer to change.  If null find one in children</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform ParentTransform</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -352,6 +402,50 @@ state for the cursor</p>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnCursorStateChange_Microsoft_MixedReality_Toolkit_Input_CursorStateEnum_">BaseCursor.OnCursorStateChange(CursorStateEnum)</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_ObjectCursor_OnCursorStateChange_" data-uid="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.OnCursorStateChange*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_ObjectCursor_OnCursorStateChange_Microsoft_MixedReality_Toolkit_Input_CursorStateEnum_" data-uid="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.OnCursorStateChange(Microsoft.MixedReality.Toolkit.Input.CursorStateEnum)">OnCursorStateChange(CursorStateEnum)</h4>
+  <div class="markdown level1 summary"><p>Override OnCursorState change to set the correct animation
+state for the cursor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnCursorStateChange(CursorStateEnum state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.CursorStateEnum.html">CursorStateEnum</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnCursorStateChange_Microsoft_MixedReality_Toolkit_Input_CursorStateEnum_">BaseCursor.OnCursorStateChange(CursorStateEnum)</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_ObjectCursor_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.OnEnable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_ObjectCursor_OnEnable" data-uid="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"><p>On enable look for a sprite renderer on children</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.BaseCursor.html#Microsoft_MixedReality_Toolkit_Input_BaseCursor_OnEnable">BaseCursor.OnEnable()</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_ObjectCursor_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.OnEnable*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_ObjectCursor_OnEnable" data-uid="Microsoft.MixedReality.Toolkit.Input.ObjectCursor.OnEnable">OnEnable()</h4>
   <div class="markdown level1 summary"><p>On enable look for a sprite renderer on children</p>
@@ -378,6 +472,9 @@ state for the cursor</p>
   </div>
   <div>
       <span class="xref">IEventSystemHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

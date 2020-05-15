@@ -96,6 +96,10 @@
     <div class="level2"><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SourceStateEventData.html">SourceStateEventData</a></div>
     <div class="level3"><span class="xref">SourcePoseEventData&lt;T&gt;</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseEventData</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -124,7 +128,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SourcePoseEventData&lt;T&gt; : SourceStateEventData</code></pre>
+    <pre><code class="lang-csharp hljs">public class SourcePoseEventData&lt;T&gt; : SourceStateEventData, BaseEventData</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,8 +154,7 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_1__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData`1.#ctor*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_1__ctor_EventSystem_" data-uid="Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData`1.#ctor(EventSystem)">SourcePoseEventData(EventSystem)</h4>
-  <div class="markdown level1 summary"><p>Constructor.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -170,13 +173,65 @@
       <tr>
         <td><span class="xref">EventSystem</span></td>
         <td><span class="parametername">eventSystem</span></td>
-        <td><p>Typically will be <a href="https://docs.unity3d.com/ScriptReference/EventSystems.EventSystem-current.html">EventSystems.EventSystem.current</a></p>
-</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_1__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData`1.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_1__ctor_EventSystem_" data-uid="Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData`1.#ctor(EventSystem)">SourcePoseEventData(EventSystem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SourcePoseEventData(EventSystem eventSystem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventSystem</span></td>
+        <td><span class="parametername">eventSystem</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_1_SourceData_" data-uid="Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData`1.SourceData*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_1_SourceData" data-uid="Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData`1.SourceData">SourceData</h4>
+  <div class="markdown level1 summary"><p>The new position of the input source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T SourceData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_1_SourceData_" data-uid="Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData`1.SourceData*"></a>
@@ -243,6 +298,48 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_1_Initialize_" data-uid="Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData`1.Initialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_SourcePoseEventData_1_Initialize_Microsoft_MixedReality_Toolkit_Input_IMixedRealityInputSource_Microsoft_MixedReality_Toolkit_Input_IMixedRealityController__0_" data-uid="Microsoft.MixedReality.Toolkit.Input.SourcePoseEventData`1.Initialize(Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource,Microsoft.MixedReality.Toolkit.Input.IMixedRealityController,`0)">Initialize(IMixedRealityInputSource, IMixedRealityController, T)</h4>
+  <div class="markdown level1 summary"><p>Populates the event with data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize(IMixedRealityInputSource inputSource, IMixedRealityController controller, T data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputSource.html">IMixedRealityInputSource</a></td>
+        <td><span class="parametername">inputSource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityController.html">IMixedRealityController</a></td>
+        <td><span class="parametername">controller</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseEventData</span>
+  </div>
 </article>
           </div>
           

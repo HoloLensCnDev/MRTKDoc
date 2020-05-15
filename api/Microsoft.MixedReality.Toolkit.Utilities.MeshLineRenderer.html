@@ -95,6 +95,10 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineRenderer.html">BaseMixedRealityLineRenderer</a></div>
     <div class="level2"><span class="xref">MeshLineRenderer</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -141,7 +145,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MeshLineRenderer : BaseMixedRealityLineRenderer</code></pre>
+    <pre><code class="lang-csharp hljs">public class MeshLineRenderer : BaseMixedRealityLineRenderer, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -166,6 +170,56 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_ColorProperty_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.ColorProperty*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_ColorProperty" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.ColorProperty">ColorProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ColorProperty { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_LineMaterial_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.LineMaterial*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_LineMaterial" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.LineMaterial">LineMaterial</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Material LineMaterial { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -220,8 +274,43 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_LineMesh_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.LineMesh*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_LineMesh" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.LineMesh">LineMesh</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mesh LineMesh { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.OnEnable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_OnEnable" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
+  </div>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_OnEnable_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.OnEnable*"></a>
@@ -244,6 +333,22 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineRenderer.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineRenderer_UpdateLine">BaseMixedRealityLineRenderer.UpdateLine()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_UpdateLine_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.UpdateLine*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_MeshLineRenderer_UpdateLine" data-uid="Microsoft.MixedReality.Toolkit.Utilities.MeshLineRenderer.UpdateLine">UpdateLine()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UpdateLine()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.BaseMixedRealityLineRenderer.html#Microsoft_MixedReality_Toolkit_Utilities_BaseMixedRealityLineRenderer_UpdateLine">BaseMixedRealityLineRenderer.UpdateLine()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
 </article>
           </div>
           

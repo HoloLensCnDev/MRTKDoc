@@ -100,12 +100,13 @@
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusHandler.html">IMixedRealityFocusHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusChangedHandler.html">IMixedRealityFocusChangedHandler</a></div>
     <div><span class="xref">IEventSystemHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.html">Microsoft.MixedReality.Toolkit.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseFocusHandler : MonoBehaviour, IMixedRealityFocusHandler, IMixedRealityFocusChangedHandler, IEventSystemHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseFocusHandler : MonoBehaviour, IMixedRealityFocusHandler, IMixedRealityFocusChangedHandler, IEventSystemHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -131,6 +132,58 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_FocusEnabled_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.FocusEnabled*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_FocusEnabled" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.FocusEnabled">FocusEnabled</h4>
+  <div class="markdown level1 summary"><p>Is focus enabled for this <a href="https://docs.unity3d.com/ScriptReference/Component.html">Component</a>?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool FocusEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_Focusers_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.Focusers*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_Focusers" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.Focusers">Focusers</h4>
+  <div class="markdown level1 summary"><p>The list of <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html">IMixedRealityPointer</a>s that are currently focused on this <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;IMixedRealityPointer&gt; Focusers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html">IMixedRealityPointer</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -187,14 +240,39 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_HasFocus_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.HasFocus*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_HasFocus" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.HasFocus">HasFocus</h4>
+  <div class="markdown level1 summary"><p>Does this object currently have focus by any <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html">IMixedRealityPointer</a>?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasFocus { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnBeforeFocusChange_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnBeforeFocusChange*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnBeforeFocusChange_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnBeforeFocusChange(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnBeforeFocusChange(FocusEventData)</h4>
-  <div class="markdown level1 summary"><p>Focus event that is raised before the focus is actually changed.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -217,15 +295,65 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnBeforeFocusChange_Microsoft_MixedReality_Toolkit_Input_FocusEventData__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Useful for logic that needs to take place before focus changes.</p>
-</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnBeforeFocusChange_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnBeforeFocusChange*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnBeforeFocusChange_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnBeforeFocusChange(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnBeforeFocusChange(FocusEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnBeforeFocusChange(FocusEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.FocusEventData.html">FocusEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusChanged_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusChanged*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusChanged_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusChanged(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnFocusChanged(FocusEventData)</h4>
-  <div class="markdown level1 summary"><p>Focus event that is raised when the focused object is changed.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnFocusChanged(FocusEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.FocusEventData.html">FocusEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusChanged_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusChanged*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusChanged_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusChanged(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnFocusChanged(FocusEventData)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -252,8 +380,34 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusEnter_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusEnter*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusEnter_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusEnter(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnFocusEnter(FocusEventData)</h4>
-  <div class="markdown level1 summary"><p>The Focus Enter event is raised on this <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a> whenever a <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html">IMixedRealityPointer</a>'s focus enters this <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a>'s <a href="https://docs.unity3d.com/ScriptReference/Collider.html">Collider</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnFocusEnter(FocusEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.FocusEventData.html">FocusEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusEnter_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusEnter*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusEnter_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusEnter(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnFocusEnter(FocusEventData)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -280,8 +434,34 @@
   
   <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusExit_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusExit*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusExit_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusExit(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnFocusExit(FocusEventData)</h4>
-  <div class="markdown level1 summary"><p>The Focus Exit event is raised on this <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a> whenever a <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointer.html">IMixedRealityPointer</a>'s focus leaves this <a href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a>'s <a href="https://docs.unity3d.com/ScriptReference/Collider.html">Collider</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnFocusExit(FocusEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.FocusEventData.html">FocusEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusExit_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusExit*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_BaseFocusHandler_OnFocusExit_Microsoft_MixedReality_Toolkit_Input_FocusEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler.OnFocusExit(Microsoft.MixedReality.Toolkit.Input.FocusEventData)">OnFocusExit(FocusEventData)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -313,6 +493,9 @@
   </div>
   <div>
       <span class="xref">IEventSystemHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

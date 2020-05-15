@@ -97,6 +97,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">MonoBehaviour</span></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html">IMixedRealityPointerHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler.html">IMixedRealitySpeechHandler</a></div>
     <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityBaseInputHandler.html">IMixedRealityBaseInputHandler</a></div>
@@ -115,7 +116,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EyeTrackingTarget : InputSystemGlobalHandlerListener, IMixedRealityPointerHandler, IMixedRealitySpeechHandler, IMixedRealityBaseInputHandler, IEventSystemHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class EyeTrackingTarget : InputSystemGlobalHandlerListener, MonoBehaviour, IMixedRealityPointerHandler, IMixedRealitySpeechHandler, IMixedRealityBaseInputHandler, IEventSystemHandler</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -129,6 +130,58 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool EyeCursorSnapToTargetCenter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_EyeCursorSnapToTargetCenter_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.EyeCursorSnapToTargetCenter*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_EyeCursorSnapToTargetCenter" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.EyeCursorSnapToTargetCenter">EyeCursorSnapToTargetCenter</h4>
+  <div class="markdown level1 summary"><p>If true, the eye cursor (if enabled) will snap to the center of this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EyeCursorSnapToTargetCenter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_IsDwelledOn_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.IsDwelledOn*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_IsDwelledOn" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.IsDwelledOn">IsDwelledOn</h4>
+  <div class="markdown level1 summary"><p>Returns true if the user has been looking at the target for a certain amount of time specified by dwellTimeInSec.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDwelledOn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,6 +253,33 @@ with the target's bounding box.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_IsLookedAt_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.IsLookedAt*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_IsLookedAt" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.IsLookedAt">IsLookedAt</h4>
+  <div class="markdown level1 summary"><p>Returns true if the user looks at the target or more specifically when the eye gaze ray intersects
+with the target's bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLookedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_LookedAtEyeTarget_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.LookedAtEyeTarget*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_LookedAtEyeTarget" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.LookedAtEyeTarget">LookedAtEyeTarget</h4>
   <div class="markdown level1 summary"></div>
@@ -219,6 +299,56 @@ with the target's bounding box.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.html">EyeTrackingTarget</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_LookedAtEyeTarget_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.LookedAtEyeTarget*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_LookedAtEyeTarget" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.LookedAtEyeTarget">LookedAtEyeTarget</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EyeTrackingTarget LookedAtEyeTarget { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.html">EyeTrackingTarget</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_LookedAtPoint_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.LookedAtPoint*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_LookedAtPoint" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.LookedAtPoint">LookedAtPoint</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 LookedAtPoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -275,6 +405,31 @@ with the target's bounding box.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_LookedAtTarget_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.LookedAtTarget*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_LookedAtTarget" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.LookedAtTarget">LookedAtTarget</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameObject LookedAtTarget { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnDwell_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnDwell*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnDwell" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnDwell">OnDwell</h4>
   <div class="markdown level1 summary"><p>Event is triggered when the target has been looked at for a given predefined duration (dwellTimeInSec).</p>
@@ -283,6 +438,58 @@ with the target's bounding box.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public UnityEvent OnDwell { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnDwell_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnDwell*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnDwell" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnDwell">OnDwell</h4>
+  <div class="markdown level1 summary"><p>Event is triggered when the target has been looked at for a given predefined duration (dwellTimeInSec).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnDwell { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnLookAtStart_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnLookAtStart*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnLookAtStart" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnLookAtStart">OnLookAtStart</h4>
+  <div class="markdown level1 summary"><p>Event is triggered when the user starts to look at the target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnLookAtStart { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -353,6 +560,32 @@ with the target's bounding box.</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnLookAway_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnLookAway*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnLookAway" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnLookAway">OnLookAway</h4>
+  <div class="markdown level1 summary"><p>Event to be triggered when the user is looking away from the target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnLookAway { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnSelected_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnSelected*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnSelected" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnSelected">OnSelected</h4>
   <div class="markdown level1 summary"><p>Event is triggered when the looked at target is selected.</p>
@@ -361,6 +594,58 @@ with the target's bounding box.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public UnityEvent OnSelected { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnSelected_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnSelected*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnSelected" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnSelected">OnSelected</h4>
+  <div class="markdown level1 summary"><p>Event is triggered when the looked at target is selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnSelected { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_WhileLookingAtTarget_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.WhileLookingAtTarget*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_WhileLookingAtTarget" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.WhileLookingAtTarget">WhileLookingAtTarget</h4>
+  <div class="markdown level1 summary"><p>Event is triggered when the user continues to look at the target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent WhileLookingAtTarget { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,6 +704,18 @@ with the target's bounding box.</p>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_OnDisable">InputSystemGlobalHandlerListener.OnDisable()</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnDisable_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnDisable*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnDisable" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDisable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_OnDisable">InputSystemGlobalHandlerListener.OnDisable()</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusDwell_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusDwell*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusDwell" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusDwell">OnEyeFocusDwell()</h4>
   <div class="markdown level1 summary"></div>
@@ -426,6 +723,26 @@ with the target's bounding box.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void OnEyeFocusDwell()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusDwell_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusDwell*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusDwell" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusDwell">OnEyeFocusDwell()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnEyeFocusDwell()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusStart_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusStart*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusStart" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusStart">OnEyeFocusStart()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnEyeFocusStart()</code></pre>
   </div>
   
   
@@ -449,6 +766,26 @@ with the target's bounding box.</p>
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusStay_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusStay*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusStay" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusStay">OnEyeFocusStay()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnEyeFocusStay()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusStop_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusStop*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusStop" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusStop">OnEyeFocusStop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnEyeFocusStop()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusStop_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusStop*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_OnEyeFocusStop" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.OnEyeFocusStop">OnEyeFocusStop()</h4>
   <div class="markdown level1 summary"></div>
@@ -461,9 +798,19 @@ with the target's bounding box.</p>
   
   <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_RegisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.RegisterHandlers*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_RegisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.RegisterHandlers">RegisterHandlers()</h4>
-  <div class="markdown level1 summary"><p>Overload this method to specify, which global events component wants to listen to.
-Use RegisterHandler API of InputSystem</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RegisterHandlers()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_RegisterHandlers">InputSystemGlobalHandlerListener.RegisterHandlers()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_RegisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.RegisterHandlers*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_RegisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.RegisterHandlers">RegisterHandlers()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -485,11 +832,33 @@ Use RegisterHandler API of InputSystem</p>
   <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_Start">InputSystemGlobalHandlerListener.Start()</a></div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Start_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Start*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Start" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Start()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_Start">InputSystemGlobalHandlerListener.Start()</a></div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_UnregisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.UnregisterHandlers*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_UnregisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.UnregisterHandlers">UnregisterHandlers()</h4>
-  <div class="markdown level1 summary"><p>Overload this method to specify, which global events component should stop listening to.
-Use UnregisterHandler API of InputSystem</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UnregisterHandlers()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.InputSystemGlobalHandlerListener.html#Microsoft_MixedReality_Toolkit_Input_InputSystemGlobalHandlerListener_UnregisterHandlers">InputSystemGlobalHandlerListener.UnregisterHandlers()</a></div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_UnregisterHandlers_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.UnregisterHandlers*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_UnregisterHandlers" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.UnregisterHandlers">UnregisterHandlers()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -508,6 +877,60 @@ Use UnregisterHandler API of InputSystem</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void IMixedRealityPointerHandler.OnPointerClicked(MixedRealityPointerEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData.html">MixedRealityPointerEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointerHandler_OnPointerClicked_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealityPointerHandler#OnPointerClicked*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointerHandler_OnPointerClicked_Microsoft_MixedReality_Toolkit_Input_MixedRealityPointerEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealityPointerHandler#OnPointerClicked(Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData)">IMixedRealityPointerHandler.OnPointerClicked(MixedRealityPointerEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityPointerHandler.OnPointerClicked(MixedRealityPointerEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData.html">MixedRealityPointerEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointerHandler_OnPointerDown_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealityPointerHandler#OnPointerDown*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointerHandler_OnPointerDown_Microsoft_MixedReality_Toolkit_Input_MixedRealityPointerEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealityPointerHandler#OnPointerDown(Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData)">IMixedRealityPointerHandler.OnPointerDown(MixedRealityPointerEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityPointerHandler.OnPointerDown(MixedRealityPointerEventData eventData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -582,6 +1005,60 @@ Use UnregisterHandler API of InputSystem</p>
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointerHandler_OnPointerDragged_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealityPointerHandler#OnPointerDragged*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointerHandler_OnPointerDragged_Microsoft_MixedReality_Toolkit_Input_MixedRealityPointerEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealityPointerHandler#OnPointerDragged(Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData)">IMixedRealityPointerHandler.OnPointerDragged(MixedRealityPointerEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityPointerHandler.OnPointerDragged(MixedRealityPointerEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData.html">MixedRealityPointerEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointerHandler_OnPointerUp_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealityPointerHandler#OnPointerUp*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointerHandler_OnPointerUp_Microsoft_MixedReality_Toolkit_Input_MixedRealityPointerEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealityPointerHandler#OnPointerUp(Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData)">IMixedRealityPointerHandler.OnPointerUp(MixedRealityPointerEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealityPointerHandler.OnPointerUp(MixedRealityPointerEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData.html">MixedRealityPointerEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointerHandler_OnPointerUp_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealityPointerHandler#OnPointerUp*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealityPointerHandler_OnPointerUp_Microsoft_MixedReality_Toolkit_Input_MixedRealityPointerEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealityPointerHandler#OnPointerUp(Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData)">IMixedRealityPointerHandler.OnPointerUp(MixedRealityPointerEventData)</h4>
   <div class="markdown level1 summary"></div>
@@ -634,7 +1111,37 @@ Use UnregisterHandler API of InputSystem</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealitySpeechHandler_OnSpeechKeywordRecognized_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealitySpeechHandler#OnSpeechKeywordRecognized*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Input_EyeTrackingTarget_Microsoft_MixedReality_Toolkit_Input_IMixedRealitySpeechHandler_OnSpeechKeywordRecognized_Microsoft_MixedReality_Toolkit_Input_SpeechEventData_" data-uid="Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget.Microsoft#MixedReality#Toolkit#Input#IMixedRealitySpeechHandler#OnSpeechKeywordRecognized(Microsoft.MixedReality.Toolkit.Input.SpeechEventData)">IMixedRealitySpeechHandler.OnSpeechKeywordRecognized(SpeechEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IMixedRealitySpeechHandler.OnSpeechKeywordRecognized(SpeechEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Input.SpeechEventData.html">SpeechEventData</a></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MonoBehaviour</span>
+  </div>
   <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler.html">IMixedRealityPointerHandler</a>
   </div>

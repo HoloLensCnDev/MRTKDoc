@@ -95,6 +95,10 @@
     <div class="level1"><a class="xref" href="Microsoft.MixedReality.Toolkit.GenericBaseEventData.html">GenericBaseEventData</a></div>
     <div class="level2"><span class="xref">TeleportEventData</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">BaseEventData</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -106,15 +110,47 @@
     <div>
       <a class="xref" href="Microsoft.MixedReality.Toolkit.GenericBaseEventData.html#Microsoft_MixedReality_Toolkit_GenericBaseEventData_BaseInitialize_Microsoft_MixedReality_Toolkit_IMixedRealityEventSource_">GenericBaseEventData.BaseInitialize(IMixedRealityEventSource)</a>
     </div>
+    <div>
+      <a class="xref" href="Microsoft.MixedReality.Toolkit.GenericBaseEventData.html#Microsoft_MixedReality_Toolkit_GenericBaseEventData_selectedObject">GenericBaseEventData.selectedObject</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.html">Microsoft.MixedReality.Toolkit.Teleport</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TeleportEventData : GenericBaseEventData</code></pre>
+    <pre><code class="lang-csharp hljs">public class TeleportEventData : GenericBaseEventData, BaseEventData</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.TeleportEventData.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData__ctor_EventSystem_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.TeleportEventData.#ctor(EventSystem)">TeleportEventData(EventSystem)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeleportEventData(EventSystem eventSystem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventSystem</span></td>
+        <td><span class="parametername">eventSystem</span></td>
+        <td><p>Typically will be <a href="https://docs.unity3d.com/ScriptReference/EventSystems.EventSystem-current.html">EventSystem.current</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData__ctor_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.TeleportEventData.#ctor*"></a>
@@ -168,6 +204,58 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHotSpot.html">IMixedRealityTeleportHotSpot</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData_HotSpot_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.TeleportEventData.HotSpot*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData_HotSpot" data-uid="Microsoft.MixedReality.Toolkit.Teleport.TeleportEventData.HotSpot">HotSpot</h4>
+  <div class="markdown level1 summary"><p>The teleport hot spot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMixedRealityTeleportHotSpot HotSpot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHotSpot.html">IMixedRealityTeleportHotSpot</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData_Pointer_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.TeleportEventData.Pointer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData_Pointer" data-uid="Microsoft.MixedReality.Toolkit.Teleport.TeleportEventData.Pointer">Pointer</h4>
+  <div class="markdown level1 summary"><p>The pointer that raised the event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMixedRealityPointer Pointer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -233,6 +321,43 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData_Initialize_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.TeleportEventData.Initialize*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Teleport_TeleportEventData_Initialize_IMixedRealityPointer_Microsoft_MixedReality_Toolkit_Teleport_IMixedRealityTeleportHotSpot_" data-uid="Microsoft.MixedReality.Toolkit.Teleport.TeleportEventData.Initialize(IMixedRealityPointer,Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHotSpot)">Initialize(IMixedRealityPointer, IMixedRealityTeleportHotSpot)</h4>
+  <div class="markdown level1 summary"><p>Used to initialize/reset the event and populate the data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize(IMixedRealityPointer pointer, IMixedRealityTeleportHotSpot target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMixedRealityPointer</span></td>
+        <td><span class="parametername">pointer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHotSpot.html">IMixedRealityTeleportHotSpot</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">BaseEventData</span>
+  </div>
 </article>
           </div>
           

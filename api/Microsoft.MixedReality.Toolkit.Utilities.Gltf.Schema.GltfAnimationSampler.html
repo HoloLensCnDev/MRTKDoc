@@ -164,6 +164,34 @@ i.e., <code>time[n + 1] &gt; time[n]</code></p>
   </table>
   
   
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAnimationSampler_input" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAnimationSampler.input">input</h4>
+  <div class="markdown level1 summary"><p>The index of an accessor containing keyframe input values, e.G., time.
+That accessor must have componentType <code>FLOAT</code>. The values represent time in
+seconds with <code>time[0] &gt;= 0.0</code>, and strictly increasing values,
+i.e., <code>time[n + 1] &gt; time[n]</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int input</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAnimationSampler_interpolation" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAnimationSampler.interpolation">interpolation</h4>
   <div class="markdown level1 summary"><p>Interpolation algorithm. When an animation targets a node's rotation,
 and the animation's interpolation is <code>\&amp;quot;LINEAR\&amp;quot;</code>, spherical linear
@@ -187,6 +215,62 @@ of the first point of the timeframe, until the next timeframe.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfInterpolationType.html">GltfInterpolationType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAnimationSampler_interpolation" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAnimationSampler.interpolation">interpolation</h4>
+  <div class="markdown level1 summary"><p>Interpolation algorithm. When an animation targets a node's rotation,
+and the animation's interpolation is <code>\&amp;quot;LINEAR\&amp;quot;</code>, spherical linear
+interpolation (slerp) should be used to interpolate quaternions. When
+interpolation is <code>\&amp;quot;STEP\&amp;quot;</code>, animated value remains constant to the value
+of the first point of the timeframe, until the next timeframe.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GltfInterpolationType interpolation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfInterpolationType.html">GltfInterpolationType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Gltf_Schema_GltfAnimationSampler_output" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Gltf.Schema.GltfAnimationSampler.output">output</h4>
+  <div class="markdown level1 summary"><p>The index of an accessor, containing keyframe output values. Output and input
+accessors must have the same <code>count</code>. When sampler is used with TRS target,
+output accessors componentType must be <code>FLOAT</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int output</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>

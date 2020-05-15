@@ -97,16 +97,45 @@
     <h5>Implements</h5>
     <div><span class="xref">IMixedRealityTouchHandler</span></div>
     <div><span class="xref">IMixedRealityInputHandler</span></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.MixedReality.Toolkit.Examples.html">Microsoft.MixedReality.Toolkit.Examples</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;This component is no longer supported&quot;, true)]
-public class GrabTouchExample : MonoBehaviour, IMixedRealityTouchHandler, IMixedRealityInputHandler</code></pre>
+[Obsolete(&quot;This component is no longer supported&quot;, true)]
+public class GrabTouchExample : MonoBehaviour, IMixedRealityTouchHandler, IMixedRealityInputHandler, MonoBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnInputDown_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnInputDown*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnInputDown_InputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnInputDown(InputEventData)">OnInputDown(InputEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnInputDown(InputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnInputDown_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnInputDown*"></a>
@@ -163,6 +192,33 @@ public class GrabTouchExample : MonoBehaviour, IMixedRealityTouchHandler, IMixed
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnInputPressed_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnInputPressed*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnInputPressed_InputEventData_System_Single__" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnInputPressed(InputEventData{System.Single})">OnInputPressed(InputEventData&lt;Single&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnInputPressed(InputEventData&lt;float&gt; eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputEventData</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnInputUp_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnInputUp*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnInputUp_InputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnInputUp(InputEventData)">OnInputUp(InputEventData)</h4>
   <div class="markdown level1 summary"></div>
@@ -183,6 +239,60 @@ public class GrabTouchExample : MonoBehaviour, IMixedRealityTouchHandler, IMixed
     <tbody>
       <tr>
         <td><span class="xref">InputEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnInputUp_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnInputUp*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnInputUp_InputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnInputUp(InputEventData)">OnInputUp(InputEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnInputUp(InputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnPositionInputChanged_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnPositionInputChanged*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnPositionInputChanged_InputEventData_Vector2__" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnPositionInputChanged(InputEventData{Vector2})">OnPositionInputChanged(InputEventData&lt;Vector2&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnPositionInputChanged(InputEventData&lt;Vector2&gt; eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputEventData</span>&lt;<span class="xref">Vector2</span>&gt;</td>
         <td><span class="parametername">eventData</span></td>
         <td></td>
       </tr>
@@ -251,6 +361,67 @@ The eventData argument contains.</p>
 </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnTouchCompleted_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnTouchCompleted*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnTouchCompleted_HandTrackingInputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnTouchCompleted(HandTrackingInputEventData)">OnTouchCompleted(HandTrackingInputEventData)</h4>
+  <div class="markdown level1 summary"><p>This Handler is called by a HandTrackingInputSource when a Touch action for that hand starts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTouchCompleted(HandTrackingInputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HandTrackingInputEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td><p>The argument passed contains information about the InputSource, the point in space where
+the Touch action occurred and the status of the Touch action.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnTouchCompleted_HandTrackingInputEventData__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A Touch action requires a target. a Touch action must occur inside the bounds of a gameObject.
+The eventData argument contains.</p>
+</div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnTouchStarted_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnTouchStarted*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnTouchStarted_HandTrackingInputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnTouchStarted(HandTrackingInputEventData)">OnTouchStarted(HandTrackingInputEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTouchStarted(HandTrackingInputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HandTrackingInputEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnTouchStarted_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnTouchStarted*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnTouchStarted_HandTrackingInputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnTouchStarted(HandTrackingInputEventData)">OnTouchStarted(HandTrackingInputEventData)</h4>
   <div class="markdown level1 summary"></div>
@@ -303,12 +474,42 @@ The eventData argument contains.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnTouchUpdated_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnTouchUpdated*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Examples_GrabTouchExample_OnTouchUpdated_HandTrackingInputEventData_" data-uid="Microsoft.MixedReality.Toolkit.Examples.GrabTouchExample.OnTouchUpdated(HandTrackingInputEventData)">OnTouchUpdated(HandTrackingInputEventData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTouchUpdated(HandTrackingInputEventData eventData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HandTrackingInputEventData</span></td>
+        <td><span class="parametername">eventData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IMixedRealityTouchHandler</span>
   </div>
   <div>
       <span class="xref">IMixedRealityInputHandler</span>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>

@@ -191,7 +191,54 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected BaseCameraSettingsProvider(IMixedRealityCameraSystem cameraSystem, string name = null, uint priority = 10U, BaseCameraSettingsProfile profile = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected BaseCameraSettingsProvider(IMixedRealityCameraSystem cameraSystem, string name = null, uint priority = default(uint), BaseCameraSettingsProfile profile = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.CameraSystem.IMixedRealityCameraSystem.html">IMixedRealityCameraSystem</a></td>
+        <td><span class="parametername">cameraSystem</span></td>
+        <td><p>The instance of the camera system which is managing this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Friendly name of the provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Provider priority. Used to determine order of instantiation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProfile.html">BaseCameraSettingsProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>The provider's configuration profile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProvider__ctor_" data-uid="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider.#ctor*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProvider__ctor_Microsoft_MixedReality_Toolkit_CameraSystem_IMixedRealityCameraSystem_System_String_System_UInt32_Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProfile_" data-uid="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider.#ctor(Microsoft.MixedReality.Toolkit.CameraSystem.IMixedRealityCameraSystem,System.String,System.UInt32,Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProfile)">BaseCameraSettingsProvider(IMixedRealityCameraSystem, String, UInt32, BaseCameraSettingsProfile)</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseCameraSettingsProvider(IMixedRealityCameraSystem cameraSystem, string name = null, uint priority = default(uint), BaseCameraSettingsProfile profile = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,8 +282,32 @@
   
   <a id="Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProvider_IsOpaque_" data-uid="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider.IsOpaque*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProvider_IsOpaque" data-uid="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider.IsOpaque">IsOpaque</h4>
-  <div class="markdown level1 summary"><p>Returns whether or not the current display rendering mode is opaque.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsOpaque { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProvider_IsOpaque_" data-uid="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider.IsOpaque*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProvider_IsOpaque" data-uid="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider.IsOpaque">IsOpaque</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -263,8 +334,17 @@
   
   <a id="Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProvider_ApplyConfiguration_" data-uid="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider.ApplyConfiguration*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProvider_ApplyConfiguration" data-uid="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider.ApplyConfiguration">ApplyConfiguration()</h4>
-  <div class="markdown level1 summary"><p>Applies provider specific configuration settings.</p>
-</div>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ApplyConfiguration()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProvider_ApplyConfiguration_" data-uid="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider.ApplyConfiguration*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_CameraSystem_BaseCameraSettingsProvider_ApplyConfiguration" data-uid="Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider.ApplyConfiguration">ApplyConfiguration()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

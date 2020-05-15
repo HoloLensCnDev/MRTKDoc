@@ -124,6 +124,35 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class MixedRealityProjectConfigurator</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SelectedSpatializer_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SelectedSpatializer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SelectedSpatializer" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SelectedSpatializer">SelectedSpatializer</h4>
+  <div class="markdown level1 summary"><p>Property used to indicate the currently selected audio spatializer when
+preparing to configure a Mixed Reality Toolkit project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string SelectedSpatializer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -137,6 +166,46 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void ApplyXRSettings()</code></pre>
   </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_ApplyXRSettings_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.ApplyXRSettings*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_ApplyXRSettings" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.ApplyXRSettings">ApplyXRSettings()</h4>
+  <div class="markdown level1 summary"><p>Discover and set the appropriate XR Settings for virtual reality supported for the current build target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyXRSettings()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_Configure_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.Configure*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_Configure_Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_Configurations_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.Configure(Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.Configurations)">Configure(MixedRealityProjectConfigurator.Configurations)</h4>
+  <div class="markdown level1 summary"><p>Configures the supplied setting type to the desired values for MRTK</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Configure(MixedRealityProjectConfigurator.Configurations config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.Configurations.html">MixedRealityProjectConfigurator.Configurations</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>The setting configuration that needs to be checked</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_Configure_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.Configure*"></a>
@@ -192,6 +261,61 @@
         <td><span class="parametername">filter</span></td>
         <td><p>List of setting types to target with configure action</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_ConfigureProject_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.ConfigureProject*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_ConfigureProject_HashSet_Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_Configurations__" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.ConfigureProject(HashSet{Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.Configurations})">ConfigureProject(HashSet&lt;MixedRealityProjectConfigurator.Configurations&gt;)</h4>
+  <div class="markdown level1 summary"><p>Configures the Unity project properly for the list of setting types provided. If null, configures all possibles setting types</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ConfigureProject(HashSet&lt;MixedRealityProjectConfigurator.Configurations&gt; filter = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HashSet</span>&lt;<a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.Configurations.html">MixedRealityProjectConfigurator.Configurations</a>&gt;</td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>List of setting types to target with configure action</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_HasSpatialAwarenessLayer_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.HasSpatialAwarenessLayer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_HasSpatialAwarenessLayer" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.HasSpatialAwarenessLayer">HasSpatialAwarenessLayer()</h4>
+  <div class="markdown level1 summary"><p>Checks if current Unity project has the default Spatial Awareness layer set in the Layers settings</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasSpatialAwarenessLayer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -268,6 +392,51 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsConfigured_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsConfigured*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsConfigured_Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_Configurations_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsConfigured(Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.Configurations)">IsConfigured(MixedRealityProjectConfigurator.Configurations)</h4>
+  <div class="markdown level1 summary"><p>Checks whether the supplied setting type has been properly configured</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsConfigured(MixedRealityProjectConfigurator.Configurations config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.Configurations.html">MixedRealityProjectConfigurator.Configurations</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>The setting configuration that needs to be checked</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if properly configured, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsForceTextSerialization_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsForceTextSerialization*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsForceTextSerialization" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsForceTextSerialization">IsForceTextSerialization()</h4>
   <div class="markdown level1 summary"><p>Checks if current Unity projects uses force text serialization</p>
@@ -276,6 +445,58 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsForceTextSerialization()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsForceTextSerialization_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsForceTextSerialization*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsForceTextSerialization" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsForceTextSerialization">IsForceTextSerialization()</h4>
+  <div class="markdown level1 summary"><p>Checks if current Unity projects uses force text serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsForceTextSerialization()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsLatestScriptingRuntime_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsLatestScriptingRuntime*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsLatestScriptingRuntime" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsLatestScriptingRuntime">IsLatestScriptingRuntime()</h4>
+  <div class="markdown level1 summary"><p>Checks if current Unity project has latest scripting runtime</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsLatestScriptingRuntime()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -373,6 +594,33 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsProjectConfigured_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsProjectConfigured*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsProjectConfigured" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsProjectConfigured">IsProjectConfigured()</h4>
+  <div class="markdown level1 summary"><p>Is this Unity project configured for all setting types properly</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsProjectConfigured()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if entire project is configured as recommended, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsVisibleMetaFiles_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsVisibleMetaFiles*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsVisibleMetaFiles" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsVisibleMetaFiles">IsVisibleMetaFiles()</h4>
   <div class="markdown level1 summary"><p>Checks if current Unity project uses visible meta files</p>
@@ -399,6 +647,54 @@
   </table>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsVisibleMetaFiles_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsVisibleMetaFiles*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_IsVisibleMetaFiles" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.IsVisibleMetaFiles">IsVisibleMetaFiles()</h4>
+  <div class="markdown level1 summary"><p>Checks if current Unity project uses visible meta files</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsVisibleMetaFiles()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetAudioSpatializer_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetAudioSpatializer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetAudioSpatializer" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetAudioSpatializer">SetAudioSpatializer()</h4>
+  <div class="markdown level1 summary"><p>Configures current Unity project to use the audio spatializer specified by the <a class="xref" href="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.html#Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SelectedSpatializer">SelectedSpatializer</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetAudioSpatializer()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetForceTextSerialization_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetForceTextSerialization*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetForceTextSerialization" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetForceTextSerialization">SetForceTextSerialization()</h4>
+  <div class="markdown level1 summary"><p>Configures current Unity project to force text serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetForceTextSerialization()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetForceTextSerialization_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetForceTextSerialization*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetForceTextSerialization" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetForceTextSerialization">SetForceTextSerialization()</h4>
   <div class="markdown level1 summary"><p>Configures current Unity project to force text serialization</p>
@@ -421,6 +717,17 @@
   </div>
   
   
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetLatestScriptingRuntime_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetLatestScriptingRuntime*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetLatestScriptingRuntime" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetLatestScriptingRuntime">SetLatestScriptingRuntime()</h4>
+  <div class="markdown level1 summary"><p>Configures current Unity project to use latest scripting runtime and reloads project</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetLatestScriptingRuntime()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetSpatialAwarenessLayer_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetSpatialAwarenessLayer*"></a>
   <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetSpatialAwarenessLayer" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetSpatialAwarenessLayer">SetSpatialAwarenessLayer()</h4>
   <div class="markdown level1 summary"><p>Configures current Unity project to contain the default Spatial Awareness layer set in the Layers settings</p>
@@ -429,6 +736,28 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void SetSpatialAwarenessLayer()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetSpatialAwarenessLayer_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetSpatialAwarenessLayer*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetSpatialAwarenessLayer" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetSpatialAwarenessLayer">SetSpatialAwarenessLayer()</h4>
+  <div class="markdown level1 summary"><p>Configures current Unity project to contain the default Spatial Awareness layer set in the Layers settings</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetSpatialAwarenessLayer()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetVisibleMetaFiles_" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetVisibleMetaFiles*"></a>
+  <h4 id="Microsoft_MixedReality_Toolkit_Utilities_Editor_MixedRealityProjectConfigurator_SetVisibleMetaFiles" data-uid="Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityProjectConfigurator.SetVisibleMetaFiles">SetVisibleMetaFiles()</h4>
+  <div class="markdown level1 summary"><p>Configures current Unity project to enabled visible meta files</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetVisibleMetaFiles()</code></pre>
   </div>
   
   
