@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>System keyboard | Mixed Reality Toolkit Documentation </title>
+    <title>&#31995;&#32479;&#38190;&#30424; | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="System keyboard | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#31995;&#32479;&#38190;&#30424; | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
@@ -80,11 +80,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="system-keyboard">System keyboard</h1>
+<h1 id="系统键盘">系统键盘</h1>
 
 <p><img src="Images/SystemKeyboard/MRTK_SystemKeyboard_Main.png" alt="System keyboard"></p>
 <p>A Unity application can invoke the system keyboard at any time. Note that the system keyboard will behave according to the target platform's capabilities, for example the keyboard on HoloLens 2 would support direct hand interactions, while the keyboard on HoloLens (1st gen) would support GGV<sup><a href="https://docs.microsoft.com/windows/mixed-reality/gaze">1</a></sup>.</p>
-<h2 id="how-to-invoke-the-system-keyboard">How to invoke the system keyboard</h2>
+<p>Unity应用程序可以在任何时候调用系统键盘。请注意，系统键盘将根据目标平台的能力表现，例如HoloLens 2上的键盘将支持直接的手部交互，而HoloLens(第1代)上的键盘将支持GGV<sup><a href="https://docs.microsoft.com/windows/mixed-reality/gaze">1</a></sup>。</p>
+<h2 id="如何调用系统键盘">如何调用系统键盘</h2>
 <pre><code class="lang-c#">public TouchScreenKeyboard keyboard;
 
 ...
@@ -94,7 +95,7 @@ public void OpenSystemKeyboard()
     keyboard = TouchScreenKeyboard.Open(&quot;&quot;, TouchScreenKeyboardType.Default, false, false, false, false);
 }
 </code></pre>
-<h2 id="how-to-read-the-input">How to read the input</h2>
+<h2 id="如何读取输入">如何读取输入</h2>
 <pre><code class="lang-c#">public TouchScreenKeyboard keyboard;
 
 ...
@@ -104,12 +105,13 @@ private void Update()
     if (keyboard != null)
     {
         keyboardText = keyboard.text;
-        // Do stuff with keyboardText
+        // 处理keyboardText
     }
 }
 </code></pre>
-<h2 id="system-keyboard-example">System keyboard example</h2>
-<p>You can see a simple example of how to bring up system keyboard in <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.SDK/Experimental/Features/UX/MixedRealityKeyboard.cs"><code>MixedRealityKeyboard.cs</code></a></p>
+<h2 id="系统键盘示例">系统键盘示例</h2>
+<p>您可以在<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.SDK/Experimental/Features/UX/MixedRealityKeyboard.cs"><code>MixedRealityKeyboard.cs</code></a>
+中看到一个如何调出系统键盘的简单示例。</p>
 </article>
           </div>
           

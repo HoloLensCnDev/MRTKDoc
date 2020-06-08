@@ -83,35 +83,37 @@
 <h1 id="slate">Slate</h1>
 
 <p><img src="Images/Slate/MRTK_Slate_Main.png" alt="Slate"></p>
-<p>The Slate prefab offers a thin window style control for displaying 2D content, for example plain text or articles including media. It offers a grabbable title bar as well as <em>Follow Me</em> and <em>Close</em> functionality. The content window can be scrolled via articulated hand input.</p>
-<h2 id="how-to-use-a-slate-control">How to use a slate control</h2>
-<p>A slate control is composed of the following elements:</p>
+<p>Slate 预制体提供了一个薄薄的窗口样式控件，用于显示2D内容，例如纯文本或包括媒体在内的文章。它提供了一个可抓取的标题栏以及<em>Follow Me</em>和<em>Close</em> 功能。内容窗口可以通过手动输入来滚动。</p>
+<h2 id="如何使用-slate-控件">如何使用 slate 控件</h2>
+<p>一个slate控件由以下元素组成:</p>
 <ul>
-<li><strong>TitleBar</strong>: The entire title bar on top of the slate.</li>
-<li><strong>Title</strong>: The title area on the left side of the title bar.</li>
-<li><strong>Buttons</strong>: The button area on the right side of the title bar.</li>
-<li><strong>BackPlate</strong>: The back side of the slate.</li>
-<li><strong>ContentQuad</strong>: Content is assigned as material. The example uses a sample material 'PanContent'.</li>
+<li><strong>TitleBar</strong>: 整个标题栏在slate的顶部。</li>
+<li><strong>Title</strong>: 标题栏左侧的标题区域。</li>
+<li><strong>Buttons</strong>: 标题栏右侧的按钮区域。</li>
+<li><strong>BackPlate</strong>: slate的背面。</li>
+<li><strong>ContentQuad</strong>: 指定内容为素材。该示例使用一个示例材料'PanContent'。</li>
 </ul>
 <img src="Images/Slate/MRTK_Slate_Structure.png" width="650">
-<h2 id="bounding-box">Bounding Box</h2>
-<p>A slate control contains a bounding box script for scaling and rotating. For more information on bounding box, please see the <a href="README_BoundingBox.html">Bounding box</a> page.</p>
+<h2 id="边界框">边界框</h2>
+<p>一个slate控件包含一个用于缩放和旋转的边界框脚本。有关包围框的更多信息，请参见<a href="README_BoundingBox.html">边界框</a>页面。</p>
 <img src="Images/Slate/MRTK_Slate_Box.png" width="650">
 <img src="Images/Slate/MRTK_Slate_Scale.png" width="650">
-<h2 id="buttons">Buttons</h2>
-<p>A standard slate offers two buttons as default on the top right of the title bar:</p>
+<h2 id="按钮">按钮</h2>
+<p>一个标准的slate在标题栏的右上方提供了两个默认的按钮:</p>
 <ul>
-<li><strong>Follow Me</strong>: Toggles an orbital solver components to make the slate object follow the user.</li>
-<li><strong>Close</strong>: Disables the slate object.</li>
+<li><p><strong>Follow Me</strong>: 切换orbital solver组件，让slate物体跟随用户。</p>
+</li>
+<li><p><strong>Close</strong>: 禁用slate对象。</p>
+</li>
 </ul>
 <img src="Images/Slate/MRTK_Slate_Buttons.png" width="650">
-<h2 id="scripts">Scripts</h2>
-<p>In general, the <code>NearInteractionTouchable.cs</code> script must be attached to any object that is intended to receive touch events from the <code>IMixedRealityTouchHandler</code>.</p>
+<h2 id="脚本">脚本</h2>
+<p>一般来说，<code>NearInteractionTouchable.cs</code>的脚本必须被附加到任何对象上，以接收来自<code>IMixedRealityTouchHandler</code>的触摸事件。</p>
 <img src="Images/Slate/MRTK_Slate_Scripts.png">
 <ul>
-<li><p><code>HandInteractionPan.cs</code> This script handles articulated hand input for touching and moving the content on the slate's <em>ContentQuad</em>.</p>
+<li><p><code>HandInteractionPan.cs</code> 这个脚本处理全关节手输入触摸和移动slate上的内容<em>ContentQuad</em>。</p>
 </li>
-<li><p><code>HandInteractionPanZoom.cs</code>: In addition to the panning interaction, this script supports two-handed zooming.</p>
+<li><p><code>HandInteractionPanZoom.cs</code>: 除了平移交互之外，这个脚本还支持双手缩放。</p>
 </li>
 </ul>
 <img src="Images/Slate/MRTK_Slate_PanZoom.png" width="500">

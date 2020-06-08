@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Object manipulator | Mixed Reality Toolkit Documentation </title>
+    <title>&#23545;&#35937;&#25805;&#32437;&#22120; Object manipulator | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Object manipulator | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#23545;&#35937;&#25805;&#32437;&#22120; Object manipulator | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
@@ -80,165 +80,172 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="object-manipulator">Object manipulator</h1>
+<h1 id="对象操纵器-object-manipulator">对象操纵器 Object manipulator</h1>
 
 <p><img src="Images/ManipulationHandler/MRTK_Manipulation_Main.png" alt="Object manipulator"></p>
-<p>The <em>ObjectManipulator</em> is the new component for manipulation behaviour, previously found in <em>ManipulationHandler</em>. The object manipulator makes a number of improvements and simplifications. This component is a replacement for the manipulation handler, which will be deprecated.</p>
-<p>The <em>ObjectManipulator</em> script makes an object movable, scalable, and rotatable using one or two hands. The object manipulator can be configured to control how the object will respond to various inputs. The script should work with most forms of interaction, such as HoloLens 2 articulated hand, HoloLens 2 hand rays, HoloLens 1 gaze and gestures and immersive headset motion controller input.</p>
-<h2 id="how-to-use-the-object-manipulator">How to use the object manipulator</h2>
-<p>To use the object manipulator, first add the <code>ObjectManipulator</code> script component to a GameObject. Make sure to also add a collider to the object, matching its grabbable bounds.</p>
-<p>To make the object respond to near articulated hand input, add the <code>NearInteractionGrabbable</code> script as well.</p>
-<p>Physics behaviour can be enabled for the object manipulator by adding a rigidbody component to the object. Physics behaviour enabled by adding this component is discussed in greater detail in <a href="#physics-and-collisions"><em>Physics and collisions</em></a>.</p>
-<p>As well as this, manipulation can be constrained by adding <a href="#transform-constraints">manipulation constraint components</a> to the object. These are special components that work with manipulation and change the manipulation behaviour in some way.</p>
+<p><em>ObjectManipulator</em>是操作行为的新组件，以前在<em>ManipulationHandler</em>中可以找到。object manipulator作了一些改进和简化。这个组件是manipulation handler的替代，manipulation handler将被弃用。</p>
+<p>使用一个或两个指针，<em>ObjectManipulator</em>脚本可以使对象可移动、可伸缩和可旋转。可以配置object manipulator来控制对象如何响应各种输入。该脚本应该与大多数形式的交互工作，如HoloLens 2 全关节手，HoloLens 2手射线，HoloLens 1凝视和手势和沉浸式头显运动控制器输入。</p>
+<h2 id="如何使用-object-manipulator">如何使用 object manipulator</h2>
+<p>要使用object manipulator，首先要将<code>ObjectManipulator</code>脚本组件添加到GameObject。同时确保在对象中添加一个collider，以匹配它的可抓取边界。</p>
+<p>要使对象响应近处全关节手输入，还需要添加<code>NearInteractionGrabbable</code>脚本。</p>
+<p>通过向对象添加刚体组件，可以为object manipulator启用物理行为。在<a href="#physics-and-collisions"><em>Physics and collisions</em></a>中更详细地讨论了添加这个组件所启用的物理行为。</p>
+<p>此外，还可以通过向对象添加<a href="#transform-constraints">manipulation constraint组件</a>来约束操纵。这些是处理manipulation并以某种方式改变操纵行为的特殊组件。</p>
 <p><img src="Images/ObjectManipulator/MRTK_ObjectManipulator_Howto.png" alt="Manipulation Handler"></p>
-<h2 id="inspector-properties-and-fields">Inspector properties and fields</h2>
+<h2 id="inspector-属性和字段">Inspector 属性和字段</h2>
 <img src="Images/ObjectManipulator/MRTK_ObjectManipulator_Structure.png" width="450">
-<h3 id="general-properties">General properties</h3>
+<h3 id="通用属性">通用属性</h3>
 <h4 id="host-transform">Host transform</h4>
-<p>The object transform that will be manipulated. Defaults to the object of the component.</p>
-<h4 id="manipulation-type">Manipulation type</h4>
-<p>Specifies whether the object can be manipulated using one hand or two hands. Because this property is a flag, both options can be selected.</p>
+<p>将被操作的对象进行变换。默认为附加组件的对象。</p>
+<h4 id="操纵属性-manipulation-type">操纵属性 Manipulation type</h4>
+<p>指定是否可以用一只手或两只手操纵对象。因为这个属性是一个标志，所以两个选项都可以被选中。</p>
 <ul>
-<li><em>One handed</em>: Enables one handed manipulation if selected.</li>
-<li><em>Two handed</em>: Enables two handed manipulation if selected.</li>
+<li><em>One handed</em>: 如果选中，启用单手操纵。</li>
+<li><em>Two handed</em>: 如果选中，启用双手操纵。</li>
 </ul>
-<h4 id="allow-far-manipulation">Allow far manipulation</h4>
-<p>Specifies whether manipulation can be done using far interaction with pointers.</p>
-<h3 id="one-handed-manipulation-properties">One handed manipulation properties</h3>
-<h4 id="one-hand-rotation-mode-near">One hand rotation mode near</h4>
-<p>Specifies how the object will behave when it is being grabbed with one hand near. These options only work for articulated hands.</p>
+<h4 id="允许远操纵--allow-far-manipulation">允许远操纵  Allow far manipulation</h4>
+<p>指定操纵是否可以使用与指针的远程交互来完成。</p>
+<h3 id="单手-manipulation-属性">单手 manipulation 属性</h3>
+<h4 id="单手远操纵模式-one-hand-rotation-mode-near">单手远操纵模式 One hand rotation mode near</h4>
+<p>指定当用一只手近处抓握对象的行为。这些选项仅适用于全关节手。</p>
 <ul>
-<li><em>Rotate about object center</em>: Object rotates using rotation of the hand, but about the object center point. The object will appear to move less as it rotates, but there may be a feeling of disconnection between the hand and the object. More useful for far interaction.</li>
-<li><em>Rotate about grab point</em>: Rotate object with the hand about the grab point between the thumb and index finger. It should feel as if the object is being held by the hand.</li>
+<li><p><em>Rotate about object center</em>: 使用手的旋转进行物体旋转，但绕物体中心点旋转。当物体旋转时，它看起来移动得少，但可能会有一种手和物体之间断开的感觉。对于远程交互更有用。</p>
+</li>
+<li><p><em>Rotate about grab point</em>: 用手旋转物体，旋转点是拇指和食指之间的抓取点。它应该感觉就像物体是由手拿着的。</p>
+</li>
 </ul>
-<h4 id="one-hand-rotation-mode-far">One hand rotation mode far</h4>
-<p>Specifies how the object will behave when it is being grabbed with one hand at distance. These options only work for articulated hands.</p>
+<h4 id="单手远旋转模式--one-hand-rotation-mode-far">单手远旋转模式  One hand rotation mode far</h4>
+<p>指定在远距离单手抓取时对象的行为方式。这些选项仅适用于全关节手。</p>
 <ul>
-<li><em>Rotate about object center</em>: Rotate object using rotation of the hand, but about the object center point. Useful for inspecting at a distance without the object center moving as the object rotates.</li>
-<li><em>Rotate about grab point</em>: Rotate object using rotation of the hand, but about the pointer ray hit point. Useful for inspection.</li>
+<li><p><em>Rotate about object center</em>: 用手旋转物体，但绕物体中心点旋转。适用于在物体旋转时物体中心不移动的情况下进行远距离检查。</p>
+</li>
+<li><p><em>Rotate about grab point</em>: 旋转物体使用手的旋转，旋转点为指针射线命中点。用于检查。</p>
+</li>
 </ul>
-<h3 id="two-handed-manipulation-properties">Two handed manipulation properties</h3>
-<h4 id="two-handed-manipulation-type">Two handed manipulation type</h4>
-<p>Specifies how two hand manipulation can transform an object. Because this property is a flag, any number of options can be selected.</p>
+<h3 id="双手-manipulation-属性">双手 manipulation 属性</h3>
+<h4 id="双手远操纵模式-two-handed-manipulation-type">双手远操纵模式 Two handed manipulation type</h4>
+<p>指定两个手操纵如何转换对象。因为这个属性是一个标志，所以可以选择任意数量的选项。</p>
 <ul>
-<li><em>Move</em>: Moving is allowed if selected.</li>
-<li><em>Scale</em>: Scaling is allowed if selected.</li>
-<li><em>Rotate</em>: Rotation is allowed if selected.</li>
+<li><em>Move</em>: 如果选中，移动是允许的。</li>
+<li><em>Scale</em>: 如果选中，允许缩放。</li>
+<li><em>Rotate</em>: 如果选中，允许旋转。</li>
 </ul>
 <p><img src="Images/ManipulationHandler/MRTK_ManipulationHandler_TwoHanded.jpg" alt="Manipulation Handler"></p>
-<h3 id="constraints">Constraints</h3>
-<h4 id="add-constraint">Add constraint</h4>
-<p>This button allows a constraint component to be added directly from the object manipulator inspector. All constraints in a project should be visible here. See <a href="#transform-constraints">transform constraints</a> for more info.</p>
-<h4 id="go-to-component">Go to component</h4>
-<p>All constraints found on the object wil be listed here with a <em>Go to component</em> button. This button will cause the inspector to scroll to the selected constraint component so that it can be configured.</p>
-<h3 id="physics">Physics</h3>
-<h4 id="release-behavior">Release behavior</h4>
-<p>Specify which physical properties a manipulated object should keep upon release. Requires a rigidbody component to be on that object. Because this property is a flag, both options can be selected.</p>
+<h3 id="约束-constraints">约束 Constraints</h3>
+<h4 id="添加约束-add-constraint">添加约束 Add constraint</h4>
+<p>此按钮允许直接从object manipulator检查器添加约束组件。项目中的所有约束在这里都应该是可见的。有关更多信息，请参见<a href="#transform-constraints">transform constraints</a>。</p>
+<h4 id="跳转到组件-go-to-component">跳转到组件 Go to component</h4>
+<p>在对象上发现的所有约束将在这里列出，并带有一个<em>Go to component</em>按钮。此按钮将导致inspector滚动到选中的约束组件，以便对其进行配置。</p>
+<h3 id="物理-physics">物理 Physics</h3>
+<h4 id="释放行为-release-behavior">释放行为 Release behavior</h4>
+<p>指定被操纵对象在释放时应保持哪些物理属性。要求rigidbody 组件位于该对象上。因为这个属性是一个标志，所以两个选项都可以被选中。</p>
 <ul>
-<li><em>Keep Velocity</em>: When the object is released, if this option is selected it will keep its linear velocity.</li>
-<li><em>Keep Angular Velocity</em>: When the object is released, if this option is selected it will keep its angular velocity.</li>
+<li><em>Keep Velocity</em>: 释放对象时，如果选择此选项，将保持其线速度。</li>
+<li><em>Keep Angular Velocity</em>: 释放物体时，如果选择此选项，物体将保持角速度。</li>
 </ul>
-<h3 id="smoothing">Smoothing</h3>
+<h3 id="平滑-smoothing">平滑 Smoothing</h3>
 <h4 id="smoothing-active">Smoothing active</h4>
-<p>Specifies whether smoothing is active.</p>
+<p>指定平滑是否激活。</p>
 <h4 id="move-lerp-time">Move lerp time</h4>
-<p>Amount of smoothing to apply to the movement. Smoothing of 0 means no smoothing. Max value means no change to value.</p>
+<p>对运动的平滑量。平滑为0表示没有平滑。最大值意味着不改变值。</p>
 <h4 id="rotate-lerp-time">Rotate lerp time</h4>
-<p>Amount of smoothing to apply to the rotation. Smoothing of 0 means no smoothing. Max value means no change to value.</p>
+<p>用于旋转的平滑量。平滑为0表示没有平滑。最大值意味着不改变值。</p>
 <h4 id="scale-lerp-time">Scale lerp time</h4>
-<p>Amount of smoothing to apply to the scale. Smoothing of 0 means no smoothing. Max value means no change to value.</p>
-<h3 id="manipulation-events">Manipulation events</h3>
-<p>Manipulation handler provides the following events:</p>
+<p>用于缩放的平滑量。平滑为0表示没有平滑。最大值意味着不改变值。</p>
+<h3 id="操纵事件-manipulation-events">操纵事件 Manipulation events</h3>
+<p>Manipulation handler提供以下事件:</p>
 <ul>
-<li><em>OnManipulationStarted</em>: Fired when manipulation starts.</li>
-<li><em>OnManipulationEnded</em>: Fires when the manipulation ends.</li>
-<li><em>OnHoverStarted</em>: Fires when a hand / controller hovers the manipulatable, near or far.</li>
-<li><em>OnHoverEnded</em>: Fires when a hand / controller un-hovers the manipulatable, near or far.</li>
+<li><em>OnManipulationStarted</em>: 在操纵开始时触发。</li>
+<li><em>OnManipulationEnded</em>: 在操纵结束时触发。</li>
+<li><em>OnHoverStarted</em>: 当手/控制器将可操纵对象悬停时触发，从近处或远处。</li>
+<li><em>OnHoverEnded</em>: 当手/控制器将可操纵对象移开时触发，从近处或远处。</li>
 </ul>
-<p>The event fire order for manipulation is:</p>
+<p>操纵的事件激发顺序为:</p>
 <p><em>OnHoverStarted</em> -&gt; <em>OnManipulationStarted</em> -&gt; <em>OnManipulationEnded</em> -&gt; <em>OnHoverEnded</em></p>
-<p>If there is no manipulation, you will still get hover events with the following fire order:</p>
+<p>如果没有操纵，你仍然会得到悬停事件与以下激发的顺序:</p>
 <p><em>OnHoverStarted</em> -&gt; <em>OnHoverEnded</em></p>
-<h2 id="transform-constraints">Transform constraints</h2>
-<p>Constraints can be used to limit manipulation in some way. For example, some applications may require rotation, but also require that the object remain upright. In this case, a <code>RotationAxisConstraint</code> can be added to the object and used to limit rotation to y-axis rotation. MRTK provides a number of constraints, all of which are described below.</p>
-<p>It is also possible to define new constraints and use them to create unique manipulation behaviour that may be needed for some applications. To do this, create a script that inherits from <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.UI.TransformConstraint.html"><code>TransformConstraint</code></a> and implement the abstract <code>ConstraintType</code> property and the abstract <code>ApplyConstraint</code> method. Upon adding a new constraint to the object, it should constrain manipulation in the way that was defined. This new constraint should also show in the object manipulator <a href="#constraints">constraint fields</a>.</p>
-<p>All of the constraints provided by MRTK share the following properties:</p>
-<h4 id="target-transform">Target Transform</h4>
-<p>Transform of the manipulated object being constrained. This should be the same as the ObjectManipulator <a href="#host-transform"><em>Host transform</em></a>. Defaults to the object of the component.</p>
-<h4 id="hand-type">Hand Type</h4>
-<p>Specifies whether the constraint is used for one handed, two handed or both kinds of manipulation. Because this property is a flag, both options can be selected.</p>
+<h2 id="变换约束-transform-constraints">变换约束 Transform constraints</h2>
+<p>约束可以用来以某种方式限制操纵。例如，一些应用程序可能需要旋转，但也要求对象保持直立。在这种情况下，可以向对象添加一个 <code>RotationAxisConstraint</code>，用于将旋转限制为y轴旋转。MRTK提供了一些约束，所有这些约束将在下面进行描述。</p>
+<p>还可以定义新的约束，并使用它们创建某些应用程序可能需要的惟一操纵行为。为此，创建一个从<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.UI.TransformConstraint.html"><code>TransformConstraint</code></a>继承的脚本，并实现抽象的 <code>ConstraintType</code> 属性和抽象的<code>ApplyConstraint</code>方法。在向对象添加新的约束之后，它应该以定义的方式约束操纵。这个新的约束也应该显示在object manipulator<a href="#%E7%BA%A6%E6%9D%9F-constraints">约束字段</a>中。</p>
+<p>MRTK提供的所有约束均具有以下性质:</p>
+<h4 id="目标变换-target-transform">目标变换 Target Transform</h4>
+<p>被约束的被操纵对象的变换。这应该与ObjectManipulator <a href="#host-transform"><em>Host transform</em></a>相同。默认为组件的对象。</p>
+<h4 id="手类型-hand-type">手类型 Hand Type</h4>
+<p>指定约束是用于单手操纵、双手操纵还是同时用于两种操纵。因为这个属性是一个标志，所以两个选项都可以被选中。</p>
 <ul>
-<li><em>One handed</em>: Constraint will be used during one handed manipulation if selected.</li>
-<li><em>Two handed</em>: Constraint will be used during two handed manipulation if selected.</li>
+<li><em>One handed</em>: 如果选中，将在单手操纵期间使用约束。</li>
+<li><em>Two handed</em>: 如果选中，将在双手操纵期间使用约束。</li>
 </ul>
-<h4 id="proximity-type">Proximity Type</h4>
-<p>Specifies whether the constraint is used for near, far or both kinds of manipulation. Because this property is a flag, both options can be selected.</p>
+<h4 id="接近类型-proximity-type">接近类型 Proximity Type</h4>
+<p>指定约束是用于近操纵、远操纵还是同时用于这两种操纵。因为这个属性是一个标志，所以两个选项都可以被选中。</p>
 <ul>
-<li><em>Near</em>: Constraint will be used during near manipulation if selected.</li>
-<li><em>Far</em>: Constraint will be used during far manipulation if selected.</li>
+<li><em>Near</em>: 如果选中，将在近操纵期间使用约束。</li>
+<li><em>Far</em>: 如果选中，将在远操纵期间使用约束。</li>
 </ul>
 <h3 id="faceuserconstraint">FaceUserConstraint</h3>
 <img src="Images/ObjectManipulator/MRTK_Constraint_FaceUser.gif" width="400">
-<p>When this constraint is attached to an object, rotation will be limited so that object will always face the user. This is useful for slates or panels. The properties for <code>FaceUserConstraint</code> are as follows:</p>
+<p>当将此约束附加到对象时，旋转将受到限制，以便该对象始终面向用户。这对于slates或平面非常有用。 <code>FaceUserConstraint</code>的属性如下:</p>
 <h4 id="face-away">Face away</h4>
-<p>Object faces away from the user if true.</p>
+<p>如果为真，则对象背对用户。</p>
 <h3 id="fixeddistanceconstraint">FixedDistanceConstraint</h3>
 <img src="Images/ObjectManipulator/MRTK_Constraint_FixedDistance.gif" width="400">
-<p>This constraint fixes the distance between the manipulated object and another object transform on manipulation start. This is useful for behaviour such as fixing the distance from the manipulated object to the head transform. The properties for <code>FixedDistanceConstraint</code> are as follows:</p>
+<p>此约束确定了操纵开始时被操纵对象与另一个对象转换之间的距离。这对于固定从被操纵对象到头部transform的距离等行为是有用的。<code>FixedDistanceConstraint</code>的属性如下:</p>
 <h4 id="constraint-transform">Constraint transform</h4>
-<p>This is the other transform that the manipulated object will have a fixed distance to. Defaults to the camera transform.</p>
+<p>这是另一个变换，被操纵对象到它的距离是固定的。默认为到相机的位置。</p>
 <h3 id="fixedrotationtouserconstraint">FixedRotationToUserConstraint</h3>
 <img src="Images/ObjectManipulator/MRTK_Constraint_FixedRotationToUser.gif" width="400">
-<p>This constraint fixes the relative rotation between the user and the manipulated object while it is being manipulated. This is useful for slates or panels as it ensures that the manipulated object always shows the same face to the user as it did at the start of manipulation. The <code>FixedRotationToUserConstraint</code> does not have any unique properties.</p>
+<p>此约束修复了用户和被操纵对象在被操纵时的相对旋转。这对于slates或平面非常有用，因为它可以确保被操纵的对象始终向用户显示与操纵开始时相同的朝向。
+<code>FixedRotationToUserConstraint</code> 没有任何唯一的属性。</p>
 <h3 id="fixedrotationtoworldconstraint">FixedRotationToWorldConstraint</h3>
 <img src="Images/ObjectManipulator/MRTK_Constraint_FixedRotationToWorld.gif" width="400">
-<p>This constraint fixes the global rotation of the manipulated object while it is being manipulated. This can be useful in cases where no rotation should be imparted by manipulation. The <code>FixedRotationToWorldConstraint</code> does not have any unique properties:</p>
+<p>此约束修复了被操纵对象在被操纵时的全局旋转。这对于不应该通过操纵进行旋转的情况非常有用。<code>FixedRotationToWorldConstraint</code> 没有任何独特的属性:</p>
 <h3 id="maintainapparentsizeconstraint">MaintainApparentSizeConstraint</h3>
 <img src="Images/ObjectManipulator/MRTK_Constraint_MaintainApparentSize.gif" width="400">
-<p>When this constraint is attached to an object, no matter how far the object is from the user, it will maintain the same apparent size to the user (i.e. it will take up the same proportion of the user's field of view). This can be used to ensure that a slate or text panel remains readable while manipulating. The <code>MaintainApparentSizeConstraint</code> does not have any unique properties:</p>
+<p>当这个约束被附加到一个对象上时，不管这个对象离用户有多远，它对用户来说都会保持相同的外观尺寸(也就是说，它会占据用户视场的相同比例)。这可以用来确保操纵 slate或文本面板时保持可读性。<code>MaintainApparentSizeConstraint</code>没有任何唯一的属性:</p>
 <h3 id="moveaxisconstraint">MoveAxisConstraint</h3>
 <img src="Images/ObjectManipulator/MRTK_Constraint_MoveAxis.gif" width="400">
-<p>This constraint can be used to fix along which axes a manipulated object can be moved. This can be useful for manipulating objects over the surface of a plane, or along a line. The properties for <code>MoveAxisConstraint</code> are as follows:</p>
-<h4 id="constraint-on-movement">Constraint on movement</h4>
-<p>Specifies which axes to prevent movement on. By default these axes will be global rather than local, but this can be changed below. Because this property is a flag, any number of options can be selected.</p>
+<p>此约束可用于确定操纵对象可沿哪个轴移动。这对于在平面或直线上操纵对象非常有用。<code>MoveAxisConstraint</code> 的属性如下:</p>
+<h4 id="对移动的约束-constraint-on-movement">对移动的约束 Constraint on movement</h4>
+<p>指定要防止在哪个轴上移动。默认情况下，这些轴将是全局的，而不是本地的，但这可以在下面进行更改。因为这个属性是一个标志，所以可以选择任意数量的选项。</p>
 <ul>
-<li><em>X Axis</em>: Movement along the x-axis is constrained if selected.</li>
-<li><em>Y Axis</em>: Movement along the y-axis is constrained if selected.</li>
-<li><em>Z Axis</em>: Movement along the z-axis is constrained if selected.</li>
+<li><em>X Axis</em>: 如果选择，沿X轴的移动受到限制。</li>
+<li><em>Y Axis</em>: 如果选择，沿Y轴的移动受到限制。</li>
+<li><em>Z Axis</em>: 如果选择，沿Z轴的移动受到限制。</li>
 </ul>
-<h4 id="use-local-space-for-constraint">Use local space for constraint</h4>
-<p>Will constrain relative the manipulated object's local transform axes if true. False by default.</p>
+<h4 id="使用本地坐标进行约束-use-local-space-for-constraint">使用本地坐标进行约束 Use local space for constraint</h4>
+<p>如果为真，将约束相对于被操纵对象的局部变换轴。默认为False。</p>
 <h3 id="rotationaxisconstraint">RotationAxisConstraint</h3>
 <img src="Images/ObjectManipulator/MRTK_Constraint_RotationAxis.gif" width="400">
-<p>This constraint can be used to fix about which axes a manipulated object can be rotated. This can be useful for keeping a manipulated object upright, but still allowing y-axis rotations, for example. The properties for <code>RotationAxisConstraint</code> are as follows:</p>
-<h4 id="constraint-on-rotation">Constraint on rotation</h4>
-<p>Specifies which axes to prevent rotation about. By default these axes will be global rather than local, but this can be changed below. Because this property is a flag, any number of options can be selected.</p>
+<p>此约束可用于确定被操纵对象可以旋转的轴。这对于保持被操纵的对象垂直，但仍然允许y轴旋转是很有用的。<code>RotationAxisConstraint</code>的属性如下:</p>
+<h4 id="对旋转的约束-constraint-on-rotation">对旋转的约束 Constraint on rotation</h4>
+<p>指定防止旋转的轴。默认情况下，这些轴将是全局的，而不是本地的，但这可以在下面进行更改。因为这个属性是一个标志，所以可以选择任意数量的选项。</p>
 <ul>
-<li><em>Y Axis</em>: Rotation about the y-axis is constrained if selected.</li>
-<li><em>Z Axis</em>: Rotation about the z-axis is constrained if selected.</li>
-<li><em>X Axis</em>: Rotation about the x-axis is constrained if selected.</li>
+<li><em>Y Axis</em>: 如果选择，绕Y轴的旋转受到限制。</li>
+<li><em>Z Axis</em>: 如果选择，绕Z轴的旋转受到限制。</li>
+<li><em>X Axis</em>: 如果选择，绕X轴的旋转受到限制。</li>
 </ul>
-<h4 id="use-local-space-for-constraint-1">Use local space for constraint</h4>
-<p>Will constrain relative the manipulated object's local transform axes if true. False by default.</p>
+<h4 id="使用本地坐标进行约束-use-local-space-for-constraint-1">使用本地坐标进行约束 Use local space for constraint</h4>
+<p>如果为真，将约束相对于被操纵对象的局部变换轴。默认为False。</p>
 <h3 id="minmaxscaleconstraint">MinMaxScaleConstraint</h3>
 <img src="Images/ObjectManipulator/MRTK_Constraint_MinMaxScale.gif" width="400">
-<p>This constraint allows minimum and maximum values to be set for the scale of the manipulated object. This is useful for preventing users from scaling an object too small or too large. The properties for <code>MinMaxScaleConstraint</code> are as follows:</p>
+<p>此约束允许为操纵对象的scale设置最小值和最大值。这对于防止用户缩放太小或太大的对象非常有用。<code>MinMaxScaleConstraint</code> 的属性如下:</p>
 <h4 id="scale-minimum">Scale minimum</h4>
-<p>The minimum scale value during manipulation.</p>
+<p>操纵时的最小scale值。</p>
 <h4 id="scale-maximum">Scale maximum</h4>
-<p>The maximum scale value during manipulation.</p>
+<p>操纵时的最大scale值。</p>
 <h4 id="relative-to-initial-state">Relative to initial state</h4>
-<p>If true, the values above will be interpreted as relative to the objects initial scale. Otherwise they will be interpreted as absolute scale values.</p>
-<h2 id="physics-and-collisions">Physics and collisions</h2>
-<p>Physics behaviour can be enabled by adding a rigidbody component to the same object as an object manipulator. Not only does this enable configuration of <a href="#release-behavior">release behaviour</a> above, it also enables collisions. Without a rigidbody component, collisions don't behave correctly during manipulation:</p>
+<p>如果为真，那么上面的值将被解释为相对于对象初始的scale的值。否则将被解释为绝对scale值。</p>
+<h2 id="物理和碰撞">物理和碰撞</h2>
+<p>物理行为可以通过将刚体组件添加到与object manipulator相同的对象来启用。这不仅支持上面的 <a href="#%E9%87%8A%E6%94%BE%E8%A1%8C%E4%B8%BA-release-behavior">释放行为</a> 配置，还支持碰撞。如果没有刚体组件，在操纵过程中碰撞就不能正常运行:</p>
 <ul>
-<li>Collisions between a manipulated object and a static collider (i.e. an object with a collider but no rigidbody) do not work, the manipulated object passes straight through the static collider unaffected.</li>
-<li>Collisions between a manipulated object and a rigidbody (i.e an object with both a collider and a rigidbody) cause the rigidbody to have a collision response, but the response is jumpy and unnatural. There is also no collision response on the manipulated object.</li>
+<li><p>被操纵对象与静态碰撞器(即具有碰撞器但没有刚体的对象)之间的碰撞不起作用，被操纵对象直接通过静态碰撞器而不受影响。</p>
+</li>
+<li><p>被操纵物体与刚体之间的碰撞(例如一个同时具有碰撞器和刚体的物体)会使刚体产生碰撞反应，但这种反应是跳跃的和不自然的。在被操纵的对象上也没有碰撞响应。</p>
+</li>
 </ul>
-<p>When a rigidbody is added, collisions should work correctly.</p>
-<h3 id="without-rigidbody">Without rigidbody</h3>
+<p>当加入刚体时，碰撞应该能正常工作。</p>
+<h3 id="没有-rigidbody">没有 rigidbody</h3>
 <img src="Images/ObjectManipulator/MRTK_PhysicsManipulation_NoRigidbody.gif" width="500">
-<h3 id="with-rigidbody">With rigidbody</h3>
+<h3 id="具有-rigidbody">具有 rigidbody</h3>
 <img src="Images/ObjectManipulator/MRTK_PhysicsManipulation_Rigidbody.gif" width="500">
 </article>
           </div>

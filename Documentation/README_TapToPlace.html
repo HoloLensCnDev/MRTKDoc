@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Tap to Place | Mixed Reality Toolkit Documentation </title>
+    <title>&#28857;&#20987;&#25918;&#32622; Tap to Place | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Tap to Place | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#28857;&#20987;&#25918;&#32622; Tap to Place | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
@@ -80,67 +80,56 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="tap-to-place">Tap to Place</h1>
+<h1 id="点击放置-tap-to-place">点击放置 Tap to Place</h1>
 
 <p><img src="Images/Solver/TapToPlace/TapToPlaceIntroGif.gif" alt="TapToPlace"></p>
-<p>Tap to Place is a far interaction component that is used to place a game object on surface. This component is useful for placing objects on a spatial mesh. Tap to Place uses a combination of two clicks and head movement to place an object. A click to start the placement, head movement to control the position of the object and a click to place the object in the scene.</p>
-<h2 id="using-tap-to-place">Using Tap to Place</h2>
+<p>Tap to Place是一个远程交互组件，用于在表面上放置游戏对象。这个组件对于在空间网格上放置对象非常有用。点击放置使用了两次点击和头部移动的组合来放置一个对象。点击开始放置，头部移动控制对象的位置，点击将对象放置在场景中。</p>
+<h2 id="使用-tap-to-place">使用 Tap to Place</h2>
 <ol>
-<li><p>Set up the scene</p>
-<ul>
-<li>Create a new unity scene</li>
-<li>Add MRTK to the scene by navigating to the <strong>Mixed Reality Toolkit</strong> &gt; <strong>Add to Scene and Configure</strong></li>
-</ul>
+<li><p>设置场景
+-创建一个新的unity场景
+-添加MRTK到场景导航到<strong>Mixed Reality Toolkit</strong> &gt; <strong>Add to Scene and Configure</strong></p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Tap to Place uses clicks driven by the MRTK Input System but it can also be controlled without clicks, see the Tap To Place Code Configurability section below.</p>
+<p>Tap to Place使用由MRTK输入系统驱动的点击，但是它也可以不用点击来控制，请看下面的点击放置代码可配置性一节。
+-添加一个立方体到场景中，将比例改为0.2，位置改为(0,0,0.7)。</p>
 </div>
-<ul>
-<li>Add a cube to the scene and change the scale to 0.2 and change the position to (0, 0, 0.7).</li>
-</ul>
 </li>
-<li><p>Attach <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.TapToPlace.html">Tap to Place</a> to a game object with a collider</p>
+<li><p>将<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.TapToPlace.html">Tap to Place</a>附加到具有碰撞器的游戏对象上</p>
 <p><img src="Images/Solver/TapToPlace/TapToPlaceInspector2.png" alt="TapToPlaceInspector"></p>
-<ul>
-<li>When the Tap to Place component is added, a Solver Handler will also be attached. Tap to Place derives from the <a href="README_Solver.html">Solver</a> class which requires a Solver Handler. The position of a Tap to Place object is calculated relative to the <code>TrackedTargetType</code> within the Solver Handler. By default the Head is the <code>TrackedTargetType</code>, i.e. when the head moves, the object follows if it is selected.  The <code>TrackedTargetType</code> can also be set to Controller Ray which has the object follow the controller. The first group of properties in the Tap to Place inspector are the <a href="README_Solver.html#common-solver-properties">Common Solver Properties</a>.</li>
-</ul>
+<p>-当Tap to Place组件被添加时，一个求解程序处理程序也将被附加。点到位置来自<a href="README_Solver.html">Solver</a>类，它需要一个Solver Handler。点击放置对象的位置是相对于Solver Handler中的<code>TrackedTargetType</code>计算的。默认情况下，头部是<code>TrackedTargetType</code>，也就是说，当头部移动时，如果它被选中，对象也会跟着移动。<code>TrackedTargetType</code>也可以设置为Controller Ray，它让对象跟随控制器。Tap to Place检查器中的第一组属性是<a href="README_Solver.html#common-solver-properties">Common Solver属性</a>。</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Tap to Place is a stand alone Solver and cannot be chained with other Solvers. It cannot be chained because SolverHandler.UpdateSolvers is used to update the object's position while it is being placed.</p>
+<p>Tap to Place是一个独立的Solver，不能与其他Solver连接。它不能被链接，因为SolverHandler.UpdateSolvers用于在放置对象时更新对象的位置。</p>
 </div>
 <ul>
-<li>Tap to Place Properties:
+<li>Tap to Place 属性:
 <ul>
-<li><code>Auto Start</code>: If true, the Tap to Place solver will start out controlling the position of the game object to be placed. The object will immediately start following the TrackedTargetType (Head or Controller Ray). This value must be modified before Start() is invoked in order to have any effect.</li>
-<li><code>Default Placement Distance</code>: The default distance (in meters) an object will be placed relative to the TrackedTargetType forward in the SolverHandler. The game object will be placed at the default placement distance if a surface is not hit by the raycast.</li>
-<li><code>Max Raycast Distance</code>: The max distance (meters) for the raycast based on the 'TrackedTargetType' origin. This raycast looks for a surface to place a selected object.</li>
-<li><code>Surface Normal Offset</code>: The distance between the center of the game object to place and a surface along the surface normal, if the raycast hits a surface. By default, the surface normal offset is 0 but after Start() the surface normal offset is set to the collider's extents along the z axis.</li>
-<li><code>Keep Orientation Vertical</code>: If true, the game object to place will remain upright and in line with Vector3.up.</li>
-<li><code>Rotate According to Surface</code>: If false, the game object to place will not change its rotation according to the surface hit.  The object will remain facing the camera while IsBeingPlaced is true.</li>
-<li><code>Magnetic Surfaces</code>: An array of LayerMasks to execute from highest to lowest priority. First layer mask to provide a raycast hit will be used for position calculations.</li>
-<li><code>Debug Enabled</code>: If true and in the Unity Editor, the normal of the raycast hit will be drawn in yellow. Debug enabled is useful when <code>RotateAccordingToSurface</code> is true because it draws the normal of the surface hit which visually explains why the object is set at its current orientation.</li>
-<li><code>On Placing Started</code>: This event is triggered once when the game object to place is selected.</li>
-<li><code>On Placing Stopped</code>: This event is triggered once when the game object to place is unselected, placed.</li>
+<li><code>Auto Start</code>:如果为真，点击位置Solver将开始控制游戏对象的位置。对象将立即开始跟随TrackedTargetType(头或控制器射线)。必须在调用Start()之前修改该值，才能产生效果。</li>
+<li><code>Default Placement Distance</code>:在SolverHandler中，一个对象被放置的默认距离(单位为米)是相对于TrackedTargetType向前的。如果表面没有被射线投射击中，游戏对象将被放置在默认的位置距离。</li>
+<li><code>Max Raycast Distance</code>:基于'TrackedTargetType'原点的射线投射的最大距离(米)。这个射线寻找一个表面来放置选中的对象。</li>
+<li><code>Surface Normal Offset</code>:如果射线投射命中表面，游戏物体要放置的中心和表面法线上的表面之间的距离。默认情况下，表面法线偏移量为0，但是在Start()之后，表面法线偏移量被设置为碰撞器沿z轴的范围。</li>
+<li><code>Keep Orientation Vertical</code>:如果为真，要放置的游戏对象将保持垂直并与Vector3.up保持一致。</li>
+<li><code>Rotate According to Surface</code>:如果为false，游戏对象将不会根据击中表面而改变旋转。当被设置为true时，物体将保持面对摄像机。</li>
+<li><code>Magnetic Surfaces</code>:从最高到最低优先级执行的LayerMask数组。第一层layer mask 提供一个投射命中用于位置计算。</li>
+<li><code>Debug Enabled</code>:如果为真，在Unity编辑器中，射线命中的法线将被绘制成黄色。当<code>RotateAccordingToSurface</code>为true时，启用调试很有用，因为它绘制表面命中的法线，这直观地解释了为什么对象被设置为当前方向。</li>
+<li><code>On Placing Started</code>:当选择放置游戏对象时，这个事件会触发一次。</li>
+<li><code>On Placing Stopped</code>:当游戏对象放置未被选择，放置时，这个事件被触发一次。</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>Testing Tap to Place behavior in editor</p>
-<ul>
-<li>Press play and hold the space bar to show an input simulation hand.</li>
-<li>Move the hand until the cube is in focus and simulate a click with the input simulation hand by clicking with the left mouse.
-<ul>
-<li>If colliders are not present in the scene, the object will follow the <code>TrackedTargetType</code> at the defined <code>Default Placement Distance</code>.</li>
-</ul>
-</li>
-<li>The object will follow the movement of the <code>TrackedTargetType</code> after selection. To simulate head movement in editor, press the WASD keys. Change head rotation by clicking and holding the right mouse.</li>
-<li>To stop placing the object, click again.  The object does not need to be in focus for the stop placement click. Focus is only required for the initial click that starts the placement process.</li>
-</ul>
+<li><p>在编辑器中测试Tap to Place 行为
+-按play键并按住空格键显示输入仿真手。
+-移动手，直到立方体处于对焦状态，用输入的模拟手点击鼠标左键，模拟点击。
+-如果碰撞器没有出现在场景中，对象将遵循<code>TrackedTargetType</code>在定义的<code>Default Placement Distance</code>。
+-对象在选择后会跟随<code>TrackedTargetType</code>的移动。在编辑器中模拟头部运动，按WASD键。按住鼠标右键改变头部旋转。
+-要停止放置对象，请再次单击。单击停止位置时，对象不需要处于聚焦中。只有在开始放置过程的初始点击时才需要聚焦。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;"><code>TrackedTargetType</code>: Head (Default)</th>
-<th style="text-align: center;"><code>TrackedTargetType</code>: Controller Ray</th>
+<th style="text-align: center;"><code>TrackedTargetType</code>: 头部(默认)</th>
+<th style="text-align: center;"><code>TrackedTargetType</code>: 控制器射线</th>
 </tr>
 </thead>
 <tbody>
@@ -152,12 +141,12 @@
 </table>
 </li>
 </ol>
-<h2 id="tap-to-place-code-configurability">Tap to Place Code Configurability</h2>
-<p>Tap to Place object selection timing can also be controlled via <code>StartPlacement()</code> and <code>StopPlacement()</code> instead of requiring a click event. This capability is useful for writing tests and provides an alternative method to place an object in editor without using the MRTK Input System.</p>
+<h2 id="tap-to-place-代码可配置性">Tap to Place 代码可配置性</h2>
+<p>Tap to Place 选择时间也可以通过<code>StartPlacement()</code> 和<code>StopPlacement()</code> 来控制，而不需要一个点击事件。此功能对于编写测试非常有用，并提供了在不使用MRTK输入系统的情况下在编辑器中放置对象的替代方法。</p>
 <ol>
-<li><p>Create an empty game object</p>
+<li><p>创建一个空的游戏对象</p>
 </li>
-<li><p>Create and attach the following example script to the empty game object</p>
+<li><p>创建以下示例脚本并将其附加到空的游戏对象</p>
 <pre><code>using UnityEngine;
 using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
 
@@ -189,21 +178,21 @@ public class TapToPlaceInputExample : MonoBehaviour
 }
 </code></pre>
 </li>
-<li><p>In play mode, press the <em>U key</em> to start placing the cube</p>
+<li><p>在播放模式下，按<em>U键</em>开始放置立方体</p>
 </li>
-<li><p>Press the <em>I key</em> to stop the placement</p>
+<li><p>按<em>I键</em>停止放置</p>
 </li>
 </ol>
-<h2 id="tap-to-place-example-scene">Tap to Place Example Scene</h2>
-<p>The Tap to Place example scene consists of 4 placeable objects, each with a different configuration. The example scene contains walls to show the surface placement behavior that are disabled by default in the hierarchy. The example scene can be found in the Microsoft.MixedReality.Toolkit.Unity.Examples unity package found on the <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases">Release Page</a>. The scene location is: <em>MRTK.Examples/Demos/Solvers/Scenes/TapToPlaceExample.unity</em></p>
+<h2 id="tap-to-place-示例场景">Tap to Place 示例场景</h2>
+<p>Tap to Place示例场景由4个可替换的对象组成，每个对象都有不同的配置。示例场景包含墙壁，以显示hierarchy中默认禁用的表面放置行为。示例场景可以在 Microsoft.MixedReality.Toolkit.Unity.Examples中找到。在[发布页面](<a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases%E6%89%BE%E5%88%B0unity%E5%8C%85%E7%9A%84%E4%BE%8B%E5%AD%90%E3%80%82%E5%9C%BA%E6%99%AF%E4%BD%8D%E7%BD%AE%E4%B8%BA:*MRTK.Examples/Demos/Solvers/Scenes/TapToPlaceExample.unity">https://github.com/Microsoft/MixedRealityToolkit-Unity/releases找到unity包的例子。场景位置为:*MRTK.Examples/Demos/Solvers/Scenes/TapToPlaceExample.unity</a>*</p>
 <p><img src="Images/Solver/TapToPlace/TapToPlaceExampleScene.gif" alt="TapToPlaceExampleScene"></p>
-<h2 id="see-also">See also</h2>
+<h2 id="建议浏览">建议浏览</h2>
 <ul>
 <li><a href="README_Solver.html">Solvers</a></li>
-<li><a href="SpatialAwareness/SpatialAwarenessGettingStarted.html">Spatial Awareness</a></li>
-<li><a href="InputSimulation/InputSimulationService.html">Input Simulation</a></li>
-<li><a href="Input/HandTracking.html">Hand Tracking</a></li>
-<li><a href="Input/Gaze.html">Gaze</a></li>
+<li><a href="SpatialAwareness/SpatialAwarenessGettingStarted.html">空间感知</a></li>
+<li><a href="InputSimulation/InputSimulationService.html">输入模拟</a></li>
+<li><a href="Input/HandTracking.html">手部跟踪</a></li>
+<li><a href="Input/Gaze.html">凝视</a></li>
 </ul>
 </article>
           </div>

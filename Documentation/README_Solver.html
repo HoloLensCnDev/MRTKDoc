@@ -83,67 +83,68 @@
 <h1 id="solvers">Solvers</h1>
 
 <p><img src="Images/Solver/MRTK_Solver_Main.png" alt="Solver"></p>
-<p>Solvers are components that facilitate the means of calculating an object's position &amp; orientation according to a predefine algorithm. An example may be placing an object on the surface the user's gaze raycast currently hits.</p>
-<p>Furthermore, the Solver system deterministically defines an order of operations for these transform calculations as there is no reliable way to specify to Unity the update order for components.</p>
-<p>Solvers offer a range of behaviors to attach objects to other objects or systems. One other example would be a tag-along object that hovers in front of the user (based on the camera). A solver could also be attached to a controller and an object to make the object tag-along the controller. All solvers can be safely stacked, for example a tag-along behavior + surface magnetism + momentum.</p>
-<h2 id="how-to-use-a-solver">How to use a solver</h2>
-<p>The Solver system consists of three categories of scripts:</p>
+<p>Solvers是便于根据预定义算法计算对象的位置和方向的组件。一个例子可能是将一个物体放在用户当前的凝视射线投射的表面上。</p>
+<p>此外，由于没有可靠的方法来统一组件的更新顺序，Solvers系统确定性地定义了这些转换计算的操作顺序。</p>
+<p>Solvers提供一系列将对象附加到其他对象或系统的行为。另一个例子是一个挂在用户前面的对象(基于摄像机)。Solvers也可以附加到控制器和对象上，使对象跟随控制器。所有的Solvers都可以安全地堆叠在一起，例如，一个跟随行为+表面磁性+动量(tag-along behavior + surface magnetism + momentum)。</p>
+<h2 id="如何使用-solver">如何使用 solver</h2>
+<p>Solver系统由三类脚本组成:</p>
 <ul>
-<li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.Solver.html"><code>Solver</code></a>: The base abstract class that all solvers derive from. It provides state tracking, smoothing parameters and implementation, automatic solver system integration, and update order.</li>
-<li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a>: Sets the reference object to track against (ex: the main camera transform, hand ray, etc.), handles gathering of solver components, and executes updating them in the proper order.</li>
+<li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.Solver.html">'Solver'</a>:所有Solvers派生的基本抽象类。它提供状态跟踪、平滑参数和实现、自动solver系统集成和更新顺序。</li>
+<li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html">'SolverHandler'</a>:设置要跟踪的引用对象(例如:主相机转换、手动光线等)，处理solver组件的收集，并按适当的顺序执行更新。</li>
 </ul>
-<p>The third category is the solver itself. The following solvers provide the building blocks for basic behavior:</p>
+<p>第三类是solver本身。以下Solvers方案为基本行为提供了构建块:</p>
 <ul>
-<li><a href="#orbital"><code>Orbital</code></a>: Locks to a specified position and offset from the referenced object.</li>
-<li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.ConstantViewSize.html"><code>ConstantViewSize</code></a>: Scales to maintain a constant size relative to the view of the referenced object.</li>
-<li><a href="#radialview"><code>RadialView</code></a>: Keeps the object within a view cone cast by the referenced object.</li>
-<li><a href="#surfacemagnetism"><code>SurfaceMagnetism</code></a>: casts rays to surfaces in the world, and align the object to that surface.</li>
-<li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.Momentum.html"><code>Momentum</code></a>: Applies acceleration/velocity/friction to simulate momentum and springiness for an object being moved by other solvers/components.</li>
-<li><a href="#inbetween"><code>InBetween</code></a>: Keeps an object in between two tracked objects.</li>
-<li><a href="#hand-menu-with-handconstraint-and-handconstraintpalmup"><code>HandConstraint</code></a>: Constrains object to follow hands in a region that doesn't intersect the GameObject with the hands. Useful for hand constrained interactive content such as menus, etc. This solver is intended to work with <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html">IMixedRealityHand</a> but also works with <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityController.html">IMixedRealityController</a>.</li>
-<li><a href="#hand-menu-with-handconstraint-and-handconstraintpalmup"><code>HandConstraintPalmUp</code></a>: Derives from HandConstraint but includes logic to test if the palm is facing the user before activation. This solver only works with <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html">IMixedRealityHand</a> controllers, with other controller types this solver will behave just like its base class.</li>
+<li><a href="#orbital"><code>Orbital</code></a>: 锁定到指定位置并与参考对象偏移。</li>
+<li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.ConstantViewSize.html"><code>ConstantViewSize</code></a>: 按比例保持与引用对象的视图相关的常量大小。</li>
+<li><a href="#radialview"><code>RadialView</code></a>: 将对象保存在由引用对象强制转换的视图锥中。</li>
+<li><a href="#surfacemagnetism"><code>SurfaceMagnetism</code></a>: 将射线投射到世界的表面，并使物体与表面对齐。</li>
+<li><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.Momentum.html"><code>Momentum</code></a>: 应用加速度/速度/摩擦力来模拟物体被其他Solvers/组件移动的动量和弹性。</li>
+<li><a href="#inbetween"><code>InBetween</code></a>: 在两个被跟踪的对象之间保留一个对象。</li>
+<li><a href="#hand-menu-with-handconstraint-and-handconstraintpalmup"><code>HandConstraint</code></a>:
+约束对象在不与游戏对象和手相交的区域内跟随手移动。适用于手动约束的交互式内容，如菜单等。这个Solvers方案是打算与<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html">IMixedRealityHand</a>协同，但也与<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityController.html">IMixedRealityController</a>协同。</li>
+<li><a href="#hand-menu-with-handconstraint-and-handconstraintpalmup"><code>HandConstraintPalmUp</code></a>: 派生自HandConstraint，但包含测试激活前palm是否面向用户的逻辑。这个Solvers只适用于<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html">IMixedRealityHand</a>控制器，对于其他控制器类型，这个Solvers的行为就像它的基类一样。</li>
 </ul>
-<p>In order to use the Solver system, simply add one of the components listed above to a GameObject. Since all Solvers require a <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a>, one will be created automatically by Unity.</p>
+<p>为了使用Solver系统，只需将上面列出的组件之一添加到GameObject即可。因为所有的Solvers都需要一个<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a>，一个将由Unity自动创建。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Examples of how to use the Solvers system can be found in the <strong>SolverExamples.scene</strong> file.</p>
+<p>如何使用Solvers系统的例子可以在<strong>SolverExamples.scene</strong>文件中找到。</p>
 </div>
-<h2 id="how-to-change-tracking-reference">How to change tracking reference</h2>
-<p>The <em>Tracked Target Type</em> property of the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a> component defines the point of reference all solvers will use to calculate their algorithms. For example, a value type of <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_Head"><code>Head</code></a> with a simple <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SurfaceMagnetism.html"><code>SurfaceMagnetism</code></a> component will result in a raycast from the head and in the direction of the user's gaze for solving what surface is hit. Potential values for the <code>TrackedTargetType</code> property are:</p>
+<h2 id="如何更改跟踪引用tracking-reference">如何更改跟踪引用（tracking reference）</h2>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a>组件的<em>Tracked Target Type</em> 属性定义了所有Solvers用于计算其算法的参考点。例如,值类型的<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_Head"><code>Head</code></a>:用一个简单的<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SurfaceMagnetism.html"><code>SurfaceMagnetism</code></a> 组件将导致一个射线从头部和用户的目光的方向射出并且计算射中的表面。<code>TrackedTargetType</code>属性的潜在值为:</p>
 <ul>
-<li><em>Head</em> : Point of reference is the transform of the main camera</li>
-<li><em>ControllerRay</em>: Point of reference is the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.LinePointer.html"><code>LinePointer</code></a> transform on a controller (i.e pointer origin on a motion controller or hand controller) pointing in the direction of the line ray
+<li><em>Head</em> : 参考点是主摄像头的变换</li>
+<li><em>ControllerRay</em>: 引用点是在控制器(例如 运动控制器或手动控制器上的指针原点)上的<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.LinePointer.html"><code>LinePointer</code></a>transform，指向线射线的方向
 <ul>
-<li>Use the <code>TrackedHandedness</code> property to select the handedness preference (i.e Left, Right, Both)</li>
+<li>使用 <code>TrackedHandedness</code> 属性选择handedness 首选项(即 左，右，两者都有)</li>
 </ul>
 </li>
-<li><em>HandJoint</em>: Point of reference is the transform of a specific hand joint
+<li><em>HandJoint</em>: 参考点是特定手关节的transform
 <ul>
-<li>Use the <code>TrackedHandedness</code> property to select the handedness preference (i.e Left, Right, Both)</li>
-<li>Use the  <code>TrackedHandJoint</code> property to determine the joint transform to utilize</li>
+<li>使用 <code>TrackedHandedness</code> 属性选择handedness 首选项(即 左，右，两者都有)</li>
+<li>Use the  <code>TrackedHandJoint</code> 属性确定要使用的关节变换</li>
 </ul>
 </li>
-<li><em>CustomOverride</em>: Point of reference from the assigned <code>TransformOverride</code></li>
+<li><em>CustomOverride</em>: 指定的<code>TransformOverride</code>的参考点</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>For both <em>ControllerRay</em> and <em>HandJoint</em> types, the solver handler will attempt to provide the left controller/hand transform first and then the right if the former is not available or unless the <code>TrackedHandedness</code> property specifies otherwise.</p>
+<p>对于<em>ControllerRay</em>和<em>HandJoint</em>类型，Solvers处理程序将首先尝试提供左控制器/手转换，如果左控制器/手转换不可用，或者除非 <code>TrackedHandedness</code>属性另有规定，否则将尝试提供右控制器/手转换。</p>
 </div>
 <p><img src="Images/Solver/TrackedObjectType-Example.gif" alt="Solver">
 <br>
-<em>Example of various properties associated with each TrackedTargetType</em></p>
-<h2 id="how-to-chain-solvers">How to chain Solvers</h2>
-<p>It is possible to add multiple <code>Solver</code> components to the same GameObject thus chaining their algorithms. The <code>SolverHandler</code> components handles updating all solvers on the same GameObject. By default the <code>SolverHandler</code> calls <code>GetComponents&lt;Solver&gt;()</code> on Start which will return the Solvers in the order that they appear in the inspector.</p>
-<p>Furthermore, setting the <em>Updated Linked Transform</em> property to true will instruct that <code>Solver</code> to save its calculated position, orientation, &amp; scale to an intermediary variable accessible by all Solvers (i.e <code>GoalPosition</code>). When false, the <code>Solver</code> will update the GameObject's transform directly. By saving the transform properties to an intermediary location, other Solvers are able to perform their calculations starting from the intermediary variable. This is because Unity does not allow updates to gameObject.transform to stack within the same frame.</p>
+<em>与每个TrackedTargetType相关联的各种属性的示例</em></p>
+<h2 id="如何串联-solvers">如何串联 Solvers</h2>
+<p>它可以添加多个<code>Solvers</code>组件到同一个游戏对象，从而链接他们的算法。<code>SolverHandler</code>组件处理更新同一个游戏对象上的所有Solvers。默认情况下，<code>SolverHandler</code>在启动时调用<code>GetComponents&lt;Solver&gt;()</code>，它将按照在检查器中出现的顺序返回Solvers。</p>
+<p>此外，将<em>Updated Linked Transform</em>属性设置为true将指示<code>Solvers</code>将其计算的位置、方向和比例保存为所有Solvers都可以访问的中间变量(即 <code>GoalPosition</code>)。当为false时，<code>Solver</code>将直接更新GameObject的transform。通过将transform属性保存到中间位置，其他Solvers能够从中间变量开始执行计算。这是因为Unity不允许更新 gameObject.transform到同一帧中的堆栈。</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Developers can modify the order of execution of Solvers by setting the <code>SolverHandler.Solvers</code> property directly.</p>
+<p>开发人员可以通过设置<code>SolverHandler.Solvers</code>属性来修改Solver程序的执行顺序。</p>
 </div>
-<h2 id="how-to-create-a-new-solver">How to create a new Solver</h2>
-<p>All solvers must inherit from the abstract base class, <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.Solver.html"><code>Solver</code></a>. The primary requirements of a Solver extension involves overriding the <code>SolverUpdate</code> method. In this method, developers should update the inherited <code>GoalPosition</code>, <code>GoalRotation</code> and <code>GoalScale</code> properties to the desired values. Furthermore, it is generally valuable to leverage <code>SolverHandler.TransformTarget</code> as the frame of reference desired by the consumer.</p>
-<p>The code provided below gives an example of a new Solver component called <code>InFront</code> that places the attached object 2m in front of the <code>SolverHandler.TransformTarget</code>. If the <code>SolverHandler.TrackedTargetType</code> is set by the consumer as <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_Head"><code>Head</code></a>, then the <code>SolverHandler.TransformTarget</code> will be the camera transform and thus this Solver will place the attached GameObject 2m in front of the users' gaze every frame.</p>
+<h2 id="如何创建一个新的-solver">如何创建一个新的 Solver</h2>
+<p>所有Solvers必须继承自抽象基类<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.Solver.html"><code>Solver</code></a>。Solver扩展的主要需求包括覆盖<code>SolverUpdate</code>方法。在这种方法中，开发人员应该将继承的<code>GoalPosition</code>、<code>GoalRotation</code>和<code>GoalScale</code>属性更新为所需的值。此外，利用<code>SolverHandler.TransformTarget</code>通常是有价值的，作为消费者期望的参考框架。</p>
+<p>下面提供的代码给出了一个名为<code>InFront</code>的新Solvers组件的示例，该组件将附加的对象放在<code>SolverHandler.TransformTarget</code>的2m前面。如果<code>SolverHandler.TrackedTargetType</code>被用户设置为<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_Head"><code>Head</code></a>，然后是'<code>SolverHandler.TransformTarget</code>将是摄像机变换，因此该Solvers将附加的GameObject 置于每一帧用户注视的2m前方。</p>
 <pre><code class="lang-c#">/// &lt;summary&gt;
-/// InFront solver positions an object 2m in front of the tracked transform target
+/// InFront solver将一个物体放置在被跟踪目标前方2m处
 /// &lt;/summary&gt;
 public class InFront : Solver
 {
@@ -159,95 +160,95 @@ public class InFront : Solver
     }
 }
 </code></pre>
-<h2 id="solver-implementation-guides">Solver implementation guides</h2>
-<h3 id="common-solver-properties">Common Solver properties</h3>
-<p>Every Solver component has a core-set of identical properties that control the core Solver behavior.</p>
-<p>If <em>Smoothing</em> is enabled, then the Solver will gradually update the transform of the GameObject over time to the calculated values. The speed of this change is determined by every transform component's <em>LerpTime</em> property. For example, a higher <em>MoveLerpTime</em> value will result in slower increments in movement between frames.</p>
-<p>If <em>MaintainScale</em> is enabled, then the Solver will utilize the GameObject's default local scale.</p>
+<h2 id="solvers实现指南">Solvers实现指南</h2>
+<h3 id="通用solvers属性">通用Solvers属性</h3>
+<p>每个Solvers组件都有一个控制核心Solvers行为的相同属性的核心集。</p>
+<p>如果启用了<em>平滑</em>，那么Solvers将会随着时间的推移逐渐将GameObject的变换更新为计算值。此更改的速度由每个转换组件的<em>LerpTime</em>属性决定。例如，更高的<em>MoveLerpTime</em>值会导致帧与帧之间移动的增量变慢。</p>
+<p>如果<em>MaintainScale</em>是启用的，那么Solvers将利用GameObject的默认本地规模。</p>
 <p><img src="Images/Solver/GeneralSolverProperties.png" alt="Core Solver Properties">
 <br>
-<em>Common properties inherited by all Solver components</em></p>
-<h3 id="orbital">Orbital</h3>
-<p>The <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.Orbital.html"><code>Orbital</code></a> class is a tag-along component that behaves like planets in a solar system. This Solver will ensure the attached GameObject orbits around the tracked transform. Thus, if the <em>Tracked Target Type</em> of the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a> is set to <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_Head"><code>Head</code></a>, then the GameObject will orbit around the user's head with a fixed offset applied.</p>
-<p>Developers can modify this fixed offset to keep menus or other scene components at eye-level or at waist level etc. around a user. This is done by modifying the <em>Local Offset</em> and <em>World Offset</em> properties. The <em>Orientation Type</em> property determines the rotation applied to the object if it should maintain its original rotation or always face the camera or face whatever transform is driving its position etc.</p>
+<em>所有Solvers组件继承的公共属性</em></p>
+<h3 id="轨道-orbital">轨道 Orbital</h3>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.Orbital.html"><code>Orbital</code></a>类是一个附加组件，它的行为类似于太阳系中的行星。这个Solvers将确保附加的GameObject绕被跟踪变换的轨道运行。因此,如果的<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a> 的<em>Tracked Target Type</em> 设置为 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_Head"><code>Head</code></a> ,那么GameObject将用户的头部固定轨道偏移。</p>
+<p>开发人员可以修改这个固定的偏移量，以保持菜单或其他场景组件在用户周围与眼睛水平或腰部水平等。这是通过修改<em>Local Offset</em>和<em>World Offset</em>属性来完成的。<em>Orientation Type</em> 属性决定了应用于对象的旋转，如果它应该保持原来的旋转，或者总是面对摄像机，或者无论变换是驱动它的位置等。</p>
 <p><img src="Images/Solver/OrbitalExample.png" alt="Orbital Example">
 <br>
-<em>Orbital example</em></p>
+<em>Orbital 示例</em></p>
 <h3 id="radialview">RadialView</h3>
-<p>The <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.html"><code>RadialView</code></a> is another tag-along component that keeps a particular portion of a GameObject within the frustum of the user's view.</p>
-<p>The <em>Min &amp; Max View Degrees</em> properties determines how large of a portion of the GameObject must always be in view.</p>
-<p>The <em>Min &amp; Max Distance</em> properties determines how far the GameObject should be kept from the user. For example, walking towards the GameObject with a <em>Min Distance</em> of 1m will push the GameObject away to ensure it is never closer than 1m to the user.</p>
-<p>Generally, the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.html"><code>RadialView</code></a> is used in conjunction with <em>Tracked Target Type</em> set to <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_Head"><code>Head</code></a> so that the component follows the user's gaze. However, this component can function to be kept in <em>&quot;view&quot;</em> of any <em>Tracked Target Type</em>.</p>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.html"><code>RadialView</code></a>是另一个跟随组件，它将GameObject的特定部分保留在用户视图的截锥体中。</p>
+<p><em>Min &amp; Max View Degrees</em>属性决定了GameObject(游戏物体)中有多大的部分必须总是在视图中。</p>
+<p><em>Min &amp; Max Distance</em> 属性决定了GameObject(游戏物体)应该与用户保持多远的距离。例如，以1m <em>Min Distance</em> 走向GameObject将会将GameObject推开，以确保它永远不会靠近用户1m。
+通常，<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView.html"><code>RadialView</code></a>与 <em>Tracked Target Type</em>  设置为<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_Head"><code>Head</code></a>一起使用，以便组件跟随用户的视线。但是，这个组件可以保存在任何 <em>Tracked Target Type</em> 的 <em>&quot;view&quot;</em> 中。</p>
 <p><img src="Images/Solver/RadialViewExample.png" alt="RadialView Example">
 <br>
-<em>RadialView example</em></p>
+<em>RadialView 示例</em></p>
 <h3 id="inbetween">InBetween</h3>
-<p>The <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.InBetween.html"><code>InBetween</code></a> class will keep the attached GameObject between two transforms. These two transform endpoints are defined by the GameObject's own <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a> <em>Tracked Target Type</em> and the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.InBetween.html"><code>InBetween</code></a> component's <em>Second Tracked Target Type</em> property. Generally, both types will be set to <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_CustomOverride"><code>CustomOverride</code></a> and the resulting <code>SolverHandler.TransformOverride</code> and <code>InBetween.SecondTransformOverride</code> values set to the two tracked endpoints.</p>
-<p>At runtime, the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.InBetween.html"><code>InBetween</code></a> component will create another <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a> component based on the <em>Second Tracked Target Type</em> and <em>Second Transform Override</em> properties.</p>
-<p>The <code>PartwayOffset</code> defines where along the line between two transforms the object shall be placed with 0.5 as halfway, 1.0 at the first transform, and 0.0 at the second transform.</p>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.InBetween.html"><code>InBetween</code></a>类将在两个转换之间保留附加的GameObject。这两个转换端点是由GameObject的自己的<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a> <em>Tracked Target Type</em> 和<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.InBetween.html"><code>InBetween</code></a>组件的**Second Tracked Target Type*属性定义的。通常，这两种类型都会被设置为<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_CustomOverride"><code>CustomOverride</code></a> 和由此产生的' <code>SolverHandler.TransformOverride</code> 和 <code>InBetween.SecondTransformOverride</code>的值设置为跟踪的两个端点。</p>
+<p>在运行时，<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.InBetween.html"><code>InBetween</code></a>组件将基于<em>Second Tracked Target Type</em>和<em>Second Transform Override</em>属性创建另一个<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a>组件。</p>
+<p><code>PartwayOffset</code>定义了对象在两个transforms之间的直线上的位置，在中间位置放置0.5，在第一个transform位置放置1.0，在第二个transform位置放置0.0。</p>
 <p><img src="Images/Solver/InBetweenExample.png" alt="InBetween Example">
 <br>
-<em>Example of using InBetween solver to keep object between two transforms</em></p>
-<h3 id="surfacemagnetism">SurfaceMagnetism</h3>
-<p>The <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SurfaceMagnetism.html"><code>SurfaceMagnetism</code></a> works by performing a raycast against a set LayerMask of surfaces and placing the GameObject at that point of contact.</p>
-<p>The <em>Surface Normal Offset</em> will place the GameObject a set distance in meters away from the surface in the direction of the normal at the hit point on the surface.</p>
-<p>Conversely, the <em>Surface Ray Offset</em> will place the GameObject a set distance in meters away from the surface but in the opposite direction of the raycast performed. Thus, if the raycast is the user's gaze, then the GameObject will move closer along the line from the hit point on the surface to the camera.</p>
-<p>The <em>Orientation Mode</em> determines the type of rotation to apply in relation to the normal on the surface.</p>
+<em>使用InBetween solver在两个transforms之间保持对象的例子</em></p>
+<h3 id="表面磁性-surfacemagnetism">表面磁性 SurfaceMagnetism</h3>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SurfaceMagnetism.html"><code>SurfaceMagnetism</code></a>的工作原理是:对一组表面的LayerMask执行一个射线投射，并将GameObject放在那个接触点上。
+<em>Surface Normal Offset</em>将游戏物体放置在距离表面数米的地方，在法线的命中点的方向上。</p>
+<p>相反地， <em>Surface Ray Offset</em>会将游戏物体放置在距离表面几米远的地方，但与射线投射的方向相反。因此，如果射线投射是用户的视线，那么GameObject将会沿着直线从表面的命中点移动到相机的方向。</p>
+<p><em>Orientation Mode</em>决定了相对于表面法线的旋转类型。</p>
 <ul>
-<li><em>None</em> - No rotation applied</li>
-<li><em>TrackedTarget</em> - Object will face the tracked transform driving the raycast</li>
-<li><em>SurfaceNormal</em> - Object will align based on normal at hit point on surface</li>
-<li><em>Blended</em> - Object will align based on normal at hit point on surface AND based on facing the tracked transform.</li>
+<li><em>None</em>  -没有旋转应用</li>
+<li><em>TrackedTarget</em> -物体将面向被跟踪的transform驱动射线投射</li>
+<li><em>SurfaceNormal</em> -物体将会基于在表面上命中点的法线对齐</li>
+<li><em>Blended</em> -物体将基于法线在表面上的命中点和面向被跟踪的transform对齐。
+要强制相关联的GameObject在除<em>None</em>之外的任何模式下保持垂直，启用 <em>Keep Orientation Vertical</em>。</li>
 </ul>
-<p>To force the associated GameObject to stay vertical in any mode other than <em>None</em>, enable <em>Keep Orientation Vertical</em>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Use the <em>Orientation Blend</em> property to control the balance between rotation factors when <em>Orientation Mode</em> is set to <em>Blended</em>. A value of 0.0 will have orientation entirely driven by <em>TrackedTarget</em> mode and a value of 1.0 will have orientation driven entirely by <em>SurfaceNormal</em>.</p>
+<p>当<em>Orientation Mode</em>被设置为<em>Blend</em>时，使用<em>Orientation Blend</em>属性来控制旋转因子之间的平衡。0.0的值将完全由<em>TrackedTarget</em>模式驱动，1.0的值将完全由<em>SurfaceNormal</em>模式驱动。</p>
 </div>
 <p><img src="Images/Solver/SurfaceMagExample.png" alt="SurfaceMagnetism Example"></p>
-<h4 id="determining-what-surfaces-can-be-hit">Determining what surfaces can be hit</h4>
-<p>When adding a <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SurfaceMagnetism.html"><code>SurfaceMagnetism</code></a> component to a GameObject, it is important to consider the layer of the GameObject and its children, if any have colliders. The component works by performing various types of raycasts to determine what surface to &quot;magnet&quot; itself against. If the solver GameObject has a collider on one of the layers listed in the <code>MagneticSurfaces</code> property of <code>SurfaceMagnetism</code>, then the raycast will likely hit itself resulting in the GameObject attaching to its own collider point. This odd behavior can be avoided by setting the main GameObject and all children to the <em>Ignore Raycast</em> layer or modifying the <code>MagneticSurfaces</code> LayerMask array appropriately.</p>
-<p>Conversely, a <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SurfaceMagnetism.html"><code>SurfaceMagnetism</code></a> GameObject will not collide with surfaces on a layer not listed in the <code>MagneticSurfaces</code> property. It is generally recommended to place all desired surfaces on a dedicated layer (i.e <em>Surfaces</em>) and setting the <code>MagneticSurfaces</code> property to just this layer.  Using <em>default</em> or <em>everything</em> may result in UI components or cursors contributing to the solver.</p>
-<p>Finally, surfaces farther than the <code>MaxRaycastDistance</code> property setting will be ignored by the <code>SurfaceMagnetism</code> raycasts.</p>
-<h3 id="hand-menu-with-handconstraint-and-handconstraintpalmup">Hand Menu with HandConstraint and HandConstraintPalmUp</h3>
+<h4 id="决定什么表面可以被击中-determining-what-surfaces-can-be-hit">决定什么表面可以被击中 Determining what surfaces can be hit</h4>
+<p>当向GameObject添加<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SurfaceMagnetism.html"><code>SurfaceMagnetism</code></a>组件时，考虑GameObject及其子组件的层是很重要的，如果有碰撞器的话。组件的工作原理是执行各种类型的射线投射，以确定什么表面&quot;磁铁&quot;本身反对。如果Solver GameObject在<code>SurfaceMagnetism</code>的 <code>MagneticSurfaces</code>属性中列出的一个图层上有一个碰撞器，那么射线投射可能会击中它自己，导致GameObject附加到它自己的碰撞点上。这种奇怪的行为可以通过将主游戏对象和所有子对象设置为<em>Ignore Raycast</em>层或者适当地修改<code>MagneticSurfaces</code> LayerMask 数组来避免。</p>
+<p>相反，<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SurfaceMagnetism.html"><code>SurfaceMagnetism</code></a> GameObject(游戏物体)不会与未在<code>MagneticSurfaces</code>属性中列出的图层上的表面发生碰撞。通常建议将所有需要的表面放置在一个专用的层上(即  <em>surface</em>)，并将<code>MagneticSurfaces</code> 属性设置为这一层。使用<em>default</em>或<em>everything</em>可能会导致UI组件或光标贡献给Solvers。</p>
+<p>最后，比<code>MaxRaycastDistance</code>属性设置更远的表面将被<code>SurfaceMagnetism</code>射线强制忽略。</p>
+<h3 id="带有handconstraint和handconstraintpalmup的手部菜单">带有HandConstraint和HandConstraintPalmUp的手部菜单</h3>
 <p><img src="Images/Solver/MRTK_UX_HandMenu.png" alt="Hand Menu UX Example"></p>
-<p>The <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a> behavior provides a solver that constrains the tracked object to a region safe for hand constrained content (such as hand UI, menus, etc). Safe regions are considered areas that don't intersect with the hand. A derived class of <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a> called <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp.html"><code>HandConstraintPalmUp</code></a> is also included to demonstrate a common behavior of activating the solver tracked object when the palm is facing the user. For example use of this behavior please see the HandBasedMenuExample scene under: <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/HandTracking/Scenes">MixedRealityToolkit.Examples/Demos/HandTracking/Scenes/</a></p>
-<p>Please see the tool tips available for each <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a> property for additional documentation. A few properties are defined in more detail below.</p>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a>行为提供了一个Solvers，该Solvers将被跟踪的对象约束到一个对于手部·约束内容(如手动UI、菜单等)来说是安全的区域。安全区被认为是不与手相交的区域。<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a>的一个派生类称为<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp.html"><code>HandConstraintPalmUp</code></a>还包括包括演示当手掌面对用户时激活solver跟踪对象的常见行为。例如，这个行为的使用请参见下面的HandBasedMenuExample场景:<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/HandTracking/Scenes">MixedRealityToolkit.Examples/Demos/HandTracking/Scenes/</a></p>
+<p>请参阅每个<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a>属性的工具提示，以获得更多文档。下面更详细地定义了一些属性。</p>
 <img src="Images/Solver/MRTK_Solver_HandConstraintPalmUp.png" width="450">
 <ul>
-<li><strong>Safe Zone</strong>: The safe zone specifies where on the hand to constrain content. It is recommended that content be placed on the Ulnar Side to avoid overlap with the hand and improved interaction quality. Safe zones are calculated by taking the hands orientation projected into a plane orthogonal to the camera's view and raycasting against a bounding box around the hands. Safe zones are defined to work with <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html"><code>IMixedRealityHand</code></a> but also works with other controller types. It is recommended to explore what each safe zone represents on different controller types.</li>
+<li><strong>Safe Zone</strong>:安全区域(safe zone)指定了约束内容的位置。建议将内容放置在尺骨一侧，避免与手重叠，提高交互质量。安全区域的计算方法是将手的方向投影到与摄像机视图垂直的平面上，然后对手周围的包围框进行射线投射。安全区域被定义为使用<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html"><code>IMixedRealityHand</code></a>，但也可用于其他控制器类型。建议探究每个安全区在不同控制器类型上表示的内容。</li>
 </ul>
 <img src="Images/Solver/MRTK_Solver_HandConstraintSafeZones.png" width="450">
 <ul>
-<li><p><strong>Activation Events</strong>: Currently the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a> triggers four activation events. These events can be used in many different combinations to create unique <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a> behaviors, please see the HandBasedMenuExample scene under: <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/HandTracking/Scenes">MixedRealityToolkit.Examples/Demos/HandTracking/Scenes/</a> for examples of these behaviors.</p>
+<li><p><strong>Activation Events</strong>:当前的 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a> 触发了四个激活事件(activation events)。这些事件可以用在许多不同的组合来创建独特的<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a>行为,请参见HandBasedMenuExample场景:<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/HandTracking/Scenes">MixedRealityToolkit.Examples/Demos/HandTracking/Scenes/</a> 为这些行为的例子。</p>
 <ul>
-<li><em>OnHandActivate</em>: triggers when a hand satisfies the IsHandActive method</li>
-<li><em>OnHandDeactivate</em>: triggers when the IsHandActive method is no longer satisfied.</li>
-<li><em>OnFirstHandDetected</em>: occurs when the hand tracking state changes from no hands in view, to the first hand in view.</li>
-<li><em>OnLastHandLost</em>: occurs when the hand tracking state changes from at least one hand in view, to no hands in view.</li>
+<li><em>OnHandActivate</em>:当一只手满足IsHandActive方法时触发</li>
+<li><em>OnHandDeactivate</em>:当IsHandActive方法不再被满足时触发。</li>
+<li><em>OnFirstHandDetected</em>:当手的跟踪状态从无手状态变为有手状态时触发。</li>
+<li><em>OnLastHandLost</em>:当手的跟踪状态从至少有一只手在视图中变为没有手在视图中时触发。</li>
 </ul>
 </li>
 </ul>
-<h2 id="experimental-solvers">Experimental Solvers</h2>
-<p>These solvers are available in MRTK but are currently experimental. Their APIs and functionality are subject to change. Furthermore, their robustness and quality may be lower than standard features.</p>
+<h2 id="试验性-solvers">试验性 Solvers</h2>
+<p>这些Solvers方案在MRTK中是可用的，但目前还处于试验阶段。它们的api和功能可能会改变。此外，它们的健壮性和质量可能低于标准特性。</p>
 <h3 id="directional-indicator">Directional Indicator</h3>
-<p>The <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Experimental.Utilities.DirectionalIndicator.html"><code>DirectionalIndicator</code></a> class is a tag-along component that orients itself to the direction of a desired point in space.</p>
-<p>Most commonly used when the <em>Tracked Target Type</em> of the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a> is set to <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_Head"><code>Head</code></a>. In this fashion, a UX component with the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Experimental.Utilities.DirectionalIndicator.html"><code>DirectionalIndicator</code></a>  solver will direct a user to look at the desired point in space.</p>
-<p>The desired point in space is determined via the <em>Directional Target</em> property.</p>
-<p>If the directional target is viewable by the user, or whatever frame of reference is set in the <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a>, then this solver will disable all <a href="https://docs.unity3d.com/ScriptReference/Renderer.html"><code>Renderer</code></a> components underneath it. If not viewable, then everything will be enabled on the indicator.</p>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Experimental.Utilities.DirectionalIndicator.html"><code>DirectionalIndicator</code></a>类是一个跟踪组件，它将自己定向到空间中需要的点的方向。</p>
+<p>最常用的情况是<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a>的<em>Tracked Target Type</em>被设置为 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.TrackedObjectType.html#Microsoft_MixedReality_Toolkit_Utilities_TrackedObjectType_Head"><code>Head</code></a>。在这种情况下，带有<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Experimental.Utilities.DirectionalIndicator.html"><code>DirectionalIndicator</code></a> 的UX组件将引导用户查看所需的空间点。</p>
+<p>所需的空间点是通过<em>Directional Target</em>属性确定的。</p>
+<p>如果用户可视的方向目标,或任何参照系中设置<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler.html"><code>SolverHandler</code></a>,那么这个Solvers将禁用所有下面的<a href="https://docs.unity3d.com/ScriptReference/Renderer.html"><code>Renderer</code></a>组件。如果不可见，那么将在指示器上启用所有内容。</p>
 <ul>
-<li><em>Visibility Scale Factor</em> - Multiplier to increase or decrease the FOV that determines if the <em>Directional Target</em> point is viewable or not</li>
-<li><em>View Offset</em> - From the viewpoint of the frame of reference (i.e camera possibly), this property defines how far in the indicator direction should the object be from the center of the viewport.</li>
+<li><em>Visibility Scale Factor</em> -倍增器，以增加或减少FOV，确定<em>Directional Target</em> 点是否可见</li>
+<li><em>View Offset</em> -从参照系的角度(即 可能是相机)这个属性定义了物体在指示器方向上应该离视口中心多远。</li>
 </ul>
 <p><img src="Images/Solver/DirectionalIndicatorExample.png" alt="Directional Indicator properties">
 <br>
 <em>Directional Indicator properties</em></p>
 <p><img src="Images/Solver/DirectionalIndicatorExampleScene.gif" alt="Directional Indicator example scene"></p>
 <p><em><a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.Examples/Experimental/Solvers/DirectionalIndicatorExample.unity">Directional Indicator Example Scene</a></em></p>
-<h2 id="see-also">See also</h2>
+<h2 id="建议浏览">建议浏览</h2>
 <ul>
-<li><a href="Input/HandTracking.html">Hand Tracking</a></li>
-<li><a href="Input/Gaze.html">Gaze</a></li>
+<li><a href="Input/HandTracking.html">手部跟踪</a></li>
+<li><a href="Input/Gaze.html">凝视</a></li>
 </ul>
 </article>
           </div>

@@ -8145,7 +8145,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/README_BoundingBox.html",
-          "hash": "RP26z6Fm3MBsdhIlV2B+Gw=="
+          "hash": "gqG/pUpQSG+5tYTJH0k17g=="
         }
       },
       "is_incremental": false,
@@ -8217,7 +8217,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/README_Interactable.html",
-          "hash": "+hztb2AHgdR4/YxCgOrYcg=="
+          "hash": "sQLwq0+urQnu9xTLaKoHzg=="
         }
       },
       "is_incremental": false,
@@ -8277,7 +8277,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/README_ObjectCollection.html",
-          "hash": "lTHOO/ggzUXaKPQGSEF2Og=="
+          "hash": "XG5pNco+adrGmPtcj5ts0w=="
         }
       },
       "is_incremental": false,
@@ -8289,7 +8289,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/README_ObjectManipulator.html",
-          "hash": "t6/JPqUMKzyIbj8CvYTQnw=="
+          "hash": "6dKsnele+MKYRCg96a1JfA=="
         }
       },
       "is_incremental": false,
@@ -8313,7 +8313,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/README_Slate.html",
-          "hash": "/+ulN7W1Qw0ivYjrtAUa4Q=="
+          "hash": "aLJEzoF32GbNXcrT7d0PvA=="
         }
       },
       "is_incremental": false,
@@ -8337,7 +8337,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/README_Solver.html",
-          "hash": "kc6B+7fVz04I3pS7rOLFPg=="
+          "hash": "jT5u03X8zU7+JOWViIUdLw=="
         }
       },
       "is_incremental": false,
@@ -8349,7 +8349,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/README_SystemKeyboard.html",
-          "hash": "G2awdxm1EiDxKxDvICIAbw=="
+          "hash": "5At+Fx8BbCY7q3QmrTxwWg=="
         }
       },
       "is_incremental": false,
@@ -8361,7 +8361,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/README_TapToPlace.html",
-          "hash": "83kQxvKcYLJeME4msKf3pg=="
+          "hash": "wrrpfYvEY42x07vAfUey1g=="
         }
       },
       "is_incremental": false,
@@ -8397,7 +8397,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/README_Tooltip.html",
-          "hash": "6wuCLwgJKEInFresSt5SUg=="
+          "hash": "5TZmAZF2uHVBDpSoMFr+tA=="
         }
       },
       "is_incremental": false,
@@ -31804,12 +31804,10 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "TocDocumentProcessor": {
@@ -31819,17 +31817,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 1864,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 179,
-          "skipped_file_count": 0
+          "skipped_file_count": 174
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 1864,
+          "skipped_file_count": 1864
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
