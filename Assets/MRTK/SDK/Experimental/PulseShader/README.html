@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Pulse shader | Mixed Reality Toolkit Documentation </title>
+    <title>&#33033;&#20914;&#30528;&#33394;&#22120; Pulse shader | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Pulse shader | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#33033;&#20914;&#30528;&#33394;&#22120; Pulse shader | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../../../Documentation/Images/favicon.ico">
@@ -80,21 +80,21 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="pulse-shader">Pulse shader</h1>
+<h1 id="脉冲着色器-pulse-shader">脉冲着色器 Pulse shader</h1>
 
 <p><img src="https://user-images.githubusercontent.com/13754172/68261851-3489e200-fff6-11e9-9f6c-5574a7dd8db7.gif" alt="MRTK_SpatialMesh_Pulse"></p>
 <p><img src="https://user-images.githubusercontent.com/13754172/68262035-e4f7e600-fff6-11e9-9858-796afd1cabc5.gif" alt="MRTK_HandMesh_Pulse2">
-Use the pulse shader to animate a visual pulse effect over surface reconstruction, articulated hand mesh, or any other meshes.</p>
-<h2 id="shader-and-material">Shader and material</h2>
-<p><strong>MRTK_SurfaceReconstruction.mat</strong> and <strong>MRTK_ArticulatedHandMeshPulse.mat</strong> uses <strong>SR_Triangles</strong> shader. You can configure various options such as fill color, line color, and pulse color.</p>
-<h2 id="example-scene">Example scene</h2>
-<p>Open <strong>PulseShaderExamples.unity</strong> scene, and observe the pulsing effect on the spheres, surface reconstruction, and the articulated hand mesh.</p>
-<p>Use the SurfacePulse.cs script to animate the pulse effect on the assigned material, or turn on &quot;Auto Pulse&quot; in the material itself.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>For surface reconstruction, ensure that MRTK_SurfaceReconstruction.mat is assigned under MRTK Settings -&gt; Spatial Awareness -&gt; Display Settings -&gt; Visible Material.</p>
-<p>For articulated hand, ensure that MRTK_ArticulatedHandMeshPulse.mat is assigned in ArticulatedHandMesh.prefab, which itself should be assigned in MRTK Settings -&gt; Input -&gt; Hand Tracking -&gt; Hand Mesh Prefab.</p>
-<h2 id="how-it-works">How it works</h2>
-<p>The hand mesh shader uses UVs to map the pulse along the hand mesh, and to fade out the wrist. The surface reconstruction shader uses the vertex positions to map the pulse.</p>
+使用脉冲着色器实现视觉脉冲动画效果，支持表面重建，全关节手网格(mesh)，或任何其他网格。</p>
+<h2 id="着色器和材质-shader-and-material">着色器和材质 Shader and material</h2>
+<p><strong>MRTK_SurfaceReconstruction.mat</strong>和<strong>MRTK_ArticulatedHandMeshPulse.mat</strong> 使用<strong>SR_Triangles</strong>着色器。您可以配置各种选项，如填充颜色(fill color)、线条颜色(line color)和脉冲颜色(pulse color)。</p>
+<h2 id="示例场景">示例场景</h2>
+<p>打开<strong>PulseShaderExamples.unity</strong>场景，观察在球体上的脉冲效果，表面重建和全关节手网格。</p>
+<p>使用SurfacePulse.cs脚本动画指定材质的脉冲效果，或者在材质本身打开&quot;Auto Pulse&quot;。</p>
+<h2 id="先决条件">先决条件</h2>
+<p>对于表面重建(surface reconstruction)，确保MRTK_SurfaceReconstruction.mat是在 MRTK Settings -&gt; Spatial Awareness -&gt; Display Settings -&gt; Visible Material下分配的。</p>
+<p>对于全关节手，确保MRTK_ArticulatedHandMeshPulse.mat被分配给为ArticulatedHandMesh.prefab，该预制体本身应该被指定在MRTK Settings -&gt; Input -&gt; Hand Tracking -&gt; Hand Mesh Prefab。</p>
+<h2 id="它是如何工作的">它是如何工作的</h2>
+<p>手部网格着色器使用uv来绘制手部网格的脉冲，并使手腕部分淡出。表面重建着色器使用顶点位置来映射脉冲。</p>
 </article>
           </div>
           

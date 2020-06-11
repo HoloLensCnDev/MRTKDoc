@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Sliders | Mixed Reality Toolkit Documentation </title>
+    <title>&#28369;&#21160;&#26465; Sliders | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Sliders | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#28369;&#21160;&#26465; Sliders | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
@@ -80,43 +80,58 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="sliders">Sliders</h1>
+<h1 id="滑动条-sliders">滑动条 Sliders</h1>
 
 <p><img src="Images/Slider/MRTK_UX_Slider_Main.jpg" alt="Slider example"></p>
-<p>Sliders are UI components that allow you to continuously change a value by moving a slider on a track. Currently the Pinch Slider can be moved by directly grabbing the slider, either directly or at a distance. Sliders work on AR and VR, using motion controllers, hands, or Gesture + Voice.</p>
-<h2 id="example-scene">Example scene</h2>
-<p>You can find examples in the <strong>SliderExample</strong> scene under:
+<p>滑动条是一种UI组件，它允许您通过在轨道上移动滑动条来不断地更改值。目前，按压滑动条(Pinch Slider)可以通过直接抓取滑动条来移动，可以是直接的，也可以是远距离的。滑动器可用于AR和VR，使用动作控制器、手或手势+语音。</p>
+<h2 id="示例场景">示例场景</h2>
+<p>你可以在<strong>SliderExample</strong>场景中找到例子:
 <a href="/Assets/MixedRealityToolkit.Examples/Demos/UX/Slider/Scenes">MixedRealityToolkit.Examples/Demos/UX/Slider/Scenes/</a></p>
-<h2 id="how-to-use-sliders">How to use Sliders</h2>
-<p>Drag and drop the <strong>PinchSlider</strong> prefab into the scene hierarchy. If you want to modify or create your own slider, remember to do the following:</p>
+<h2 id="如何使用滑动条">如何使用滑动条</h2>
+<p>将预置的<strong>PinchSlider</strong>拖放到场景hierarchy中。如果您想修改或创建自己的滑动条，请记住执行以下操作:</p>
 <ul>
-<li>Make sure your that your thumb object has a collider on it. In the PinchSlider prefab, the collider is on <code>SliderThumb/Button_AnimationContainer/Slider_Button</code></li>
-<li>Make sure that the object containing the collider also has a Near Interaction Grabbable component on it, if you want to be able to grab the slider near.</li>
+<li><p>确保你的拇指对象上有一个碰撞器。在PinchSlider预置体中，碰撞器在<code>SliderThumb/Button_AnimationContainer/Slider_Button</code>上</p>
+</li>
+<li><p>确保包含碰撞器的对象也有一个Near Interaction Grabbable 组件，如果你想能够抓取附近的滑动条。</p>
+</li>
 </ul>
-<p>We also recommend using the following hierarchy</p>
+<p>我们还建议使用以下层次结构</p>
 <ul>
-<li>PinchSlider - Contains the sliderComponent
+<li>PinchSlider - 包含 sliderComponent
 <ul>
-<li>SliderThumb - Contains the movable thumb</li>
-<li>TrackVisuals - Containing the track and any other visuals</li>
-<li>OtherVisuals - Containing any other visuals</li>
+<li>SliderThumb - 包含 movable thumb</li>
+<li>TrackVisuals - 包含 track 和任何其它 visuals</li>
+<li>OtherVisuals - 包含任何其它visuals</li>
 </ul>
 </li>
 </ul>
-<h2 id="slider-events">Slider Events</h2>
-<p>Sliders expose the following events:</p>
+<h2 id="滑动事件">滑动事件</h2>
+<p>滑动条显示以下事件:</p>
 <ul>
-<li>OnValueUpdated - Called whenever the slider value changes</li>
-<li>OnInteractionStarted - Called when the user grabs the slider</li>
-<li>OnInteractionEnded - Called when the user releases the slider</li>
-<li>OnHoverEntered - Called when the user's hand / controller hovers over the slider, using either near or far interaction.</li>
-<li>OnHoverExited - Called when the user's hand / controller is no longer near the slider.</li>
+<li>OnValueUpdated - 每当滑动条值改变时调用</li>
+<li>OnInteractionStarted - 当用户抓取滑动条时调用</li>
+<li>OnInteractionEnded - 在用户释放滑动条时调用</li>
+<li>OnHoverEntered - 当用户的手/控制器悬停在滑动条上时调用，使用远近交互。</li>
+<li>OnHoverExited - 当用户的手/控制器不再靠近滑动条时调用。</li>
 </ul>
-<h2 id="configuring-slider-bound-and-axis">Configuring Slider Bound and Axis</h2>
-<p>You can directly move the starting and end points of the slider by moving the handles in the Scene:</p>
+<h2 id="配置滑动条绑定和轴">配置滑动条绑定和轴</h2>
+<p>通过在场景中移动两端端点，可以直接移动滑动条的起始点和结束点:</p>
 <p><img src="Images/Sliders/MRTK_Sliders_Setup.png" alt="Sliders Config"></p>
-<p>You can also specify the axis (in local space) of the slider via the <em>Slider Axis</em> field</p>
-<p>If you cannot use the handles, you can instead specify the start and end points of the slider via the <em>Slider Start Distance</em> and <em>Slider End Distance</em> fields. These specify start / end position of slider as a distance from the slider's center, in local coordinates. This means that once you set the slider start and end distances as you want them, you can scale the slider to be smaller or larger without needing to update the start and end distances.</p>
+<p>您还可以通过 <em>Slider Axis</em> 字段指定滑动条的轴(在本地空间中)</p>
+<p>如果不能使用端点，则可以通过 <em>Slider Start Distance</em> 和 <em>Slider End Distance</em> 字段指定滑动条的起始点和结束点。它们指定滑动条的开始/结束位置，距离为到滑动条中心的距离，在本地坐标中。这意味着一旦你设置了滑动条开始和结束的距离，你可以缩放滑动条的大小，而不需要更新开始和结束的距离。</p>
+<h2 id="inspector-属性">Inspector 属性</h2>
+<p><strong>Thumb Root</strong>包含滑动条拇指的游戏对象。</p>
+<p><strong>Slider Value</strong>滑动条的值。</p>
+<p><strong>Track Visuals</strong> 它包含了沿着滑动条运行所需的Track Visuals的游戏对象。</p>
+<p><strong>Tick Marks</strong> 游戏对象，包含所需的标记，沿着滑动条。
+<strong>Thumb Visuals</strong> 游戏对象，包含所需的拇指视觉沿着滑动条。</p>
+<p><strong>Slider Axis</strong> 滑动条移动的轴。
+<strong>Slider Start Distance</strong> 滑动条轨迹开始的地方，为从中心沿滑动条轴的距离，在本地空间单位中。
+<strong>Slider End Distance</strong> 在本地空间单位中，滑动条轨迹结束的位置，为从中心到滑动条轴线的距离。</p>
+<p>当用户在编辑器中更新滑动条轴值时，如果指定了跟踪可视化(Track Visuals)或刻度可视化(Tick Visuals)，则它们的transform将被更新。
+具体来说，它们的本地位置被重置，它们的本地旋转被设置为匹配滑动条轴的方向。
+它们的比例没有被修改。
+如果标记具有Grid Object Collection 组件，那么布局和单元格宽度或单元格高度将相应地更新以匹配滑动条轴。</p>
 </article>
           </div>
           

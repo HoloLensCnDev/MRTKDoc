@@ -83,27 +83,39 @@
 <h1 id="dock">Dock</h1>
 
 <p><img src="../../../../../Documentation/Images/Dock/MRTK_UX_Dock_Main.png" alt="Dock"></p>
-<p>This control enables moving objects in and out of predetermined positions, to create palettes, shelves and navigation bars.</p>
-<h2 id="features">Features</h2>
+<p>此控件允许将对象移进或移出预定的位置，以创建调色板、陈列架和导航栏。</p>
+<h2 id="特性">特性</h2>
 <ul>
-<li>Supports any number of dock positions and layouts (works great with <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.html"><code>GridObjectCollection</code></a>)</li>
-<li>Docked objects automatically move away to make space for new objects</li>
-<li>Objects scale to fit the docked space, then resize to their original position when dragged out.</li>
+<li>支持任意数量的停靠位置和布局(非常适合<a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.html"><code>GridObjectCollection</code></a>)</li>
+<li>停靠对象自动移动，为新对象腾出空间</li>
+<li>对象缩放以适应停靠空间，然后调整大小，以原始位置拖出。</li>
 </ul>
-<h2 id="getting-started-with-dock">Getting started with Dock</h2>
+<h2 id="开始使用-dock">开始使用 Dock</h2>
 <ul>
-<li>Create a GameObject with the Dock component and add some children GameObjects to it.</li>
-<li>Add the DockPosition component to each of the children.</li>
-<li>Add the Dockable component to any number of objects in the scene to allow them to be docked. They must have the <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.UI.ObjectManipulator.html"><code>ObjectManipulator</code></a> component and a Collider as well.</li>
-<li><em>Optional:</em> use a <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.html"><code>GridObjectCollection</code></a> to the Dock to automatically lay out the DockPositions.</li>
+<li><p>Create a GameObject with the Dock component and add some children GameObjects to it.</p>
+</li>
+<li><p>Add the DockPosition component to each of the children.</p>
+</li>
+<li><p>Add the Dockable component to any number of objects in the scene to allow them to be docked. They must have the <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.UI.ObjectManipulator.html"><code>ObjectManipulator</code></a> component and a Collider as well.</p>
+</li>
+<li><p><em>Optional:</em> use a <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.html"><code>GridObjectCollection</code></a> to the Dock to automatically lay out the DockPositions.</p>
+</li>
+<li><p>创建一个带有Dock组件的GameObject，并添加一些子GameObject到其中。</p>
+</li>
+<li><p>向每个子节点添加DockPosition组件。</p>
+</li>
+<li><p>将Dockable组件添加到场景中任意数量的对象中，让它们可以停靠。它们必须有<a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.UI.ObjectManipulator.html"><code>ObjectManipulator</code></a> 组件和一个碰撞器。</p>
+</li>
+<li><p>*可选:*使用 <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection.html"><code>GridObjectCollection</code></a> 到Dock来自动布局DockPositions。</p>
+</li>
 </ul>
-<h3 id="prerequisites">Prerequisites</h3>
+<h3 id="先决条件">先决条件</h3>
 <ul>
-<li>Every dockable object must have a collider with an <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.UI.ObjectManipulator.html"><code>ObjectManipulator</code></a> or <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.UI.ManipulationHandler.html"><code>ManipulationHandler</code></a>.</li>
-<li>If you want an object to start Docked when the scene loads, assign it to any DockPosition's docked object property.</li>
+<li>每个可停靠对象都必须有一个<a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.UI.ObjectManipulator.html"><code>ObjectManipulator</code></a> 或 <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.UI.ManipulationHandler.html"><code>ManipulationHandler</code></a>以及碰撞器。</li>
+<li>如果你想让一个对象在场景加载时开始停靠，把它分配到DockPosition的docked object属性中。</li>
 </ul>
-<h2 id="how-it-works">How it works</h2>
-<p>The Dockable component builds upon manipulation events to allow dragged objects to be docked and undocked in specific positions. The placement is determined by the closest overlapping triggered DockPosition to the dragged object, so both objects need to have Colliders for the trigger to activate.</p>
+<h2 id="它是如何工作的">它是如何工作的</h2>
+<p>Dockable组件建立在manipulation事件的基础上，允许在特定位置停靠和解除停靠被拖动的对象。位置由与被拖动对象最接近的重叠触发DockPosition决定，因此两个对象都需要有碰撞器来激活触发器。</p>
 </article>
           </div>
           

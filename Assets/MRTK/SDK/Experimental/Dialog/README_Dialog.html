@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Dialog | Mixed Reality Toolkit Documentation </title>
+    <title>&#23545;&#35805;&#26694; Dialog | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Dialog | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#23545;&#35805;&#26694; Dialog | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../../../Documentation/Images/favicon.ico">
@@ -80,30 +80,30 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="dialog">Dialog</h1>
+<h1 id="对话框-dialog">对话框 Dialog</h1>
 
 <p><img src="../../../../../Documentation/Images/Dialog/MRTK_UX_Dialog_Main.png" alt="Dialog"></p>
-<p>Dialog controls are UI overlays that provide contextual app information. They often request some kind of action from the user. Use dialogs to notify users of important information or to request confirmation or additional info before an action can be completed.</p>
-<h2 id="example-scene">Example scene</h2>
-<p>You can find examples in the <strong>DialogExample</strong> scene under:
+<p>对话框控件是提供上下文应用程序信息的UI覆盖。它们经常要求用户进行某种操作。在操作完成之前，使用对话框通知用户重要信息或请求确认或其他信息。</p>
+<h2 id="示例场景">示例场景</h2>
+<p>你可以在<strong>DialogExample</strong>场景中找到例子:
 <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/Experimental/Dialog">MRTK/Examples/Experimental/Dialog</a></p>
-<h2 id="how-to-use-dialog-control">How to use Dialog control</h2>
-<p>MRTK provides three Dialog prefabs:</p>
+<h2 id="如何使用对话框控件">如何使用对话框控件</h2>
+<p>MRTK 提供三个对话框预置体:</p>
 <ul>
 <li>DialogSmall_192x96.prefab</li>
 <li>DialogMedium_192x128.prefab</li>
 <li>DialogLarge_192x192.prefab</li>
 </ul>
-<p>Use Dialog.Open() to open a new dialog. Specify the dialog prefab, number of buttons, title text, message text, placement distance(near or far), additional variables). Dialog provides 'Confirmation(single button)' and 'Choice(two-buttons)' dialog options.</p>
+<p>使用Dialog.Open() 打开一个新的对话框。指定对话框预制体，按钮数量，标题文本，消息文本，放置距离(近或远)，其他变量)。对话框提供'确认(单个按钮)'和'选择(两个按钮)'对话框选项。</p>
 <pre><code class="lang-c#">public static Dialog Open(GameObject dialogPrefab, DialogButtonType buttons, string title, string message, bool placeForNearInteraction, System.Object variable = null)
 </code></pre>
-<h3 id="example-of-opening-large-dialog-with-single-ok-button-placed-at-far-interaction-range-gaze-hand-ray-motion-controller">Example of opening Large dialog with single 'OK' button, placed at far interaction range (gaze, hand ray, motion controller):</h3>
+<h3 id="打开具有单个-ok-按钮的大对话框的例子它被放置在远交互范围凝视手部射线运动控制器">打开具有单个 'OK' 按钮的大对话框的例子，它被放置在远交互范围(凝视，手部射线，运动控制器):</h3>
 <pre><code class="lang-c#">Dialog.Open(DialogPrefabLarge, DialogButtonType.OK, &quot;Confirmation Dialog, Large, Far&quot;, &quot;This is an example of a large dialog with only one button, placed at far interaction range&quot;, false);
 </code></pre>
-<h3 id="example-of-opening-small-dialog-with-single-ok-button-placed-at-near-interaction-range-direct-hand-interaction">Example of opening Small dialog with single 'OK' button, placed at near interaction range (direct hand interaction):</h3>
+<h3 id="打开具有单个-ok-按钮的小对话框的例子它被放置在近处交互范围直接手动交互">打开具有单个 'OK' 按钮的小对话框的例子，它被放置在近处交互范围(直接手动交互):</h3>
 <pre><code class="lang-c#">Dialog.Open(DialogPrefabSmall, DialogButtonType.Yes | DialogButtonType.No, &quot;Confirmation Dialog, Small, Far&quot;, &quot;This is an example of a small dialog with a choice message, placed at near interaction range&quot;, true);
 </code></pre>
-<p>For more details, please see <code>DialogExampleController.cs</code> in DialogExample.unity scene.</p>
+<p>更多细节，请参见<code>DialogExampleController.cs</code>。在DialogExample.unity 的场景中。</p>
 </article>
           </div>
           

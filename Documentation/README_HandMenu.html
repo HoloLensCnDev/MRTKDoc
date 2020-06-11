@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#25163;&#37096;&#33756;&#21333; Hand menu | Mixed Reality Toolkit Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#25163;&#37096;&#33756;&#21333; Hand menu | Mixed Reality Toolkit Documentation ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../Documentation/Images/mrt_logo_icon.png" alt="">
+              </a>
+            </div>
+          
+          <div class="version-dropdown" id="versionDropdown">
+           </div>
+         
+          <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="手部菜单-hand-menu">手部菜单 Hand menu</h1>
+
+<p><img src="Images/Solver/MRTK_UX_HandMenu.png" alt="Hand Menu UX Example"></p>
+<p>手部菜单允许用户为经常使用的功能快速调出手边附加的UI。为了防止在与其他物体互动时出现错误激活，手部菜单提供了'Require Flat Hand(需要放平手)和'Use Gaze Activation(使用凝视激活)'等选项。建议使用这些选项来防止不必要的激活。</p>
+<h2 id="手部菜单示例">手部菜单示例</h2>
+<p><strong>HandMenuExamples.unity</strong> 场景在<code>MRTK/Examples/Demos/HandTracking/Scenes</code>文件夹下。当它运行时，场景将只激活当前选择的菜单类型。</p>
+<p><br><img src="Images/HandMenu/MRTK_HandMenu_ExampleScene.png" width="600px"></p>
+<p>你可以在 <code>MRTK/Examples/Demos/HandTracking/Prefabs</code>文件夹下找到这些手部菜单预制体。</p>
+<h3 id="handmenu_small_hideonhanddrop-和-handmenu_medium_hideonhanddrop">HandMenu_Small_HideOnHandDrop 和 HandMenu_Medium_HideOnHandDrop</h3>
+<p>这两个示例简单地激活和禁用MenuContent对象，以便在**OnFirstHandDetected()<strong>和</strong>OnLastHandLost()**事件上显示和隐藏菜单。</p>
+<p><br><img src="Images/HandMenu/MRTK_HandMenu_Example1.png" width="600">
+<br><img src="Images/HandMenu/MRTK_HandMenu_Example2.png" width="600"></p>
+<h3 id="handmenu_large_worldlock_on_grabandpull">HandMenu_Large_WorldLock_On_GrabAndPull</h3>
+<p>对于需要更长的交互时间的更复杂的菜单，建议世界锁定(world-lock)菜单。在本例中，除了在**OnFirstHandDetected()*<strong>和</strong>OnLastHandLost()**事件上激活和禁用MenuContent之外，用户还可以抓取并锁定菜单。</p>
+<p><br><img src="Images/HandMenu/MRTK_HandMenu_Example3.png" width="600"></p>
+<p>背板的<code>ManipulationHanlder</code> 使它可以抓取和移动。<strong>On Manipulation Started</strong>事件，<strong>SolverHandler.UpdateSolvers</strong> 被停用以锁定菜单。此外，它显示了<strong>Close button</strong> ，以允许用户在任务完成时关闭菜单。在 <strong>On Manipulation Ended</strong>事件，它调用<strong>HandConstraintPalmUp.StartWorldLockReattachCheckCoroutine</strong> 允许用户通过举起并看着手掌将菜单拿回来。</p>
+<p><br><img src="Images/HandMenu/MRTK_HandMenu_Example4.png" width="600"></p>
+<p><strong>Close</strong> 按钮重新激活<strong>SolverHandler.UpdateSolvers</strong> 和隐藏<strong>MenuContent</strong>。</p>
+<p><br><img src="Images/HandMenu/MRTK_HandMenu_Example5.png"></p>
+<h3 id="handmenu_large_autoworldlock_on_handdrop">HandMenu_Large_AutoWorldLock_On_HandDrop</h3>
+<p>这个例子类似于HandMenu_Large_WorldLock_On_GrabAndPull。唯一的区别是，菜单将自动锁定手动下降。这是通过不隐藏**OnLastHandLost()**事件上的MenuContent来实现的。抓取和推拉行为与HandMenu_Large_WorldLock_On_GrabAndPull的例子相同。</p>
+<h2 id="脚本">脚本</h2>
+<p><a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a> 行为提供了一个solver，该solver将跟踪的对象约束到一个安全的区域，以供手动约束的内容(比如手动UI、菜单等)使用。安全区域是指不与手相交的区域。 <a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a>的一个派生类称为<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp.html"><code>HandConstraintPalmUp</code></a> 还包括证明的常见行为激活解决面临的手掌是当用户跟踪对象。</p>
+<p>请参阅每个<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a>属性可用的工具提示以获得额外的文档。下面将更详细地定义一些属性。</p>
+<img src="Images/Solver/MRTK_Solver_HandConstraintPalmUp.png" width="450">
+<ul>
+<li><p><strong>Safe Zone</strong>:安全区指定在哪里约束内容。建议将内容放置在尺骨侧，避免与手重叠，提高交互质量。通过将手的方向投影到与摄像机视角正交的平面上，并对手周围的边界框进行射线投射，计算出安全区域。安全区被定义为与<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.html"><code>IMixedRealityHand</code></a> 一起工作，但也可以与其他控制器类型一起工作。建议探讨不同的控制器类型上每个安全区域代表什么。</p>
+</li>
+<li><p><strong>Follow Hand Until Facing Camera</strong> 激活后，solver将手动旋转，直到菜单与视线完全对齐，此时它将面对摄像头。这是通过改变HandConstraintSolver中的SolverRotationBehavior来实现的，从LookAtTrackedObject到LookAtMainCamera作为solver 变量的GazeAlignment 角度。</p>
+</li>
+</ul>
+<img src="Images/Solver/MRTK_Solver_HandConstraintSafeZones.png" width="450">
+<ul>
+<li><p><strong>Activation Events</strong>:当前<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a>触发4个激活事件。这些事件可以在许多不同的组合中使用来创建独特的<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint.html"><code>HandConstraint</code></a> 行为，请查看 <code>MRTK/Examples/Demos/HandTracking/Scenes/</code>场景来获得这些行为的例子。</p>
+<ul>
+<li><em>OnHandActivate</em>:当一只手满足IsHandActive方法时触发。</li>
+<li><em>OnHandDeactivate</em>:当IsHandActive方法不再满足时触发。</li>
+<li><em>OnFirstHandDetected</em>:手跟踪状态从无手变为有手时发生。</li>
+<li><em>OnLastHandLost</em>:手跟踪状态 从视野中至少有一只手变为视野中没有手时发生。</li>
+</ul>
+</li>
+<li><p><strong>Solver Activation/Deactivation Logic</strong>:当前推荐的激活和取消激活<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp.html"><code>HandConstraintPalmUp</code></a>逻辑是这样做通过使用SolverHandler 的UpdateSolver的值,而不是通过禁用/启用对象。这可以在示例场景中通过基于编辑器的钩子(hooks)看到，这些钩子是在附加菜单的ManipulationHandler的&quot;OnManipulationStarted/Ended&quot;事件后触发的。</p>
+<ul>
+<li><em>Stopping the hand-constraint logic</em>:当尝试设置手动约束对象停止(以及不运行激活/停用逻辑)时，将UpdateSolver设置为False，而不是禁用HandConstraintPalmUp。
+*如果您希望启用基于凝视(甚至非基于凝视)的重新连接逻辑(Reattach logic)，然后调用HandConstraintPalmUp . StartWorldLockReattachCheckCorotine()函数。这将触发一个协程，继续检查是否满足&quot;IsValidController&quot; 标准，并将UpdateSolver设置为True(或禁用该对象)</li>
+<li><em>Starting the hand-constraint logic</em>:当尝试设置手动约束对象以再次跟随您的手时(根据它是否满足激活条件)，将SolverHandler的UpdateSolver设置为true。</li>
+</ul>
+</li>
+<li><p><strong>Reattach Logic</strong>:当前的<a class="xref" href="../api/Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp.html"><code>HandConstraintPalmUp</code></a> 能够自动重新附加目标对象到被跟踪的点，而不管SolverHandler的UpdateSolver是否为真。这是通过调用HandConstraintPalmUp的StartWorldLockReattachCheckCorotine()函数来完成的，在它被锁定之后(在本例中，它有效地将SolverHandler的UpdateSolver设置为False)。</p>
+</li>
+</ul>
+<h2 id="建议浏览">建议浏览</h2>
+<ul>
+<li><a href="README_Button.html">按钮</a></li>
+<li><a href="README_NearMenu.html">近处菜单</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_HandMenu.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
