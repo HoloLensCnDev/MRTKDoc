@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Mixed Reality and HoloLens Keyboard Helper Classes | Mixed Reality Toolkit Documentation </title>
+    <title>&#28151;&#21512;&#29616;&#23454;&#21644; HoloLens &#38190;&#30424;&#21161;&#25163;&#31867; | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Mixed Reality and HoloLens Keyboard Helper Classes | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#28151;&#21512;&#29616;&#23454;&#21644; HoloLens &#38190;&#30424;&#21161;&#25163;&#31867; | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../../../Documentation/Images/favicon.ico">
@@ -80,26 +80,26 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="mixed-reality-and-hololens-keyboard-helper-classes">Mixed Reality and HoloLens Keyboard Helper Classes</h1>
+<h1 id="混合现实和-hololens-键盘助手类">混合现实和 HoloLens 键盘助手类</h1>
 
-<p>MRTK provides several experimental helper components to assist with launching and reading text from the <a href="../../../../../Documentation/README_SystemKeyboard.html">System Keyboard</a>.</p>
-<p>Note that the system keyboard will behave according to the target platform's capabilities, for example the keyboard on HoloLens 2 would support direct hand interactions, while the keyboard on HoloLens (1st gen) would support GGV<sup><a href="https://docs.microsoft.com/windows/mixed-reality/gaze">1</a></sup>. Additionally, the system keyboard will not show up when performing <a href="../../../../../Documentation/Tools/HolographicRemoting.html">Unity Remoting</a> from the editor to a HoloLens.</p>
+<p>MRTK提供了几个实验性的助手组件来帮助启动和从<a href="../../../../../Documentation/README_SystemKeyboard.html">系统键盘</a>读取文本。</p>
+<p>注意，系统键盘将根据目标平台的功能运行，例如HoloLens 2上的键盘将支持直接的手交互，而HoloLens(1代)上的键盘将支持GGV<sup><a href="https://docs.microsoft.com/windows/mixed-reality/gaze">1</a></sup>。另外，当从编辑器执行<a href="../../../../../Documentation/Tools/HolographicRemoting.html">Unity Remoting</a>时，系统键盘不会显示在HoloLens上。</p>
 <h2 id="mixedrealitykeyboard">MixedRealityKeyboard</h2>
-<p><a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboard.html"><code>MixedRealityKeyboard</code></a> is a component that provides methods for launching and closing a system keyboard, as well as interacting with text entered by the keyboard.</p>
-<h3 id="how-to-use">How to Use</h3>
+<p><a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboard.html"><code>MixedRealityKeyboard</code></a> 是一个组件，提供启动和关闭系统键盘的方法，以及与键盘输入的文本交互。</p>
+<h3 id="如何使用">如何使用</h3>
 <ol>
-<li>Attach the <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboard.html"><code>MixedRealityKeyboard</code></a> component to any object.</li>
-<li>Call <code>Show()</code> <code>Hide()</code> to show and hide the keyboard, and handle the <code>OnShowKeyboard</code>, <code>OnHideKeyboard</code> and <code>OnCommitText</code> events to handle when the keyboard is shown, hidden, and when the enter key is pressed.</li>
+<li>将<a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.MixedRealityKeyboard.html"><code>MixedRealityKeyboard</code></a>组件附加到任何对象上。</li>
+<li>调用<code>Show()</code> <code>Hide()</code>来显示和隐藏键盘，并处理<code>OnShowKeyboard</code>, <code>OnHideKeyboard</code> 和 <code>OnCommitText</code>事件来处理键盘显示、隐藏和按下enter键。</li>
 </ol>
-<h2 id="input-fields-tmp_keyboardinputfield-and-ui_keyboardinputfield">Input fields TMP_KeyboardInputField, and UI_KeyboardInputField</h2>
-<p>The <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.TMP_KeyboardInputField.html"><code>TMP_KeyboardInputField</code></a> and <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.UI_KeyboardInputField.html"><code>UI_KeyboardInputField</code></a> classes are components that can be added to text input fields to automatically invoke the system keyboard when clicked and update the text input field contents as the user enters text.</p>
-<h3 id="how-to-use-1">How to use</h3>
+<h2 id="输入字段-tmp_keyboardinputfield-和-ui_keyboardinputfield">输入字段 TMP_KeyboardInputField, 和 UI_KeyboardInputField</h2>
+<p><a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.TMP_KeyboardInputField.html"><code>TMP_KeyboardInputField</code></a> 和 <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.UI_KeyboardInputField.html"><code>UI_KeyboardInputField</code></a>  类是可以添加到文本输入字段(text input fields)的组件，在单击时自动调用系统键盘，并在用户输入文本时更新文本输入字段内容。</p>
+<h3 id="如何使用-1">如何使用</h3>
 <ol>
-<li>Create an input field for either UnityUI or TextMeshPro.</li>
-<li>Add the corresponding <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.TMP_KeyboardInputField.html"><code>TMP_KeyboardInputField</code></a> or <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.UI_KeyboardInputField.html"><code>UI_KeyboardInputField</code></a> component to the input field game object.</li>
+<li>为UnityUI或TextMeshPro创建一个输入字段(input field)。</li>
+<li>添加相应的<a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.TMP_KeyboardInputField.html"><code>TMP_KeyboardInputField</code></a> 或者 <a class="xref" href="../../../../../api/Microsoft.MixedReality.Toolkit.Experimental.UI.UI_KeyboardInputField.html"><code>UI_KeyboardInputField</code></a>组件到输入字段game object。</li>
 </ol>
-<p>Prefabs for both UnityUI input fields and TextMeshPro (TMPro) input fields are available at &quot;Assets\MRTK\Experimental\MixedRealityKeyboard\Prefabs&quot;</p>
-<p>An example of how the to use TMP_KeyboardInputField and UI_KeyboardInputField is at &quot;Assets\MRTK\Examples\Experimental\MixedRealityKeyboard\Scenes\MixedRealityKeyboardExample.unity&quot;</p>
+<p>UnityUI输入字段和TextMeshPro (TMPro)输入字段的预制体可在&quot;Assets\MRTK\Experimental\MixedRealityKeyboard\Prefabs&quot;中获得</p>
+<p>如何使用TMP_KeyboardInputField和UI_KeyboardInputField的一个例子是在&quot;Assets\MRTK\Examples\Experimental\MixedRealityKeyboard\Scenes\MixedRealityKeyboardExample.unity&quot;</p>
 </article>
           </div>
           
