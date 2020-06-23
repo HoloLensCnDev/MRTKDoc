@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "Assets/MRTK/SDK/Experimental/MixedRealityKeyboard/README_MixedRealityKeyboard.html",
-          "hash": "1ZoY6tnX/vwrxq++c3pYuQ=="
+          "hash": "IQPBiK18wR1QJGFc0N+ivQ=="
         }
       },
       "is_incremental": false,
@@ -1017,7 +1017,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Contributing/BreakingChanges.html",
-          "hash": "Rclf6J3KQ/+HzKoVcjEu/w=="
+          "hash": "+3Z0Tz2j3mO/ZN/ddLPbqg=="
         }
       },
       "is_incremental": false,
@@ -1029,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Contributing/CONTRIBUTING.html",
-          "hash": "JRSXEUy3pBT6FQNNKY642g=="
+          "hash": "sgUrAmfZayjz14tdsFeLyQ=="
         }
       },
       "is_incremental": false,
@@ -1041,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Contributing/CodingGuidelines.html",
-          "hash": "BwBBfXQndlcf1K/pJURRiQ=="
+          "hash": "2KlkiYmsAD/47TGIkxvNPw=="
         }
       },
       "is_incremental": false,
@@ -1065,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Contributing/DocumentationGuide.html",
-          "hash": "so+TeKStlKhJnx1EEAxP1g=="
+          "hash": "e252PV6QNLs1MKAJmD136Q=="
         }
       },
       "is_incremental": false,
@@ -1077,7 +1077,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Contributing/ExperimentalFeatures.html",
-          "hash": "yiiL82uKNFjxM/RQewYr2Q=="
+          "hash": "U1JOj5quRMasyrr8EfIVDA=="
         }
       },
       "is_incremental": false,
@@ -1089,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Contributing/Feature_Contribution_Process.html",
-          "hash": "3SVR0yGeMHoqZUxve8UiMg=="
+          "hash": "kqFOxuC0PS8jLOr38SQANw=="
         }
       },
       "is_incremental": false,
@@ -1101,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Contributing/PullRequests.html",
-          "hash": "+kcpTVOswQLQBMfKBI6JDg=="
+          "hash": "+aL+Gkoj6krkpd9YIcm+Fw=="
         }
       },
       "is_incremental": false,
@@ -1113,7 +1113,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Contributing/Roadmap.html",
-          "hash": "MGytjy86Wt/v2vFkS+eUQA=="
+          "hash": "Ul2y5w6dSrGUetczQf2CEg=="
         }
       },
       "is_incremental": false,
@@ -1125,7 +1125,19 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Contributing/UnitTests.html",
-          "hash": "lRXPdHKCqRTwcTbOtr0VfA=="
+          "hash": "wzKLaH2Msot1aeTmTD1jEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Documentation/CrossPlatform/LeapMotionMRTK.md",
+      "output": {
+        ".html": {
+          "relative_path": "Documentation/CrossPlatform/LeapMotionMRTK.html",
+          "hash": "VtvLsVoMDmIjdRHUGNS/ZA=="
         }
       },
       "is_incremental": false,
@@ -1336,12 +1348,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "Documentation/GettingStartedWithTheMRTK.md",
       "output": {
         ".html": {
           "relative_path": "Documentation/GettingStartedWithTheMRTK.html",
-          "hash": "11sMhAQ1w2c/ZGNEQYFsQA=="
+          "hash": "l2hfT/6dXom/tZ8P6KOY7A=="
         }
       },
       "is_incremental": false,
@@ -2619,6 +2634,28 @@
       "output": {
         "resource": {
           "relative_path": "Documentation/Images/ConfigurationDialog/ConfigurationDialogiOSSettings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Documentation/Images/ConfigurationDialog/EnableMSB4UPrompt.png",
+      "output": {
+        "resource": {
+          "relative_path": "Documentation/Images/ConfigurationDialog/EnableMSB4UPrompt.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Documentation/Images/ConfigurationDialog/MSB4UMenuItems.png",
+      "output": {
+        "resource": {
+          "relative_path": "Documentation/Images/ConfigurationDialog/MSB4UMenuItems.png"
         }
       },
       "is_incremental": false,
@@ -4192,6 +4229,28 @@
       "output": {
         "resource": {
           "relative_path": "Documentation/Images/InputSimulation/MRTK_Core_Input_Hands_HandTrackingProfile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Documentation/Images/InputSimulation/MRTK_Core_Input_Hands_JointNames.png",
+      "output": {
+        "resource": {
+          "relative_path": "Documentation/Images/InputSimulation/MRTK_Core_Input_Hands_JointNames.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Documentation/Images/InputSimulation/MRTK_Core_Input_Hands_JointNames_Dark.png",
+      "output": {
+        "resource": {
+          "relative_path": "Documentation/Images/InputSimulation/MRTK_Core_Input_Hands_JointNames_Dark.png"
         }
       },
       "is_incremental": false,
@@ -8049,7 +8108,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/MRTK_PackageContents.html",
-          "hash": "zBc6PVhR2K978jbzJdeM4w=="
+          "hash": "Xe81sKLzpCj3D8Vtt2gOeA=="
         }
       },
       "is_incremental": false,
@@ -8421,7 +8480,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/ReleaseNotes.html",
-          "hash": "C1LLRzMtWXNq1A5IAJ1fJw=="
+          "hash": "flfvxSIAMG/nem9A4XU76w=="
         }
       },
       "is_incremental": false,
@@ -8656,12 +8715,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "Documentation/Updating.md",
       "output": {
         ".html": {
           "relative_path": "Documentation/Updating.html",
-          "hash": "d764q35WYrWqcot4kKFh/w=="
+          "hash": "huyDCmQ+QnE04rtI+7Na0g=="
         }
       },
       "is_incremental": false,
@@ -8697,7 +8759,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/toc.html",
-          "hash": "/8L0V1QHrtXRzDjyM90ncA=="
+          "hash": "gqmvZUHV5Yve6Q6JdXFgSw=="
         }
       },
       "is_incremental": false,
@@ -8721,7 +8783,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "0sKZh/Apro9W1mLCtg7JNA=="
+          "hash": "ro1YOYmVxrTASkO2++GGAQ=="
         }
       },
       "is_incremental": false,
@@ -31819,9 +31881,9 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -31835,12 +31897,12 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 180,
-          "skipped_file_count": 179
+          "total_file_count": 181,
+          "skipped_file_count": 165
         },
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0

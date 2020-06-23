@@ -87,7 +87,6 @@
 <li><a href="#foundation">Foundation</a></li>
 <li><a href="#extensions">Extensions</a></li>
 <li><a href="#tools">Tools</a></li>
-<li><a href="#providersunityar">Providers.UnityAR</a></li>
 <li><a href="#examples">Examples</a></li>
 </ul>
 <h2 id="foundation">Foundation</h2>
@@ -104,14 +103,14 @@
 </thead>
 <tbody>
 <tr>
-<td>MixedRealityToolkit</td>
+<td>MRTK/Core</td>
 <td></td>
 <td>接口和类型定义，基类，标准着色器。</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>MixedRealityToolkit.Providers</td>
+<td>MRTK/Providers</td>
 <td></td>
 <td></td>
 <td></td>
@@ -133,6 +132,13 @@
 </tr>
 <tr>
 <td></td>
+<td><a href="CameraSystem/UnityArCameraSettings.html">UnityAR</a></td>
+<td>(实验性)Camera settings provider，使MRTK在移动AR设备使用。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td>WindowsMixedReality</td>
 <td>支持Windows Mixed Reality设备，包括Microsoft HoloLens和沉浸式头显。</td>
 <td></td>
@@ -146,7 +152,14 @@
 <td></td>
 </tr>
 <tr>
-<td>MixedRealityToolkit.SDK</td>
+<td></td>
+<td>XRSDK</td>
+<td>(实验性) 在 Unity 2019.3中支持<a href="https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/">Unity的新XR框架</a>。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MRTK/SDK</td>
 <td></td>
 <td></td>
 <td></td>
@@ -177,6 +190,13 @@
 <td></td>
 <td>StandardAssets</td>
 <td>共同资源；模型，纹理，材料等</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MRTK/Services</td>
+<td></td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -247,10 +267,10 @@
 </table>
 <h2 id="extensions">Extensions</h2>
 <p>可选的Microsoft.MixedRealityToolkit.Unity.Extensions程序包包括扩展Microsoft混合现实工具包功能的其他服务</p>
-<blockquote>
-<p>[!注意]
-扩展程序包需要Microsoft.MixedRealityToolkit.Unity.Foundation。</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>扩展程序包需要Microsoft.MixedRealityToolkit.Unity.Foundation。</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -261,9 +281,14 @@
 </thead>
 <tbody>
 <tr>
-<td>MixedRealityToolkit.Extensions</td>
+<td>MRTK/Extensions</td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td></td>
+<td>HandPhysicsService</td>
+<td>为全关节手增加物理支持的服务。</td>
 </tr>
 <tr>
 <td></td>
@@ -278,12 +303,12 @@
 </tbody>
 </table>
 <h2 id="tools">Tools</h2>
-<p>可选的Microsoft.MixedRealityToolkit.Unity.Tools软件包包括有用的工具，这些工具可以使用Microsoft
-Mixed Reality Toolkit增强混合现实开发体验。这些工具位于Unity编辑器的<strong>Mixed Reality Toolkit &gt; Utilities</strong>菜单中。</p>
-<blockquote>
-<p>[!注意]
-该工具包需要Microsoft.MixedRealityToolkit.Unity.Foundation。</p>
-</blockquote>
+<p>可选的Microsoft.MixedRealityToolkit.Unity.Tools软件包包括有用的工具，这些工具可以使用Microsoft Mixed Reality Toolkit增强混合现实开发体验。
+这些工具位于Unity编辑器的<strong>Mixed Reality Toolkit &gt; Utilities</strong>菜单中。</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>该工具包需要Microsoft.MixedRealityToolkit.Unity.Foundation。</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -294,7 +319,7 @@ Mixed Reality Toolkit增强混合现实开发体验。这些工具位于Unity编
 </thead>
 <tbody>
 <tr>
-<td>MixedRealityToolkit.Tools</td>
+<td>MRTK/Tools</td>
 <td></td>
 <td></td>
 </tr>
@@ -335,39 +360,13 @@ Mixed Reality Toolkit增强混合现实开发体验。这些工具位于Unity编
 </tr>
 </tbody>
 </table>
-<h2 id="providersunityar">Providers.UnityAR</h2>
-<blockquote>
-<p>[!注意]
-UnityAR软件包需要 Microsoft.MixedRealityToolkit.Unity.Foundation。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>文件夹</th>
-<th>组件</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MixedRealityToolkit.Staging</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="CameraSystem/UnityArCameraSettings.html">UnityAR</a></td>
-<td>Camera settings provider允许MRTK与移动AR设备一起使用。</td>
-</tr>
-</tbody>
-</table>
 <h2 id="examples">Examples</h2>
 <p>可选的Microsoft.MixedRealityToolkit.Unity.Examples包包括演示项目，这些演示项目说明了Microsoft
 Mixed Reality Toolkit的功能。</p>
-<blockquote>
-<p>[!注意]
-示例包需要Microsoft.MixedRealityToolkit.Unity.Foundation。</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>示例包需要Microsoft.MixedRealityToolkit.Unity.Foundation。</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -405,7 +404,10 @@ Mixed Reality Toolkit的功能。</p>
 </tbody>
 </table>
 <h2 id="建议浏览">建议浏览</h2>
-<p><a href="GettingStartedWithTheMRTK.html">MRTK入门</a></p>
+<ul>
+<li><a href="GettingStartedWithTheMRTK.html">MRTK入门</a></li>
+<li><a href="MRTKNuGetPackage.html">NuGet 包</a></li>
+</ul>
 </article>
           </div>
           

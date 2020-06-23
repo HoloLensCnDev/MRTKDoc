@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Breaking Changes | Mixed Reality Toolkit Documentation </title>
+    <title>Breaking changes | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Breaking Changes | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="Breaking changes | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../Documentation/Images/favicon.ico">
@@ -80,7 +80,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="breaking-changes">Breaking Changes</h1>
+<h1 id="breaking-changes">Breaking changes</h1>
 
 <p>Consumers of the MRTK depend on having a stable release-to-release API surface, so that they can take updates to the MRTK without having large breaking changes each time.</p>
 <p>This page describes our current policy regarding breaking changes in the MRTK, along with some longer term goals around how we can better manage the tradeoff between keeping breaking changes low and being able to make the right long term technical changes to the code.</p>
@@ -100,10 +100,11 @@
 <ul>
 <li><p>The asset in question is in the foundation package (i.e. it's in one of the following folders):</p>
 <ul>
-<li>MixedRealityToolkit/</li>
-<li>MixedRealityToolkit.Providers/</li>
-<li>MixedRealityToolkit.Services/</li>
-<li>MixedRealityToolkit.SDK/</li>
+<li>MRTK/Core</li>
+<li>MRTK/Providers/</li>
+<li>MRTK/Services/</li>
+<li>MRTK/SDK/</li>
+<li>MRTK/Extensions</li>
 </ul>
 </li>
 <li><p>The asset in question does not belong to the experimental namespace.</p>
@@ -111,7 +112,7 @@
 </ul>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Any asset that sits in the examples package (i.e. part of the MixedRealityToolkit.Examples/ folder) is subject to change at any time, as assets there are designed to be copied and viewed by consumers as 'reference implementations' but are not part of the core set of APIs and assets. Assets in the experimental namespace (or more generally, features labelled as experimental) are ones that get published before all due diligence has been done (i.e. tests, UX iteration, documentation) and is published early to get feedback sooner.  However, because they don't have tests and documentation, and because we likely haven't nailed down all of the interactions and designs, we publish them in a state where the public should assume that they can and will change (i.e. be modified, completely removed, etc).</p>
+<p>Any asset that sits in the examples package (i.e. part of the MRTK/Examples/ folder) is subject to change at any time, as assets there are designed to be copied and viewed by consumers as 'reference implementations' but are not part of the core set of APIs and assets. Assets in the experimental namespace (or more generally, features labelled as experimental) are ones that get published before all due diligence has been done (i.e. tests, UX iteration, documentation) and is published early to get feedback sooner.  However, because they don't have tests and documentation, and because we likely haven't nailed down all of the interactions and designs, we publish them in a state where the public should assume that they can and will change (i.e. be modified, completely removed, etc).</p>
 <p>See <a href="ExperimentalFeatures.html">Experimental features</a> for more information.</p>
 </div>
 <p>As the surface area for breaking changes is very large, it's important to note that having an absolute

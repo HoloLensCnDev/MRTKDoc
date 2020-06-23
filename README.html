@@ -78,7 +78,7 @@
 <h1 id="什么是-mixed-reality-toolkit">什么是 Mixed Reality Toolkit</h1>
 <p>MRTK-Unity 是一个微软驱动的项目，它提供了一系列组件和功能，用于加速Unity中跨平台的MR应用程序开发。以下是它的一些功能:</p>
 <ul>
-<li>提供 <strong>基本构建模块用于HoloLens, Windows Mixed Reality 和 OpenVR的Unity 开发</strong>.</li>
+<li>提供 <strong>基本构建模块用于HoloLens, Windows Mixed Reality 和 OpenVR的Unity开发</strong>.</li>
 <li>允许<strong>快速原型设计</strong>通过编辑器内模拟使您可以立即查看更改。</li>
 <li>作为<strong>可扩展框架</strong>运行，为开发人员提供了替换核心组件的能力。</li>
 <li><strong>支持广泛的平台</strong>，包括
@@ -87,6 +87,7 @@
 <li>Microsoft HoloLens 2</li>
 <li>Windows Mixed Reality headsets</li>
 <li>OpenVR headsets (HTC Vive / Oculus Rift)</li>
+<li>Ultraleap 手动跟踪</li>
 </ul>
 </li>
 </ul>
@@ -145,7 +146,7 @@
 <th style="text-align: left;"><img src="Documentation/Images/MRTK_Icon_HandTracking.png" alt="Hand Tracking (HoloLens 2)"> <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSystem/HandTracking.html">手动跟踪<br> (HoloLens 2)</a></th>
 <th style="text-align: left;"><img src="Documentation/Images/MRTK_Icon_EyeTracking.png" alt="Eye Tracking (HoloLens 2)"> <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html">眼动跟踪<br> (HoloLens 2)</a></th>
 <th style="text-align: left;"><img src="Documentation/Images/MRTK_Icon_Profiles.png" alt="Profiles"> <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html">配置文件</a><br> </th>
-<th style="text-align: left;"><img src="Documentation/Images/MRTK_Icon_GazeSelect.png" alt="Gaze + Gesture (HoloLens)"> <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Gestures.html">Gaze + Gesture<br> (HoloLens)</a></th>
+<th style="text-align: left;"><img src="Documentation/Images/MRTK_Icon_HandTracking.png" alt="Hand Tracking (Ultraleap)"> <a href="Documentation/CrossPlatform/LeapMotionMRTK.html">手动跟踪<br> (Ultraleap)</a></th>
 </tr>
 </thead>
 <tbody>
@@ -165,7 +166,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="ui-和-交互构件模块">UI 和 交互构件模块</h1>
+<h1 id="ui和交互构件模块">UI和交互构件模块</h1>
 <table>
 <thead>
 <tr>
@@ -223,12 +224,32 @@
 <tr>
 <td style="text-align: left;"><a href="Documentation/README_NearMenu.html"><img src="Documentation/Images/NearMenu/MRTK_UX_NearMenu.png" alt="Near Menu"></a> <a href="Documentation/README_NearMenu.html">Near Menu</a></td>
 <td style="text-align: left;"><a href="Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html"><img src="Documentation/Images/SpatialAwareness/MRTK_SpatialAwareness_Main.png" alt="Spatial Awareness"></a> <a href="Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html">Spatial Awareness</a></td>
-<td style="text-align: left;"><a href="Documentation/Input/Speech.html"><img src="Documentation/Images/Input/MRTK_Input_Speech.png" alt="Voice Command"></a> <a href="Documentation/Input/Speech.html">Voice Command</a></td>
+<td style="text-align: left;"><a href="Documentation/Input/Speech.html"><img src="Documentation/Images/Input/MRTK_Input_Speech.png" alt="Voice Command"></a> <a href="Documentation/Input/Speech.html">Voice Command</a> / <a href="Documentation/Input/Dictation.html">Dictation</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">演示如何使用Solver将对象附加到手部关节上</td>
 <td style="text-align: left;">使您的全息对象与物理环境互动</td>
 <td style="text-align: left;">集成语音输入的脚本和示例</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="Documentation/README_ProgressIndicator.html"><img src="Documentation/Images/ProgressIndicator/MRTK_ProgressIndicator_Main.png" alt="Progress Indicator"></a> <a href="Documentation/README_ProgressIndicator.html">Progress Indicator</a></td>
+<td style="text-align: left;"><a href="Assets/MRTK/SDK/Experimental/Dialog/README_Dialog.html"><img src="Documentation/Images/Dialog/MRTK_UX_Dialog_Main.png" alt="Dialog"></a> <a href="Assets/MRTK/SDK/Experimental/Dialog/README_Dialog.html">Dialog [实验性]</a></td>
+<td style="text-align: left;"><a href="Assets/MRTK/SDK/Experimental/HandCoach/README_HandCoach.html"><img src="Documentation/Images/HandCoach/MRTK_UX_HandCoach_Main.jpg" alt="Hand Coach"></a> <a href="Assets/MRTK/SDK/Experimental/HandCoach/README_HandCoach.html">Hand Coach [实验性]</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">用于数据通信过程或操作的可视指示器</td>
+<td style="text-align: left;">请求用户确认或允许的UI</td>
+<td style="text-align: left;">当手势没有被教学时帮助指导用户的组件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="Assets/MRTK/Extensions/HandPhysicsService/README.html"><img src="Documentation/Images/HandPhysics/MRTK_UX_HandPhysics_Main.jpg" alt="Hand Physics Service"></a> <a href="Assets/MRTK/Extensions/HandPhysicsService/README.html">Hand Physics Service [实验性]</a></td>
+<td style="text-align: left;"><a href="Assets/MRTK/SDK/Experimental/ScrollingObjectCollection/README.html"><img src="Documentation/Images/ScrollingCollection/MRTK_UX_ScrollingCollection_Main.jpg" alt="Scrolling Collection"></a> <a href="Assets/MRTK/SDK/Experimental/ScrollingObjectCollection/README.html">Scrolling Collection [实验性]</a></td>
+<td style="text-align: left;"><a href="Assets/MRTK/SDK/Experimental/Dock/README_Dock.html"><img src="Documentation/Images/Dock/MRTK_UX_Dock_Main.png" alt="Dock"></a> <a href="Assets/MRTK/SDK/Experimental/Dock/README_Dock.html">Dock [实验性]</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">hand physics服务支持刚体碰撞事件和与全关节手的交互</td>
+<td style="text-align: left;">可滚动3D对象的对象集合</td>
+<td style="text-align: left;">Dock允许对象移进和移出预定的位置</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="Documentation/EyeTracking/EyeTracking_TargetSelection.html"><img src="Documentation/Images/EyeTracking/mrtk_et_targetselect.png" alt="Eye Tracking: Target Selection"></a> <a href="Documentation/EyeTracking/EyeTracking_TargetSelection.html">Eye Tracking: Target Selection</a></td>
@@ -265,7 +286,7 @@
 <p>在<a href="Documentation/README_HandInteractionExamples.html">示例场景</a>中探索MRTK的各种类型的交互和UI控件。</p>
 <p>您可以在 <a href="/Assets/MixedRealityToolkit.Examples/Demos"><strong>Assets/MixedRealityToolkit.Examples/Demos</strong></a> 文件夹下找到其他示例场景。</p>
 <p><a href="Documentation/README_HandInteractionExamples.html"><img src="Documentation/Images/MRTK_Examples.png" alt="Example Scene"></a></p>
-<h1 id="mrtk-示例中心">MRTK 示例中心</h1>
+<h1 id="mrtk示例中心">MRTK示例中心</h1>
 <p>使用MRTK示例中心，您可以尝试MRTK中的各种示例场景。</p>
 <p>您可以在<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/releases/tag/v2.0.0"><strong>Release Assets</strong></a> 文件夹下找到HoloLens（x86），HoloLens 2（ARM）和Windows Mixed Reality沉浸式头显（x64）的预构建应用程序包。 <a href="https://docs.microsoft.com/hololens/hololens-install-apps#use-the-windows-device-portal-to-install-apps-on-hololens">使用Windows Device Portal 在HoloLens上安装应用程序</a>.</p>
 <p>请参阅<a href="Documentation/README_ExampleHub.html">示例中心README页面</a> 以了解有关创建具有MRTK场景系统和场景转换服务的多场景中心的详细信息。</p>

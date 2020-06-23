@@ -83,13 +83,13 @@
 <h1 id="mrtk入门">MRTK入门</h1>
 
 <p><img src="Images/MRTK_Logo_Rev.png" alt="MRTK Logo"></p>
-<p>混合现实工具包（MRTK）是用于为虚拟现实（VR）和增强现实（AR）构建混合现实体验的跨平台工具包。</p>
+<p>混合现实工具包(MRTK)是用于为虚拟现实(VR)和增强现实(AR)构建混合现实体验的跨平台工具包。</p>
 <h2 id="初始准备">初始准备</h2>
 <p>要开始使用混合现实工具包，您需要：</p>
 <ul>
 <li><p><a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2019</a></p>
 </li>
-<li><p><a href="https://unity3d.com/get-unity/download/archive">Unity 2018.4.x, 2019.1.x or 2019.2.x</a></p>
+<li><p><a href="https://unity3d.com/get-unity/download/archive">Unity 2018.4.x, Unity 2019</a></p>
 <p>MRTK支持Unity 2018上的IL2CPP和.NET脚本后端</p>
 </li>
 <li><p><a href="https://developer.microsoft.com/windows/downloads/windows-10-sdk">Windows SDK 18362+</a>.</p>
@@ -97,18 +97,19 @@
 </li>
 </ul>
 <h2 id="将mrtk添加到您的unity项目">将MRTK添加到您的Unity项目</h2>
-<p><strong>需要</strong></p>
+<h3 id="需要">需要</h3>
 <ol>
-<li><a href="#get-the-latest-mrtk-unity-packages">获取最新的MRTK Unity包</a></li>
-<li><a href="#import-mrtk-packages-into-your-unity-project">将MRTK包导入到您的Unity项目中</a></li>
-<li><a href="#switch-your-unity-project-to-the-target-platform">将您的Unity项目切换到目标平台</a></li>
-<li><a href="#add-mrtk-to-a-new-scene-or-new-project">将MRTK添加到新场景或新项目</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E6%9C%80%E6%96%B0%E7%9A%84MRTK-Unity%E8%BD%AF%E4%BB%B6%E5%8C%85">获取最新的MRTK Unity包</a></li>
+<li><a href="#%E5%B0%86MRTK%E5%8C%85%E5%AF%BC%E5%85%A5%E5%88%B0%E6%82%A8%E7%9A%84Unity%E9%A1%B9%E7%9B%AE%E4%B8%AD">将MRTK包导入到您的Unity项目中</a></li>
+<li><a href="#%E5%B0%86%E6%82%A8%E7%9A%84Unity%E9%A1%B9%E7%9B%AE%E5%88%87%E6%8D%A2%E5%88%B0%E7%9B%AE%E6%A0%87%E5%B9%B3%E5%8F%B0">将您的Unity项目切换到目标平台</a></li>
+<li><a href="#%E5%B0%86MRTK%E6%B7%BB%E5%8A%A0%E5%88%B0%E6%96%B0%E5%9C%BA%E6%99%AF%E6%88%96%E6%96%B0%E9%A1%B9%E7%9B%AE">将MRTK添加到新场景或新项目</a></li>
 </ol>
-<p><strong>可选的</strong></p>
+<h3 id="可选的">可选的</h3>
 <ul>
-<li><a href="#get-the-latest-mrtk-unity-packages">入门教程</a></li>
-<li><a href="#learn-about-the-core-building-blocks-of-mrtk">了解MRTK的核心组成部分</a></li>
-<li><a href="#run-the-handinteractionexamples-scene-in-the-unity-editor">在Unity编辑器中运行HandInteractionExamples场景r</a></li>
+<li><a href="#%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B">入门教程</a></li>
+<li><a href="GettingStartedWithMRTKAndXRSDK.md">XR SDK 开始使用指南 (Unity 2019.3 或更新)</a>.</li>
+<li><a href="#%E4%BA%86%E8%A7%A3MRTK%E7%9A%84%E6%A0%B8%E5%BF%83%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86">了解MRTK的核心组成部分</a></li>
+<li><a href="#%E5%9C%A8Unity%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%AD%E8%BF%90%E8%A1%8CHandInteractionExamples%E5%9C%BA%E6%99%AF">在Unity编辑器中运行HandInteractionExamples场景</a></li>
 </ul>
 <h3 id="获取最新的mrtk-unity软件包">获取最新的MRTK Unity软件包</h3>
 <ol>
@@ -117,63 +118,69 @@
 <ul>
 <li><strong>Microsoft.MixedRealityToolkit.Unity.Foundation.unitypackage</strong></li>
 <li>(<strong><em>可选</em></strong>) Microsoft.MixedRealityToolkit.Unity.Extensions.unitypackage</li>
-<li>(<strong><em>可选</em></strong>) Microsoft.MixedRealityToolkit.Unity.Tools.unitypackage</li>
 <li>(<strong><em>可选</em></strong>) Microsoft.MixedRealityToolkit.Unity.Examples.unitypackage</li>
-<li>(<strong><em>可选</em></strong>, <strong><em>实验性的</em></strong>) Microsoft.MixedRealityToolkit.Unity.Providers.UnityAR.unitypackage</li>
+<li>(<strong><em>版本到版本的升级为必需，否则可选</em></strong>) Microsoft.MixedRealityToolkit.Unity.Tools.unitypackage</li>
 </ul>
 </li>
 </ol>
 <p>对于更多的包内容信息, 请查看 <a href="MRTK_PackageContents.html">MRTK 包内容</a>.</p>
-<p>现在可以在NuGet.org上下载“混合现实工具包”，有关详细信息，请参阅<a href="MRTKNuGetPackage.html">MRTK NuGet 包</a>.</p>
+<p>混合现实工具包也可以在NuGet.org上下载;详情见<a href="MRTKNuGetPackage.html">MRTK NuGet 包</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>在MRTK 2.4.0中，不再支持NuGet包。</p>
+</div>
 <h3 id="将mrtk包导入到您的unity项目中">将MRTK包导入到您的Unity项目中</h3>
 <ol>
-<li>创建一个新的Unity项目，或打开一个现有项目。创建项目时，请确保选择“ 3D”作为模板类型。</li>
-<li>通过进入“Asset -&gt; Import Package -&gt; Custom Package”，选择.unitypackage文件，确保选中了要导入的所有项目，然后选择“Import”，导入下载的<strong>Microsoft.MixedRealityToolkit.Unity.Foundation.unitypackage</strong>。</li>
-<li>（<strong><em>可选</em></strong>）按照与上述相同的步骤导入<strong>Microsoft.MixedRealityToolkit.Unity.Examples.unitypackage</strong>。示例包是可选的，其中包含有关MRTK当前功能的有用演示场景。</li>
-<li>（<strong><em>可选</em></strong>）按照与基础包相同的步骤导入<strong>Microsoft.MixedRealityToolkit.Unity.Tools.unitypackage</strong>。这些工具包是可选的，并且包含有用的工具，例如ExtensionServiceCreator，可增强MRTK开发人员的体验。</li>
-<li>（<strong><em>可选</em></strong>）按照与基础包相同的步骤导入<strong>Microsoft.MixedRealityToolkit.Unity.Extensions.unitypackage</strong>。扩展包为MRTK提供了一组有用的可选组件。</li>
-<li>（<strong><em>可选</em></strong>） 按照与基础包相同的步骤导入<strong>Microsoft.MixedRealityToolkit.Unity.Providers.UnityAR.unitypackage</strong> .该包为MRTK中的移动AR(手机、平板)设备提供支持。</li>
+<li>创建一个新的Unity项目，或打开一个现有项目。创建项目时，请确保选择&quot;3D&quot; 作为模板类型。</li>
+<li>通过进入 &quot;Asset -&gt; Import Package -&gt; Custom Package&quot;，选择.unitypackage文件，确保选中了要导入的所有项目，然后选择&quot;Import&quot;，导入下载的<strong>Microsoft.MixedRealityToolkit.Unity.Foundation.unitypackage</strong>。</li>
+<li>(<strong><em>可选</em></strong>)按照与基础包相同的步骤导入<strong>Microsoft.MixedRealityToolkit.Unity.Extensions.unitypackage</strong>。扩展包为MRTK提供了一组有用的可选组件。</li>
+<li>(<strong><em>可选</em></strong>)按照与上述相同的步骤导入<strong>Microsoft.MixedRealityToolkit.Unity.Examples.unitypackage</strong>。示例包是可选的，其中包含有关MRTK当前功能的有用演示场景。<strong>注意Examples包需要Extensions包</strong></li>
+<li>(<strong><em>版本到版本的升级为必需，否则可选</em></strong>)按照与基础包相同的步骤导入<strong>Microsoft.MixedRealityToolkit.Unity.Tools.unitypackage</strong>。这些工具包是可选的，并且包含有用的工具，例如ExtensionServiceCreator，可增强MRTK开发人员的体验。</li>
 </ol>
-<blockquote>
-<p>[!注意]
-导入Microsoft.MixedRealityToolkit.Unity.Providers.UnityAR.unitypackage 需要执行额外的步骤。更多信息，请参阅<a href="CameraSystem/UnityArCameraSettings.html">UnityAR相机设置</a>文章.</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Android和iOS开发需要额外的软件包安装。更多信息，见<a href="CrossPlatform/UsingARFoundation.html">如何配置iOS和Android的MRTK</a>。</p>
+</div>
 <p>导入Foundation程序包后，您可能会看到如下的安装提示：</p>
 <p><img src="Images/MRTK_UnitySetupPrompt.png" alt="UnitySetupPrompt"></p>
 <p>MRTK正在尝试通过执行以下操作来建立用于构建混合现实解决方案的项目：</p>
 <ul>
-<li>为您当前的平台启用XR设置（启用XR复选框）。</li>
-<li>强制文本序列化/可见元文件（推荐用于使用源代码管理的Unity项目）。</li>
+<li>为您当前的平台启用XR设置(启用XR复选框)。</li>
+<li>强制文本序列化/可见元文件(推荐用于使用源代码管理的Unity项目)。</li>
 </ul>
-<p>接受这些选项是完全可选的，但建议这样做。
-某些预制件和资源需要TextMesh Pro，这意味着您必须安装TextMesh Pro软件包以及项目中的资源（“Window -&gt; TextMeshPro-&gt;Import TMP Essential Resources”）。<strong>导入TMP Essentials资源后，需要重新启动Unity以查看更改</strong>。</p>
+<p>接受这些选项是完全可选的，但建议这样做。</p>
+<p>某些预制体和资源需要TextMesh Pro，这意味着您必须安装TextMesh Pro软件包以及项目中的资源(&quot;Window -&gt; TextMeshPro-&gt;Import TMP Essential Resources&quot;)。<strong>导入TMP Essentials资源后，需要重新启动Unity以查看更改</strong>。</p>
 <h3 id="将您的unity项目切换到目标平台">将您的Unity项目切换到目标平台</h3>
 <p>导入软件包后，下一步就是为应用程序选择正确的平台。
 要创建<strong>HoloLens应用程序</strong>，请切换到通用Windows平台：</p>
 <ol>
 <li>打开菜单：File &gt; Build Settings</li>
 <li>在<strong>Platform</strong>列表中选择<strong>通用Windows平台</strong>(Universal Windows Platform)</li>
-<li>单击“<strong>Switch Platform</strong>”按钮</li>
+<li>单击&quot;<strong>Switch Platform</strong>&quot;按钮</li>
 </ol>
 <p><img src="Images/getting_started/SwitchPlatform.png" alt="Switch Platform"></p>
-<blockquote>
-<p>[!注意]
-选择平台后，混合现实工具包将提示将建议的更改应用于项目。无论何时切换平台，如有必要，都会检查并提示相应的设置。</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>选择平台后，混合现实工具包将提示将建议的更改应用于项目。无论何时切换平台，如有必要，都会检查并提示相应的设置。</p>
+</div>
 <h3 id="将mrtk添加到新场景或新项目">将MRTK添加到新场景或新项目</h3>
 <ol>
-<li>创建一个新的Unity项目，或在当前项目中开始一个新场景。</li>
-<li>确保已导入以下MRTK程序包（我们建议同时使用Foundation和Examples，尽管不需要Examples）<a href="#import-mrtk-packages-into-your-unity-project">以上步骤</a>.</li>
-<li>从菜单栏中，选择“Mixed Reality Toolkit -&gt; Add to Scene and Configure”</li>
-</ol>
+<li><p>创建一个新的Unity项目，或在当前项目中开始一个新场景。</p>
+</li>
+<li><p>确保已导入以下MRTK程序包(我们建议同时使用Foundation和Examples，尽管不需要Examples)<a href="#%E5%B0%86MRTK%E5%8C%85%E5%AF%BC%E5%85%A5%E5%88%B0%E6%82%A8%E7%9A%84Unity%E9%A1%B9%E7%9B%AE%E4%B8%AD">以上步骤</a>.</p>
+</li>
+<li><p>从菜单栏中，选择 Mixed Reality Toolkit -&gt; Add to Scene and Configure</p>
 <p><img src="Images/MRTK_ConfigureScene.png" alt="Configure to scene"></p>
 <p>inspector现在将显示当前活动的MRTK配置概要文件和配置文件选择菜单,其中默认配置文件已经被预先选择。
 配置文件配置MRTK核心组件的行为，在<a href="Profiles/Profiles.html">配置文件</a>文章中有更详细的描述。</p>
-<blockquote>
-<p>[!注意]
-如果你使用 HoloLens 或 HoloLens 2, 你应该选择&quot;DefaultHoloLens1ConfigurationProfile&quot; 或DefaultHoloLens2ConfigurationProfile&quot;.
-查看<a href="Profiles/Profiles.html#hololens-2-profile">配置文件</a> 获取有关DefaultMixedRealityToolkitConfigurationProfile 和DefaultHoloLens2ConfigurationProfile的区别.</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<ul>
+<li>如果你在Unity 2019.3或更高版本中使用Unity的XRSDK，你应该选择&quot;DefaultXRSDKConfigurationProfile&quot;。在需要的时候，这个配置文件与MRTK的XR SDK 系统和providers配置。</li>
+<li>如果你使用 HoloLens 或 HoloLens 2, 你应该选择&quot;DefaultHoloLens1ConfigurationProfile&quot; 或DefaultHoloLens2ConfigurationProfile&quot;.</li>
+<li>查看<a href="Profiles/Profiles.html#hololens-2-profile">配置文件</a> 获取有关DefaultMixedRealityToolkitConfigurationProfile 和DefaultHoloLens2ConfigurationProfile的区别.</li>
+</ul>
+</div>
 <p>你将在你场景的hierarchy中看到如下图所示:</p>
 <p><img src="Images/MRTK_SceneSetup.png" alt="MRTK Scene Setup"></p>
 <p>这包括:</p>
@@ -182,12 +189,13 @@
 <li><strong>MixedRealityPlayspace</strong> - 头显的父对象，可确保在场景中正确管理头显/控制器和其他所需系统。</li>
 <li>•	主摄像机作为子级移动到Playspace-允许Playspace与SDK一起管理摄像机</li>
 </ul>
-<blockquote>
-<p>[!注意]
-在场景中工作时，<strong>请勿将主摄像机（或MixedRealityPlayspace）从场景原点（0,0,0）移开</strong>。这由MRTK和活动的SDK控制。如果您需要用户的起点，<strong>请移动场景内容而不是相机</strong>！</p>
-</blockquote>
-<ol start="6">
-<li>点击paly按钮并按<strong>空格键</strong>测试手部模拟。</li>
+<div class="NOTE">
+<h5>Note</h5>
+<p>在场景中工作时，<strong>请勿将主摄像机(或MixedRealityPlayspace)从场景原点(0,0,0)移开</strong>。这由MRTK和活动的SDK控制。如果您需要用户的起点，<strong>请移动场景内容而不是相机</strong>！</p>
+</div>
+</li>
+<li><p>点击paly按钮并按<strong>空格键</strong>测试手部模拟。</p>
+</li>
 </ol>
 <p>您现在可以构建并部署到设备了！请按照以下步骤的说明进行操作<a href="BuildAndDeploy.html">构建和部署MRTK</a>.</p>
 <h3 id="入门教程">入门教程</h3>
@@ -195,24 +203,27 @@
 <h3 id="了解mrtk的核心组成部分">了解MRTK的核心组成部分</h3>
 <p>查看<a href="https://docs.microsoft.com/windows/mixed-reality/mrtk-101">MRTK 101: How to use Mixed Reality Toolkit Unity for Basic Interactions (HoloLens 2, HoloLens, Windows Mixed Reality, Open VR)</a> 了解核心组成部分.</p>
 <h3 id="在unity编辑器中运行handinteractionexamples场景">在Unity编辑器中运行HandInteractionExamples场景</h3>
-<p><a href="README_HandInteractionExamples.html">手势交互实例场景</a> 是学习更多关于MRTK中的UX控件和交互的好地方.</p>
+<p><a href="README_HandInteractionExamples.html">手势交互示例场景</a> 是学习更多关于MRTK中的UX控件和交互的好地方.</p>
 <p><a href="README_HandInteractionExamples.html"><img src="Images/MRTK_Examples.png" alt="HandInteractionExample scene"></a></p>
 <p>要尝试手势互动场景，请执行以下步骤.</p>
 <ol>
 <li><p>在 <code>Assets\MixedRealityToolkit.Examples\Demos\HandTracking\Scenes\HandInteractionExamples</code>下打开<strong>HandInteractionExamples</strong> 场景</p>
 </li>
-<li><p>您可能会收到提示，要求您导入“ TMP Essentials”.</p>
-</li>
-</ol>
+<li><p>您可能会收到提示，要求您导入&quot; TMP Essentials&quot;.</p>
 <p><img src="Images/getting_started/MRTK_GettingStarted_TMPro.png" alt="TMP Essentials"></p>
-<p>如果出现这样的提示，请选择“Import TMP essentials”按钮。“ TMP Essentials”是指Text Mesh Pro插件，某些MRTK示例使用该插件来改进文本呈现。 (查看 <a href="https://docs.microsoft.com/windows/mixed-reality/text-in-unity">Unity中的文本</a> 有关更多详细信息)</p>
-<ol start="3">
-<li>关闭“ TMP”对话框。之后，您需要重新加载场景。您可以通过双击项目选项卡中的场景来执行此操作.</li>
-<li>按下播放按钮</li>
+<p>如果出现这样的提示，请选择&quot;Import TMP essentials&quot;按钮。&quot; TMP Essentials&quot;是指Text Mesh Pro插件，某些MRTK示例使用该插件来改进文本呈现。 (查看 <a href="https://docs.microsoft.com/windows/mixed-reality/text-in-unity">Unity中的文本</a> 有关更多详细信息)</p>
+</li>
+<li><p>关闭 TMP 对话框。之后，您需要重新加载场景。您可以通过双击项目选项卡中的场景来执行此操作.</p>
+</li>
+<li><p>将场景视图中Gizmos选项卡下的3d图标取消或缩小，以减少场景混乱</p>
+<p><img src="https://user-images.githubusercontent.com/13754172/80819866-a8aed800-8b8a-11ea-8d7b-a3822fdfc907.png" alt="Gizmos"></p>
+</li>
+<li><p>按下播放按钮</p>
+</li>
 </ol>
 <h2 id="使用编辑器内手动输入模拟来测试场景">使用编辑器内手动输入模拟来测试场景</h2>
 <p>编辑器中的输入模拟可让您测试特定类型的输入，例如<a href="InputSimulation/InputSimulationService.html#hand-simulation">手势输入</a> 或者 <a href="EyeTracking/EyeTracking_BasicSetup.html#simulating-eye-tracking-in-the-unity-editor">眼动输入</a>.</p>
-<p>如何在场景四处异地</p>
+<p>如何在场景四处移动:</p>
 <ul>
 <li>使用 <strong>W/A/S/D</strong> 键向前/向左/向后/向右移动相机.</li>
 <li>使用 <strong>Q/E</strong> 垂直移动相机.</li>
@@ -224,7 +235,7 @@
 <li>按住空格键时，请移动鼠标来移动手</li>
 <li>使用<strong>鼠标滚轮</strong>调整手的深度。</li>
 <li>单击<strong>鼠标左键</strong>以模拟捏合手势。</li>
-<li>使用<strong>T / Y</strong>键将手保持在场景中。</li>
+<li>使用<strong>T/Y</strong>键将手保持在场景中。</li>
 <li>按住<strong>CTRL</strong>键并移动鼠标以旋转手。</li>
 </ul>
 <p>在探索中玩得开心！您可以了解有关UI控件的更多信息<a href="README_HandInteractionExamples.html">在手势交互示例指南中</a>. 另外，通读 <a href="InputSimulation/InputSimulationService.html">输入模拟文档</a> 了解有关MRTK中编辑器内手动输入模拟的更多信息。</p>
@@ -233,7 +244,7 @@
 <p>以下是一些建议的后续步骤：</p>
 <ul>
 <li>查看 <a href="https://docs.microsoft.com/windows/mixed-reality/mrtk-101">MRTK 101: 如何使用混合现实工具Unity包进行基本交互</a> 了解如何实现常见的空间交互，例如抓取，移动，缩放和旋转.</li>
-<li>了解MRTK中可用的UX控件，在<a href="../README.html#ui-and-interaction-building-blocks">UI界面和交互构建块</a>中.</li>
+<li>了解MRTK中可用的UX控件，在<a href="../README.html#UI%E5%92%8C%E4%BA%A4%E4%BA%92%E6%9E%84%E4%BB%B6%E6%A8%A1%E5%9D%97">UI界面和交互构建块</a>中.</li>
 <li>尝试 <a href="README_ExampleHub.html">MRTK 示例中心</a> (为方便起见，发布页面中包含预构建的应用程序包)</li>
 <li>了解如何使用MRTK配置配置文件 <a href="MixedRealityConfigurationGuide.html">混合现实配置指南</a>.</li>
 <li>了解有关 <a href="Architecture/Overview.html">MRTK的架构</a></li>
@@ -241,8 +252,16 @@
 <li>了解有关<a href="../README.html#tools">MRTK的工具</a> 这将为您的混合现实设计和开发提供支持.</li>
 <li>通读 <a href="InputSimulation/InputSimulationService.html">输入模拟指南</a> 了解如何在编辑器中模拟手动输入.</li>
 </ul>
-<h2 id="从holotoolkithtk--mrtk-v1升级">从HoloToolkit（HTK / MRTK v1）升级</h2>
+<h2 id="获取帮助">获取帮助</h2>
+<p>如果你遇到MRTK引起的问题，或者对如何做某事有疑问，这里有一些资源可以帮助你:</p>
+<ul>
+<li>对于bug报告，请在GitHub repo上<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/issues/new/choose">定位一个问题</a>。</li>
+<li>如有问题，请访问 <a href="https://stackoverflow.com/questions/tagged/mrtk">StackOverflow</a>或<a href="https://holodevelopers.slack.com/messages/C2H4HT858">mixed-reality-toolkit频道</a>。你可以通过<a href="https://holodevelopersslack.azurewebsites.net/">自动邀请发送者</a>加入Slack社区。</li>
+</ul>
+<h2 id="从holotoolkithtk--mrtk-v1升级">从HoloToolkit(HTK / MRTK v1)升级</h2>
 <p>由于重建了框架，因此没有从HoloToolkit到Mixed Reality Toolkit v2的直接升级路径。但是，可以将MRTK导入到HoloToolkit项目中并迁移您的实现。有关更多信息，请参见<a href="HTKToMRTKPortingGuide.html">HoloToolkit到Mixed Reality Toolkit移植指南</a></p>
+<h2 id="开始使用-unity的-xr-sdk">开始使用 Unity的 XR SDK</h2>
+<p>完整的说明和信息可以在我们的<a href="GettingStartedWithMRTKAndXRSDK.md">XR SDK入门指南</a>中找到.</p>
 </article>
           </div>
           

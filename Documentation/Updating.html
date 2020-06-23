@@ -83,11 +83,227 @@
 <h1 id="更新microsoft混合现实工具包">更新Microsoft混合现实工具包</h1>
 
 <ul>
-<li><a href="#%E5%B0%862.1.0%E6%9B%B4%E6%96%B0%E4%B8%BA2.2.0">2.1.0 至 2.2.0</a></li>
+<li><a href="#%E5%8D%87%E7%BA%A7%E5%88%B0%E6%96%B0%E7%9A%84MRTK%E7%89%88%E6%9C%AC">升级到新的MRTK版本</a></li>
+<li><a href="#%E5%B0%862.3.0%E6%9B%B4%E6%96%B0%E5%88%B02.4.0">2.3.0 to 2.4.0</a></li>
+<li><a href="#%E5%B0%862.2.0%E6%9B%B4%E6%96%B0%E5%88%B02.3.0">2.2.0 to 2.3.0</a></li>
+<li><a href="#%E5%B0%862.1.0%E6%9B%B4%E6%96%B0%E5%88%B02.2.0">2.1.0 至 2.2.0</a></li>
 <li><a href="#%E5%B0%862.0.0%E6%9B%B4%E6%96%B0%E5%88%B02.1.0">2.0.0 至2.1.0</a></li>
 <li><a href="#%E5%B0%86RC2%E6%9B%B4%E6%96%B0%E5%88%B02.0.0">RC2 至2.0.0</a></li>
 </ul>
-<h2 id="将210更新为220">将2.1.0更新为2.2.0</h2>
+<h2 id="升级到新的mrtk版本">升级到新的MRTK版本</h2>
+<p>版本的一些更改可能会影响应用程序项目。重大更改的细节，包括缓解指导(mitigation guidance)，可以在<a href="Updating.html#%E5%B0%862.3.0%E6%9B%B4%E6%96%B0%E5%88%B02.4.0"><strong>将2.3.0更新到2.4.0</strong></a>一文中找到。</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>现在，不支持在使用.unitypackage文件和NuGet之间切换。</p>
+</div>
+<p>*从2.4.0开始，强烈建议运行<a href="Tools/MigrationWindow.md">迁移工具</a>
+在<strong>MRTK 升级</strong>后自动修复和升级已弃用的组件，并调整到
+重大改动。迁移工具是<strong>Tools</strong>包的一部分。</p>
+<h3 id="unity资源unitypackage文件">Unity资源(.unitypackage)文件</h3>
+<p>For the smoothest upgrade path, please use the following steps.</p>
+<ol>
+<li>保存当前项目的副本，以防在升级步骤的任何时刻遇到任何障碍。</li>
+<li>关闭Unity</li>
+<li>在<em>Assets</em>文件夹中，删除大部分的<strong>MixedRealityToolkit</strong>文件夹，以及它们的.meta文件(项目可能没有列出所有的文件夹)
+<ul>
+<li>MixedRealityToolkit</li>
+<li>MixedRealityToolkit.Examples</li>
+<li>MixedRealityToolkit.Extensions</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>如果已经安装了其他扩展，请在删除这些文件夹之前进行备份。</p>
+</div>
+<ul>
+<li>MixedRealityToolkit.Providers</li>
+<li>MixedRealityToolkit.SDK</li>
+<li>MixedRealityToolkit.Services</li>
+<li>MixedRealityToolkit.Staging</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>在MRTK 2.3.0中,MixedRealityToolkit.Staging 文件夹内容已被移到MixedRealityToolkit.Providers 文件夹。</p>
+</div>
+<ul>
+<li>MixedRealityToolkit.Tools</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>不要删除<strong>MixedRealityToolkit.Generated</strong> 文件夹，或其.meta文件。</p>
+</div>
+</li>
+<li>删除<strong>Library</strong>文件夹</li>
+<li>在Unity中重新打开项目</li>
+<li>导入新的unity包
+<ul>
+<li>Foundation - <em>最先导入这个包</em></li>
+<li>Tools</li>
+<li>(可选的) Extensions</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>如果安装了其他扩展，可能需要重新导入它们。</p>
+</div>
+<ul>
+<li>(可选的) Examples</li>
+</ul>
+</li>
+<li>关闭Unity并删除<strong>Library</strong>文件夹。这一步对于强制Unity刷新它的资源数据库和协调现有的自定义配置文件 是必要的。</li>
+<li>启动Unity，并针对项目中的每个场景
+-从hierarchy中删除<strong>MixedRealityToolkit</strong>和<strong>MixedRealityPlayspace</strong>，如果存在的话。这将删除主摄像头，但它将在下一步重新创建。如果主摄像头的任何属性已经被手动更改，一旦创建了新的摄像头，就必须手动重新应用这些属性。
+-选择<strong>MixedRealityToolkit -&gt; Add to Scene and Configure</strong>
+-选择 <strong>MixedRealityToolkit -&gt; Utilities -&gt; Update -&gt; Controller Mapping Profiles</strong>(只需完成一次)
+-这将更新任何自定义控制器映射配置与更新的轴和数据，而保持您的自定义分配的输入操作完好无损</li>
+<li>运行<a href="Tools/MigrationWindow.md">迁移工具</a>并在<em>全部项目</em>上运行该工具，以确保所有代码都被更新到最新版本。</li>
+</ol>
+<h3 id="nuget-包">NuGet 包</h3>
+<p>如果您的项目是使用<a href="MRTKNuGetPackage.html">Mixed Reality Toolkit NuGet 包</a>创建的，请使用以下步骤。</p>
+<ol>
+<li>选择<strong>NuGet &gt; Manage NuGet Packages</strong></li>
+<li>选择<strong>Online</strong>标签并单击<strong>Refresh</strong></li>
+<li>选择<strong>Installed</strong>选项卡</li>
+<li>为每个已安装的包单击<strong>Update</strong>按钮
+<ul>
+<li>Microsoft.MixedReality.Toolkit.Foundation</li>
+<li>Microsoft.MixedReality.Toolkit.Tools</li>
+<li>Microsoft.MixedReality.Toolkit.Extensions</li>
+<li>Microsoft.MixedReality.Toolkit.Examples</li>
+</ul>
+</li>
+<li>在Unity中关闭并重新打开项目</li>
+</ol>
+<h2 id="将230更新到240">将2.3.0更新到2.4.0</h2>
+<p><a href="#2.4.0%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8D%E5%91%BD%E5%90%8D">文件夹重命名</a>
+<a href="#2.4.0%E7%9A%84API%E6%94%B9%E5%8A%A8">API改动</a></p>
+<h3 id="240的文件夹重命名">2.4.0的文件夹重命名</h3>
+<p>在2.4. 版本中，MixedRealityToolkit文件夹被重命名并移动到一个公共层次结构中。如果一个应用程序使用硬编码的MRTK资源路径，它们将需要根据下表进行更新。</p>
+<table>
+<thead>
+<tr>
+<th>以前的文件夹</th>
+<th>新文件夹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MixedRealityToolkit</td>
+<td>MRTK/Core</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Examples</td>
+<td>MRTK/Examples</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Extensions</td>
+<td>MRTK/Extensions</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Providers</td>
+<td>MRTK/Providers</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.SDK</td>
+<td>MRTK/SDK</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Services</td>
+<td>MRTK/Services</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Tests</td>
+<td>MRTK/Tests</td>
+</tr>
+<tr>
+<td>MixedRealityToolkit.Tools</td>
+<td>MRTK/Tools</td>
+</tr>
+</tbody>
+</table>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><code>MixedRealityToolkit.Generated</code>包含用户生成的文件并保持不变。</p>
+</div>
+<h3 id="eye-gaze-setup-in-240">Eye gaze setup in 2.4.0</h3>
+<p>这个版本的MRTK修改了眼睛凝视设置所需的步骤。 <em>'IsEyeTrackingEnabled'</em> 复选框可以在输入指针配置文件的凝视设置(gaze settings)中找到。选中此框将启用基于眼睛的凝视，而不是默认的基于头部的凝视。</p>
+<p>关于这些变化的更多信息和眼动跟踪设置的完整说明，请参阅<a href="EyeTracking/EyeTracking_BasicSetup.html">眼动跟踪</a>文章。</p>
+<h3 id="240的api改动">2.4.0的API改动</h3>
+<p><strong>自定义控制器类</strong></p>
+<p>自定义控制器类以前必须定义<code>SetupDefaultInteractions(Handedness)</code>。这种方法在2.4中已经过时，因为用handedness参数与控制器类本身的handedness是冗余的。新方法没有参数。此外，许多控制器类以同样的方式定义了这个(<code>AssignControllerMappings(DefaultInteractions);</code>)，因此整个调用被重构为<code>BaseController</code> ，并做了一个可选的覆盖，而不是必需的。</p>
+<p><strong>眼睛凝视属性</strong></p>
+<p><code>IMixedRealityEyeGazeProvider</code>实现的<code>UseEyeTracking</code>属性被重命名为<code>IsEyeTrackingEnabled</code>。</p>
+<p>如果你以前这样做过…</p>
+<pre><code class="lang-csharp">if (CoreServices.InputSystem.GazeProvider is GazeProvider gazeProvider)
+{
+    gazeProvider.UseEyeTracking = true;
+}
+</code></pre>
+<p>现在这样做…</p>
+<pre><code class="lang-csharp">if (CoreServices.InputSystem.GazeProvider is GazeProvider gazeProvider)
+{
+    gazeProvider.IsEyeTrackingEnabled = true;
+}
+</code></pre>
+<p><strong>WindowsApiChecker 属性</strong></p>
+<p>下面的WindowsApiChecker属性已经被标记为废弃。请使用<code>IsMethodAvailable</code>, <code>IsPropertyAvailable</code> 或者<code>IsTypeAvailable</code>.</p>
+<ul>
+<li>UniversalApiContractV8_IsAvailable</li>
+<li>UniversalApiContractV7_IsAvailable</li>
+<li>UniversalApiContractV6_IsAvailable</li>
+<li>UniversalApiContractV5_IsAvailable</li>
+<li>UniversalApiContractV4_IsAvailable</li>
+<li>UniversalApiContractV3_IsAvailable</li>
+</ul>
+<p>没有计划为未来的API约定版本向WindowsApiChecker添加属性。</p>
+<p><strong>GltfMeshPrimitiveAttributes 只读</strong></p>
+<p>gltf mesh primitive 属性过去是可设置的，现在是只读的。他们的值将在反序列化时设置一次。</p>
+<h3 id="custom-button-icon-migration">Custom Button Icon Migration</h3>
+<p>Previously custom button icons required assigning a new material to the button's quad renderer. This is no longer necessary and we recommend moving custom icon textures into an IconSet. Existing custom materials and icons are preserved. However they will be less optimal until upgraded.
+To upgrade the assets on all buttons in the project to the new recommended format, use the ButtonConfigHelperMigrationHandler.
+(Mixed Reality Toolkit -&gt; Utilities -&gt; Migration Window -&gt; Migration Handler Selection -&gt; Microsoft.MixedReality.Toolkit.Utilities.ButtonConfigHelperMigrationHandler)</p>
+<p><img src="https://user-images.githubusercontent.com/39840334/82096923-bd28bf80-96b6-11ea-93a9-ceafcb822242.png" alt="Upgrade window dialogue"></p>
+<p>If an icon is not found in the default icon set during migration, a custom icon set will be created in MixedRealityToolkit.Generated/CustomIconSets. A dialog will indicate that this has taken place.</p>
+<p><img src="https://user-images.githubusercontent.com/9789716/82093856-c57dfc00-96b0-11ea-83ab-4df57446d661.PNG" alt="Custom icon notification"></p>
+<h2 id="将220更新到230">将2.2.0更新到2.3.0</h2>
+<ul>
+<li><a href="#api-changes-in-230">API changes</a></li>
+</ul>
+<h3 id="api-changes-in-230">API changes in 2.3.0</h3>
+<p><strong>ControllerPoseSynchronizer</strong></p>
+<p>The private ControllerPoseSynchronizer.handedness field has been marked as obsolete. This should have minimal impact on applications as the field is not visible outside of its class.</p>
+<p>The public ControllerPoseSynchronizer.Handedness property's setter has been removed (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/7012">#7012</a>).</p>
+<p><strong>MSBuild for Unity</strong></p>
+<p>This version of MRTK uses a newer version of MSBuild for Unity than previous releases. During project load, if the older version is listed in the Unity Package Manger
+manifest, the configuration dialog will appear, with the Enable MSBuild for Unity option checked. Applying will perform an upgrade.</p>
+<p><strong>ScriptingUtilities</strong></p>
+<p>The ScriptingUtilities class has been marked as obsolete and has been replaced by ScriptUtilities, in the Microsoft.MixedReality.Toolkit.Editor.Utilities assembly. The new class refines previous behavior and adds support for removing scripting definitions.</p>
+<p>While existing code will continue to function in version 2.3.0, it is recommended to update to the new class.</p>
+<p><strong>ShellHandRayPointer</strong></p>
+<p>The lineRendererSelected and lineRendererNoTarget members of the ShellHandRayPointer class have been replaced by lineMaterialSelected and lineMaterialNoTarget, respectively (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6863">#6863</a>).</p>
+<p>Please replace lineRendererSelected with lineMaterialSelected and/or lineRendererNoTarget with lineMaterialNoTarget to resolve compile errors.</p>
+<p><strong>Spatial observer StartupBehavior</strong></p>
+<p>Spatial observers built upon the <code>BaseSpatialObserver</code> class now honor the value of StartupBehavior when re-enabled (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6919">#6919</a>).</p>
+<p>No changes are required to take advantage of this fix.</p>
+<p><strong>UX control prefabs updated to use PressableButton</strong></p>
+<p>The following prefabs are now using the PressableButton component instead of TouchHandler for near interaction (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/7070">7070</a>)</p>
+<ul>
+<li>AnimationButton</li>
+<li>Button</li>
+<li>ButtonHoloLens1</li>
+<li>ButtonHoloLens1Toggle</li>
+<li>CheckBox</li>
+<li>RadialSet</li>
+<li>ToggleButton</li>
+<li>ToggleSwitch</li>
+<li>UnityUIButton</li>
+<li>UnityUICheckboxButton</li>
+<li>UnityUIRadialButton</li>
+<li>UnityUIToggleButton</li>
+</ul>
+<p>Application code may require updating due to this change.</p>
+<p><strong>WindowsMixedRealityUtilities namespace</strong></p>
+<p>The namespace of WindowsMixedRealityUtilities changed from Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input to Microsoft.MixedReality.Toolkit.WindowsMixedReality (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6989">#6863</a>).</p>
+<p>Please update #using statements to resolve compile errors.</p>
+<h2 id="将210更新到220">将2.1.0更新到2.2.0</h2>
 <ul>
 <li><a href="#api-changes-in-220">API 更改</a></li>
 </ul>
