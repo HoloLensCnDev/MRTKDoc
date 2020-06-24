@@ -957,7 +957,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/BuildAndDeploy.html",
-          "hash": "zbPS6map/o6DtVUxrw3PrA=="
+          "hash": "Dr0dMKIUVCLdS1fOpjQGng=="
         }
       },
       "is_incremental": false,
@@ -1348,9 +1348,18 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "Conceptual",
+      "source_relative_path": "Documentation/GettingStartedWithMRTKAndXRSDK.md",
+      "output": {
+        ".html": {
+          "relative_path": "Documentation/GettingStartedWithMRTKAndXRSDK.html",
+          "hash": "JCbUACegAINYslxUx4GAMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "Documentation/GettingStartedWithTheMRTK.md",
       "output": {
@@ -8092,6 +8101,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Documentation/LargeProjects.md",
+      "output": {
+        ".html": {
+          "relative_path": "Documentation/LargeProjects.html",
+          "hash": "DuZ1d1308XlzKr9EZ0zKyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Documentation/MRTKNuGetPackage.md",
       "output": {
         ".html": {
@@ -8104,11 +8125,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Documentation/MRTK_Configuration_Dialog.md",
+      "output": {
+        ".html": {
+          "relative_path": "Documentation/MRTK_Configuration_Dialog.html",
+          "hash": "3+PD4GDBTzExejudVQBHdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Documentation/MRTK_PackageContents.md",
       "output": {
         ".html": {
           "relative_path": "Documentation/MRTK_PackageContents.html",
-          "hash": "Xe81sKLzpCj3D8Vtt2gOeA=="
+          "hash": "wvP+sGzsJGdmuz0WcVbLCg=="
         }
       },
       "is_incremental": false,
@@ -8723,7 +8756,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/Updating.html",
-          "hash": "huyDCmQ+QnE04rtI+7Na0g=="
+          "hash": "vDF8eAHq3Ppgn2bejCu0LA=="
         }
       },
       "is_incremental": false,
@@ -8759,7 +8792,7 @@
       "output": {
         ".html": {
           "relative_path": "Documentation/toc.html",
-          "hash": "gqmvZUHV5Yve6Q6JdXFgSw=="
+          "hash": "6MdONGQTfR/ee4qmOHkEmg=="
         }
       },
       "is_incremental": false,
@@ -31888,17 +31921,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 184,
+          "skipped_file_count": 178
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 1864,
           "skipped_file_count": 1864
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 181,
-          "skipped_file_count": 165
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

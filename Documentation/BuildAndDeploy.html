@@ -89,6 +89,77 @@
 <p><img src="Images/getting_started/BuildWindow.png" alt="Build window"></p>
 <p>其他设置可以不同（例如，“Build Configuration/Architecture/Build Type”，而其他设置始终可以在Visual Studio解决方案中更改）。</p>
 <p>确保“目标SDK版本”下拉列表包含选项“ 10.0.18362.0”-如果缺少此选项，<a href="https://developer.microsoft.com/windows/downloads/windows-10-sdk">最新的Windows SDK</a> 需要安装。</p>
+<h3 id="unity-20193-和-hololens">Unity 2019.3 和 HoloLens</h3>
+<p>如果一个HoloLens应用程序在设备上显示为2D平面，请确保在2019.3.x中配置了以下设置。在部署您的UWP应用程序之前:</p>
+<p>如果使用legacy XR:</p>
+<ol>
+<li>导航编辑&gt;项目设置，播放器</li>
+<li>在UWP选项卡的<strong>XR Settings</strong>下，确保启用了<strong>Virtual Reality Supported</strong>，并将 <strong>Windows Mixed Reality</strong>SDK添加到SDK中。</li>
+<li>在Visual Studio中构建和部署</li>
+</ol>
+<p>如果使用XR-Plugin:</p>
+<ol>
+<li>按照<a href="GettingStartedWithMRTKAndXRSDK.html">开始使用 XRSDK</a>中的步骤操作</li>
+<li>确保配置文件是<strong>DefaultXRSDKConfigurationProfile</strong></li>
+<li>导航到<strong>Edit &gt; Project Settings, XR-Plugin Management</strong>并确保<strong>Windows Mixed Reality</strong>是启用的。</li>
+<li>在Visual Studio中构建和部署</li>
+</ol>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>如果使用Unity 2019.3。选择<strong>ARM64</strong>，而不是<strong>ARM</strong>作为Visual Studio中的build architecture。使用Unity 2019.3.x中的默认Unity设置。如果因为Unity bug选中ARM, Unity应用将不会部署到HoloLens上。可以在<a href="https://issuetracker.unity3d.com/issues/enabling-graphics-jobs-in-2019-dot-3-x-results-in-a-crash-or-nothing-rendering-on-hololens-2">Unity的问题跟踪器</a>上跟踪该问题。</p>
+<p>如果需要ARM架构，导航到<strong>Edit &gt; Project Settings, Player</strong>，和在<strong>Other Settings</strong> 菜单禁用 <strong>Graphics Jobs</strong>。禁用<strong>Graphics Jobs</strong> 将允许应用程序使用Unity 2019.3.x的ARM build architecture进行部署，但建议使用ARM64。</p>
+</div>
+<h2 id="构建并部署mrtk到windows混合现实头显">构建并部署MRTK到Windows混合现实头显</h2>
+<p>Windows混合现实(WMR)头显可以用于通用Windows平台(UWP)和独立构建。一个独立构建的WMR头显需要以下额外的步骤:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Unity的XR SDK也支持独立版本的本地WMR，但不需要SteamVR或WMR插件。这些步骤是Unity的legacy XR所必需的。</p>
+</div>
+<ol>
+<li>安装 <a href="https://store.steampowered.com/about/">Steam</a></li>
+<li>安装 <a href="https://store.steampowered.com/app/250820/SteamVR/">SteamVR</a></li>
+<li>安装 <a href="https://store.steampowered.com/app/719950/Windows_Mixed_Reality_for_SteamVR/">WMR插件</a></li>
+</ol>
+<h3 id="如何使用wmr插件">如何使用WMR插件</h3>
+<ol>
+<li><p>打开Steam并搜索Windows Mixed Reality Plugin</p>
+<ul>
+<li>在启动WMR插件之前确保SteamVR是关闭的。启动WMR插件也会启动SteamVR。</li>
+<li>确保WMR头显插好。</li>
+</ul>
+<p><img src="Images/BuildDeploy/WMR/SteamSearchWMRPlugin.png" alt="WMR Plugin Search"></p>
+</li>
+<li><p>选择<strong>Launch</strong>为Windows混合现实的SteamVR插件。</p>
+<p><img src="Images/BuildDeploy/WMR/WMRPlugin.png" alt="WMR Plugin"></p>
+<ul>
+<li><p>SteamVR和WMR插件将启动，WMR头显的新跟踪状态窗口将出现。</p>
+</li>
+<li><p>更多信息请访问<a href="https://support.microsoft.com/help/4053622/windows-10-play-steamvr-games-in-windows-mixed-reality">Windows混合现实Steam文档</a></p>
+<p><img src="Images/BuildDeploy/WMR/WMRPluginActive.png" alt="WMR Launch Appearance"></p>
+</li>
+</ul>
+</li>
+<li><p>在Unity中，打开MRTK场景，导航到 <strong>File &gt; Build Settings</strong></p>
+</li>
+<li><p>构建场景</p>
+<ul>
+<li>选择<strong>Add Open Scene</strong></li>
+<li>确保平台是 <strong>Standalone</strong></li>
+<li>选择 <strong>Build</strong></li>
+<li>在文件资源管理器中选择新构建的位置</li>
+</ul>
+<p><img src="Images/BuildDeploy/WMR/BuildSettingsStandaloneUnity.png" alt="Build Settings for Standalone"></p>
+</li>
+<li><p>一个新的Unity可执行文件将被创建，在文件资源管理器中选择Unity可执行文件来启动你的应用。</p>
+<p><img src="Images/BuildDeploy/WMR/FileExplorerUnityExe.png" alt="File Explorer Unity"></p>
+</li>
+</ol>
+<h2 id="建议浏览">建议浏览</h2>
+<ul>
+<li><a href="CrossPlatform/UsingARFoundation.html">Android和iOS支持</a></li>
+<li><a href="CrossPlatform/LeapMotionMRTK.html">Leap Motion支持</a></li>
+<li><a href="DetectingPlatformCapabilities.html">检测平台能力</a></li>
+</ul>
 </article>
           </div>
           

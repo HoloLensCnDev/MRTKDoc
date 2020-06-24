@@ -256,35 +256,34 @@
 <p>没有计划为未来的API约定版本向WindowsApiChecker添加属性。</p>
 <p><strong>GltfMeshPrimitiveAttributes 只读</strong></p>
 <p>gltf mesh primitive 属性过去是可设置的，现在是只读的。他们的值将在反序列化时设置一次。</p>
-<h3 id="custom-button-icon-migration">Custom Button Icon Migration</h3>
-<p>Previously custom button icons required assigning a new material to the button's quad renderer. This is no longer necessary and we recommend moving custom icon textures into an IconSet. Existing custom materials and icons are preserved. However they will be less optimal until upgraded.
-To upgrade the assets on all buttons in the project to the new recommended format, use the ButtonConfigHelperMigrationHandler.
+<h3 id="自定义按钮图标迁移">自定义按钮图标迁移</h3>
+<p>以前的自定义按钮图标需要分配一个新的材质给按钮的quad渲染器。这是没有必要的，我们建议移动自定义图标纹理到一个IconSet。现有的自定义材质和图标被保留。然而，在升级之前，它们将不是最优的。
+要将项目中所有按钮上的资源升级为新的推荐格式，请使用ButtonConfigHelperMigrationHandler。
 (Mixed Reality Toolkit -&gt; Utilities -&gt; Migration Window -&gt; Migration Handler Selection -&gt; Microsoft.MixedReality.Toolkit.Utilities.ButtonConfigHelperMigrationHandler)</p>
 <p><img src="https://user-images.githubusercontent.com/39840334/82096923-bd28bf80-96b6-11ea-93a9-ceafcb822242.png" alt="Upgrade window dialogue"></p>
-<p>If an icon is not found in the default icon set during migration, a custom icon set will be created in MixedRealityToolkit.Generated/CustomIconSets. A dialog will indicate that this has taken place.</p>
+<p>如果在迁移过程中在默认图标合集中没有找到图标，那么将在MixedRealityToolkit.Generated/CustomIconSets中创建一个自定义图标合集。一个对话框将表明这已经发生。</p>
 <p><img src="https://user-images.githubusercontent.com/9789716/82093856-c57dfc00-96b0-11ea-83ab-4df57446d661.PNG" alt="Custom icon notification"></p>
 <h2 id="将220更新到230">将2.2.0更新到2.3.0</h2>
 <ul>
-<li><a href="#api-changes-in-230">API changes</a></li>
+<li><a href="#2.3.0%E7%9A%84API%E6%9B%B4%E6%94%B9">API更改</a></li>
 </ul>
-<h3 id="api-changes-in-230">API changes in 2.3.0</h3>
+<h3 id="230的api更改">2.3.0的API更改</h3>
 <p><strong>ControllerPoseSynchronizer</strong></p>
-<p>The private ControllerPoseSynchronizer.handedness field has been marked as obsolete. This should have minimal impact on applications as the field is not visible outside of its class.</p>
-<p>The public ControllerPoseSynchronizer.Handedness property's setter has been removed (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/7012">#7012</a>).</p>
+<p>private ControllerPoseSynchronizer.handedness 字段已经被认为是过时的。这对应用程序的影响应该是最小的，因为字段在其类之外是不可见的。</p>
+<p>public ControllerPoseSynchronizer.Handedness 属性的setter已被删除(<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/7012">#7012</a>).</p>
 <p><strong>MSBuild for Unity</strong></p>
-<p>This version of MRTK uses a newer version of MSBuild for Unity than previous releases. During project load, if the older version is listed in the Unity Package Manger
-manifest, the configuration dialog will appear, with the Enable MSBuild for Unity option checked. Applying will perform an upgrade.</p>
+<p>这个版本的MRTK使用了MSBuild for Unity的更新版本。在项目加载期间，如果旧版本在 Unity Package Manger清单中列出，配置对话框将出现，同时选中Enable MSBuild for Unity选项。应用程序将执行升级。</p>
 <p><strong>ScriptingUtilities</strong></p>
-<p>The ScriptingUtilities class has been marked as obsolete and has been replaced by ScriptUtilities, in the Microsoft.MixedReality.Toolkit.Editor.Utilities assembly. The new class refines previous behavior and adds support for removing scripting definitions.</p>
-<p>While existing code will continue to function in version 2.3.0, it is recommended to update to the new class.</p>
+<p>在Microsoft.MixedReality.Toolkit.Editor.Utilities 合集中，ScriptingUtilities 类已被标记为过时且已被 ScriptUtilities 取代。这个新类改进了以前的行为，并添加了对删除脚本定义的支持。</p>
+<p>虽然现有代码在2.3.0版本中将继续发挥作用，但建议将其更新到新的类</p>
 <p><strong>ShellHandRayPointer</strong></p>
-<p>The lineRendererSelected and lineRendererNoTarget members of the ShellHandRayPointer class have been replaced by lineMaterialSelected and lineMaterialNoTarget, respectively (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6863">#6863</a>).</p>
-<p>Please replace lineRendererSelected with lineMaterialSelected and/or lineRendererNoTarget with lineMaterialNoTarget to resolve compile errors.</p>
+<p>ShellHandRayPointer类的lineRendererSelected和lineRendererNoTarget成员分别被lineMaterialSelected和lineMaterialNoTarget取代<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6863">#6863</a>).</p>
+<p>请将lineRendererSelected替换为lineMaterialSelected和/或将lineRendererNoTarget替换为lineMaterialNoTarget来解决编译错误。</p>
 <p><strong>Spatial observer StartupBehavior</strong></p>
-<p>Spatial observers built upon the <code>BaseSpatialObserver</code> class now honor the value of StartupBehavior when re-enabled (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6919">#6919</a>).</p>
-<p>No changes are required to take advantage of this fix.</p>
-<p><strong>UX control prefabs updated to use PressableButton</strong></p>
-<p>The following prefabs are now using the PressableButton component instead of TouchHandler for near interaction (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/7070">7070</a>)</p>
+<p>Spatial observers建立在<code>BaseSpatialObserver</code>类上，当重新启用时，它会尊重StartupBehavior的值(<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6919">#6919</a>).</p>
+<p>使用此修复不需要任何更改。</p>
+<p><strong>UX 控件预制体更新来使用 PressableButton</strong></p>
+<p>下面的预置体正在使用PressableButton组件而不是TouchHandler进行近处交互(<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/7070">7070</a>)</p>
 <ul>
 <li>AnimationButton</li>
 <li>Button</li>
@@ -299,10 +298,10 @@ manifest, the configuration dialog will appear, with the Enable MSBuild for Unit
 <li>UnityUIRadialButton</li>
 <li>UnityUIToggleButton</li>
 </ul>
-<p>Application code may require updating due to this change.</p>
+<p>由于此更改，应用程序代码可能需要更新。</p>
 <p><strong>WindowsMixedRealityUtilities namespace</strong></p>
-<p>The namespace of WindowsMixedRealityUtilities changed from Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input to Microsoft.MixedReality.Toolkit.WindowsMixedReality (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6989">#6863</a>).</p>
-<p>Please update #using statements to resolve compile errors.</p>
+<p>WindowsMixedRealityUtilities 名称空间由Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input变更为Microsoft.MixedReality.Toolkit.WindowsMixedReality (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6989">#6863</a>).</p>
+<p>请更新#using 状态来解决编译错误。</p>
 <h2 id="将210更新到220">将2.1.0更新到2.2.0</h2>
 <ul>
 <li><a href="#api-changes-in-220">API 更改</a></li>
