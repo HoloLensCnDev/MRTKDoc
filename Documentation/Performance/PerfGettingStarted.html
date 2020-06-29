@@ -87,19 +87,34 @@
 <h3 id="可视分析器">可视分析器</h3>
 <p>为了在开发的整个生命周期中不断跟踪性能，强烈建议在运行和调试应用程序时始终显示可视分析器。混合现实工具包提供了<a href="../Diagnostics/UsingVisualProfiler.html">可视分析器</a> 诊断工具，可在应用程序视图中提供有关当前FPS和内存使用情况的实时信息。可以通过在<a href="../Diagnostics/DiagnosticsSystemGettingStarted.html">MRTK配置文件检查器</a> 下方的<a href="../MixedRealityConfigurationGuide.html">诊断系统设置</a>.</p>
 <p>此外，与在Unity编辑器或仿真器中运行相比，在设备上运行时利用Visual Profiler跟踪帧速率尤为重要。在设备上运行时，将描述最准确的性能结果<a href="https://docs.microsoft.com/visualstudio/debugger/how-to-set-debug-and-release-configurations?view=vs-2019">发布配置版本</a>.</p>
-<blockquote>
-<p>[!注意]
-如果针对Windows Mixed Reality构建，请使用<a href="https://docs.microsoft.com/windows/mixed-reality/exporting-and-building-a-unity-visual-studio-solution#building_and_deploying_a_unity_visual_studio_solution">主配置版本</a></p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>如果针对Windows Mixed Reality构建，请使用<a href="https://docs.microsoft.com/windows/mixed-reality/exporting-and-building-a-unity-visual-studio-solution#building_and_deploying_a_unity_visual_studio_solution">主配置版本</a></p>
+</div>
 <p><img src="../Images/Diagnostics/VisualProfiler.png" alt="Visual Profiler Interface"></p>
 <h3 id="optimize-window">Optimize Window</h3>
 <p><a href="../Tools/OptimizeWindow.html">MRTK Optimize Window</a> 提供信息和自动化工具，以帮助混合现实开发人员设置环境以获得最佳性能，并确定场景和资源中的潜在瓶颈。Unity中的某些关键配置可以帮助为混合现实项目提供实质上更优化的结果。</p>
 <p>通常，这些设置涉及适合混合现实的渲染配置。与传统的3D图形开发相比，混合现实应用程序是独特的，因为有两个屏幕（即两只眼睛）可以渲染整个场景。</p>
 <p>通过使用MRTK优化窗口，可以在Unity项目中自动配置以下参考的建议设置。</p>
 <p><img src="../Images/Performance/OptimizeWindow_Settings.png" alt="MRTK Optimize Window Settings"></p>
+<h3 id="unity-profiler">Unity Profiler</h3>
+<p>Unity 分析器</p>
+<p><a href="https://docs.unity3d.com/Manual/ProfilerWindow.html">Unity Profiler</a> 是在逐帧级别上研究应用程序性能细节的有用工具。</p>
+<h4 id="time-spent-on-the-cpu--cpu耗时">Time spent on the CPU  CPU耗时</h4>
+<p><img src="../Images/Performance/UnityProfilerGraph.png" alt="Example Unity Profiler Graph"></p>
+<p>为了保持良好的帧率(通常为60帧/秒)，应用程序需要实现CPU时间的最大帧时间16.6毫秒。为了帮助确定MRTK功能的成本，Microsoft Mixed Reality Toolkit 包含一个内部循环(每帧)代码路径标记。这些标记使用以下格式，以帮助理解所使用的特定功能:</p>
+<pre><code>[MRTK] className.methodName
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>方法名称后面可能有其他数据。它用于识别有条件执行的、可能很昂贵的功能，这些功能可以通过对应用程序代码进行小的更改来避免。</p>
+</div>
+<p><img src="../Images/Performance/UnityProfilerHierarchy.png" alt="Example Unity Profiler Hierarchy"></p>
+<p>在这个例子中，hierarchy被扩展，显示了WindowsMixedRealityArticulatedHand类的UpdateHandData方法在被分析的帧期间消耗了0.44 ms的CPU时间。此数据可用于帮助确定性能问题是与应用程序代码有关还是来自系统中的其他地方。</p>
+<p>强烈建议开发人员以类似的方式检测应用程序代码。应用程序代码插装的主要关注领域是event handlers ，因为这些方法在事件引发时由MRT Kupdate循环负责。MRTK update循环中的高帧时间可能表明event handlers方法中的代码开销很大。</p>
 <h2 id="建议的unity设置">建议的Unity设置</h2>
-<h3 id="单遍实例渲染">单遍实例渲染</h3>
-<p>Unity中XR的默认渲染配置为<a href="https://docs.unity3d.com/ScriptReference/StereoRenderingPath.MultiPass.html">多遍</a>. 此设置指示Unity执行两次整个渲染管道，每只眼睛执行一次。可以通过选择来优化<a href="https://docs.unity3d.com/Manual/SinglePassInstancing.html">单遍实例渲染</a> 代替。此配置利用<a href="https://en.wikipedia.org/wiki/Multiple_Render_Targets">渲染目标数组</a> 能够执行将实例插入适当的单个绘制调用<a href="https://en.wikipedia.org/wiki/Render_Target">渲染目标</a> 为每只眼睛。此外，此模式允许所有渲染都在渲染管道的一次执行中完成。因此，选择Single Pass Instanced渲染作为混合现实应用程序的渲染路径可以<a href="https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/">在CPU和GPU上节省大量时间</a>并且是推荐的渲染配置。
+<h3 id="single-pass-instanced-rendering-单遍实例渲染">Single-Pass Instanced rendering 单遍实例渲染</h3>
+<p>Unity中XR的默认渲染配置为<a href="https://docs.unity3d.com/ScriptReference/StereoRenderingPath.MultiPass.html">多遍</a>. 此设置指示Unity执行两次整个渲染管道，每只眼睛执行一次。可以通过选择来优化<a href="https://docs.unity3d.com/Manual/SinglePassInstancing.html">单遍实例渲染</a> 代替。此配置利用<a href="https://en.wikipedia.org/wiki/Multiple_Render_Targets">render target arrays</a> 能够执行将实例插入适当的单个绘制调用<a href="https://en.wikipedia.org/wiki/Render_Target">render target</a> 为每只眼睛。此外，此模式允许所有渲染都在渲染管道的一次执行中完成。因此，选择Single Pass Instanced渲染作为混合现实应用程序的渲染路径可以<a href="https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/">在CPU和GPU上节省大量时间</a>并且是推荐的渲染配置。
 但是，为了对每只眼睛的每个网格发出单个绘制调用，<a href="https://docs.unity3d.com/Manual/GPUInstancing.html">GPU实例化</a> 必须由所有着色器支持。实例化使GPU可以在两只眼睛之间多路复用绘图调用。Unity内置着色器以及<a href="../README_MRTKStandardShader.html">MRTK标准着色器</a> 默认情况下，在着色器代码中包含必要的实例化指令。如果为Unity编写自定义着色器，则可能需要更新这些着色器以支持Single Pass Instanced渲染。</p>
 <h4 id="自定义着色器的示例代码"><a href="https://docs.unity3d.com/Manual/SinglePassInstancing.html">自定义着色器的示例代码</a></h4>
 <pre><code>struct appdata
@@ -139,18 +154,21 @@ v2f vert (appdata v)
 <strong>Edit</strong> &gt; <strong>Project Settings</strong>, 然后选择 <strong>Quality</strong> category &gt;  Select <em>Low Quality</em> for the UWP Platform</p>
 <p><em>Step 2:</em> 对于每个Unity场景文件，禁用<a href="https://docs.unity3d.com/Manual/LightMode-Realtime.html">实时全局照明</a> <br>
 <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong> &gt; <a href="https://docs.unity3d.com/Manual/GlobalIllumination.html">Uncheck <em>Real-time Global Illumination</em></a></p>
-<h3 id="depth-buffer-sharing-hololens">Depth buffer sharing (HoloLens)</h3>
+<h3 id="depth-buffer-sharing-hololens-深度缓冲区共享">Depth buffer sharing (HoloLens) 深度缓冲区共享</h3>
 <p>如果针对Windows Mixed Reality平台（尤其是HoloLens）进行开发，则在<strong>XR设置</strong>下启用<strong>深度缓冲区共享</strong>可以帮助您<a href="../hologram-stabilization.html">全息图稳定</a>. 但是，深度缓冲区的处理可能会导致性能损失，特别是如果使用<a href="https://docs.unity3d.com/ScriptReference/PlayerSettings.VRWindowsMixedReality-depthBufferFormat.html">24位深度格式</a>. 因此，<strong>强烈建议</strong>将深度缓冲区配置为16位精度。</p>
 <p>如果 <a href="https://en.wikipedia.org/wiki/Z-fighting">z-fighting</a> 由于低位格式而发生，请确认 <a href="https://docs.unity3d.com/Manual/class-Camera.html">far clip plane</a>将所有相机中的设置为该应用程序可能的最低值。默认情况下，Unity设置far clip plane为1000m。在HoloLens上，对于大多数应用场景，通常50m的far clip plane绰绰有余。</p>
-<blockquote>
-<p>[!注意]
-如果使用<strong>16位深度格式</strong>，则模板缓冲区所需的效果将不起作用，因为<a href="https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html">Unity不创建模板缓冲区</a> 在这种情况下。相反，如果适用于端点图形平台，则选择<strong>24位深度格式</strong>通常会创建8位模板缓冲区。</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>如果使用 <em>16位深度格式</em> ，则模板缓冲区所需的效果将不起作用，因为<a href="https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html">Unity不创建模板缓冲区</a> 在这种情况下。相反，如果适用于端点图形平台，则选择 <em>24位深度格式</em> 通常会创建8位模板缓冲区。</p>
 <p>如果使用<a href="https://docs.unity3d.com/Manual/script-Mask.html">Mask组件</a> 需要模板缓冲区，请考虑使用<a href="https://docs.unity3d.com/Manual/script-RectMask2D.html">RectMask2D</a> 它不需要模板缓冲区，因此可以与<strong>16位深度格式</strong>一起使用。</p>
-</blockquote>
-<blockquote>
-<p>[!注意]
-为了快速确定场景中哪些对象没有可视地写入深度缓冲区，可以使用<a href="../MixedRealityConfigurationGuide.html#editor-utilities">Render Depth Buffer utility</a> 在“MRTK Configuration profile”配置文件中的<strong>Editor Settings</strong>下。</p>
-</blockquote>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>为了快速确定场景中哪些对象没有可视地写入深度缓冲区，可以使用<a href="../MixedRealityConfigurationGuide.html#editor-utilities"><em>Render Depth Buffer</em> utility</a> 在“MRTK Configuration profile”配置文件中的 <em>Editor Settings</em> 下。</p>
+</div>
+<h3 id="optimize-mesh-data--优化网格数据">Optimize Mesh Data  优化网格数据</h3>
+<p><a href="https://docs.unity3d.com/ScriptReference/PlayerSettings-stripUnusedMeshComponents.html">Optimize Mesh Data</a> 设置尝试删除应用程序中未使用的顶点属性。设置通过运行构建中每一个网格上的每一个材质的每一个着色器来执行这个操作。这对于游戏数据大小和运行时性能来说是很好的，但是会极大地阻碍构建时间。</p>
+<p>建议在开发期间禁用此设置，并在&quot;Master&quot;构建创建期间重新启用。设置可以在 <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong> &gt; <strong>Other Settings</strong> &gt; <strong>Optimize Mesh Data</strong> 下找到。</p>
 <h2 id="一般建议">一般建议</h2>
 <p>对于混合现实开发人员而言，性能可能是一个模棱两可且不断变化的挑战，并且优化性能的知识范围非常广泛。但有一些一般性建议，以帮助您了解如何提高应用程序的性能。</p>
 <p>将应用程序的执行简化为运行在CPU或GPU上的各个部分，从而确定应用程序是否受任一组件的约束，这很有用。可能存在跨越两个处理单元的瓶颈以及一些必须仔细研究的独特方案。但是，对于入门而言，最好掌握应用程序在最多时间执行的位置。</p>
@@ -230,7 +248,7 @@ private void ChangeColor()
 <li><a href="https://docs.unity3d.com/Manual//Profiler.html">Unity Profiler</a></li>
 <li><a href="https://docs.unity3d.com/Manual/FrameDebugger.html">Unity Frame Debugger</a></li>
 </ul>
-<p>如果估计一个着色器与另一个着色器之间的大致性能折衷，则编译每个着色器并查看每个着色器阶段的操作数很有用。可以通过选择一个<a href="https://docs.unity3d.com/Manual/class-Shader.html">着色器资源</a>然后点击<em>Compile and show code</em>按钮。这将编译所有着色器变体，并使用结果打开Visual Studio。注意：根据使用给定着色器的材质启用的功能，所产生的统计结果可能会有所不同。Unity将仅编译当前项目中直接使用的着色器变体。</p>
+<p>如果估计一个着色器与另一个着色器之间的大致性能折衷，则编译每个着色器并查看每个着色器阶段的操作数很有用。可以通过选择一个<a href="https://docs.unity3d.com/Manual/class-Shader.html">着色器资源</a>然后点击<em>Compile and show code</em>按钮。这将编译所有着色器变体，并使用结果打开Visual Studio。NOTE：根据使用给定着色器的材质启用的功能，所产生的统计结果可能会有所不同。Unity将仅编译当前项目中直接使用的着色器变体。</p>
 <p>Unity 标准着色器统计信息示例</p>
 <p><img src="../Images/Performance/UnityStandardShader-Stats.PNG" alt="Unity Standard Shader Statistics"></p>
 <p>MRTK Standard shader statistics example</p>
@@ -255,6 +273,11 @@ private void ChangeColor()
 <ul>
 <li><a href="https://developer.oculus.com/documentation/pcsdk/latest/concepts/dg-performance-guidelines/">性能准则</a></li>
 <li><a href="https://developer.oculus.com/documentation/pcsdk/latest/concepts/dg-performance-tools/">性能工具</a></li>
+</ul>
+<h3 id="网格优化">网格优化</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets">优化3D模型</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dynamics365/mixed-reality/import-tool/best-practices">转换和优化实时3D模型的最佳实践</a></li>
 </ul>
 </article>
           </div>

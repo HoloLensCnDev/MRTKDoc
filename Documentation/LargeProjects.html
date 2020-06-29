@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Using MRTK in large projects | Mixed Reality Toolkit Documentation </title>
+    <title>&#22312;&#22823;&#22411;&#39033;&#30446;&#20013;&#20351;&#29992;MRTK | Mixed Reality Toolkit Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Using MRTK in large projects | Mixed Reality Toolkit Documentation ">
+    <meta name="title" content="&#22312;&#22823;&#22411;&#39033;&#30446;&#20013;&#20351;&#29992;MRTK | Mixed Reality Toolkit Documentation ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../Documentation/Images/favicon.ico">
@@ -80,20 +80,17 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="using-mrtk-in-large-projects">Using MRTK in large projects</h1>
+<h1 id="在大型项目中使用mrtk">在大型项目中使用MRTK</h1>
 
-<p>This page contains some useful tips for consumers of MRTK that are pulling it into existing
-large projects, or setting up something new that will be source controlled and have multiple
-developers.</p>
-<p><em>We recommend reading all of the guidelines below, following them will help avoid
-some tricky issues when working on larger codebases</em></p>
+<p>这个页面包含了一些有用的提示，可以帮助MRTK的使用者将其拉入现有的大型项目，或者建立一些新的东西，这些东西将是源码控制的，并且有多个
+开发人员。</p>
+<p><em>我们建议阅读下面的所有指南，遵循它们将有助于避免在处理较大的代码库时遇到的一些棘手问题</em></p>
 <h2 id="gitignore">gitignore</h2>
-<p>The following .gitignore file is a recommended base to pull in when consuming MRTK - there
-parts of MRTK that creates local state that can be safely ignored by source control, which
-would otherwise dirty local git state.</p>
-<p>Note that the beginning parts of this are taken from the default github Unity .gitignore with
-MRTK-specific additions later. Also note that some of these rules assume certain paths, and
-can be modified based on where MRTK is located within your project.</p>
+<p>以下.gitignore文件是在使用MRTK时推荐使用的基础文件
+MRTK中创建本地状态的部分可以被源代码控制安全地忽略
+否则会破坏本地git状态。</p>
+<p>注意，这部分的开始部分是从默认的github Unity .gitignore具有后添加的MRTK-specific所提取的。还要注意，其中一些规则假定了某些路径
+可以根据MRTK在项目中的位置进行修改。</p>
 <pre><code># This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
@@ -186,29 +183,17 @@ Nuget.config*
 Assets/MRTK/Providers/WindowsMixedReality/Shared/DotNetAdapter/.bin/
 Assets/MRTK/Providers/WindowsMixedReality/Shared/DotNetAdapter/.obj/
 </code></pre>
-<h2 id="projectpreferencesasset-file">ProjectPreferences.asset file</h2>
-<p>Project-wide MRTK settings can be found under the Edit -&gt; Project Settings
--&gt; Mixed Reality Toolkit location. These settings will be saved to a file
-at this location in the Assets folder:</p>
+<h2 id="projectpreferencesasset-文件">ProjectPreferences.asset 文件</h2>
+<p>项目范围的MRTK设置可以在 Edit -&gt; Project Settings
+-&gt; Mixed Reality Toolkit 下找到
+。这些设置将保存到一个文件中，
+在资源文件夹的这个位置:</p>
 <pre><code>Assets/MixedRealityToolkit.Generated/ProjectPreferences.asset
 </code></pre>
-<p>If your project will have multiple collaborators, it is recommended that
-this asset file be checked in after doing an initial setup of MRTK
-settings. In particular, consider having the <strong>following settings checked</strong>:</p>
-<p><strong>Lock SDK Profiles</strong> - If this is disabled, the default MRTK profiles will be
-globally editable, which will make MRTK upgrades challenging (it can lead
-to merge conflicts in the framework itself)</p>
-<p><strong>Ignore MRTK project configurator</strong> - If this is disabled, the project
-configurator will show if the current MRTK settings do not match MRTK
-recommended defaults. Since your project may have explicitly chosen not to
-have some settings enabled, having this setting checked will prevent other
-collaborators from seeing this dialog an changing settings
-inadvertently. These settings should be configured by the person setting up
-the project and then ignored by the other collaborators.</p>
-<p><strong>Auto-enable UWP capabilities</strong> - If this is disabled, certain functionality (for example, eye tracking) may silently fail when deployed
-to a device because Unity won't automatically add the required runtime
-capabilities to the application manifest. Having this setting checked will
-safeguard your application deployment experience from this class of issues.</p>
+<p>如果您的项目将有多个合作者，建议在完成MRTK设置的初始设置之后检查该asset文件。特别是，<strong>检查以下设置</strong>:</p>
+<p><strong>Lock SDK Profiles</strong> - 如果这被禁用，默认的MRTK配置文件将是全局可编辑的，这将使MRTK升级具有挑战性(它可能导致框架本身的合并冲突)</p>
+<p><strong>Ignore MRTK project configurator</strong> - 如果禁用此功能，项目配置器将显示当前MRTK设置是否与MRTK推荐的默认设置不匹配。由于您的项目可能已明确选择不启用某些设置，因此选中此设置将防止其他合作者无意中看到此对话框更改了设置。这些设置应该由项目设置人员配置，然后由其他合作者忽略。</p>
+<p><strong>Auto-enable UWP capabilities</strong> - 如果禁用了这个功能，某些功能(例如，眼动跟踪)在部署到设备时可能会悄无声地失败，因为Unity不会自动将所需的运行时功能添加到应用程序清单中。检查此设置将确保您的应用程序部署体验不会出现此类问题。</p>
 </article>
           </div>
           
