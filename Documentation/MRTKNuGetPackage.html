@@ -82,99 +82,110 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="mixed-reality-toolkit-nuget-package">Mixed Reality Toolkit NuGet package</h1>
 
-<p>Mixed Reality Toolkit (MRTK) is now available as a NuGet package on NuGet.org. There are some differences when it comes to consuming NuGet version of MRTK as opposed to a .unitypackage, read <strong>NuGet Package Considerations</strong> below. If any issues are encountered, file an issue using this <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/issues/new?assignees=&amp;labels=Bug,Package%20Management%20-%20NuGet&amp;template=bug-report.md&amp;title=">template</a>.</p>
-<p><strong>Note:</strong> Migration of existing projects to consume MRTK as a NuGet package is not yet supported, use MRTK via NuGet only for new projects.</p>
-<h2 id="installing-the-nuget-package">Installing the NuGet package</h2>
-<p>Follow these instructions to add the Mixed Reality Toolkit as a NuGet package to your project.</p>
+<p>混合现实工具包(MRTK)现在作为NuGet包在NuGet.org上提供。使用NuGet版本的MRTK与使用.unitypackage有一些区别，请阅读下面的<a href="#nuget-package-considerations">NuGet包注意事项</a> 。如果遇到任何问题，使用此<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/issues/new?assignees=&amp;labels=Bug,Package%20Management%20-%20NuGet&amp;template=bug-report.md&amp;title=">模板</a>将问题存档。</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>目前还不支持对现有项目进行迁移来使用MRTK作为NuGet包。通过NuGet使用MRTK只用于新项目。</p>
+</div>
+<h2 id="安装nuget包">安装NuGet包</h2>
+<p>按照以下说明将混合现实工具包作为NuGet包添加到您的项目中。</p>
 <ol>
-<li><p>Download the latest <a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest">NuGetForUnity</a> .unitypackage.</p>
+<li><p>下载最新的<a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest">NuGetForUnity</a> .unitypackage。</p>
 <ol>
-<li>If you already have NuGetForUnity installed, please ensure you're using version 2.0.0 or newer.</li>
+<li>如果已经安装了<em>NuGetForUnity</em>，请确保是版本<strong>2.0.0或更新的</strong>。</li>
 </ol>
 </li>
-<li><p>Import the package into your Unity project, <a href="https://docs.unity3d.com/Manual/AssetPackages.html">instructions</a>.</p>
+<li><p>将包导入到Unity项目中，<a href="https://docs.unity3d.com/Manual/AssetPackages.html">说明</a>.</p>
 </li>
-<li><p>In the Unity menu bar, click on <strong>NuGet &gt; Manage NuGet Packages</strong>.</p>
+<li><p>在Unity菜单栏，点击<strong>NuGet</strong> &gt; <strong>Manage NuGet Packages</strong>.</p>
 <p><img src="Images/NuGet/ManageNuGetPackages.png" alt="Manage NuGet Packages"></p>
 </li>
-<li><p>In the Search box, enter <code>Microsoft.MixedReality.Toolkit</code>.</p>
+<li><p>在搜索框中，输入 <strong>Microsoft.MixedReality.Toolkit</strong>.</p>
 <p><img src="Images/NuGet/SearchBox.png" alt="Manage NuGet Packages"></p>
 </li>
-<li><p>Choose the MRTK core package:</p>
+<li><p>选择MRTK核心包:</p>
 <ul>
-<li><strong>Microsoft.MixedReality.Toolkit.Foundation</strong> – The core package for MRTK.</li>
+<li><strong>Microsoft.MixedReality.Toolkit.Foundation</strong> – MRTK的核心包。</li>
 </ul>
 </li>
-<li><p>(Optional) Choose the MRTK optional packages.</p>
+<li><p>(可选)选择MRTK可选包。</p>
 <ul>
-<li><strong>Microsoft.MixedReality.Toolkit.Examples</strong> – The package that contains all of our examples.</li>
-<li><strong>Microsoft.MixedReality.Toolkit.Extensions</strong> – The package that contains extensions services and/or data providers.</li>
-<li><strong>Microsoft.MixedReality.Toolkit.Tools</strong> – Contains some of the tooling that comes with MRTK (Build Window, etc).</li>
+<li><strong>Microsoft.MixedReality.Toolkit.Examples</strong> – 包含所有示例的包。</li>
+<li><strong>Microsoft.MixedReality.Toolkit.Extensions</strong> – 包含扩展服务和/或数据提供程序的包。</li>
+<li><strong>Microsoft.MixedReality.Toolkit.Tools</strong> – 包含一些随MRTK而来的工具(构建窗口等)。</li>
 </ul>
 </li>
 </ol>
-<h3 id="updating-mrtk-nuget-packages">Updating MRTK NuGet packages</h3>
-<p>Steps 1-2 above will only need to be done once for your project, and the update is a much simpler step. Once newer packages available on NuGet.org (including prerelease), follow these steps:</p>
+<h3 id="更新mrtk-nuget包">更新MRTK NuGet包</h3>
+<p>对于这个项目，上面的步骤 1-2 只需要执行一次，而更新是一个简单得多的步骤。一旦在NuGet.org上有新的软件包(包括预发行版)，请遵循以下步骤:</p>
 <ol>
-<li>In the Unity menu bar, click on NuGet &gt; Manage NuGet Packages.</li>
-<li>Switch to the <strong>Updates</strong> tab.
-<ul>
-<li>Check the <strong>Show prerelease</strong> box if you want to get latest prerelease version.</li>
-</ul>
-</li>
-<li>Update the packages desired.</li>
+<li>在Unity菜单栏，点击<strong>NuGet</strong> &gt; <strong>Manage NuGet Packages</strong></li>
+<li>切换到<strong>Updates</strong>选项卡。
+-如果您想获得最新的预发行版本，请勾选*Show prerelease**框。</li>
+<li>更新所需的包。</li>
 </ol>
-<h2 id="nuget-package-considerations">NuGet package considerations</h2>
-<p>The release of MRTK as NuGet package is a new delivery mechanism being explored and there are a couple of key benefits and considerations one must make when choosing whether to consume the NuGet version of MRTK.</p>
-<h3 id="migrating-to-nuget-from-unitypackage-or-source-not-yet-supported">Migrating to NuGet from .unitypackage or source (not yet supported)</h3>
-<p>NuGet package consists of compiled binaries as opposed to loose script files, and the C# script asset identifiers are different. As such, the assets like prefabs in the MRTK package have been updated to reference the appropriate compiled script. A project using the .unitypackage or source version of MRTK will have to re-target its assets as well, and although there is code for it this is not a supported scenario, yet.</p>
-<p><em>Thereby, there is no currently supported way of migrating to NuGet from .unitypackage or source. This will change as we continue development on this delivery mechanism.</em></p>
-<h3 id="compiled-binaries-nuget-vs-source-files-unitypackage">Compiled binaries (NuGet) vs source files (.unitypackage)</h3>
-<p>Since the NuGet package contains the compiled binaries instead of scripts, this has two major advantages:</p>
+<h2 id="nuget包注意事项">NuGet包注意事项</h2>
+<p>作为NuGet包发布的MRTK是一种新的分发机制，在选择是否使用MRTK的NuGet版本时，有几个关键的好处和考虑因素必须考虑。</p>
+<h3 id="从unitypackage或source迁移到nuget尚不支持">从.unitypackage或source迁移到NuGet(尚不支持)</h3>
+<p>NuGet包由编译的二进制文件组成，而不是松散的脚本文件，C# 脚本资源标识符是不同的。因此，像MRTK包中的预制包这样的资源已经被更新，以引用适当的编译脚本。使用.unitypackage或MRTK源代码版本的项目也必须重新定位其资源，尽管有针对它的代码，但这还不是一个受支持的场景。</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>目前还没有支持从.unitypackage或source迁移到NuGet的方法。当我们继续开发这个分发机制时，这将会改变。</p>
+</div>
+<h3 id="编译的二进制文件nuget对比源文件unitypackage">编译的二进制文件(NuGet)对比源文件(.unitypackage)</h3>
+<p>由于NuGet包包含编译的二进制文件而不是脚本，这有两个主要的优点:</p>
 <ul>
-<li>Reduced compilation time</li>
-<li>Considerably fewer C# project files in Visual Studio</li>
+<li>减少编译时间</li>
+<li>相当少的C#项目文件在Visual Studio</li>
 </ul>
-<h3 id="debugging-mixed-reality-toolkit">Debugging Mixed Reality Toolkit</h3>
-<p>There are known issues with Unity &amp; Visual Studio Tools for Unity that prevent a PDB from being easily debugged in Visual Studio Debugger. So although the package comes with PDBs and source embedded, debugging the DLLs is possible only if it was locally built (read further). There is a workaround being built as part of <a href="https://github.com/microsoft/MSBuildForUnity/">MSBuildForUnity</a>, more updates on that later.</p>
-<h2 id="locally-building-the-nuget-package">Locally building the NuGet package</h2>
-<p>With the latest source from MRTK, you can build the NuGet package locally and configure NuGetForUnity to pick it up.</p>
+<h3 id="调试混合现实工具包">调试混合现实工具包</h3>
+<p>在Unity和Visual Studio Tools for Unity中存在一些已知的问题，这些问题会阻止PDB在Visual Studio调试器中被轻松地调试。因此，尽管包中嵌入了pdb和源代码，但只有在本地构建时才能调试dll(请进一步阅读)。作为<a href="https://github.com/microsoft/MSBuildForUnity/">MSBuildForUnity</a>的一部分，有一个解决方案正在构建，稍后会有更多更新。</p>
+<h2 id="本地构建nuget包">本地构建NuGet包</h2>
+<p>使用来自MRTK的最新源代码，您可以在本地构建NuGet包并配置NuGetForUnity来获取它。</p>
 <ol>
 <li>Download the latest MRTK source.</li>
 <li>Execute the <code>scripts\packaging\createnugetpackages.ps1</code> powershell script.
 <ul>
 <li>Specify the <code>-UnityDirectory</code> flag by passing the Editor folder of your Unity installation</li>
 <li>Specify the <code>-Version</code> of the package to create, in x.x.x format. <strong>Make sure the version is higher than available on NuGet.org</strong></li>
-<li><strong>Example:</strong> <code>.\createnugetpackages.ps1 -UnityDirectory &quot;C:\Program Files\Unity\Hub\Editor\2018.3\Editor&quot; -Version 2.0.2</code></li>
+<li><strong>Example:</strong> <code>.\createnugetpackages.ps1 -UnityDirectory &quot;C:\Program Files\Unity\Hub\Editor\2018.4.14f1\Editor&quot; -Version 2.3.2</code></li>
 </ul>
 </li>
-<li>After the build succeeds, open the destination project with NuGet packages.
+<li>构建成功后，使用NuGet包打开目标项目。
 <ul>
-<li><p>Click on the menu <strong>Edit &gt; Preferences...</strong></p>
+<li><p>点击菜单 <strong>Edit</strong> &gt; <strong>Preferences...</strong></p>
 <p><img src="Images/NuGet/ProjectPreferences.png" alt="Edit Preferences Menu Item"></p>
 </li>
-<li><p>On the left, find <strong>NuGet for Unity</strong> tab.</p>
+<li><p>在左边，找到<strong>NuGet for Unity</strong>标签。</p>
 <p><img src="Images/NuGet/NuGetForUnityPreferencesTab.png" alt="Edit Preferences Menu Item"></p>
 </li>
-<li><p>Press <strong>Add New Source</strong> and replace <strong>source_path</strong> with the <code>&lt;Path to your Repository&gt;\NuGet\artifacts</code></p>
+<li><p>按下<strong>Add New Source</strong>，并将<strong>source_path</strong>替换为<code>&lt;Path to your Repository&gt;\NuGet\artifacts</code></p>
 <p><img src="Images/NuGet/AddNewSource.png" alt="Edit Preferences Menu Item"></p>
+</li>
+<li><p>在底部，按<strong>Save</strong> 按钮。</p>
+<p><img src="Images/NuGet/SaveNewSource.png" alt="Edit Preferences Menu Item"></p>
 </li>
 </ul>
 </li>
-<li>If this your first time building, or the version was incremented, follow the update process:
+<li>如果这是您第一次构建，或者版本是递增的，请遵循更新过程:
 <ol>
-<li><p>In the Unity menu bar, click on <strong>NuGet &gt; Manage NuGet Packages</strong>.</p>
+<li><p>在Unity菜单栏，点击<strong>NuGet</strong> &gt; <strong>Manage NuGet Packages</strong>.</p>
 <p><img src="Images/NuGet/ManageNuGetPackages.png" alt="Manage NuGet Packages"></p>
 </li>
-<li><p>Switch to the <strong>Updates</strong> tab.</p>
+<li><p>切换到<strong>Updates</strong>选项卡。</p>
 <p><img src="Images/NuGet/UpdatesTab.png" alt="Manage NuGet Packages"></p>
 </li>
-<li><p>Update the packages to the version you just built desired.</p>
+<li><p>将包更新为您刚刚构建的所需版本。</p>
 </li>
 </ol>
 </li>
-<li>Otherwise, just delete the <code>Assets\Packages</code> folder and let NuGetForUnity restore the packages.</li>
+<li>否则，只需删除<code>Assets\Packages</code>文件夹，让NuGetForUnity恢复这些包。</li>
 </ol>
+<h2 id="建议浏览">建议浏览</h2>
+<ul>
+<li><a href="BuildAndDeploy.html">构建及部署MRTK</a></li>
+<li><a href="MRTK_PackageContents.html">MRTK包内容</a></li>
+</ul>
 </article>
           </div>
           
