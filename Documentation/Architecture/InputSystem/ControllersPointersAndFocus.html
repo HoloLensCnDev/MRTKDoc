@@ -107,10 +107,10 @@
 <p>这些类型的指针插入到传送系统(teleportation system)中，以处理将用户移动到指针指向的位置。</p>
 </li>
 </ul>
-<h2 id="pointer-mediation指针调解器">Pointer Mediation(指针调解器)</h2>
+<h2 id="pointer-mediation指针调解器">Pointer mediation(指针调解器)</h2>
 <p>因为单个控制器可以具有多个指针（例如，全关节手可以具有近距交互指针和远距交互指针），所以存在一个组件，负责调解哪个指针应处于活动状态。</p>
 <p>例如，当用户的手接近可按下的按钮时，<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer.html"><code>ShellHandRayPointer</code></a>应该停止显示，并且<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.PokePointer.html"><code>PokePointer</code></a> 应该被启用。</p>
-<p>这是由<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator.html"><code>DefaultPointerMediator</code></a>处理的，它负责根据所有指针的状态确定哪些指针处于活动状态。它做的一个关键事情是<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Pointers/DefaultPointerMediator.cs#L127">当一个近指针靠近对象时，禁用远指针</a>.</p>
+<p>这是由<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator.html"><code>DefaultPointerMediator</code></a>处理的，它负责根据所有指针的状态确定哪些指针处于活动状态。它做的一个关键事情是当一个近指针靠近对象时，禁用远指针 (参见 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator.html"><code>DefaultPointerMediator</code></a>).</p>
 <p>可以通过更改指针配置文件上的 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerProfile.html#Microsoft_MixedReality_Toolkit_Input_MixedRealityPointerProfile_PointerMediator"><code>PointerMediator</code></a>属性来提供指针调解器的替代实现。</p>
 <h3 id="如何禁用指针">如何禁用指针</h3>
 <p>由于指针调解器每帧运行，所以它最终控制所有指针的活动/非活动状态。因此，如果在代码中设置了指针的IsInteractionEnabled属性，则指针调解器将在每帧覆盖它。相反，您可以指定 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.PointerBehavior.html"><code>PointerBehavior</code></a> 控制指针是打开还是关闭自己。请注意，这仅在使用MRTK中的 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.FocusProvider.html"><code>FocusProvider</code></a> 和 <a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator.html"><code>DefaultPointerMediator</code></a> 默认设置时有效。</p>

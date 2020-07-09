@@ -89,21 +89,21 @@
 </div>
 <p>该服务负责：</p>
 <ul>
-<li>读取<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit/Definitions/InputSystem/MixedRealityInputSystemProfile.cs">输入系统配置文件</a></li>
-<li>启动各种设备管理器（例如，<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.Providers/OpenVR/OpenVRDeviceManager.cs">OpenVR</a>, <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.Providers/WindowsMixedReality/WindowsMixedRealityDeviceManager.cs">Windows混合现实</a>, <a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit/Providers/UnityInput/UnityTouchDeviceManager.cs">Unity Touch</a>).实例化的设备管理器(device managers)集由输入系统配置文件配置(input system profile.)。</li>
-<li>实例化<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.Services/InputSystem/GazeProvider.cs">GazeProvider</a>,，该组件除了提供HoloLens2风格的视线凝视信息外，还负责提供HoloLens1风格的视线凝视信息。</li>
-<li>实例化<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.Services/InputSystem/FocusProvider.cs">FocusProvider</a>，它是负责确定具有焦点的对象的组件。这在<a href="ControllersPointersAndFocus.html#%E6%8C%87%E9%92%88%E5%92%8C%E7%84%A6%E7%82%B9">指针和焦点</a>文档部分描述。</li>
+<li>读取<a href="../../MixedRealityConfigurationGuide.html#input-system-settings">输入系统配置文件</a></li>
+<li>启动配置好的<a href="../../Input/InputProviders.html">data providers</a> (例如 <code>Windows Mixed Reality Device Manager</code> 和 <code>OpenVR Device Manager</code>).</li>
+<li>实例化<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityGazeProvider.html">GazeProvider</a>,该组件除了提供HoloLens2风格的视线凝视信息外，还负责提供HoloLens1风格的视线凝视信息。</li>
+<li>实例化<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusProvider.html">FocusProvider</a>，它是负责确定具有焦点的对象的组件。这在<a href="ControllersPointersAndFocus.html#%E6%8C%87%E9%92%88%E5%92%8C%E7%84%A6%E7%82%B9">指针和焦点</a>文档部分描述。</li>
 <li>提供所有输入事件的注册点（例如<a href="#%E5%85%A8%E5%B1%80%E4%BE%A6%E5%90%AC%E5%99%A8">全局侦听器</a>).</li>
 <li>为这些输入事件提供事件分发功能。</li>
 </ul>
 <h2 id="input-events输入事件">Input events(输入事件)</h2>
 <p>输入事件通常在两个不同的通道上触发：</p>
 <h3 id="objects-in-focus焦点对象">Objects in focus(焦点对象)</h3>
-<p>事件可以直接发送到具有焦点的GameObject。例如，一个对象可能有一个实现<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit/Interfaces/InputSystem/Handlers/IMixedRealityHandTrackHandler.cs">IMixedRealityTouchHandler</a>的脚本。当一只手靠近该对象时，该对象将获得触摸事件。这些类型的事件在GameObject层次结构中“上升”，直到找到能够处理该事件的GameObject。</p>
-<p>这是通过使用在<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.Services/InputSystem/MixedRealityInputSystem.cs#L471">DispatchEventToObjectFocusedByPointer</a>中的 <a href="https://docs.unity3d.com/ScriptReference/EventSystems.ExecuteEvents.ExecuteHierarchy.html">ExecuteHierarchy</a>实现。</p>
+<p>事件可以直接发送到具有焦点的GameObject。例如，一个对象可能有一个实现<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit/Interfaces/InputSystem/Handlers/IMixedRealityHandTrackHandler.cs"><code>IMixedRealityTouchHandler</code></a>的脚本。当一只手靠近该对象时，该对象将获得触摸事件。这些类型的事件在GameObject层次结构中“上升”，直到找到能够处理该事件的GameObject。</p>
+<p>这是通过在默认输入系统实现中使用<a href="https://docs.unity3d.com/ScriptReference/EventSystems.ExecuteEvents.ExecuteHierarchy.html">ExecuteHierarchy</a>实现。</p>
 <h3 id="全局侦听器">全局侦听器</h3>
-<p>事件可以发送到全局侦听器(Global listeners)。可以使用输入系统的<a href="https://microsoft.github.io/MixedRealityToolkit-Unity/api/Microsoft.MixedReality.Toolkit.IMixedRealityEventSystem.html">IMixedRealityEventSystem</a>接口注册所有输入事件。建议使用<a href="https://microsoft.github.io/MixedRealityToolkit-Unity/api/Microsoft.MixedReality.Toolkit.IMixedRealityEventSystem.html#Microsoft_MixedReality_Toolkit_IMixedRealityEventSystem_RegisterHandler__1_IEventSystemHandler_">RegisterHandler</a>方法注册全局事件-已弃用的Register函数将导致侦听器获得所有输入事件的通知，而不仅仅是特定类型的输入事件(其中类型由事件接口定义)。</p>
-<p>注意<a href="https://microsoft.github.io/MixedRealityToolkit-Unity/api/Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystem.html#Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystem_PushFallbackInputHandler_GameObject_">fallback listeners</a> 是不鼓励使用的另一种全局侦听器，因为它们将接收场景中其他地方未处理的每个输入事件。</p>
+<p>事件可以发送到全局侦听器(Global listeners)。可以使用输入系统的<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.IMixedRealityEventSystem.html"><code>IMixedRealityEventSystem</code></a>接口注册所有输入事件。建议使用<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.IMixedRealityEventSystem.html#Microsoft_MixedReality_Toolkit_IMixedRealityEventSystem_RegisterHandler__1_IEventSystemHandler_">RegisterHandler</a>方法注册全局事件-已弃用的<code>Register</code>函数将导致侦听器获得所有输入事件的通知，而不仅仅是特定类型的输入事件(其中类型由事件接口定义)。</p>
+<p>注意<a class="xref" href="../../../api/Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSystem.html#Microsoft_MixedReality_Toolkit_Input_MixedRealityInputSystem_PushFallbackInputHandler_GameObject_">fallback listeners</a>是不鼓励使用的另一种全局侦听器，因为它们将接收场景中其他地方未处理的每个输入事件。</p>
 <h3 id="order-of-event-dispatch事件派发顺序">Order of event dispatch(事件派发顺序)</h3>
 <p>通常，事件以以下方式发送给侦听器。请注意，如果以下任何步骤将事件标记为<a href="https://docs.unity3d.com/ScriptReference/EventSystems.AbstractEventData-used.html">handled</a>，事件分发过程停止。</p>
 <ol>
@@ -112,14 +112,14 @@
 <li>事件被发送到焦点对象。</li>
 <li>事件发送给后备侦听器（fallback listeners）。</li>
 </ol>
-<h2 id="device-managers--data-providers设备管理器数据提供者">Device Managers / Data Providers(设备管理器/数据提供者)</h2>
+<h2 id="device-managers-and-data-providers-设备管理器和数据提供者">Device managers and data providers (设备管理器和数据提供者)</h2>
 <p>这些实体负责与较低级别的API（例如Windows Mixed Reality API或OpenVR API）进行接口并将来自这些系统的数据转换为符合MRTK的高层输入抽象的数据。他们负责检测，创建和管理<a href="ControllersPointersAndFocus.html#controllers">控制器</a>的生命周期.</p>
 <p>设备管理器的基本流程包括：</p>
 <ol>
 <li>设备管理器由输入系统服务实例化。</li>
-<li>设备管理器向其底层系统注册（例如，Windows Mixed Reality设备管理器将注册<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.Providers/WindowsMixedReality/WindowsMixedRealityDeviceManager.cs#L651">手势和交互事件</a>（gesture and interaction events）).</li>
+<li>设备管理器向其底层系统注册（例如，Windows Mixed Reality设备管理器将注册<a href="../../Input/InputEvents.html">输入</a> 和<a href="../../Input/Gestures.html#gesture-events">手势</a> 事件 .</li>
 <li>它创建从底层系统中发现的控制器（例如，provider可以检测到全关节手的存在）</li>
-<li>在其Update（）循环中，调用UpdateController（）以轮询底层系统的新状态并更新其控制器表示形式。</li>
+<li>在其Update() 循环中，调用UpdateControlle() 以轮询底层系统的新状态并更新其控制器表示形式。</li>
 </ol>
 </article>
           </div>

@@ -104,67 +104,78 @@ providers.)。</p>
 <p><img src="../Images/Profiles/ConfiguredExtensionService.png" alt="Configuring an extension service"></p>
 <h2 id="data-providers-数据提供者">Data Providers (数据提供者)</h2>
 <p>数据提供者是向“混合现实工具包”服务提供数据的组件。所有数据提供者都实现了 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider.html"><code>IMixedRealityDataProvider</code></a> 接口。</p>
-<blockquote>
-<p>[!注意]
-并非所有服务都需要数据提供者。在MixedRealityToolkit的系统中，输入和空间感知系统是唯一利用数据提供者的服务。</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>并非所有服务都需要数据提供者。在Mixed Reality Toolkit的系统中，输入和空间感知系统是唯一利用数据提供者的服务。</p>
+</div>
 <p>为了使特定MRTK服务可以访问，数据提供者已在服务的配置文件中注册。</p>
-<p>应用程序代码通过<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProviderAccess.html"><code>IMixedRealityDataProviderAccess</code></a> 接口访问数据提供者。</p>
-<blockquote>
-<p>[!重要]
-尽管<code>ImixedRealityDataProvider</code>继承自<code>ImixedRealityService</code>，但数据提供者未在<code>MixedRealityServiceRegistry</code>中注册。要访问数据提供者，应用程序代码必须查询它们注册的服务实例（例如：输入系统）。</p>
-</blockquote>
+<p>应用程序代码通过<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.IMixedRealityDataProviderAccess.html"><code>IMixedRealityDataProviderAccess</code></a> 接口访问数据提供者。
+为了简化访问，数据提供者也可以通过<code>CoreServices</code>助手类来检索。</p>
+<pre><code class="lang-c#">var inputSimulationService = CoreServices.GetDataProvider&lt;IInputSimulationService&gt;(CoreServices.InputSystem);
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>尽管<code>ImixedRealityDataProvider</code>继承自<code>ImixedRealityService</code>，但数据提供者未在<code>MixedRealityServiceRegistry</code>中注册。要访问数据提供者，应用程序代码必须查询它们注册的服务实例（例如：输入系统）。</p>
+</div>
 <h3 id="input-输入">Input (输入)</h3>
 <p>MRTK输入系统仅使用实现<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputDeviceManager.html"><code>IMixedRealityInputDeviceManager</code></a>接口的数据提供者。</p>
 <p><img src="../Images/Input/RegisteredServiceProviders.PNG" alt="Input system data providers"></p>
 <p>下面的示例演示如何访问输入模拟提供者（input simulation provider）并切换SmoothEyeTracking属性。</p>
-<pre><code class="lang-c#">if (CoreServices.InputSystem != null)
+<pre><code class="lang-c#">IMixedRealityDataProviderAccess dataProviderAccess = CoreServices.InputSystem as IMixedRealityDataProviderAccess;
+
+if (dataProviderAccess != null)
 {
-    IMixedRealityDataProviderAccess dataProviderAccess = CoreServices.InputSystem as IMixedRealityDataProviderAccess;
+    IInputSimulationService inputSimulation =
+        dataProviderAccess.GetDataProvider&lt;IInputSimulationService&gt;();
 
-    if (dataProviderAccess != null)
+    if (inputSimulation != null)
     {
-        IInputSimulationService inputSimulation =
-            dataProviderAccess.GetDataProvider&lt;IInputSimulationService&gt;();
-
-        if (inputSimulation != null)
-        {
-            inputSimulation.SmoothEyeTracking = !inputSimulation.SmoothEyeTracking;
-        }
+        inputSimulation.SmoothEyeTracking = !inputSimulation.SmoothEyeTracking;
     }
 }
 </code></pre>
-<blockquote>
-<p>[!注意]
-输入系统仅返回运行该应用程序的平台所支持的数据提供者。</p>
-</blockquote>
+<p>为了简化访问，数据提供者也可以通过<code>CoreServices</code>助手类来检索。</p>
+<pre><code class="lang-c#">var inputSimulationService = CoreServices.GetInputSystemDataProvider&lt;IInputSimulationService&gt;();
+if (inputSimulationService != null)
+{
+    // do something here
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>输入系统仅返回运行该应用程序的平台所支持的数据提供者。</p>
+</div>
 <p>有关为MRTK输入系统编写数据提供者的信息，请参见<a href="../Input/CreateDataProvider.html">创建输入系统数据提供者</a>.</p>
 <h3 id="spatial-awareness-空间感知">Spatial Awareness (空间感知)</h3>
 <p>MRTK空间感知系统仅使用实现 <a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.SpatialAwareness.IMixedRealitySpatialAwarenessObserver.html"><code>IMixedRealitySpatialAwarenessObserver</code></a> 接口的数据提供者。</p>
 <p><img src="../Images/SpatialAwareness/SpatialAwarenessProfile.png" alt="Spatial awareness system data providers"></p>
 <p>以下示例演示如何访问已注册的空间网格数据提供者（spatial mesh data providers）并更改网格的可见性。</p>
-<pre><code class="lang-c#">if (CoreServices.SpatialAwarenessSystem != null)
+<pre><code class="lang-c#">IMixedRealityDataProviderAccess dataProviderAccess =
+    CoreServices.SpatialAwarenessSystem as IMixedRealityDataProviderAccess;
+
+if (dataProviderAccess != null)
 {
-    IMixedRealityDataProviderAccess dataProviderAccess =
-        CoreServices.SpatialAwarenessSystem as IMixedRealityDataProviderAccess;
+    IReadOnlyList&lt;IMixedRealitySpatialAwarenessMeshObserver&gt; observers =
+        dataProviderAccess.GetDataProviders&lt;IMixedRealitySpatialAwarenessMeshObserver&gt;();
 
-    if (dataProviderAccess != null)
+    foreach (IMixedRealitySpatialAwarenessMeshObserver observer in observers)
     {
-        IReadOnlyList&lt;IMixedRealitySpatialAwarenessMeshObserver&gt; observers =
-            dataProviderAccess.GetDataProviders&lt;IMixedRealitySpatialAwarenessMeshObserver&gt;();
-
-        foreach (IMixedRealitySpatialAwarenessMeshObserver observer in observers)
-        {
-            // 设置网格以使用遮挡材质
-            observer.DisplayOption = SpatialMeshDisplayOptions.Occlusion;
-        }
+        // 设置网格以使用遮挡材质
+        observer.DisplayOption = SpatialMeshDisplayOptions.Occlusion;
     }
 }
 </code></pre>
-<blockquote>
-<p>[!注意]
-空间感知系统仅返回运行该应用程序的平台所支持的数据提供者。</p>
-</blockquote>
+<p>访问核心空间感知系统的数据提供者也可以通过使用<code>CoreServices</code> 助手类来简化访问。</p>
+<pre><code class="lang-c#">var dataProvider = CoreServices.GetSpatialAwarenessSystemDataProvider&lt;IMixedRealitySpatialAwarenessMeshObserver&gt;();
+if (dataProvider != null)
+{
+    // do something here
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>空间感知系统仅返回运行该应用程序的平台所支持的数据提供者。</p>
+</div>
 <p>有关编写MRTK空间感知系统数据提供者的信息，请参见<a href="../SpatialAwareness/CreateDataProvider.html">创建空间感知系统数据提供者</a>.</p>
 <h2 id="建议浏览">建议浏览</h2>
 <ul>

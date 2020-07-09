@@ -90,7 +90,7 @@
 <li>将主Camera移至MixedRealityPlayspace的子级（并向主Camera添加一些与输入和注视相关的脚本，这有助于增强UnityUI和与凝视相关的输入功能）。</li>
 </ul>
 <h2 id="mixedrealitytoolkit对象和运行时">MixedRealityToolkit对象和运行时</h2>
-<p>MRTK有几个核心服务。有些彼此协调；其他是独立的。所有都有相同的生命周期-启动，注册，更新和关闭-该生命周期与Unity的MonoBehavior生命周期不同。这个<a href="https://medium.com/@stephen_hodgson/the-mixed-reality-framework-6fdb5c11feb2">medium post</a> 解释了此方法背后的一些背景和动机。MRTK具有一个对象来管理其服务寿命和运行时间。</p>
+<p>MRTK有几个核心服务。有些彼此协调；其他是独立的。所有都有相同的生命周期-启动，注册，更新和关闭-该生命周期与Unity的MonoBehaviour生命周期不同。这个<a href="https://medium.com/@stephen_hodgson/the-mixed-reality-framework-6fdb5c11feb2">medium post</a> 解释了此方法背后的一些背景和动机。MRTK具有一个对象来管理其服务寿命和运行时间。</p>
 <p>该实体确保：</p>
 <ul>
 <li>游戏开始时，服务的发现和初始化按预先定义的顺序进行。</li>
