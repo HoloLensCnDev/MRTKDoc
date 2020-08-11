@@ -105,23 +105,23 @@
 <p><img src="../Images/Boundary/BoundarySelectSystemType.png" alt="Select the Boundary System Implementation"></p>
 </li>
 </ol>
-<blockquote>
-<p>[!注意]
-所有边界系统实现都必须继承<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Boundary.IMixedRealityBoundarySystem.html"><code>IMixedRealityBoundarySystem</code></a></p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>所有边界系统实现都必须继承<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Boundary.IMixedRealityBoundarySystem.html"><code>IMixedRealityBoundarySystem</code></a></p>
+</div>
 <h2 id="配置边界可视化">配置边界可视化</h2>
 <p><a href="ConfiguringBoundaryVisualization.html">边界系统使用配置文件</a> 指定要显示的边界组件并配置其外观。</p>
 <p><img src="../Images/Boundary/BoundaryVisualizationProfile.png" alt="Boundary Visualization Options"></p>
-<blockquote>
-<p>[!注意]
-默认配置文件的用户 (<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.SDK/Profiles/DefaultMixedRealityBoundaryVisualizationProfile.asset">DefaultMixedRealityBoundaryVisualizationProfile</a>) 的边界系统已预先配置为显示地板平面，游戏区域和被跟踪区域。</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>默认配置文件的用户,<code>DefaultMixedRealityBoundaryVisualizationProfile</code> (Assets/MRTK/SDK/Profiles)  的边界系统已预先配置为显示地板平面，游戏区域和被跟踪区域。</p>
+</div>
 <h2 id="生成和部署">生成和部署</h2>
 <p>一旦边界系统配置了所需的可视化选项，就可以将项目生成为部署到目标平台。</p>
-<blockquote>
-<p>[!注意]
-Unity Play模式可在编辑器中可视化所配置的边界。此功能可以快速进行开发和测试，而无需生成和部署步骤。确保使用在目标硬件和平台上运行的应用程序的生成和部署版本进行最终验收测试。</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Unity Play模式可在编辑器中可视化所配置的边界。此功能可以快速进行开发和测试，而无需生成和部署步骤。确保使用在目标硬件和平台上运行的应用程序的生成和部署版本进行最终验收测试。</p>
+</div>
 <h2 id="通过代码访问边界系统">通过代码访问边界系统</h2>
 <p>如果启用并配置了边界系统，则可以通过CoreServices静态帮助程序类访问边界系统。然后，该引用可用于动态更改边界参数，并访问系统管理的相关GameObject。</p>
 <pre><code class="lang-c#">// 在运行时隐藏边界墙

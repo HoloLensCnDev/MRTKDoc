@@ -83,10 +83,10 @@
 <h1 id="input-events输入事件">Input events（输入事件）</h1>
 
 <p>下面的列表概述了将由自定义MonoBehavior组件实现的所有可用输入事件接口。MRTK输入系统将调用这些接口，以基于用户输入交互来处理自定义应用逻辑。<a href="Pointers.html#pointer-event-interfaces">指针输入事件</a> 与下面的标准输入事件类型稍有不同。</p>
-<blockquote>
-<p>[!重要]
-默认情况下，脚本仅在焦点指向GameObject的指针或焦点在GameObject的父对象上时才会接收输入事件。</p>
-</blockquote>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>默认情况下，脚本仅在焦点指向GameObject的指针或焦点在GameObject的父对象上时才会接收输入事件。</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -159,7 +159,7 @@
 </tbody>
 </table>
 <h2 id="input-events-in-action-活动的输入事件">Input events in action (活动的输入事件)</h2>
-<p>在脚本级别，可以通过实现上表中所示的事件处理程序接口之一来处理输入事件。当通过用户交互触发输入事件时，将发生以下情况：</p>
+<p>在脚本级别，可以通过实现上表中所示的event handler之一来处理输入事件。当通过用户交互触发输入事件时，将发生以下情况：</p>
 <ol>
 <li>MRTK输入系统识别出已发生输入事件。</li>
 <li>MRTK输入系统将输入事件的相关接口功能触发到所有<a href="#%E4%B8%BA%E5%85%A8%E5%B1%80%E8%BE%93%E5%85%A5%E4%BA%8B%E4%BB%B6%E6%B3%A8%E5%86%8C">注册的全局输入处理者</a></li>
@@ -177,10 +177,10 @@
 </li>
 <li>如果没有注册任何全局输入处理者，并且没有找到具有匹配组件/接口的GameObject，则输入系统将调用每个后备注册的输入处理者 (input handler)</li>
 </ol>
-<blockquote>
-<p>[!注意]
-<a href="Pointers.html#pointer-event-interfaces">指针输入事件</a> 与上面列出的输入事件接口的处理方式稍有不同。特别是，指针输入事件仅由触发该输入事件的指针的焦点GameObject以及所有全局输入处理者处理。常规输入事件由焦点GameObjects处理所有活动指针。</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p><a href="Pointers.html#pointer-event-interfaces">指针输入事件</a> 与上面列出的输入事件接口的处理方式稍有不同。特别是，指针输入事件仅由触发该输入事件的指针的焦点GameObject以及所有全局输入处理者处理。常规输入事件由焦点GameObjects处理所有活动指针。</p>
+</div>
 <h3 id="输入事件接口示例">输入事件接口示例</h3>
 <p>以下代码演示了<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler.html"><code>IMixedRealitySpeechHandler</code></a>接口。当用户对具有ShowHideSpeechHandler 类的焦点GameObject说“更小”或“更大”时，GameObject将自身缩放一半或两倍。</p>
 <pre><code class="lang-c#">public class ShowHideSpeechHandler : MonoBehaviour, IMixedRealitySpeechHandler
@@ -200,10 +200,10 @@
     }
 }
 </code></pre>
-<blockquote>
-<p>[!注意]
-<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler.html"><code>IMixedRealitySpeechHandler</code></a> 输入事件要求将所需的关键字预先注册在<a href="Speech.html">MRTK语音命令配置文件</a>.</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p><a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler.html"><code>IMixedRealitySpeechHandler</code></a> 输入事件要求将所需的关键字预先注册在<a href="Speech.html">MRTK语音命令配置文件</a>.</p>
+</div>
 <h2 id="为全局输入事件注册">为全局输入事件注册</h2>
 <p>若要创建侦听全局输入事件的组件，而不考虑可能聚焦的GameObject，组件必须在输入系统中注册自己。一旦注册，此MonoBehavior的任何实例将接收输入事件以及当前聚焦的任何GameObject和其他全局注册的侦听器。</p>
 <p>如果输入事件已被<a href="#how-to-stop-input-events">标记为已使用</a>,全局注册的处理程序仍将全部接收回调。但是，没有被聚焦的GameObjects将接收该事件。</p>
@@ -293,10 +293,10 @@
 <h2 id="如何停止输入事件">如何停止输入事件</h2>
 <p>每个输入事件接口都提供一个<a class="xref" href="../../api/Microsoft.MixedReality.Toolkit.Input.BaseInputEventData.html"><code>BaseInputEventData</code></a> 数据对象作为接口上每个函数的参数。该事件数据对象是Unity自身的扩展 <a href="https://docs.unity3d.com/2019.1/Documentation/ScriptReference/EventSystems.AbstractEventData.html"><code>抽象事件数据</code></a>.</p>
 <p>为了阻止输入事件在执行过程中传播<a href="#input-events-in-action">如活动的输入事件</a>, 组件可以调用<a href="https://docs.unity3d.com/2019.1/Documentation/ScriptReference/EventSystems.AbstractEventData.Use.html"><code>AbstractEventData.Use()</code></a>将事件标记为已使用。这将阻止任何其他GameObjects接收当前输入事件，但全局输入处理者除外。</p>
-<blockquote>
-<p>[!注意]
-调用<code>Use()</code>方法的组件将阻止其他GameObject接收它。但是，当前GameObject上的其他组件仍将接收输入事件并触发任何相关的接口函数。</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>调用<code>Use()</code>方法的组件将阻止其他GameObject接收它。但是，当前GameObject上的其他组件仍将接收输入事件并触发任何相关的接口函数。</p>
+</div>
 <h2 id="建议浏览">建议浏览</h2>
 <ul>
 <li><a href="Pointers.html">指针</a></li>
